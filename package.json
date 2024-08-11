@@ -1,0 +1,11 @@
+{
+  "name": "@adam-rocska/units-and-measurement",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [ ],
+  "author": {
+    "name": "Ádám László Rocska",
+    "url": "https://adam-rocska.github.io"
+  },
+  "license": "MIT"
+}
