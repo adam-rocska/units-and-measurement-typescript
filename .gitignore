@@ -19,4 +19,4 @@ yarn-error.log*
 
 *.tsbuildinfo
 
-bulk-work.mjs
+bulk-work.*
