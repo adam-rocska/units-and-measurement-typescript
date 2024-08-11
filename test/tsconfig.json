@@ -1,0 +1,13 @@
+{
+  "extends": "../tsconfig.json",
+  "compilerOptions": {
+    "module": "ESNext",
+    "target": "ESNext",
+    "baseUrl": "..",
+    "paths": {
+      "@adam-rocska/units-and-measurements": [ "./src/index.ts" ],
+      "!*": [ "./*" ]
+    }
+  },
+  "include": [ "./**/*.test.ts" ]
+}
