@@ -1,7 +1,7 @@
 {
   "name": "@adam-rocska/units-and-measurement",
   "version": "1.0.0",
-  "description": "Numeric quantities labeled with a unit of measure, with support for unit conversion and unit-aware calculations.",
+  "description": "TypeScript utility for handling numeric values with units, featuring unit conversion and unit-aware arithmetic operations.",
   "keywords": [
     "units",
     "measurement",
