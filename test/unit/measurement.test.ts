@@ -58,4 +58,78 @@ describe('Measurement', () => {
       expect(measurement2.convertedTo(StubDimension3._1)).toEqual(measurement1);
     });
   });
+
+  describe('#add', () => {
+    it('should add regardless of dimensionality if the units are the same.', () => {
+      const measurement1 = new Measurement(1, stubUnit);
+      const measurement2 = new Measurement(1, stubUnit);
+      expect(measurement1.add(measurement2)).toEqual(new Measurement(2, stubUnit));
+    });
+
+    it('should throw an error if the source unit is not a dimension', () => {
+      const measurement1 = new Measurement(1, stubUnit);
+      const measurement2 = new Measurement(1, stubDimension1);
+      expect(() => measurement1.add(measurement2 as never))
+        .toThrow(new Error("Cannot add measurements of different dimensions."));
+    });
+
+    it('should throw an error if the target unit is not a dimension', () => {
+      const measurement1 = new Measurement(1, stubDimension1);
+      const measurement2 = new Measurement(1, stubUnit);
+      expect(() => measurement1.add(measurement2 as never))
+        .toThrow(new Error("Cannot add measurements of different dimensions."));
+    });
+
+    it('should throw an error if the source and target units are not of the same dimension', () => {
+      const measurement1 = new Measurement(1, stubDimension1);
+      const measurement2 = new Measurement(1, stubDimension2);
+      expect(() => measurement1.add(measurement2 as never))
+        .toThrow(new Error("Cannot add measurements of different dimensions."));
+    });
+
+    it('should add the values if they are of the same dimension.', () => {
+      const measurement1 = new Measurement(123, StubDimension3._1);
+      const measurement2 = new Measurement(123, StubDimension3._2);
+      const measurement3 = new Measurement(123 * 2, StubDimension3._1);
+
+      expect(measurement1.add(measurement2)).toEqual(measurement3);
+    });
+  });
+
+  describe('.add', () => {
+    it('should add regardless of dimensionality if the units are the same.', () => {
+      const measurement1 = new Measurement(1, stubUnit);
+      const measurement2 = new Measurement(1, stubUnit);
+      expect(Measurement.add(measurement1, measurement2)).toEqual(new Measurement(2, stubUnit));
+    });
+
+    it('should throw an error if the source unit is not a dimension', () => {
+      const measurement1 = new Measurement(1, stubUnit);
+      const measurement2 = new Measurement(1, stubDimension1);
+      expect(() => Measurement.add(measurement1, measurement2 as never))
+        .toThrow(new Error("Cannot add measurements of different dimensions."));
+    });
+
+    it('should throw an error if the target unit is not a dimension', () => {
+      const measurement1 = new Measurement(1, stubDimension1);
+      const measurement2 = new Measurement(1, stubUnit);
+      expect(() => Measurement.add(measurement1, measurement2 as never))
+        .toThrow(new Error("Cannot add measurements of different dimensions."));
+    });
+
+    it('should throw an error if the source and target units are not of the same dimension', () => {
+      const measurement1 = new Measurement(1, stubDimension1);
+      const measurement2 = new Measurement(1, stubDimension2);
+      expect(() => Measurement.add(measurement1, measurement2 as never))
+        .toThrow(new Error("Cannot add measurements of different dimensions."));
+    });
+
+    it('should add the values if they are of the same dimension.', () => {
+      const measurement1 = new Measurement(123, StubDimension3._1);
+      const measurement2 = new Measurement(123, StubDimension3._2);
+      const measurement3 = new Measurement(123 * 2, StubDimension3._1);
+
+      expect(Measurement.add(measurement1, measurement2)).toEqual(measurement3);
+    });
+  });
 });
