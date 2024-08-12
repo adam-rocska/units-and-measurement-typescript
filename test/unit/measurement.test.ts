@@ -33,20 +33,9 @@ describe('Measurement', () => {
 
   describe('#convertedTo', () => {
     it('should throw an error if the source unit is not a dimension', () => {
+      /// NOTE: This whole thing won't even be callable in reality.
       const measurement = new Measurement(1, stubUnit);
       expect(() => measurement.convertedTo(stubDimension1 as never))
-        .toThrow(new Error("Cannot convert between different dimensions."));
-    });
-
-    it('should throw an error if the target unit is not a dimension', () => {
-      const measurement = new Measurement(1, stubDimension1);
-      expect(() => measurement.convertedTo(stubUnit as never))
-        .toThrow(new Error("Cannot convert to a non-dimension unit."));
-    });
-
-    it('should throw an error if the source and target units are not of the same dimension', () => {
-      const measurement = new Measurement(1, stubDimension1);
-      expect(() => measurement.convertedTo(stubDimension2 as never))
         .toThrow(new Error("Cannot convert between different dimensions."));
     });
 
@@ -91,35 +80,223 @@ describe('Measurement', () => {
   });
 
   describe("arithmetics", () => {
-    describe('#add', () => {});
-    describe('.add', () => {});
-    describe('#subtract', () => {});
-    describe('.subtract', () => {});
-    describe('#multiply', () => {});
-    describe('.multiply', () => {});
-    describe('#divide', () => {});
-    describe('.divide', () => {});
+    describe('#add', () => {
+      it('should add the values as they are if both units are not dimensions', () => {
+        const measurement1 = new Measurement(1, stubUnit);
+        const measurement2 = new Measurement(2, stubUnit);
+        expect(measurement1.add(measurement2)).toEqual(new Measurement(3, stubUnit));
+        expect(measurement2.add(measurement1)).toEqual(new Measurement(3, stubUnit));
+      });
+
+      it('should add the values after converting the second value to the first unit', () => {
+        const measurement1 = new Measurement(1, StubDimension3._1);
+        const measurement2 = new Measurement(2, StubDimension3._2);
+        expect(measurement1.add(measurement2))
+          .toEqual(new Measurement(2, StubDimension3._1));
+        expect((measurement1.add(measurement2)).convertedTo(StubDimension3._2))
+          .toEqual(new Measurement(4, StubDimension3._2));
+        expect(measurement2.add(measurement1))
+          .toEqual(new Measurement(4, StubDimension3._2));
+        expect((measurement2.add(measurement1))
+          .convertedTo(StubDimension3._1));
+      });
+    });
+
+    describe('#subtract', () => {
+      it('should subtract the values as they are if both units are not dimensions', () => {
+        const measurement1 = new Measurement(1, stubUnit);
+        const measurement2 = new Measurement(2, stubUnit);
+        expect(measurement1.subtract(measurement2)).toEqual(new Measurement(-1, stubUnit));
+        expect(measurement2.subtract(measurement1)).toEqual(new Measurement(1, stubUnit));
+      });
+
+      it('should subtract the values after converting the second value to the first unit', () => {
+        const measurement1 = new Measurement(1, StubDimension3._1);
+        const measurement2 = new Measurement(2, StubDimension3._2);
+
+        expect(measurement1.subtract(measurement2))
+          .toEqual(new Measurement(0, StubDimension3._1));
+        expect((measurement1.subtract(measurement2)).convertedTo(StubDimension3._2))
+          .toEqual(new Measurement(0, StubDimension3._2));
+        expect(measurement2.subtract(measurement1))
+          .toEqual(new Measurement(0, StubDimension3._2));
+        expect((measurement2.subtract(measurement1))
+          .convertedTo(StubDimension3._1));
+      });
+    });
+
+    describe('#multiply', () => {
+      it('should multiply the value by the given number', () => {
+        const measurement = new Measurement(2, stubUnit);
+        expect(measurement.multiply(3)).toEqual(new Measurement(6, stubUnit));
+      });
+    });
+
+    describe('#divide', () => {
+      it('should divide the value by the given number', () => {
+        const measurement = new Measurement(6, stubUnit);
+        expect(measurement.divide(3)).toEqual(new Measurement(2, stubUnit));
+      });
+    });
   });
 
   describe('comparison', () => {
-    describe('#equals', () => {});
-    describe('.equals', () => {});
-    describe('#lessThan', () => {});
-    describe('.lessThan', () => {});
-    describe('#lessThanOrEqual', () => {});
-    describe('.lessThanOrEqual', () => {});
-    describe('#greaterThan', () => {});
-    describe('.greaterThan', () => {});
-    describe('#greaterThanOrEqual', () => {});
-    describe('.greaterThanOrEqual', () => {});
+    describe('#equals', () => {
+      it('should return true if the values are equal', () => {
+        const measurement1 = new Measurement(1, stubUnit);
+        const measurement2 = new Measurement(1, stubUnit);
+        expect(measurement1.equals(measurement2)).toBe(true);
+        expect(measurement1.equals(measurement1)).toBe(true);
+        expect(measurement2.equals(measurement1)).toBe(true);
+        expect(measurement2.equals(measurement2)).toBe(true);
+      });
+
+      it('should return false if the values are different', () => {
+        const measurement1 = new Measurement(1, stubUnit);
+        const measurement2 = new Measurement(2, stubUnit);
+        expect(measurement1.equals(measurement2)).toBe(false);
+        expect(measurement2.equals(measurement1)).toBe(false);
+      });
+
+      it('should return true if the converted values are the same', () => {
+        const measurement1 = new Measurement(1, StubDimension3._1);
+        const measurement2 = new Measurement(2, StubDimension3._2);
+        expect(measurement1.equals(measurement2)).toBe(true);
+        expect(measurement2.equals(measurement1)).toBe(true);
+      });
+
+      it('should return false if the converted values are different', () => {
+        const measurement1 = new Measurement(1, StubDimension3._1);
+        const measurement2 = new Measurement(3, StubDimension3._2);
+        expect(measurement1.equals(measurement2)).toBe(false);
+        expect(measurement2.equals(measurement1)).toBe(false);
+      });
+    });
+
+    describe('#lessThan', () => {
+      it('should return true if the value is less than the other value', () => {
+        const measurement1 = new Measurement(1, stubUnit);
+        const measurement2 = new Measurement(2, stubUnit);
+        expect(measurement1.lessThan(measurement2)).toBe(true);
+        expect(measurement1.lessThan(measurement1)).toBe(false);
+        expect(measurement2.lessThan(measurement1)).toBe(false);
+        expect(measurement2.lessThan(measurement2)).toBe(false);
+      });
+
+      it('should return true if the converted value is less than the other value', () => {
+        const measurement1 = new Measurement(1, StubDimension3._1);
+        const measurement2 = new Measurement(3, StubDimension3._2);
+        expect(measurement1.lessThan(measurement2)).toBe(true);
+        expect(measurement1.lessThan(measurement1)).toBe(false);
+        expect(measurement2.lessThan(measurement1)).toBe(false);
+        expect(measurement2.lessThan(measurement2)).toBe(false);
+      });
+
+      it('should return false if the converted value is greater than the other value', () => {
+        const measurement1 = new Measurement(1, StubDimension3._1);
+        const measurement2 = new Measurement(4, StubDimension3._2);
+        expect(measurement1.lessThan(measurement2)).toBe(true);
+        expect(measurement1.lessThan(measurement1)).toBe(false);
+        expect(measurement2.lessThan(measurement1)).toBe(false);
+        expect(measurement2.lessThan(measurement2)).toBe(false);
+      });
+
+    });
+
+    describe('#lessThanOrEqual', () => {
+      it('should return true if the value is less than or equal to the other value', () => {
+        const measurement1 = new Measurement(1, stubUnit);
+        const measurement2 = new Measurement(2, stubUnit);
+        expect(measurement1.lessThanOrEqual(measurement2)).toBe(true);
+        expect(measurement1.lessThanOrEqual(measurement1)).toBe(true);
+        expect(measurement2.lessThanOrEqual(measurement1)).toBe(false);
+        expect(measurement2.lessThanOrEqual(measurement2)).toBe(true);
+      });
+
+      it('should return true if the converted value is less than or equal to the other value', () => {
+        const measurement1 = new Measurement(1, StubDimension3._1);
+        const measurement2 = new Measurement(3, StubDimension3._2);
+        expect(measurement1.lessThanOrEqual(measurement2)).toBe(true);
+        expect(measurement1.lessThanOrEqual(measurement1)).toBe(true);
+        expect(measurement2.lessThanOrEqual(measurement1)).toBe(false);
+        expect(measurement2.lessThanOrEqual(measurement2)).toBe(true);
+      });
+
+      it('should return false if the converted value is greater than the other value', () => {
+        const measurement1 = new Measurement(1, StubDimension3._1);
+        const measurement2 = new Measurement(4, StubDimension3._2);
+        expect(measurement1.lessThanOrEqual(measurement2)).toBe(true);
+        expect(measurement1.lessThanOrEqual(measurement1)).toBe(true);
+        expect(measurement2.lessThanOrEqual(measurement1)).toBe(false);
+        expect(measurement2.lessThanOrEqual(measurement2)).toBe(true);
+      });
+
+    });
+    describe('#greaterThan', () => {
+      it('should return true if the value is greater than the other value', () => {
+        const measurement1 = new Measurement(1, stubUnit);
+        const measurement2 = new Measurement(2, stubUnit);
+        expect(measurement1.greaterThan(measurement2)).toBe(false);
+        expect(measurement1.greaterThan(measurement1)).toBe(false);
+        expect(measurement2.greaterThan(measurement1)).toBe(true);
+        expect(measurement2.greaterThan(measurement2)).toBe(false);
+      });
+
+      it('should return true if the converted value is greater than the other value', () => {
+        const measurement1 = new Measurement(1, StubDimension3._1);
+        const measurement2 = new Measurement(4, StubDimension3._2);
+        expect(measurement1.greaterThan(measurement2)).toBe(false);
+        expect(measurement1.greaterThan(measurement1)).toBe(false);
+        expect(measurement2.greaterThan(measurement1)).toBe(true);
+        expect(measurement2.greaterThan(measurement2)).toBe(false);
+      });
+
+      it('should return false if the converted value is less than the other value', () => {
+        const measurement1 = new Measurement(1, StubDimension3._1);
+        const measurement2 = new Measurement(2, StubDimension3._2);
+        expect(measurement1.greaterThan(measurement2)).toBe(false);
+        expect(measurement1.greaterThan(measurement1)).toBe(false);
+        expect(measurement2.greaterThan(measurement1)).toBe(false);
+        expect(measurement2.greaterThan(measurement2)).toBe(false);
+      });
+    });
+
+    describe('#greaterThanOrEqual', () => {
+      it('should return true if the value is greater than or equal to the other value', () => {
+        const measurement1 = new Measurement(1, stubUnit);
+        const measurement2 = new Measurement(2, stubUnit);
+        expect(measurement1.greaterThanOrEqual(measurement2)).toBe(false);
+        expect(measurement1.greaterThanOrEqual(measurement1)).toBe(true);
+        expect(measurement2.greaterThanOrEqual(measurement1)).toBe(true);
+        expect(measurement2.greaterThanOrEqual(measurement2)).toBe(true);
+      });
+
+      it('should return true if the converted value is greater than or equal to the other value', () => {
+        const measurement1 = new Measurement(1, StubDimension3._1);
+        const measurement2 = new Measurement(4, StubDimension3._2);
+        expect(measurement1.greaterThanOrEqual(measurement2)).toBe(false);
+        expect(measurement1.greaterThanOrEqual(measurement1)).toBe(true);
+        expect(measurement2.greaterThanOrEqual(measurement1)).toBe(true);
+        expect(measurement2.greaterThanOrEqual(measurement2)).toBe(true);
+      });
+
+      it('should return true if the converted value is greater than or equal to the other value', () => {
+        const measurement1 = new Measurement(1, StubDimension3._1);
+        const measurement2 = new Measurement(2, StubDimension3._2);
+        expect(measurement1.greaterThanOrEqual(measurement2)).toBe(true);
+        expect(measurement1.greaterThanOrEqual(measurement1)).toBe(true);
+        expect(measurement2.greaterThanOrEqual(measurement1)).toBe(true);
+        expect(measurement2.greaterThanOrEqual(measurement2)).toBe(true);
+      });
+    });
   });
 
   describe('String representation', () => {
-    describe('#toString', () => {});
-    describe('#toLocalizedString', () => {});
-
-    describe('.createFromString', () => {});
-    describe('.createFromLocalizedString', () => {});
+    describe('#toString', () => {
+      it('should return the string representation of the measurement', () => {
+        const measurement = new Measurement(123.123, stubUnit);
+        expect(measurement.toString()).toEqual("123.123STUB");
+      });
+    });
   });
-
 });

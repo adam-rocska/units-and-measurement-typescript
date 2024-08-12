@@ -1,6 +1,5 @@
 import {Dimension} from "./dimension";
 import {SymbolOf, Unit} from "./unit";
-// import {InvariantOf} from "type-fest";
 
 export class Measurement<UnitType extends Unit<any>> {
   public readonly unit: UnitType;
@@ -14,9 +13,7 @@ export class Measurement<UnitType extends Unit<any>> {
   public convertedTo(
     to: UnitType extends Dimension<any> ? UnitType : never,
   ): Measurement<UnitType> {
-    if (!(this.unit instanceof Dimension)) throw new Error("Cannot convert between different dimensions.");
-    if (!(to instanceof Dimension)) throw new Error("Cannot convert to a non-dimension unit.");
-    if (!(to instanceof this.unit.constructor)) throw new Error("Cannot convert between different dimensions.");
+    this.assertUnitIsDimension("Cannot convert between different dimensions.");
 
     const baseValue = this.unit.converter.baseUnitValue(this.value);
     const convertedValue = to.converter.value(baseValue);
@@ -25,16 +22,60 @@ export class Measurement<UnitType extends Unit<any>> {
     return converted;
   }
 
-  // public add(
-  //   other: UnitType extends Dimension<any>
-  //     ? Measurement<UnitType>
-  //     : Measurement<InvariantOf<UnitType>>,
-  // ): Measurement<UnitType> {
-  //   if (this.unit instanceof Dimension && other.unit instanceof Dimension) {
-  //     const convertedOther = other.convertedTo(this.unit);
-  //     return new Measurement(this.value + convertedOther.value, this.unit);
-  //   })
-  // }
+  /// MARK: Arithmetic operations
+
+  public add(other: Measurement<UnitType>): Measurement<UnitType> {
+    if (this.unitIsDimension() && other.unitIsDimension()) return new Measurement(
+      this.value + (other.convertedTo(this.unit)).value,
+      this.unit
+    );
+    return new Measurement(this.value + other.value, this.unit);
+  }
+
+  public subtract(other: Measurement<UnitType>): Measurement<UnitType> {
+    if (this.unitIsDimension() && other.unitIsDimension()) return new Measurement(
+      this.value - (other.convertedTo(this.unit)).value,
+      this.unit
+    );
+    return new Measurement(this.value - other.value, this.unit);
+  }
+
+  public multiply(other: number): Measurement<UnitType> {
+    return new Measurement(this.value * other, this.unit);
+  }
+
+  public divide(other: number): Measurement<UnitType> {
+    return new Measurement(this.value / other, this.unit);
+  }
+
+  /// MARK: Comparison operations
+
+  public equals(other: Measurement<UnitType>): boolean {
+    if (this.unitIsDimension() && other.unitIsDimension()) return this.value === (other.convertedTo(this.unit)).value;
+    return this.value === other.value;
+  }
+
+  public greaterThan(other: Measurement<UnitType>): boolean {
+    if (this.unitIsDimension() && other.unitIsDimension()) return this.value > (other.convertedTo(this.unit)).value;
+    return this.value > other.value;
+  }
+
+  public greaterThanOrEqual(other: Measurement<UnitType>): boolean {
+    if (this.unitIsDimension() && other.unitIsDimension()) return this.value >= (other.convertedTo(this.unit)).value;
+    return this.value >= other.value;
+  }
+
+  public lessThan(other: Measurement<UnitType>): boolean {
+    if (this.unitIsDimension() && other.unitIsDimension()) return this.value < (other.convertedTo(this.unit)).value;
+    return this.value < other.value;
+  }
+
+  public lessThanOrEqual(other: Measurement<UnitType>): boolean {
+    if (this.unitIsDimension() && other.unitIsDimension()) return this.value <= (other.convertedTo(this.unit)).value;
+    return this.value <= other.value;
+  }
+
+  public toString(): MeasurementAsString<this> {return `${this.value}${this.unit.symbol}`;}
 
   /// MARK: Utility functions to tackle with TypeScript's type system
 
@@ -58,3 +99,7 @@ export class Measurement<UnitType extends Unit<any>> {
   }
 
 }
+
+export type MeasurementAsString<
+  M extends Measurement<any>
+> = `${M["value"]}${SymbolOf<M["unit"]>}`;
