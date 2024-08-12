@@ -59,6 +59,37 @@ describe('Measurement', () => {
     });
   });
 
+  describe("#unitIsDimension", () => {
+    it("should return true if the unit is a dimension", () => {
+      const measurement = new Measurement(1, stubDimension1);
+      expect(measurement.unitIsDimension()).toBe(true);
+    });
+
+    it("should return false if the unit is not a dimension", () => {
+      const measurement = new Measurement(1, stubUnit);
+      expect(measurement.unitIsDimension()).toBe(false);
+    });
+  });
+
+  describe("#assertUnitIsDimension", () => {
+    it("should not throw an error if the unit is a dimension", () => {
+      const measurement = new Measurement(1, stubDimension1);
+      expect(() => measurement.assertUnitIsDimension()).not.toThrow();
+    });
+
+    it("should throw an error if the unit is not a dimension", () => {
+      const measurement = new Measurement(1, stubUnit);
+      expect(() => measurement.assertUnitIsDimension())
+        .toThrow(new Error("The unit is not a dimension."));
+    });
+
+    it("should throw an error with the specified message if the unit is not a dimension", () => {
+      const measurement = new Measurement(1, stubUnit);
+      expect(() => measurement.assertUnitIsDimension("Custom message."))
+        .toThrow(new Error("Custom message."));
+    });
+  });
+
   describe("arithmetics", () => {
     describe('#add', () => {});
     describe('.add', () => {});
