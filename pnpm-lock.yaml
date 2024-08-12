@@ -18,8 +18,8 @@ devDependencies:
     specifier: ^22.2.0
     version: 22.2.0
   bunchee:
-    specifier: ^5.3.1
-    version: 5.3.1(typescript@5.5.4)
+    specifier: ^5.3.2
+    version: 5.3.2(typescript@5.5.4)
   eslint:
     specifier: ^8.57.0
     version: 8.57.0
@@ -416,7 +416,7 @@ packages:
       debug: 4.3.6
       espree: 9.6.1
       globals: 13.24.0
-      ignore: 5.3.1
+      ignore: 5.3.2
       import-fresh: 3.3.0
       js-yaml: 4.1.0
       minimatch: 3.1.2
@@ -1657,8 +1657,8 @@ packages:
     engines: {node: '>=6'}
     dev: true
 
-  /bunchee@5.3.1(typescript@5.5.4):
-    resolution: {integrity: sha512-8RsaVmHrmmL/qy1B13StTvFUx8CATmRBbC4Dci9HZzajCZQMIwfZqcAGocd69lfLR1SOk3V/gj01/3yyjDEerA==}
+  /bunchee@5.3.2(typescript@5.5.4):
+    resolution: {integrity: sha512-LW0QnL3NX5+8osowBZ6xoHNSLRugD5GJxgA9n4AEnCfgx2YO6RtY7xmHVvPjLiiMJLApL06bD0xGMYHmTT0+rA==}
     engines: {node: '>= 18.0.0'}
     hasBin: true
     peerDependencies:
@@ -2462,7 +2462,7 @@ packages:
       glob-parent: 6.0.2
       globals: 13.24.0
       graphemer: 1.4.0
-      ignore: 5.3.1
+      ignore: 5.3.2
       imurmurhash: 0.1.4
       is-glob: 4.0.3
       is-path-inside: 3.0.3
@@ -2820,7 +2820,7 @@ packages:
       array-union: 2.1.0
       dir-glob: 3.0.1
       fast-glob: 3.3.2
-      ignore: 5.3.1
+      ignore: 5.3.2
       merge2: 1.4.1
       slash: 3.0.0
     dev: true
@@ -2897,8 +2897,8 @@ packages:
     engines: {node: '>=10.17.0'}
     dev: true
 
-  /ignore@5.3.1:
-    resolution: {integrity: sha512-5Fytz/IraMjqpwfd34ke28PTVMjZjJG2MPn5t7OE4eUCUNf8BAa7b5WUS9/Qvr6mwOQS7Mk6vdsMno5he+T8Xw==}
+  /ignore@5.3.2:
+    resolution: {integrity: sha512-hsBTNUqQTDwkWtcdYI2i06Y/nUBEsNEDJKjWdigLvegy8kDuJAS8uRlpkkcQpyEXL0Z/pjDy5HBmMjRCJ2gq+g==}
     engines: {node: '>= 4'}
     dev: true
 
