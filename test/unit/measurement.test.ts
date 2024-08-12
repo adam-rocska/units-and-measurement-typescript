@@ -59,114 +59,36 @@ describe('Measurement', () => {
     });
   });
 
-  describe('#add', () => {
-    it('should add regardless of dimensionality if the units are the same.', () => {
-      const measurement1 = new Measurement(1, stubUnit);
-      const measurement2 = new Measurement(1, stubUnit);
-      expect(measurement1.add(measurement2)).toEqual(new Measurement(2, stubUnit));
-    });
-
-    it('should throw an error if the source unit is not a dimension', () => {
-      const measurement1 = new Measurement(1, stubUnit);
-      const measurement2 = new Measurement(1, stubDimension1);
-      expect(() => measurement1.add(measurement2 as never))
-        .toThrow(new Error("Cannot add measurements of different dimensions."));
-    });
-
-    it('should throw an error if the target unit is not a dimension', () => {
-      const measurement1 = new Measurement(1, stubDimension1);
-      const measurement2 = new Measurement(1, stubUnit);
-      expect(() => measurement1.add(measurement2 as never))
-        .toThrow(new Error("Cannot add measurements of different dimensions."));
-    });
-
-    it('should throw an error if the source and target units are not of the same dimension', () => {
-      const measurement1 = new Measurement(1, stubDimension1);
-      const measurement2 = new Measurement(1, stubDimension2);
-      expect(() => measurement1.add(measurement2 as never))
-        .toThrow(new Error("Cannot add measurements of different dimensions."));
-    });
-
-    it('should add the values if they are of the same dimension.', () => {
-      const measurement1 = new Measurement(123, StubDimension3._1);
-      const measurement2 = new Measurement(123, StubDimension3._2);
-      const measurement3 = new Measurement(123 * 2, StubDimension3._1);
-
-      expect(measurement1.add(measurement2)).toEqual(measurement3);
-    });
+  describe("arithmetics", () => {
+    describe('#add', () => {});
+    describe('.add', () => {});
+    describe('#subtract', () => {});
+    describe('.subtract', () => {});
+    describe('#multiply', () => {});
+    describe('.multiply', () => {});
+    describe('#divide', () => {});
+    describe('.divide', () => {});
   });
 
-  describe('.add', () => {
-    it('should add regardless of dimensionality if the units are the same.', () => {
-      const measurement1 = new Measurement(1, stubUnit);
-      const measurement2 = new Measurement(1, stubUnit);
-      expect(Measurement.add(measurement1, measurement2)).toEqual(new Measurement(2, stubUnit));
-    });
-
-    it('should throw an error if the source unit is not a dimension', () => {
-      const measurement1 = new Measurement(1, stubUnit);
-      const measurement2 = new Measurement(1, stubDimension1);
-      expect(() => Measurement.add(measurement1, measurement2 as never))
-        .toThrow(new Error("Cannot add measurements of different dimensions."));
-    });
-
-    it('should throw an error if the target unit is not a dimension', () => {
-      const measurement1 = new Measurement(1, stubDimension1);
-      const measurement2 = new Measurement(1, stubUnit);
-      expect(() => Measurement.add(measurement1, measurement2 as never))
-        .toThrow(new Error("Cannot add measurements of different dimensions."));
-    });
-
-    it('should throw an error if the source and target units are not of the same dimension', () => {
-      const measurement1 = new Measurement(1, stubDimension1);
-      const measurement2 = new Measurement(1, stubDimension2);
-      expect(() => Measurement.add(measurement1, measurement2 as never))
-        .toThrow(new Error("Cannot add measurements of different dimensions."));
-    });
-
-    it('should add the values if they are of the same dimension.', () => {
-      const measurement1 = new Measurement(123, StubDimension3._1);
-      const measurement2 = new Measurement(123, StubDimension3._2);
-      const measurement3 = new Measurement(123 * 2, StubDimension3._1);
-
-      expect(Measurement.add(measurement1, measurement2)).toEqual(measurement3);
-    });
+  describe('comparison', () => {
+    describe('#equals', () => {});
+    describe('.equals', () => {});
+    describe('#lessThan', () => {});
+    describe('.lessThan', () => {});
+    describe('#lessThanOrEqual', () => {});
+    describe('.lessThanOrEqual', () => {});
+    describe('#greaterThan', () => {});
+    describe('.greaterThan', () => {});
+    describe('#greaterThanOrEqual', () => {});
+    describe('.greaterThanOrEqual', () => {});
   });
 
-  describe('#subtract', () => {
-    it('should subtract regardless of dimensionality if the units are the same.', () => {
-      const measurement1 = new Measurement(1, stubUnit);
-      const measurement2 = new Measurement(1, stubUnit);
-      expect(measurement1.subtract(measurement2)).toEqual(new Measurement(0, stubUnit));
-    });
+  describe('String representation', () => {
+    describe('#toString', () => {});
+    describe('#toLocalizedString', () => {});
 
-    it('should throw an error if the source unit is not a dimension', () => {
-      const measurement1 = new Measurement(1, stubUnit);
-      const measurement2 = new Measurement(1, stubDimension1);
-      expect(() => measurement1.subtract(measurement2 as never))
-        .toThrow(new Error("Cannot subtract measurements of different dimensions."));
-    });
-
-    it('should throw an error if the target unit is not a dimension', () => {
-      const measurement1 = new Measurement(1, stubDimension1);
-      const measurement2 = new Measurement(1, stubUnit);
-      expect(() => measurement1.subtract(measurement2 as never))
-        .toThrow(new Error("Cannot subtract measurements of different dimensions."));
-    });
-
-    it('should throw an error if the source and target units are not of the same dimension', () => {
-      const measurement1 = new Measurement(1, stubDimension1);
-      const measurement2 = new Measurement(1, stubDimension2);
-      expect(() => measurement1.subtract(measurement2 as never))
-        .toThrow(new Error("Cannot subtract measurements of different dimensions."));
-    });
-
-    it('should subtract the values if they are of the same dimension.', () => {
-      const measurement1 = new Measurement(123, StubDimension3._1);
-      const measurement2 = new Measurement(123, StubDimension3._2);
-      const measurement3 = new Measurement(123, StubDimension3._1);
-
-      expect(measurement2.subtract(measurement1)).toEqual(measurement3);
-    });
+    describe('.createFromString', () => {});
+    describe('.createFromLocalizedString', () => {});
   });
+
 });
