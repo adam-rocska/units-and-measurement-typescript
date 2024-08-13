@@ -56,12 +56,15 @@
     "typescript": "^5.5.4"
   },
   "files": [
-    "dist"
+    "dist",
+    "shorthand",
+    "string"
   ],
   "main": "./dist/cjs/index.js",
   "module": "./dist/es/index.mjs",
   "types": "./dist/cjs/index.d.ts",
   "exports": {
+    "./package.json": "./package.json",
     ".": {
       "import": {
         "types": "./dist/es/index.d.mts",
@@ -71,6 +74,26 @@
         "types": "./dist/cjs/index.d.ts",
         "default": "./dist/cjs/index.js"
       }
+    },
+    "./shorthand": {
+      "import": {
+        "types": "./dist/es/shorthand.d.mts",
+        "default": "./dist/es/shorthand.mjs"
+      },
+      "require": {
+        "types": "./dist/cjs/shorthand.d.ts",
+        "default": "./dist/cjs/shorthand.js"
+      }
+    },
+    "./string": {
+      "import": {
+        "types": "./dist/es/string.d.mts",
+        "default": "./dist/es/string.mjs"
+      },
+      "require": {
+        "types": "./dist/cjs/string.d.ts",
+        "default": "./dist/cjs/string.js"
+      }
     }
   },
   "jest": {
@@ -79,7 +102,9 @@
     ],
     "moduleNameMapper": {
       "@adam-rocska/units-and-measurement": "<rootDir>/src/index.ts",
-      "!(.*)": "<rootDir>/$1"
+      "@adam-rocska/units-and-measurement/shorthand": "<rootDir>/src/shorthand/index.ts",
+      "@adam-rocska/units-and-measurement/string": "<rootDir>/src/string/index.ts",
+      "^!(.*)": "<rootDir>/$1"
     },
     "transform": {
       "^.+\\.(t|j)sx?$": [
