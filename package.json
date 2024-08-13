@@ -43,7 +43,6 @@
     "check": "pnpm eslint && pnpm attw --pack"
   },
   "devDependencies": {
-    "@adam-rocska/markdown-table": "^1.0.1",
     "@arethetypeswrong/cli": "^0.15.4",
     "@swc/jest": "^0.2.36",
     "@types/jest": "^29.5.12",
