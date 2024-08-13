@@ -32,16 +32,16 @@ export class LinearUnitConverter implements UnitConverter {
    * Converts the value to the base unit.
    * @param fromValue The value to convert to the base unit.
    */
-  baseUnitValue(fromValue: number): number {
-    return (fromValue - this.constant) / this.coefficient;
+  base(fromValue: number): number {
+    return (fromValue * this.coefficient) + this.constant;
   }
 
   /**
    * Converts the base unit value to the unit value.
-   * @param fromBaseUnitValue The base unit value to convert to the unit value.
+   * @param fromBase The base unit value to convert to the unit value.
    */
-  value(fromBaseUnitValue: number): number {
-    return fromBaseUnitValue * this.coefficient + this.constant;
+  value(fromBase: number): number {
+    return (fromBase - this.constant) / this.coefficient;
   }
 
 }

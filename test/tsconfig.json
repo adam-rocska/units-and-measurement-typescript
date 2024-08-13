@@ -5,8 +5,8 @@
     "target": "ESNext",
     "baseUrl": "..",
     "paths": {
-      "@adam-rocska/units-and-measurements": [ "./src/index.ts" ],
-      "@adam-rocska/units-and-measurements/shorthand": [ "./src/shorthand/index.ts" ]
+      "@adam-rocska/units-and-measurement": [ "./src/index.ts" ],
+      "@adam-rocska/units-and-measurement/shorthand": [ "./src/shorthand/index.ts" ],
       "!*": [ "./*" ]
     }
   },

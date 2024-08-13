@@ -130,7 +130,7 @@ describe("LengthDimension", () => {
 
     it("should have its unit conversion set properly.", () => {
       expect(LengthDimension.twips.converter).toEqual(
-        new LinearUnitConverter(127 / 7200 / 1000)
+        new LinearUnitConverter((127 / 7200) / 1000)
       );
     });
   });
@@ -141,7 +141,7 @@ describe("LengthDimension", () => {
 
     it("should have its unit conversion set properly.", () => {
       expect(LengthDimension.points.converter).toEqual(
-        new LinearUnitConverter(127 / 360 / 1000)
+        new LinearUnitConverter((127 / 360) / 1000)
       );
     });
   });
@@ -152,7 +152,7 @@ describe("LengthDimension", () => {
 
     it("should have its unit conversion set properly.", () => {
       expect(LengthDimension.picas.converter).toEqual(
-        new LinearUnitConverter(127 / 30 / 1000)
+        new LinearUnitConverter((127 / 30) / 1000)
       );
     });
   });
@@ -163,7 +163,7 @@ describe("LengthDimension", () => {
 
     it("should have its unit conversion set properly.", () => {
       expect(LengthDimension.inches.converter).toEqual(
-        new LinearUnitConverter(25.4 / 1000)
+        new LinearUnitConverter((127 / 5) / 1000)
       );
     });
   });

@@ -25,13 +25,13 @@ export class LengthDimension extends Dimension<LengthSymbol> {
 
   public static readonly picometers = new LengthDimension("pm", new LinearUnitConverter(1e-12));
 
-  public static readonly twips = new LengthDimension("tw", new LinearUnitConverter(127 / 7200 / 1000));
+  public static readonly twips = new LengthDimension("tw", new LinearUnitConverter((127 / 7200) / 1000));
 
-  public static readonly points = new LengthDimension("pt", new LinearUnitConverter(127 / 360 / 1000));
+  public static readonly points = new LengthDimension("pt", new LinearUnitConverter((127 / 360) / 1000));
 
-  public static readonly picas = new LengthDimension("pc", new LinearUnitConverter(127 / 30 / 1000));
+  public static readonly picas = new LengthDimension("pc", new LinearUnitConverter((127 / 30) / 1000));
 
-  public static readonly inches = new LengthDimension("in", new LinearUnitConverter(25.4 / 1000));
+  public static readonly inches = new LengthDimension("in", new LinearUnitConverter((127 / 5) / 1000));
 
   public static readonly feet = new LengthDimension("ft", new LinearUnitConverter(0.3048));
 

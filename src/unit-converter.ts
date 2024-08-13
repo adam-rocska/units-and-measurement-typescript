@@ -3,7 +3,7 @@ export interface UnitConverter {
    * Converts the value to the base unit.
    * @param fromValue  The value to convert to the base unit.
    */
-  baseUnitValue(fromValue: number): number;
+  base(fromValue: number): number;
 
   /**
    * Converts the base unit value to the unit value.

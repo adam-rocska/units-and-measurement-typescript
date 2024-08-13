@@ -14,12 +14,17 @@ export class Measurement<UnitType extends Unit<any>> {
     to: UnitType extends Dimension<any> ? UnitType : never,
   ): Measurement<UnitType> {
     this.assertUnitIsDimension("Cannot convert between different dimensions.");
+    if (this.unit.constructor !== to.constructor) throw new Error("Cannot convert between different dimensions.");
 
-    const baseValue = this.unit.converter.baseUnitValue(this.value);
+    const baseValue = this.unit.converter.base(this.value);
     const convertedValue = to.converter.value(baseValue);
     const converted = new Measurement(convertedValue, to);
 
     return converted;
+  }
+
+  public toFixed(digits: number): Measurement<UnitType> {
+    return new Measurement(Number(this.value.toFixed(digits)), this.unit);
   }
 
   /// MARK: Arithmetic operations
