@@ -1,4 +1,4 @@
-# Area Dimension
+# Area
 
 | Name               | Field               | Symbol | Coefficient  |
 | ------------------ | ------------------- | ------ | ------------ |
