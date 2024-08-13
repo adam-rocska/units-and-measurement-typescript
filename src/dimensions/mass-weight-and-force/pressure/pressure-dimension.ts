@@ -3,15 +3,15 @@ import {LinearUnitConverter} from "../../../unit-converters/linear-unit-converte
 import {PressureSymbol} from "./pressure-symbol";
 
 export class PressureDimension extends Dimension<PressureSymbol> {
-  public static readonly newtonsPerMetersSquared = new PressureDimension("N/m²", new LinearUnitConverter(1));
+  public static readonly newtonsPerMetersSquared = new PressureDimension("N/m²", new LinearUnitConverter(1.0));
 
-  public static readonly gigapascals = new PressureDimension("GPa", new LinearUnitConverter(1000000000));
+  public static readonly gigapascals = new PressureDimension("GPa", new LinearUnitConverter(1e9));
 
-  public static readonly megapascals = new PressureDimension("MPa", new LinearUnitConverter(1000000));
+  public static readonly megapascals = new PressureDimension("MPa", new LinearUnitConverter(1000000.0));
 
-  public static readonly kilopascals = new PressureDimension("kPa", new LinearUnitConverter(1000));
+  public static readonly kilopascals = new PressureDimension("kPa", new LinearUnitConverter(1000.0));
 
-  public static readonly hectopascals = new PressureDimension("hPa", new LinearUnitConverter(100));
+  public static readonly hectopascals = new PressureDimension("hPa", new LinearUnitConverter(100.0));
 
   public static readonly inchesOfMercury = new PressureDimension("inHg", new LinearUnitConverter(3386.39));
 

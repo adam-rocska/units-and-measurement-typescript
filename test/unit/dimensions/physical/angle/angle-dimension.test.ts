@@ -9,7 +9,7 @@ describe("AngleDimension", () => {
 
     it("should have its unit conversion set properly.", () => {
       expect(AngleDimension.degrees.converter).toEqual(
-        new LinearUnitConverter(1)
+        new LinearUnitConverter(1.0)
       );
     });
   });

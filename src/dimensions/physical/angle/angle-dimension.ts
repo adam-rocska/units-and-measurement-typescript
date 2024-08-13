@@ -3,7 +3,7 @@ import {LinearUnitConverter} from "../../../unit-converters/linear-unit-converte
 import {AngleSymbol} from "./angle-symbol";
 
 export class AngleDimension extends Dimension<AngleSymbol> {
-  public static readonly degrees = new AngleDimension("°", new LinearUnitConverter(1));
+  public static readonly degrees = new AngleDimension("°", new LinearUnitConverter(1.0));
 
   public static readonly arcMinutes = new AngleDimension("ʹ", new LinearUnitConverter(0.016667));
 

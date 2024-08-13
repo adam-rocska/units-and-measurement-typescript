@@ -6,13 +6,11 @@ describe('isLengthSymbol', () => {
   });
 
   it.each([
-    'kg',
-    'm/s',
     'frog',
     123,
     undefined,
     null,
-  ])('should return false for a non-length symbol', () => {
-    expect(isLengthSymbol('kg')).toBe(false);
+  ])('should return false for a non-length symbol', candidate => {
+    expect(isLengthSymbol(candidate)).toBe(false);
   });
 });

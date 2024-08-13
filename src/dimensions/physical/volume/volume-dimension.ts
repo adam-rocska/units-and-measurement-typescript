@@ -3,11 +3,11 @@ import {LinearUnitConverter} from "../../../unit-converters/linear-unit-converte
 import {VolumeSymbol} from "./volume-symbol";
 
 export class VolumeDimension extends Dimension<VolumeSymbol> {
-  public static readonly megaliters = new VolumeDimension("ML", new LinearUnitConverter(1000000));
+  public static readonly megaliters = new VolumeDimension("ML", new LinearUnitConverter(1000000.0));
 
-  public static readonly kiloliters = new VolumeDimension("kL", new LinearUnitConverter(1000));
+  public static readonly kiloliters = new VolumeDimension("kL", new LinearUnitConverter(1000.0));
 
-  public static readonly liters = new VolumeDimension("L", new LinearUnitConverter(1));
+  public static readonly liters = new VolumeDimension("L", new LinearUnitConverter(1.0));
 
   public static readonly deciliters = new VolumeDimension("dL", new LinearUnitConverter(0.1));
 
@@ -15,11 +15,11 @@ export class VolumeDimension extends Dimension<VolumeSymbol> {
 
   public static readonly milliliters = new VolumeDimension("mL", new LinearUnitConverter(0.001));
 
-  public static readonly cubicKilometers = new VolumeDimension("km³", new LinearUnitConverter(1000000000000));
+  public static readonly cubicKilometers = new VolumeDimension("km³", new LinearUnitConverter(1e12));
 
-  public static readonly cubicMeters = new VolumeDimension("m³", new LinearUnitConverter(1000));
+  public static readonly cubicMeters = new VolumeDimension("m³", new LinearUnitConverter(1000.0));
 
-  public static readonly cubicDecimeters = new VolumeDimension("dm³", new LinearUnitConverter(1));
+  public static readonly cubicDecimeters = new VolumeDimension("dm³", new LinearUnitConverter(1.0));
 
   public static readonly cubicMillimeters = new VolumeDimension("mm³", new LinearUnitConverter(0.000001));
 
@@ -29,9 +29,9 @@ export class VolumeDimension extends Dimension<VolumeSymbol> {
 
   public static readonly cubicYards = new VolumeDimension("yd³", new LinearUnitConverter(764.555));
 
-  public static readonly cubicMiles = new VolumeDimension("mi³", new LinearUnitConverter(4168000000000));
+  public static readonly cubicMiles = new VolumeDimension("mi³", new LinearUnitConverter(4.168e+12));
 
-  public static readonly acreFeet = new VolumeDimension("af", new LinearUnitConverter(1233000));
+  public static readonly acreFeet = new VolumeDimension("af", new LinearUnitConverter(1.233e+6));
 
   public static readonly bushels = new VolumeDimension("bsh", new LinearUnitConverter(35.2391));
 

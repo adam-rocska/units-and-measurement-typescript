@@ -2,4 +2,4 @@
 
 | Name | Field | Symbol | Coefficient |
 | ---- | ----- | ------ | ----------- |
-| Lux  | `lux` | lx     | `1`         |
+| Lux  | `lux` | lx     | `1.0`       |

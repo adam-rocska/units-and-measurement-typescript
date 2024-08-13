@@ -42,7 +42,7 @@ describe("InformationDimension", () => {
 
     it("should have its unit conversion set properly.", () => {
       expect(InformationDimension.megabits.converter).toEqual(
-        new LinearUnitConverter(100000)
+        new LinearUnitConverter(1000e2)
       );
     });
   });
@@ -53,7 +53,7 @@ describe("InformationDimension", () => {
 
     it("should have its unit conversion set properly.", () => {
       expect(InformationDimension.gigabits.converter).toEqual(
-        new LinearUnitConverter(1000000)
+        new LinearUnitConverter(1000e3)
       );
     });
   });
@@ -64,7 +64,7 @@ describe("InformationDimension", () => {
 
     it("should have its unit conversion set properly.", () => {
       expect(InformationDimension.terabits.converter).toEqual(
-        new LinearUnitConverter(10000000)
+        new LinearUnitConverter(1000e4)
       );
     });
   });
@@ -75,7 +75,7 @@ describe("InformationDimension", () => {
 
     it("should have its unit conversion set properly.", () => {
       expect(InformationDimension.petabits.converter).toEqual(
-        new LinearUnitConverter(100000000)
+        new LinearUnitConverter(1000e5)
       );
     });
   });
@@ -86,7 +86,7 @@ describe("InformationDimension", () => {
 
     it("should have its unit conversion set properly.", () => {
       expect(InformationDimension.exabits.converter).toEqual(
-        new LinearUnitConverter(1000000000)
+        new LinearUnitConverter(1000e6)
       );
     });
   });
@@ -97,7 +97,7 @@ describe("InformationDimension", () => {
 
     it("should have its unit conversion set properly.", () => {
       expect(InformationDimension.zettabits.converter).toEqual(
-        new LinearUnitConverter(10000000000)
+        new LinearUnitConverter(1000e7)
       );
     });
   });
@@ -108,7 +108,7 @@ describe("InformationDimension", () => {
 
     it("should have its unit conversion set properly.", () => {
       expect(InformationDimension.yottabits.converter).toEqual(
-        new LinearUnitConverter(100000000000)
+        new LinearUnitConverter(1000e8)
       );
     });
   });
@@ -141,7 +141,7 @@ describe("InformationDimension", () => {
 
     it("should have its unit conversion set properly.", () => {
       expect(InformationDimension.mebibits.converter).toEqual(
-        new LinearUnitConverter(102400)
+        new LinearUnitConverter(1024e2)
       );
     });
   });
@@ -152,7 +152,7 @@ describe("InformationDimension", () => {
 
     it("should have its unit conversion set properly.", () => {
       expect(InformationDimension.megabytes.converter).toEqual(
-        new LinearUnitConverter(819200)
+        new LinearUnitConverter(8192e2)
       );
     });
   });
@@ -163,7 +163,7 @@ describe("InformationDimension", () => {
 
     it("should have its unit conversion set properly.", () => {
       expect(InformationDimension.gibibits.converter).toEqual(
-        new LinearUnitConverter(1024000)
+        new LinearUnitConverter(1024e3)
       );
     });
   });
@@ -174,7 +174,7 @@ describe("InformationDimension", () => {
 
     it("should have its unit conversion set properly.", () => {
       expect(InformationDimension.gigabytes.converter).toEqual(
-        new LinearUnitConverter(8192000)
+        new LinearUnitConverter(8192e3)
       );
     });
   });
@@ -185,7 +185,7 @@ describe("InformationDimension", () => {
 
     it("should have its unit conversion set properly.", () => {
       expect(InformationDimension.tebibits.converter).toEqual(
-        new LinearUnitConverter(10240000)
+        new LinearUnitConverter(1024e4)
       );
     });
   });
@@ -196,7 +196,7 @@ describe("InformationDimension", () => {
 
     it("should have its unit conversion set properly.", () => {
       expect(InformationDimension.terabytes.converter).toEqual(
-        new LinearUnitConverter(81920000)
+        new LinearUnitConverter(8192e4)
       );
     });
   });
@@ -207,7 +207,7 @@ describe("InformationDimension", () => {
 
     it("should have its unit conversion set properly.", () => {
       expect(InformationDimension.pebibits.converter).toEqual(
-        new LinearUnitConverter(102400000)
+        new LinearUnitConverter(1024e5)
       );
     });
   });
@@ -218,7 +218,7 @@ describe("InformationDimension", () => {
 
     it("should have its unit conversion set properly.", () => {
       expect(InformationDimension.petabytes.converter).toEqual(
-        new LinearUnitConverter(819200000)
+        new LinearUnitConverter(8192e5)
       );
     });
   });
@@ -229,7 +229,7 @@ describe("InformationDimension", () => {
 
     it("should have its unit conversion set properly.", () => {
       expect(InformationDimension.exbibits.converter).toEqual(
-        new LinearUnitConverter(1024000000)
+        new LinearUnitConverter(1024e6)
       );
     });
   });
@@ -240,7 +240,7 @@ describe("InformationDimension", () => {
 
     it("should have its unit conversion set properly.", () => {
       expect(InformationDimension.exabytes.converter).toEqual(
-        new LinearUnitConverter(8192000000)
+        new LinearUnitConverter(8192e6)
       );
     });
   });
@@ -251,7 +251,7 @@ describe("InformationDimension", () => {
 
     it("should have its unit conversion set properly.", () => {
       expect(InformationDimension.zebibits.converter).toEqual(
-        new LinearUnitConverter(10240000000)
+        new LinearUnitConverter(1024e7)
       );
     });
   });
@@ -262,7 +262,7 @@ describe("InformationDimension", () => {
 
     it("should have its unit conversion set properly.", () => {
       expect(InformationDimension.zettabytes.converter).toEqual(
-        new LinearUnitConverter(81920000000)
+        new LinearUnitConverter(8192e7)
       );
     });
   });
@@ -273,7 +273,7 @@ describe("InformationDimension", () => {
 
     it("should have its unit conversion set properly.", () => {
       expect(InformationDimension.yobibits.converter).toEqual(
-        new LinearUnitConverter(102400000000)
+        new LinearUnitConverter(1024e8)
       );
     });
   });
@@ -284,7 +284,7 @@ describe("InformationDimension", () => {
 
     it("should have its unit conversion set properly.", () => {
       expect(InformationDimension.yottabytes.converter).toEqual(
-        new LinearUnitConverter(819200000000)
+        new LinearUnitConverter(8192e8)
       );
     });
   });

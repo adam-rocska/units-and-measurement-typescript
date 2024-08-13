@@ -5,6 +5,9 @@ settings:
   excludeLinksFromLockfile: false
 
 devDependencies:
+  '@adam-rocska/markdown-table':
+    specifier: ^1.0.1
+    version: 1.0.1
   '@arethetypeswrong/cli':
     specifier: ^0.15.4
     version: 0.15.4
@@ -40,6 +43,10 @@ devDependencies:
     version: 5.5.4
 
 packages:
+
+  /@adam-rocska/markdown-table@1.0.1:
+    resolution: {integrity: sha512-UQb076e3HAXNF2a5e2ALEhjOIF62Xnz8oQBc9T90iE9W6ShfB3brFIB9J9Licu9Pmr6WBae7SaQCFADk/0UPCw==}
+    dev: true
 
   /@ampproject/remapping@2.3.0:
     resolution: {integrity: sha512-30iZtAPgz+LTIYoeivqYo853f02jBYSd5uGnGpkFV0M3xOt9aN73erkgYAmZU43x4VfqcnLxW9Kpg3R5LC4YYw==}

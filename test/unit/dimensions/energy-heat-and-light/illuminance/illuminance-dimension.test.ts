@@ -9,7 +9,7 @@ describe("IlluminanceDimension", () => {
 
     it("should have its unit conversion set properly.", () => {
       expect(IlluminanceDimension.lux.converter).toEqual(
-        new LinearUnitConverter(1)
+        new LinearUnitConverter(1.0)
       );
     });
   });

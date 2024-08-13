@@ -4,38 +4,40 @@
 export type LengthSymbol = typeof lengthSymbols[number];
 
 /**
- * Type predicate, tells if the symbol is a length symbol.
+ * Type predicate.
  * @param candidate The candidate to test.
- * @returns `true` if the symbol is a length symbol, `false` otherwise.
  */
 export function isLengthSymbol(candidate: any): candidate is LengthSymbol {
-  return lengthSymbols.includes(candidate as LengthSymbol);
+  return lengthSymbols.includes(candidate);
 }
 
 /**
- * All the length symbols.
+ * All the area symbols.
  */
 export const lengthSymbols = [
-  'Mm',
-  'kM',
-  'hm',
-  'dam',
-  'm',
-  'dm',
-  'cm',
-  'mm',
-  'µm',
-  'nm',
-  'pm',
-  'in',
-  'ft',
-  'yd',
-  'mi',
-  'smi',
-  'ly',
-  'NM',
-  'ftm',
-  'fur',
-  'ua',
-  'pc',
+  "Mm",
+  "kM",
+  "hm",
+  "dam",
+  "m",
+  "dm",
+  "cm",
+  "mm",
+  "µm",
+  "nm",
+  "pm",
+  "tw",
+  "pt",
+  "pc",
+  "in",
+  "ft",
+  "yd",
+  "mi",
+  "smi",
+  "ly",
+  "NM",
+  "ftm",
+  "fur",
+  "ua",
+  "pc"
 ] as const;

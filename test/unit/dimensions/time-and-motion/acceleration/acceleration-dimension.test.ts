@@ -9,7 +9,7 @@ describe("AccelerationDimension", () => {
 
     it("should have its unit conversion set properly.", () => {
       expect(AccelerationDimension.metersPerSecondSquared.converter).toEqual(
-        new LinearUnitConverter(1)
+        new LinearUnitConverter(1.0)
       );
     });
   });

@@ -3,7 +3,7 @@ import {LinearUnitConverter} from "../../../unit-converters/linear-unit-converte
 import {MassSymbol} from "./mass-symbol";
 
 export class MassDimension extends Dimension<MassSymbol> {
-  public static readonly kilograms = new MassDimension("kg", new LinearUnitConverter(1));
+  public static readonly kilograms = new MassDimension("kg", new LinearUnitConverter(1.0));
 
   public static readonly grams = new MassDimension("g", new LinearUnitConverter(0.001));
 

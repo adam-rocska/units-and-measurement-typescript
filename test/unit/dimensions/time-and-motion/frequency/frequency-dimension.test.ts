@@ -9,7 +9,7 @@ describe("FrequencyDimension", () => {
 
     it("should have its unit conversion set properly.", () => {
       expect(FrequencyDimension.terahertz.converter).toEqual(
-        new LinearUnitConverter(1000000000000)
+        new LinearUnitConverter(1e12)
       );
     });
   });
@@ -20,7 +20,7 @@ describe("FrequencyDimension", () => {
 
     it("should have its unit conversion set properly.", () => {
       expect(FrequencyDimension.gigahertz.converter).toEqual(
-        new LinearUnitConverter(1000000000)
+        new LinearUnitConverter(1e9)
       );
     });
   });
@@ -31,7 +31,7 @@ describe("FrequencyDimension", () => {
 
     it("should have its unit conversion set properly.", () => {
       expect(FrequencyDimension.megahertz.converter).toEqual(
-        new LinearUnitConverter(1000000)
+        new LinearUnitConverter(1000000.0)
       );
     });
   });
@@ -42,7 +42,7 @@ describe("FrequencyDimension", () => {
 
     it("should have its unit conversion set properly.", () => {
       expect(FrequencyDimension.kilohertz.converter).toEqual(
-        new LinearUnitConverter(1000)
+        new LinearUnitConverter(1000.0)
       );
     });
   });

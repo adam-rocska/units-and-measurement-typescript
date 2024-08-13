@@ -9,7 +9,7 @@ describe("EnergyDimension", () => {
 
     it("should have its unit conversion set properly.", () => {
       expect(EnergyDimension.kilojoules.converter).toEqual(
-        new LinearUnitConverter(1000)
+        new LinearUnitConverter(1000.0)
       );
     });
   });
@@ -20,7 +20,7 @@ describe("EnergyDimension", () => {
 
     it("should have its unit conversion set properly.", () => {
       expect(EnergyDimension.joules.converter).toEqual(
-        new LinearUnitConverter(1)
+        new LinearUnitConverter(1.0)
       );
     });
   });
@@ -31,7 +31,7 @@ describe("EnergyDimension", () => {
 
     it("should have its unit conversion set properly.", () => {
       expect(EnergyDimension.kilocalories.converter).toEqual(
-        new LinearUnitConverter(4184)
+        new LinearUnitConverter(4184.0)
       );
     });
   });
@@ -53,7 +53,7 @@ describe("EnergyDimension", () => {
 
     it("should have its unit conversion set properly.", () => {
       expect(EnergyDimension.kilowattHours.converter).toEqual(
-        new LinearUnitConverter(3600000)
+        new LinearUnitConverter(3600000.0)
       );
     });
   });
@@ -64,7 +64,7 @@ describe("EnergyDimension", () => {
 
     it("should have its unit conversion set properly.", () => {
       expect(EnergyDimension.wattHours.converter).toEqual(
-        new LinearUnitConverter(3600)
+        new LinearUnitConverter(3600.0)
       );
     });
   });

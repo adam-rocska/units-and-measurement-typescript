@@ -9,7 +9,7 @@ describe("SpeedDimension", () => {
 
     it("should have its unit conversion set properly.", () => {
       expect(SpeedDimension.metersPerSecond.converter).toEqual(
-        new LinearUnitConverter(1)
+        new LinearUnitConverter(1.0)
       );
     });
   });

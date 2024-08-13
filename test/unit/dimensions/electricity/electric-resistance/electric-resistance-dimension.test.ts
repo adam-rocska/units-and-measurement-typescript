@@ -9,7 +9,7 @@ describe("ElectricResistanceDimension", () => {
 
     it("should have its unit conversion set properly.", () => {
       expect(ElectricResistanceDimension.megaohms.converter).toEqual(
-        new LinearUnitConverter(1000000)
+        new LinearUnitConverter(1000000.0)
       );
     });
   });
@@ -20,7 +20,7 @@ describe("ElectricResistanceDimension", () => {
 
     it("should have its unit conversion set properly.", () => {
       expect(ElectricResistanceDimension.kiloohms.converter).toEqual(
-        new LinearUnitConverter(1000)
+        new LinearUnitConverter(1000.0)
       );
     });
   });
@@ -31,7 +31,7 @@ describe("ElectricResistanceDimension", () => {
 
     it("should have its unit conversion set properly.", () => {
       expect(ElectricResistanceDimension.ohms.converter).toEqual(
-        new LinearUnitConverter(1)
+        new LinearUnitConverter(1.0)
       );
     });
   });

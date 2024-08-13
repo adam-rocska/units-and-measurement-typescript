@@ -20,7 +20,7 @@ describe("DispersionDimension", () => {
 
     it("should have its unit conversion set properly.", () => {
       expect(DispersionDimension.partsPerBillion.converter).toEqual(
-        new LinearUnitConverter(0.001)
+        new LinearUnitConverter(1e-3)
       );
     });
   });
@@ -31,7 +31,7 @@ describe("DispersionDimension", () => {
 
     it("should have its unit conversion set properly.", () => {
       expect(DispersionDimension.partsPerTrillion.converter).toEqual(
-        new LinearUnitConverter(0.000001)
+        new LinearUnitConverter(1e-6)
       );
     });
   });

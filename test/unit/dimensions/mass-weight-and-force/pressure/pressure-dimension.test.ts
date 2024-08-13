@@ -9,7 +9,7 @@ describe("PressureDimension", () => {
 
     it("should have its unit conversion set properly.", () => {
       expect(PressureDimension.newtonsPerMetersSquared.converter).toEqual(
-        new LinearUnitConverter(1)
+        new LinearUnitConverter(1.0)
       );
     });
   });
@@ -20,7 +20,7 @@ describe("PressureDimension", () => {
 
     it("should have its unit conversion set properly.", () => {
       expect(PressureDimension.gigapascals.converter).toEqual(
-        new LinearUnitConverter(1000000000)
+        new LinearUnitConverter(1e9)
       );
     });
   });
@@ -31,7 +31,7 @@ describe("PressureDimension", () => {
 
     it("should have its unit conversion set properly.", () => {
       expect(PressureDimension.megapascals.converter).toEqual(
-        new LinearUnitConverter(1000000)
+        new LinearUnitConverter(1000000.0)
       );
     });
   });
@@ -42,7 +42,7 @@ describe("PressureDimension", () => {
 
     it("should have its unit conversion set properly.", () => {
       expect(PressureDimension.kilopascals.converter).toEqual(
-        new LinearUnitConverter(1000)
+        new LinearUnitConverter(1000.0)
       );
     });
   });
@@ -53,7 +53,7 @@ describe("PressureDimension", () => {
 
     it("should have its unit conversion set properly.", () => {
       expect(PressureDimension.hectopascals.converter).toEqual(
-        new LinearUnitConverter(100)
+        new LinearUnitConverter(100.0)
       );
     });
   });

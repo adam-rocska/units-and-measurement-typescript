@@ -2,7 +2,7 @@
 
 | Name        | Field        | Symbol | Coefficient  |
 | ----------- | ------------ | ------ | ------------ |
-| Kilograms   | `kilograms`  | kg     | `1`          |
+| Kilograms   | `kilograms`  | kg     | `1.0`        |
 | Grams       | `grams`      | g      | `0.001`      |
 | Decigrams   | `decigrams`  | dg     | `0.0001`     |
 | Centigrams  | `centigrams` | cg     | `0.00001`    |

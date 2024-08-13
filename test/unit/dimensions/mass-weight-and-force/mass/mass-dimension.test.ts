@@ -9,7 +9,7 @@ describe("MassDimension", () => {
 
     it("should have its unit conversion set properly.", () => {
       expect(MassDimension.kilograms.converter).toEqual(
-        new LinearUnitConverter(1)
+        new LinearUnitConverter(1.0)
       );
     });
   });

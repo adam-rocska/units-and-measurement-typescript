@@ -9,7 +9,7 @@ describe("VolumeDimension", () => {
 
     it("should have its unit conversion set properly.", () => {
       expect(VolumeDimension.megaliters.converter).toEqual(
-        new LinearUnitConverter(1000000)
+        new LinearUnitConverter(1000000.0)
       );
     });
   });
@@ -20,7 +20,7 @@ describe("VolumeDimension", () => {
 
     it("should have its unit conversion set properly.", () => {
       expect(VolumeDimension.kiloliters.converter).toEqual(
-        new LinearUnitConverter(1000)
+        new LinearUnitConverter(1000.0)
       );
     });
   });
@@ -31,7 +31,7 @@ describe("VolumeDimension", () => {
 
     it("should have its unit conversion set properly.", () => {
       expect(VolumeDimension.liters.converter).toEqual(
-        new LinearUnitConverter(1)
+        new LinearUnitConverter(1.0)
       );
     });
   });
@@ -75,7 +75,7 @@ describe("VolumeDimension", () => {
 
     it("should have its unit conversion set properly.", () => {
       expect(VolumeDimension.cubicKilometers.converter).toEqual(
-        new LinearUnitConverter(1000000000000)
+        new LinearUnitConverter(1e12)
       );
     });
   });
@@ -86,7 +86,7 @@ describe("VolumeDimension", () => {
 
     it("should have its unit conversion set properly.", () => {
       expect(VolumeDimension.cubicMeters.converter).toEqual(
-        new LinearUnitConverter(1000)
+        new LinearUnitConverter(1000.0)
       );
     });
   });
@@ -97,7 +97,7 @@ describe("VolumeDimension", () => {
 
     it("should have its unit conversion set properly.", () => {
       expect(VolumeDimension.cubicDecimeters.converter).toEqual(
-        new LinearUnitConverter(1)
+        new LinearUnitConverter(1.0)
       );
     });
   });
@@ -152,7 +152,7 @@ describe("VolumeDimension", () => {
 
     it("should have its unit conversion set properly.", () => {
       expect(VolumeDimension.cubicMiles.converter).toEqual(
-        new LinearUnitConverter(4168000000000)
+        new LinearUnitConverter(4.168e+12)
       );
     });
   });
@@ -163,7 +163,7 @@ describe("VolumeDimension", () => {
 
     it("should have its unit conversion set properly.", () => {
       expect(VolumeDimension.acreFeet.converter).toEqual(
-        new LinearUnitConverter(1233000)
+        new LinearUnitConverter(1.233e+6)
       );
     });
   });

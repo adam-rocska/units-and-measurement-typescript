@@ -9,7 +9,7 @@ describe("ElectricChargeDimension", () => {
 
     it("should have its unit conversion set properly.", () => {
       expect(ElectricChargeDimension.coulombs.converter).toEqual(
-        new LinearUnitConverter(1)
+        new LinearUnitConverter(1.0)
       );
     });
   });
@@ -20,7 +20,7 @@ describe("ElectricChargeDimension", () => {
 
     it("should have its unit conversion set properly.", () => {
       expect(ElectricChargeDimension.megaampereHours.converter).toEqual(
-        new LinearUnitConverter(3600000000)
+        new LinearUnitConverter(3.6e9)
       );
     });
   });
@@ -31,7 +31,7 @@ describe("ElectricChargeDimension", () => {
 
     it("should have its unit conversion set properly.", () => {
       expect(ElectricChargeDimension.kiloampereHours.converter).toEqual(
-        new LinearUnitConverter(3600000)
+        new LinearUnitConverter(3600000.0)
       );
     });
   });
@@ -42,7 +42,7 @@ describe("ElectricChargeDimension", () => {
 
     it("should have its unit conversion set properly.", () => {
       expect(ElectricChargeDimension.ampereHours.converter).toEqual(
-        new LinearUnitConverter(3600)
+        new LinearUnitConverter(3600.0)
       );
     });
   });

@@ -9,7 +9,7 @@ describe("TemperatureDimension", () => {
 
     it("should have its unit conversion set properly.", () => {
       expect(TemperatureDimension.kelvin.converter).toEqual(
-        new LinearUnitConverter(1,(0))
+        new LinearUnitConverter(1)
       );
     });
   });
@@ -20,7 +20,7 @@ describe("TemperatureDimension", () => {
 
     it("should have its unit conversion set properly.", () => {
       expect(TemperatureDimension.celsius.converter).toEqual(
-        new LinearUnitConverter(1,(273.15))
+        new LinearUnitConverter(1.0)
       );
     });
   });
@@ -31,7 +31,7 @@ describe("TemperatureDimension", () => {
 
     it("should have its unit conversion set properly.", () => {
       expect(TemperatureDimension.fahrenheit.converter).toEqual(
-        new LinearUnitConverter(0.55555555555556,(255.37222222222428))
+        new LinearUnitConverter(0.55555555555556)
       );
     });
   });
@@ -42,7 +42,7 @@ describe("TemperatureDimension", () => {
 
     it("should have its unit conversion set properly.", () => {
       expect(TemperatureDimension.rankine.converter).toEqual(
-        new LinearUnitConverter(0.55555555555556,(0))
+        new LinearUnitConverter(0.55555555555556)
       );
     });
   });

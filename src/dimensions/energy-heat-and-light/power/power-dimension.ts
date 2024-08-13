@@ -3,13 +3,13 @@ import {LinearUnitConverter} from "../../../unit-converters/linear-unit-converte
 import {PowerSymbol} from "./power-symbol";
 
 export class PowerDimension extends Dimension<PowerSymbol> {
-  public static readonly terawatts = new PowerDimension("TW", new LinearUnitConverter(1000000000000));
+  public static readonly terawatts = new PowerDimension("TW", new LinearUnitConverter(1e12));
 
-  public static readonly gigawatts = new PowerDimension("GW", new LinearUnitConverter(1000000000));
+  public static readonly gigawatts = new PowerDimension("GW", new LinearUnitConverter(1e9));
 
-  public static readonly megawatts = new PowerDimension("MW", new LinearUnitConverter(1000000));
+  public static readonly megawatts = new PowerDimension("MW", new LinearUnitConverter(1000000.0));
 
-  public static readonly kilowatts = new PowerDimension("kW", new LinearUnitConverter(1000));
+  public static readonly kilowatts = new PowerDimension("kW", new LinearUnitConverter(1000.0));
 
   public static readonly watts = new PowerDimension("W", new LinearUnitConverter(1));
 
