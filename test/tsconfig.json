@@ -6,8 +6,7 @@
     "baseUrl": "..",
     "paths": {
       "@adam-rocska/units-and-measurements": [ "./src/index.ts" ],
-      "@adam-rocska/units-and-measurements/shorthand": [ "./src/shorthand/index.ts" ],
-      "@adam-rocska/units-and-measurements/string": [ "./src/string/index.ts" ],
+      "@adam-rocska/units-and-measurements/shorthand": [ "./src/shorthand/index.ts" ]
       "!*": [ "./*" ]
     }
   },

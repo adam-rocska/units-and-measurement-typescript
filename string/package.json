@@ -1,6 +1,0 @@
-{
-  "main": "../dist/cjs/string.js",
-  "module": "../dist/es/string.mjs",
-  "types": "../dist/cjs/string.d.ts",
-  "private": true
-}
