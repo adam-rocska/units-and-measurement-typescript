@@ -1,13 +1,9 @@
-export interface UnitConverter {
-  /**
-   * Converts the value to the base unit.
-   * @param fromValue  The value to convert to the base unit.
-   */
-  base(fromValue: number): number;
+import {Invertible} from "@adam-rocska/invertible";
 
-  /**
-   * Converts the base unit value to the unit value.
-   * @param fromBaseUnitValue  The base unit value to convert to the unit value.
-   */
-  value(fromBaseUnitValue: number): number;
-}
+/**
+ * A unit converter that converts between a base unit and a value unit.
+ */
+export type UnitConverter = Invertible<Base, Value>;
+
+type Value = number;
+type Base = number;

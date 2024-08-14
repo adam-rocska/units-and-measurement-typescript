@@ -1,41 +1,15 @@
-import {LinearUnitConverter} from '!/src/unit-converters/linear-unit-converter';
+import {valueToBase} from '!/src/unit-converters/linear-unit-converter';
 
-describe('LinearUnitConverter', () => {
-  describe('.constructor', () => {
-    it('should store the provided coefficient and constant values.', () => {
-      const converter = new LinearUnitConverter(2, 3);
-      expect(converter.coefficient).toBe(2);
-      expect(converter.constant).toBe(3);
-    });
-
-    it('should default the constant to 0 if not provided.', () => {
-      const converter = new LinearUnitConverter(2);
-      expect(converter.constant).toBe(0);
-    });
+describe('valueToBase', () => {
+  it('should return an invertible function that converts the value to the base unit.', async () => {
+    const converter = valueToBase(2, 3);
+    expect(await converter(10)).toBe((10 * 2) + 3);
+    expect(await converter.inverse((10 * 2) + 3)).toBe(10);
   });
 
-  describe('#base()', () => {
-    it('should convert the value to the base unit.', () => {
-      const converter = new LinearUnitConverter(2, 3);
-      expect(converter.base(10)).toBe((10 * 2) + 3);
-    });
-
-    it('should convert the value to the base unit with a default constant.', () => {
-      const converter = new LinearUnitConverter(2);
-      expect(converter.base(10)).toBe(20);
-    });
+  it('should return an invertible function that converts the value to the base unit with a default constant.', async () => {
+    const converter = valueToBase(2);
+    expect(await converter(10)).toBe(20);
+    expect(await converter.inverse(20)).toBe(10);
   });
-
-  describe('#value', () => {
-    it('should convert the value from the base unit.', () => {
-      const converter = new LinearUnitConverter(2, 3);
-      expect(converter.value(5)).toBe((5 - 3) / 2);
-    });
-
-    it('should convert the value from the base unit with a default constant.', () => {
-      const converter = new LinearUnitConverter(2);
-      expect(converter.value(10)).toBe(10 / 2);
-    });
-  });
-
 });

@@ -1,3 +1,4 @@
+import {Invertible} from '@adam-rocska/invertible';
 import {inches, centimeters} from '@adam-rocska/units-and-measurement/shorthand';
 
 test("The simplest example.", () => {
