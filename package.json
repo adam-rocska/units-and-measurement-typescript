@@ -54,7 +54,6 @@
     "jest": "^29.7.0",
     "pnpm": "^9.7.0",
     "rimraf": "^6.0.1",
-    "type-fest": "^4.24.0",
     "typescript": "^5.5.4"
   },
   "files": [
@@ -106,8 +105,5 @@
     ],
     "testTimeout": 1000
   },
-  "packageManager": "pnpm@9.4.0",
-  "dependencies": {
-    "@adam-rocska/invertible": "^1.1.1"
-  }
+  "packageManager": "pnpm@9.4.0"
 }

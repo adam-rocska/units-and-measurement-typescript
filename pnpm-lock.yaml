@@ -4,11 +4,6 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
-dependencies:
-  '@adam-rocska/invertible':
-    specifier: ^1.1.1
-    version: 1.1.1
-
 devDependencies:
   '@arethetypeswrong/cli':
     specifier: ^0.15.4
@@ -43,18 +38,11 @@ devDependencies:
   rimraf:
     specifier: ^6.0.1
     version: 6.0.1
-  type-fest:
-    specifier: ^4.24.0
-    version: 4.24.0
   typescript:
     specifier: ^5.5.4
     version: 5.5.4
 
 packages:
-
-  /@adam-rocska/invertible@1.1.1:
-    resolution: {integrity: sha512-hlqwRX/xMP3eaBVC/K2PWH3DFkf+NYvpoGq/axUDFLyTcRe/7RTvi3R//Wzdz/1z0Ad+06JQNwtXWWE6m2GINw==}
-    dev: false
 
   /@ampproject/remapping@2.3.0:
     resolution: {integrity: sha512-30iZtAPgz+LTIYoeivqYo853f02jBYSd5uGnGpkFV0M3xOt9aN73erkgYAmZU43x4VfqcnLxW9Kpg3R5LC4YYw==}
@@ -4876,11 +4864,6 @@ packages:
   /type-fest@0.21.3:
     resolution: {integrity: sha512-t0rzBq87m3fVcduHDUFhKmyyX+9eo6WQjZvf51Ea/M0Q7+T374Jp1aUiyUl0GKxp8M/OETVHSDvmkyPgvX+X2w==}
     engines: {node: '>=10'}
-    dev: true
-
-  /type-fest@4.24.0:
-    resolution: {integrity: sha512-spAaHzc6qre0TlZQQ2aA/nGMe+2Z/wyGk5Z+Ru2VUfdNwT6kWO6TjevOlpebsATEG1EIQ2sOiDszud3lO5mt/Q==}
-    engines: {node: '>=16'}
     dev: true
 
   /typed-array-buffer@1.0.2:
