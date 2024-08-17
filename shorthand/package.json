@@ -1,6 +1,0 @@
-{
-  "main": "../dist/cjs/shorthand.js",
-  "module": "../dist/es/shorthand.mjs",
-  "types": "../dist/cjs/shorthand.d.ts",
-  "private": true
-}

@@ -1,5 +1,5 @@
 import {Invertible} from '@adam-rocska/invertible';
-import {inches, centimeters} from '@adam-rocska/units-and-measurement/shorthand';
+import {inches, centimeters} from '@adam-rocska/units-and-measurement/conversions';
 
 test("The simplest example.", () => {
   const paperWidth = inches(5.5);

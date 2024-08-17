@@ -58,7 +58,7 @@
   },
   "files": [
     "dist",
-    "shorthand"
+    "conversions"
   ],
   "main": "./dist/cjs/index.js",
   "module": "./dist/es/index.mjs",
@@ -75,14 +75,14 @@
         "default": "./dist/cjs/index.js"
       }
     },
-    "./shorthand": {
+    "./conversions": {
       "import": {
-        "types": "./dist/es/shorthand.d.mts",
-        "default": "./dist/es/shorthand.mjs"
+        "types": "./dist/es/conversions.d.mts",
+        "default": "./dist/es/conversions.mjs"
       },
       "require": {
-        "types": "./dist/cjs/shorthand.d.ts",
-        "default": "./dist/cjs/shorthand.js"
+        "types": "./dist/cjs/conversions.d.ts",
+        "default": "./dist/cjs/conversions.js"
       }
     }
   },
@@ -92,7 +92,7 @@
     ],
     "moduleNameMapper": {
       "@adam-rocska/units-and-measurement": "<rootDir>/src/index.ts",
-      "@adam-rocska/units-and-measurement/shorthand": "<rootDir>/src/shorthand/index.ts",
+      "@adam-rocska/units-and-measurement/conversions": "<rootDir>/src/conversions/index.ts",
       "^!(.*)": "<rootDir>/$1"
     },
     "transform": {
