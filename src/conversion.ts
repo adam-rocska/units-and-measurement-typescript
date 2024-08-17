@@ -5,9 +5,15 @@ export type Conversion = readonly [
 
 export type ConversionFactory = (...parameters: readonly any[]) => Conversion;
 
+export type ConversionMapItem<
+  ConvertedBy extends ConversionFactory,
+  UnitSymbol extends string
+> = readonly [
+  unit: UnitSymbol,
+  ...parameters: Parameters<ConvertedBy>
+];
+
 export type ConversionMap<
   ConvertedBy extends ConversionFactory,
   UnitSymbol extends string
-> = {
-    [unit in UnitSymbol]: Parameters<ConvertedBy>;
-  };
+> = readonly ConversionMapItem<ConvertedBy, UnitSymbol>[];
