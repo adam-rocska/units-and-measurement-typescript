@@ -1,9 +1,3 @@
-// function m<Value extends number>(value: Value): Measurement<'m', Value>;
-// function m<UnitSymbol extends string, Value extends number>(measurement: Measurement<UnitSymbol, Value>): Measurement<'m', Value>;
-// function m() {
-
-// }
-
 export type Measurement<
   UnitSymbol extends string,
   Value extends number = number
