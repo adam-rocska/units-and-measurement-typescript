@@ -7,6 +7,5 @@
     "forceConsistentCasingInFileNames": true,
     "strict": true,
     "checkJs": true
-  },
-  "exclude": [ "./dist" ]
+  }
 }
