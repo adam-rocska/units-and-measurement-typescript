@@ -21,7 +21,7 @@ export const isString = <
   const valueCandidate = parseFloat(candidate);
   if (Number.isNaN(valueCandidate)) return false;
 
-  const unitCandidate = candidate.replace(valueCandidate.toString(), "");
+  const unitCandidate = candidate.replace(valueCandidate.toString(), "").trim();
   if (!unitCandidate) return false;
 
   if (unit !== undefined && unitCandidate !== unit) return false;

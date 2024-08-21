@@ -1,23 +1,23 @@
+/**
+ * A tuple of conversion functions to and from a base unit.
+ */
 export type Conversion = readonly [
   toBase: (value: number) => number,
   fromBase: (value: number) => number
 ];
 
-export type ConversionFactory = (...parameters: readonly any[]) => Conversion;
+/**
+ * A function that creates a conversion tuple.
+ */
+export type ConversionFactory<
+  Parameters extends readonly any[] = readonly any[]
+> = (...parameters: Parameters) => Conversion;
 
-export type ConversionMapItem<
-  ConvertedBy extends ConversionFactory,
-  UnitSymbol extends string
-> = readonly [
-  unit: UnitSymbol,
-  ...parameters: Parameters<ConvertedBy>
-];
-
-export type ConversionMap<
-  ConvertedBy extends ConversionFactory,
-  UnitSymbol extends string
-> = readonly ConversionMapItem<ConvertedBy, UnitSymbol>[];
-
+/**
+ * Creates a linear conversion tuple, where:
+ * - `base = value * coefficient + constant`
+ * - `value = (base - constant) / coefficient`
+ */
 export const linearConversion: ConversionFactory = (
   coefficient: number,
   constant: number = 0

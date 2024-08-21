@@ -12,7 +12,7 @@ export function measurementFactory<
   Unit extends string
 >(
   arg1: IsUnion<Unit> extends true
-    ? Map<Unit, Conversion>
+    ? {[unit in Unit]: Conversion}
     : Unit
 ): IsUnion<Unit> extends true
   ? {[unit in Unit]: MeasurementFactory<Unit>}
@@ -20,9 +20,9 @@ export function measurementFactory<
   // TODO: These typecasts should be safe, but I should come back and double check!
   if (typeof arg1 === "string") return v => typeof v === "number" ? [v, arg1 as Unit] : v;
 
-  const conversions: Map<Unit, Conversion> = arg1;
+  const conversions = arg1 as {[unit in Unit]: Conversion};
   return Array
-    .from(conversions.keys())
+    .from(Object.keys(conversions) as Unit[])
     .reduce(
       (dimension, dimensionUnit: Unit) => ({
         ...dimension,
@@ -30,8 +30,8 @@ export function measurementFactory<
           if (typeof arg1 === "number") return [arg1, dimensionUnit];
           const [sourceValue, sourceUnit] = [value(arg1), unit(arg1)];
           if (sourceUnit === dimensionUnit) return [sourceValue, sourceUnit];
-          const [_, toBase] = conversions.get(sourceUnit)!;
-          const [fromBase, __] = conversions.get(dimensionUnit)!;
+          const [_, toBase] = conversions[sourceUnit];
+          const [fromBase, __] = conversions[dimensionUnit];
           return [fromBase(toBase(sourceValue)), dimensionUnit];
         }) satisfies MeasurementFactory<Unit>,
       }),

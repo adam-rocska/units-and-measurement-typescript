@@ -13,7 +13,7 @@ export const toTuple = <
   Unit extends string,
   Value extends number = number
 >(measurement: Measurement<Unit, Value>): Tuple<Unit, Value> => {
-  if (measurement instanceof Array) return measurement;
+  if (measurement instanceof Array) return [...measurement];
   const value = parseFloat(measurement) as Value;
   const unit = measurement.slice(value.toString().length) as Unit;
   return [value, unit];
