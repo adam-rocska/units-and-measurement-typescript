@@ -17,3 +17,11 @@ export type ConversionMap<
   ConvertedBy extends ConversionFactory,
   UnitSymbol extends string
 > = readonly ConversionMapItem<ConvertedBy, UnitSymbol>[];
+
+export const linearConversion: ConversionFactory = (
+  coefficient: number,
+  constant: number = 0
+) => [
+    (value: number): number => value * coefficient + constant,
+    (value: number): number => (value - constant) / coefficient
+  ];
