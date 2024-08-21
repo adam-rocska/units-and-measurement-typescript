@@ -7,6 +7,11 @@ export type Conversion = readonly [
 ];
 
 /**
+ * A record of conversion tuples for each unit.
+ */
+export type Conversions<Unit extends string> = {[unit in Unit]: Conversion};
+
+/**
  * A function that creates a conversion tuple.
  */
 export type ConversionFactory<
@@ -23,5 +28,5 @@ export const linearConversion: ConversionFactory = (
   constant: number = 0
 ) => [
     (value: number): number => value * coefficient + constant,
-    (value: number): number => (value - constant) / coefficient
+    (value: number): number => (value - constant) / coefficient,
   ];
