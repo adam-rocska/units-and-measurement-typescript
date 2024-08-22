@@ -1,0 +1,30 @@
+# Information
+
+| Name      | Field        | Symbol | Coefficient  | Constant |
+| --------- | ------------ | ------ | ------------ | -------- |
+| Bit       | `bits`       | b      | 1            | 0        |
+| Byte      | `bytes`      | B      | 8            | 0        |
+| Kilobit   | `kilobits`   | kb     | 1000         | 0        |
+| Megabits  | `megabits`   | Mb     | 100000       | 0        |
+| Gigabit   | `gigabits`   | Gb     | 1000000      | 0        |
+| Terabit   | `terabits`   | Tb     | 10000000     | 0        |
+| Petabit   | `petabits`   | Pb     | 100000000    | 0        |
+| Exabit    | `exabits`    | Eb     | 1000000000   | 0        |
+| Zettabit  | `zettabits`  | Zb     | 10000000000  | 0        |
+| Yottabit  | `yottabits`  | Yb     | 100000000000 | 0        |
+| Kibibit   | `kibibits`   | Kib    | 1024         | 0        |
+| Kilobyte  | `kilobytes`  | KB     | 8192         | 0        |
+| Mebibit   | `mebibits`   | Mib    | 102400       | 0        |
+| Megabyte  | `megabytes`  | MB     | 819200       | 0        |
+| Gibibit   | `gibibits`   | Gib    | 1024000      | 0        |
+| Gigabyte  | `gigabytes`  | GB     | 8192000      | 0        |
+| Tebibit   | `tebibits`   | Tib    | 10240000     | 0        |
+| Terabyte  | `terabytes`  | TB     | 81920000     | 0        |
+| Pebibit   | `pebibits`   | Pib    | 102400000    | 0        |
+| Petabyte  | `petabytes`  | PB     | 819200000    | 0        |
+| Exbibit   | `exbibits`   | Eib    | 1024000000   | 0        |
+| Exabyte   | `exabytes`   | EB     | 8192000000   | 0        |
+| Zebibit   | `zebibits`   | Zib    | 10240000000  | 0        |
+| Zettabyte | `zettabytes` | ZB     | 81920000000  | 0        |
+| Yobibit   | `yobibits`   | Yib    | 102400000000 | 0        |
+| Yottabyte | `yottabytes` | YB     | 819200000000 | 0        |
