@@ -228,11 +228,11 @@ describe("volume", () => {
       const kilolitersConversion = linearConversion(1000);
 
       const [toBase, fromBase] = [
+        megalitersConversion[1],
         kilolitersConversion[0],
-        megalitersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ML"] as const;
+      const expected = [fromBase(toBase(v)), "ML"] as const;
       const conversionCandidate = [v, "kL"] as const;
 
       expect(volume["ML"](conversionCandidate)).toEqual(expected);
@@ -244,11 +244,11 @@ describe("volume", () => {
       const litersConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
+        megalitersConversion[1],
         litersConversion[0],
-        megalitersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ML"] as const;
+      const expected = [fromBase(toBase(v)), "ML"] as const;
       const conversionCandidate = [v, "L"] as const;
 
       expect(volume["ML"](conversionCandidate)).toEqual(expected);
@@ -260,11 +260,11 @@ describe("volume", () => {
       const decilitersConversion = linearConversion(0.1);
 
       const [toBase, fromBase] = [
+        megalitersConversion[1],
         decilitersConversion[0],
-        megalitersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ML"] as const;
+      const expected = [fromBase(toBase(v)), "ML"] as const;
       const conversionCandidate = [v, "dL"] as const;
 
       expect(volume["ML"](conversionCandidate)).toEqual(expected);
@@ -276,11 +276,11 @@ describe("volume", () => {
       const centilitersConversion = linearConversion(0.01);
 
       const [toBase, fromBase] = [
+        megalitersConversion[1],
         centilitersConversion[0],
-        megalitersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ML"] as const;
+      const expected = [fromBase(toBase(v)), "ML"] as const;
       const conversionCandidate = [v, "cL"] as const;
 
       expect(volume["ML"](conversionCandidate)).toEqual(expected);
@@ -292,11 +292,11 @@ describe("volume", () => {
       const millilitersConversion = linearConversion(0.001);
 
       const [toBase, fromBase] = [
+        megalitersConversion[1],
         millilitersConversion[0],
-        megalitersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ML"] as const;
+      const expected = [fromBase(toBase(v)), "ML"] as const;
       const conversionCandidate = [v, "mL"] as const;
 
       expect(volume["ML"](conversionCandidate)).toEqual(expected);
@@ -308,11 +308,11 @@ describe("volume", () => {
       const cubicKilometersConversion = linearConversion(1000000000000);
 
       const [toBase, fromBase] = [
+        megalitersConversion[1],
         cubicKilometersConversion[0],
-        megalitersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ML"] as const;
+      const expected = [fromBase(toBase(v)), "ML"] as const;
       const conversionCandidate = [v, "km³"] as const;
 
       expect(volume["ML"](conversionCandidate)).toEqual(expected);
@@ -324,11 +324,11 @@ describe("volume", () => {
       const cubicMetersConversion = linearConversion(1000);
 
       const [toBase, fromBase] = [
+        megalitersConversion[1],
         cubicMetersConversion[0],
-        megalitersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ML"] as const;
+      const expected = [fromBase(toBase(v)), "ML"] as const;
       const conversionCandidate = [v, "m³"] as const;
 
       expect(volume["ML"](conversionCandidate)).toEqual(expected);
@@ -340,11 +340,11 @@ describe("volume", () => {
       const cubicDecimetersConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
+        megalitersConversion[1],
         cubicDecimetersConversion[0],
-        megalitersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ML"] as const;
+      const expected = [fromBase(toBase(v)), "ML"] as const;
       const conversionCandidate = [v, "dm³"] as const;
 
       expect(volume["ML"](conversionCandidate)).toEqual(expected);
@@ -356,11 +356,11 @@ describe("volume", () => {
       const cubicMillimetersConversion = linearConversion(0.000001);
 
       const [toBase, fromBase] = [
+        megalitersConversion[1],
         cubicMillimetersConversion[0],
-        megalitersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ML"] as const;
+      const expected = [fromBase(toBase(v)), "ML"] as const;
       const conversionCandidate = [v, "mm³"] as const;
 
       expect(volume["ML"](conversionCandidate)).toEqual(expected);
@@ -372,11 +372,11 @@ describe("volume", () => {
       const cubicInchesConversion = linearConversion(0.0163871);
 
       const [toBase, fromBase] = [
+        megalitersConversion[1],
         cubicInchesConversion[0],
-        megalitersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ML"] as const;
+      const expected = [fromBase(toBase(v)), "ML"] as const;
       const conversionCandidate = [v, "in³"] as const;
 
       expect(volume["ML"](conversionCandidate)).toEqual(expected);
@@ -388,11 +388,11 @@ describe("volume", () => {
       const cubicFeetConversion = linearConversion(28.3168);
 
       const [toBase, fromBase] = [
+        megalitersConversion[1],
         cubicFeetConversion[0],
-        megalitersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ML"] as const;
+      const expected = [fromBase(toBase(v)), "ML"] as const;
       const conversionCandidate = [v, "ft³"] as const;
 
       expect(volume["ML"](conversionCandidate)).toEqual(expected);
@@ -404,11 +404,11 @@ describe("volume", () => {
       const cubicYardsConversion = linearConversion(764.555);
 
       const [toBase, fromBase] = [
+        megalitersConversion[1],
         cubicYardsConversion[0],
-        megalitersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ML"] as const;
+      const expected = [fromBase(toBase(v)), "ML"] as const;
       const conversionCandidate = [v, "yd³"] as const;
 
       expect(volume["ML"](conversionCandidate)).toEqual(expected);
@@ -420,11 +420,11 @@ describe("volume", () => {
       const cubicMilesConversion = linearConversion(4168000000000);
 
       const [toBase, fromBase] = [
+        megalitersConversion[1],
         cubicMilesConversion[0],
-        megalitersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ML"] as const;
+      const expected = [fromBase(toBase(v)), "ML"] as const;
       const conversionCandidate = [v, "mi³"] as const;
 
       expect(volume["ML"](conversionCandidate)).toEqual(expected);
@@ -436,11 +436,11 @@ describe("volume", () => {
       const acreFeetConversion = linearConversion(1233000);
 
       const [toBase, fromBase] = [
+        megalitersConversion[1],
         acreFeetConversion[0],
-        megalitersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ML"] as const;
+      const expected = [fromBase(toBase(v)), "ML"] as const;
       const conversionCandidate = [v, "af"] as const;
 
       expect(volume["ML"](conversionCandidate)).toEqual(expected);
@@ -452,11 +452,11 @@ describe("volume", () => {
       const bushelsConversion = linearConversion(35.2391);
 
       const [toBase, fromBase] = [
+        megalitersConversion[1],
         bushelsConversion[0],
-        megalitersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ML"] as const;
+      const expected = [fromBase(toBase(v)), "ML"] as const;
       const conversionCandidate = [v, "bsh"] as const;
 
       expect(volume["ML"](conversionCandidate)).toEqual(expected);
@@ -468,11 +468,11 @@ describe("volume", () => {
       const teaspoonsConversion = linearConversion(0.00492892);
 
       const [toBase, fromBase] = [
+        megalitersConversion[1],
         teaspoonsConversion[0],
-        megalitersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ML"] as const;
+      const expected = [fromBase(toBase(v)), "ML"] as const;
       const conversionCandidate = [v, "tsp"] as const;
 
       expect(volume["ML"](conversionCandidate)).toEqual(expected);
@@ -484,11 +484,11 @@ describe("volume", () => {
       const tablespoonsConversion = linearConversion(0.0147868);
 
       const [toBase, fromBase] = [
+        megalitersConversion[1],
         tablespoonsConversion[0],
-        megalitersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ML"] as const;
+      const expected = [fromBase(toBase(v)), "ML"] as const;
       const conversionCandidate = [v, "tbsp"] as const;
 
       expect(volume["ML"](conversionCandidate)).toEqual(expected);
@@ -500,11 +500,11 @@ describe("volume", () => {
       const fluidOuncesConversion = linearConversion(0.0295735);
 
       const [toBase, fromBase] = [
+        megalitersConversion[1],
         fluidOuncesConversion[0],
-        megalitersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ML"] as const;
+      const expected = [fromBase(toBase(v)), "ML"] as const;
       const conversionCandidate = [v, "fl oz"] as const;
 
       expect(volume["ML"](conversionCandidate)).toEqual(expected);
@@ -516,11 +516,11 @@ describe("volume", () => {
       const cupsConversion = linearConversion(0.24);
 
       const [toBase, fromBase] = [
+        megalitersConversion[1],
         cupsConversion[0],
-        megalitersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ML"] as const;
+      const expected = [fromBase(toBase(v)), "ML"] as const;
       const conversionCandidate = [v, "cup"] as const;
 
       expect(volume["ML"](conversionCandidate)).toEqual(expected);
@@ -532,11 +532,11 @@ describe("volume", () => {
       const pintsConversion = linearConversion(0.473176);
 
       const [toBase, fromBase] = [
+        megalitersConversion[1],
         pintsConversion[0],
-        megalitersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ML"] as const;
+      const expected = [fromBase(toBase(v)), "ML"] as const;
       const conversionCandidate = [v, "pt"] as const;
 
       expect(volume["ML"](conversionCandidate)).toEqual(expected);
@@ -548,11 +548,11 @@ describe("volume", () => {
       const quartsConversion = linearConversion(0.946353);
 
       const [toBase, fromBase] = [
+        megalitersConversion[1],
         quartsConversion[0],
-        megalitersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ML"] as const;
+      const expected = [fromBase(toBase(v)), "ML"] as const;
       const conversionCandidate = [v, "qt"] as const;
 
       expect(volume["ML"](conversionCandidate)).toEqual(expected);
@@ -564,11 +564,11 @@ describe("volume", () => {
       const gallonsConversion = linearConversion(3.78541);
 
       const [toBase, fromBase] = [
+        megalitersConversion[1],
         gallonsConversion[0],
-        megalitersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ML"] as const;
+      const expected = [fromBase(toBase(v)), "ML"] as const;
       const conversionCandidate = [v, "gal"] as const;
 
       expect(volume["ML"](conversionCandidate)).toEqual(expected);
@@ -580,11 +580,11 @@ describe("volume", () => {
       const imperialTeaspoonsConversion = linearConversion(0.00591939);
 
       const [toBase, fromBase] = [
+        megalitersConversion[1],
         imperialTeaspoonsConversion[0],
-        megalitersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ML"] as const;
+      const expected = [fromBase(toBase(v)), "ML"] as const;
       const conversionCandidate = [v, "imperial tsp"] as const;
 
       expect(volume["ML"](conversionCandidate)).toEqual(expected);
@@ -596,11 +596,11 @@ describe("volume", () => {
       const imperialTablespoonsConversion = linearConversion(0.0177582);
 
       const [toBase, fromBase] = [
+        megalitersConversion[1],
         imperialTablespoonsConversion[0],
-        megalitersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ML"] as const;
+      const expected = [fromBase(toBase(v)), "ML"] as const;
       const conversionCandidate = [v, "imperial tbsp"] as const;
 
       expect(volume["ML"](conversionCandidate)).toEqual(expected);
@@ -612,11 +612,11 @@ describe("volume", () => {
       const imperialFluidOuncesConversion = linearConversion(0.0284131);
 
       const [toBase, fromBase] = [
+        megalitersConversion[1],
         imperialFluidOuncesConversion[0],
-        megalitersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ML"] as const;
+      const expected = [fromBase(toBase(v)), "ML"] as const;
       const conversionCandidate = [v, "imperial fl oz"] as const;
 
       expect(volume["ML"](conversionCandidate)).toEqual(expected);
@@ -628,11 +628,11 @@ describe("volume", () => {
       const imperialPintsConversion = linearConversion(0.568261);
 
       const [toBase, fromBase] = [
+        megalitersConversion[1],
         imperialPintsConversion[0],
-        megalitersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ML"] as const;
+      const expected = [fromBase(toBase(v)), "ML"] as const;
       const conversionCandidate = [v, "imperial pt"] as const;
 
       expect(volume["ML"](conversionCandidate)).toEqual(expected);
@@ -644,11 +644,11 @@ describe("volume", () => {
       const imperialQuartsConversion = linearConversion(1.13652);
 
       const [toBase, fromBase] = [
+        megalitersConversion[1],
         imperialQuartsConversion[0],
-        megalitersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ML"] as const;
+      const expected = [fromBase(toBase(v)), "ML"] as const;
       const conversionCandidate = [v, "imperial qt"] as const;
 
       expect(volume["ML"](conversionCandidate)).toEqual(expected);
@@ -660,11 +660,11 @@ describe("volume", () => {
       const imperialGallonsConversion = linearConversion(4.54609);
 
       const [toBase, fromBase] = [
+        megalitersConversion[1],
         imperialGallonsConversion[0],
-        megalitersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ML"] as const;
+      const expected = [fromBase(toBase(v)), "ML"] as const;
       const conversionCandidate = [v, "imperial gal"] as const;
 
       expect(volume["ML"](conversionCandidate)).toEqual(expected);
@@ -676,11 +676,11 @@ describe("volume", () => {
       const metricCupsConversion = linearConversion(0.25);
 
       const [toBase, fromBase] = [
+        megalitersConversion[1],
         metricCupsConversion[0],
-        megalitersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ML"] as const;
+      const expected = [fromBase(toBase(v)), "ML"] as const;
       const conversionCandidate = [v, "metric cup"] as const;
 
       expect(volume["ML"](conversionCandidate)).toEqual(expected);
@@ -700,11 +700,11 @@ describe("volume", () => {
       const megalitersConversion = linearConversion(1000000);
 
       const [toBase, fromBase] = [
+        kilolitersConversion[1],
         megalitersConversion[0],
-        kilolitersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "kL"] as const;
+      const expected = [fromBase(toBase(v)), "kL"] as const;
       const conversionCandidate = [v, "ML"] as const;
 
       expect(volume["kL"](conversionCandidate)).toEqual(expected);
@@ -718,11 +718,11 @@ describe("volume", () => {
       const litersConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
+        kilolitersConversion[1],
         litersConversion[0],
-        kilolitersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "kL"] as const;
+      const expected = [fromBase(toBase(v)), "kL"] as const;
       const conversionCandidate = [v, "L"] as const;
 
       expect(volume["kL"](conversionCandidate)).toEqual(expected);
@@ -734,11 +734,11 @@ describe("volume", () => {
       const decilitersConversion = linearConversion(0.1);
 
       const [toBase, fromBase] = [
+        kilolitersConversion[1],
         decilitersConversion[0],
-        kilolitersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "kL"] as const;
+      const expected = [fromBase(toBase(v)), "kL"] as const;
       const conversionCandidate = [v, "dL"] as const;
 
       expect(volume["kL"](conversionCandidate)).toEqual(expected);
@@ -750,11 +750,11 @@ describe("volume", () => {
       const centilitersConversion = linearConversion(0.01);
 
       const [toBase, fromBase] = [
+        kilolitersConversion[1],
         centilitersConversion[0],
-        kilolitersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "kL"] as const;
+      const expected = [fromBase(toBase(v)), "kL"] as const;
       const conversionCandidate = [v, "cL"] as const;
 
       expect(volume["kL"](conversionCandidate)).toEqual(expected);
@@ -766,11 +766,11 @@ describe("volume", () => {
       const millilitersConversion = linearConversion(0.001);
 
       const [toBase, fromBase] = [
+        kilolitersConversion[1],
         millilitersConversion[0],
-        kilolitersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "kL"] as const;
+      const expected = [fromBase(toBase(v)), "kL"] as const;
       const conversionCandidate = [v, "mL"] as const;
 
       expect(volume["kL"](conversionCandidate)).toEqual(expected);
@@ -782,11 +782,11 @@ describe("volume", () => {
       const cubicKilometersConversion = linearConversion(1000000000000);
 
       const [toBase, fromBase] = [
+        kilolitersConversion[1],
         cubicKilometersConversion[0],
-        kilolitersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "kL"] as const;
+      const expected = [fromBase(toBase(v)), "kL"] as const;
       const conversionCandidate = [v, "km³"] as const;
 
       expect(volume["kL"](conversionCandidate)).toEqual(expected);
@@ -798,11 +798,11 @@ describe("volume", () => {
       const cubicMetersConversion = linearConversion(1000);
 
       const [toBase, fromBase] = [
+        kilolitersConversion[1],
         cubicMetersConversion[0],
-        kilolitersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "kL"] as const;
+      const expected = [fromBase(toBase(v)), "kL"] as const;
       const conversionCandidate = [v, "m³"] as const;
 
       expect(volume["kL"](conversionCandidate)).toEqual(expected);
@@ -814,11 +814,11 @@ describe("volume", () => {
       const cubicDecimetersConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
+        kilolitersConversion[1],
         cubicDecimetersConversion[0],
-        kilolitersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "kL"] as const;
+      const expected = [fromBase(toBase(v)), "kL"] as const;
       const conversionCandidate = [v, "dm³"] as const;
 
       expect(volume["kL"](conversionCandidate)).toEqual(expected);
@@ -830,11 +830,11 @@ describe("volume", () => {
       const cubicMillimetersConversion = linearConversion(0.000001);
 
       const [toBase, fromBase] = [
+        kilolitersConversion[1],
         cubicMillimetersConversion[0],
-        kilolitersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "kL"] as const;
+      const expected = [fromBase(toBase(v)), "kL"] as const;
       const conversionCandidate = [v, "mm³"] as const;
 
       expect(volume["kL"](conversionCandidate)).toEqual(expected);
@@ -846,11 +846,11 @@ describe("volume", () => {
       const cubicInchesConversion = linearConversion(0.0163871);
 
       const [toBase, fromBase] = [
+        kilolitersConversion[1],
         cubicInchesConversion[0],
-        kilolitersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "kL"] as const;
+      const expected = [fromBase(toBase(v)), "kL"] as const;
       const conversionCandidate = [v, "in³"] as const;
 
       expect(volume["kL"](conversionCandidate)).toEqual(expected);
@@ -862,11 +862,11 @@ describe("volume", () => {
       const cubicFeetConversion = linearConversion(28.3168);
 
       const [toBase, fromBase] = [
+        kilolitersConversion[1],
         cubicFeetConversion[0],
-        kilolitersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "kL"] as const;
+      const expected = [fromBase(toBase(v)), "kL"] as const;
       const conversionCandidate = [v, "ft³"] as const;
 
       expect(volume["kL"](conversionCandidate)).toEqual(expected);
@@ -878,11 +878,11 @@ describe("volume", () => {
       const cubicYardsConversion = linearConversion(764.555);
 
       const [toBase, fromBase] = [
+        kilolitersConversion[1],
         cubicYardsConversion[0],
-        kilolitersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "kL"] as const;
+      const expected = [fromBase(toBase(v)), "kL"] as const;
       const conversionCandidate = [v, "yd³"] as const;
 
       expect(volume["kL"](conversionCandidate)).toEqual(expected);
@@ -894,11 +894,11 @@ describe("volume", () => {
       const cubicMilesConversion = linearConversion(4168000000000);
 
       const [toBase, fromBase] = [
+        kilolitersConversion[1],
         cubicMilesConversion[0],
-        kilolitersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "kL"] as const;
+      const expected = [fromBase(toBase(v)), "kL"] as const;
       const conversionCandidate = [v, "mi³"] as const;
 
       expect(volume["kL"](conversionCandidate)).toEqual(expected);
@@ -910,11 +910,11 @@ describe("volume", () => {
       const acreFeetConversion = linearConversion(1233000);
 
       const [toBase, fromBase] = [
+        kilolitersConversion[1],
         acreFeetConversion[0],
-        kilolitersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "kL"] as const;
+      const expected = [fromBase(toBase(v)), "kL"] as const;
       const conversionCandidate = [v, "af"] as const;
 
       expect(volume["kL"](conversionCandidate)).toEqual(expected);
@@ -926,11 +926,11 @@ describe("volume", () => {
       const bushelsConversion = linearConversion(35.2391);
 
       const [toBase, fromBase] = [
+        kilolitersConversion[1],
         bushelsConversion[0],
-        kilolitersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "kL"] as const;
+      const expected = [fromBase(toBase(v)), "kL"] as const;
       const conversionCandidate = [v, "bsh"] as const;
 
       expect(volume["kL"](conversionCandidate)).toEqual(expected);
@@ -942,11 +942,11 @@ describe("volume", () => {
       const teaspoonsConversion = linearConversion(0.00492892);
 
       const [toBase, fromBase] = [
+        kilolitersConversion[1],
         teaspoonsConversion[0],
-        kilolitersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "kL"] as const;
+      const expected = [fromBase(toBase(v)), "kL"] as const;
       const conversionCandidate = [v, "tsp"] as const;
 
       expect(volume["kL"](conversionCandidate)).toEqual(expected);
@@ -958,11 +958,11 @@ describe("volume", () => {
       const tablespoonsConversion = linearConversion(0.0147868);
 
       const [toBase, fromBase] = [
+        kilolitersConversion[1],
         tablespoonsConversion[0],
-        kilolitersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "kL"] as const;
+      const expected = [fromBase(toBase(v)), "kL"] as const;
       const conversionCandidate = [v, "tbsp"] as const;
 
       expect(volume["kL"](conversionCandidate)).toEqual(expected);
@@ -974,11 +974,11 @@ describe("volume", () => {
       const fluidOuncesConversion = linearConversion(0.0295735);
 
       const [toBase, fromBase] = [
+        kilolitersConversion[1],
         fluidOuncesConversion[0],
-        kilolitersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "kL"] as const;
+      const expected = [fromBase(toBase(v)), "kL"] as const;
       const conversionCandidate = [v, "fl oz"] as const;
 
       expect(volume["kL"](conversionCandidate)).toEqual(expected);
@@ -990,11 +990,11 @@ describe("volume", () => {
       const cupsConversion = linearConversion(0.24);
 
       const [toBase, fromBase] = [
+        kilolitersConversion[1],
         cupsConversion[0],
-        kilolitersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "kL"] as const;
+      const expected = [fromBase(toBase(v)), "kL"] as const;
       const conversionCandidate = [v, "cup"] as const;
 
       expect(volume["kL"](conversionCandidate)).toEqual(expected);
@@ -1006,11 +1006,11 @@ describe("volume", () => {
       const pintsConversion = linearConversion(0.473176);
 
       const [toBase, fromBase] = [
+        kilolitersConversion[1],
         pintsConversion[0],
-        kilolitersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "kL"] as const;
+      const expected = [fromBase(toBase(v)), "kL"] as const;
       const conversionCandidate = [v, "pt"] as const;
 
       expect(volume["kL"](conversionCandidate)).toEqual(expected);
@@ -1022,11 +1022,11 @@ describe("volume", () => {
       const quartsConversion = linearConversion(0.946353);
 
       const [toBase, fromBase] = [
+        kilolitersConversion[1],
         quartsConversion[0],
-        kilolitersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "kL"] as const;
+      const expected = [fromBase(toBase(v)), "kL"] as const;
       const conversionCandidate = [v, "qt"] as const;
 
       expect(volume["kL"](conversionCandidate)).toEqual(expected);
@@ -1038,11 +1038,11 @@ describe("volume", () => {
       const gallonsConversion = linearConversion(3.78541);
 
       const [toBase, fromBase] = [
+        kilolitersConversion[1],
         gallonsConversion[0],
-        kilolitersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "kL"] as const;
+      const expected = [fromBase(toBase(v)), "kL"] as const;
       const conversionCandidate = [v, "gal"] as const;
 
       expect(volume["kL"](conversionCandidate)).toEqual(expected);
@@ -1054,11 +1054,11 @@ describe("volume", () => {
       const imperialTeaspoonsConversion = linearConversion(0.00591939);
 
       const [toBase, fromBase] = [
+        kilolitersConversion[1],
         imperialTeaspoonsConversion[0],
-        kilolitersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "kL"] as const;
+      const expected = [fromBase(toBase(v)), "kL"] as const;
       const conversionCandidate = [v, "imperial tsp"] as const;
 
       expect(volume["kL"](conversionCandidate)).toEqual(expected);
@@ -1070,11 +1070,11 @@ describe("volume", () => {
       const imperialTablespoonsConversion = linearConversion(0.0177582);
 
       const [toBase, fromBase] = [
+        kilolitersConversion[1],
         imperialTablespoonsConversion[0],
-        kilolitersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "kL"] as const;
+      const expected = [fromBase(toBase(v)), "kL"] as const;
       const conversionCandidate = [v, "imperial tbsp"] as const;
 
       expect(volume["kL"](conversionCandidate)).toEqual(expected);
@@ -1086,11 +1086,11 @@ describe("volume", () => {
       const imperialFluidOuncesConversion = linearConversion(0.0284131);
 
       const [toBase, fromBase] = [
+        kilolitersConversion[1],
         imperialFluidOuncesConversion[0],
-        kilolitersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "kL"] as const;
+      const expected = [fromBase(toBase(v)), "kL"] as const;
       const conversionCandidate = [v, "imperial fl oz"] as const;
 
       expect(volume["kL"](conversionCandidate)).toEqual(expected);
@@ -1102,11 +1102,11 @@ describe("volume", () => {
       const imperialPintsConversion = linearConversion(0.568261);
 
       const [toBase, fromBase] = [
+        kilolitersConversion[1],
         imperialPintsConversion[0],
-        kilolitersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "kL"] as const;
+      const expected = [fromBase(toBase(v)), "kL"] as const;
       const conversionCandidate = [v, "imperial pt"] as const;
 
       expect(volume["kL"](conversionCandidate)).toEqual(expected);
@@ -1118,11 +1118,11 @@ describe("volume", () => {
       const imperialQuartsConversion = linearConversion(1.13652);
 
       const [toBase, fromBase] = [
+        kilolitersConversion[1],
         imperialQuartsConversion[0],
-        kilolitersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "kL"] as const;
+      const expected = [fromBase(toBase(v)), "kL"] as const;
       const conversionCandidate = [v, "imperial qt"] as const;
 
       expect(volume["kL"](conversionCandidate)).toEqual(expected);
@@ -1134,11 +1134,11 @@ describe("volume", () => {
       const imperialGallonsConversion = linearConversion(4.54609);
 
       const [toBase, fromBase] = [
+        kilolitersConversion[1],
         imperialGallonsConversion[0],
-        kilolitersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "kL"] as const;
+      const expected = [fromBase(toBase(v)), "kL"] as const;
       const conversionCandidate = [v, "imperial gal"] as const;
 
       expect(volume["kL"](conversionCandidate)).toEqual(expected);
@@ -1150,11 +1150,11 @@ describe("volume", () => {
       const metricCupsConversion = linearConversion(0.25);
 
       const [toBase, fromBase] = [
+        kilolitersConversion[1],
         metricCupsConversion[0],
-        kilolitersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "kL"] as const;
+      const expected = [fromBase(toBase(v)), "kL"] as const;
       const conversionCandidate = [v, "metric cup"] as const;
 
       expect(volume["kL"](conversionCandidate)).toEqual(expected);
@@ -1174,11 +1174,11 @@ describe("volume", () => {
       const megalitersConversion = linearConversion(1000000);
 
       const [toBase, fromBase] = [
+        litersConversion[1],
         megalitersConversion[0],
-        litersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "L"] as const;
+      const expected = [fromBase(toBase(v)), "L"] as const;
       const conversionCandidate = [v, "ML"] as const;
 
       expect(volume["L"](conversionCandidate)).toEqual(expected);
@@ -1190,11 +1190,11 @@ describe("volume", () => {
       const kilolitersConversion = linearConversion(1000);
 
       const [toBase, fromBase] = [
+        litersConversion[1],
         kilolitersConversion[0],
-        litersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "L"] as const;
+      const expected = [fromBase(toBase(v)), "L"] as const;
       const conversionCandidate = [v, "kL"] as const;
 
       expect(volume["L"](conversionCandidate)).toEqual(expected);
@@ -1208,11 +1208,11 @@ describe("volume", () => {
       const decilitersConversion = linearConversion(0.1);
 
       const [toBase, fromBase] = [
+        litersConversion[1],
         decilitersConversion[0],
-        litersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "L"] as const;
+      const expected = [fromBase(toBase(v)), "L"] as const;
       const conversionCandidate = [v, "dL"] as const;
 
       expect(volume["L"](conversionCandidate)).toEqual(expected);
@@ -1224,11 +1224,11 @@ describe("volume", () => {
       const centilitersConversion = linearConversion(0.01);
 
       const [toBase, fromBase] = [
+        litersConversion[1],
         centilitersConversion[0],
-        litersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "L"] as const;
+      const expected = [fromBase(toBase(v)), "L"] as const;
       const conversionCandidate = [v, "cL"] as const;
 
       expect(volume["L"](conversionCandidate)).toEqual(expected);
@@ -1240,11 +1240,11 @@ describe("volume", () => {
       const millilitersConversion = linearConversion(0.001);
 
       const [toBase, fromBase] = [
+        litersConversion[1],
         millilitersConversion[0],
-        litersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "L"] as const;
+      const expected = [fromBase(toBase(v)), "L"] as const;
       const conversionCandidate = [v, "mL"] as const;
 
       expect(volume["L"](conversionCandidate)).toEqual(expected);
@@ -1256,11 +1256,11 @@ describe("volume", () => {
       const cubicKilometersConversion = linearConversion(1000000000000);
 
       const [toBase, fromBase] = [
+        litersConversion[1],
         cubicKilometersConversion[0],
-        litersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "L"] as const;
+      const expected = [fromBase(toBase(v)), "L"] as const;
       const conversionCandidate = [v, "km³"] as const;
 
       expect(volume["L"](conversionCandidate)).toEqual(expected);
@@ -1272,11 +1272,11 @@ describe("volume", () => {
       const cubicMetersConversion = linearConversion(1000);
 
       const [toBase, fromBase] = [
+        litersConversion[1],
         cubicMetersConversion[0],
-        litersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "L"] as const;
+      const expected = [fromBase(toBase(v)), "L"] as const;
       const conversionCandidate = [v, "m³"] as const;
 
       expect(volume["L"](conversionCandidate)).toEqual(expected);
@@ -1288,11 +1288,11 @@ describe("volume", () => {
       const cubicDecimetersConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
+        litersConversion[1],
         cubicDecimetersConversion[0],
-        litersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "L"] as const;
+      const expected = [fromBase(toBase(v)), "L"] as const;
       const conversionCandidate = [v, "dm³"] as const;
 
       expect(volume["L"](conversionCandidate)).toEqual(expected);
@@ -1304,11 +1304,11 @@ describe("volume", () => {
       const cubicMillimetersConversion = linearConversion(0.000001);
 
       const [toBase, fromBase] = [
+        litersConversion[1],
         cubicMillimetersConversion[0],
-        litersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "L"] as const;
+      const expected = [fromBase(toBase(v)), "L"] as const;
       const conversionCandidate = [v, "mm³"] as const;
 
       expect(volume["L"](conversionCandidate)).toEqual(expected);
@@ -1320,11 +1320,11 @@ describe("volume", () => {
       const cubicInchesConversion = linearConversion(0.0163871);
 
       const [toBase, fromBase] = [
+        litersConversion[1],
         cubicInchesConversion[0],
-        litersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "L"] as const;
+      const expected = [fromBase(toBase(v)), "L"] as const;
       const conversionCandidate = [v, "in³"] as const;
 
       expect(volume["L"](conversionCandidate)).toEqual(expected);
@@ -1336,11 +1336,11 @@ describe("volume", () => {
       const cubicFeetConversion = linearConversion(28.3168);
 
       const [toBase, fromBase] = [
+        litersConversion[1],
         cubicFeetConversion[0],
-        litersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "L"] as const;
+      const expected = [fromBase(toBase(v)), "L"] as const;
       const conversionCandidate = [v, "ft³"] as const;
 
       expect(volume["L"](conversionCandidate)).toEqual(expected);
@@ -1352,11 +1352,11 @@ describe("volume", () => {
       const cubicYardsConversion = linearConversion(764.555);
 
       const [toBase, fromBase] = [
+        litersConversion[1],
         cubicYardsConversion[0],
-        litersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "L"] as const;
+      const expected = [fromBase(toBase(v)), "L"] as const;
       const conversionCandidate = [v, "yd³"] as const;
 
       expect(volume["L"](conversionCandidate)).toEqual(expected);
@@ -1368,11 +1368,11 @@ describe("volume", () => {
       const cubicMilesConversion = linearConversion(4168000000000);
 
       const [toBase, fromBase] = [
+        litersConversion[1],
         cubicMilesConversion[0],
-        litersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "L"] as const;
+      const expected = [fromBase(toBase(v)), "L"] as const;
       const conversionCandidate = [v, "mi³"] as const;
 
       expect(volume["L"](conversionCandidate)).toEqual(expected);
@@ -1384,11 +1384,11 @@ describe("volume", () => {
       const acreFeetConversion = linearConversion(1233000);
 
       const [toBase, fromBase] = [
+        litersConversion[1],
         acreFeetConversion[0],
-        litersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "L"] as const;
+      const expected = [fromBase(toBase(v)), "L"] as const;
       const conversionCandidate = [v, "af"] as const;
 
       expect(volume["L"](conversionCandidate)).toEqual(expected);
@@ -1400,11 +1400,11 @@ describe("volume", () => {
       const bushelsConversion = linearConversion(35.2391);
 
       const [toBase, fromBase] = [
+        litersConversion[1],
         bushelsConversion[0],
-        litersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "L"] as const;
+      const expected = [fromBase(toBase(v)), "L"] as const;
       const conversionCandidate = [v, "bsh"] as const;
 
       expect(volume["L"](conversionCandidate)).toEqual(expected);
@@ -1416,11 +1416,11 @@ describe("volume", () => {
       const teaspoonsConversion = linearConversion(0.00492892);
 
       const [toBase, fromBase] = [
+        litersConversion[1],
         teaspoonsConversion[0],
-        litersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "L"] as const;
+      const expected = [fromBase(toBase(v)), "L"] as const;
       const conversionCandidate = [v, "tsp"] as const;
 
       expect(volume["L"](conversionCandidate)).toEqual(expected);
@@ -1432,11 +1432,11 @@ describe("volume", () => {
       const tablespoonsConversion = linearConversion(0.0147868);
 
       const [toBase, fromBase] = [
+        litersConversion[1],
         tablespoonsConversion[0],
-        litersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "L"] as const;
+      const expected = [fromBase(toBase(v)), "L"] as const;
       const conversionCandidate = [v, "tbsp"] as const;
 
       expect(volume["L"](conversionCandidate)).toEqual(expected);
@@ -1448,11 +1448,11 @@ describe("volume", () => {
       const fluidOuncesConversion = linearConversion(0.0295735);
 
       const [toBase, fromBase] = [
+        litersConversion[1],
         fluidOuncesConversion[0],
-        litersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "L"] as const;
+      const expected = [fromBase(toBase(v)), "L"] as const;
       const conversionCandidate = [v, "fl oz"] as const;
 
       expect(volume["L"](conversionCandidate)).toEqual(expected);
@@ -1464,11 +1464,11 @@ describe("volume", () => {
       const cupsConversion = linearConversion(0.24);
 
       const [toBase, fromBase] = [
+        litersConversion[1],
         cupsConversion[0],
-        litersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "L"] as const;
+      const expected = [fromBase(toBase(v)), "L"] as const;
       const conversionCandidate = [v, "cup"] as const;
 
       expect(volume["L"](conversionCandidate)).toEqual(expected);
@@ -1480,11 +1480,11 @@ describe("volume", () => {
       const pintsConversion = linearConversion(0.473176);
 
       const [toBase, fromBase] = [
+        litersConversion[1],
         pintsConversion[0],
-        litersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "L"] as const;
+      const expected = [fromBase(toBase(v)), "L"] as const;
       const conversionCandidate = [v, "pt"] as const;
 
       expect(volume["L"](conversionCandidate)).toEqual(expected);
@@ -1496,11 +1496,11 @@ describe("volume", () => {
       const quartsConversion = linearConversion(0.946353);
 
       const [toBase, fromBase] = [
+        litersConversion[1],
         quartsConversion[0],
-        litersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "L"] as const;
+      const expected = [fromBase(toBase(v)), "L"] as const;
       const conversionCandidate = [v, "qt"] as const;
 
       expect(volume["L"](conversionCandidate)).toEqual(expected);
@@ -1512,11 +1512,11 @@ describe("volume", () => {
       const gallonsConversion = linearConversion(3.78541);
 
       const [toBase, fromBase] = [
+        litersConversion[1],
         gallonsConversion[0],
-        litersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "L"] as const;
+      const expected = [fromBase(toBase(v)), "L"] as const;
       const conversionCandidate = [v, "gal"] as const;
 
       expect(volume["L"](conversionCandidate)).toEqual(expected);
@@ -1528,11 +1528,11 @@ describe("volume", () => {
       const imperialTeaspoonsConversion = linearConversion(0.00591939);
 
       const [toBase, fromBase] = [
+        litersConversion[1],
         imperialTeaspoonsConversion[0],
-        litersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "L"] as const;
+      const expected = [fromBase(toBase(v)), "L"] as const;
       const conversionCandidate = [v, "imperial tsp"] as const;
 
       expect(volume["L"](conversionCandidate)).toEqual(expected);
@@ -1544,11 +1544,11 @@ describe("volume", () => {
       const imperialTablespoonsConversion = linearConversion(0.0177582);
 
       const [toBase, fromBase] = [
+        litersConversion[1],
         imperialTablespoonsConversion[0],
-        litersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "L"] as const;
+      const expected = [fromBase(toBase(v)), "L"] as const;
       const conversionCandidate = [v, "imperial tbsp"] as const;
 
       expect(volume["L"](conversionCandidate)).toEqual(expected);
@@ -1560,11 +1560,11 @@ describe("volume", () => {
       const imperialFluidOuncesConversion = linearConversion(0.0284131);
 
       const [toBase, fromBase] = [
+        litersConversion[1],
         imperialFluidOuncesConversion[0],
-        litersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "L"] as const;
+      const expected = [fromBase(toBase(v)), "L"] as const;
       const conversionCandidate = [v, "imperial fl oz"] as const;
 
       expect(volume["L"](conversionCandidate)).toEqual(expected);
@@ -1576,11 +1576,11 @@ describe("volume", () => {
       const imperialPintsConversion = linearConversion(0.568261);
 
       const [toBase, fromBase] = [
+        litersConversion[1],
         imperialPintsConversion[0],
-        litersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "L"] as const;
+      const expected = [fromBase(toBase(v)), "L"] as const;
       const conversionCandidate = [v, "imperial pt"] as const;
 
       expect(volume["L"](conversionCandidate)).toEqual(expected);
@@ -1592,11 +1592,11 @@ describe("volume", () => {
       const imperialQuartsConversion = linearConversion(1.13652);
 
       const [toBase, fromBase] = [
+        litersConversion[1],
         imperialQuartsConversion[0],
-        litersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "L"] as const;
+      const expected = [fromBase(toBase(v)), "L"] as const;
       const conversionCandidate = [v, "imperial qt"] as const;
 
       expect(volume["L"](conversionCandidate)).toEqual(expected);
@@ -1608,11 +1608,11 @@ describe("volume", () => {
       const imperialGallonsConversion = linearConversion(4.54609);
 
       const [toBase, fromBase] = [
+        litersConversion[1],
         imperialGallonsConversion[0],
-        litersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "L"] as const;
+      const expected = [fromBase(toBase(v)), "L"] as const;
       const conversionCandidate = [v, "imperial gal"] as const;
 
       expect(volume["L"](conversionCandidate)).toEqual(expected);
@@ -1624,11 +1624,11 @@ describe("volume", () => {
       const metricCupsConversion = linearConversion(0.25);
 
       const [toBase, fromBase] = [
+        litersConversion[1],
         metricCupsConversion[0],
-        litersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "L"] as const;
+      const expected = [fromBase(toBase(v)), "L"] as const;
       const conversionCandidate = [v, "metric cup"] as const;
 
       expect(volume["L"](conversionCandidate)).toEqual(expected);
@@ -1648,11 +1648,11 @@ describe("volume", () => {
       const megalitersConversion = linearConversion(1000000);
 
       const [toBase, fromBase] = [
+        decilitersConversion[1],
         megalitersConversion[0],
-        decilitersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "dL"] as const;
+      const expected = [fromBase(toBase(v)), "dL"] as const;
       const conversionCandidate = [v, "ML"] as const;
 
       expect(volume["dL"](conversionCandidate)).toEqual(expected);
@@ -1664,11 +1664,11 @@ describe("volume", () => {
       const kilolitersConversion = linearConversion(1000);
 
       const [toBase, fromBase] = [
+        decilitersConversion[1],
         kilolitersConversion[0],
-        decilitersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "dL"] as const;
+      const expected = [fromBase(toBase(v)), "dL"] as const;
       const conversionCandidate = [v, "kL"] as const;
 
       expect(volume["dL"](conversionCandidate)).toEqual(expected);
@@ -1680,11 +1680,11 @@ describe("volume", () => {
       const litersConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
+        decilitersConversion[1],
         litersConversion[0],
-        decilitersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "dL"] as const;
+      const expected = [fromBase(toBase(v)), "dL"] as const;
       const conversionCandidate = [v, "L"] as const;
 
       expect(volume["dL"](conversionCandidate)).toEqual(expected);
@@ -1698,11 +1698,11 @@ describe("volume", () => {
       const centilitersConversion = linearConversion(0.01);
 
       const [toBase, fromBase] = [
+        decilitersConversion[1],
         centilitersConversion[0],
-        decilitersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "dL"] as const;
+      const expected = [fromBase(toBase(v)), "dL"] as const;
       const conversionCandidate = [v, "cL"] as const;
 
       expect(volume["dL"](conversionCandidate)).toEqual(expected);
@@ -1714,11 +1714,11 @@ describe("volume", () => {
       const millilitersConversion = linearConversion(0.001);
 
       const [toBase, fromBase] = [
+        decilitersConversion[1],
         millilitersConversion[0],
-        decilitersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "dL"] as const;
+      const expected = [fromBase(toBase(v)), "dL"] as const;
       const conversionCandidate = [v, "mL"] as const;
 
       expect(volume["dL"](conversionCandidate)).toEqual(expected);
@@ -1730,11 +1730,11 @@ describe("volume", () => {
       const cubicKilometersConversion = linearConversion(1000000000000);
 
       const [toBase, fromBase] = [
+        decilitersConversion[1],
         cubicKilometersConversion[0],
-        decilitersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "dL"] as const;
+      const expected = [fromBase(toBase(v)), "dL"] as const;
       const conversionCandidate = [v, "km³"] as const;
 
       expect(volume["dL"](conversionCandidate)).toEqual(expected);
@@ -1746,11 +1746,11 @@ describe("volume", () => {
       const cubicMetersConversion = linearConversion(1000);
 
       const [toBase, fromBase] = [
+        decilitersConversion[1],
         cubicMetersConversion[0],
-        decilitersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "dL"] as const;
+      const expected = [fromBase(toBase(v)), "dL"] as const;
       const conversionCandidate = [v, "m³"] as const;
 
       expect(volume["dL"](conversionCandidate)).toEqual(expected);
@@ -1762,11 +1762,11 @@ describe("volume", () => {
       const cubicDecimetersConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
+        decilitersConversion[1],
         cubicDecimetersConversion[0],
-        decilitersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "dL"] as const;
+      const expected = [fromBase(toBase(v)), "dL"] as const;
       const conversionCandidate = [v, "dm³"] as const;
 
       expect(volume["dL"](conversionCandidate)).toEqual(expected);
@@ -1778,11 +1778,11 @@ describe("volume", () => {
       const cubicMillimetersConversion = linearConversion(0.000001);
 
       const [toBase, fromBase] = [
+        decilitersConversion[1],
         cubicMillimetersConversion[0],
-        decilitersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "dL"] as const;
+      const expected = [fromBase(toBase(v)), "dL"] as const;
       const conversionCandidate = [v, "mm³"] as const;
 
       expect(volume["dL"](conversionCandidate)).toEqual(expected);
@@ -1794,11 +1794,11 @@ describe("volume", () => {
       const cubicInchesConversion = linearConversion(0.0163871);
 
       const [toBase, fromBase] = [
+        decilitersConversion[1],
         cubicInchesConversion[0],
-        decilitersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "dL"] as const;
+      const expected = [fromBase(toBase(v)), "dL"] as const;
       const conversionCandidate = [v, "in³"] as const;
 
       expect(volume["dL"](conversionCandidate)).toEqual(expected);
@@ -1810,11 +1810,11 @@ describe("volume", () => {
       const cubicFeetConversion = linearConversion(28.3168);
 
       const [toBase, fromBase] = [
+        decilitersConversion[1],
         cubicFeetConversion[0],
-        decilitersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "dL"] as const;
+      const expected = [fromBase(toBase(v)), "dL"] as const;
       const conversionCandidate = [v, "ft³"] as const;
 
       expect(volume["dL"](conversionCandidate)).toEqual(expected);
@@ -1826,11 +1826,11 @@ describe("volume", () => {
       const cubicYardsConversion = linearConversion(764.555);
 
       const [toBase, fromBase] = [
+        decilitersConversion[1],
         cubicYardsConversion[0],
-        decilitersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "dL"] as const;
+      const expected = [fromBase(toBase(v)), "dL"] as const;
       const conversionCandidate = [v, "yd³"] as const;
 
       expect(volume["dL"](conversionCandidate)).toEqual(expected);
@@ -1842,11 +1842,11 @@ describe("volume", () => {
       const cubicMilesConversion = linearConversion(4168000000000);
 
       const [toBase, fromBase] = [
+        decilitersConversion[1],
         cubicMilesConversion[0],
-        decilitersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "dL"] as const;
+      const expected = [fromBase(toBase(v)), "dL"] as const;
       const conversionCandidate = [v, "mi³"] as const;
 
       expect(volume["dL"](conversionCandidate)).toEqual(expected);
@@ -1858,11 +1858,11 @@ describe("volume", () => {
       const acreFeetConversion = linearConversion(1233000);
 
       const [toBase, fromBase] = [
+        decilitersConversion[1],
         acreFeetConversion[0],
-        decilitersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "dL"] as const;
+      const expected = [fromBase(toBase(v)), "dL"] as const;
       const conversionCandidate = [v, "af"] as const;
 
       expect(volume["dL"](conversionCandidate)).toEqual(expected);
@@ -1874,11 +1874,11 @@ describe("volume", () => {
       const bushelsConversion = linearConversion(35.2391);
 
       const [toBase, fromBase] = [
+        decilitersConversion[1],
         bushelsConversion[0],
-        decilitersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "dL"] as const;
+      const expected = [fromBase(toBase(v)), "dL"] as const;
       const conversionCandidate = [v, "bsh"] as const;
 
       expect(volume["dL"](conversionCandidate)).toEqual(expected);
@@ -1890,11 +1890,11 @@ describe("volume", () => {
       const teaspoonsConversion = linearConversion(0.00492892);
 
       const [toBase, fromBase] = [
+        decilitersConversion[1],
         teaspoonsConversion[0],
-        decilitersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "dL"] as const;
+      const expected = [fromBase(toBase(v)), "dL"] as const;
       const conversionCandidate = [v, "tsp"] as const;
 
       expect(volume["dL"](conversionCandidate)).toEqual(expected);
@@ -1906,11 +1906,11 @@ describe("volume", () => {
       const tablespoonsConversion = linearConversion(0.0147868);
 
       const [toBase, fromBase] = [
+        decilitersConversion[1],
         tablespoonsConversion[0],
-        decilitersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "dL"] as const;
+      const expected = [fromBase(toBase(v)), "dL"] as const;
       const conversionCandidate = [v, "tbsp"] as const;
 
       expect(volume["dL"](conversionCandidate)).toEqual(expected);
@@ -1922,11 +1922,11 @@ describe("volume", () => {
       const fluidOuncesConversion = linearConversion(0.0295735);
 
       const [toBase, fromBase] = [
+        decilitersConversion[1],
         fluidOuncesConversion[0],
-        decilitersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "dL"] as const;
+      const expected = [fromBase(toBase(v)), "dL"] as const;
       const conversionCandidate = [v, "fl oz"] as const;
 
       expect(volume["dL"](conversionCandidate)).toEqual(expected);
@@ -1938,11 +1938,11 @@ describe("volume", () => {
       const cupsConversion = linearConversion(0.24);
 
       const [toBase, fromBase] = [
+        decilitersConversion[1],
         cupsConversion[0],
-        decilitersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "dL"] as const;
+      const expected = [fromBase(toBase(v)), "dL"] as const;
       const conversionCandidate = [v, "cup"] as const;
 
       expect(volume["dL"](conversionCandidate)).toEqual(expected);
@@ -1954,11 +1954,11 @@ describe("volume", () => {
       const pintsConversion = linearConversion(0.473176);
 
       const [toBase, fromBase] = [
+        decilitersConversion[1],
         pintsConversion[0],
-        decilitersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "dL"] as const;
+      const expected = [fromBase(toBase(v)), "dL"] as const;
       const conversionCandidate = [v, "pt"] as const;
 
       expect(volume["dL"](conversionCandidate)).toEqual(expected);
@@ -1970,11 +1970,11 @@ describe("volume", () => {
       const quartsConversion = linearConversion(0.946353);
 
       const [toBase, fromBase] = [
+        decilitersConversion[1],
         quartsConversion[0],
-        decilitersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "dL"] as const;
+      const expected = [fromBase(toBase(v)), "dL"] as const;
       const conversionCandidate = [v, "qt"] as const;
 
       expect(volume["dL"](conversionCandidate)).toEqual(expected);
@@ -1986,11 +1986,11 @@ describe("volume", () => {
       const gallonsConversion = linearConversion(3.78541);
 
       const [toBase, fromBase] = [
+        decilitersConversion[1],
         gallonsConversion[0],
-        decilitersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "dL"] as const;
+      const expected = [fromBase(toBase(v)), "dL"] as const;
       const conversionCandidate = [v, "gal"] as const;
 
       expect(volume["dL"](conversionCandidate)).toEqual(expected);
@@ -2002,11 +2002,11 @@ describe("volume", () => {
       const imperialTeaspoonsConversion = linearConversion(0.00591939);
 
       const [toBase, fromBase] = [
+        decilitersConversion[1],
         imperialTeaspoonsConversion[0],
-        decilitersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "dL"] as const;
+      const expected = [fromBase(toBase(v)), "dL"] as const;
       const conversionCandidate = [v, "imperial tsp"] as const;
 
       expect(volume["dL"](conversionCandidate)).toEqual(expected);
@@ -2018,11 +2018,11 @@ describe("volume", () => {
       const imperialTablespoonsConversion = linearConversion(0.0177582);
 
       const [toBase, fromBase] = [
+        decilitersConversion[1],
         imperialTablespoonsConversion[0],
-        decilitersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "dL"] as const;
+      const expected = [fromBase(toBase(v)), "dL"] as const;
       const conversionCandidate = [v, "imperial tbsp"] as const;
 
       expect(volume["dL"](conversionCandidate)).toEqual(expected);
@@ -2034,11 +2034,11 @@ describe("volume", () => {
       const imperialFluidOuncesConversion = linearConversion(0.0284131);
 
       const [toBase, fromBase] = [
+        decilitersConversion[1],
         imperialFluidOuncesConversion[0],
-        decilitersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "dL"] as const;
+      const expected = [fromBase(toBase(v)), "dL"] as const;
       const conversionCandidate = [v, "imperial fl oz"] as const;
 
       expect(volume["dL"](conversionCandidate)).toEqual(expected);
@@ -2050,11 +2050,11 @@ describe("volume", () => {
       const imperialPintsConversion = linearConversion(0.568261);
 
       const [toBase, fromBase] = [
+        decilitersConversion[1],
         imperialPintsConversion[0],
-        decilitersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "dL"] as const;
+      const expected = [fromBase(toBase(v)), "dL"] as const;
       const conversionCandidate = [v, "imperial pt"] as const;
 
       expect(volume["dL"](conversionCandidate)).toEqual(expected);
@@ -2066,11 +2066,11 @@ describe("volume", () => {
       const imperialQuartsConversion = linearConversion(1.13652);
 
       const [toBase, fromBase] = [
+        decilitersConversion[1],
         imperialQuartsConversion[0],
-        decilitersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "dL"] as const;
+      const expected = [fromBase(toBase(v)), "dL"] as const;
       const conversionCandidate = [v, "imperial qt"] as const;
 
       expect(volume["dL"](conversionCandidate)).toEqual(expected);
@@ -2082,11 +2082,11 @@ describe("volume", () => {
       const imperialGallonsConversion = linearConversion(4.54609);
 
       const [toBase, fromBase] = [
+        decilitersConversion[1],
         imperialGallonsConversion[0],
-        decilitersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "dL"] as const;
+      const expected = [fromBase(toBase(v)), "dL"] as const;
       const conversionCandidate = [v, "imperial gal"] as const;
 
       expect(volume["dL"](conversionCandidate)).toEqual(expected);
@@ -2098,11 +2098,11 @@ describe("volume", () => {
       const metricCupsConversion = linearConversion(0.25);
 
       const [toBase, fromBase] = [
+        decilitersConversion[1],
         metricCupsConversion[0],
-        decilitersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "dL"] as const;
+      const expected = [fromBase(toBase(v)), "dL"] as const;
       const conversionCandidate = [v, "metric cup"] as const;
 
       expect(volume["dL"](conversionCandidate)).toEqual(expected);
@@ -2122,11 +2122,11 @@ describe("volume", () => {
       const megalitersConversion = linearConversion(1000000);
 
       const [toBase, fromBase] = [
+        centilitersConversion[1],
         megalitersConversion[0],
-        centilitersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "cL"] as const;
+      const expected = [fromBase(toBase(v)), "cL"] as const;
       const conversionCandidate = [v, "ML"] as const;
 
       expect(volume["cL"](conversionCandidate)).toEqual(expected);
@@ -2138,11 +2138,11 @@ describe("volume", () => {
       const kilolitersConversion = linearConversion(1000);
 
       const [toBase, fromBase] = [
+        centilitersConversion[1],
         kilolitersConversion[0],
-        centilitersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "cL"] as const;
+      const expected = [fromBase(toBase(v)), "cL"] as const;
       const conversionCandidate = [v, "kL"] as const;
 
       expect(volume["cL"](conversionCandidate)).toEqual(expected);
@@ -2154,11 +2154,11 @@ describe("volume", () => {
       const litersConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
+        centilitersConversion[1],
         litersConversion[0],
-        centilitersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "cL"] as const;
+      const expected = [fromBase(toBase(v)), "cL"] as const;
       const conversionCandidate = [v, "L"] as const;
 
       expect(volume["cL"](conversionCandidate)).toEqual(expected);
@@ -2170,11 +2170,11 @@ describe("volume", () => {
       const decilitersConversion = linearConversion(0.1);
 
       const [toBase, fromBase] = [
+        centilitersConversion[1],
         decilitersConversion[0],
-        centilitersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "cL"] as const;
+      const expected = [fromBase(toBase(v)), "cL"] as const;
       const conversionCandidate = [v, "dL"] as const;
 
       expect(volume["cL"](conversionCandidate)).toEqual(expected);
@@ -2188,11 +2188,11 @@ describe("volume", () => {
       const millilitersConversion = linearConversion(0.001);
 
       const [toBase, fromBase] = [
+        centilitersConversion[1],
         millilitersConversion[0],
-        centilitersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "cL"] as const;
+      const expected = [fromBase(toBase(v)), "cL"] as const;
       const conversionCandidate = [v, "mL"] as const;
 
       expect(volume["cL"](conversionCandidate)).toEqual(expected);
@@ -2204,11 +2204,11 @@ describe("volume", () => {
       const cubicKilometersConversion = linearConversion(1000000000000);
 
       const [toBase, fromBase] = [
+        centilitersConversion[1],
         cubicKilometersConversion[0],
-        centilitersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "cL"] as const;
+      const expected = [fromBase(toBase(v)), "cL"] as const;
       const conversionCandidate = [v, "km³"] as const;
 
       expect(volume["cL"](conversionCandidate)).toEqual(expected);
@@ -2220,11 +2220,11 @@ describe("volume", () => {
       const cubicMetersConversion = linearConversion(1000);
 
       const [toBase, fromBase] = [
+        centilitersConversion[1],
         cubicMetersConversion[0],
-        centilitersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "cL"] as const;
+      const expected = [fromBase(toBase(v)), "cL"] as const;
       const conversionCandidate = [v, "m³"] as const;
 
       expect(volume["cL"](conversionCandidate)).toEqual(expected);
@@ -2236,11 +2236,11 @@ describe("volume", () => {
       const cubicDecimetersConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
+        centilitersConversion[1],
         cubicDecimetersConversion[0],
-        centilitersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "cL"] as const;
+      const expected = [fromBase(toBase(v)), "cL"] as const;
       const conversionCandidate = [v, "dm³"] as const;
 
       expect(volume["cL"](conversionCandidate)).toEqual(expected);
@@ -2252,11 +2252,11 @@ describe("volume", () => {
       const cubicMillimetersConversion = linearConversion(0.000001);
 
       const [toBase, fromBase] = [
+        centilitersConversion[1],
         cubicMillimetersConversion[0],
-        centilitersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "cL"] as const;
+      const expected = [fromBase(toBase(v)), "cL"] as const;
       const conversionCandidate = [v, "mm³"] as const;
 
       expect(volume["cL"](conversionCandidate)).toEqual(expected);
@@ -2268,11 +2268,11 @@ describe("volume", () => {
       const cubicInchesConversion = linearConversion(0.0163871);
 
       const [toBase, fromBase] = [
+        centilitersConversion[1],
         cubicInchesConversion[0],
-        centilitersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "cL"] as const;
+      const expected = [fromBase(toBase(v)), "cL"] as const;
       const conversionCandidate = [v, "in³"] as const;
 
       expect(volume["cL"](conversionCandidate)).toEqual(expected);
@@ -2284,11 +2284,11 @@ describe("volume", () => {
       const cubicFeetConversion = linearConversion(28.3168);
 
       const [toBase, fromBase] = [
+        centilitersConversion[1],
         cubicFeetConversion[0],
-        centilitersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "cL"] as const;
+      const expected = [fromBase(toBase(v)), "cL"] as const;
       const conversionCandidate = [v, "ft³"] as const;
 
       expect(volume["cL"](conversionCandidate)).toEqual(expected);
@@ -2300,11 +2300,11 @@ describe("volume", () => {
       const cubicYardsConversion = linearConversion(764.555);
 
       const [toBase, fromBase] = [
+        centilitersConversion[1],
         cubicYardsConversion[0],
-        centilitersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "cL"] as const;
+      const expected = [fromBase(toBase(v)), "cL"] as const;
       const conversionCandidate = [v, "yd³"] as const;
 
       expect(volume["cL"](conversionCandidate)).toEqual(expected);
@@ -2316,11 +2316,11 @@ describe("volume", () => {
       const cubicMilesConversion = linearConversion(4168000000000);
 
       const [toBase, fromBase] = [
+        centilitersConversion[1],
         cubicMilesConversion[0],
-        centilitersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "cL"] as const;
+      const expected = [fromBase(toBase(v)), "cL"] as const;
       const conversionCandidate = [v, "mi³"] as const;
 
       expect(volume["cL"](conversionCandidate)).toEqual(expected);
@@ -2332,11 +2332,11 @@ describe("volume", () => {
       const acreFeetConversion = linearConversion(1233000);
 
       const [toBase, fromBase] = [
+        centilitersConversion[1],
         acreFeetConversion[0],
-        centilitersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "cL"] as const;
+      const expected = [fromBase(toBase(v)), "cL"] as const;
       const conversionCandidate = [v, "af"] as const;
 
       expect(volume["cL"](conversionCandidate)).toEqual(expected);
@@ -2348,11 +2348,11 @@ describe("volume", () => {
       const bushelsConversion = linearConversion(35.2391);
 
       const [toBase, fromBase] = [
+        centilitersConversion[1],
         bushelsConversion[0],
-        centilitersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "cL"] as const;
+      const expected = [fromBase(toBase(v)), "cL"] as const;
       const conversionCandidate = [v, "bsh"] as const;
 
       expect(volume["cL"](conversionCandidate)).toEqual(expected);
@@ -2364,11 +2364,11 @@ describe("volume", () => {
       const teaspoonsConversion = linearConversion(0.00492892);
 
       const [toBase, fromBase] = [
+        centilitersConversion[1],
         teaspoonsConversion[0],
-        centilitersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "cL"] as const;
+      const expected = [fromBase(toBase(v)), "cL"] as const;
       const conversionCandidate = [v, "tsp"] as const;
 
       expect(volume["cL"](conversionCandidate)).toEqual(expected);
@@ -2380,11 +2380,11 @@ describe("volume", () => {
       const tablespoonsConversion = linearConversion(0.0147868);
 
       const [toBase, fromBase] = [
+        centilitersConversion[1],
         tablespoonsConversion[0],
-        centilitersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "cL"] as const;
+      const expected = [fromBase(toBase(v)), "cL"] as const;
       const conversionCandidate = [v, "tbsp"] as const;
 
       expect(volume["cL"](conversionCandidate)).toEqual(expected);
@@ -2396,11 +2396,11 @@ describe("volume", () => {
       const fluidOuncesConversion = linearConversion(0.0295735);
 
       const [toBase, fromBase] = [
+        centilitersConversion[1],
         fluidOuncesConversion[0],
-        centilitersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "cL"] as const;
+      const expected = [fromBase(toBase(v)), "cL"] as const;
       const conversionCandidate = [v, "fl oz"] as const;
 
       expect(volume["cL"](conversionCandidate)).toEqual(expected);
@@ -2412,11 +2412,11 @@ describe("volume", () => {
       const cupsConversion = linearConversion(0.24);
 
       const [toBase, fromBase] = [
+        centilitersConversion[1],
         cupsConversion[0],
-        centilitersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "cL"] as const;
+      const expected = [fromBase(toBase(v)), "cL"] as const;
       const conversionCandidate = [v, "cup"] as const;
 
       expect(volume["cL"](conversionCandidate)).toEqual(expected);
@@ -2428,11 +2428,11 @@ describe("volume", () => {
       const pintsConversion = linearConversion(0.473176);
 
       const [toBase, fromBase] = [
+        centilitersConversion[1],
         pintsConversion[0],
-        centilitersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "cL"] as const;
+      const expected = [fromBase(toBase(v)), "cL"] as const;
       const conversionCandidate = [v, "pt"] as const;
 
       expect(volume["cL"](conversionCandidate)).toEqual(expected);
@@ -2444,11 +2444,11 @@ describe("volume", () => {
       const quartsConversion = linearConversion(0.946353);
 
       const [toBase, fromBase] = [
+        centilitersConversion[1],
         quartsConversion[0],
-        centilitersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "cL"] as const;
+      const expected = [fromBase(toBase(v)), "cL"] as const;
       const conversionCandidate = [v, "qt"] as const;
 
       expect(volume["cL"](conversionCandidate)).toEqual(expected);
@@ -2460,11 +2460,11 @@ describe("volume", () => {
       const gallonsConversion = linearConversion(3.78541);
 
       const [toBase, fromBase] = [
+        centilitersConversion[1],
         gallonsConversion[0],
-        centilitersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "cL"] as const;
+      const expected = [fromBase(toBase(v)), "cL"] as const;
       const conversionCandidate = [v, "gal"] as const;
 
       expect(volume["cL"](conversionCandidate)).toEqual(expected);
@@ -2476,11 +2476,11 @@ describe("volume", () => {
       const imperialTeaspoonsConversion = linearConversion(0.00591939);
 
       const [toBase, fromBase] = [
+        centilitersConversion[1],
         imperialTeaspoonsConversion[0],
-        centilitersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "cL"] as const;
+      const expected = [fromBase(toBase(v)), "cL"] as const;
       const conversionCandidate = [v, "imperial tsp"] as const;
 
       expect(volume["cL"](conversionCandidate)).toEqual(expected);
@@ -2492,11 +2492,11 @@ describe("volume", () => {
       const imperialTablespoonsConversion = linearConversion(0.0177582);
 
       const [toBase, fromBase] = [
+        centilitersConversion[1],
         imperialTablespoonsConversion[0],
-        centilitersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "cL"] as const;
+      const expected = [fromBase(toBase(v)), "cL"] as const;
       const conversionCandidate = [v, "imperial tbsp"] as const;
 
       expect(volume["cL"](conversionCandidate)).toEqual(expected);
@@ -2508,11 +2508,11 @@ describe("volume", () => {
       const imperialFluidOuncesConversion = linearConversion(0.0284131);
 
       const [toBase, fromBase] = [
+        centilitersConversion[1],
         imperialFluidOuncesConversion[0],
-        centilitersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "cL"] as const;
+      const expected = [fromBase(toBase(v)), "cL"] as const;
       const conversionCandidate = [v, "imperial fl oz"] as const;
 
       expect(volume["cL"](conversionCandidate)).toEqual(expected);
@@ -2524,11 +2524,11 @@ describe("volume", () => {
       const imperialPintsConversion = linearConversion(0.568261);
 
       const [toBase, fromBase] = [
+        centilitersConversion[1],
         imperialPintsConversion[0],
-        centilitersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "cL"] as const;
+      const expected = [fromBase(toBase(v)), "cL"] as const;
       const conversionCandidate = [v, "imperial pt"] as const;
 
       expect(volume["cL"](conversionCandidate)).toEqual(expected);
@@ -2540,11 +2540,11 @@ describe("volume", () => {
       const imperialQuartsConversion = linearConversion(1.13652);
 
       const [toBase, fromBase] = [
+        centilitersConversion[1],
         imperialQuartsConversion[0],
-        centilitersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "cL"] as const;
+      const expected = [fromBase(toBase(v)), "cL"] as const;
       const conversionCandidate = [v, "imperial qt"] as const;
 
       expect(volume["cL"](conversionCandidate)).toEqual(expected);
@@ -2556,11 +2556,11 @@ describe("volume", () => {
       const imperialGallonsConversion = linearConversion(4.54609);
 
       const [toBase, fromBase] = [
+        centilitersConversion[1],
         imperialGallonsConversion[0],
-        centilitersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "cL"] as const;
+      const expected = [fromBase(toBase(v)), "cL"] as const;
       const conversionCandidate = [v, "imperial gal"] as const;
 
       expect(volume["cL"](conversionCandidate)).toEqual(expected);
@@ -2572,11 +2572,11 @@ describe("volume", () => {
       const metricCupsConversion = linearConversion(0.25);
 
       const [toBase, fromBase] = [
+        centilitersConversion[1],
         metricCupsConversion[0],
-        centilitersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "cL"] as const;
+      const expected = [fromBase(toBase(v)), "cL"] as const;
       const conversionCandidate = [v, "metric cup"] as const;
 
       expect(volume["cL"](conversionCandidate)).toEqual(expected);
@@ -2596,11 +2596,11 @@ describe("volume", () => {
       const megalitersConversion = linearConversion(1000000);
 
       const [toBase, fromBase] = [
+        millilitersConversion[1],
         megalitersConversion[0],
-        millilitersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "mL"] as const;
+      const expected = [fromBase(toBase(v)), "mL"] as const;
       const conversionCandidate = [v, "ML"] as const;
 
       expect(volume["mL"](conversionCandidate)).toEqual(expected);
@@ -2612,11 +2612,11 @@ describe("volume", () => {
       const kilolitersConversion = linearConversion(1000);
 
       const [toBase, fromBase] = [
+        millilitersConversion[1],
         kilolitersConversion[0],
-        millilitersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "mL"] as const;
+      const expected = [fromBase(toBase(v)), "mL"] as const;
       const conversionCandidate = [v, "kL"] as const;
 
       expect(volume["mL"](conversionCandidate)).toEqual(expected);
@@ -2628,11 +2628,11 @@ describe("volume", () => {
       const litersConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
+        millilitersConversion[1],
         litersConversion[0],
-        millilitersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "mL"] as const;
+      const expected = [fromBase(toBase(v)), "mL"] as const;
       const conversionCandidate = [v, "L"] as const;
 
       expect(volume["mL"](conversionCandidate)).toEqual(expected);
@@ -2644,11 +2644,11 @@ describe("volume", () => {
       const decilitersConversion = linearConversion(0.1);
 
       const [toBase, fromBase] = [
+        millilitersConversion[1],
         decilitersConversion[0],
-        millilitersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "mL"] as const;
+      const expected = [fromBase(toBase(v)), "mL"] as const;
       const conversionCandidate = [v, "dL"] as const;
 
       expect(volume["mL"](conversionCandidate)).toEqual(expected);
@@ -2660,11 +2660,11 @@ describe("volume", () => {
       const centilitersConversion = linearConversion(0.01);
 
       const [toBase, fromBase] = [
+        millilitersConversion[1],
         centilitersConversion[0],
-        millilitersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "mL"] as const;
+      const expected = [fromBase(toBase(v)), "mL"] as const;
       const conversionCandidate = [v, "cL"] as const;
 
       expect(volume["mL"](conversionCandidate)).toEqual(expected);
@@ -2678,11 +2678,11 @@ describe("volume", () => {
       const cubicKilometersConversion = linearConversion(1000000000000);
 
       const [toBase, fromBase] = [
+        millilitersConversion[1],
         cubicKilometersConversion[0],
-        millilitersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "mL"] as const;
+      const expected = [fromBase(toBase(v)), "mL"] as const;
       const conversionCandidate = [v, "km³"] as const;
 
       expect(volume["mL"](conversionCandidate)).toEqual(expected);
@@ -2694,11 +2694,11 @@ describe("volume", () => {
       const cubicMetersConversion = linearConversion(1000);
 
       const [toBase, fromBase] = [
+        millilitersConversion[1],
         cubicMetersConversion[0],
-        millilitersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "mL"] as const;
+      const expected = [fromBase(toBase(v)), "mL"] as const;
       const conversionCandidate = [v, "m³"] as const;
 
       expect(volume["mL"](conversionCandidate)).toEqual(expected);
@@ -2710,11 +2710,11 @@ describe("volume", () => {
       const cubicDecimetersConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
+        millilitersConversion[1],
         cubicDecimetersConversion[0],
-        millilitersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "mL"] as const;
+      const expected = [fromBase(toBase(v)), "mL"] as const;
       const conversionCandidate = [v, "dm³"] as const;
 
       expect(volume["mL"](conversionCandidate)).toEqual(expected);
@@ -2726,11 +2726,11 @@ describe("volume", () => {
       const cubicMillimetersConversion = linearConversion(0.000001);
 
       const [toBase, fromBase] = [
+        millilitersConversion[1],
         cubicMillimetersConversion[0],
-        millilitersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "mL"] as const;
+      const expected = [fromBase(toBase(v)), "mL"] as const;
       const conversionCandidate = [v, "mm³"] as const;
 
       expect(volume["mL"](conversionCandidate)).toEqual(expected);
@@ -2742,11 +2742,11 @@ describe("volume", () => {
       const cubicInchesConversion = linearConversion(0.0163871);
 
       const [toBase, fromBase] = [
+        millilitersConversion[1],
         cubicInchesConversion[0],
-        millilitersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "mL"] as const;
+      const expected = [fromBase(toBase(v)), "mL"] as const;
       const conversionCandidate = [v, "in³"] as const;
 
       expect(volume["mL"](conversionCandidate)).toEqual(expected);
@@ -2758,11 +2758,11 @@ describe("volume", () => {
       const cubicFeetConversion = linearConversion(28.3168);
 
       const [toBase, fromBase] = [
+        millilitersConversion[1],
         cubicFeetConversion[0],
-        millilitersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "mL"] as const;
+      const expected = [fromBase(toBase(v)), "mL"] as const;
       const conversionCandidate = [v, "ft³"] as const;
 
       expect(volume["mL"](conversionCandidate)).toEqual(expected);
@@ -2774,11 +2774,11 @@ describe("volume", () => {
       const cubicYardsConversion = linearConversion(764.555);
 
       const [toBase, fromBase] = [
+        millilitersConversion[1],
         cubicYardsConversion[0],
-        millilitersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "mL"] as const;
+      const expected = [fromBase(toBase(v)), "mL"] as const;
       const conversionCandidate = [v, "yd³"] as const;
 
       expect(volume["mL"](conversionCandidate)).toEqual(expected);
@@ -2790,11 +2790,11 @@ describe("volume", () => {
       const cubicMilesConversion = linearConversion(4168000000000);
 
       const [toBase, fromBase] = [
+        millilitersConversion[1],
         cubicMilesConversion[0],
-        millilitersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "mL"] as const;
+      const expected = [fromBase(toBase(v)), "mL"] as const;
       const conversionCandidate = [v, "mi³"] as const;
 
       expect(volume["mL"](conversionCandidate)).toEqual(expected);
@@ -2806,11 +2806,11 @@ describe("volume", () => {
       const acreFeetConversion = linearConversion(1233000);
 
       const [toBase, fromBase] = [
+        millilitersConversion[1],
         acreFeetConversion[0],
-        millilitersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "mL"] as const;
+      const expected = [fromBase(toBase(v)), "mL"] as const;
       const conversionCandidate = [v, "af"] as const;
 
       expect(volume["mL"](conversionCandidate)).toEqual(expected);
@@ -2822,11 +2822,11 @@ describe("volume", () => {
       const bushelsConversion = linearConversion(35.2391);
 
       const [toBase, fromBase] = [
+        millilitersConversion[1],
         bushelsConversion[0],
-        millilitersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "mL"] as const;
+      const expected = [fromBase(toBase(v)), "mL"] as const;
       const conversionCandidate = [v, "bsh"] as const;
 
       expect(volume["mL"](conversionCandidate)).toEqual(expected);
@@ -2838,11 +2838,11 @@ describe("volume", () => {
       const teaspoonsConversion = linearConversion(0.00492892);
 
       const [toBase, fromBase] = [
+        millilitersConversion[1],
         teaspoonsConversion[0],
-        millilitersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "mL"] as const;
+      const expected = [fromBase(toBase(v)), "mL"] as const;
       const conversionCandidate = [v, "tsp"] as const;
 
       expect(volume["mL"](conversionCandidate)).toEqual(expected);
@@ -2854,11 +2854,11 @@ describe("volume", () => {
       const tablespoonsConversion = linearConversion(0.0147868);
 
       const [toBase, fromBase] = [
+        millilitersConversion[1],
         tablespoonsConversion[0],
-        millilitersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "mL"] as const;
+      const expected = [fromBase(toBase(v)), "mL"] as const;
       const conversionCandidate = [v, "tbsp"] as const;
 
       expect(volume["mL"](conversionCandidate)).toEqual(expected);
@@ -2870,11 +2870,11 @@ describe("volume", () => {
       const fluidOuncesConversion = linearConversion(0.0295735);
 
       const [toBase, fromBase] = [
+        millilitersConversion[1],
         fluidOuncesConversion[0],
-        millilitersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "mL"] as const;
+      const expected = [fromBase(toBase(v)), "mL"] as const;
       const conversionCandidate = [v, "fl oz"] as const;
 
       expect(volume["mL"](conversionCandidate)).toEqual(expected);
@@ -2886,11 +2886,11 @@ describe("volume", () => {
       const cupsConversion = linearConversion(0.24);
 
       const [toBase, fromBase] = [
+        millilitersConversion[1],
         cupsConversion[0],
-        millilitersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "mL"] as const;
+      const expected = [fromBase(toBase(v)), "mL"] as const;
       const conversionCandidate = [v, "cup"] as const;
 
       expect(volume["mL"](conversionCandidate)).toEqual(expected);
@@ -2902,11 +2902,11 @@ describe("volume", () => {
       const pintsConversion = linearConversion(0.473176);
 
       const [toBase, fromBase] = [
+        millilitersConversion[1],
         pintsConversion[0],
-        millilitersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "mL"] as const;
+      const expected = [fromBase(toBase(v)), "mL"] as const;
       const conversionCandidate = [v, "pt"] as const;
 
       expect(volume["mL"](conversionCandidate)).toEqual(expected);
@@ -2918,11 +2918,11 @@ describe("volume", () => {
       const quartsConversion = linearConversion(0.946353);
 
       const [toBase, fromBase] = [
+        millilitersConversion[1],
         quartsConversion[0],
-        millilitersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "mL"] as const;
+      const expected = [fromBase(toBase(v)), "mL"] as const;
       const conversionCandidate = [v, "qt"] as const;
 
       expect(volume["mL"](conversionCandidate)).toEqual(expected);
@@ -2934,11 +2934,11 @@ describe("volume", () => {
       const gallonsConversion = linearConversion(3.78541);
 
       const [toBase, fromBase] = [
+        millilitersConversion[1],
         gallonsConversion[0],
-        millilitersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "mL"] as const;
+      const expected = [fromBase(toBase(v)), "mL"] as const;
       const conversionCandidate = [v, "gal"] as const;
 
       expect(volume["mL"](conversionCandidate)).toEqual(expected);
@@ -2950,11 +2950,11 @@ describe("volume", () => {
       const imperialTeaspoonsConversion = linearConversion(0.00591939);
 
       const [toBase, fromBase] = [
+        millilitersConversion[1],
         imperialTeaspoonsConversion[0],
-        millilitersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "mL"] as const;
+      const expected = [fromBase(toBase(v)), "mL"] as const;
       const conversionCandidate = [v, "imperial tsp"] as const;
 
       expect(volume["mL"](conversionCandidate)).toEqual(expected);
@@ -2966,11 +2966,11 @@ describe("volume", () => {
       const imperialTablespoonsConversion = linearConversion(0.0177582);
 
       const [toBase, fromBase] = [
+        millilitersConversion[1],
         imperialTablespoonsConversion[0],
-        millilitersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "mL"] as const;
+      const expected = [fromBase(toBase(v)), "mL"] as const;
       const conversionCandidate = [v, "imperial tbsp"] as const;
 
       expect(volume["mL"](conversionCandidate)).toEqual(expected);
@@ -2982,11 +2982,11 @@ describe("volume", () => {
       const imperialFluidOuncesConversion = linearConversion(0.0284131);
 
       const [toBase, fromBase] = [
+        millilitersConversion[1],
         imperialFluidOuncesConversion[0],
-        millilitersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "mL"] as const;
+      const expected = [fromBase(toBase(v)), "mL"] as const;
       const conversionCandidate = [v, "imperial fl oz"] as const;
 
       expect(volume["mL"](conversionCandidate)).toEqual(expected);
@@ -2998,11 +2998,11 @@ describe("volume", () => {
       const imperialPintsConversion = linearConversion(0.568261);
 
       const [toBase, fromBase] = [
+        millilitersConversion[1],
         imperialPintsConversion[0],
-        millilitersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "mL"] as const;
+      const expected = [fromBase(toBase(v)), "mL"] as const;
       const conversionCandidate = [v, "imperial pt"] as const;
 
       expect(volume["mL"](conversionCandidate)).toEqual(expected);
@@ -3014,11 +3014,11 @@ describe("volume", () => {
       const imperialQuartsConversion = linearConversion(1.13652);
 
       const [toBase, fromBase] = [
+        millilitersConversion[1],
         imperialQuartsConversion[0],
-        millilitersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "mL"] as const;
+      const expected = [fromBase(toBase(v)), "mL"] as const;
       const conversionCandidate = [v, "imperial qt"] as const;
 
       expect(volume["mL"](conversionCandidate)).toEqual(expected);
@@ -3030,11 +3030,11 @@ describe("volume", () => {
       const imperialGallonsConversion = linearConversion(4.54609);
 
       const [toBase, fromBase] = [
+        millilitersConversion[1],
         imperialGallonsConversion[0],
-        millilitersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "mL"] as const;
+      const expected = [fromBase(toBase(v)), "mL"] as const;
       const conversionCandidate = [v, "imperial gal"] as const;
 
       expect(volume["mL"](conversionCandidate)).toEqual(expected);
@@ -3046,11 +3046,11 @@ describe("volume", () => {
       const metricCupsConversion = linearConversion(0.25);
 
       const [toBase, fromBase] = [
+        millilitersConversion[1],
         metricCupsConversion[0],
-        millilitersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "mL"] as const;
+      const expected = [fromBase(toBase(v)), "mL"] as const;
       const conversionCandidate = [v, "metric cup"] as const;
 
       expect(volume["mL"](conversionCandidate)).toEqual(expected);
@@ -3070,11 +3070,11 @@ describe("volume", () => {
       const megalitersConversion = linearConversion(1000000);
 
       const [toBase, fromBase] = [
+        cubicKilometersConversion[1],
         megalitersConversion[0],
-        cubicKilometersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "km³"] as const;
+      const expected = [fromBase(toBase(v)), "km³"] as const;
       const conversionCandidate = [v, "ML"] as const;
 
       expect(volume["km³"](conversionCandidate)).toEqual(expected);
@@ -3086,11 +3086,11 @@ describe("volume", () => {
       const kilolitersConversion = linearConversion(1000);
 
       const [toBase, fromBase] = [
+        cubicKilometersConversion[1],
         kilolitersConversion[0],
-        cubicKilometersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "km³"] as const;
+      const expected = [fromBase(toBase(v)), "km³"] as const;
       const conversionCandidate = [v, "kL"] as const;
 
       expect(volume["km³"](conversionCandidate)).toEqual(expected);
@@ -3102,11 +3102,11 @@ describe("volume", () => {
       const litersConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
+        cubicKilometersConversion[1],
         litersConversion[0],
-        cubicKilometersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "km³"] as const;
+      const expected = [fromBase(toBase(v)), "km³"] as const;
       const conversionCandidate = [v, "L"] as const;
 
       expect(volume["km³"](conversionCandidate)).toEqual(expected);
@@ -3118,11 +3118,11 @@ describe("volume", () => {
       const decilitersConversion = linearConversion(0.1);
 
       const [toBase, fromBase] = [
+        cubicKilometersConversion[1],
         decilitersConversion[0],
-        cubicKilometersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "km³"] as const;
+      const expected = [fromBase(toBase(v)), "km³"] as const;
       const conversionCandidate = [v, "dL"] as const;
 
       expect(volume["km³"](conversionCandidate)).toEqual(expected);
@@ -3134,11 +3134,11 @@ describe("volume", () => {
       const centilitersConversion = linearConversion(0.01);
 
       const [toBase, fromBase] = [
+        cubicKilometersConversion[1],
         centilitersConversion[0],
-        cubicKilometersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "km³"] as const;
+      const expected = [fromBase(toBase(v)), "km³"] as const;
       const conversionCandidate = [v, "cL"] as const;
 
       expect(volume["km³"](conversionCandidate)).toEqual(expected);
@@ -3150,11 +3150,11 @@ describe("volume", () => {
       const millilitersConversion = linearConversion(0.001);
 
       const [toBase, fromBase] = [
+        cubicKilometersConversion[1],
         millilitersConversion[0],
-        cubicKilometersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "km³"] as const;
+      const expected = [fromBase(toBase(v)), "km³"] as const;
       const conversionCandidate = [v, "mL"] as const;
 
       expect(volume["km³"](conversionCandidate)).toEqual(expected);
@@ -3168,11 +3168,11 @@ describe("volume", () => {
       const cubicMetersConversion = linearConversion(1000);
 
       const [toBase, fromBase] = [
+        cubicKilometersConversion[1],
         cubicMetersConversion[0],
-        cubicKilometersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "km³"] as const;
+      const expected = [fromBase(toBase(v)), "km³"] as const;
       const conversionCandidate = [v, "m³"] as const;
 
       expect(volume["km³"](conversionCandidate)).toEqual(expected);
@@ -3184,11 +3184,11 @@ describe("volume", () => {
       const cubicDecimetersConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
+        cubicKilometersConversion[1],
         cubicDecimetersConversion[0],
-        cubicKilometersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "km³"] as const;
+      const expected = [fromBase(toBase(v)), "km³"] as const;
       const conversionCandidate = [v, "dm³"] as const;
 
       expect(volume["km³"](conversionCandidate)).toEqual(expected);
@@ -3200,11 +3200,11 @@ describe("volume", () => {
       const cubicMillimetersConversion = linearConversion(0.000001);
 
       const [toBase, fromBase] = [
+        cubicKilometersConversion[1],
         cubicMillimetersConversion[0],
-        cubicKilometersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "km³"] as const;
+      const expected = [fromBase(toBase(v)), "km³"] as const;
       const conversionCandidate = [v, "mm³"] as const;
 
       expect(volume["km³"](conversionCandidate)).toEqual(expected);
@@ -3216,11 +3216,11 @@ describe("volume", () => {
       const cubicInchesConversion = linearConversion(0.0163871);
 
       const [toBase, fromBase] = [
+        cubicKilometersConversion[1],
         cubicInchesConversion[0],
-        cubicKilometersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "km³"] as const;
+      const expected = [fromBase(toBase(v)), "km³"] as const;
       const conversionCandidate = [v, "in³"] as const;
 
       expect(volume["km³"](conversionCandidate)).toEqual(expected);
@@ -3232,11 +3232,11 @@ describe("volume", () => {
       const cubicFeetConversion = linearConversion(28.3168);
 
       const [toBase, fromBase] = [
+        cubicKilometersConversion[1],
         cubicFeetConversion[0],
-        cubicKilometersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "km³"] as const;
+      const expected = [fromBase(toBase(v)), "km³"] as const;
       const conversionCandidate = [v, "ft³"] as const;
 
       expect(volume["km³"](conversionCandidate)).toEqual(expected);
@@ -3248,11 +3248,11 @@ describe("volume", () => {
       const cubicYardsConversion = linearConversion(764.555);
 
       const [toBase, fromBase] = [
+        cubicKilometersConversion[1],
         cubicYardsConversion[0],
-        cubicKilometersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "km³"] as const;
+      const expected = [fromBase(toBase(v)), "km³"] as const;
       const conversionCandidate = [v, "yd³"] as const;
 
       expect(volume["km³"](conversionCandidate)).toEqual(expected);
@@ -3264,11 +3264,11 @@ describe("volume", () => {
       const cubicMilesConversion = linearConversion(4168000000000);
 
       const [toBase, fromBase] = [
+        cubicKilometersConversion[1],
         cubicMilesConversion[0],
-        cubicKilometersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "km³"] as const;
+      const expected = [fromBase(toBase(v)), "km³"] as const;
       const conversionCandidate = [v, "mi³"] as const;
 
       expect(volume["km³"](conversionCandidate)).toEqual(expected);
@@ -3280,11 +3280,11 @@ describe("volume", () => {
       const acreFeetConversion = linearConversion(1233000);
 
       const [toBase, fromBase] = [
+        cubicKilometersConversion[1],
         acreFeetConversion[0],
-        cubicKilometersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "km³"] as const;
+      const expected = [fromBase(toBase(v)), "km³"] as const;
       const conversionCandidate = [v, "af"] as const;
 
       expect(volume["km³"](conversionCandidate)).toEqual(expected);
@@ -3296,11 +3296,11 @@ describe("volume", () => {
       const bushelsConversion = linearConversion(35.2391);
 
       const [toBase, fromBase] = [
+        cubicKilometersConversion[1],
         bushelsConversion[0],
-        cubicKilometersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "km³"] as const;
+      const expected = [fromBase(toBase(v)), "km³"] as const;
       const conversionCandidate = [v, "bsh"] as const;
 
       expect(volume["km³"](conversionCandidate)).toEqual(expected);
@@ -3312,11 +3312,11 @@ describe("volume", () => {
       const teaspoonsConversion = linearConversion(0.00492892);
 
       const [toBase, fromBase] = [
+        cubicKilometersConversion[1],
         teaspoonsConversion[0],
-        cubicKilometersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "km³"] as const;
+      const expected = [fromBase(toBase(v)), "km³"] as const;
       const conversionCandidate = [v, "tsp"] as const;
 
       expect(volume["km³"](conversionCandidate)).toEqual(expected);
@@ -3328,11 +3328,11 @@ describe("volume", () => {
       const tablespoonsConversion = linearConversion(0.0147868);
 
       const [toBase, fromBase] = [
+        cubicKilometersConversion[1],
         tablespoonsConversion[0],
-        cubicKilometersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "km³"] as const;
+      const expected = [fromBase(toBase(v)), "km³"] as const;
       const conversionCandidate = [v, "tbsp"] as const;
 
       expect(volume["km³"](conversionCandidate)).toEqual(expected);
@@ -3344,11 +3344,11 @@ describe("volume", () => {
       const fluidOuncesConversion = linearConversion(0.0295735);
 
       const [toBase, fromBase] = [
+        cubicKilometersConversion[1],
         fluidOuncesConversion[0],
-        cubicKilometersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "km³"] as const;
+      const expected = [fromBase(toBase(v)), "km³"] as const;
       const conversionCandidate = [v, "fl oz"] as const;
 
       expect(volume["km³"](conversionCandidate)).toEqual(expected);
@@ -3360,11 +3360,11 @@ describe("volume", () => {
       const cupsConversion = linearConversion(0.24);
 
       const [toBase, fromBase] = [
+        cubicKilometersConversion[1],
         cupsConversion[0],
-        cubicKilometersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "km³"] as const;
+      const expected = [fromBase(toBase(v)), "km³"] as const;
       const conversionCandidate = [v, "cup"] as const;
 
       expect(volume["km³"](conversionCandidate)).toEqual(expected);
@@ -3376,11 +3376,11 @@ describe("volume", () => {
       const pintsConversion = linearConversion(0.473176);
 
       const [toBase, fromBase] = [
+        cubicKilometersConversion[1],
         pintsConversion[0],
-        cubicKilometersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "km³"] as const;
+      const expected = [fromBase(toBase(v)), "km³"] as const;
       const conversionCandidate = [v, "pt"] as const;
 
       expect(volume["km³"](conversionCandidate)).toEqual(expected);
@@ -3392,11 +3392,11 @@ describe("volume", () => {
       const quartsConversion = linearConversion(0.946353);
 
       const [toBase, fromBase] = [
+        cubicKilometersConversion[1],
         quartsConversion[0],
-        cubicKilometersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "km³"] as const;
+      const expected = [fromBase(toBase(v)), "km³"] as const;
       const conversionCandidate = [v, "qt"] as const;
 
       expect(volume["km³"](conversionCandidate)).toEqual(expected);
@@ -3408,11 +3408,11 @@ describe("volume", () => {
       const gallonsConversion = linearConversion(3.78541);
 
       const [toBase, fromBase] = [
+        cubicKilometersConversion[1],
         gallonsConversion[0],
-        cubicKilometersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "km³"] as const;
+      const expected = [fromBase(toBase(v)), "km³"] as const;
       const conversionCandidate = [v, "gal"] as const;
 
       expect(volume["km³"](conversionCandidate)).toEqual(expected);
@@ -3424,11 +3424,11 @@ describe("volume", () => {
       const imperialTeaspoonsConversion = linearConversion(0.00591939);
 
       const [toBase, fromBase] = [
+        cubicKilometersConversion[1],
         imperialTeaspoonsConversion[0],
-        cubicKilometersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "km³"] as const;
+      const expected = [fromBase(toBase(v)), "km³"] as const;
       const conversionCandidate = [v, "imperial tsp"] as const;
 
       expect(volume["km³"](conversionCandidate)).toEqual(expected);
@@ -3440,11 +3440,11 @@ describe("volume", () => {
       const imperialTablespoonsConversion = linearConversion(0.0177582);
 
       const [toBase, fromBase] = [
+        cubicKilometersConversion[1],
         imperialTablespoonsConversion[0],
-        cubicKilometersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "km³"] as const;
+      const expected = [fromBase(toBase(v)), "km³"] as const;
       const conversionCandidate = [v, "imperial tbsp"] as const;
 
       expect(volume["km³"](conversionCandidate)).toEqual(expected);
@@ -3456,11 +3456,11 @@ describe("volume", () => {
       const imperialFluidOuncesConversion = linearConversion(0.0284131);
 
       const [toBase, fromBase] = [
+        cubicKilometersConversion[1],
         imperialFluidOuncesConversion[0],
-        cubicKilometersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "km³"] as const;
+      const expected = [fromBase(toBase(v)), "km³"] as const;
       const conversionCandidate = [v, "imperial fl oz"] as const;
 
       expect(volume["km³"](conversionCandidate)).toEqual(expected);
@@ -3472,11 +3472,11 @@ describe("volume", () => {
       const imperialPintsConversion = linearConversion(0.568261);
 
       const [toBase, fromBase] = [
+        cubicKilometersConversion[1],
         imperialPintsConversion[0],
-        cubicKilometersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "km³"] as const;
+      const expected = [fromBase(toBase(v)), "km³"] as const;
       const conversionCandidate = [v, "imperial pt"] as const;
 
       expect(volume["km³"](conversionCandidate)).toEqual(expected);
@@ -3488,11 +3488,11 @@ describe("volume", () => {
       const imperialQuartsConversion = linearConversion(1.13652);
 
       const [toBase, fromBase] = [
+        cubicKilometersConversion[1],
         imperialQuartsConversion[0],
-        cubicKilometersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "km³"] as const;
+      const expected = [fromBase(toBase(v)), "km³"] as const;
       const conversionCandidate = [v, "imperial qt"] as const;
 
       expect(volume["km³"](conversionCandidate)).toEqual(expected);
@@ -3504,11 +3504,11 @@ describe("volume", () => {
       const imperialGallonsConversion = linearConversion(4.54609);
 
       const [toBase, fromBase] = [
+        cubicKilometersConversion[1],
         imperialGallonsConversion[0],
-        cubicKilometersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "km³"] as const;
+      const expected = [fromBase(toBase(v)), "km³"] as const;
       const conversionCandidate = [v, "imperial gal"] as const;
 
       expect(volume["km³"](conversionCandidate)).toEqual(expected);
@@ -3520,11 +3520,11 @@ describe("volume", () => {
       const metricCupsConversion = linearConversion(0.25);
 
       const [toBase, fromBase] = [
+        cubicKilometersConversion[1],
         metricCupsConversion[0],
-        cubicKilometersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "km³"] as const;
+      const expected = [fromBase(toBase(v)), "km³"] as const;
       const conversionCandidate = [v, "metric cup"] as const;
 
       expect(volume["km³"](conversionCandidate)).toEqual(expected);
@@ -3544,11 +3544,11 @@ describe("volume", () => {
       const megalitersConversion = linearConversion(1000000);
 
       const [toBase, fromBase] = [
+        cubicMetersConversion[1],
         megalitersConversion[0],
-        cubicMetersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "m³"] as const;
+      const expected = [fromBase(toBase(v)), "m³"] as const;
       const conversionCandidate = [v, "ML"] as const;
 
       expect(volume["m³"](conversionCandidate)).toEqual(expected);
@@ -3560,11 +3560,11 @@ describe("volume", () => {
       const kilolitersConversion = linearConversion(1000);
 
       const [toBase, fromBase] = [
+        cubicMetersConversion[1],
         kilolitersConversion[0],
-        cubicMetersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "m³"] as const;
+      const expected = [fromBase(toBase(v)), "m³"] as const;
       const conversionCandidate = [v, "kL"] as const;
 
       expect(volume["m³"](conversionCandidate)).toEqual(expected);
@@ -3576,11 +3576,11 @@ describe("volume", () => {
       const litersConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
+        cubicMetersConversion[1],
         litersConversion[0],
-        cubicMetersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "m³"] as const;
+      const expected = [fromBase(toBase(v)), "m³"] as const;
       const conversionCandidate = [v, "L"] as const;
 
       expect(volume["m³"](conversionCandidate)).toEqual(expected);
@@ -3592,11 +3592,11 @@ describe("volume", () => {
       const decilitersConversion = linearConversion(0.1);
 
       const [toBase, fromBase] = [
+        cubicMetersConversion[1],
         decilitersConversion[0],
-        cubicMetersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "m³"] as const;
+      const expected = [fromBase(toBase(v)), "m³"] as const;
       const conversionCandidate = [v, "dL"] as const;
 
       expect(volume["m³"](conversionCandidate)).toEqual(expected);
@@ -3608,11 +3608,11 @@ describe("volume", () => {
       const centilitersConversion = linearConversion(0.01);
 
       const [toBase, fromBase] = [
+        cubicMetersConversion[1],
         centilitersConversion[0],
-        cubicMetersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "m³"] as const;
+      const expected = [fromBase(toBase(v)), "m³"] as const;
       const conversionCandidate = [v, "cL"] as const;
 
       expect(volume["m³"](conversionCandidate)).toEqual(expected);
@@ -3624,11 +3624,11 @@ describe("volume", () => {
       const millilitersConversion = linearConversion(0.001);
 
       const [toBase, fromBase] = [
+        cubicMetersConversion[1],
         millilitersConversion[0],
-        cubicMetersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "m³"] as const;
+      const expected = [fromBase(toBase(v)), "m³"] as const;
       const conversionCandidate = [v, "mL"] as const;
 
       expect(volume["m³"](conversionCandidate)).toEqual(expected);
@@ -3640,11 +3640,11 @@ describe("volume", () => {
       const cubicKilometersConversion = linearConversion(1000000000000);
 
       const [toBase, fromBase] = [
+        cubicMetersConversion[1],
         cubicKilometersConversion[0],
-        cubicMetersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "m³"] as const;
+      const expected = [fromBase(toBase(v)), "m³"] as const;
       const conversionCandidate = [v, "km³"] as const;
 
       expect(volume["m³"](conversionCandidate)).toEqual(expected);
@@ -3658,11 +3658,11 @@ describe("volume", () => {
       const cubicDecimetersConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
+        cubicMetersConversion[1],
         cubicDecimetersConversion[0],
-        cubicMetersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "m³"] as const;
+      const expected = [fromBase(toBase(v)), "m³"] as const;
       const conversionCandidate = [v, "dm³"] as const;
 
       expect(volume["m³"](conversionCandidate)).toEqual(expected);
@@ -3674,11 +3674,11 @@ describe("volume", () => {
       const cubicMillimetersConversion = linearConversion(0.000001);
 
       const [toBase, fromBase] = [
+        cubicMetersConversion[1],
         cubicMillimetersConversion[0],
-        cubicMetersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "m³"] as const;
+      const expected = [fromBase(toBase(v)), "m³"] as const;
       const conversionCandidate = [v, "mm³"] as const;
 
       expect(volume["m³"](conversionCandidate)).toEqual(expected);
@@ -3690,11 +3690,11 @@ describe("volume", () => {
       const cubicInchesConversion = linearConversion(0.0163871);
 
       const [toBase, fromBase] = [
+        cubicMetersConversion[1],
         cubicInchesConversion[0],
-        cubicMetersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "m³"] as const;
+      const expected = [fromBase(toBase(v)), "m³"] as const;
       const conversionCandidate = [v, "in³"] as const;
 
       expect(volume["m³"](conversionCandidate)).toEqual(expected);
@@ -3706,11 +3706,11 @@ describe("volume", () => {
       const cubicFeetConversion = linearConversion(28.3168);
 
       const [toBase, fromBase] = [
+        cubicMetersConversion[1],
         cubicFeetConversion[0],
-        cubicMetersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "m³"] as const;
+      const expected = [fromBase(toBase(v)), "m³"] as const;
       const conversionCandidate = [v, "ft³"] as const;
 
       expect(volume["m³"](conversionCandidate)).toEqual(expected);
@@ -3722,11 +3722,11 @@ describe("volume", () => {
       const cubicYardsConversion = linearConversion(764.555);
 
       const [toBase, fromBase] = [
+        cubicMetersConversion[1],
         cubicYardsConversion[0],
-        cubicMetersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "m³"] as const;
+      const expected = [fromBase(toBase(v)), "m³"] as const;
       const conversionCandidate = [v, "yd³"] as const;
 
       expect(volume["m³"](conversionCandidate)).toEqual(expected);
@@ -3738,11 +3738,11 @@ describe("volume", () => {
       const cubicMilesConversion = linearConversion(4168000000000);
 
       const [toBase, fromBase] = [
+        cubicMetersConversion[1],
         cubicMilesConversion[0],
-        cubicMetersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "m³"] as const;
+      const expected = [fromBase(toBase(v)), "m³"] as const;
       const conversionCandidate = [v, "mi³"] as const;
 
       expect(volume["m³"](conversionCandidate)).toEqual(expected);
@@ -3754,11 +3754,11 @@ describe("volume", () => {
       const acreFeetConversion = linearConversion(1233000);
 
       const [toBase, fromBase] = [
+        cubicMetersConversion[1],
         acreFeetConversion[0],
-        cubicMetersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "m³"] as const;
+      const expected = [fromBase(toBase(v)), "m³"] as const;
       const conversionCandidate = [v, "af"] as const;
 
       expect(volume["m³"](conversionCandidate)).toEqual(expected);
@@ -3770,11 +3770,11 @@ describe("volume", () => {
       const bushelsConversion = linearConversion(35.2391);
 
       const [toBase, fromBase] = [
+        cubicMetersConversion[1],
         bushelsConversion[0],
-        cubicMetersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "m³"] as const;
+      const expected = [fromBase(toBase(v)), "m³"] as const;
       const conversionCandidate = [v, "bsh"] as const;
 
       expect(volume["m³"](conversionCandidate)).toEqual(expected);
@@ -3786,11 +3786,11 @@ describe("volume", () => {
       const teaspoonsConversion = linearConversion(0.00492892);
 
       const [toBase, fromBase] = [
+        cubicMetersConversion[1],
         teaspoonsConversion[0],
-        cubicMetersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "m³"] as const;
+      const expected = [fromBase(toBase(v)), "m³"] as const;
       const conversionCandidate = [v, "tsp"] as const;
 
       expect(volume["m³"](conversionCandidate)).toEqual(expected);
@@ -3802,11 +3802,11 @@ describe("volume", () => {
       const tablespoonsConversion = linearConversion(0.0147868);
 
       const [toBase, fromBase] = [
+        cubicMetersConversion[1],
         tablespoonsConversion[0],
-        cubicMetersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "m³"] as const;
+      const expected = [fromBase(toBase(v)), "m³"] as const;
       const conversionCandidate = [v, "tbsp"] as const;
 
       expect(volume["m³"](conversionCandidate)).toEqual(expected);
@@ -3818,11 +3818,11 @@ describe("volume", () => {
       const fluidOuncesConversion = linearConversion(0.0295735);
 
       const [toBase, fromBase] = [
+        cubicMetersConversion[1],
         fluidOuncesConversion[0],
-        cubicMetersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "m³"] as const;
+      const expected = [fromBase(toBase(v)), "m³"] as const;
       const conversionCandidate = [v, "fl oz"] as const;
 
       expect(volume["m³"](conversionCandidate)).toEqual(expected);
@@ -3834,11 +3834,11 @@ describe("volume", () => {
       const cupsConversion = linearConversion(0.24);
 
       const [toBase, fromBase] = [
+        cubicMetersConversion[1],
         cupsConversion[0],
-        cubicMetersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "m³"] as const;
+      const expected = [fromBase(toBase(v)), "m³"] as const;
       const conversionCandidate = [v, "cup"] as const;
 
       expect(volume["m³"](conversionCandidate)).toEqual(expected);
@@ -3850,11 +3850,11 @@ describe("volume", () => {
       const pintsConversion = linearConversion(0.473176);
 
       const [toBase, fromBase] = [
+        cubicMetersConversion[1],
         pintsConversion[0],
-        cubicMetersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "m³"] as const;
+      const expected = [fromBase(toBase(v)), "m³"] as const;
       const conversionCandidate = [v, "pt"] as const;
 
       expect(volume["m³"](conversionCandidate)).toEqual(expected);
@@ -3866,11 +3866,11 @@ describe("volume", () => {
       const quartsConversion = linearConversion(0.946353);
 
       const [toBase, fromBase] = [
+        cubicMetersConversion[1],
         quartsConversion[0],
-        cubicMetersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "m³"] as const;
+      const expected = [fromBase(toBase(v)), "m³"] as const;
       const conversionCandidate = [v, "qt"] as const;
 
       expect(volume["m³"](conversionCandidate)).toEqual(expected);
@@ -3882,11 +3882,11 @@ describe("volume", () => {
       const gallonsConversion = linearConversion(3.78541);
 
       const [toBase, fromBase] = [
+        cubicMetersConversion[1],
         gallonsConversion[0],
-        cubicMetersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "m³"] as const;
+      const expected = [fromBase(toBase(v)), "m³"] as const;
       const conversionCandidate = [v, "gal"] as const;
 
       expect(volume["m³"](conversionCandidate)).toEqual(expected);
@@ -3898,11 +3898,11 @@ describe("volume", () => {
       const imperialTeaspoonsConversion = linearConversion(0.00591939);
 
       const [toBase, fromBase] = [
+        cubicMetersConversion[1],
         imperialTeaspoonsConversion[0],
-        cubicMetersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "m³"] as const;
+      const expected = [fromBase(toBase(v)), "m³"] as const;
       const conversionCandidate = [v, "imperial tsp"] as const;
 
       expect(volume["m³"](conversionCandidate)).toEqual(expected);
@@ -3914,11 +3914,11 @@ describe("volume", () => {
       const imperialTablespoonsConversion = linearConversion(0.0177582);
 
       const [toBase, fromBase] = [
+        cubicMetersConversion[1],
         imperialTablespoonsConversion[0],
-        cubicMetersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "m³"] as const;
+      const expected = [fromBase(toBase(v)), "m³"] as const;
       const conversionCandidate = [v, "imperial tbsp"] as const;
 
       expect(volume["m³"](conversionCandidate)).toEqual(expected);
@@ -3930,11 +3930,11 @@ describe("volume", () => {
       const imperialFluidOuncesConversion = linearConversion(0.0284131);
 
       const [toBase, fromBase] = [
+        cubicMetersConversion[1],
         imperialFluidOuncesConversion[0],
-        cubicMetersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "m³"] as const;
+      const expected = [fromBase(toBase(v)), "m³"] as const;
       const conversionCandidate = [v, "imperial fl oz"] as const;
 
       expect(volume["m³"](conversionCandidate)).toEqual(expected);
@@ -3946,11 +3946,11 @@ describe("volume", () => {
       const imperialPintsConversion = linearConversion(0.568261);
 
       const [toBase, fromBase] = [
+        cubicMetersConversion[1],
         imperialPintsConversion[0],
-        cubicMetersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "m³"] as const;
+      const expected = [fromBase(toBase(v)), "m³"] as const;
       const conversionCandidate = [v, "imperial pt"] as const;
 
       expect(volume["m³"](conversionCandidate)).toEqual(expected);
@@ -3962,11 +3962,11 @@ describe("volume", () => {
       const imperialQuartsConversion = linearConversion(1.13652);
 
       const [toBase, fromBase] = [
+        cubicMetersConversion[1],
         imperialQuartsConversion[0],
-        cubicMetersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "m³"] as const;
+      const expected = [fromBase(toBase(v)), "m³"] as const;
       const conversionCandidate = [v, "imperial qt"] as const;
 
       expect(volume["m³"](conversionCandidate)).toEqual(expected);
@@ -3978,11 +3978,11 @@ describe("volume", () => {
       const imperialGallonsConversion = linearConversion(4.54609);
 
       const [toBase, fromBase] = [
+        cubicMetersConversion[1],
         imperialGallonsConversion[0],
-        cubicMetersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "m³"] as const;
+      const expected = [fromBase(toBase(v)), "m³"] as const;
       const conversionCandidate = [v, "imperial gal"] as const;
 
       expect(volume["m³"](conversionCandidate)).toEqual(expected);
@@ -3994,11 +3994,11 @@ describe("volume", () => {
       const metricCupsConversion = linearConversion(0.25);
 
       const [toBase, fromBase] = [
+        cubicMetersConversion[1],
         metricCupsConversion[0],
-        cubicMetersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "m³"] as const;
+      const expected = [fromBase(toBase(v)), "m³"] as const;
       const conversionCandidate = [v, "metric cup"] as const;
 
       expect(volume["m³"](conversionCandidate)).toEqual(expected);
@@ -4018,11 +4018,11 @@ describe("volume", () => {
       const megalitersConversion = linearConversion(1000000);
 
       const [toBase, fromBase] = [
+        cubicDecimetersConversion[1],
         megalitersConversion[0],
-        cubicDecimetersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "dm³"] as const;
+      const expected = [fromBase(toBase(v)), "dm³"] as const;
       const conversionCandidate = [v, "ML"] as const;
 
       expect(volume["dm³"](conversionCandidate)).toEqual(expected);
@@ -4034,11 +4034,11 @@ describe("volume", () => {
       const kilolitersConversion = linearConversion(1000);
 
       const [toBase, fromBase] = [
+        cubicDecimetersConversion[1],
         kilolitersConversion[0],
-        cubicDecimetersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "dm³"] as const;
+      const expected = [fromBase(toBase(v)), "dm³"] as const;
       const conversionCandidate = [v, "kL"] as const;
 
       expect(volume["dm³"](conversionCandidate)).toEqual(expected);
@@ -4050,11 +4050,11 @@ describe("volume", () => {
       const litersConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
+        cubicDecimetersConversion[1],
         litersConversion[0],
-        cubicDecimetersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "dm³"] as const;
+      const expected = [fromBase(toBase(v)), "dm³"] as const;
       const conversionCandidate = [v, "L"] as const;
 
       expect(volume["dm³"](conversionCandidate)).toEqual(expected);
@@ -4066,11 +4066,11 @@ describe("volume", () => {
       const decilitersConversion = linearConversion(0.1);
 
       const [toBase, fromBase] = [
+        cubicDecimetersConversion[1],
         decilitersConversion[0],
-        cubicDecimetersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "dm³"] as const;
+      const expected = [fromBase(toBase(v)), "dm³"] as const;
       const conversionCandidate = [v, "dL"] as const;
 
       expect(volume["dm³"](conversionCandidate)).toEqual(expected);
@@ -4082,11 +4082,11 @@ describe("volume", () => {
       const centilitersConversion = linearConversion(0.01);
 
       const [toBase, fromBase] = [
+        cubicDecimetersConversion[1],
         centilitersConversion[0],
-        cubicDecimetersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "dm³"] as const;
+      const expected = [fromBase(toBase(v)), "dm³"] as const;
       const conversionCandidate = [v, "cL"] as const;
 
       expect(volume["dm³"](conversionCandidate)).toEqual(expected);
@@ -4098,11 +4098,11 @@ describe("volume", () => {
       const millilitersConversion = linearConversion(0.001);
 
       const [toBase, fromBase] = [
+        cubicDecimetersConversion[1],
         millilitersConversion[0],
-        cubicDecimetersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "dm³"] as const;
+      const expected = [fromBase(toBase(v)), "dm³"] as const;
       const conversionCandidate = [v, "mL"] as const;
 
       expect(volume["dm³"](conversionCandidate)).toEqual(expected);
@@ -4114,11 +4114,11 @@ describe("volume", () => {
       const cubicKilometersConversion = linearConversion(1000000000000);
 
       const [toBase, fromBase] = [
+        cubicDecimetersConversion[1],
         cubicKilometersConversion[0],
-        cubicDecimetersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "dm³"] as const;
+      const expected = [fromBase(toBase(v)), "dm³"] as const;
       const conversionCandidate = [v, "km³"] as const;
 
       expect(volume["dm³"](conversionCandidate)).toEqual(expected);
@@ -4130,11 +4130,11 @@ describe("volume", () => {
       const cubicMetersConversion = linearConversion(1000);
 
       const [toBase, fromBase] = [
+        cubicDecimetersConversion[1],
         cubicMetersConversion[0],
-        cubicDecimetersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "dm³"] as const;
+      const expected = [fromBase(toBase(v)), "dm³"] as const;
       const conversionCandidate = [v, "m³"] as const;
 
       expect(volume["dm³"](conversionCandidate)).toEqual(expected);
@@ -4148,11 +4148,11 @@ describe("volume", () => {
       const cubicMillimetersConversion = linearConversion(0.000001);
 
       const [toBase, fromBase] = [
+        cubicDecimetersConversion[1],
         cubicMillimetersConversion[0],
-        cubicDecimetersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "dm³"] as const;
+      const expected = [fromBase(toBase(v)), "dm³"] as const;
       const conversionCandidate = [v, "mm³"] as const;
 
       expect(volume["dm³"](conversionCandidate)).toEqual(expected);
@@ -4164,11 +4164,11 @@ describe("volume", () => {
       const cubicInchesConversion = linearConversion(0.0163871);
 
       const [toBase, fromBase] = [
+        cubicDecimetersConversion[1],
         cubicInchesConversion[0],
-        cubicDecimetersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "dm³"] as const;
+      const expected = [fromBase(toBase(v)), "dm³"] as const;
       const conversionCandidate = [v, "in³"] as const;
 
       expect(volume["dm³"](conversionCandidate)).toEqual(expected);
@@ -4180,11 +4180,11 @@ describe("volume", () => {
       const cubicFeetConversion = linearConversion(28.3168);
 
       const [toBase, fromBase] = [
+        cubicDecimetersConversion[1],
         cubicFeetConversion[0],
-        cubicDecimetersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "dm³"] as const;
+      const expected = [fromBase(toBase(v)), "dm³"] as const;
       const conversionCandidate = [v, "ft³"] as const;
 
       expect(volume["dm³"](conversionCandidate)).toEqual(expected);
@@ -4196,11 +4196,11 @@ describe("volume", () => {
       const cubicYardsConversion = linearConversion(764.555);
 
       const [toBase, fromBase] = [
+        cubicDecimetersConversion[1],
         cubicYardsConversion[0],
-        cubicDecimetersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "dm³"] as const;
+      const expected = [fromBase(toBase(v)), "dm³"] as const;
       const conversionCandidate = [v, "yd³"] as const;
 
       expect(volume["dm³"](conversionCandidate)).toEqual(expected);
@@ -4212,11 +4212,11 @@ describe("volume", () => {
       const cubicMilesConversion = linearConversion(4168000000000);
 
       const [toBase, fromBase] = [
+        cubicDecimetersConversion[1],
         cubicMilesConversion[0],
-        cubicDecimetersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "dm³"] as const;
+      const expected = [fromBase(toBase(v)), "dm³"] as const;
       const conversionCandidate = [v, "mi³"] as const;
 
       expect(volume["dm³"](conversionCandidate)).toEqual(expected);
@@ -4228,11 +4228,11 @@ describe("volume", () => {
       const acreFeetConversion = linearConversion(1233000);
 
       const [toBase, fromBase] = [
+        cubicDecimetersConversion[1],
         acreFeetConversion[0],
-        cubicDecimetersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "dm³"] as const;
+      const expected = [fromBase(toBase(v)), "dm³"] as const;
       const conversionCandidate = [v, "af"] as const;
 
       expect(volume["dm³"](conversionCandidate)).toEqual(expected);
@@ -4244,11 +4244,11 @@ describe("volume", () => {
       const bushelsConversion = linearConversion(35.2391);
 
       const [toBase, fromBase] = [
+        cubicDecimetersConversion[1],
         bushelsConversion[0],
-        cubicDecimetersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "dm³"] as const;
+      const expected = [fromBase(toBase(v)), "dm³"] as const;
       const conversionCandidate = [v, "bsh"] as const;
 
       expect(volume["dm³"](conversionCandidate)).toEqual(expected);
@@ -4260,11 +4260,11 @@ describe("volume", () => {
       const teaspoonsConversion = linearConversion(0.00492892);
 
       const [toBase, fromBase] = [
+        cubicDecimetersConversion[1],
         teaspoonsConversion[0],
-        cubicDecimetersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "dm³"] as const;
+      const expected = [fromBase(toBase(v)), "dm³"] as const;
       const conversionCandidate = [v, "tsp"] as const;
 
       expect(volume["dm³"](conversionCandidate)).toEqual(expected);
@@ -4276,11 +4276,11 @@ describe("volume", () => {
       const tablespoonsConversion = linearConversion(0.0147868);
 
       const [toBase, fromBase] = [
+        cubicDecimetersConversion[1],
         tablespoonsConversion[0],
-        cubicDecimetersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "dm³"] as const;
+      const expected = [fromBase(toBase(v)), "dm³"] as const;
       const conversionCandidate = [v, "tbsp"] as const;
 
       expect(volume["dm³"](conversionCandidate)).toEqual(expected);
@@ -4292,11 +4292,11 @@ describe("volume", () => {
       const fluidOuncesConversion = linearConversion(0.0295735);
 
       const [toBase, fromBase] = [
+        cubicDecimetersConversion[1],
         fluidOuncesConversion[0],
-        cubicDecimetersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "dm³"] as const;
+      const expected = [fromBase(toBase(v)), "dm³"] as const;
       const conversionCandidate = [v, "fl oz"] as const;
 
       expect(volume["dm³"](conversionCandidate)).toEqual(expected);
@@ -4308,11 +4308,11 @@ describe("volume", () => {
       const cupsConversion = linearConversion(0.24);
 
       const [toBase, fromBase] = [
+        cubicDecimetersConversion[1],
         cupsConversion[0],
-        cubicDecimetersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "dm³"] as const;
+      const expected = [fromBase(toBase(v)), "dm³"] as const;
       const conversionCandidate = [v, "cup"] as const;
 
       expect(volume["dm³"](conversionCandidate)).toEqual(expected);
@@ -4324,11 +4324,11 @@ describe("volume", () => {
       const pintsConversion = linearConversion(0.473176);
 
       const [toBase, fromBase] = [
+        cubicDecimetersConversion[1],
         pintsConversion[0],
-        cubicDecimetersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "dm³"] as const;
+      const expected = [fromBase(toBase(v)), "dm³"] as const;
       const conversionCandidate = [v, "pt"] as const;
 
       expect(volume["dm³"](conversionCandidate)).toEqual(expected);
@@ -4340,11 +4340,11 @@ describe("volume", () => {
       const quartsConversion = linearConversion(0.946353);
 
       const [toBase, fromBase] = [
+        cubicDecimetersConversion[1],
         quartsConversion[0],
-        cubicDecimetersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "dm³"] as const;
+      const expected = [fromBase(toBase(v)), "dm³"] as const;
       const conversionCandidate = [v, "qt"] as const;
 
       expect(volume["dm³"](conversionCandidate)).toEqual(expected);
@@ -4356,11 +4356,11 @@ describe("volume", () => {
       const gallonsConversion = linearConversion(3.78541);
 
       const [toBase, fromBase] = [
+        cubicDecimetersConversion[1],
         gallonsConversion[0],
-        cubicDecimetersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "dm³"] as const;
+      const expected = [fromBase(toBase(v)), "dm³"] as const;
       const conversionCandidate = [v, "gal"] as const;
 
       expect(volume["dm³"](conversionCandidate)).toEqual(expected);
@@ -4372,11 +4372,11 @@ describe("volume", () => {
       const imperialTeaspoonsConversion = linearConversion(0.00591939);
 
       const [toBase, fromBase] = [
+        cubicDecimetersConversion[1],
         imperialTeaspoonsConversion[0],
-        cubicDecimetersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "dm³"] as const;
+      const expected = [fromBase(toBase(v)), "dm³"] as const;
       const conversionCandidate = [v, "imperial tsp"] as const;
 
       expect(volume["dm³"](conversionCandidate)).toEqual(expected);
@@ -4388,11 +4388,11 @@ describe("volume", () => {
       const imperialTablespoonsConversion = linearConversion(0.0177582);
 
       const [toBase, fromBase] = [
+        cubicDecimetersConversion[1],
         imperialTablespoonsConversion[0],
-        cubicDecimetersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "dm³"] as const;
+      const expected = [fromBase(toBase(v)), "dm³"] as const;
       const conversionCandidate = [v, "imperial tbsp"] as const;
 
       expect(volume["dm³"](conversionCandidate)).toEqual(expected);
@@ -4404,11 +4404,11 @@ describe("volume", () => {
       const imperialFluidOuncesConversion = linearConversion(0.0284131);
 
       const [toBase, fromBase] = [
+        cubicDecimetersConversion[1],
         imperialFluidOuncesConversion[0],
-        cubicDecimetersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "dm³"] as const;
+      const expected = [fromBase(toBase(v)), "dm³"] as const;
       const conversionCandidate = [v, "imperial fl oz"] as const;
 
       expect(volume["dm³"](conversionCandidate)).toEqual(expected);
@@ -4420,11 +4420,11 @@ describe("volume", () => {
       const imperialPintsConversion = linearConversion(0.568261);
 
       const [toBase, fromBase] = [
+        cubicDecimetersConversion[1],
         imperialPintsConversion[0],
-        cubicDecimetersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "dm³"] as const;
+      const expected = [fromBase(toBase(v)), "dm³"] as const;
       const conversionCandidate = [v, "imperial pt"] as const;
 
       expect(volume["dm³"](conversionCandidate)).toEqual(expected);
@@ -4436,11 +4436,11 @@ describe("volume", () => {
       const imperialQuartsConversion = linearConversion(1.13652);
 
       const [toBase, fromBase] = [
+        cubicDecimetersConversion[1],
         imperialQuartsConversion[0],
-        cubicDecimetersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "dm³"] as const;
+      const expected = [fromBase(toBase(v)), "dm³"] as const;
       const conversionCandidate = [v, "imperial qt"] as const;
 
       expect(volume["dm³"](conversionCandidate)).toEqual(expected);
@@ -4452,11 +4452,11 @@ describe("volume", () => {
       const imperialGallonsConversion = linearConversion(4.54609);
 
       const [toBase, fromBase] = [
+        cubicDecimetersConversion[1],
         imperialGallonsConversion[0],
-        cubicDecimetersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "dm³"] as const;
+      const expected = [fromBase(toBase(v)), "dm³"] as const;
       const conversionCandidate = [v, "imperial gal"] as const;
 
       expect(volume["dm³"](conversionCandidate)).toEqual(expected);
@@ -4468,11 +4468,11 @@ describe("volume", () => {
       const metricCupsConversion = linearConversion(0.25);
 
       const [toBase, fromBase] = [
+        cubicDecimetersConversion[1],
         metricCupsConversion[0],
-        cubicDecimetersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "dm³"] as const;
+      const expected = [fromBase(toBase(v)), "dm³"] as const;
       const conversionCandidate = [v, "metric cup"] as const;
 
       expect(volume["dm³"](conversionCandidate)).toEqual(expected);
@@ -4492,11 +4492,11 @@ describe("volume", () => {
       const megalitersConversion = linearConversion(1000000);
 
       const [toBase, fromBase] = [
+        cubicMillimetersConversion[1],
         megalitersConversion[0],
-        cubicMillimetersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "mm³"] as const;
+      const expected = [fromBase(toBase(v)), "mm³"] as const;
       const conversionCandidate = [v, "ML"] as const;
 
       expect(volume["mm³"](conversionCandidate)).toEqual(expected);
@@ -4508,11 +4508,11 @@ describe("volume", () => {
       const kilolitersConversion = linearConversion(1000);
 
       const [toBase, fromBase] = [
+        cubicMillimetersConversion[1],
         kilolitersConversion[0],
-        cubicMillimetersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "mm³"] as const;
+      const expected = [fromBase(toBase(v)), "mm³"] as const;
       const conversionCandidate = [v, "kL"] as const;
 
       expect(volume["mm³"](conversionCandidate)).toEqual(expected);
@@ -4524,11 +4524,11 @@ describe("volume", () => {
       const litersConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
+        cubicMillimetersConversion[1],
         litersConversion[0],
-        cubicMillimetersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "mm³"] as const;
+      const expected = [fromBase(toBase(v)), "mm³"] as const;
       const conversionCandidate = [v, "L"] as const;
 
       expect(volume["mm³"](conversionCandidate)).toEqual(expected);
@@ -4540,11 +4540,11 @@ describe("volume", () => {
       const decilitersConversion = linearConversion(0.1);
 
       const [toBase, fromBase] = [
+        cubicMillimetersConversion[1],
         decilitersConversion[0],
-        cubicMillimetersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "mm³"] as const;
+      const expected = [fromBase(toBase(v)), "mm³"] as const;
       const conversionCandidate = [v, "dL"] as const;
 
       expect(volume["mm³"](conversionCandidate)).toEqual(expected);
@@ -4556,11 +4556,11 @@ describe("volume", () => {
       const centilitersConversion = linearConversion(0.01);
 
       const [toBase, fromBase] = [
+        cubicMillimetersConversion[1],
         centilitersConversion[0],
-        cubicMillimetersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "mm³"] as const;
+      const expected = [fromBase(toBase(v)), "mm³"] as const;
       const conversionCandidate = [v, "cL"] as const;
 
       expect(volume["mm³"](conversionCandidate)).toEqual(expected);
@@ -4572,11 +4572,11 @@ describe("volume", () => {
       const millilitersConversion = linearConversion(0.001);
 
       const [toBase, fromBase] = [
+        cubicMillimetersConversion[1],
         millilitersConversion[0],
-        cubicMillimetersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "mm³"] as const;
+      const expected = [fromBase(toBase(v)), "mm³"] as const;
       const conversionCandidate = [v, "mL"] as const;
 
       expect(volume["mm³"](conversionCandidate)).toEqual(expected);
@@ -4588,11 +4588,11 @@ describe("volume", () => {
       const cubicKilometersConversion = linearConversion(1000000000000);
 
       const [toBase, fromBase] = [
+        cubicMillimetersConversion[1],
         cubicKilometersConversion[0],
-        cubicMillimetersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "mm³"] as const;
+      const expected = [fromBase(toBase(v)), "mm³"] as const;
       const conversionCandidate = [v, "km³"] as const;
 
       expect(volume["mm³"](conversionCandidate)).toEqual(expected);
@@ -4604,11 +4604,11 @@ describe("volume", () => {
       const cubicMetersConversion = linearConversion(1000);
 
       const [toBase, fromBase] = [
+        cubicMillimetersConversion[1],
         cubicMetersConversion[0],
-        cubicMillimetersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "mm³"] as const;
+      const expected = [fromBase(toBase(v)), "mm³"] as const;
       const conversionCandidate = [v, "m³"] as const;
 
       expect(volume["mm³"](conversionCandidate)).toEqual(expected);
@@ -4620,11 +4620,11 @@ describe("volume", () => {
       const cubicDecimetersConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
+        cubicMillimetersConversion[1],
         cubicDecimetersConversion[0],
-        cubicMillimetersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "mm³"] as const;
+      const expected = [fromBase(toBase(v)), "mm³"] as const;
       const conversionCandidate = [v, "dm³"] as const;
 
       expect(volume["mm³"](conversionCandidate)).toEqual(expected);
@@ -4638,11 +4638,11 @@ describe("volume", () => {
       const cubicInchesConversion = linearConversion(0.0163871);
 
       const [toBase, fromBase] = [
+        cubicMillimetersConversion[1],
         cubicInchesConversion[0],
-        cubicMillimetersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "mm³"] as const;
+      const expected = [fromBase(toBase(v)), "mm³"] as const;
       const conversionCandidate = [v, "in³"] as const;
 
       expect(volume["mm³"](conversionCandidate)).toEqual(expected);
@@ -4654,11 +4654,11 @@ describe("volume", () => {
       const cubicFeetConversion = linearConversion(28.3168);
 
       const [toBase, fromBase] = [
+        cubicMillimetersConversion[1],
         cubicFeetConversion[0],
-        cubicMillimetersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "mm³"] as const;
+      const expected = [fromBase(toBase(v)), "mm³"] as const;
       const conversionCandidate = [v, "ft³"] as const;
 
       expect(volume["mm³"](conversionCandidate)).toEqual(expected);
@@ -4670,11 +4670,11 @@ describe("volume", () => {
       const cubicYardsConversion = linearConversion(764.555);
 
       const [toBase, fromBase] = [
+        cubicMillimetersConversion[1],
         cubicYardsConversion[0],
-        cubicMillimetersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "mm³"] as const;
+      const expected = [fromBase(toBase(v)), "mm³"] as const;
       const conversionCandidate = [v, "yd³"] as const;
 
       expect(volume["mm³"](conversionCandidate)).toEqual(expected);
@@ -4686,11 +4686,11 @@ describe("volume", () => {
       const cubicMilesConversion = linearConversion(4168000000000);
 
       const [toBase, fromBase] = [
+        cubicMillimetersConversion[1],
         cubicMilesConversion[0],
-        cubicMillimetersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "mm³"] as const;
+      const expected = [fromBase(toBase(v)), "mm³"] as const;
       const conversionCandidate = [v, "mi³"] as const;
 
       expect(volume["mm³"](conversionCandidate)).toEqual(expected);
@@ -4702,11 +4702,11 @@ describe("volume", () => {
       const acreFeetConversion = linearConversion(1233000);
 
       const [toBase, fromBase] = [
+        cubicMillimetersConversion[1],
         acreFeetConversion[0],
-        cubicMillimetersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "mm³"] as const;
+      const expected = [fromBase(toBase(v)), "mm³"] as const;
       const conversionCandidate = [v, "af"] as const;
 
       expect(volume["mm³"](conversionCandidate)).toEqual(expected);
@@ -4718,11 +4718,11 @@ describe("volume", () => {
       const bushelsConversion = linearConversion(35.2391);
 
       const [toBase, fromBase] = [
+        cubicMillimetersConversion[1],
         bushelsConversion[0],
-        cubicMillimetersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "mm³"] as const;
+      const expected = [fromBase(toBase(v)), "mm³"] as const;
       const conversionCandidate = [v, "bsh"] as const;
 
       expect(volume["mm³"](conversionCandidate)).toEqual(expected);
@@ -4734,11 +4734,11 @@ describe("volume", () => {
       const teaspoonsConversion = linearConversion(0.00492892);
 
       const [toBase, fromBase] = [
+        cubicMillimetersConversion[1],
         teaspoonsConversion[0],
-        cubicMillimetersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "mm³"] as const;
+      const expected = [fromBase(toBase(v)), "mm³"] as const;
       const conversionCandidate = [v, "tsp"] as const;
 
       expect(volume["mm³"](conversionCandidate)).toEqual(expected);
@@ -4750,11 +4750,11 @@ describe("volume", () => {
       const tablespoonsConversion = linearConversion(0.0147868);
 
       const [toBase, fromBase] = [
+        cubicMillimetersConversion[1],
         tablespoonsConversion[0],
-        cubicMillimetersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "mm³"] as const;
+      const expected = [fromBase(toBase(v)), "mm³"] as const;
       const conversionCandidate = [v, "tbsp"] as const;
 
       expect(volume["mm³"](conversionCandidate)).toEqual(expected);
@@ -4766,11 +4766,11 @@ describe("volume", () => {
       const fluidOuncesConversion = linearConversion(0.0295735);
 
       const [toBase, fromBase] = [
+        cubicMillimetersConversion[1],
         fluidOuncesConversion[0],
-        cubicMillimetersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "mm³"] as const;
+      const expected = [fromBase(toBase(v)), "mm³"] as const;
       const conversionCandidate = [v, "fl oz"] as const;
 
       expect(volume["mm³"](conversionCandidate)).toEqual(expected);
@@ -4782,11 +4782,11 @@ describe("volume", () => {
       const cupsConversion = linearConversion(0.24);
 
       const [toBase, fromBase] = [
+        cubicMillimetersConversion[1],
         cupsConversion[0],
-        cubicMillimetersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "mm³"] as const;
+      const expected = [fromBase(toBase(v)), "mm³"] as const;
       const conversionCandidate = [v, "cup"] as const;
 
       expect(volume["mm³"](conversionCandidate)).toEqual(expected);
@@ -4798,11 +4798,11 @@ describe("volume", () => {
       const pintsConversion = linearConversion(0.473176);
 
       const [toBase, fromBase] = [
+        cubicMillimetersConversion[1],
         pintsConversion[0],
-        cubicMillimetersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "mm³"] as const;
+      const expected = [fromBase(toBase(v)), "mm³"] as const;
       const conversionCandidate = [v, "pt"] as const;
 
       expect(volume["mm³"](conversionCandidate)).toEqual(expected);
@@ -4814,11 +4814,11 @@ describe("volume", () => {
       const quartsConversion = linearConversion(0.946353);
 
       const [toBase, fromBase] = [
+        cubicMillimetersConversion[1],
         quartsConversion[0],
-        cubicMillimetersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "mm³"] as const;
+      const expected = [fromBase(toBase(v)), "mm³"] as const;
       const conversionCandidate = [v, "qt"] as const;
 
       expect(volume["mm³"](conversionCandidate)).toEqual(expected);
@@ -4830,11 +4830,11 @@ describe("volume", () => {
       const gallonsConversion = linearConversion(3.78541);
 
       const [toBase, fromBase] = [
+        cubicMillimetersConversion[1],
         gallonsConversion[0],
-        cubicMillimetersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "mm³"] as const;
+      const expected = [fromBase(toBase(v)), "mm³"] as const;
       const conversionCandidate = [v, "gal"] as const;
 
       expect(volume["mm³"](conversionCandidate)).toEqual(expected);
@@ -4846,11 +4846,11 @@ describe("volume", () => {
       const imperialTeaspoonsConversion = linearConversion(0.00591939);
 
       const [toBase, fromBase] = [
+        cubicMillimetersConversion[1],
         imperialTeaspoonsConversion[0],
-        cubicMillimetersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "mm³"] as const;
+      const expected = [fromBase(toBase(v)), "mm³"] as const;
       const conversionCandidate = [v, "imperial tsp"] as const;
 
       expect(volume["mm³"](conversionCandidate)).toEqual(expected);
@@ -4862,11 +4862,11 @@ describe("volume", () => {
       const imperialTablespoonsConversion = linearConversion(0.0177582);
 
       const [toBase, fromBase] = [
+        cubicMillimetersConversion[1],
         imperialTablespoonsConversion[0],
-        cubicMillimetersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "mm³"] as const;
+      const expected = [fromBase(toBase(v)), "mm³"] as const;
       const conversionCandidate = [v, "imperial tbsp"] as const;
 
       expect(volume["mm³"](conversionCandidate)).toEqual(expected);
@@ -4878,11 +4878,11 @@ describe("volume", () => {
       const imperialFluidOuncesConversion = linearConversion(0.0284131);
 
       const [toBase, fromBase] = [
+        cubicMillimetersConversion[1],
         imperialFluidOuncesConversion[0],
-        cubicMillimetersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "mm³"] as const;
+      const expected = [fromBase(toBase(v)), "mm³"] as const;
       const conversionCandidate = [v, "imperial fl oz"] as const;
 
       expect(volume["mm³"](conversionCandidate)).toEqual(expected);
@@ -4894,11 +4894,11 @@ describe("volume", () => {
       const imperialPintsConversion = linearConversion(0.568261);
 
       const [toBase, fromBase] = [
+        cubicMillimetersConversion[1],
         imperialPintsConversion[0],
-        cubicMillimetersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "mm³"] as const;
+      const expected = [fromBase(toBase(v)), "mm³"] as const;
       const conversionCandidate = [v, "imperial pt"] as const;
 
       expect(volume["mm³"](conversionCandidate)).toEqual(expected);
@@ -4910,11 +4910,11 @@ describe("volume", () => {
       const imperialQuartsConversion = linearConversion(1.13652);
 
       const [toBase, fromBase] = [
+        cubicMillimetersConversion[1],
         imperialQuartsConversion[0],
-        cubicMillimetersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "mm³"] as const;
+      const expected = [fromBase(toBase(v)), "mm³"] as const;
       const conversionCandidate = [v, "imperial qt"] as const;
 
       expect(volume["mm³"](conversionCandidate)).toEqual(expected);
@@ -4926,11 +4926,11 @@ describe("volume", () => {
       const imperialGallonsConversion = linearConversion(4.54609);
 
       const [toBase, fromBase] = [
+        cubicMillimetersConversion[1],
         imperialGallonsConversion[0],
-        cubicMillimetersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "mm³"] as const;
+      const expected = [fromBase(toBase(v)), "mm³"] as const;
       const conversionCandidate = [v, "imperial gal"] as const;
 
       expect(volume["mm³"](conversionCandidate)).toEqual(expected);
@@ -4942,11 +4942,11 @@ describe("volume", () => {
       const metricCupsConversion = linearConversion(0.25);
 
       const [toBase, fromBase] = [
+        cubicMillimetersConversion[1],
         metricCupsConversion[0],
-        cubicMillimetersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "mm³"] as const;
+      const expected = [fromBase(toBase(v)), "mm³"] as const;
       const conversionCandidate = [v, "metric cup"] as const;
 
       expect(volume["mm³"](conversionCandidate)).toEqual(expected);
@@ -4966,11 +4966,11 @@ describe("volume", () => {
       const megalitersConversion = linearConversion(1000000);
 
       const [toBase, fromBase] = [
+        cubicInchesConversion[1],
         megalitersConversion[0],
-        cubicInchesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "in³"] as const;
+      const expected = [fromBase(toBase(v)), "in³"] as const;
       const conversionCandidate = [v, "ML"] as const;
 
       expect(volume["in³"](conversionCandidate)).toEqual(expected);
@@ -4982,11 +4982,11 @@ describe("volume", () => {
       const kilolitersConversion = linearConversion(1000);
 
       const [toBase, fromBase] = [
+        cubicInchesConversion[1],
         kilolitersConversion[0],
-        cubicInchesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "in³"] as const;
+      const expected = [fromBase(toBase(v)), "in³"] as const;
       const conversionCandidate = [v, "kL"] as const;
 
       expect(volume["in³"](conversionCandidate)).toEqual(expected);
@@ -4998,11 +4998,11 @@ describe("volume", () => {
       const litersConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
+        cubicInchesConversion[1],
         litersConversion[0],
-        cubicInchesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "in³"] as const;
+      const expected = [fromBase(toBase(v)), "in³"] as const;
       const conversionCandidate = [v, "L"] as const;
 
       expect(volume["in³"](conversionCandidate)).toEqual(expected);
@@ -5014,11 +5014,11 @@ describe("volume", () => {
       const decilitersConversion = linearConversion(0.1);
 
       const [toBase, fromBase] = [
+        cubicInchesConversion[1],
         decilitersConversion[0],
-        cubicInchesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "in³"] as const;
+      const expected = [fromBase(toBase(v)), "in³"] as const;
       const conversionCandidate = [v, "dL"] as const;
 
       expect(volume["in³"](conversionCandidate)).toEqual(expected);
@@ -5030,11 +5030,11 @@ describe("volume", () => {
       const centilitersConversion = linearConversion(0.01);
 
       const [toBase, fromBase] = [
+        cubicInchesConversion[1],
         centilitersConversion[0],
-        cubicInchesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "in³"] as const;
+      const expected = [fromBase(toBase(v)), "in³"] as const;
       const conversionCandidate = [v, "cL"] as const;
 
       expect(volume["in³"](conversionCandidate)).toEqual(expected);
@@ -5046,11 +5046,11 @@ describe("volume", () => {
       const millilitersConversion = linearConversion(0.001);
 
       const [toBase, fromBase] = [
+        cubicInchesConversion[1],
         millilitersConversion[0],
-        cubicInchesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "in³"] as const;
+      const expected = [fromBase(toBase(v)), "in³"] as const;
       const conversionCandidate = [v, "mL"] as const;
 
       expect(volume["in³"](conversionCandidate)).toEqual(expected);
@@ -5062,11 +5062,11 @@ describe("volume", () => {
       const cubicKilometersConversion = linearConversion(1000000000000);
 
       const [toBase, fromBase] = [
+        cubicInchesConversion[1],
         cubicKilometersConversion[0],
-        cubicInchesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "in³"] as const;
+      const expected = [fromBase(toBase(v)), "in³"] as const;
       const conversionCandidate = [v, "km³"] as const;
 
       expect(volume["in³"](conversionCandidate)).toEqual(expected);
@@ -5078,11 +5078,11 @@ describe("volume", () => {
       const cubicMetersConversion = linearConversion(1000);
 
       const [toBase, fromBase] = [
+        cubicInchesConversion[1],
         cubicMetersConversion[0],
-        cubicInchesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "in³"] as const;
+      const expected = [fromBase(toBase(v)), "in³"] as const;
       const conversionCandidate = [v, "m³"] as const;
 
       expect(volume["in³"](conversionCandidate)).toEqual(expected);
@@ -5094,11 +5094,11 @@ describe("volume", () => {
       const cubicDecimetersConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
+        cubicInchesConversion[1],
         cubicDecimetersConversion[0],
-        cubicInchesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "in³"] as const;
+      const expected = [fromBase(toBase(v)), "in³"] as const;
       const conversionCandidate = [v, "dm³"] as const;
 
       expect(volume["in³"](conversionCandidate)).toEqual(expected);
@@ -5110,11 +5110,11 @@ describe("volume", () => {
       const cubicMillimetersConversion = linearConversion(0.000001);
 
       const [toBase, fromBase] = [
+        cubicInchesConversion[1],
         cubicMillimetersConversion[0],
-        cubicInchesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "in³"] as const;
+      const expected = [fromBase(toBase(v)), "in³"] as const;
       const conversionCandidate = [v, "mm³"] as const;
 
       expect(volume["in³"](conversionCandidate)).toEqual(expected);
@@ -5128,11 +5128,11 @@ describe("volume", () => {
       const cubicFeetConversion = linearConversion(28.3168);
 
       const [toBase, fromBase] = [
+        cubicInchesConversion[1],
         cubicFeetConversion[0],
-        cubicInchesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "in³"] as const;
+      const expected = [fromBase(toBase(v)), "in³"] as const;
       const conversionCandidate = [v, "ft³"] as const;
 
       expect(volume["in³"](conversionCandidate)).toEqual(expected);
@@ -5144,11 +5144,11 @@ describe("volume", () => {
       const cubicYardsConversion = linearConversion(764.555);
 
       const [toBase, fromBase] = [
+        cubicInchesConversion[1],
         cubicYardsConversion[0],
-        cubicInchesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "in³"] as const;
+      const expected = [fromBase(toBase(v)), "in³"] as const;
       const conversionCandidate = [v, "yd³"] as const;
 
       expect(volume["in³"](conversionCandidate)).toEqual(expected);
@@ -5160,11 +5160,11 @@ describe("volume", () => {
       const cubicMilesConversion = linearConversion(4168000000000);
 
       const [toBase, fromBase] = [
+        cubicInchesConversion[1],
         cubicMilesConversion[0],
-        cubicInchesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "in³"] as const;
+      const expected = [fromBase(toBase(v)), "in³"] as const;
       const conversionCandidate = [v, "mi³"] as const;
 
       expect(volume["in³"](conversionCandidate)).toEqual(expected);
@@ -5176,11 +5176,11 @@ describe("volume", () => {
       const acreFeetConversion = linearConversion(1233000);
 
       const [toBase, fromBase] = [
+        cubicInchesConversion[1],
         acreFeetConversion[0],
-        cubicInchesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "in³"] as const;
+      const expected = [fromBase(toBase(v)), "in³"] as const;
       const conversionCandidate = [v, "af"] as const;
 
       expect(volume["in³"](conversionCandidate)).toEqual(expected);
@@ -5192,11 +5192,11 @@ describe("volume", () => {
       const bushelsConversion = linearConversion(35.2391);
 
       const [toBase, fromBase] = [
+        cubicInchesConversion[1],
         bushelsConversion[0],
-        cubicInchesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "in³"] as const;
+      const expected = [fromBase(toBase(v)), "in³"] as const;
       const conversionCandidate = [v, "bsh"] as const;
 
       expect(volume["in³"](conversionCandidate)).toEqual(expected);
@@ -5208,11 +5208,11 @@ describe("volume", () => {
       const teaspoonsConversion = linearConversion(0.00492892);
 
       const [toBase, fromBase] = [
+        cubicInchesConversion[1],
         teaspoonsConversion[0],
-        cubicInchesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "in³"] as const;
+      const expected = [fromBase(toBase(v)), "in³"] as const;
       const conversionCandidate = [v, "tsp"] as const;
 
       expect(volume["in³"](conversionCandidate)).toEqual(expected);
@@ -5224,11 +5224,11 @@ describe("volume", () => {
       const tablespoonsConversion = linearConversion(0.0147868);
 
       const [toBase, fromBase] = [
+        cubicInchesConversion[1],
         tablespoonsConversion[0],
-        cubicInchesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "in³"] as const;
+      const expected = [fromBase(toBase(v)), "in³"] as const;
       const conversionCandidate = [v, "tbsp"] as const;
 
       expect(volume["in³"](conversionCandidate)).toEqual(expected);
@@ -5240,11 +5240,11 @@ describe("volume", () => {
       const fluidOuncesConversion = linearConversion(0.0295735);
 
       const [toBase, fromBase] = [
+        cubicInchesConversion[1],
         fluidOuncesConversion[0],
-        cubicInchesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "in³"] as const;
+      const expected = [fromBase(toBase(v)), "in³"] as const;
       const conversionCandidate = [v, "fl oz"] as const;
 
       expect(volume["in³"](conversionCandidate)).toEqual(expected);
@@ -5256,11 +5256,11 @@ describe("volume", () => {
       const cupsConversion = linearConversion(0.24);
 
       const [toBase, fromBase] = [
+        cubicInchesConversion[1],
         cupsConversion[0],
-        cubicInchesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "in³"] as const;
+      const expected = [fromBase(toBase(v)), "in³"] as const;
       const conversionCandidate = [v, "cup"] as const;
 
       expect(volume["in³"](conversionCandidate)).toEqual(expected);
@@ -5272,11 +5272,11 @@ describe("volume", () => {
       const pintsConversion = linearConversion(0.473176);
 
       const [toBase, fromBase] = [
+        cubicInchesConversion[1],
         pintsConversion[0],
-        cubicInchesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "in³"] as const;
+      const expected = [fromBase(toBase(v)), "in³"] as const;
       const conversionCandidate = [v, "pt"] as const;
 
       expect(volume["in³"](conversionCandidate)).toEqual(expected);
@@ -5288,11 +5288,11 @@ describe("volume", () => {
       const quartsConversion = linearConversion(0.946353);
 
       const [toBase, fromBase] = [
+        cubicInchesConversion[1],
         quartsConversion[0],
-        cubicInchesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "in³"] as const;
+      const expected = [fromBase(toBase(v)), "in³"] as const;
       const conversionCandidate = [v, "qt"] as const;
 
       expect(volume["in³"](conversionCandidate)).toEqual(expected);
@@ -5304,11 +5304,11 @@ describe("volume", () => {
       const gallonsConversion = linearConversion(3.78541);
 
       const [toBase, fromBase] = [
+        cubicInchesConversion[1],
         gallonsConversion[0],
-        cubicInchesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "in³"] as const;
+      const expected = [fromBase(toBase(v)), "in³"] as const;
       const conversionCandidate = [v, "gal"] as const;
 
       expect(volume["in³"](conversionCandidate)).toEqual(expected);
@@ -5320,11 +5320,11 @@ describe("volume", () => {
       const imperialTeaspoonsConversion = linearConversion(0.00591939);
 
       const [toBase, fromBase] = [
+        cubicInchesConversion[1],
         imperialTeaspoonsConversion[0],
-        cubicInchesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "in³"] as const;
+      const expected = [fromBase(toBase(v)), "in³"] as const;
       const conversionCandidate = [v, "imperial tsp"] as const;
 
       expect(volume["in³"](conversionCandidate)).toEqual(expected);
@@ -5336,11 +5336,11 @@ describe("volume", () => {
       const imperialTablespoonsConversion = linearConversion(0.0177582);
 
       const [toBase, fromBase] = [
+        cubicInchesConversion[1],
         imperialTablespoonsConversion[0],
-        cubicInchesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "in³"] as const;
+      const expected = [fromBase(toBase(v)), "in³"] as const;
       const conversionCandidate = [v, "imperial tbsp"] as const;
 
       expect(volume["in³"](conversionCandidate)).toEqual(expected);
@@ -5352,11 +5352,11 @@ describe("volume", () => {
       const imperialFluidOuncesConversion = linearConversion(0.0284131);
 
       const [toBase, fromBase] = [
+        cubicInchesConversion[1],
         imperialFluidOuncesConversion[0],
-        cubicInchesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "in³"] as const;
+      const expected = [fromBase(toBase(v)), "in³"] as const;
       const conversionCandidate = [v, "imperial fl oz"] as const;
 
       expect(volume["in³"](conversionCandidate)).toEqual(expected);
@@ -5368,11 +5368,11 @@ describe("volume", () => {
       const imperialPintsConversion = linearConversion(0.568261);
 
       const [toBase, fromBase] = [
+        cubicInchesConversion[1],
         imperialPintsConversion[0],
-        cubicInchesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "in³"] as const;
+      const expected = [fromBase(toBase(v)), "in³"] as const;
       const conversionCandidate = [v, "imperial pt"] as const;
 
       expect(volume["in³"](conversionCandidate)).toEqual(expected);
@@ -5384,11 +5384,11 @@ describe("volume", () => {
       const imperialQuartsConversion = linearConversion(1.13652);
 
       const [toBase, fromBase] = [
+        cubicInchesConversion[1],
         imperialQuartsConversion[0],
-        cubicInchesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "in³"] as const;
+      const expected = [fromBase(toBase(v)), "in³"] as const;
       const conversionCandidate = [v, "imperial qt"] as const;
 
       expect(volume["in³"](conversionCandidate)).toEqual(expected);
@@ -5400,11 +5400,11 @@ describe("volume", () => {
       const imperialGallonsConversion = linearConversion(4.54609);
 
       const [toBase, fromBase] = [
+        cubicInchesConversion[1],
         imperialGallonsConversion[0],
-        cubicInchesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "in³"] as const;
+      const expected = [fromBase(toBase(v)), "in³"] as const;
       const conversionCandidate = [v, "imperial gal"] as const;
 
       expect(volume["in³"](conversionCandidate)).toEqual(expected);
@@ -5416,11 +5416,11 @@ describe("volume", () => {
       const metricCupsConversion = linearConversion(0.25);
 
       const [toBase, fromBase] = [
+        cubicInchesConversion[1],
         metricCupsConversion[0],
-        cubicInchesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "in³"] as const;
+      const expected = [fromBase(toBase(v)), "in³"] as const;
       const conversionCandidate = [v, "metric cup"] as const;
 
       expect(volume["in³"](conversionCandidate)).toEqual(expected);
@@ -5440,11 +5440,11 @@ describe("volume", () => {
       const megalitersConversion = linearConversion(1000000);
 
       const [toBase, fromBase] = [
+        cubicFeetConversion[1],
         megalitersConversion[0],
-        cubicFeetConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ft³"] as const;
+      const expected = [fromBase(toBase(v)), "ft³"] as const;
       const conversionCandidate = [v, "ML"] as const;
 
       expect(volume["ft³"](conversionCandidate)).toEqual(expected);
@@ -5456,11 +5456,11 @@ describe("volume", () => {
       const kilolitersConversion = linearConversion(1000);
 
       const [toBase, fromBase] = [
+        cubicFeetConversion[1],
         kilolitersConversion[0],
-        cubicFeetConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ft³"] as const;
+      const expected = [fromBase(toBase(v)), "ft³"] as const;
       const conversionCandidate = [v, "kL"] as const;
 
       expect(volume["ft³"](conversionCandidate)).toEqual(expected);
@@ -5472,11 +5472,11 @@ describe("volume", () => {
       const litersConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
+        cubicFeetConversion[1],
         litersConversion[0],
-        cubicFeetConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ft³"] as const;
+      const expected = [fromBase(toBase(v)), "ft³"] as const;
       const conversionCandidate = [v, "L"] as const;
 
       expect(volume["ft³"](conversionCandidate)).toEqual(expected);
@@ -5488,11 +5488,11 @@ describe("volume", () => {
       const decilitersConversion = linearConversion(0.1);
 
       const [toBase, fromBase] = [
+        cubicFeetConversion[1],
         decilitersConversion[0],
-        cubicFeetConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ft³"] as const;
+      const expected = [fromBase(toBase(v)), "ft³"] as const;
       const conversionCandidate = [v, "dL"] as const;
 
       expect(volume["ft³"](conversionCandidate)).toEqual(expected);
@@ -5504,11 +5504,11 @@ describe("volume", () => {
       const centilitersConversion = linearConversion(0.01);
 
       const [toBase, fromBase] = [
+        cubicFeetConversion[1],
         centilitersConversion[0],
-        cubicFeetConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ft³"] as const;
+      const expected = [fromBase(toBase(v)), "ft³"] as const;
       const conversionCandidate = [v, "cL"] as const;
 
       expect(volume["ft³"](conversionCandidate)).toEqual(expected);
@@ -5520,11 +5520,11 @@ describe("volume", () => {
       const millilitersConversion = linearConversion(0.001);
 
       const [toBase, fromBase] = [
+        cubicFeetConversion[1],
         millilitersConversion[0],
-        cubicFeetConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ft³"] as const;
+      const expected = [fromBase(toBase(v)), "ft³"] as const;
       const conversionCandidate = [v, "mL"] as const;
 
       expect(volume["ft³"](conversionCandidate)).toEqual(expected);
@@ -5536,11 +5536,11 @@ describe("volume", () => {
       const cubicKilometersConversion = linearConversion(1000000000000);
 
       const [toBase, fromBase] = [
+        cubicFeetConversion[1],
         cubicKilometersConversion[0],
-        cubicFeetConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ft³"] as const;
+      const expected = [fromBase(toBase(v)), "ft³"] as const;
       const conversionCandidate = [v, "km³"] as const;
 
       expect(volume["ft³"](conversionCandidate)).toEqual(expected);
@@ -5552,11 +5552,11 @@ describe("volume", () => {
       const cubicMetersConversion = linearConversion(1000);
 
       const [toBase, fromBase] = [
+        cubicFeetConversion[1],
         cubicMetersConversion[0],
-        cubicFeetConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ft³"] as const;
+      const expected = [fromBase(toBase(v)), "ft³"] as const;
       const conversionCandidate = [v, "m³"] as const;
 
       expect(volume["ft³"](conversionCandidate)).toEqual(expected);
@@ -5568,11 +5568,11 @@ describe("volume", () => {
       const cubicDecimetersConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
+        cubicFeetConversion[1],
         cubicDecimetersConversion[0],
-        cubicFeetConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ft³"] as const;
+      const expected = [fromBase(toBase(v)), "ft³"] as const;
       const conversionCandidate = [v, "dm³"] as const;
 
       expect(volume["ft³"](conversionCandidate)).toEqual(expected);
@@ -5584,11 +5584,11 @@ describe("volume", () => {
       const cubicMillimetersConversion = linearConversion(0.000001);
 
       const [toBase, fromBase] = [
+        cubicFeetConversion[1],
         cubicMillimetersConversion[0],
-        cubicFeetConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ft³"] as const;
+      const expected = [fromBase(toBase(v)), "ft³"] as const;
       const conversionCandidate = [v, "mm³"] as const;
 
       expect(volume["ft³"](conversionCandidate)).toEqual(expected);
@@ -5600,11 +5600,11 @@ describe("volume", () => {
       const cubicInchesConversion = linearConversion(0.0163871);
 
       const [toBase, fromBase] = [
+        cubicFeetConversion[1],
         cubicInchesConversion[0],
-        cubicFeetConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ft³"] as const;
+      const expected = [fromBase(toBase(v)), "ft³"] as const;
       const conversionCandidate = [v, "in³"] as const;
 
       expect(volume["ft³"](conversionCandidate)).toEqual(expected);
@@ -5618,11 +5618,11 @@ describe("volume", () => {
       const cubicYardsConversion = linearConversion(764.555);
 
       const [toBase, fromBase] = [
+        cubicFeetConversion[1],
         cubicYardsConversion[0],
-        cubicFeetConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ft³"] as const;
+      const expected = [fromBase(toBase(v)), "ft³"] as const;
       const conversionCandidate = [v, "yd³"] as const;
 
       expect(volume["ft³"](conversionCandidate)).toEqual(expected);
@@ -5634,11 +5634,11 @@ describe("volume", () => {
       const cubicMilesConversion = linearConversion(4168000000000);
 
       const [toBase, fromBase] = [
+        cubicFeetConversion[1],
         cubicMilesConversion[0],
-        cubicFeetConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ft³"] as const;
+      const expected = [fromBase(toBase(v)), "ft³"] as const;
       const conversionCandidate = [v, "mi³"] as const;
 
       expect(volume["ft³"](conversionCandidate)).toEqual(expected);
@@ -5650,11 +5650,11 @@ describe("volume", () => {
       const acreFeetConversion = linearConversion(1233000);
 
       const [toBase, fromBase] = [
+        cubicFeetConversion[1],
         acreFeetConversion[0],
-        cubicFeetConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ft³"] as const;
+      const expected = [fromBase(toBase(v)), "ft³"] as const;
       const conversionCandidate = [v, "af"] as const;
 
       expect(volume["ft³"](conversionCandidate)).toEqual(expected);
@@ -5666,11 +5666,11 @@ describe("volume", () => {
       const bushelsConversion = linearConversion(35.2391);
 
       const [toBase, fromBase] = [
+        cubicFeetConversion[1],
         bushelsConversion[0],
-        cubicFeetConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ft³"] as const;
+      const expected = [fromBase(toBase(v)), "ft³"] as const;
       const conversionCandidate = [v, "bsh"] as const;
 
       expect(volume["ft³"](conversionCandidate)).toEqual(expected);
@@ -5682,11 +5682,11 @@ describe("volume", () => {
       const teaspoonsConversion = linearConversion(0.00492892);
 
       const [toBase, fromBase] = [
+        cubicFeetConversion[1],
         teaspoonsConversion[0],
-        cubicFeetConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ft³"] as const;
+      const expected = [fromBase(toBase(v)), "ft³"] as const;
       const conversionCandidate = [v, "tsp"] as const;
 
       expect(volume["ft³"](conversionCandidate)).toEqual(expected);
@@ -5698,11 +5698,11 @@ describe("volume", () => {
       const tablespoonsConversion = linearConversion(0.0147868);
 
       const [toBase, fromBase] = [
+        cubicFeetConversion[1],
         tablespoonsConversion[0],
-        cubicFeetConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ft³"] as const;
+      const expected = [fromBase(toBase(v)), "ft³"] as const;
       const conversionCandidate = [v, "tbsp"] as const;
 
       expect(volume["ft³"](conversionCandidate)).toEqual(expected);
@@ -5714,11 +5714,11 @@ describe("volume", () => {
       const fluidOuncesConversion = linearConversion(0.0295735);
 
       const [toBase, fromBase] = [
+        cubicFeetConversion[1],
         fluidOuncesConversion[0],
-        cubicFeetConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ft³"] as const;
+      const expected = [fromBase(toBase(v)), "ft³"] as const;
       const conversionCandidate = [v, "fl oz"] as const;
 
       expect(volume["ft³"](conversionCandidate)).toEqual(expected);
@@ -5730,11 +5730,11 @@ describe("volume", () => {
       const cupsConversion = linearConversion(0.24);
 
       const [toBase, fromBase] = [
+        cubicFeetConversion[1],
         cupsConversion[0],
-        cubicFeetConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ft³"] as const;
+      const expected = [fromBase(toBase(v)), "ft³"] as const;
       const conversionCandidate = [v, "cup"] as const;
 
       expect(volume["ft³"](conversionCandidate)).toEqual(expected);
@@ -5746,11 +5746,11 @@ describe("volume", () => {
       const pintsConversion = linearConversion(0.473176);
 
       const [toBase, fromBase] = [
+        cubicFeetConversion[1],
         pintsConversion[0],
-        cubicFeetConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ft³"] as const;
+      const expected = [fromBase(toBase(v)), "ft³"] as const;
       const conversionCandidate = [v, "pt"] as const;
 
       expect(volume["ft³"](conversionCandidate)).toEqual(expected);
@@ -5762,11 +5762,11 @@ describe("volume", () => {
       const quartsConversion = linearConversion(0.946353);
 
       const [toBase, fromBase] = [
+        cubicFeetConversion[1],
         quartsConversion[0],
-        cubicFeetConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ft³"] as const;
+      const expected = [fromBase(toBase(v)), "ft³"] as const;
       const conversionCandidate = [v, "qt"] as const;
 
       expect(volume["ft³"](conversionCandidate)).toEqual(expected);
@@ -5778,11 +5778,11 @@ describe("volume", () => {
       const gallonsConversion = linearConversion(3.78541);
 
       const [toBase, fromBase] = [
+        cubicFeetConversion[1],
         gallonsConversion[0],
-        cubicFeetConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ft³"] as const;
+      const expected = [fromBase(toBase(v)), "ft³"] as const;
       const conversionCandidate = [v, "gal"] as const;
 
       expect(volume["ft³"](conversionCandidate)).toEqual(expected);
@@ -5794,11 +5794,11 @@ describe("volume", () => {
       const imperialTeaspoonsConversion = linearConversion(0.00591939);
 
       const [toBase, fromBase] = [
+        cubicFeetConversion[1],
         imperialTeaspoonsConversion[0],
-        cubicFeetConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ft³"] as const;
+      const expected = [fromBase(toBase(v)), "ft³"] as const;
       const conversionCandidate = [v, "imperial tsp"] as const;
 
       expect(volume["ft³"](conversionCandidate)).toEqual(expected);
@@ -5810,11 +5810,11 @@ describe("volume", () => {
       const imperialTablespoonsConversion = linearConversion(0.0177582);
 
       const [toBase, fromBase] = [
+        cubicFeetConversion[1],
         imperialTablespoonsConversion[0],
-        cubicFeetConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ft³"] as const;
+      const expected = [fromBase(toBase(v)), "ft³"] as const;
       const conversionCandidate = [v, "imperial tbsp"] as const;
 
       expect(volume["ft³"](conversionCandidate)).toEqual(expected);
@@ -5826,11 +5826,11 @@ describe("volume", () => {
       const imperialFluidOuncesConversion = linearConversion(0.0284131);
 
       const [toBase, fromBase] = [
+        cubicFeetConversion[1],
         imperialFluidOuncesConversion[0],
-        cubicFeetConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ft³"] as const;
+      const expected = [fromBase(toBase(v)), "ft³"] as const;
       const conversionCandidate = [v, "imperial fl oz"] as const;
 
       expect(volume["ft³"](conversionCandidate)).toEqual(expected);
@@ -5842,11 +5842,11 @@ describe("volume", () => {
       const imperialPintsConversion = linearConversion(0.568261);
 
       const [toBase, fromBase] = [
+        cubicFeetConversion[1],
         imperialPintsConversion[0],
-        cubicFeetConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ft³"] as const;
+      const expected = [fromBase(toBase(v)), "ft³"] as const;
       const conversionCandidate = [v, "imperial pt"] as const;
 
       expect(volume["ft³"](conversionCandidate)).toEqual(expected);
@@ -5858,11 +5858,11 @@ describe("volume", () => {
       const imperialQuartsConversion = linearConversion(1.13652);
 
       const [toBase, fromBase] = [
+        cubicFeetConversion[1],
         imperialQuartsConversion[0],
-        cubicFeetConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ft³"] as const;
+      const expected = [fromBase(toBase(v)), "ft³"] as const;
       const conversionCandidate = [v, "imperial qt"] as const;
 
       expect(volume["ft³"](conversionCandidate)).toEqual(expected);
@@ -5874,11 +5874,11 @@ describe("volume", () => {
       const imperialGallonsConversion = linearConversion(4.54609);
 
       const [toBase, fromBase] = [
+        cubicFeetConversion[1],
         imperialGallonsConversion[0],
-        cubicFeetConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ft³"] as const;
+      const expected = [fromBase(toBase(v)), "ft³"] as const;
       const conversionCandidate = [v, "imperial gal"] as const;
 
       expect(volume["ft³"](conversionCandidate)).toEqual(expected);
@@ -5890,11 +5890,11 @@ describe("volume", () => {
       const metricCupsConversion = linearConversion(0.25);
 
       const [toBase, fromBase] = [
+        cubicFeetConversion[1],
         metricCupsConversion[0],
-        cubicFeetConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ft³"] as const;
+      const expected = [fromBase(toBase(v)), "ft³"] as const;
       const conversionCandidate = [v, "metric cup"] as const;
 
       expect(volume["ft³"](conversionCandidate)).toEqual(expected);
@@ -5914,11 +5914,11 @@ describe("volume", () => {
       const megalitersConversion = linearConversion(1000000);
 
       const [toBase, fromBase] = [
+        cubicYardsConversion[1],
         megalitersConversion[0],
-        cubicYardsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "yd³"] as const;
+      const expected = [fromBase(toBase(v)), "yd³"] as const;
       const conversionCandidate = [v, "ML"] as const;
 
       expect(volume["yd³"](conversionCandidate)).toEqual(expected);
@@ -5930,11 +5930,11 @@ describe("volume", () => {
       const kilolitersConversion = linearConversion(1000);
 
       const [toBase, fromBase] = [
+        cubicYardsConversion[1],
         kilolitersConversion[0],
-        cubicYardsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "yd³"] as const;
+      const expected = [fromBase(toBase(v)), "yd³"] as const;
       const conversionCandidate = [v, "kL"] as const;
 
       expect(volume["yd³"](conversionCandidate)).toEqual(expected);
@@ -5946,11 +5946,11 @@ describe("volume", () => {
       const litersConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
+        cubicYardsConversion[1],
         litersConversion[0],
-        cubicYardsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "yd³"] as const;
+      const expected = [fromBase(toBase(v)), "yd³"] as const;
       const conversionCandidate = [v, "L"] as const;
 
       expect(volume["yd³"](conversionCandidate)).toEqual(expected);
@@ -5962,11 +5962,11 @@ describe("volume", () => {
       const decilitersConversion = linearConversion(0.1);
 
       const [toBase, fromBase] = [
+        cubicYardsConversion[1],
         decilitersConversion[0],
-        cubicYardsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "yd³"] as const;
+      const expected = [fromBase(toBase(v)), "yd³"] as const;
       const conversionCandidate = [v, "dL"] as const;
 
       expect(volume["yd³"](conversionCandidate)).toEqual(expected);
@@ -5978,11 +5978,11 @@ describe("volume", () => {
       const centilitersConversion = linearConversion(0.01);
 
       const [toBase, fromBase] = [
+        cubicYardsConversion[1],
         centilitersConversion[0],
-        cubicYardsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "yd³"] as const;
+      const expected = [fromBase(toBase(v)), "yd³"] as const;
       const conversionCandidate = [v, "cL"] as const;
 
       expect(volume["yd³"](conversionCandidate)).toEqual(expected);
@@ -5994,11 +5994,11 @@ describe("volume", () => {
       const millilitersConversion = linearConversion(0.001);
 
       const [toBase, fromBase] = [
+        cubicYardsConversion[1],
         millilitersConversion[0],
-        cubicYardsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "yd³"] as const;
+      const expected = [fromBase(toBase(v)), "yd³"] as const;
       const conversionCandidate = [v, "mL"] as const;
 
       expect(volume["yd³"](conversionCandidate)).toEqual(expected);
@@ -6010,11 +6010,11 @@ describe("volume", () => {
       const cubicKilometersConversion = linearConversion(1000000000000);
 
       const [toBase, fromBase] = [
+        cubicYardsConversion[1],
         cubicKilometersConversion[0],
-        cubicYardsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "yd³"] as const;
+      const expected = [fromBase(toBase(v)), "yd³"] as const;
       const conversionCandidate = [v, "km³"] as const;
 
       expect(volume["yd³"](conversionCandidate)).toEqual(expected);
@@ -6026,11 +6026,11 @@ describe("volume", () => {
       const cubicMetersConversion = linearConversion(1000);
 
       const [toBase, fromBase] = [
+        cubicYardsConversion[1],
         cubicMetersConversion[0],
-        cubicYardsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "yd³"] as const;
+      const expected = [fromBase(toBase(v)), "yd³"] as const;
       const conversionCandidate = [v, "m³"] as const;
 
       expect(volume["yd³"](conversionCandidate)).toEqual(expected);
@@ -6042,11 +6042,11 @@ describe("volume", () => {
       const cubicDecimetersConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
+        cubicYardsConversion[1],
         cubicDecimetersConversion[0],
-        cubicYardsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "yd³"] as const;
+      const expected = [fromBase(toBase(v)), "yd³"] as const;
       const conversionCandidate = [v, "dm³"] as const;
 
       expect(volume["yd³"](conversionCandidate)).toEqual(expected);
@@ -6058,11 +6058,11 @@ describe("volume", () => {
       const cubicMillimetersConversion = linearConversion(0.000001);
 
       const [toBase, fromBase] = [
+        cubicYardsConversion[1],
         cubicMillimetersConversion[0],
-        cubicYardsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "yd³"] as const;
+      const expected = [fromBase(toBase(v)), "yd³"] as const;
       const conversionCandidate = [v, "mm³"] as const;
 
       expect(volume["yd³"](conversionCandidate)).toEqual(expected);
@@ -6074,11 +6074,11 @@ describe("volume", () => {
       const cubicInchesConversion = linearConversion(0.0163871);
 
       const [toBase, fromBase] = [
+        cubicYardsConversion[1],
         cubicInchesConversion[0],
-        cubicYardsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "yd³"] as const;
+      const expected = [fromBase(toBase(v)), "yd³"] as const;
       const conversionCandidate = [v, "in³"] as const;
 
       expect(volume["yd³"](conversionCandidate)).toEqual(expected);
@@ -6090,11 +6090,11 @@ describe("volume", () => {
       const cubicFeetConversion = linearConversion(28.3168);
 
       const [toBase, fromBase] = [
+        cubicYardsConversion[1],
         cubicFeetConversion[0],
-        cubicYardsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "yd³"] as const;
+      const expected = [fromBase(toBase(v)), "yd³"] as const;
       const conversionCandidate = [v, "ft³"] as const;
 
       expect(volume["yd³"](conversionCandidate)).toEqual(expected);
@@ -6108,11 +6108,11 @@ describe("volume", () => {
       const cubicMilesConversion = linearConversion(4168000000000);
 
       const [toBase, fromBase] = [
+        cubicYardsConversion[1],
         cubicMilesConversion[0],
-        cubicYardsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "yd³"] as const;
+      const expected = [fromBase(toBase(v)), "yd³"] as const;
       const conversionCandidate = [v, "mi³"] as const;
 
       expect(volume["yd³"](conversionCandidate)).toEqual(expected);
@@ -6124,11 +6124,11 @@ describe("volume", () => {
       const acreFeetConversion = linearConversion(1233000);
 
       const [toBase, fromBase] = [
+        cubicYardsConversion[1],
         acreFeetConversion[0],
-        cubicYardsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "yd³"] as const;
+      const expected = [fromBase(toBase(v)), "yd³"] as const;
       const conversionCandidate = [v, "af"] as const;
 
       expect(volume["yd³"](conversionCandidate)).toEqual(expected);
@@ -6140,11 +6140,11 @@ describe("volume", () => {
       const bushelsConversion = linearConversion(35.2391);
 
       const [toBase, fromBase] = [
+        cubicYardsConversion[1],
         bushelsConversion[0],
-        cubicYardsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "yd³"] as const;
+      const expected = [fromBase(toBase(v)), "yd³"] as const;
       const conversionCandidate = [v, "bsh"] as const;
 
       expect(volume["yd³"](conversionCandidate)).toEqual(expected);
@@ -6156,11 +6156,11 @@ describe("volume", () => {
       const teaspoonsConversion = linearConversion(0.00492892);
 
       const [toBase, fromBase] = [
+        cubicYardsConversion[1],
         teaspoonsConversion[0],
-        cubicYardsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "yd³"] as const;
+      const expected = [fromBase(toBase(v)), "yd³"] as const;
       const conversionCandidate = [v, "tsp"] as const;
 
       expect(volume["yd³"](conversionCandidate)).toEqual(expected);
@@ -6172,11 +6172,11 @@ describe("volume", () => {
       const tablespoonsConversion = linearConversion(0.0147868);
 
       const [toBase, fromBase] = [
+        cubicYardsConversion[1],
         tablespoonsConversion[0],
-        cubicYardsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "yd³"] as const;
+      const expected = [fromBase(toBase(v)), "yd³"] as const;
       const conversionCandidate = [v, "tbsp"] as const;
 
       expect(volume["yd³"](conversionCandidate)).toEqual(expected);
@@ -6188,11 +6188,11 @@ describe("volume", () => {
       const fluidOuncesConversion = linearConversion(0.0295735);
 
       const [toBase, fromBase] = [
+        cubicYardsConversion[1],
         fluidOuncesConversion[0],
-        cubicYardsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "yd³"] as const;
+      const expected = [fromBase(toBase(v)), "yd³"] as const;
       const conversionCandidate = [v, "fl oz"] as const;
 
       expect(volume["yd³"](conversionCandidate)).toEqual(expected);
@@ -6204,11 +6204,11 @@ describe("volume", () => {
       const cupsConversion = linearConversion(0.24);
 
       const [toBase, fromBase] = [
+        cubicYardsConversion[1],
         cupsConversion[0],
-        cubicYardsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "yd³"] as const;
+      const expected = [fromBase(toBase(v)), "yd³"] as const;
       const conversionCandidate = [v, "cup"] as const;
 
       expect(volume["yd³"](conversionCandidate)).toEqual(expected);
@@ -6220,11 +6220,11 @@ describe("volume", () => {
       const pintsConversion = linearConversion(0.473176);
 
       const [toBase, fromBase] = [
+        cubicYardsConversion[1],
         pintsConversion[0],
-        cubicYardsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "yd³"] as const;
+      const expected = [fromBase(toBase(v)), "yd³"] as const;
       const conversionCandidate = [v, "pt"] as const;
 
       expect(volume["yd³"](conversionCandidate)).toEqual(expected);
@@ -6236,11 +6236,11 @@ describe("volume", () => {
       const quartsConversion = linearConversion(0.946353);
 
       const [toBase, fromBase] = [
+        cubicYardsConversion[1],
         quartsConversion[0],
-        cubicYardsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "yd³"] as const;
+      const expected = [fromBase(toBase(v)), "yd³"] as const;
       const conversionCandidate = [v, "qt"] as const;
 
       expect(volume["yd³"](conversionCandidate)).toEqual(expected);
@@ -6252,11 +6252,11 @@ describe("volume", () => {
       const gallonsConversion = linearConversion(3.78541);
 
       const [toBase, fromBase] = [
+        cubicYardsConversion[1],
         gallonsConversion[0],
-        cubicYardsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "yd³"] as const;
+      const expected = [fromBase(toBase(v)), "yd³"] as const;
       const conversionCandidate = [v, "gal"] as const;
 
       expect(volume["yd³"](conversionCandidate)).toEqual(expected);
@@ -6268,11 +6268,11 @@ describe("volume", () => {
       const imperialTeaspoonsConversion = linearConversion(0.00591939);
 
       const [toBase, fromBase] = [
+        cubicYardsConversion[1],
         imperialTeaspoonsConversion[0],
-        cubicYardsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "yd³"] as const;
+      const expected = [fromBase(toBase(v)), "yd³"] as const;
       const conversionCandidate = [v, "imperial tsp"] as const;
 
       expect(volume["yd³"](conversionCandidate)).toEqual(expected);
@@ -6284,11 +6284,11 @@ describe("volume", () => {
       const imperialTablespoonsConversion = linearConversion(0.0177582);
 
       const [toBase, fromBase] = [
+        cubicYardsConversion[1],
         imperialTablespoonsConversion[0],
-        cubicYardsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "yd³"] as const;
+      const expected = [fromBase(toBase(v)), "yd³"] as const;
       const conversionCandidate = [v, "imperial tbsp"] as const;
 
       expect(volume["yd³"](conversionCandidate)).toEqual(expected);
@@ -6300,11 +6300,11 @@ describe("volume", () => {
       const imperialFluidOuncesConversion = linearConversion(0.0284131);
 
       const [toBase, fromBase] = [
+        cubicYardsConversion[1],
         imperialFluidOuncesConversion[0],
-        cubicYardsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "yd³"] as const;
+      const expected = [fromBase(toBase(v)), "yd³"] as const;
       const conversionCandidate = [v, "imperial fl oz"] as const;
 
       expect(volume["yd³"](conversionCandidate)).toEqual(expected);
@@ -6316,11 +6316,11 @@ describe("volume", () => {
       const imperialPintsConversion = linearConversion(0.568261);
 
       const [toBase, fromBase] = [
+        cubicYardsConversion[1],
         imperialPintsConversion[0],
-        cubicYardsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "yd³"] as const;
+      const expected = [fromBase(toBase(v)), "yd³"] as const;
       const conversionCandidate = [v, "imperial pt"] as const;
 
       expect(volume["yd³"](conversionCandidate)).toEqual(expected);
@@ -6332,11 +6332,11 @@ describe("volume", () => {
       const imperialQuartsConversion = linearConversion(1.13652);
 
       const [toBase, fromBase] = [
+        cubicYardsConversion[1],
         imperialQuartsConversion[0],
-        cubicYardsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "yd³"] as const;
+      const expected = [fromBase(toBase(v)), "yd³"] as const;
       const conversionCandidate = [v, "imperial qt"] as const;
 
       expect(volume["yd³"](conversionCandidate)).toEqual(expected);
@@ -6348,11 +6348,11 @@ describe("volume", () => {
       const imperialGallonsConversion = linearConversion(4.54609);
 
       const [toBase, fromBase] = [
+        cubicYardsConversion[1],
         imperialGallonsConversion[0],
-        cubicYardsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "yd³"] as const;
+      const expected = [fromBase(toBase(v)), "yd³"] as const;
       const conversionCandidate = [v, "imperial gal"] as const;
 
       expect(volume["yd³"](conversionCandidate)).toEqual(expected);
@@ -6364,11 +6364,11 @@ describe("volume", () => {
       const metricCupsConversion = linearConversion(0.25);
 
       const [toBase, fromBase] = [
+        cubicYardsConversion[1],
         metricCupsConversion[0],
-        cubicYardsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "yd³"] as const;
+      const expected = [fromBase(toBase(v)), "yd³"] as const;
       const conversionCandidate = [v, "metric cup"] as const;
 
       expect(volume["yd³"](conversionCandidate)).toEqual(expected);
@@ -6388,11 +6388,11 @@ describe("volume", () => {
       const megalitersConversion = linearConversion(1000000);
 
       const [toBase, fromBase] = [
+        cubicMilesConversion[1],
         megalitersConversion[0],
-        cubicMilesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "mi³"] as const;
+      const expected = [fromBase(toBase(v)), "mi³"] as const;
       const conversionCandidate = [v, "ML"] as const;
 
       expect(volume["mi³"](conversionCandidate)).toEqual(expected);
@@ -6404,11 +6404,11 @@ describe("volume", () => {
       const kilolitersConversion = linearConversion(1000);
 
       const [toBase, fromBase] = [
+        cubicMilesConversion[1],
         kilolitersConversion[0],
-        cubicMilesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "mi³"] as const;
+      const expected = [fromBase(toBase(v)), "mi³"] as const;
       const conversionCandidate = [v, "kL"] as const;
 
       expect(volume["mi³"](conversionCandidate)).toEqual(expected);
@@ -6420,11 +6420,11 @@ describe("volume", () => {
       const litersConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
+        cubicMilesConversion[1],
         litersConversion[0],
-        cubicMilesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "mi³"] as const;
+      const expected = [fromBase(toBase(v)), "mi³"] as const;
       const conversionCandidate = [v, "L"] as const;
 
       expect(volume["mi³"](conversionCandidate)).toEqual(expected);
@@ -6436,11 +6436,11 @@ describe("volume", () => {
       const decilitersConversion = linearConversion(0.1);
 
       const [toBase, fromBase] = [
+        cubicMilesConversion[1],
         decilitersConversion[0],
-        cubicMilesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "mi³"] as const;
+      const expected = [fromBase(toBase(v)), "mi³"] as const;
       const conversionCandidate = [v, "dL"] as const;
 
       expect(volume["mi³"](conversionCandidate)).toEqual(expected);
@@ -6452,11 +6452,11 @@ describe("volume", () => {
       const centilitersConversion = linearConversion(0.01);
 
       const [toBase, fromBase] = [
+        cubicMilesConversion[1],
         centilitersConversion[0],
-        cubicMilesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "mi³"] as const;
+      const expected = [fromBase(toBase(v)), "mi³"] as const;
       const conversionCandidate = [v, "cL"] as const;
 
       expect(volume["mi³"](conversionCandidate)).toEqual(expected);
@@ -6468,11 +6468,11 @@ describe("volume", () => {
       const millilitersConversion = linearConversion(0.001);
 
       const [toBase, fromBase] = [
+        cubicMilesConversion[1],
         millilitersConversion[0],
-        cubicMilesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "mi³"] as const;
+      const expected = [fromBase(toBase(v)), "mi³"] as const;
       const conversionCandidate = [v, "mL"] as const;
 
       expect(volume["mi³"](conversionCandidate)).toEqual(expected);
@@ -6484,11 +6484,11 @@ describe("volume", () => {
       const cubicKilometersConversion = linearConversion(1000000000000);
 
       const [toBase, fromBase] = [
+        cubicMilesConversion[1],
         cubicKilometersConversion[0],
-        cubicMilesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "mi³"] as const;
+      const expected = [fromBase(toBase(v)), "mi³"] as const;
       const conversionCandidate = [v, "km³"] as const;
 
       expect(volume["mi³"](conversionCandidate)).toEqual(expected);
@@ -6500,11 +6500,11 @@ describe("volume", () => {
       const cubicMetersConversion = linearConversion(1000);
 
       const [toBase, fromBase] = [
+        cubicMilesConversion[1],
         cubicMetersConversion[0],
-        cubicMilesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "mi³"] as const;
+      const expected = [fromBase(toBase(v)), "mi³"] as const;
       const conversionCandidate = [v, "m³"] as const;
 
       expect(volume["mi³"](conversionCandidate)).toEqual(expected);
@@ -6516,11 +6516,11 @@ describe("volume", () => {
       const cubicDecimetersConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
+        cubicMilesConversion[1],
         cubicDecimetersConversion[0],
-        cubicMilesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "mi³"] as const;
+      const expected = [fromBase(toBase(v)), "mi³"] as const;
       const conversionCandidate = [v, "dm³"] as const;
 
       expect(volume["mi³"](conversionCandidate)).toEqual(expected);
@@ -6532,11 +6532,11 @@ describe("volume", () => {
       const cubicMillimetersConversion = linearConversion(0.000001);
 
       const [toBase, fromBase] = [
+        cubicMilesConversion[1],
         cubicMillimetersConversion[0],
-        cubicMilesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "mi³"] as const;
+      const expected = [fromBase(toBase(v)), "mi³"] as const;
       const conversionCandidate = [v, "mm³"] as const;
 
       expect(volume["mi³"](conversionCandidate)).toEqual(expected);
@@ -6548,11 +6548,11 @@ describe("volume", () => {
       const cubicInchesConversion = linearConversion(0.0163871);
 
       const [toBase, fromBase] = [
+        cubicMilesConversion[1],
         cubicInchesConversion[0],
-        cubicMilesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "mi³"] as const;
+      const expected = [fromBase(toBase(v)), "mi³"] as const;
       const conversionCandidate = [v, "in³"] as const;
 
       expect(volume["mi³"](conversionCandidate)).toEqual(expected);
@@ -6564,11 +6564,11 @@ describe("volume", () => {
       const cubicFeetConversion = linearConversion(28.3168);
 
       const [toBase, fromBase] = [
+        cubicMilesConversion[1],
         cubicFeetConversion[0],
-        cubicMilesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "mi³"] as const;
+      const expected = [fromBase(toBase(v)), "mi³"] as const;
       const conversionCandidate = [v, "ft³"] as const;
 
       expect(volume["mi³"](conversionCandidate)).toEqual(expected);
@@ -6580,11 +6580,11 @@ describe("volume", () => {
       const cubicYardsConversion = linearConversion(764.555);
 
       const [toBase, fromBase] = [
+        cubicMilesConversion[1],
         cubicYardsConversion[0],
-        cubicMilesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "mi³"] as const;
+      const expected = [fromBase(toBase(v)), "mi³"] as const;
       const conversionCandidate = [v, "yd³"] as const;
 
       expect(volume["mi³"](conversionCandidate)).toEqual(expected);
@@ -6598,11 +6598,11 @@ describe("volume", () => {
       const acreFeetConversion = linearConversion(1233000);
 
       const [toBase, fromBase] = [
+        cubicMilesConversion[1],
         acreFeetConversion[0],
-        cubicMilesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "mi³"] as const;
+      const expected = [fromBase(toBase(v)), "mi³"] as const;
       const conversionCandidate = [v, "af"] as const;
 
       expect(volume["mi³"](conversionCandidate)).toEqual(expected);
@@ -6614,11 +6614,11 @@ describe("volume", () => {
       const bushelsConversion = linearConversion(35.2391);
 
       const [toBase, fromBase] = [
+        cubicMilesConversion[1],
         bushelsConversion[0],
-        cubicMilesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "mi³"] as const;
+      const expected = [fromBase(toBase(v)), "mi³"] as const;
       const conversionCandidate = [v, "bsh"] as const;
 
       expect(volume["mi³"](conversionCandidate)).toEqual(expected);
@@ -6630,11 +6630,11 @@ describe("volume", () => {
       const teaspoonsConversion = linearConversion(0.00492892);
 
       const [toBase, fromBase] = [
+        cubicMilesConversion[1],
         teaspoonsConversion[0],
-        cubicMilesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "mi³"] as const;
+      const expected = [fromBase(toBase(v)), "mi³"] as const;
       const conversionCandidate = [v, "tsp"] as const;
 
       expect(volume["mi³"](conversionCandidate)).toEqual(expected);
@@ -6646,11 +6646,11 @@ describe("volume", () => {
       const tablespoonsConversion = linearConversion(0.0147868);
 
       const [toBase, fromBase] = [
+        cubicMilesConversion[1],
         tablespoonsConversion[0],
-        cubicMilesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "mi³"] as const;
+      const expected = [fromBase(toBase(v)), "mi³"] as const;
       const conversionCandidate = [v, "tbsp"] as const;
 
       expect(volume["mi³"](conversionCandidate)).toEqual(expected);
@@ -6662,11 +6662,11 @@ describe("volume", () => {
       const fluidOuncesConversion = linearConversion(0.0295735);
 
       const [toBase, fromBase] = [
+        cubicMilesConversion[1],
         fluidOuncesConversion[0],
-        cubicMilesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "mi³"] as const;
+      const expected = [fromBase(toBase(v)), "mi³"] as const;
       const conversionCandidate = [v, "fl oz"] as const;
 
       expect(volume["mi³"](conversionCandidate)).toEqual(expected);
@@ -6678,11 +6678,11 @@ describe("volume", () => {
       const cupsConversion = linearConversion(0.24);
 
       const [toBase, fromBase] = [
+        cubicMilesConversion[1],
         cupsConversion[0],
-        cubicMilesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "mi³"] as const;
+      const expected = [fromBase(toBase(v)), "mi³"] as const;
       const conversionCandidate = [v, "cup"] as const;
 
       expect(volume["mi³"](conversionCandidate)).toEqual(expected);
@@ -6694,11 +6694,11 @@ describe("volume", () => {
       const pintsConversion = linearConversion(0.473176);
 
       const [toBase, fromBase] = [
+        cubicMilesConversion[1],
         pintsConversion[0],
-        cubicMilesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "mi³"] as const;
+      const expected = [fromBase(toBase(v)), "mi³"] as const;
       const conversionCandidate = [v, "pt"] as const;
 
       expect(volume["mi³"](conversionCandidate)).toEqual(expected);
@@ -6710,11 +6710,11 @@ describe("volume", () => {
       const quartsConversion = linearConversion(0.946353);
 
       const [toBase, fromBase] = [
+        cubicMilesConversion[1],
         quartsConversion[0],
-        cubicMilesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "mi³"] as const;
+      const expected = [fromBase(toBase(v)), "mi³"] as const;
       const conversionCandidate = [v, "qt"] as const;
 
       expect(volume["mi³"](conversionCandidate)).toEqual(expected);
@@ -6726,11 +6726,11 @@ describe("volume", () => {
       const gallonsConversion = linearConversion(3.78541);
 
       const [toBase, fromBase] = [
+        cubicMilesConversion[1],
         gallonsConversion[0],
-        cubicMilesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "mi³"] as const;
+      const expected = [fromBase(toBase(v)), "mi³"] as const;
       const conversionCandidate = [v, "gal"] as const;
 
       expect(volume["mi³"](conversionCandidate)).toEqual(expected);
@@ -6742,11 +6742,11 @@ describe("volume", () => {
       const imperialTeaspoonsConversion = linearConversion(0.00591939);
 
       const [toBase, fromBase] = [
+        cubicMilesConversion[1],
         imperialTeaspoonsConversion[0],
-        cubicMilesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "mi³"] as const;
+      const expected = [fromBase(toBase(v)), "mi³"] as const;
       const conversionCandidate = [v, "imperial tsp"] as const;
 
       expect(volume["mi³"](conversionCandidate)).toEqual(expected);
@@ -6758,11 +6758,11 @@ describe("volume", () => {
       const imperialTablespoonsConversion = linearConversion(0.0177582);
 
       const [toBase, fromBase] = [
+        cubicMilesConversion[1],
         imperialTablespoonsConversion[0],
-        cubicMilesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "mi³"] as const;
+      const expected = [fromBase(toBase(v)), "mi³"] as const;
       const conversionCandidate = [v, "imperial tbsp"] as const;
 
       expect(volume["mi³"](conversionCandidate)).toEqual(expected);
@@ -6774,11 +6774,11 @@ describe("volume", () => {
       const imperialFluidOuncesConversion = linearConversion(0.0284131);
 
       const [toBase, fromBase] = [
+        cubicMilesConversion[1],
         imperialFluidOuncesConversion[0],
-        cubicMilesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "mi³"] as const;
+      const expected = [fromBase(toBase(v)), "mi³"] as const;
       const conversionCandidate = [v, "imperial fl oz"] as const;
 
       expect(volume["mi³"](conversionCandidate)).toEqual(expected);
@@ -6790,11 +6790,11 @@ describe("volume", () => {
       const imperialPintsConversion = linearConversion(0.568261);
 
       const [toBase, fromBase] = [
+        cubicMilesConversion[1],
         imperialPintsConversion[0],
-        cubicMilesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "mi³"] as const;
+      const expected = [fromBase(toBase(v)), "mi³"] as const;
       const conversionCandidate = [v, "imperial pt"] as const;
 
       expect(volume["mi³"](conversionCandidate)).toEqual(expected);
@@ -6806,11 +6806,11 @@ describe("volume", () => {
       const imperialQuartsConversion = linearConversion(1.13652);
 
       const [toBase, fromBase] = [
+        cubicMilesConversion[1],
         imperialQuartsConversion[0],
-        cubicMilesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "mi³"] as const;
+      const expected = [fromBase(toBase(v)), "mi³"] as const;
       const conversionCandidate = [v, "imperial qt"] as const;
 
       expect(volume["mi³"](conversionCandidate)).toEqual(expected);
@@ -6822,11 +6822,11 @@ describe("volume", () => {
       const imperialGallonsConversion = linearConversion(4.54609);
 
       const [toBase, fromBase] = [
+        cubicMilesConversion[1],
         imperialGallonsConversion[0],
-        cubicMilesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "mi³"] as const;
+      const expected = [fromBase(toBase(v)), "mi³"] as const;
       const conversionCandidate = [v, "imperial gal"] as const;
 
       expect(volume["mi³"](conversionCandidate)).toEqual(expected);
@@ -6838,11 +6838,11 @@ describe("volume", () => {
       const metricCupsConversion = linearConversion(0.25);
 
       const [toBase, fromBase] = [
+        cubicMilesConversion[1],
         metricCupsConversion[0],
-        cubicMilesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "mi³"] as const;
+      const expected = [fromBase(toBase(v)), "mi³"] as const;
       const conversionCandidate = [v, "metric cup"] as const;
 
       expect(volume["mi³"](conversionCandidate)).toEqual(expected);
@@ -6862,11 +6862,11 @@ describe("volume", () => {
       const megalitersConversion = linearConversion(1000000);
 
       const [toBase, fromBase] = [
+        acreFeetConversion[1],
         megalitersConversion[0],
-        acreFeetConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "af"] as const;
+      const expected = [fromBase(toBase(v)), "af"] as const;
       const conversionCandidate = [v, "ML"] as const;
 
       expect(volume["af"](conversionCandidate)).toEqual(expected);
@@ -6878,11 +6878,11 @@ describe("volume", () => {
       const kilolitersConversion = linearConversion(1000);
 
       const [toBase, fromBase] = [
+        acreFeetConversion[1],
         kilolitersConversion[0],
-        acreFeetConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "af"] as const;
+      const expected = [fromBase(toBase(v)), "af"] as const;
       const conversionCandidate = [v, "kL"] as const;
 
       expect(volume["af"](conversionCandidate)).toEqual(expected);
@@ -6894,11 +6894,11 @@ describe("volume", () => {
       const litersConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
+        acreFeetConversion[1],
         litersConversion[0],
-        acreFeetConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "af"] as const;
+      const expected = [fromBase(toBase(v)), "af"] as const;
       const conversionCandidate = [v, "L"] as const;
 
       expect(volume["af"](conversionCandidate)).toEqual(expected);
@@ -6910,11 +6910,11 @@ describe("volume", () => {
       const decilitersConversion = linearConversion(0.1);
 
       const [toBase, fromBase] = [
+        acreFeetConversion[1],
         decilitersConversion[0],
-        acreFeetConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "af"] as const;
+      const expected = [fromBase(toBase(v)), "af"] as const;
       const conversionCandidate = [v, "dL"] as const;
 
       expect(volume["af"](conversionCandidate)).toEqual(expected);
@@ -6926,11 +6926,11 @@ describe("volume", () => {
       const centilitersConversion = linearConversion(0.01);
 
       const [toBase, fromBase] = [
+        acreFeetConversion[1],
         centilitersConversion[0],
-        acreFeetConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "af"] as const;
+      const expected = [fromBase(toBase(v)), "af"] as const;
       const conversionCandidate = [v, "cL"] as const;
 
       expect(volume["af"](conversionCandidate)).toEqual(expected);
@@ -6942,11 +6942,11 @@ describe("volume", () => {
       const millilitersConversion = linearConversion(0.001);
 
       const [toBase, fromBase] = [
+        acreFeetConversion[1],
         millilitersConversion[0],
-        acreFeetConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "af"] as const;
+      const expected = [fromBase(toBase(v)), "af"] as const;
       const conversionCandidate = [v, "mL"] as const;
 
       expect(volume["af"](conversionCandidate)).toEqual(expected);
@@ -6958,11 +6958,11 @@ describe("volume", () => {
       const cubicKilometersConversion = linearConversion(1000000000000);
 
       const [toBase, fromBase] = [
+        acreFeetConversion[1],
         cubicKilometersConversion[0],
-        acreFeetConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "af"] as const;
+      const expected = [fromBase(toBase(v)), "af"] as const;
       const conversionCandidate = [v, "km³"] as const;
 
       expect(volume["af"](conversionCandidate)).toEqual(expected);
@@ -6974,11 +6974,11 @@ describe("volume", () => {
       const cubicMetersConversion = linearConversion(1000);
 
       const [toBase, fromBase] = [
+        acreFeetConversion[1],
         cubicMetersConversion[0],
-        acreFeetConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "af"] as const;
+      const expected = [fromBase(toBase(v)), "af"] as const;
       const conversionCandidate = [v, "m³"] as const;
 
       expect(volume["af"](conversionCandidate)).toEqual(expected);
@@ -6990,11 +6990,11 @@ describe("volume", () => {
       const cubicDecimetersConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
+        acreFeetConversion[1],
         cubicDecimetersConversion[0],
-        acreFeetConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "af"] as const;
+      const expected = [fromBase(toBase(v)), "af"] as const;
       const conversionCandidate = [v, "dm³"] as const;
 
       expect(volume["af"](conversionCandidate)).toEqual(expected);
@@ -7006,11 +7006,11 @@ describe("volume", () => {
       const cubicMillimetersConversion = linearConversion(0.000001);
 
       const [toBase, fromBase] = [
+        acreFeetConversion[1],
         cubicMillimetersConversion[0],
-        acreFeetConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "af"] as const;
+      const expected = [fromBase(toBase(v)), "af"] as const;
       const conversionCandidate = [v, "mm³"] as const;
 
       expect(volume["af"](conversionCandidate)).toEqual(expected);
@@ -7022,11 +7022,11 @@ describe("volume", () => {
       const cubicInchesConversion = linearConversion(0.0163871);
 
       const [toBase, fromBase] = [
+        acreFeetConversion[1],
         cubicInchesConversion[0],
-        acreFeetConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "af"] as const;
+      const expected = [fromBase(toBase(v)), "af"] as const;
       const conversionCandidate = [v, "in³"] as const;
 
       expect(volume["af"](conversionCandidate)).toEqual(expected);
@@ -7038,11 +7038,11 @@ describe("volume", () => {
       const cubicFeetConversion = linearConversion(28.3168);
 
       const [toBase, fromBase] = [
+        acreFeetConversion[1],
         cubicFeetConversion[0],
-        acreFeetConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "af"] as const;
+      const expected = [fromBase(toBase(v)), "af"] as const;
       const conversionCandidate = [v, "ft³"] as const;
 
       expect(volume["af"](conversionCandidate)).toEqual(expected);
@@ -7054,11 +7054,11 @@ describe("volume", () => {
       const cubicYardsConversion = linearConversion(764.555);
 
       const [toBase, fromBase] = [
+        acreFeetConversion[1],
         cubicYardsConversion[0],
-        acreFeetConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "af"] as const;
+      const expected = [fromBase(toBase(v)), "af"] as const;
       const conversionCandidate = [v, "yd³"] as const;
 
       expect(volume["af"](conversionCandidate)).toEqual(expected);
@@ -7070,11 +7070,11 @@ describe("volume", () => {
       const cubicMilesConversion = linearConversion(4168000000000);
 
       const [toBase, fromBase] = [
+        acreFeetConversion[1],
         cubicMilesConversion[0],
-        acreFeetConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "af"] as const;
+      const expected = [fromBase(toBase(v)), "af"] as const;
       const conversionCandidate = [v, "mi³"] as const;
 
       expect(volume["af"](conversionCandidate)).toEqual(expected);
@@ -7088,11 +7088,11 @@ describe("volume", () => {
       const bushelsConversion = linearConversion(35.2391);
 
       const [toBase, fromBase] = [
+        acreFeetConversion[1],
         bushelsConversion[0],
-        acreFeetConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "af"] as const;
+      const expected = [fromBase(toBase(v)), "af"] as const;
       const conversionCandidate = [v, "bsh"] as const;
 
       expect(volume["af"](conversionCandidate)).toEqual(expected);
@@ -7104,11 +7104,11 @@ describe("volume", () => {
       const teaspoonsConversion = linearConversion(0.00492892);
 
       const [toBase, fromBase] = [
+        acreFeetConversion[1],
         teaspoonsConversion[0],
-        acreFeetConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "af"] as const;
+      const expected = [fromBase(toBase(v)), "af"] as const;
       const conversionCandidate = [v, "tsp"] as const;
 
       expect(volume["af"](conversionCandidate)).toEqual(expected);
@@ -7120,11 +7120,11 @@ describe("volume", () => {
       const tablespoonsConversion = linearConversion(0.0147868);
 
       const [toBase, fromBase] = [
+        acreFeetConversion[1],
         tablespoonsConversion[0],
-        acreFeetConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "af"] as const;
+      const expected = [fromBase(toBase(v)), "af"] as const;
       const conversionCandidate = [v, "tbsp"] as const;
 
       expect(volume["af"](conversionCandidate)).toEqual(expected);
@@ -7136,11 +7136,11 @@ describe("volume", () => {
       const fluidOuncesConversion = linearConversion(0.0295735);
 
       const [toBase, fromBase] = [
+        acreFeetConversion[1],
         fluidOuncesConversion[0],
-        acreFeetConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "af"] as const;
+      const expected = [fromBase(toBase(v)), "af"] as const;
       const conversionCandidate = [v, "fl oz"] as const;
 
       expect(volume["af"](conversionCandidate)).toEqual(expected);
@@ -7152,11 +7152,11 @@ describe("volume", () => {
       const cupsConversion = linearConversion(0.24);
 
       const [toBase, fromBase] = [
+        acreFeetConversion[1],
         cupsConversion[0],
-        acreFeetConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "af"] as const;
+      const expected = [fromBase(toBase(v)), "af"] as const;
       const conversionCandidate = [v, "cup"] as const;
 
       expect(volume["af"](conversionCandidate)).toEqual(expected);
@@ -7168,11 +7168,11 @@ describe("volume", () => {
       const pintsConversion = linearConversion(0.473176);
 
       const [toBase, fromBase] = [
+        acreFeetConversion[1],
         pintsConversion[0],
-        acreFeetConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "af"] as const;
+      const expected = [fromBase(toBase(v)), "af"] as const;
       const conversionCandidate = [v, "pt"] as const;
 
       expect(volume["af"](conversionCandidate)).toEqual(expected);
@@ -7184,11 +7184,11 @@ describe("volume", () => {
       const quartsConversion = linearConversion(0.946353);
 
       const [toBase, fromBase] = [
+        acreFeetConversion[1],
         quartsConversion[0],
-        acreFeetConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "af"] as const;
+      const expected = [fromBase(toBase(v)), "af"] as const;
       const conversionCandidate = [v, "qt"] as const;
 
       expect(volume["af"](conversionCandidate)).toEqual(expected);
@@ -7200,11 +7200,11 @@ describe("volume", () => {
       const gallonsConversion = linearConversion(3.78541);
 
       const [toBase, fromBase] = [
+        acreFeetConversion[1],
         gallonsConversion[0],
-        acreFeetConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "af"] as const;
+      const expected = [fromBase(toBase(v)), "af"] as const;
       const conversionCandidate = [v, "gal"] as const;
 
       expect(volume["af"](conversionCandidate)).toEqual(expected);
@@ -7216,11 +7216,11 @@ describe("volume", () => {
       const imperialTeaspoonsConversion = linearConversion(0.00591939);
 
       const [toBase, fromBase] = [
+        acreFeetConversion[1],
         imperialTeaspoonsConversion[0],
-        acreFeetConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "af"] as const;
+      const expected = [fromBase(toBase(v)), "af"] as const;
       const conversionCandidate = [v, "imperial tsp"] as const;
 
       expect(volume["af"](conversionCandidate)).toEqual(expected);
@@ -7232,11 +7232,11 @@ describe("volume", () => {
       const imperialTablespoonsConversion = linearConversion(0.0177582);
 
       const [toBase, fromBase] = [
+        acreFeetConversion[1],
         imperialTablespoonsConversion[0],
-        acreFeetConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "af"] as const;
+      const expected = [fromBase(toBase(v)), "af"] as const;
       const conversionCandidate = [v, "imperial tbsp"] as const;
 
       expect(volume["af"](conversionCandidate)).toEqual(expected);
@@ -7248,11 +7248,11 @@ describe("volume", () => {
       const imperialFluidOuncesConversion = linearConversion(0.0284131);
 
       const [toBase, fromBase] = [
+        acreFeetConversion[1],
         imperialFluidOuncesConversion[0],
-        acreFeetConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "af"] as const;
+      const expected = [fromBase(toBase(v)), "af"] as const;
       const conversionCandidate = [v, "imperial fl oz"] as const;
 
       expect(volume["af"](conversionCandidate)).toEqual(expected);
@@ -7264,11 +7264,11 @@ describe("volume", () => {
       const imperialPintsConversion = linearConversion(0.568261);
 
       const [toBase, fromBase] = [
+        acreFeetConversion[1],
         imperialPintsConversion[0],
-        acreFeetConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "af"] as const;
+      const expected = [fromBase(toBase(v)), "af"] as const;
       const conversionCandidate = [v, "imperial pt"] as const;
 
       expect(volume["af"](conversionCandidate)).toEqual(expected);
@@ -7280,11 +7280,11 @@ describe("volume", () => {
       const imperialQuartsConversion = linearConversion(1.13652);
 
       const [toBase, fromBase] = [
+        acreFeetConversion[1],
         imperialQuartsConversion[0],
-        acreFeetConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "af"] as const;
+      const expected = [fromBase(toBase(v)), "af"] as const;
       const conversionCandidate = [v, "imperial qt"] as const;
 
       expect(volume["af"](conversionCandidate)).toEqual(expected);
@@ -7296,11 +7296,11 @@ describe("volume", () => {
       const imperialGallonsConversion = linearConversion(4.54609);
 
       const [toBase, fromBase] = [
+        acreFeetConversion[1],
         imperialGallonsConversion[0],
-        acreFeetConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "af"] as const;
+      const expected = [fromBase(toBase(v)), "af"] as const;
       const conversionCandidate = [v, "imperial gal"] as const;
 
       expect(volume["af"](conversionCandidate)).toEqual(expected);
@@ -7312,11 +7312,11 @@ describe("volume", () => {
       const metricCupsConversion = linearConversion(0.25);
 
       const [toBase, fromBase] = [
+        acreFeetConversion[1],
         metricCupsConversion[0],
-        acreFeetConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "af"] as const;
+      const expected = [fromBase(toBase(v)), "af"] as const;
       const conversionCandidate = [v, "metric cup"] as const;
 
       expect(volume["af"](conversionCandidate)).toEqual(expected);
@@ -7336,11 +7336,11 @@ describe("volume", () => {
       const megalitersConversion = linearConversion(1000000);
 
       const [toBase, fromBase] = [
+        bushelsConversion[1],
         megalitersConversion[0],
-        bushelsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "bsh"] as const;
+      const expected = [fromBase(toBase(v)), "bsh"] as const;
       const conversionCandidate = [v, "ML"] as const;
 
       expect(volume["bsh"](conversionCandidate)).toEqual(expected);
@@ -7352,11 +7352,11 @@ describe("volume", () => {
       const kilolitersConversion = linearConversion(1000);
 
       const [toBase, fromBase] = [
+        bushelsConversion[1],
         kilolitersConversion[0],
-        bushelsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "bsh"] as const;
+      const expected = [fromBase(toBase(v)), "bsh"] as const;
       const conversionCandidate = [v, "kL"] as const;
 
       expect(volume["bsh"](conversionCandidate)).toEqual(expected);
@@ -7368,11 +7368,11 @@ describe("volume", () => {
       const litersConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
+        bushelsConversion[1],
         litersConversion[0],
-        bushelsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "bsh"] as const;
+      const expected = [fromBase(toBase(v)), "bsh"] as const;
       const conversionCandidate = [v, "L"] as const;
 
       expect(volume["bsh"](conversionCandidate)).toEqual(expected);
@@ -7384,11 +7384,11 @@ describe("volume", () => {
       const decilitersConversion = linearConversion(0.1);
 
       const [toBase, fromBase] = [
+        bushelsConversion[1],
         decilitersConversion[0],
-        bushelsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "bsh"] as const;
+      const expected = [fromBase(toBase(v)), "bsh"] as const;
       const conversionCandidate = [v, "dL"] as const;
 
       expect(volume["bsh"](conversionCandidate)).toEqual(expected);
@@ -7400,11 +7400,11 @@ describe("volume", () => {
       const centilitersConversion = linearConversion(0.01);
 
       const [toBase, fromBase] = [
+        bushelsConversion[1],
         centilitersConversion[0],
-        bushelsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "bsh"] as const;
+      const expected = [fromBase(toBase(v)), "bsh"] as const;
       const conversionCandidate = [v, "cL"] as const;
 
       expect(volume["bsh"](conversionCandidate)).toEqual(expected);
@@ -7416,11 +7416,11 @@ describe("volume", () => {
       const millilitersConversion = linearConversion(0.001);
 
       const [toBase, fromBase] = [
+        bushelsConversion[1],
         millilitersConversion[0],
-        bushelsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "bsh"] as const;
+      const expected = [fromBase(toBase(v)), "bsh"] as const;
       const conversionCandidate = [v, "mL"] as const;
 
       expect(volume["bsh"](conversionCandidate)).toEqual(expected);
@@ -7432,11 +7432,11 @@ describe("volume", () => {
       const cubicKilometersConversion = linearConversion(1000000000000);
 
       const [toBase, fromBase] = [
+        bushelsConversion[1],
         cubicKilometersConversion[0],
-        bushelsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "bsh"] as const;
+      const expected = [fromBase(toBase(v)), "bsh"] as const;
       const conversionCandidate = [v, "km³"] as const;
 
       expect(volume["bsh"](conversionCandidate)).toEqual(expected);
@@ -7448,11 +7448,11 @@ describe("volume", () => {
       const cubicMetersConversion = linearConversion(1000);
 
       const [toBase, fromBase] = [
+        bushelsConversion[1],
         cubicMetersConversion[0],
-        bushelsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "bsh"] as const;
+      const expected = [fromBase(toBase(v)), "bsh"] as const;
       const conversionCandidate = [v, "m³"] as const;
 
       expect(volume["bsh"](conversionCandidate)).toEqual(expected);
@@ -7464,11 +7464,11 @@ describe("volume", () => {
       const cubicDecimetersConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
+        bushelsConversion[1],
         cubicDecimetersConversion[0],
-        bushelsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "bsh"] as const;
+      const expected = [fromBase(toBase(v)), "bsh"] as const;
       const conversionCandidate = [v, "dm³"] as const;
 
       expect(volume["bsh"](conversionCandidate)).toEqual(expected);
@@ -7480,11 +7480,11 @@ describe("volume", () => {
       const cubicMillimetersConversion = linearConversion(0.000001);
 
       const [toBase, fromBase] = [
+        bushelsConversion[1],
         cubicMillimetersConversion[0],
-        bushelsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "bsh"] as const;
+      const expected = [fromBase(toBase(v)), "bsh"] as const;
       const conversionCandidate = [v, "mm³"] as const;
 
       expect(volume["bsh"](conversionCandidate)).toEqual(expected);
@@ -7496,11 +7496,11 @@ describe("volume", () => {
       const cubicInchesConversion = linearConversion(0.0163871);
 
       const [toBase, fromBase] = [
+        bushelsConversion[1],
         cubicInchesConversion[0],
-        bushelsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "bsh"] as const;
+      const expected = [fromBase(toBase(v)), "bsh"] as const;
       const conversionCandidate = [v, "in³"] as const;
 
       expect(volume["bsh"](conversionCandidate)).toEqual(expected);
@@ -7512,11 +7512,11 @@ describe("volume", () => {
       const cubicFeetConversion = linearConversion(28.3168);
 
       const [toBase, fromBase] = [
+        bushelsConversion[1],
         cubicFeetConversion[0],
-        bushelsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "bsh"] as const;
+      const expected = [fromBase(toBase(v)), "bsh"] as const;
       const conversionCandidate = [v, "ft³"] as const;
 
       expect(volume["bsh"](conversionCandidate)).toEqual(expected);
@@ -7528,11 +7528,11 @@ describe("volume", () => {
       const cubicYardsConversion = linearConversion(764.555);
 
       const [toBase, fromBase] = [
+        bushelsConversion[1],
         cubicYardsConversion[0],
-        bushelsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "bsh"] as const;
+      const expected = [fromBase(toBase(v)), "bsh"] as const;
       const conversionCandidate = [v, "yd³"] as const;
 
       expect(volume["bsh"](conversionCandidate)).toEqual(expected);
@@ -7544,11 +7544,11 @@ describe("volume", () => {
       const cubicMilesConversion = linearConversion(4168000000000);
 
       const [toBase, fromBase] = [
+        bushelsConversion[1],
         cubicMilesConversion[0],
-        bushelsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "bsh"] as const;
+      const expected = [fromBase(toBase(v)), "bsh"] as const;
       const conversionCandidate = [v, "mi³"] as const;
 
       expect(volume["bsh"](conversionCandidate)).toEqual(expected);
@@ -7560,11 +7560,11 @@ describe("volume", () => {
       const acreFeetConversion = linearConversion(1233000);
 
       const [toBase, fromBase] = [
+        bushelsConversion[1],
         acreFeetConversion[0],
-        bushelsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "bsh"] as const;
+      const expected = [fromBase(toBase(v)), "bsh"] as const;
       const conversionCandidate = [v, "af"] as const;
 
       expect(volume["bsh"](conversionCandidate)).toEqual(expected);
@@ -7578,11 +7578,11 @@ describe("volume", () => {
       const teaspoonsConversion = linearConversion(0.00492892);
 
       const [toBase, fromBase] = [
+        bushelsConversion[1],
         teaspoonsConversion[0],
-        bushelsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "bsh"] as const;
+      const expected = [fromBase(toBase(v)), "bsh"] as const;
       const conversionCandidate = [v, "tsp"] as const;
 
       expect(volume["bsh"](conversionCandidate)).toEqual(expected);
@@ -7594,11 +7594,11 @@ describe("volume", () => {
       const tablespoonsConversion = linearConversion(0.0147868);
 
       const [toBase, fromBase] = [
+        bushelsConversion[1],
         tablespoonsConversion[0],
-        bushelsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "bsh"] as const;
+      const expected = [fromBase(toBase(v)), "bsh"] as const;
       const conversionCandidate = [v, "tbsp"] as const;
 
       expect(volume["bsh"](conversionCandidate)).toEqual(expected);
@@ -7610,11 +7610,11 @@ describe("volume", () => {
       const fluidOuncesConversion = linearConversion(0.0295735);
 
       const [toBase, fromBase] = [
+        bushelsConversion[1],
         fluidOuncesConversion[0],
-        bushelsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "bsh"] as const;
+      const expected = [fromBase(toBase(v)), "bsh"] as const;
       const conversionCandidate = [v, "fl oz"] as const;
 
       expect(volume["bsh"](conversionCandidate)).toEqual(expected);
@@ -7626,11 +7626,11 @@ describe("volume", () => {
       const cupsConversion = linearConversion(0.24);
 
       const [toBase, fromBase] = [
+        bushelsConversion[1],
         cupsConversion[0],
-        bushelsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "bsh"] as const;
+      const expected = [fromBase(toBase(v)), "bsh"] as const;
       const conversionCandidate = [v, "cup"] as const;
 
       expect(volume["bsh"](conversionCandidate)).toEqual(expected);
@@ -7642,11 +7642,11 @@ describe("volume", () => {
       const pintsConversion = linearConversion(0.473176);
 
       const [toBase, fromBase] = [
+        bushelsConversion[1],
         pintsConversion[0],
-        bushelsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "bsh"] as const;
+      const expected = [fromBase(toBase(v)), "bsh"] as const;
       const conversionCandidate = [v, "pt"] as const;
 
       expect(volume["bsh"](conversionCandidate)).toEqual(expected);
@@ -7658,11 +7658,11 @@ describe("volume", () => {
       const quartsConversion = linearConversion(0.946353);
 
       const [toBase, fromBase] = [
+        bushelsConversion[1],
         quartsConversion[0],
-        bushelsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "bsh"] as const;
+      const expected = [fromBase(toBase(v)), "bsh"] as const;
       const conversionCandidate = [v, "qt"] as const;
 
       expect(volume["bsh"](conversionCandidate)).toEqual(expected);
@@ -7674,11 +7674,11 @@ describe("volume", () => {
       const gallonsConversion = linearConversion(3.78541);
 
       const [toBase, fromBase] = [
+        bushelsConversion[1],
         gallonsConversion[0],
-        bushelsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "bsh"] as const;
+      const expected = [fromBase(toBase(v)), "bsh"] as const;
       const conversionCandidate = [v, "gal"] as const;
 
       expect(volume["bsh"](conversionCandidate)).toEqual(expected);
@@ -7690,11 +7690,11 @@ describe("volume", () => {
       const imperialTeaspoonsConversion = linearConversion(0.00591939);
 
       const [toBase, fromBase] = [
+        bushelsConversion[1],
         imperialTeaspoonsConversion[0],
-        bushelsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "bsh"] as const;
+      const expected = [fromBase(toBase(v)), "bsh"] as const;
       const conversionCandidate = [v, "imperial tsp"] as const;
 
       expect(volume["bsh"](conversionCandidate)).toEqual(expected);
@@ -7706,11 +7706,11 @@ describe("volume", () => {
       const imperialTablespoonsConversion = linearConversion(0.0177582);
 
       const [toBase, fromBase] = [
+        bushelsConversion[1],
         imperialTablespoonsConversion[0],
-        bushelsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "bsh"] as const;
+      const expected = [fromBase(toBase(v)), "bsh"] as const;
       const conversionCandidate = [v, "imperial tbsp"] as const;
 
       expect(volume["bsh"](conversionCandidate)).toEqual(expected);
@@ -7722,11 +7722,11 @@ describe("volume", () => {
       const imperialFluidOuncesConversion = linearConversion(0.0284131);
 
       const [toBase, fromBase] = [
+        bushelsConversion[1],
         imperialFluidOuncesConversion[0],
-        bushelsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "bsh"] as const;
+      const expected = [fromBase(toBase(v)), "bsh"] as const;
       const conversionCandidate = [v, "imperial fl oz"] as const;
 
       expect(volume["bsh"](conversionCandidate)).toEqual(expected);
@@ -7738,11 +7738,11 @@ describe("volume", () => {
       const imperialPintsConversion = linearConversion(0.568261);
 
       const [toBase, fromBase] = [
+        bushelsConversion[1],
         imperialPintsConversion[0],
-        bushelsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "bsh"] as const;
+      const expected = [fromBase(toBase(v)), "bsh"] as const;
       const conversionCandidate = [v, "imperial pt"] as const;
 
       expect(volume["bsh"](conversionCandidate)).toEqual(expected);
@@ -7754,11 +7754,11 @@ describe("volume", () => {
       const imperialQuartsConversion = linearConversion(1.13652);
 
       const [toBase, fromBase] = [
+        bushelsConversion[1],
         imperialQuartsConversion[0],
-        bushelsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "bsh"] as const;
+      const expected = [fromBase(toBase(v)), "bsh"] as const;
       const conversionCandidate = [v, "imperial qt"] as const;
 
       expect(volume["bsh"](conversionCandidate)).toEqual(expected);
@@ -7770,11 +7770,11 @@ describe("volume", () => {
       const imperialGallonsConversion = linearConversion(4.54609);
 
       const [toBase, fromBase] = [
+        bushelsConversion[1],
         imperialGallonsConversion[0],
-        bushelsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "bsh"] as const;
+      const expected = [fromBase(toBase(v)), "bsh"] as const;
       const conversionCandidate = [v, "imperial gal"] as const;
 
       expect(volume["bsh"](conversionCandidate)).toEqual(expected);
@@ -7786,11 +7786,11 @@ describe("volume", () => {
       const metricCupsConversion = linearConversion(0.25);
 
       const [toBase, fromBase] = [
+        bushelsConversion[1],
         metricCupsConversion[0],
-        bushelsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "bsh"] as const;
+      const expected = [fromBase(toBase(v)), "bsh"] as const;
       const conversionCandidate = [v, "metric cup"] as const;
 
       expect(volume["bsh"](conversionCandidate)).toEqual(expected);
@@ -7810,11 +7810,11 @@ describe("volume", () => {
       const megalitersConversion = linearConversion(1000000);
 
       const [toBase, fromBase] = [
+        teaspoonsConversion[1],
         megalitersConversion[0],
-        teaspoonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "tsp"] as const;
+      const expected = [fromBase(toBase(v)), "tsp"] as const;
       const conversionCandidate = [v, "ML"] as const;
 
       expect(volume["tsp"](conversionCandidate)).toEqual(expected);
@@ -7826,11 +7826,11 @@ describe("volume", () => {
       const kilolitersConversion = linearConversion(1000);
 
       const [toBase, fromBase] = [
+        teaspoonsConversion[1],
         kilolitersConversion[0],
-        teaspoonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "tsp"] as const;
+      const expected = [fromBase(toBase(v)), "tsp"] as const;
       const conversionCandidate = [v, "kL"] as const;
 
       expect(volume["tsp"](conversionCandidate)).toEqual(expected);
@@ -7842,11 +7842,11 @@ describe("volume", () => {
       const litersConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
+        teaspoonsConversion[1],
         litersConversion[0],
-        teaspoonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "tsp"] as const;
+      const expected = [fromBase(toBase(v)), "tsp"] as const;
       const conversionCandidate = [v, "L"] as const;
 
       expect(volume["tsp"](conversionCandidate)).toEqual(expected);
@@ -7858,11 +7858,11 @@ describe("volume", () => {
       const decilitersConversion = linearConversion(0.1);
 
       const [toBase, fromBase] = [
+        teaspoonsConversion[1],
         decilitersConversion[0],
-        teaspoonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "tsp"] as const;
+      const expected = [fromBase(toBase(v)), "tsp"] as const;
       const conversionCandidate = [v, "dL"] as const;
 
       expect(volume["tsp"](conversionCandidate)).toEqual(expected);
@@ -7874,11 +7874,11 @@ describe("volume", () => {
       const centilitersConversion = linearConversion(0.01);
 
       const [toBase, fromBase] = [
+        teaspoonsConversion[1],
         centilitersConversion[0],
-        teaspoonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "tsp"] as const;
+      const expected = [fromBase(toBase(v)), "tsp"] as const;
       const conversionCandidate = [v, "cL"] as const;
 
       expect(volume["tsp"](conversionCandidate)).toEqual(expected);
@@ -7890,11 +7890,11 @@ describe("volume", () => {
       const millilitersConversion = linearConversion(0.001);
 
       const [toBase, fromBase] = [
+        teaspoonsConversion[1],
         millilitersConversion[0],
-        teaspoonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "tsp"] as const;
+      const expected = [fromBase(toBase(v)), "tsp"] as const;
       const conversionCandidate = [v, "mL"] as const;
 
       expect(volume["tsp"](conversionCandidate)).toEqual(expected);
@@ -7906,11 +7906,11 @@ describe("volume", () => {
       const cubicKilometersConversion = linearConversion(1000000000000);
 
       const [toBase, fromBase] = [
+        teaspoonsConversion[1],
         cubicKilometersConversion[0],
-        teaspoonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "tsp"] as const;
+      const expected = [fromBase(toBase(v)), "tsp"] as const;
       const conversionCandidate = [v, "km³"] as const;
 
       expect(volume["tsp"](conversionCandidate)).toEqual(expected);
@@ -7922,11 +7922,11 @@ describe("volume", () => {
       const cubicMetersConversion = linearConversion(1000);
 
       const [toBase, fromBase] = [
+        teaspoonsConversion[1],
         cubicMetersConversion[0],
-        teaspoonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "tsp"] as const;
+      const expected = [fromBase(toBase(v)), "tsp"] as const;
       const conversionCandidate = [v, "m³"] as const;
 
       expect(volume["tsp"](conversionCandidate)).toEqual(expected);
@@ -7938,11 +7938,11 @@ describe("volume", () => {
       const cubicDecimetersConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
+        teaspoonsConversion[1],
         cubicDecimetersConversion[0],
-        teaspoonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "tsp"] as const;
+      const expected = [fromBase(toBase(v)), "tsp"] as const;
       const conversionCandidate = [v, "dm³"] as const;
 
       expect(volume["tsp"](conversionCandidate)).toEqual(expected);
@@ -7954,11 +7954,11 @@ describe("volume", () => {
       const cubicMillimetersConversion = linearConversion(0.000001);
 
       const [toBase, fromBase] = [
+        teaspoonsConversion[1],
         cubicMillimetersConversion[0],
-        teaspoonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "tsp"] as const;
+      const expected = [fromBase(toBase(v)), "tsp"] as const;
       const conversionCandidate = [v, "mm³"] as const;
 
       expect(volume["tsp"](conversionCandidate)).toEqual(expected);
@@ -7970,11 +7970,11 @@ describe("volume", () => {
       const cubicInchesConversion = linearConversion(0.0163871);
 
       const [toBase, fromBase] = [
+        teaspoonsConversion[1],
         cubicInchesConversion[0],
-        teaspoonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "tsp"] as const;
+      const expected = [fromBase(toBase(v)), "tsp"] as const;
       const conversionCandidate = [v, "in³"] as const;
 
       expect(volume["tsp"](conversionCandidate)).toEqual(expected);
@@ -7986,11 +7986,11 @@ describe("volume", () => {
       const cubicFeetConversion = linearConversion(28.3168);
 
       const [toBase, fromBase] = [
+        teaspoonsConversion[1],
         cubicFeetConversion[0],
-        teaspoonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "tsp"] as const;
+      const expected = [fromBase(toBase(v)), "tsp"] as const;
       const conversionCandidate = [v, "ft³"] as const;
 
       expect(volume["tsp"](conversionCandidate)).toEqual(expected);
@@ -8002,11 +8002,11 @@ describe("volume", () => {
       const cubicYardsConversion = linearConversion(764.555);
 
       const [toBase, fromBase] = [
+        teaspoonsConversion[1],
         cubicYardsConversion[0],
-        teaspoonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "tsp"] as const;
+      const expected = [fromBase(toBase(v)), "tsp"] as const;
       const conversionCandidate = [v, "yd³"] as const;
 
       expect(volume["tsp"](conversionCandidate)).toEqual(expected);
@@ -8018,11 +8018,11 @@ describe("volume", () => {
       const cubicMilesConversion = linearConversion(4168000000000);
 
       const [toBase, fromBase] = [
+        teaspoonsConversion[1],
         cubicMilesConversion[0],
-        teaspoonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "tsp"] as const;
+      const expected = [fromBase(toBase(v)), "tsp"] as const;
       const conversionCandidate = [v, "mi³"] as const;
 
       expect(volume["tsp"](conversionCandidate)).toEqual(expected);
@@ -8034,11 +8034,11 @@ describe("volume", () => {
       const acreFeetConversion = linearConversion(1233000);
 
       const [toBase, fromBase] = [
+        teaspoonsConversion[1],
         acreFeetConversion[0],
-        teaspoonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "tsp"] as const;
+      const expected = [fromBase(toBase(v)), "tsp"] as const;
       const conversionCandidate = [v, "af"] as const;
 
       expect(volume["tsp"](conversionCandidate)).toEqual(expected);
@@ -8050,11 +8050,11 @@ describe("volume", () => {
       const bushelsConversion = linearConversion(35.2391);
 
       const [toBase, fromBase] = [
+        teaspoonsConversion[1],
         bushelsConversion[0],
-        teaspoonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "tsp"] as const;
+      const expected = [fromBase(toBase(v)), "tsp"] as const;
       const conversionCandidate = [v, "bsh"] as const;
 
       expect(volume["tsp"](conversionCandidate)).toEqual(expected);
@@ -8068,11 +8068,11 @@ describe("volume", () => {
       const tablespoonsConversion = linearConversion(0.0147868);
 
       const [toBase, fromBase] = [
+        teaspoonsConversion[1],
         tablespoonsConversion[0],
-        teaspoonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "tsp"] as const;
+      const expected = [fromBase(toBase(v)), "tsp"] as const;
       const conversionCandidate = [v, "tbsp"] as const;
 
       expect(volume["tsp"](conversionCandidate)).toEqual(expected);
@@ -8084,11 +8084,11 @@ describe("volume", () => {
       const fluidOuncesConversion = linearConversion(0.0295735);
 
       const [toBase, fromBase] = [
+        teaspoonsConversion[1],
         fluidOuncesConversion[0],
-        teaspoonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "tsp"] as const;
+      const expected = [fromBase(toBase(v)), "tsp"] as const;
       const conversionCandidate = [v, "fl oz"] as const;
 
       expect(volume["tsp"](conversionCandidate)).toEqual(expected);
@@ -8100,11 +8100,11 @@ describe("volume", () => {
       const cupsConversion = linearConversion(0.24);
 
       const [toBase, fromBase] = [
+        teaspoonsConversion[1],
         cupsConversion[0],
-        teaspoonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "tsp"] as const;
+      const expected = [fromBase(toBase(v)), "tsp"] as const;
       const conversionCandidate = [v, "cup"] as const;
 
       expect(volume["tsp"](conversionCandidate)).toEqual(expected);
@@ -8116,11 +8116,11 @@ describe("volume", () => {
       const pintsConversion = linearConversion(0.473176);
 
       const [toBase, fromBase] = [
+        teaspoonsConversion[1],
         pintsConversion[0],
-        teaspoonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "tsp"] as const;
+      const expected = [fromBase(toBase(v)), "tsp"] as const;
       const conversionCandidate = [v, "pt"] as const;
 
       expect(volume["tsp"](conversionCandidate)).toEqual(expected);
@@ -8132,11 +8132,11 @@ describe("volume", () => {
       const quartsConversion = linearConversion(0.946353);
 
       const [toBase, fromBase] = [
+        teaspoonsConversion[1],
         quartsConversion[0],
-        teaspoonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "tsp"] as const;
+      const expected = [fromBase(toBase(v)), "tsp"] as const;
       const conversionCandidate = [v, "qt"] as const;
 
       expect(volume["tsp"](conversionCandidate)).toEqual(expected);
@@ -8148,11 +8148,11 @@ describe("volume", () => {
       const gallonsConversion = linearConversion(3.78541);
 
       const [toBase, fromBase] = [
+        teaspoonsConversion[1],
         gallonsConversion[0],
-        teaspoonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "tsp"] as const;
+      const expected = [fromBase(toBase(v)), "tsp"] as const;
       const conversionCandidate = [v, "gal"] as const;
 
       expect(volume["tsp"](conversionCandidate)).toEqual(expected);
@@ -8164,11 +8164,11 @@ describe("volume", () => {
       const imperialTeaspoonsConversion = linearConversion(0.00591939);
 
       const [toBase, fromBase] = [
+        teaspoonsConversion[1],
         imperialTeaspoonsConversion[0],
-        teaspoonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "tsp"] as const;
+      const expected = [fromBase(toBase(v)), "tsp"] as const;
       const conversionCandidate = [v, "imperial tsp"] as const;
 
       expect(volume["tsp"](conversionCandidate)).toEqual(expected);
@@ -8180,11 +8180,11 @@ describe("volume", () => {
       const imperialTablespoonsConversion = linearConversion(0.0177582);
 
       const [toBase, fromBase] = [
+        teaspoonsConversion[1],
         imperialTablespoonsConversion[0],
-        teaspoonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "tsp"] as const;
+      const expected = [fromBase(toBase(v)), "tsp"] as const;
       const conversionCandidate = [v, "imperial tbsp"] as const;
 
       expect(volume["tsp"](conversionCandidate)).toEqual(expected);
@@ -8196,11 +8196,11 @@ describe("volume", () => {
       const imperialFluidOuncesConversion = linearConversion(0.0284131);
 
       const [toBase, fromBase] = [
+        teaspoonsConversion[1],
         imperialFluidOuncesConversion[0],
-        teaspoonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "tsp"] as const;
+      const expected = [fromBase(toBase(v)), "tsp"] as const;
       const conversionCandidate = [v, "imperial fl oz"] as const;
 
       expect(volume["tsp"](conversionCandidate)).toEqual(expected);
@@ -8212,11 +8212,11 @@ describe("volume", () => {
       const imperialPintsConversion = linearConversion(0.568261);
 
       const [toBase, fromBase] = [
+        teaspoonsConversion[1],
         imperialPintsConversion[0],
-        teaspoonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "tsp"] as const;
+      const expected = [fromBase(toBase(v)), "tsp"] as const;
       const conversionCandidate = [v, "imperial pt"] as const;
 
       expect(volume["tsp"](conversionCandidate)).toEqual(expected);
@@ -8228,11 +8228,11 @@ describe("volume", () => {
       const imperialQuartsConversion = linearConversion(1.13652);
 
       const [toBase, fromBase] = [
+        teaspoonsConversion[1],
         imperialQuartsConversion[0],
-        teaspoonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "tsp"] as const;
+      const expected = [fromBase(toBase(v)), "tsp"] as const;
       const conversionCandidate = [v, "imperial qt"] as const;
 
       expect(volume["tsp"](conversionCandidate)).toEqual(expected);
@@ -8244,11 +8244,11 @@ describe("volume", () => {
       const imperialGallonsConversion = linearConversion(4.54609);
 
       const [toBase, fromBase] = [
+        teaspoonsConversion[1],
         imperialGallonsConversion[0],
-        teaspoonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "tsp"] as const;
+      const expected = [fromBase(toBase(v)), "tsp"] as const;
       const conversionCandidate = [v, "imperial gal"] as const;
 
       expect(volume["tsp"](conversionCandidate)).toEqual(expected);
@@ -8260,11 +8260,11 @@ describe("volume", () => {
       const metricCupsConversion = linearConversion(0.25);
 
       const [toBase, fromBase] = [
+        teaspoonsConversion[1],
         metricCupsConversion[0],
-        teaspoonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "tsp"] as const;
+      const expected = [fromBase(toBase(v)), "tsp"] as const;
       const conversionCandidate = [v, "metric cup"] as const;
 
       expect(volume["tsp"](conversionCandidate)).toEqual(expected);
@@ -8284,11 +8284,11 @@ describe("volume", () => {
       const megalitersConversion = linearConversion(1000000);
 
       const [toBase, fromBase] = [
+        tablespoonsConversion[1],
         megalitersConversion[0],
-        tablespoonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "tbsp"] as const;
+      const expected = [fromBase(toBase(v)), "tbsp"] as const;
       const conversionCandidate = [v, "ML"] as const;
 
       expect(volume["tbsp"](conversionCandidate)).toEqual(expected);
@@ -8300,11 +8300,11 @@ describe("volume", () => {
       const kilolitersConversion = linearConversion(1000);
 
       const [toBase, fromBase] = [
+        tablespoonsConversion[1],
         kilolitersConversion[0],
-        tablespoonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "tbsp"] as const;
+      const expected = [fromBase(toBase(v)), "tbsp"] as const;
       const conversionCandidate = [v, "kL"] as const;
 
       expect(volume["tbsp"](conversionCandidate)).toEqual(expected);
@@ -8316,11 +8316,11 @@ describe("volume", () => {
       const litersConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
+        tablespoonsConversion[1],
         litersConversion[0],
-        tablespoonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "tbsp"] as const;
+      const expected = [fromBase(toBase(v)), "tbsp"] as const;
       const conversionCandidate = [v, "L"] as const;
 
       expect(volume["tbsp"](conversionCandidate)).toEqual(expected);
@@ -8332,11 +8332,11 @@ describe("volume", () => {
       const decilitersConversion = linearConversion(0.1);
 
       const [toBase, fromBase] = [
+        tablespoonsConversion[1],
         decilitersConversion[0],
-        tablespoonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "tbsp"] as const;
+      const expected = [fromBase(toBase(v)), "tbsp"] as const;
       const conversionCandidate = [v, "dL"] as const;
 
       expect(volume["tbsp"](conversionCandidate)).toEqual(expected);
@@ -8348,11 +8348,11 @@ describe("volume", () => {
       const centilitersConversion = linearConversion(0.01);
 
       const [toBase, fromBase] = [
+        tablespoonsConversion[1],
         centilitersConversion[0],
-        tablespoonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "tbsp"] as const;
+      const expected = [fromBase(toBase(v)), "tbsp"] as const;
       const conversionCandidate = [v, "cL"] as const;
 
       expect(volume["tbsp"](conversionCandidate)).toEqual(expected);
@@ -8364,11 +8364,11 @@ describe("volume", () => {
       const millilitersConversion = linearConversion(0.001);
 
       const [toBase, fromBase] = [
+        tablespoonsConversion[1],
         millilitersConversion[0],
-        tablespoonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "tbsp"] as const;
+      const expected = [fromBase(toBase(v)), "tbsp"] as const;
       const conversionCandidate = [v, "mL"] as const;
 
       expect(volume["tbsp"](conversionCandidate)).toEqual(expected);
@@ -8380,11 +8380,11 @@ describe("volume", () => {
       const cubicKilometersConversion = linearConversion(1000000000000);
 
       const [toBase, fromBase] = [
+        tablespoonsConversion[1],
         cubicKilometersConversion[0],
-        tablespoonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "tbsp"] as const;
+      const expected = [fromBase(toBase(v)), "tbsp"] as const;
       const conversionCandidate = [v, "km³"] as const;
 
       expect(volume["tbsp"](conversionCandidate)).toEqual(expected);
@@ -8396,11 +8396,11 @@ describe("volume", () => {
       const cubicMetersConversion = linearConversion(1000);
 
       const [toBase, fromBase] = [
+        tablespoonsConversion[1],
         cubicMetersConversion[0],
-        tablespoonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "tbsp"] as const;
+      const expected = [fromBase(toBase(v)), "tbsp"] as const;
       const conversionCandidate = [v, "m³"] as const;
 
       expect(volume["tbsp"](conversionCandidate)).toEqual(expected);
@@ -8412,11 +8412,11 @@ describe("volume", () => {
       const cubicDecimetersConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
+        tablespoonsConversion[1],
         cubicDecimetersConversion[0],
-        tablespoonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "tbsp"] as const;
+      const expected = [fromBase(toBase(v)), "tbsp"] as const;
       const conversionCandidate = [v, "dm³"] as const;
 
       expect(volume["tbsp"](conversionCandidate)).toEqual(expected);
@@ -8428,11 +8428,11 @@ describe("volume", () => {
       const cubicMillimetersConversion = linearConversion(0.000001);
 
       const [toBase, fromBase] = [
+        tablespoonsConversion[1],
         cubicMillimetersConversion[0],
-        tablespoonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "tbsp"] as const;
+      const expected = [fromBase(toBase(v)), "tbsp"] as const;
       const conversionCandidate = [v, "mm³"] as const;
 
       expect(volume["tbsp"](conversionCandidate)).toEqual(expected);
@@ -8444,11 +8444,11 @@ describe("volume", () => {
       const cubicInchesConversion = linearConversion(0.0163871);
 
       const [toBase, fromBase] = [
+        tablespoonsConversion[1],
         cubicInchesConversion[0],
-        tablespoonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "tbsp"] as const;
+      const expected = [fromBase(toBase(v)), "tbsp"] as const;
       const conversionCandidate = [v, "in³"] as const;
 
       expect(volume["tbsp"](conversionCandidate)).toEqual(expected);
@@ -8460,11 +8460,11 @@ describe("volume", () => {
       const cubicFeetConversion = linearConversion(28.3168);
 
       const [toBase, fromBase] = [
+        tablespoonsConversion[1],
         cubicFeetConversion[0],
-        tablespoonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "tbsp"] as const;
+      const expected = [fromBase(toBase(v)), "tbsp"] as const;
       const conversionCandidate = [v, "ft³"] as const;
 
       expect(volume["tbsp"](conversionCandidate)).toEqual(expected);
@@ -8476,11 +8476,11 @@ describe("volume", () => {
       const cubicYardsConversion = linearConversion(764.555);
 
       const [toBase, fromBase] = [
+        tablespoonsConversion[1],
         cubicYardsConversion[0],
-        tablespoonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "tbsp"] as const;
+      const expected = [fromBase(toBase(v)), "tbsp"] as const;
       const conversionCandidate = [v, "yd³"] as const;
 
       expect(volume["tbsp"](conversionCandidate)).toEqual(expected);
@@ -8492,11 +8492,11 @@ describe("volume", () => {
       const cubicMilesConversion = linearConversion(4168000000000);
 
       const [toBase, fromBase] = [
+        tablespoonsConversion[1],
         cubicMilesConversion[0],
-        tablespoonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "tbsp"] as const;
+      const expected = [fromBase(toBase(v)), "tbsp"] as const;
       const conversionCandidate = [v, "mi³"] as const;
 
       expect(volume["tbsp"](conversionCandidate)).toEqual(expected);
@@ -8508,11 +8508,11 @@ describe("volume", () => {
       const acreFeetConversion = linearConversion(1233000);
 
       const [toBase, fromBase] = [
+        tablespoonsConversion[1],
         acreFeetConversion[0],
-        tablespoonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "tbsp"] as const;
+      const expected = [fromBase(toBase(v)), "tbsp"] as const;
       const conversionCandidate = [v, "af"] as const;
 
       expect(volume["tbsp"](conversionCandidate)).toEqual(expected);
@@ -8524,11 +8524,11 @@ describe("volume", () => {
       const bushelsConversion = linearConversion(35.2391);
 
       const [toBase, fromBase] = [
+        tablespoonsConversion[1],
         bushelsConversion[0],
-        tablespoonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "tbsp"] as const;
+      const expected = [fromBase(toBase(v)), "tbsp"] as const;
       const conversionCandidate = [v, "bsh"] as const;
 
       expect(volume["tbsp"](conversionCandidate)).toEqual(expected);
@@ -8540,11 +8540,11 @@ describe("volume", () => {
       const teaspoonsConversion = linearConversion(0.00492892);
 
       const [toBase, fromBase] = [
+        tablespoonsConversion[1],
         teaspoonsConversion[0],
-        tablespoonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "tbsp"] as const;
+      const expected = [fromBase(toBase(v)), "tbsp"] as const;
       const conversionCandidate = [v, "tsp"] as const;
 
       expect(volume["tbsp"](conversionCandidate)).toEqual(expected);
@@ -8558,11 +8558,11 @@ describe("volume", () => {
       const fluidOuncesConversion = linearConversion(0.0295735);
 
       const [toBase, fromBase] = [
+        tablespoonsConversion[1],
         fluidOuncesConversion[0],
-        tablespoonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "tbsp"] as const;
+      const expected = [fromBase(toBase(v)), "tbsp"] as const;
       const conversionCandidate = [v, "fl oz"] as const;
 
       expect(volume["tbsp"](conversionCandidate)).toEqual(expected);
@@ -8574,11 +8574,11 @@ describe("volume", () => {
       const cupsConversion = linearConversion(0.24);
 
       const [toBase, fromBase] = [
+        tablespoonsConversion[1],
         cupsConversion[0],
-        tablespoonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "tbsp"] as const;
+      const expected = [fromBase(toBase(v)), "tbsp"] as const;
       const conversionCandidate = [v, "cup"] as const;
 
       expect(volume["tbsp"](conversionCandidate)).toEqual(expected);
@@ -8590,11 +8590,11 @@ describe("volume", () => {
       const pintsConversion = linearConversion(0.473176);
 
       const [toBase, fromBase] = [
+        tablespoonsConversion[1],
         pintsConversion[0],
-        tablespoonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "tbsp"] as const;
+      const expected = [fromBase(toBase(v)), "tbsp"] as const;
       const conversionCandidate = [v, "pt"] as const;
 
       expect(volume["tbsp"](conversionCandidate)).toEqual(expected);
@@ -8606,11 +8606,11 @@ describe("volume", () => {
       const quartsConversion = linearConversion(0.946353);
 
       const [toBase, fromBase] = [
+        tablespoonsConversion[1],
         quartsConversion[0],
-        tablespoonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "tbsp"] as const;
+      const expected = [fromBase(toBase(v)), "tbsp"] as const;
       const conversionCandidate = [v, "qt"] as const;
 
       expect(volume["tbsp"](conversionCandidate)).toEqual(expected);
@@ -8622,11 +8622,11 @@ describe("volume", () => {
       const gallonsConversion = linearConversion(3.78541);
 
       const [toBase, fromBase] = [
+        tablespoonsConversion[1],
         gallonsConversion[0],
-        tablespoonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "tbsp"] as const;
+      const expected = [fromBase(toBase(v)), "tbsp"] as const;
       const conversionCandidate = [v, "gal"] as const;
 
       expect(volume["tbsp"](conversionCandidate)).toEqual(expected);
@@ -8638,11 +8638,11 @@ describe("volume", () => {
       const imperialTeaspoonsConversion = linearConversion(0.00591939);
 
       const [toBase, fromBase] = [
+        tablespoonsConversion[1],
         imperialTeaspoonsConversion[0],
-        tablespoonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "tbsp"] as const;
+      const expected = [fromBase(toBase(v)), "tbsp"] as const;
       const conversionCandidate = [v, "imperial tsp"] as const;
 
       expect(volume["tbsp"](conversionCandidate)).toEqual(expected);
@@ -8654,11 +8654,11 @@ describe("volume", () => {
       const imperialTablespoonsConversion = linearConversion(0.0177582);
 
       const [toBase, fromBase] = [
+        tablespoonsConversion[1],
         imperialTablespoonsConversion[0],
-        tablespoonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "tbsp"] as const;
+      const expected = [fromBase(toBase(v)), "tbsp"] as const;
       const conversionCandidate = [v, "imperial tbsp"] as const;
 
       expect(volume["tbsp"](conversionCandidate)).toEqual(expected);
@@ -8670,11 +8670,11 @@ describe("volume", () => {
       const imperialFluidOuncesConversion = linearConversion(0.0284131);
 
       const [toBase, fromBase] = [
+        tablespoonsConversion[1],
         imperialFluidOuncesConversion[0],
-        tablespoonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "tbsp"] as const;
+      const expected = [fromBase(toBase(v)), "tbsp"] as const;
       const conversionCandidate = [v, "imperial fl oz"] as const;
 
       expect(volume["tbsp"](conversionCandidate)).toEqual(expected);
@@ -8686,11 +8686,11 @@ describe("volume", () => {
       const imperialPintsConversion = linearConversion(0.568261);
 
       const [toBase, fromBase] = [
+        tablespoonsConversion[1],
         imperialPintsConversion[0],
-        tablespoonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "tbsp"] as const;
+      const expected = [fromBase(toBase(v)), "tbsp"] as const;
       const conversionCandidate = [v, "imperial pt"] as const;
 
       expect(volume["tbsp"](conversionCandidate)).toEqual(expected);
@@ -8702,11 +8702,11 @@ describe("volume", () => {
       const imperialQuartsConversion = linearConversion(1.13652);
 
       const [toBase, fromBase] = [
+        tablespoonsConversion[1],
         imperialQuartsConversion[0],
-        tablespoonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "tbsp"] as const;
+      const expected = [fromBase(toBase(v)), "tbsp"] as const;
       const conversionCandidate = [v, "imperial qt"] as const;
 
       expect(volume["tbsp"](conversionCandidate)).toEqual(expected);
@@ -8718,11 +8718,11 @@ describe("volume", () => {
       const imperialGallonsConversion = linearConversion(4.54609);
 
       const [toBase, fromBase] = [
+        tablespoonsConversion[1],
         imperialGallonsConversion[0],
-        tablespoonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "tbsp"] as const;
+      const expected = [fromBase(toBase(v)), "tbsp"] as const;
       const conversionCandidate = [v, "imperial gal"] as const;
 
       expect(volume["tbsp"](conversionCandidate)).toEqual(expected);
@@ -8734,11 +8734,11 @@ describe("volume", () => {
       const metricCupsConversion = linearConversion(0.25);
 
       const [toBase, fromBase] = [
+        tablespoonsConversion[1],
         metricCupsConversion[0],
-        tablespoonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "tbsp"] as const;
+      const expected = [fromBase(toBase(v)), "tbsp"] as const;
       const conversionCandidate = [v, "metric cup"] as const;
 
       expect(volume["tbsp"](conversionCandidate)).toEqual(expected);
@@ -8758,11 +8758,11 @@ describe("volume", () => {
       const megalitersConversion = linearConversion(1000000);
 
       const [toBase, fromBase] = [
+        fluidOuncesConversion[1],
         megalitersConversion[0],
-        fluidOuncesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "fl oz"] as const;
+      const expected = [fromBase(toBase(v)), "fl oz"] as const;
       const conversionCandidate = [v, "ML"] as const;
 
       expect(volume["fl oz"](conversionCandidate)).toEqual(expected);
@@ -8774,11 +8774,11 @@ describe("volume", () => {
       const kilolitersConversion = linearConversion(1000);
 
       const [toBase, fromBase] = [
+        fluidOuncesConversion[1],
         kilolitersConversion[0],
-        fluidOuncesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "fl oz"] as const;
+      const expected = [fromBase(toBase(v)), "fl oz"] as const;
       const conversionCandidate = [v, "kL"] as const;
 
       expect(volume["fl oz"](conversionCandidate)).toEqual(expected);
@@ -8790,11 +8790,11 @@ describe("volume", () => {
       const litersConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
+        fluidOuncesConversion[1],
         litersConversion[0],
-        fluidOuncesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "fl oz"] as const;
+      const expected = [fromBase(toBase(v)), "fl oz"] as const;
       const conversionCandidate = [v, "L"] as const;
 
       expect(volume["fl oz"](conversionCandidate)).toEqual(expected);
@@ -8806,11 +8806,11 @@ describe("volume", () => {
       const decilitersConversion = linearConversion(0.1);
 
       const [toBase, fromBase] = [
+        fluidOuncesConversion[1],
         decilitersConversion[0],
-        fluidOuncesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "fl oz"] as const;
+      const expected = [fromBase(toBase(v)), "fl oz"] as const;
       const conversionCandidate = [v, "dL"] as const;
 
       expect(volume["fl oz"](conversionCandidate)).toEqual(expected);
@@ -8822,11 +8822,11 @@ describe("volume", () => {
       const centilitersConversion = linearConversion(0.01);
 
       const [toBase, fromBase] = [
+        fluidOuncesConversion[1],
         centilitersConversion[0],
-        fluidOuncesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "fl oz"] as const;
+      const expected = [fromBase(toBase(v)), "fl oz"] as const;
       const conversionCandidate = [v, "cL"] as const;
 
       expect(volume["fl oz"](conversionCandidate)).toEqual(expected);
@@ -8838,11 +8838,11 @@ describe("volume", () => {
       const millilitersConversion = linearConversion(0.001);
 
       const [toBase, fromBase] = [
+        fluidOuncesConversion[1],
         millilitersConversion[0],
-        fluidOuncesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "fl oz"] as const;
+      const expected = [fromBase(toBase(v)), "fl oz"] as const;
       const conversionCandidate = [v, "mL"] as const;
 
       expect(volume["fl oz"](conversionCandidate)).toEqual(expected);
@@ -8854,11 +8854,11 @@ describe("volume", () => {
       const cubicKilometersConversion = linearConversion(1000000000000);
 
       const [toBase, fromBase] = [
+        fluidOuncesConversion[1],
         cubicKilometersConversion[0],
-        fluidOuncesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "fl oz"] as const;
+      const expected = [fromBase(toBase(v)), "fl oz"] as const;
       const conversionCandidate = [v, "km³"] as const;
 
       expect(volume["fl oz"](conversionCandidate)).toEqual(expected);
@@ -8870,11 +8870,11 @@ describe("volume", () => {
       const cubicMetersConversion = linearConversion(1000);
 
       const [toBase, fromBase] = [
+        fluidOuncesConversion[1],
         cubicMetersConversion[0],
-        fluidOuncesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "fl oz"] as const;
+      const expected = [fromBase(toBase(v)), "fl oz"] as const;
       const conversionCandidate = [v, "m³"] as const;
 
       expect(volume["fl oz"](conversionCandidate)).toEqual(expected);
@@ -8886,11 +8886,11 @@ describe("volume", () => {
       const cubicDecimetersConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
+        fluidOuncesConversion[1],
         cubicDecimetersConversion[0],
-        fluidOuncesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "fl oz"] as const;
+      const expected = [fromBase(toBase(v)), "fl oz"] as const;
       const conversionCandidate = [v, "dm³"] as const;
 
       expect(volume["fl oz"](conversionCandidate)).toEqual(expected);
@@ -8902,11 +8902,11 @@ describe("volume", () => {
       const cubicMillimetersConversion = linearConversion(0.000001);
 
       const [toBase, fromBase] = [
+        fluidOuncesConversion[1],
         cubicMillimetersConversion[0],
-        fluidOuncesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "fl oz"] as const;
+      const expected = [fromBase(toBase(v)), "fl oz"] as const;
       const conversionCandidate = [v, "mm³"] as const;
 
       expect(volume["fl oz"](conversionCandidate)).toEqual(expected);
@@ -8918,11 +8918,11 @@ describe("volume", () => {
       const cubicInchesConversion = linearConversion(0.0163871);
 
       const [toBase, fromBase] = [
+        fluidOuncesConversion[1],
         cubicInchesConversion[0],
-        fluidOuncesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "fl oz"] as const;
+      const expected = [fromBase(toBase(v)), "fl oz"] as const;
       const conversionCandidate = [v, "in³"] as const;
 
       expect(volume["fl oz"](conversionCandidate)).toEqual(expected);
@@ -8934,11 +8934,11 @@ describe("volume", () => {
       const cubicFeetConversion = linearConversion(28.3168);
 
       const [toBase, fromBase] = [
+        fluidOuncesConversion[1],
         cubicFeetConversion[0],
-        fluidOuncesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "fl oz"] as const;
+      const expected = [fromBase(toBase(v)), "fl oz"] as const;
       const conversionCandidate = [v, "ft³"] as const;
 
       expect(volume["fl oz"](conversionCandidate)).toEqual(expected);
@@ -8950,11 +8950,11 @@ describe("volume", () => {
       const cubicYardsConversion = linearConversion(764.555);
 
       const [toBase, fromBase] = [
+        fluidOuncesConversion[1],
         cubicYardsConversion[0],
-        fluidOuncesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "fl oz"] as const;
+      const expected = [fromBase(toBase(v)), "fl oz"] as const;
       const conversionCandidate = [v, "yd³"] as const;
 
       expect(volume["fl oz"](conversionCandidate)).toEqual(expected);
@@ -8966,11 +8966,11 @@ describe("volume", () => {
       const cubicMilesConversion = linearConversion(4168000000000);
 
       const [toBase, fromBase] = [
+        fluidOuncesConversion[1],
         cubicMilesConversion[0],
-        fluidOuncesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "fl oz"] as const;
+      const expected = [fromBase(toBase(v)), "fl oz"] as const;
       const conversionCandidate = [v, "mi³"] as const;
 
       expect(volume["fl oz"](conversionCandidate)).toEqual(expected);
@@ -8982,11 +8982,11 @@ describe("volume", () => {
       const acreFeetConversion = linearConversion(1233000);
 
       const [toBase, fromBase] = [
+        fluidOuncesConversion[1],
         acreFeetConversion[0],
-        fluidOuncesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "fl oz"] as const;
+      const expected = [fromBase(toBase(v)), "fl oz"] as const;
       const conversionCandidate = [v, "af"] as const;
 
       expect(volume["fl oz"](conversionCandidate)).toEqual(expected);
@@ -8998,11 +8998,11 @@ describe("volume", () => {
       const bushelsConversion = linearConversion(35.2391);
 
       const [toBase, fromBase] = [
+        fluidOuncesConversion[1],
         bushelsConversion[0],
-        fluidOuncesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "fl oz"] as const;
+      const expected = [fromBase(toBase(v)), "fl oz"] as const;
       const conversionCandidate = [v, "bsh"] as const;
 
       expect(volume["fl oz"](conversionCandidate)).toEqual(expected);
@@ -9014,11 +9014,11 @@ describe("volume", () => {
       const teaspoonsConversion = linearConversion(0.00492892);
 
       const [toBase, fromBase] = [
+        fluidOuncesConversion[1],
         teaspoonsConversion[0],
-        fluidOuncesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "fl oz"] as const;
+      const expected = [fromBase(toBase(v)), "fl oz"] as const;
       const conversionCandidate = [v, "tsp"] as const;
 
       expect(volume["fl oz"](conversionCandidate)).toEqual(expected);
@@ -9030,11 +9030,11 @@ describe("volume", () => {
       const tablespoonsConversion = linearConversion(0.0147868);
 
       const [toBase, fromBase] = [
+        fluidOuncesConversion[1],
         tablespoonsConversion[0],
-        fluidOuncesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "fl oz"] as const;
+      const expected = [fromBase(toBase(v)), "fl oz"] as const;
       const conversionCandidate = [v, "tbsp"] as const;
 
       expect(volume["fl oz"](conversionCandidate)).toEqual(expected);
@@ -9048,11 +9048,11 @@ describe("volume", () => {
       const cupsConversion = linearConversion(0.24);
 
       const [toBase, fromBase] = [
+        fluidOuncesConversion[1],
         cupsConversion[0],
-        fluidOuncesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "fl oz"] as const;
+      const expected = [fromBase(toBase(v)), "fl oz"] as const;
       const conversionCandidate = [v, "cup"] as const;
 
       expect(volume["fl oz"](conversionCandidate)).toEqual(expected);
@@ -9064,11 +9064,11 @@ describe("volume", () => {
       const pintsConversion = linearConversion(0.473176);
 
       const [toBase, fromBase] = [
+        fluidOuncesConversion[1],
         pintsConversion[0],
-        fluidOuncesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "fl oz"] as const;
+      const expected = [fromBase(toBase(v)), "fl oz"] as const;
       const conversionCandidate = [v, "pt"] as const;
 
       expect(volume["fl oz"](conversionCandidate)).toEqual(expected);
@@ -9080,11 +9080,11 @@ describe("volume", () => {
       const quartsConversion = linearConversion(0.946353);
 
       const [toBase, fromBase] = [
+        fluidOuncesConversion[1],
         quartsConversion[0],
-        fluidOuncesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "fl oz"] as const;
+      const expected = [fromBase(toBase(v)), "fl oz"] as const;
       const conversionCandidate = [v, "qt"] as const;
 
       expect(volume["fl oz"](conversionCandidate)).toEqual(expected);
@@ -9096,11 +9096,11 @@ describe("volume", () => {
       const gallonsConversion = linearConversion(3.78541);
 
       const [toBase, fromBase] = [
+        fluidOuncesConversion[1],
         gallonsConversion[0],
-        fluidOuncesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "fl oz"] as const;
+      const expected = [fromBase(toBase(v)), "fl oz"] as const;
       const conversionCandidate = [v, "gal"] as const;
 
       expect(volume["fl oz"](conversionCandidate)).toEqual(expected);
@@ -9112,11 +9112,11 @@ describe("volume", () => {
       const imperialTeaspoonsConversion = linearConversion(0.00591939);
 
       const [toBase, fromBase] = [
+        fluidOuncesConversion[1],
         imperialTeaspoonsConversion[0],
-        fluidOuncesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "fl oz"] as const;
+      const expected = [fromBase(toBase(v)), "fl oz"] as const;
       const conversionCandidate = [v, "imperial tsp"] as const;
 
       expect(volume["fl oz"](conversionCandidate)).toEqual(expected);
@@ -9128,11 +9128,11 @@ describe("volume", () => {
       const imperialTablespoonsConversion = linearConversion(0.0177582);
 
       const [toBase, fromBase] = [
+        fluidOuncesConversion[1],
         imperialTablespoonsConversion[0],
-        fluidOuncesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "fl oz"] as const;
+      const expected = [fromBase(toBase(v)), "fl oz"] as const;
       const conversionCandidate = [v, "imperial tbsp"] as const;
 
       expect(volume["fl oz"](conversionCandidate)).toEqual(expected);
@@ -9144,11 +9144,11 @@ describe("volume", () => {
       const imperialFluidOuncesConversion = linearConversion(0.0284131);
 
       const [toBase, fromBase] = [
+        fluidOuncesConversion[1],
         imperialFluidOuncesConversion[0],
-        fluidOuncesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "fl oz"] as const;
+      const expected = [fromBase(toBase(v)), "fl oz"] as const;
       const conversionCandidate = [v, "imperial fl oz"] as const;
 
       expect(volume["fl oz"](conversionCandidate)).toEqual(expected);
@@ -9160,11 +9160,11 @@ describe("volume", () => {
       const imperialPintsConversion = linearConversion(0.568261);
 
       const [toBase, fromBase] = [
+        fluidOuncesConversion[1],
         imperialPintsConversion[0],
-        fluidOuncesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "fl oz"] as const;
+      const expected = [fromBase(toBase(v)), "fl oz"] as const;
       const conversionCandidate = [v, "imperial pt"] as const;
 
       expect(volume["fl oz"](conversionCandidate)).toEqual(expected);
@@ -9176,11 +9176,11 @@ describe("volume", () => {
       const imperialQuartsConversion = linearConversion(1.13652);
 
       const [toBase, fromBase] = [
+        fluidOuncesConversion[1],
         imperialQuartsConversion[0],
-        fluidOuncesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "fl oz"] as const;
+      const expected = [fromBase(toBase(v)), "fl oz"] as const;
       const conversionCandidate = [v, "imperial qt"] as const;
 
       expect(volume["fl oz"](conversionCandidate)).toEqual(expected);
@@ -9192,11 +9192,11 @@ describe("volume", () => {
       const imperialGallonsConversion = linearConversion(4.54609);
 
       const [toBase, fromBase] = [
+        fluidOuncesConversion[1],
         imperialGallonsConversion[0],
-        fluidOuncesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "fl oz"] as const;
+      const expected = [fromBase(toBase(v)), "fl oz"] as const;
       const conversionCandidate = [v, "imperial gal"] as const;
 
       expect(volume["fl oz"](conversionCandidate)).toEqual(expected);
@@ -9208,11 +9208,11 @@ describe("volume", () => {
       const metricCupsConversion = linearConversion(0.25);
 
       const [toBase, fromBase] = [
+        fluidOuncesConversion[1],
         metricCupsConversion[0],
-        fluidOuncesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "fl oz"] as const;
+      const expected = [fromBase(toBase(v)), "fl oz"] as const;
       const conversionCandidate = [v, "metric cup"] as const;
 
       expect(volume["fl oz"](conversionCandidate)).toEqual(expected);
@@ -9232,11 +9232,11 @@ describe("volume", () => {
       const megalitersConversion = linearConversion(1000000);
 
       const [toBase, fromBase] = [
+        cupsConversion[1],
         megalitersConversion[0],
-        cupsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "cup"] as const;
+      const expected = [fromBase(toBase(v)), "cup"] as const;
       const conversionCandidate = [v, "ML"] as const;
 
       expect(volume["cup"](conversionCandidate)).toEqual(expected);
@@ -9248,11 +9248,11 @@ describe("volume", () => {
       const kilolitersConversion = linearConversion(1000);
 
       const [toBase, fromBase] = [
+        cupsConversion[1],
         kilolitersConversion[0],
-        cupsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "cup"] as const;
+      const expected = [fromBase(toBase(v)), "cup"] as const;
       const conversionCandidate = [v, "kL"] as const;
 
       expect(volume["cup"](conversionCandidate)).toEqual(expected);
@@ -9264,11 +9264,11 @@ describe("volume", () => {
       const litersConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
+        cupsConversion[1],
         litersConversion[0],
-        cupsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "cup"] as const;
+      const expected = [fromBase(toBase(v)), "cup"] as const;
       const conversionCandidate = [v, "L"] as const;
 
       expect(volume["cup"](conversionCandidate)).toEqual(expected);
@@ -9280,11 +9280,11 @@ describe("volume", () => {
       const decilitersConversion = linearConversion(0.1);
 
       const [toBase, fromBase] = [
+        cupsConversion[1],
         decilitersConversion[0],
-        cupsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "cup"] as const;
+      const expected = [fromBase(toBase(v)), "cup"] as const;
       const conversionCandidate = [v, "dL"] as const;
 
       expect(volume["cup"](conversionCandidate)).toEqual(expected);
@@ -9296,11 +9296,11 @@ describe("volume", () => {
       const centilitersConversion = linearConversion(0.01);
 
       const [toBase, fromBase] = [
+        cupsConversion[1],
         centilitersConversion[0],
-        cupsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "cup"] as const;
+      const expected = [fromBase(toBase(v)), "cup"] as const;
       const conversionCandidate = [v, "cL"] as const;
 
       expect(volume["cup"](conversionCandidate)).toEqual(expected);
@@ -9312,11 +9312,11 @@ describe("volume", () => {
       const millilitersConversion = linearConversion(0.001);
 
       const [toBase, fromBase] = [
+        cupsConversion[1],
         millilitersConversion[0],
-        cupsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "cup"] as const;
+      const expected = [fromBase(toBase(v)), "cup"] as const;
       const conversionCandidate = [v, "mL"] as const;
 
       expect(volume["cup"](conversionCandidate)).toEqual(expected);
@@ -9328,11 +9328,11 @@ describe("volume", () => {
       const cubicKilometersConversion = linearConversion(1000000000000);
 
       const [toBase, fromBase] = [
+        cupsConversion[1],
         cubicKilometersConversion[0],
-        cupsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "cup"] as const;
+      const expected = [fromBase(toBase(v)), "cup"] as const;
       const conversionCandidate = [v, "km³"] as const;
 
       expect(volume["cup"](conversionCandidate)).toEqual(expected);
@@ -9344,11 +9344,11 @@ describe("volume", () => {
       const cubicMetersConversion = linearConversion(1000);
 
       const [toBase, fromBase] = [
+        cupsConversion[1],
         cubicMetersConversion[0],
-        cupsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "cup"] as const;
+      const expected = [fromBase(toBase(v)), "cup"] as const;
       const conversionCandidate = [v, "m³"] as const;
 
       expect(volume["cup"](conversionCandidate)).toEqual(expected);
@@ -9360,11 +9360,11 @@ describe("volume", () => {
       const cubicDecimetersConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
+        cupsConversion[1],
         cubicDecimetersConversion[0],
-        cupsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "cup"] as const;
+      const expected = [fromBase(toBase(v)), "cup"] as const;
       const conversionCandidate = [v, "dm³"] as const;
 
       expect(volume["cup"](conversionCandidate)).toEqual(expected);
@@ -9376,11 +9376,11 @@ describe("volume", () => {
       const cubicMillimetersConversion = linearConversion(0.000001);
 
       const [toBase, fromBase] = [
+        cupsConversion[1],
         cubicMillimetersConversion[0],
-        cupsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "cup"] as const;
+      const expected = [fromBase(toBase(v)), "cup"] as const;
       const conversionCandidate = [v, "mm³"] as const;
 
       expect(volume["cup"](conversionCandidate)).toEqual(expected);
@@ -9392,11 +9392,11 @@ describe("volume", () => {
       const cubicInchesConversion = linearConversion(0.0163871);
 
       const [toBase, fromBase] = [
+        cupsConversion[1],
         cubicInchesConversion[0],
-        cupsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "cup"] as const;
+      const expected = [fromBase(toBase(v)), "cup"] as const;
       const conversionCandidate = [v, "in³"] as const;
 
       expect(volume["cup"](conversionCandidate)).toEqual(expected);
@@ -9408,11 +9408,11 @@ describe("volume", () => {
       const cubicFeetConversion = linearConversion(28.3168);
 
       const [toBase, fromBase] = [
+        cupsConversion[1],
         cubicFeetConversion[0],
-        cupsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "cup"] as const;
+      const expected = [fromBase(toBase(v)), "cup"] as const;
       const conversionCandidate = [v, "ft³"] as const;
 
       expect(volume["cup"](conversionCandidate)).toEqual(expected);
@@ -9424,11 +9424,11 @@ describe("volume", () => {
       const cubicYardsConversion = linearConversion(764.555);
 
       const [toBase, fromBase] = [
+        cupsConversion[1],
         cubicYardsConversion[0],
-        cupsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "cup"] as const;
+      const expected = [fromBase(toBase(v)), "cup"] as const;
       const conversionCandidate = [v, "yd³"] as const;
 
       expect(volume["cup"](conversionCandidate)).toEqual(expected);
@@ -9440,11 +9440,11 @@ describe("volume", () => {
       const cubicMilesConversion = linearConversion(4168000000000);
 
       const [toBase, fromBase] = [
+        cupsConversion[1],
         cubicMilesConversion[0],
-        cupsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "cup"] as const;
+      const expected = [fromBase(toBase(v)), "cup"] as const;
       const conversionCandidate = [v, "mi³"] as const;
 
       expect(volume["cup"](conversionCandidate)).toEqual(expected);
@@ -9456,11 +9456,11 @@ describe("volume", () => {
       const acreFeetConversion = linearConversion(1233000);
 
       const [toBase, fromBase] = [
+        cupsConversion[1],
         acreFeetConversion[0],
-        cupsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "cup"] as const;
+      const expected = [fromBase(toBase(v)), "cup"] as const;
       const conversionCandidate = [v, "af"] as const;
 
       expect(volume["cup"](conversionCandidate)).toEqual(expected);
@@ -9472,11 +9472,11 @@ describe("volume", () => {
       const bushelsConversion = linearConversion(35.2391);
 
       const [toBase, fromBase] = [
+        cupsConversion[1],
         bushelsConversion[0],
-        cupsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "cup"] as const;
+      const expected = [fromBase(toBase(v)), "cup"] as const;
       const conversionCandidate = [v, "bsh"] as const;
 
       expect(volume["cup"](conversionCandidate)).toEqual(expected);
@@ -9488,11 +9488,11 @@ describe("volume", () => {
       const teaspoonsConversion = linearConversion(0.00492892);
 
       const [toBase, fromBase] = [
+        cupsConversion[1],
         teaspoonsConversion[0],
-        cupsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "cup"] as const;
+      const expected = [fromBase(toBase(v)), "cup"] as const;
       const conversionCandidate = [v, "tsp"] as const;
 
       expect(volume["cup"](conversionCandidate)).toEqual(expected);
@@ -9504,11 +9504,11 @@ describe("volume", () => {
       const tablespoonsConversion = linearConversion(0.0147868);
 
       const [toBase, fromBase] = [
+        cupsConversion[1],
         tablespoonsConversion[0],
-        cupsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "cup"] as const;
+      const expected = [fromBase(toBase(v)), "cup"] as const;
       const conversionCandidate = [v, "tbsp"] as const;
 
       expect(volume["cup"](conversionCandidate)).toEqual(expected);
@@ -9520,11 +9520,11 @@ describe("volume", () => {
       const fluidOuncesConversion = linearConversion(0.0295735);
 
       const [toBase, fromBase] = [
+        cupsConversion[1],
         fluidOuncesConversion[0],
-        cupsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "cup"] as const;
+      const expected = [fromBase(toBase(v)), "cup"] as const;
       const conversionCandidate = [v, "fl oz"] as const;
 
       expect(volume["cup"](conversionCandidate)).toEqual(expected);
@@ -9538,11 +9538,11 @@ describe("volume", () => {
       const pintsConversion = linearConversion(0.473176);
 
       const [toBase, fromBase] = [
+        cupsConversion[1],
         pintsConversion[0],
-        cupsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "cup"] as const;
+      const expected = [fromBase(toBase(v)), "cup"] as const;
       const conversionCandidate = [v, "pt"] as const;
 
       expect(volume["cup"](conversionCandidate)).toEqual(expected);
@@ -9554,11 +9554,11 @@ describe("volume", () => {
       const quartsConversion = linearConversion(0.946353);
 
       const [toBase, fromBase] = [
+        cupsConversion[1],
         quartsConversion[0],
-        cupsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "cup"] as const;
+      const expected = [fromBase(toBase(v)), "cup"] as const;
       const conversionCandidate = [v, "qt"] as const;
 
       expect(volume["cup"](conversionCandidate)).toEqual(expected);
@@ -9570,11 +9570,11 @@ describe("volume", () => {
       const gallonsConversion = linearConversion(3.78541);
 
       const [toBase, fromBase] = [
+        cupsConversion[1],
         gallonsConversion[0],
-        cupsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "cup"] as const;
+      const expected = [fromBase(toBase(v)), "cup"] as const;
       const conversionCandidate = [v, "gal"] as const;
 
       expect(volume["cup"](conversionCandidate)).toEqual(expected);
@@ -9586,11 +9586,11 @@ describe("volume", () => {
       const imperialTeaspoonsConversion = linearConversion(0.00591939);
 
       const [toBase, fromBase] = [
+        cupsConversion[1],
         imperialTeaspoonsConversion[0],
-        cupsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "cup"] as const;
+      const expected = [fromBase(toBase(v)), "cup"] as const;
       const conversionCandidate = [v, "imperial tsp"] as const;
 
       expect(volume["cup"](conversionCandidate)).toEqual(expected);
@@ -9602,11 +9602,11 @@ describe("volume", () => {
       const imperialTablespoonsConversion = linearConversion(0.0177582);
 
       const [toBase, fromBase] = [
+        cupsConversion[1],
         imperialTablespoonsConversion[0],
-        cupsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "cup"] as const;
+      const expected = [fromBase(toBase(v)), "cup"] as const;
       const conversionCandidate = [v, "imperial tbsp"] as const;
 
       expect(volume["cup"](conversionCandidate)).toEqual(expected);
@@ -9618,11 +9618,11 @@ describe("volume", () => {
       const imperialFluidOuncesConversion = linearConversion(0.0284131);
 
       const [toBase, fromBase] = [
+        cupsConversion[1],
         imperialFluidOuncesConversion[0],
-        cupsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "cup"] as const;
+      const expected = [fromBase(toBase(v)), "cup"] as const;
       const conversionCandidate = [v, "imperial fl oz"] as const;
 
       expect(volume["cup"](conversionCandidate)).toEqual(expected);
@@ -9634,11 +9634,11 @@ describe("volume", () => {
       const imperialPintsConversion = linearConversion(0.568261);
 
       const [toBase, fromBase] = [
+        cupsConversion[1],
         imperialPintsConversion[0],
-        cupsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "cup"] as const;
+      const expected = [fromBase(toBase(v)), "cup"] as const;
       const conversionCandidate = [v, "imperial pt"] as const;
 
       expect(volume["cup"](conversionCandidate)).toEqual(expected);
@@ -9650,11 +9650,11 @@ describe("volume", () => {
       const imperialQuartsConversion = linearConversion(1.13652);
 
       const [toBase, fromBase] = [
+        cupsConversion[1],
         imperialQuartsConversion[0],
-        cupsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "cup"] as const;
+      const expected = [fromBase(toBase(v)), "cup"] as const;
       const conversionCandidate = [v, "imperial qt"] as const;
 
       expect(volume["cup"](conversionCandidate)).toEqual(expected);
@@ -9666,11 +9666,11 @@ describe("volume", () => {
       const imperialGallonsConversion = linearConversion(4.54609);
 
       const [toBase, fromBase] = [
+        cupsConversion[1],
         imperialGallonsConversion[0],
-        cupsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "cup"] as const;
+      const expected = [fromBase(toBase(v)), "cup"] as const;
       const conversionCandidate = [v, "imperial gal"] as const;
 
       expect(volume["cup"](conversionCandidate)).toEqual(expected);
@@ -9682,11 +9682,11 @@ describe("volume", () => {
       const metricCupsConversion = linearConversion(0.25);
 
       const [toBase, fromBase] = [
+        cupsConversion[1],
         metricCupsConversion[0],
-        cupsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "cup"] as const;
+      const expected = [fromBase(toBase(v)), "cup"] as const;
       const conversionCandidate = [v, "metric cup"] as const;
 
       expect(volume["cup"](conversionCandidate)).toEqual(expected);
@@ -9706,11 +9706,11 @@ describe("volume", () => {
       const megalitersConversion = linearConversion(1000000);
 
       const [toBase, fromBase] = [
+        pintsConversion[1],
         megalitersConversion[0],
-        pintsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "pt"] as const;
+      const expected = [fromBase(toBase(v)), "pt"] as const;
       const conversionCandidate = [v, "ML"] as const;
 
       expect(volume["pt"](conversionCandidate)).toEqual(expected);
@@ -9722,11 +9722,11 @@ describe("volume", () => {
       const kilolitersConversion = linearConversion(1000);
 
       const [toBase, fromBase] = [
+        pintsConversion[1],
         kilolitersConversion[0],
-        pintsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "pt"] as const;
+      const expected = [fromBase(toBase(v)), "pt"] as const;
       const conversionCandidate = [v, "kL"] as const;
 
       expect(volume["pt"](conversionCandidate)).toEqual(expected);
@@ -9738,11 +9738,11 @@ describe("volume", () => {
       const litersConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
+        pintsConversion[1],
         litersConversion[0],
-        pintsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "pt"] as const;
+      const expected = [fromBase(toBase(v)), "pt"] as const;
       const conversionCandidate = [v, "L"] as const;
 
       expect(volume["pt"](conversionCandidate)).toEqual(expected);
@@ -9754,11 +9754,11 @@ describe("volume", () => {
       const decilitersConversion = linearConversion(0.1);
 
       const [toBase, fromBase] = [
+        pintsConversion[1],
         decilitersConversion[0],
-        pintsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "pt"] as const;
+      const expected = [fromBase(toBase(v)), "pt"] as const;
       const conversionCandidate = [v, "dL"] as const;
 
       expect(volume["pt"](conversionCandidate)).toEqual(expected);
@@ -9770,11 +9770,11 @@ describe("volume", () => {
       const centilitersConversion = linearConversion(0.01);
 
       const [toBase, fromBase] = [
+        pintsConversion[1],
         centilitersConversion[0],
-        pintsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "pt"] as const;
+      const expected = [fromBase(toBase(v)), "pt"] as const;
       const conversionCandidate = [v, "cL"] as const;
 
       expect(volume["pt"](conversionCandidate)).toEqual(expected);
@@ -9786,11 +9786,11 @@ describe("volume", () => {
       const millilitersConversion = linearConversion(0.001);
 
       const [toBase, fromBase] = [
+        pintsConversion[1],
         millilitersConversion[0],
-        pintsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "pt"] as const;
+      const expected = [fromBase(toBase(v)), "pt"] as const;
       const conversionCandidate = [v, "mL"] as const;
 
       expect(volume["pt"](conversionCandidate)).toEqual(expected);
@@ -9802,11 +9802,11 @@ describe("volume", () => {
       const cubicKilometersConversion = linearConversion(1000000000000);
 
       const [toBase, fromBase] = [
+        pintsConversion[1],
         cubicKilometersConversion[0],
-        pintsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "pt"] as const;
+      const expected = [fromBase(toBase(v)), "pt"] as const;
       const conversionCandidate = [v, "km³"] as const;
 
       expect(volume["pt"](conversionCandidate)).toEqual(expected);
@@ -9818,11 +9818,11 @@ describe("volume", () => {
       const cubicMetersConversion = linearConversion(1000);
 
       const [toBase, fromBase] = [
+        pintsConversion[1],
         cubicMetersConversion[0],
-        pintsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "pt"] as const;
+      const expected = [fromBase(toBase(v)), "pt"] as const;
       const conversionCandidate = [v, "m³"] as const;
 
       expect(volume["pt"](conversionCandidate)).toEqual(expected);
@@ -9834,11 +9834,11 @@ describe("volume", () => {
       const cubicDecimetersConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
+        pintsConversion[1],
         cubicDecimetersConversion[0],
-        pintsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "pt"] as const;
+      const expected = [fromBase(toBase(v)), "pt"] as const;
       const conversionCandidate = [v, "dm³"] as const;
 
       expect(volume["pt"](conversionCandidate)).toEqual(expected);
@@ -9850,11 +9850,11 @@ describe("volume", () => {
       const cubicMillimetersConversion = linearConversion(0.000001);
 
       const [toBase, fromBase] = [
+        pintsConversion[1],
         cubicMillimetersConversion[0],
-        pintsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "pt"] as const;
+      const expected = [fromBase(toBase(v)), "pt"] as const;
       const conversionCandidate = [v, "mm³"] as const;
 
       expect(volume["pt"](conversionCandidate)).toEqual(expected);
@@ -9866,11 +9866,11 @@ describe("volume", () => {
       const cubicInchesConversion = linearConversion(0.0163871);
 
       const [toBase, fromBase] = [
+        pintsConversion[1],
         cubicInchesConversion[0],
-        pintsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "pt"] as const;
+      const expected = [fromBase(toBase(v)), "pt"] as const;
       const conversionCandidate = [v, "in³"] as const;
 
       expect(volume["pt"](conversionCandidate)).toEqual(expected);
@@ -9882,11 +9882,11 @@ describe("volume", () => {
       const cubicFeetConversion = linearConversion(28.3168);
 
       const [toBase, fromBase] = [
+        pintsConversion[1],
         cubicFeetConversion[0],
-        pintsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "pt"] as const;
+      const expected = [fromBase(toBase(v)), "pt"] as const;
       const conversionCandidate = [v, "ft³"] as const;
 
       expect(volume["pt"](conversionCandidate)).toEqual(expected);
@@ -9898,11 +9898,11 @@ describe("volume", () => {
       const cubicYardsConversion = linearConversion(764.555);
 
       const [toBase, fromBase] = [
+        pintsConversion[1],
         cubicYardsConversion[0],
-        pintsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "pt"] as const;
+      const expected = [fromBase(toBase(v)), "pt"] as const;
       const conversionCandidate = [v, "yd³"] as const;
 
       expect(volume["pt"](conversionCandidate)).toEqual(expected);
@@ -9914,11 +9914,11 @@ describe("volume", () => {
       const cubicMilesConversion = linearConversion(4168000000000);
 
       const [toBase, fromBase] = [
+        pintsConversion[1],
         cubicMilesConversion[0],
-        pintsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "pt"] as const;
+      const expected = [fromBase(toBase(v)), "pt"] as const;
       const conversionCandidate = [v, "mi³"] as const;
 
       expect(volume["pt"](conversionCandidate)).toEqual(expected);
@@ -9930,11 +9930,11 @@ describe("volume", () => {
       const acreFeetConversion = linearConversion(1233000);
 
       const [toBase, fromBase] = [
+        pintsConversion[1],
         acreFeetConversion[0],
-        pintsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "pt"] as const;
+      const expected = [fromBase(toBase(v)), "pt"] as const;
       const conversionCandidate = [v, "af"] as const;
 
       expect(volume["pt"](conversionCandidate)).toEqual(expected);
@@ -9946,11 +9946,11 @@ describe("volume", () => {
       const bushelsConversion = linearConversion(35.2391);
 
       const [toBase, fromBase] = [
+        pintsConversion[1],
         bushelsConversion[0],
-        pintsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "pt"] as const;
+      const expected = [fromBase(toBase(v)), "pt"] as const;
       const conversionCandidate = [v, "bsh"] as const;
 
       expect(volume["pt"](conversionCandidate)).toEqual(expected);
@@ -9962,11 +9962,11 @@ describe("volume", () => {
       const teaspoonsConversion = linearConversion(0.00492892);
 
       const [toBase, fromBase] = [
+        pintsConversion[1],
         teaspoonsConversion[0],
-        pintsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "pt"] as const;
+      const expected = [fromBase(toBase(v)), "pt"] as const;
       const conversionCandidate = [v, "tsp"] as const;
 
       expect(volume["pt"](conversionCandidate)).toEqual(expected);
@@ -9978,11 +9978,11 @@ describe("volume", () => {
       const tablespoonsConversion = linearConversion(0.0147868);
 
       const [toBase, fromBase] = [
+        pintsConversion[1],
         tablespoonsConversion[0],
-        pintsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "pt"] as const;
+      const expected = [fromBase(toBase(v)), "pt"] as const;
       const conversionCandidate = [v, "tbsp"] as const;
 
       expect(volume["pt"](conversionCandidate)).toEqual(expected);
@@ -9994,11 +9994,11 @@ describe("volume", () => {
       const fluidOuncesConversion = linearConversion(0.0295735);
 
       const [toBase, fromBase] = [
+        pintsConversion[1],
         fluidOuncesConversion[0],
-        pintsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "pt"] as const;
+      const expected = [fromBase(toBase(v)), "pt"] as const;
       const conversionCandidate = [v, "fl oz"] as const;
 
       expect(volume["pt"](conversionCandidate)).toEqual(expected);
@@ -10010,11 +10010,11 @@ describe("volume", () => {
       const cupsConversion = linearConversion(0.24);
 
       const [toBase, fromBase] = [
+        pintsConversion[1],
         cupsConversion[0],
-        pintsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "pt"] as const;
+      const expected = [fromBase(toBase(v)), "pt"] as const;
       const conversionCandidate = [v, "cup"] as const;
 
       expect(volume["pt"](conversionCandidate)).toEqual(expected);
@@ -10028,11 +10028,11 @@ describe("volume", () => {
       const quartsConversion = linearConversion(0.946353);
 
       const [toBase, fromBase] = [
+        pintsConversion[1],
         quartsConversion[0],
-        pintsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "pt"] as const;
+      const expected = [fromBase(toBase(v)), "pt"] as const;
       const conversionCandidate = [v, "qt"] as const;
 
       expect(volume["pt"](conversionCandidate)).toEqual(expected);
@@ -10044,11 +10044,11 @@ describe("volume", () => {
       const gallonsConversion = linearConversion(3.78541);
 
       const [toBase, fromBase] = [
+        pintsConversion[1],
         gallonsConversion[0],
-        pintsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "pt"] as const;
+      const expected = [fromBase(toBase(v)), "pt"] as const;
       const conversionCandidate = [v, "gal"] as const;
 
       expect(volume["pt"](conversionCandidate)).toEqual(expected);
@@ -10060,11 +10060,11 @@ describe("volume", () => {
       const imperialTeaspoonsConversion = linearConversion(0.00591939);
 
       const [toBase, fromBase] = [
+        pintsConversion[1],
         imperialTeaspoonsConversion[0],
-        pintsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "pt"] as const;
+      const expected = [fromBase(toBase(v)), "pt"] as const;
       const conversionCandidate = [v, "imperial tsp"] as const;
 
       expect(volume["pt"](conversionCandidate)).toEqual(expected);
@@ -10076,11 +10076,11 @@ describe("volume", () => {
       const imperialTablespoonsConversion = linearConversion(0.0177582);
 
       const [toBase, fromBase] = [
+        pintsConversion[1],
         imperialTablespoonsConversion[0],
-        pintsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "pt"] as const;
+      const expected = [fromBase(toBase(v)), "pt"] as const;
       const conversionCandidate = [v, "imperial tbsp"] as const;
 
       expect(volume["pt"](conversionCandidate)).toEqual(expected);
@@ -10092,11 +10092,11 @@ describe("volume", () => {
       const imperialFluidOuncesConversion = linearConversion(0.0284131);
 
       const [toBase, fromBase] = [
+        pintsConversion[1],
         imperialFluidOuncesConversion[0],
-        pintsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "pt"] as const;
+      const expected = [fromBase(toBase(v)), "pt"] as const;
       const conversionCandidate = [v, "imperial fl oz"] as const;
 
       expect(volume["pt"](conversionCandidate)).toEqual(expected);
@@ -10108,11 +10108,11 @@ describe("volume", () => {
       const imperialPintsConversion = linearConversion(0.568261);
 
       const [toBase, fromBase] = [
+        pintsConversion[1],
         imperialPintsConversion[0],
-        pintsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "pt"] as const;
+      const expected = [fromBase(toBase(v)), "pt"] as const;
       const conversionCandidate = [v, "imperial pt"] as const;
 
       expect(volume["pt"](conversionCandidate)).toEqual(expected);
@@ -10124,11 +10124,11 @@ describe("volume", () => {
       const imperialQuartsConversion = linearConversion(1.13652);
 
       const [toBase, fromBase] = [
+        pintsConversion[1],
         imperialQuartsConversion[0],
-        pintsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "pt"] as const;
+      const expected = [fromBase(toBase(v)), "pt"] as const;
       const conversionCandidate = [v, "imperial qt"] as const;
 
       expect(volume["pt"](conversionCandidate)).toEqual(expected);
@@ -10140,11 +10140,11 @@ describe("volume", () => {
       const imperialGallonsConversion = linearConversion(4.54609);
 
       const [toBase, fromBase] = [
+        pintsConversion[1],
         imperialGallonsConversion[0],
-        pintsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "pt"] as const;
+      const expected = [fromBase(toBase(v)), "pt"] as const;
       const conversionCandidate = [v, "imperial gal"] as const;
 
       expect(volume["pt"](conversionCandidate)).toEqual(expected);
@@ -10156,11 +10156,11 @@ describe("volume", () => {
       const metricCupsConversion = linearConversion(0.25);
 
       const [toBase, fromBase] = [
+        pintsConversion[1],
         metricCupsConversion[0],
-        pintsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "pt"] as const;
+      const expected = [fromBase(toBase(v)), "pt"] as const;
       const conversionCandidate = [v, "metric cup"] as const;
 
       expect(volume["pt"](conversionCandidate)).toEqual(expected);
@@ -10180,11 +10180,11 @@ describe("volume", () => {
       const megalitersConversion = linearConversion(1000000);
 
       const [toBase, fromBase] = [
+        quartsConversion[1],
         megalitersConversion[0],
-        quartsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "qt"] as const;
+      const expected = [fromBase(toBase(v)), "qt"] as const;
       const conversionCandidate = [v, "ML"] as const;
 
       expect(volume["qt"](conversionCandidate)).toEqual(expected);
@@ -10196,11 +10196,11 @@ describe("volume", () => {
       const kilolitersConversion = linearConversion(1000);
 
       const [toBase, fromBase] = [
+        quartsConversion[1],
         kilolitersConversion[0],
-        quartsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "qt"] as const;
+      const expected = [fromBase(toBase(v)), "qt"] as const;
       const conversionCandidate = [v, "kL"] as const;
 
       expect(volume["qt"](conversionCandidate)).toEqual(expected);
@@ -10212,11 +10212,11 @@ describe("volume", () => {
       const litersConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
+        quartsConversion[1],
         litersConversion[0],
-        quartsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "qt"] as const;
+      const expected = [fromBase(toBase(v)), "qt"] as const;
       const conversionCandidate = [v, "L"] as const;
 
       expect(volume["qt"](conversionCandidate)).toEqual(expected);
@@ -10228,11 +10228,11 @@ describe("volume", () => {
       const decilitersConversion = linearConversion(0.1);
 
       const [toBase, fromBase] = [
+        quartsConversion[1],
         decilitersConversion[0],
-        quartsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "qt"] as const;
+      const expected = [fromBase(toBase(v)), "qt"] as const;
       const conversionCandidate = [v, "dL"] as const;
 
       expect(volume["qt"](conversionCandidate)).toEqual(expected);
@@ -10244,11 +10244,11 @@ describe("volume", () => {
       const centilitersConversion = linearConversion(0.01);
 
       const [toBase, fromBase] = [
+        quartsConversion[1],
         centilitersConversion[0],
-        quartsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "qt"] as const;
+      const expected = [fromBase(toBase(v)), "qt"] as const;
       const conversionCandidate = [v, "cL"] as const;
 
       expect(volume["qt"](conversionCandidate)).toEqual(expected);
@@ -10260,11 +10260,11 @@ describe("volume", () => {
       const millilitersConversion = linearConversion(0.001);
 
       const [toBase, fromBase] = [
+        quartsConversion[1],
         millilitersConversion[0],
-        quartsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "qt"] as const;
+      const expected = [fromBase(toBase(v)), "qt"] as const;
       const conversionCandidate = [v, "mL"] as const;
 
       expect(volume["qt"](conversionCandidate)).toEqual(expected);
@@ -10276,11 +10276,11 @@ describe("volume", () => {
       const cubicKilometersConversion = linearConversion(1000000000000);
 
       const [toBase, fromBase] = [
+        quartsConversion[1],
         cubicKilometersConversion[0],
-        quartsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "qt"] as const;
+      const expected = [fromBase(toBase(v)), "qt"] as const;
       const conversionCandidate = [v, "km³"] as const;
 
       expect(volume["qt"](conversionCandidate)).toEqual(expected);
@@ -10292,11 +10292,11 @@ describe("volume", () => {
       const cubicMetersConversion = linearConversion(1000);
 
       const [toBase, fromBase] = [
+        quartsConversion[1],
         cubicMetersConversion[0],
-        quartsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "qt"] as const;
+      const expected = [fromBase(toBase(v)), "qt"] as const;
       const conversionCandidate = [v, "m³"] as const;
 
       expect(volume["qt"](conversionCandidate)).toEqual(expected);
@@ -10308,11 +10308,11 @@ describe("volume", () => {
       const cubicDecimetersConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
+        quartsConversion[1],
         cubicDecimetersConversion[0],
-        quartsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "qt"] as const;
+      const expected = [fromBase(toBase(v)), "qt"] as const;
       const conversionCandidate = [v, "dm³"] as const;
 
       expect(volume["qt"](conversionCandidate)).toEqual(expected);
@@ -10324,11 +10324,11 @@ describe("volume", () => {
       const cubicMillimetersConversion = linearConversion(0.000001);
 
       const [toBase, fromBase] = [
+        quartsConversion[1],
         cubicMillimetersConversion[0],
-        quartsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "qt"] as const;
+      const expected = [fromBase(toBase(v)), "qt"] as const;
       const conversionCandidate = [v, "mm³"] as const;
 
       expect(volume["qt"](conversionCandidate)).toEqual(expected);
@@ -10340,11 +10340,11 @@ describe("volume", () => {
       const cubicInchesConversion = linearConversion(0.0163871);
 
       const [toBase, fromBase] = [
+        quartsConversion[1],
         cubicInchesConversion[0],
-        quartsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "qt"] as const;
+      const expected = [fromBase(toBase(v)), "qt"] as const;
       const conversionCandidate = [v, "in³"] as const;
 
       expect(volume["qt"](conversionCandidate)).toEqual(expected);
@@ -10356,11 +10356,11 @@ describe("volume", () => {
       const cubicFeetConversion = linearConversion(28.3168);
 
       const [toBase, fromBase] = [
+        quartsConversion[1],
         cubicFeetConversion[0],
-        quartsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "qt"] as const;
+      const expected = [fromBase(toBase(v)), "qt"] as const;
       const conversionCandidate = [v, "ft³"] as const;
 
       expect(volume["qt"](conversionCandidate)).toEqual(expected);
@@ -10372,11 +10372,11 @@ describe("volume", () => {
       const cubicYardsConversion = linearConversion(764.555);
 
       const [toBase, fromBase] = [
+        quartsConversion[1],
         cubicYardsConversion[0],
-        quartsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "qt"] as const;
+      const expected = [fromBase(toBase(v)), "qt"] as const;
       const conversionCandidate = [v, "yd³"] as const;
 
       expect(volume["qt"](conversionCandidate)).toEqual(expected);
@@ -10388,11 +10388,11 @@ describe("volume", () => {
       const cubicMilesConversion = linearConversion(4168000000000);
 
       const [toBase, fromBase] = [
+        quartsConversion[1],
         cubicMilesConversion[0],
-        quartsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "qt"] as const;
+      const expected = [fromBase(toBase(v)), "qt"] as const;
       const conversionCandidate = [v, "mi³"] as const;
 
       expect(volume["qt"](conversionCandidate)).toEqual(expected);
@@ -10404,11 +10404,11 @@ describe("volume", () => {
       const acreFeetConversion = linearConversion(1233000);
 
       const [toBase, fromBase] = [
+        quartsConversion[1],
         acreFeetConversion[0],
-        quartsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "qt"] as const;
+      const expected = [fromBase(toBase(v)), "qt"] as const;
       const conversionCandidate = [v, "af"] as const;
 
       expect(volume["qt"](conversionCandidate)).toEqual(expected);
@@ -10420,11 +10420,11 @@ describe("volume", () => {
       const bushelsConversion = linearConversion(35.2391);
 
       const [toBase, fromBase] = [
+        quartsConversion[1],
         bushelsConversion[0],
-        quartsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "qt"] as const;
+      const expected = [fromBase(toBase(v)), "qt"] as const;
       const conversionCandidate = [v, "bsh"] as const;
 
       expect(volume["qt"](conversionCandidate)).toEqual(expected);
@@ -10436,11 +10436,11 @@ describe("volume", () => {
       const teaspoonsConversion = linearConversion(0.00492892);
 
       const [toBase, fromBase] = [
+        quartsConversion[1],
         teaspoonsConversion[0],
-        quartsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "qt"] as const;
+      const expected = [fromBase(toBase(v)), "qt"] as const;
       const conversionCandidate = [v, "tsp"] as const;
 
       expect(volume["qt"](conversionCandidate)).toEqual(expected);
@@ -10452,11 +10452,11 @@ describe("volume", () => {
       const tablespoonsConversion = linearConversion(0.0147868);
 
       const [toBase, fromBase] = [
+        quartsConversion[1],
         tablespoonsConversion[0],
-        quartsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "qt"] as const;
+      const expected = [fromBase(toBase(v)), "qt"] as const;
       const conversionCandidate = [v, "tbsp"] as const;
 
       expect(volume["qt"](conversionCandidate)).toEqual(expected);
@@ -10468,11 +10468,11 @@ describe("volume", () => {
       const fluidOuncesConversion = linearConversion(0.0295735);
 
       const [toBase, fromBase] = [
+        quartsConversion[1],
         fluidOuncesConversion[0],
-        quartsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "qt"] as const;
+      const expected = [fromBase(toBase(v)), "qt"] as const;
       const conversionCandidate = [v, "fl oz"] as const;
 
       expect(volume["qt"](conversionCandidate)).toEqual(expected);
@@ -10484,11 +10484,11 @@ describe("volume", () => {
       const cupsConversion = linearConversion(0.24);
 
       const [toBase, fromBase] = [
+        quartsConversion[1],
         cupsConversion[0],
-        quartsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "qt"] as const;
+      const expected = [fromBase(toBase(v)), "qt"] as const;
       const conversionCandidate = [v, "cup"] as const;
 
       expect(volume["qt"](conversionCandidate)).toEqual(expected);
@@ -10500,11 +10500,11 @@ describe("volume", () => {
       const pintsConversion = linearConversion(0.473176);
 
       const [toBase, fromBase] = [
+        quartsConversion[1],
         pintsConversion[0],
-        quartsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "qt"] as const;
+      const expected = [fromBase(toBase(v)), "qt"] as const;
       const conversionCandidate = [v, "pt"] as const;
 
       expect(volume["qt"](conversionCandidate)).toEqual(expected);
@@ -10518,11 +10518,11 @@ describe("volume", () => {
       const gallonsConversion = linearConversion(3.78541);
 
       const [toBase, fromBase] = [
+        quartsConversion[1],
         gallonsConversion[0],
-        quartsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "qt"] as const;
+      const expected = [fromBase(toBase(v)), "qt"] as const;
       const conversionCandidate = [v, "gal"] as const;
 
       expect(volume["qt"](conversionCandidate)).toEqual(expected);
@@ -10534,11 +10534,11 @@ describe("volume", () => {
       const imperialTeaspoonsConversion = linearConversion(0.00591939);
 
       const [toBase, fromBase] = [
+        quartsConversion[1],
         imperialTeaspoonsConversion[0],
-        quartsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "qt"] as const;
+      const expected = [fromBase(toBase(v)), "qt"] as const;
       const conversionCandidate = [v, "imperial tsp"] as const;
 
       expect(volume["qt"](conversionCandidate)).toEqual(expected);
@@ -10550,11 +10550,11 @@ describe("volume", () => {
       const imperialTablespoonsConversion = linearConversion(0.0177582);
 
       const [toBase, fromBase] = [
+        quartsConversion[1],
         imperialTablespoonsConversion[0],
-        quartsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "qt"] as const;
+      const expected = [fromBase(toBase(v)), "qt"] as const;
       const conversionCandidate = [v, "imperial tbsp"] as const;
 
       expect(volume["qt"](conversionCandidate)).toEqual(expected);
@@ -10566,11 +10566,11 @@ describe("volume", () => {
       const imperialFluidOuncesConversion = linearConversion(0.0284131);
 
       const [toBase, fromBase] = [
+        quartsConversion[1],
         imperialFluidOuncesConversion[0],
-        quartsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "qt"] as const;
+      const expected = [fromBase(toBase(v)), "qt"] as const;
       const conversionCandidate = [v, "imperial fl oz"] as const;
 
       expect(volume["qt"](conversionCandidate)).toEqual(expected);
@@ -10582,11 +10582,11 @@ describe("volume", () => {
       const imperialPintsConversion = linearConversion(0.568261);
 
       const [toBase, fromBase] = [
+        quartsConversion[1],
         imperialPintsConversion[0],
-        quartsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "qt"] as const;
+      const expected = [fromBase(toBase(v)), "qt"] as const;
       const conversionCandidate = [v, "imperial pt"] as const;
 
       expect(volume["qt"](conversionCandidate)).toEqual(expected);
@@ -10598,11 +10598,11 @@ describe("volume", () => {
       const imperialQuartsConversion = linearConversion(1.13652);
 
       const [toBase, fromBase] = [
+        quartsConversion[1],
         imperialQuartsConversion[0],
-        quartsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "qt"] as const;
+      const expected = [fromBase(toBase(v)), "qt"] as const;
       const conversionCandidate = [v, "imperial qt"] as const;
 
       expect(volume["qt"](conversionCandidate)).toEqual(expected);
@@ -10614,11 +10614,11 @@ describe("volume", () => {
       const imperialGallonsConversion = linearConversion(4.54609);
 
       const [toBase, fromBase] = [
+        quartsConversion[1],
         imperialGallonsConversion[0],
-        quartsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "qt"] as const;
+      const expected = [fromBase(toBase(v)), "qt"] as const;
       const conversionCandidate = [v, "imperial gal"] as const;
 
       expect(volume["qt"](conversionCandidate)).toEqual(expected);
@@ -10630,11 +10630,11 @@ describe("volume", () => {
       const metricCupsConversion = linearConversion(0.25);
 
       const [toBase, fromBase] = [
+        quartsConversion[1],
         metricCupsConversion[0],
-        quartsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "qt"] as const;
+      const expected = [fromBase(toBase(v)), "qt"] as const;
       const conversionCandidate = [v, "metric cup"] as const;
 
       expect(volume["qt"](conversionCandidate)).toEqual(expected);
@@ -10654,11 +10654,11 @@ describe("volume", () => {
       const megalitersConversion = linearConversion(1000000);
 
       const [toBase, fromBase] = [
+        gallonsConversion[1],
         megalitersConversion[0],
-        gallonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "gal"] as const;
+      const expected = [fromBase(toBase(v)), "gal"] as const;
       const conversionCandidate = [v, "ML"] as const;
 
       expect(volume["gal"](conversionCandidate)).toEqual(expected);
@@ -10670,11 +10670,11 @@ describe("volume", () => {
       const kilolitersConversion = linearConversion(1000);
 
       const [toBase, fromBase] = [
+        gallonsConversion[1],
         kilolitersConversion[0],
-        gallonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "gal"] as const;
+      const expected = [fromBase(toBase(v)), "gal"] as const;
       const conversionCandidate = [v, "kL"] as const;
 
       expect(volume["gal"](conversionCandidate)).toEqual(expected);
@@ -10686,11 +10686,11 @@ describe("volume", () => {
       const litersConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
+        gallonsConversion[1],
         litersConversion[0],
-        gallonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "gal"] as const;
+      const expected = [fromBase(toBase(v)), "gal"] as const;
       const conversionCandidate = [v, "L"] as const;
 
       expect(volume["gal"](conversionCandidate)).toEqual(expected);
@@ -10702,11 +10702,11 @@ describe("volume", () => {
       const decilitersConversion = linearConversion(0.1);
 
       const [toBase, fromBase] = [
+        gallonsConversion[1],
         decilitersConversion[0],
-        gallonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "gal"] as const;
+      const expected = [fromBase(toBase(v)), "gal"] as const;
       const conversionCandidate = [v, "dL"] as const;
 
       expect(volume["gal"](conversionCandidate)).toEqual(expected);
@@ -10718,11 +10718,11 @@ describe("volume", () => {
       const centilitersConversion = linearConversion(0.01);
 
       const [toBase, fromBase] = [
+        gallonsConversion[1],
         centilitersConversion[0],
-        gallonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "gal"] as const;
+      const expected = [fromBase(toBase(v)), "gal"] as const;
       const conversionCandidate = [v, "cL"] as const;
 
       expect(volume["gal"](conversionCandidate)).toEqual(expected);
@@ -10734,11 +10734,11 @@ describe("volume", () => {
       const millilitersConversion = linearConversion(0.001);
 
       const [toBase, fromBase] = [
+        gallonsConversion[1],
         millilitersConversion[0],
-        gallonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "gal"] as const;
+      const expected = [fromBase(toBase(v)), "gal"] as const;
       const conversionCandidate = [v, "mL"] as const;
 
       expect(volume["gal"](conversionCandidate)).toEqual(expected);
@@ -10750,11 +10750,11 @@ describe("volume", () => {
       const cubicKilometersConversion = linearConversion(1000000000000);
 
       const [toBase, fromBase] = [
+        gallonsConversion[1],
         cubicKilometersConversion[0],
-        gallonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "gal"] as const;
+      const expected = [fromBase(toBase(v)), "gal"] as const;
       const conversionCandidate = [v, "km³"] as const;
 
       expect(volume["gal"](conversionCandidate)).toEqual(expected);
@@ -10766,11 +10766,11 @@ describe("volume", () => {
       const cubicMetersConversion = linearConversion(1000);
 
       const [toBase, fromBase] = [
+        gallonsConversion[1],
         cubicMetersConversion[0],
-        gallonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "gal"] as const;
+      const expected = [fromBase(toBase(v)), "gal"] as const;
       const conversionCandidate = [v, "m³"] as const;
 
       expect(volume["gal"](conversionCandidate)).toEqual(expected);
@@ -10782,11 +10782,11 @@ describe("volume", () => {
       const cubicDecimetersConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
+        gallonsConversion[1],
         cubicDecimetersConversion[0],
-        gallonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "gal"] as const;
+      const expected = [fromBase(toBase(v)), "gal"] as const;
       const conversionCandidate = [v, "dm³"] as const;
 
       expect(volume["gal"](conversionCandidate)).toEqual(expected);
@@ -10798,11 +10798,11 @@ describe("volume", () => {
       const cubicMillimetersConversion = linearConversion(0.000001);
 
       const [toBase, fromBase] = [
+        gallonsConversion[1],
         cubicMillimetersConversion[0],
-        gallonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "gal"] as const;
+      const expected = [fromBase(toBase(v)), "gal"] as const;
       const conversionCandidate = [v, "mm³"] as const;
 
       expect(volume["gal"](conversionCandidate)).toEqual(expected);
@@ -10814,11 +10814,11 @@ describe("volume", () => {
       const cubicInchesConversion = linearConversion(0.0163871);
 
       const [toBase, fromBase] = [
+        gallonsConversion[1],
         cubicInchesConversion[0],
-        gallonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "gal"] as const;
+      const expected = [fromBase(toBase(v)), "gal"] as const;
       const conversionCandidate = [v, "in³"] as const;
 
       expect(volume["gal"](conversionCandidate)).toEqual(expected);
@@ -10830,11 +10830,11 @@ describe("volume", () => {
       const cubicFeetConversion = linearConversion(28.3168);
 
       const [toBase, fromBase] = [
+        gallonsConversion[1],
         cubicFeetConversion[0],
-        gallonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "gal"] as const;
+      const expected = [fromBase(toBase(v)), "gal"] as const;
       const conversionCandidate = [v, "ft³"] as const;
 
       expect(volume["gal"](conversionCandidate)).toEqual(expected);
@@ -10846,11 +10846,11 @@ describe("volume", () => {
       const cubicYardsConversion = linearConversion(764.555);
 
       const [toBase, fromBase] = [
+        gallonsConversion[1],
         cubicYardsConversion[0],
-        gallonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "gal"] as const;
+      const expected = [fromBase(toBase(v)), "gal"] as const;
       const conversionCandidate = [v, "yd³"] as const;
 
       expect(volume["gal"](conversionCandidate)).toEqual(expected);
@@ -10862,11 +10862,11 @@ describe("volume", () => {
       const cubicMilesConversion = linearConversion(4168000000000);
 
       const [toBase, fromBase] = [
+        gallonsConversion[1],
         cubicMilesConversion[0],
-        gallonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "gal"] as const;
+      const expected = [fromBase(toBase(v)), "gal"] as const;
       const conversionCandidate = [v, "mi³"] as const;
 
       expect(volume["gal"](conversionCandidate)).toEqual(expected);
@@ -10878,11 +10878,11 @@ describe("volume", () => {
       const acreFeetConversion = linearConversion(1233000);
 
       const [toBase, fromBase] = [
+        gallonsConversion[1],
         acreFeetConversion[0],
-        gallonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "gal"] as const;
+      const expected = [fromBase(toBase(v)), "gal"] as const;
       const conversionCandidate = [v, "af"] as const;
 
       expect(volume["gal"](conversionCandidate)).toEqual(expected);
@@ -10894,11 +10894,11 @@ describe("volume", () => {
       const bushelsConversion = linearConversion(35.2391);
 
       const [toBase, fromBase] = [
+        gallonsConversion[1],
         bushelsConversion[0],
-        gallonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "gal"] as const;
+      const expected = [fromBase(toBase(v)), "gal"] as const;
       const conversionCandidate = [v, "bsh"] as const;
 
       expect(volume["gal"](conversionCandidate)).toEqual(expected);
@@ -10910,11 +10910,11 @@ describe("volume", () => {
       const teaspoonsConversion = linearConversion(0.00492892);
 
       const [toBase, fromBase] = [
+        gallonsConversion[1],
         teaspoonsConversion[0],
-        gallonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "gal"] as const;
+      const expected = [fromBase(toBase(v)), "gal"] as const;
       const conversionCandidate = [v, "tsp"] as const;
 
       expect(volume["gal"](conversionCandidate)).toEqual(expected);
@@ -10926,11 +10926,11 @@ describe("volume", () => {
       const tablespoonsConversion = linearConversion(0.0147868);
 
       const [toBase, fromBase] = [
+        gallonsConversion[1],
         tablespoonsConversion[0],
-        gallonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "gal"] as const;
+      const expected = [fromBase(toBase(v)), "gal"] as const;
       const conversionCandidate = [v, "tbsp"] as const;
 
       expect(volume["gal"](conversionCandidate)).toEqual(expected);
@@ -10942,11 +10942,11 @@ describe("volume", () => {
       const fluidOuncesConversion = linearConversion(0.0295735);
 
       const [toBase, fromBase] = [
+        gallonsConversion[1],
         fluidOuncesConversion[0],
-        gallonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "gal"] as const;
+      const expected = [fromBase(toBase(v)), "gal"] as const;
       const conversionCandidate = [v, "fl oz"] as const;
 
       expect(volume["gal"](conversionCandidate)).toEqual(expected);
@@ -10958,11 +10958,11 @@ describe("volume", () => {
       const cupsConversion = linearConversion(0.24);
 
       const [toBase, fromBase] = [
+        gallonsConversion[1],
         cupsConversion[0],
-        gallonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "gal"] as const;
+      const expected = [fromBase(toBase(v)), "gal"] as const;
       const conversionCandidate = [v, "cup"] as const;
 
       expect(volume["gal"](conversionCandidate)).toEqual(expected);
@@ -10974,11 +10974,11 @@ describe("volume", () => {
       const pintsConversion = linearConversion(0.473176);
 
       const [toBase, fromBase] = [
+        gallonsConversion[1],
         pintsConversion[0],
-        gallonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "gal"] as const;
+      const expected = [fromBase(toBase(v)), "gal"] as const;
       const conversionCandidate = [v, "pt"] as const;
 
       expect(volume["gal"](conversionCandidate)).toEqual(expected);
@@ -10990,11 +10990,11 @@ describe("volume", () => {
       const quartsConversion = linearConversion(0.946353);
 
       const [toBase, fromBase] = [
+        gallonsConversion[1],
         quartsConversion[0],
-        gallonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "gal"] as const;
+      const expected = [fromBase(toBase(v)), "gal"] as const;
       const conversionCandidate = [v, "qt"] as const;
 
       expect(volume["gal"](conversionCandidate)).toEqual(expected);
@@ -11008,11 +11008,11 @@ describe("volume", () => {
       const imperialTeaspoonsConversion = linearConversion(0.00591939);
 
       const [toBase, fromBase] = [
+        gallonsConversion[1],
         imperialTeaspoonsConversion[0],
-        gallonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "gal"] as const;
+      const expected = [fromBase(toBase(v)), "gal"] as const;
       const conversionCandidate = [v, "imperial tsp"] as const;
 
       expect(volume["gal"](conversionCandidate)).toEqual(expected);
@@ -11024,11 +11024,11 @@ describe("volume", () => {
       const imperialTablespoonsConversion = linearConversion(0.0177582);
 
       const [toBase, fromBase] = [
+        gallonsConversion[1],
         imperialTablespoonsConversion[0],
-        gallonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "gal"] as const;
+      const expected = [fromBase(toBase(v)), "gal"] as const;
       const conversionCandidate = [v, "imperial tbsp"] as const;
 
       expect(volume["gal"](conversionCandidate)).toEqual(expected);
@@ -11040,11 +11040,11 @@ describe("volume", () => {
       const imperialFluidOuncesConversion = linearConversion(0.0284131);
 
       const [toBase, fromBase] = [
+        gallonsConversion[1],
         imperialFluidOuncesConversion[0],
-        gallonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "gal"] as const;
+      const expected = [fromBase(toBase(v)), "gal"] as const;
       const conversionCandidate = [v, "imperial fl oz"] as const;
 
       expect(volume["gal"](conversionCandidate)).toEqual(expected);
@@ -11056,11 +11056,11 @@ describe("volume", () => {
       const imperialPintsConversion = linearConversion(0.568261);
 
       const [toBase, fromBase] = [
+        gallonsConversion[1],
         imperialPintsConversion[0],
-        gallonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "gal"] as const;
+      const expected = [fromBase(toBase(v)), "gal"] as const;
       const conversionCandidate = [v, "imperial pt"] as const;
 
       expect(volume["gal"](conversionCandidate)).toEqual(expected);
@@ -11072,11 +11072,11 @@ describe("volume", () => {
       const imperialQuartsConversion = linearConversion(1.13652);
 
       const [toBase, fromBase] = [
+        gallonsConversion[1],
         imperialQuartsConversion[0],
-        gallonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "gal"] as const;
+      const expected = [fromBase(toBase(v)), "gal"] as const;
       const conversionCandidate = [v, "imperial qt"] as const;
 
       expect(volume["gal"](conversionCandidate)).toEqual(expected);
@@ -11088,11 +11088,11 @@ describe("volume", () => {
       const imperialGallonsConversion = linearConversion(4.54609);
 
       const [toBase, fromBase] = [
+        gallonsConversion[1],
         imperialGallonsConversion[0],
-        gallonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "gal"] as const;
+      const expected = [fromBase(toBase(v)), "gal"] as const;
       const conversionCandidate = [v, "imperial gal"] as const;
 
       expect(volume["gal"](conversionCandidate)).toEqual(expected);
@@ -11104,11 +11104,11 @@ describe("volume", () => {
       const metricCupsConversion = linearConversion(0.25);
 
       const [toBase, fromBase] = [
+        gallonsConversion[1],
         metricCupsConversion[0],
-        gallonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "gal"] as const;
+      const expected = [fromBase(toBase(v)), "gal"] as const;
       const conversionCandidate = [v, "metric cup"] as const;
 
       expect(volume["gal"](conversionCandidate)).toEqual(expected);
@@ -11128,11 +11128,11 @@ describe("volume", () => {
       const megalitersConversion = linearConversion(1000000);
 
       const [toBase, fromBase] = [
+        imperialTeaspoonsConversion[1],
         megalitersConversion[0],
-        imperialTeaspoonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "imperial tsp"] as const;
+      const expected = [fromBase(toBase(v)), "imperial tsp"] as const;
       const conversionCandidate = [v, "ML"] as const;
 
       expect(volume["imperial tsp"](conversionCandidate)).toEqual(expected);
@@ -11144,11 +11144,11 @@ describe("volume", () => {
       const kilolitersConversion = linearConversion(1000);
 
       const [toBase, fromBase] = [
+        imperialTeaspoonsConversion[1],
         kilolitersConversion[0],
-        imperialTeaspoonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "imperial tsp"] as const;
+      const expected = [fromBase(toBase(v)), "imperial tsp"] as const;
       const conversionCandidate = [v, "kL"] as const;
 
       expect(volume["imperial tsp"](conversionCandidate)).toEqual(expected);
@@ -11160,11 +11160,11 @@ describe("volume", () => {
       const litersConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
+        imperialTeaspoonsConversion[1],
         litersConversion[0],
-        imperialTeaspoonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "imperial tsp"] as const;
+      const expected = [fromBase(toBase(v)), "imperial tsp"] as const;
       const conversionCandidate = [v, "L"] as const;
 
       expect(volume["imperial tsp"](conversionCandidate)).toEqual(expected);
@@ -11176,11 +11176,11 @@ describe("volume", () => {
       const decilitersConversion = linearConversion(0.1);
 
       const [toBase, fromBase] = [
+        imperialTeaspoonsConversion[1],
         decilitersConversion[0],
-        imperialTeaspoonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "imperial tsp"] as const;
+      const expected = [fromBase(toBase(v)), "imperial tsp"] as const;
       const conversionCandidate = [v, "dL"] as const;
 
       expect(volume["imperial tsp"](conversionCandidate)).toEqual(expected);
@@ -11192,11 +11192,11 @@ describe("volume", () => {
       const centilitersConversion = linearConversion(0.01);
 
       const [toBase, fromBase] = [
+        imperialTeaspoonsConversion[1],
         centilitersConversion[0],
-        imperialTeaspoonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "imperial tsp"] as const;
+      const expected = [fromBase(toBase(v)), "imperial tsp"] as const;
       const conversionCandidate = [v, "cL"] as const;
 
       expect(volume["imperial tsp"](conversionCandidate)).toEqual(expected);
@@ -11208,11 +11208,11 @@ describe("volume", () => {
       const millilitersConversion = linearConversion(0.001);
 
       const [toBase, fromBase] = [
+        imperialTeaspoonsConversion[1],
         millilitersConversion[0],
-        imperialTeaspoonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "imperial tsp"] as const;
+      const expected = [fromBase(toBase(v)), "imperial tsp"] as const;
       const conversionCandidate = [v, "mL"] as const;
 
       expect(volume["imperial tsp"](conversionCandidate)).toEqual(expected);
@@ -11224,11 +11224,11 @@ describe("volume", () => {
       const cubicKilometersConversion = linearConversion(1000000000000);
 
       const [toBase, fromBase] = [
+        imperialTeaspoonsConversion[1],
         cubicKilometersConversion[0],
-        imperialTeaspoonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "imperial tsp"] as const;
+      const expected = [fromBase(toBase(v)), "imperial tsp"] as const;
       const conversionCandidate = [v, "km³"] as const;
 
       expect(volume["imperial tsp"](conversionCandidate)).toEqual(expected);
@@ -11240,11 +11240,11 @@ describe("volume", () => {
       const cubicMetersConversion = linearConversion(1000);
 
       const [toBase, fromBase] = [
+        imperialTeaspoonsConversion[1],
         cubicMetersConversion[0],
-        imperialTeaspoonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "imperial tsp"] as const;
+      const expected = [fromBase(toBase(v)), "imperial tsp"] as const;
       const conversionCandidate = [v, "m³"] as const;
 
       expect(volume["imperial tsp"](conversionCandidate)).toEqual(expected);
@@ -11256,11 +11256,11 @@ describe("volume", () => {
       const cubicDecimetersConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
+        imperialTeaspoonsConversion[1],
         cubicDecimetersConversion[0],
-        imperialTeaspoonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "imperial tsp"] as const;
+      const expected = [fromBase(toBase(v)), "imperial tsp"] as const;
       const conversionCandidate = [v, "dm³"] as const;
 
       expect(volume["imperial tsp"](conversionCandidate)).toEqual(expected);
@@ -11272,11 +11272,11 @@ describe("volume", () => {
       const cubicMillimetersConversion = linearConversion(0.000001);
 
       const [toBase, fromBase] = [
+        imperialTeaspoonsConversion[1],
         cubicMillimetersConversion[0],
-        imperialTeaspoonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "imperial tsp"] as const;
+      const expected = [fromBase(toBase(v)), "imperial tsp"] as const;
       const conversionCandidate = [v, "mm³"] as const;
 
       expect(volume["imperial tsp"](conversionCandidate)).toEqual(expected);
@@ -11288,11 +11288,11 @@ describe("volume", () => {
       const cubicInchesConversion = linearConversion(0.0163871);
 
       const [toBase, fromBase] = [
+        imperialTeaspoonsConversion[1],
         cubicInchesConversion[0],
-        imperialTeaspoonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "imperial tsp"] as const;
+      const expected = [fromBase(toBase(v)), "imperial tsp"] as const;
       const conversionCandidate = [v, "in³"] as const;
 
       expect(volume["imperial tsp"](conversionCandidate)).toEqual(expected);
@@ -11304,11 +11304,11 @@ describe("volume", () => {
       const cubicFeetConversion = linearConversion(28.3168);
 
       const [toBase, fromBase] = [
+        imperialTeaspoonsConversion[1],
         cubicFeetConversion[0],
-        imperialTeaspoonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "imperial tsp"] as const;
+      const expected = [fromBase(toBase(v)), "imperial tsp"] as const;
       const conversionCandidate = [v, "ft³"] as const;
 
       expect(volume["imperial tsp"](conversionCandidate)).toEqual(expected);
@@ -11320,11 +11320,11 @@ describe("volume", () => {
       const cubicYardsConversion = linearConversion(764.555);
 
       const [toBase, fromBase] = [
+        imperialTeaspoonsConversion[1],
         cubicYardsConversion[0],
-        imperialTeaspoonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "imperial tsp"] as const;
+      const expected = [fromBase(toBase(v)), "imperial tsp"] as const;
       const conversionCandidate = [v, "yd³"] as const;
 
       expect(volume["imperial tsp"](conversionCandidate)).toEqual(expected);
@@ -11336,11 +11336,11 @@ describe("volume", () => {
       const cubicMilesConversion = linearConversion(4168000000000);
 
       const [toBase, fromBase] = [
+        imperialTeaspoonsConversion[1],
         cubicMilesConversion[0],
-        imperialTeaspoonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "imperial tsp"] as const;
+      const expected = [fromBase(toBase(v)), "imperial tsp"] as const;
       const conversionCandidate = [v, "mi³"] as const;
 
       expect(volume["imperial tsp"](conversionCandidate)).toEqual(expected);
@@ -11352,11 +11352,11 @@ describe("volume", () => {
       const acreFeetConversion = linearConversion(1233000);
 
       const [toBase, fromBase] = [
+        imperialTeaspoonsConversion[1],
         acreFeetConversion[0],
-        imperialTeaspoonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "imperial tsp"] as const;
+      const expected = [fromBase(toBase(v)), "imperial tsp"] as const;
       const conversionCandidate = [v, "af"] as const;
 
       expect(volume["imperial tsp"](conversionCandidate)).toEqual(expected);
@@ -11368,11 +11368,11 @@ describe("volume", () => {
       const bushelsConversion = linearConversion(35.2391);
 
       const [toBase, fromBase] = [
+        imperialTeaspoonsConversion[1],
         bushelsConversion[0],
-        imperialTeaspoonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "imperial tsp"] as const;
+      const expected = [fromBase(toBase(v)), "imperial tsp"] as const;
       const conversionCandidate = [v, "bsh"] as const;
 
       expect(volume["imperial tsp"](conversionCandidate)).toEqual(expected);
@@ -11384,11 +11384,11 @@ describe("volume", () => {
       const teaspoonsConversion = linearConversion(0.00492892);
 
       const [toBase, fromBase] = [
+        imperialTeaspoonsConversion[1],
         teaspoonsConversion[0],
-        imperialTeaspoonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "imperial tsp"] as const;
+      const expected = [fromBase(toBase(v)), "imperial tsp"] as const;
       const conversionCandidate = [v, "tsp"] as const;
 
       expect(volume["imperial tsp"](conversionCandidate)).toEqual(expected);
@@ -11400,11 +11400,11 @@ describe("volume", () => {
       const tablespoonsConversion = linearConversion(0.0147868);
 
       const [toBase, fromBase] = [
+        imperialTeaspoonsConversion[1],
         tablespoonsConversion[0],
-        imperialTeaspoonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "imperial tsp"] as const;
+      const expected = [fromBase(toBase(v)), "imperial tsp"] as const;
       const conversionCandidate = [v, "tbsp"] as const;
 
       expect(volume["imperial tsp"](conversionCandidate)).toEqual(expected);
@@ -11416,11 +11416,11 @@ describe("volume", () => {
       const fluidOuncesConversion = linearConversion(0.0295735);
 
       const [toBase, fromBase] = [
+        imperialTeaspoonsConversion[1],
         fluidOuncesConversion[0],
-        imperialTeaspoonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "imperial tsp"] as const;
+      const expected = [fromBase(toBase(v)), "imperial tsp"] as const;
       const conversionCandidate = [v, "fl oz"] as const;
 
       expect(volume["imperial tsp"](conversionCandidate)).toEqual(expected);
@@ -11432,11 +11432,11 @@ describe("volume", () => {
       const cupsConversion = linearConversion(0.24);
 
       const [toBase, fromBase] = [
+        imperialTeaspoonsConversion[1],
         cupsConversion[0],
-        imperialTeaspoonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "imperial tsp"] as const;
+      const expected = [fromBase(toBase(v)), "imperial tsp"] as const;
       const conversionCandidate = [v, "cup"] as const;
 
       expect(volume["imperial tsp"](conversionCandidate)).toEqual(expected);
@@ -11448,11 +11448,11 @@ describe("volume", () => {
       const pintsConversion = linearConversion(0.473176);
 
       const [toBase, fromBase] = [
+        imperialTeaspoonsConversion[1],
         pintsConversion[0],
-        imperialTeaspoonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "imperial tsp"] as const;
+      const expected = [fromBase(toBase(v)), "imperial tsp"] as const;
       const conversionCandidate = [v, "pt"] as const;
 
       expect(volume["imperial tsp"](conversionCandidate)).toEqual(expected);
@@ -11464,11 +11464,11 @@ describe("volume", () => {
       const quartsConversion = linearConversion(0.946353);
 
       const [toBase, fromBase] = [
+        imperialTeaspoonsConversion[1],
         quartsConversion[0],
-        imperialTeaspoonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "imperial tsp"] as const;
+      const expected = [fromBase(toBase(v)), "imperial tsp"] as const;
       const conversionCandidate = [v, "qt"] as const;
 
       expect(volume["imperial tsp"](conversionCandidate)).toEqual(expected);
@@ -11480,11 +11480,11 @@ describe("volume", () => {
       const gallonsConversion = linearConversion(3.78541);
 
       const [toBase, fromBase] = [
+        imperialTeaspoonsConversion[1],
         gallonsConversion[0],
-        imperialTeaspoonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "imperial tsp"] as const;
+      const expected = [fromBase(toBase(v)), "imperial tsp"] as const;
       const conversionCandidate = [v, "gal"] as const;
 
       expect(volume["imperial tsp"](conversionCandidate)).toEqual(expected);
@@ -11498,11 +11498,11 @@ describe("volume", () => {
       const imperialTablespoonsConversion = linearConversion(0.0177582);
 
       const [toBase, fromBase] = [
+        imperialTeaspoonsConversion[1],
         imperialTablespoonsConversion[0],
-        imperialTeaspoonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "imperial tsp"] as const;
+      const expected = [fromBase(toBase(v)), "imperial tsp"] as const;
       const conversionCandidate = [v, "imperial tbsp"] as const;
 
       expect(volume["imperial tsp"](conversionCandidate)).toEqual(expected);
@@ -11514,11 +11514,11 @@ describe("volume", () => {
       const imperialFluidOuncesConversion = linearConversion(0.0284131);
 
       const [toBase, fromBase] = [
+        imperialTeaspoonsConversion[1],
         imperialFluidOuncesConversion[0],
-        imperialTeaspoonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "imperial tsp"] as const;
+      const expected = [fromBase(toBase(v)), "imperial tsp"] as const;
       const conversionCandidate = [v, "imperial fl oz"] as const;
 
       expect(volume["imperial tsp"](conversionCandidate)).toEqual(expected);
@@ -11530,11 +11530,11 @@ describe("volume", () => {
       const imperialPintsConversion = linearConversion(0.568261);
 
       const [toBase, fromBase] = [
+        imperialTeaspoonsConversion[1],
         imperialPintsConversion[0],
-        imperialTeaspoonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "imperial tsp"] as const;
+      const expected = [fromBase(toBase(v)), "imperial tsp"] as const;
       const conversionCandidate = [v, "imperial pt"] as const;
 
       expect(volume["imperial tsp"](conversionCandidate)).toEqual(expected);
@@ -11546,11 +11546,11 @@ describe("volume", () => {
       const imperialQuartsConversion = linearConversion(1.13652);
 
       const [toBase, fromBase] = [
+        imperialTeaspoonsConversion[1],
         imperialQuartsConversion[0],
-        imperialTeaspoonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "imperial tsp"] as const;
+      const expected = [fromBase(toBase(v)), "imperial tsp"] as const;
       const conversionCandidate = [v, "imperial qt"] as const;
 
       expect(volume["imperial tsp"](conversionCandidate)).toEqual(expected);
@@ -11562,11 +11562,11 @@ describe("volume", () => {
       const imperialGallonsConversion = linearConversion(4.54609);
 
       const [toBase, fromBase] = [
+        imperialTeaspoonsConversion[1],
         imperialGallonsConversion[0],
-        imperialTeaspoonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "imperial tsp"] as const;
+      const expected = [fromBase(toBase(v)), "imperial tsp"] as const;
       const conversionCandidate = [v, "imperial gal"] as const;
 
       expect(volume["imperial tsp"](conversionCandidate)).toEqual(expected);
@@ -11578,11 +11578,11 @@ describe("volume", () => {
       const metricCupsConversion = linearConversion(0.25);
 
       const [toBase, fromBase] = [
+        imperialTeaspoonsConversion[1],
         metricCupsConversion[0],
-        imperialTeaspoonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "imperial tsp"] as const;
+      const expected = [fromBase(toBase(v)), "imperial tsp"] as const;
       const conversionCandidate = [v, "metric cup"] as const;
 
       expect(volume["imperial tsp"](conversionCandidate)).toEqual(expected);
@@ -11602,11 +11602,11 @@ describe("volume", () => {
       const megalitersConversion = linearConversion(1000000);
 
       const [toBase, fromBase] = [
+        imperialTablespoonsConversion[1],
         megalitersConversion[0],
-        imperialTablespoonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "imperial tbsp"] as const;
+      const expected = [fromBase(toBase(v)), "imperial tbsp"] as const;
       const conversionCandidate = [v, "ML"] as const;
 
       expect(volume["imperial tbsp"](conversionCandidate)).toEqual(expected);
@@ -11618,11 +11618,11 @@ describe("volume", () => {
       const kilolitersConversion = linearConversion(1000);
 
       const [toBase, fromBase] = [
+        imperialTablespoonsConversion[1],
         kilolitersConversion[0],
-        imperialTablespoonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "imperial tbsp"] as const;
+      const expected = [fromBase(toBase(v)), "imperial tbsp"] as const;
       const conversionCandidate = [v, "kL"] as const;
 
       expect(volume["imperial tbsp"](conversionCandidate)).toEqual(expected);
@@ -11634,11 +11634,11 @@ describe("volume", () => {
       const litersConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
+        imperialTablespoonsConversion[1],
         litersConversion[0],
-        imperialTablespoonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "imperial tbsp"] as const;
+      const expected = [fromBase(toBase(v)), "imperial tbsp"] as const;
       const conversionCandidate = [v, "L"] as const;
 
       expect(volume["imperial tbsp"](conversionCandidate)).toEqual(expected);
@@ -11650,11 +11650,11 @@ describe("volume", () => {
       const decilitersConversion = linearConversion(0.1);
 
       const [toBase, fromBase] = [
+        imperialTablespoonsConversion[1],
         decilitersConversion[0],
-        imperialTablespoonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "imperial tbsp"] as const;
+      const expected = [fromBase(toBase(v)), "imperial tbsp"] as const;
       const conversionCandidate = [v, "dL"] as const;
 
       expect(volume["imperial tbsp"](conversionCandidate)).toEqual(expected);
@@ -11666,11 +11666,11 @@ describe("volume", () => {
       const centilitersConversion = linearConversion(0.01);
 
       const [toBase, fromBase] = [
+        imperialTablespoonsConversion[1],
         centilitersConversion[0],
-        imperialTablespoonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "imperial tbsp"] as const;
+      const expected = [fromBase(toBase(v)), "imperial tbsp"] as const;
       const conversionCandidate = [v, "cL"] as const;
 
       expect(volume["imperial tbsp"](conversionCandidate)).toEqual(expected);
@@ -11682,11 +11682,11 @@ describe("volume", () => {
       const millilitersConversion = linearConversion(0.001);
 
       const [toBase, fromBase] = [
+        imperialTablespoonsConversion[1],
         millilitersConversion[0],
-        imperialTablespoonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "imperial tbsp"] as const;
+      const expected = [fromBase(toBase(v)), "imperial tbsp"] as const;
       const conversionCandidate = [v, "mL"] as const;
 
       expect(volume["imperial tbsp"](conversionCandidate)).toEqual(expected);
@@ -11698,11 +11698,11 @@ describe("volume", () => {
       const cubicKilometersConversion = linearConversion(1000000000000);
 
       const [toBase, fromBase] = [
+        imperialTablespoonsConversion[1],
         cubicKilometersConversion[0],
-        imperialTablespoonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "imperial tbsp"] as const;
+      const expected = [fromBase(toBase(v)), "imperial tbsp"] as const;
       const conversionCandidate = [v, "km³"] as const;
 
       expect(volume["imperial tbsp"](conversionCandidate)).toEqual(expected);
@@ -11714,11 +11714,11 @@ describe("volume", () => {
       const cubicMetersConversion = linearConversion(1000);
 
       const [toBase, fromBase] = [
+        imperialTablespoonsConversion[1],
         cubicMetersConversion[0],
-        imperialTablespoonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "imperial tbsp"] as const;
+      const expected = [fromBase(toBase(v)), "imperial tbsp"] as const;
       const conversionCandidate = [v, "m³"] as const;
 
       expect(volume["imperial tbsp"](conversionCandidate)).toEqual(expected);
@@ -11730,11 +11730,11 @@ describe("volume", () => {
       const cubicDecimetersConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
+        imperialTablespoonsConversion[1],
         cubicDecimetersConversion[0],
-        imperialTablespoonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "imperial tbsp"] as const;
+      const expected = [fromBase(toBase(v)), "imperial tbsp"] as const;
       const conversionCandidate = [v, "dm³"] as const;
 
       expect(volume["imperial tbsp"](conversionCandidate)).toEqual(expected);
@@ -11746,11 +11746,11 @@ describe("volume", () => {
       const cubicMillimetersConversion = linearConversion(0.000001);
 
       const [toBase, fromBase] = [
+        imperialTablespoonsConversion[1],
         cubicMillimetersConversion[0],
-        imperialTablespoonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "imperial tbsp"] as const;
+      const expected = [fromBase(toBase(v)), "imperial tbsp"] as const;
       const conversionCandidate = [v, "mm³"] as const;
 
       expect(volume["imperial tbsp"](conversionCandidate)).toEqual(expected);
@@ -11762,11 +11762,11 @@ describe("volume", () => {
       const cubicInchesConversion = linearConversion(0.0163871);
 
       const [toBase, fromBase] = [
+        imperialTablespoonsConversion[1],
         cubicInchesConversion[0],
-        imperialTablespoonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "imperial tbsp"] as const;
+      const expected = [fromBase(toBase(v)), "imperial tbsp"] as const;
       const conversionCandidate = [v, "in³"] as const;
 
       expect(volume["imperial tbsp"](conversionCandidate)).toEqual(expected);
@@ -11778,11 +11778,11 @@ describe("volume", () => {
       const cubicFeetConversion = linearConversion(28.3168);
 
       const [toBase, fromBase] = [
+        imperialTablespoonsConversion[1],
         cubicFeetConversion[0],
-        imperialTablespoonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "imperial tbsp"] as const;
+      const expected = [fromBase(toBase(v)), "imperial tbsp"] as const;
       const conversionCandidate = [v, "ft³"] as const;
 
       expect(volume["imperial tbsp"](conversionCandidate)).toEqual(expected);
@@ -11794,11 +11794,11 @@ describe("volume", () => {
       const cubicYardsConversion = linearConversion(764.555);
 
       const [toBase, fromBase] = [
+        imperialTablespoonsConversion[1],
         cubicYardsConversion[0],
-        imperialTablespoonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "imperial tbsp"] as const;
+      const expected = [fromBase(toBase(v)), "imperial tbsp"] as const;
       const conversionCandidate = [v, "yd³"] as const;
 
       expect(volume["imperial tbsp"](conversionCandidate)).toEqual(expected);
@@ -11810,11 +11810,11 @@ describe("volume", () => {
       const cubicMilesConversion = linearConversion(4168000000000);
 
       const [toBase, fromBase] = [
+        imperialTablespoonsConversion[1],
         cubicMilesConversion[0],
-        imperialTablespoonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "imperial tbsp"] as const;
+      const expected = [fromBase(toBase(v)), "imperial tbsp"] as const;
       const conversionCandidate = [v, "mi³"] as const;
 
       expect(volume["imperial tbsp"](conversionCandidate)).toEqual(expected);
@@ -11826,11 +11826,11 @@ describe("volume", () => {
       const acreFeetConversion = linearConversion(1233000);
 
       const [toBase, fromBase] = [
+        imperialTablespoonsConversion[1],
         acreFeetConversion[0],
-        imperialTablespoonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "imperial tbsp"] as const;
+      const expected = [fromBase(toBase(v)), "imperial tbsp"] as const;
       const conversionCandidate = [v, "af"] as const;
 
       expect(volume["imperial tbsp"](conversionCandidate)).toEqual(expected);
@@ -11842,11 +11842,11 @@ describe("volume", () => {
       const bushelsConversion = linearConversion(35.2391);
 
       const [toBase, fromBase] = [
+        imperialTablespoonsConversion[1],
         bushelsConversion[0],
-        imperialTablespoonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "imperial tbsp"] as const;
+      const expected = [fromBase(toBase(v)), "imperial tbsp"] as const;
       const conversionCandidate = [v, "bsh"] as const;
 
       expect(volume["imperial tbsp"](conversionCandidate)).toEqual(expected);
@@ -11858,11 +11858,11 @@ describe("volume", () => {
       const teaspoonsConversion = linearConversion(0.00492892);
 
       const [toBase, fromBase] = [
+        imperialTablespoonsConversion[1],
         teaspoonsConversion[0],
-        imperialTablespoonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "imperial tbsp"] as const;
+      const expected = [fromBase(toBase(v)), "imperial tbsp"] as const;
       const conversionCandidate = [v, "tsp"] as const;
 
       expect(volume["imperial tbsp"](conversionCandidate)).toEqual(expected);
@@ -11874,11 +11874,11 @@ describe("volume", () => {
       const tablespoonsConversion = linearConversion(0.0147868);
 
       const [toBase, fromBase] = [
+        imperialTablespoonsConversion[1],
         tablespoonsConversion[0],
-        imperialTablespoonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "imperial tbsp"] as const;
+      const expected = [fromBase(toBase(v)), "imperial tbsp"] as const;
       const conversionCandidate = [v, "tbsp"] as const;
 
       expect(volume["imperial tbsp"](conversionCandidate)).toEqual(expected);
@@ -11890,11 +11890,11 @@ describe("volume", () => {
       const fluidOuncesConversion = linearConversion(0.0295735);
 
       const [toBase, fromBase] = [
+        imperialTablespoonsConversion[1],
         fluidOuncesConversion[0],
-        imperialTablespoonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "imperial tbsp"] as const;
+      const expected = [fromBase(toBase(v)), "imperial tbsp"] as const;
       const conversionCandidate = [v, "fl oz"] as const;
 
       expect(volume["imperial tbsp"](conversionCandidate)).toEqual(expected);
@@ -11906,11 +11906,11 @@ describe("volume", () => {
       const cupsConversion = linearConversion(0.24);
 
       const [toBase, fromBase] = [
+        imperialTablespoonsConversion[1],
         cupsConversion[0],
-        imperialTablespoonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "imperial tbsp"] as const;
+      const expected = [fromBase(toBase(v)), "imperial tbsp"] as const;
       const conversionCandidate = [v, "cup"] as const;
 
       expect(volume["imperial tbsp"](conversionCandidate)).toEqual(expected);
@@ -11922,11 +11922,11 @@ describe("volume", () => {
       const pintsConversion = linearConversion(0.473176);
 
       const [toBase, fromBase] = [
+        imperialTablespoonsConversion[1],
         pintsConversion[0],
-        imperialTablespoonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "imperial tbsp"] as const;
+      const expected = [fromBase(toBase(v)), "imperial tbsp"] as const;
       const conversionCandidate = [v, "pt"] as const;
 
       expect(volume["imperial tbsp"](conversionCandidate)).toEqual(expected);
@@ -11938,11 +11938,11 @@ describe("volume", () => {
       const quartsConversion = linearConversion(0.946353);
 
       const [toBase, fromBase] = [
+        imperialTablespoonsConversion[1],
         quartsConversion[0],
-        imperialTablespoonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "imperial tbsp"] as const;
+      const expected = [fromBase(toBase(v)), "imperial tbsp"] as const;
       const conversionCandidate = [v, "qt"] as const;
 
       expect(volume["imperial tbsp"](conversionCandidate)).toEqual(expected);
@@ -11954,11 +11954,11 @@ describe("volume", () => {
       const gallonsConversion = linearConversion(3.78541);
 
       const [toBase, fromBase] = [
+        imperialTablespoonsConversion[1],
         gallonsConversion[0],
-        imperialTablespoonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "imperial tbsp"] as const;
+      const expected = [fromBase(toBase(v)), "imperial tbsp"] as const;
       const conversionCandidate = [v, "gal"] as const;
 
       expect(volume["imperial tbsp"](conversionCandidate)).toEqual(expected);
@@ -11970,11 +11970,11 @@ describe("volume", () => {
       const imperialTeaspoonsConversion = linearConversion(0.00591939);
 
       const [toBase, fromBase] = [
+        imperialTablespoonsConversion[1],
         imperialTeaspoonsConversion[0],
-        imperialTablespoonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "imperial tbsp"] as const;
+      const expected = [fromBase(toBase(v)), "imperial tbsp"] as const;
       const conversionCandidate = [v, "imperial tsp"] as const;
 
       expect(volume["imperial tbsp"](conversionCandidate)).toEqual(expected);
@@ -11988,11 +11988,11 @@ describe("volume", () => {
       const imperialFluidOuncesConversion = linearConversion(0.0284131);
 
       const [toBase, fromBase] = [
+        imperialTablespoonsConversion[1],
         imperialFluidOuncesConversion[0],
-        imperialTablespoonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "imperial tbsp"] as const;
+      const expected = [fromBase(toBase(v)), "imperial tbsp"] as const;
       const conversionCandidate = [v, "imperial fl oz"] as const;
 
       expect(volume["imperial tbsp"](conversionCandidate)).toEqual(expected);
@@ -12004,11 +12004,11 @@ describe("volume", () => {
       const imperialPintsConversion = linearConversion(0.568261);
 
       const [toBase, fromBase] = [
+        imperialTablespoonsConversion[1],
         imperialPintsConversion[0],
-        imperialTablespoonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "imperial tbsp"] as const;
+      const expected = [fromBase(toBase(v)), "imperial tbsp"] as const;
       const conversionCandidate = [v, "imperial pt"] as const;
 
       expect(volume["imperial tbsp"](conversionCandidate)).toEqual(expected);
@@ -12020,11 +12020,11 @@ describe("volume", () => {
       const imperialQuartsConversion = linearConversion(1.13652);
 
       const [toBase, fromBase] = [
+        imperialTablespoonsConversion[1],
         imperialQuartsConversion[0],
-        imperialTablespoonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "imperial tbsp"] as const;
+      const expected = [fromBase(toBase(v)), "imperial tbsp"] as const;
       const conversionCandidate = [v, "imperial qt"] as const;
 
       expect(volume["imperial tbsp"](conversionCandidate)).toEqual(expected);
@@ -12036,11 +12036,11 @@ describe("volume", () => {
       const imperialGallonsConversion = linearConversion(4.54609);
 
       const [toBase, fromBase] = [
+        imperialTablespoonsConversion[1],
         imperialGallonsConversion[0],
-        imperialTablespoonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "imperial tbsp"] as const;
+      const expected = [fromBase(toBase(v)), "imperial tbsp"] as const;
       const conversionCandidate = [v, "imperial gal"] as const;
 
       expect(volume["imperial tbsp"](conversionCandidate)).toEqual(expected);
@@ -12052,11 +12052,11 @@ describe("volume", () => {
       const metricCupsConversion = linearConversion(0.25);
 
       const [toBase, fromBase] = [
+        imperialTablespoonsConversion[1],
         metricCupsConversion[0],
-        imperialTablespoonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "imperial tbsp"] as const;
+      const expected = [fromBase(toBase(v)), "imperial tbsp"] as const;
       const conversionCandidate = [v, "metric cup"] as const;
 
       expect(volume["imperial tbsp"](conversionCandidate)).toEqual(expected);
@@ -12076,11 +12076,11 @@ describe("volume", () => {
       const megalitersConversion = linearConversion(1000000);
 
       const [toBase, fromBase] = [
+        imperialFluidOuncesConversion[1],
         megalitersConversion[0],
-        imperialFluidOuncesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "imperial fl oz"] as const;
+      const expected = [fromBase(toBase(v)), "imperial fl oz"] as const;
       const conversionCandidate = [v, "ML"] as const;
 
       expect(volume["imperial fl oz"](conversionCandidate)).toEqual(expected);
@@ -12092,11 +12092,11 @@ describe("volume", () => {
       const kilolitersConversion = linearConversion(1000);
 
       const [toBase, fromBase] = [
+        imperialFluidOuncesConversion[1],
         kilolitersConversion[0],
-        imperialFluidOuncesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "imperial fl oz"] as const;
+      const expected = [fromBase(toBase(v)), "imperial fl oz"] as const;
       const conversionCandidate = [v, "kL"] as const;
 
       expect(volume["imperial fl oz"](conversionCandidate)).toEqual(expected);
@@ -12108,11 +12108,11 @@ describe("volume", () => {
       const litersConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
+        imperialFluidOuncesConversion[1],
         litersConversion[0],
-        imperialFluidOuncesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "imperial fl oz"] as const;
+      const expected = [fromBase(toBase(v)), "imperial fl oz"] as const;
       const conversionCandidate = [v, "L"] as const;
 
       expect(volume["imperial fl oz"](conversionCandidate)).toEqual(expected);
@@ -12124,11 +12124,11 @@ describe("volume", () => {
       const decilitersConversion = linearConversion(0.1);
 
       const [toBase, fromBase] = [
+        imperialFluidOuncesConversion[1],
         decilitersConversion[0],
-        imperialFluidOuncesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "imperial fl oz"] as const;
+      const expected = [fromBase(toBase(v)), "imperial fl oz"] as const;
       const conversionCandidate = [v, "dL"] as const;
 
       expect(volume["imperial fl oz"](conversionCandidate)).toEqual(expected);
@@ -12140,11 +12140,11 @@ describe("volume", () => {
       const centilitersConversion = linearConversion(0.01);
 
       const [toBase, fromBase] = [
+        imperialFluidOuncesConversion[1],
         centilitersConversion[0],
-        imperialFluidOuncesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "imperial fl oz"] as const;
+      const expected = [fromBase(toBase(v)), "imperial fl oz"] as const;
       const conversionCandidate = [v, "cL"] as const;
 
       expect(volume["imperial fl oz"](conversionCandidate)).toEqual(expected);
@@ -12156,11 +12156,11 @@ describe("volume", () => {
       const millilitersConversion = linearConversion(0.001);
 
       const [toBase, fromBase] = [
+        imperialFluidOuncesConversion[1],
         millilitersConversion[0],
-        imperialFluidOuncesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "imperial fl oz"] as const;
+      const expected = [fromBase(toBase(v)), "imperial fl oz"] as const;
       const conversionCandidate = [v, "mL"] as const;
 
       expect(volume["imperial fl oz"](conversionCandidate)).toEqual(expected);
@@ -12172,11 +12172,11 @@ describe("volume", () => {
       const cubicKilometersConversion = linearConversion(1000000000000);
 
       const [toBase, fromBase] = [
+        imperialFluidOuncesConversion[1],
         cubicKilometersConversion[0],
-        imperialFluidOuncesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "imperial fl oz"] as const;
+      const expected = [fromBase(toBase(v)), "imperial fl oz"] as const;
       const conversionCandidate = [v, "km³"] as const;
 
       expect(volume["imperial fl oz"](conversionCandidate)).toEqual(expected);
@@ -12188,11 +12188,11 @@ describe("volume", () => {
       const cubicMetersConversion = linearConversion(1000);
 
       const [toBase, fromBase] = [
+        imperialFluidOuncesConversion[1],
         cubicMetersConversion[0],
-        imperialFluidOuncesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "imperial fl oz"] as const;
+      const expected = [fromBase(toBase(v)), "imperial fl oz"] as const;
       const conversionCandidate = [v, "m³"] as const;
 
       expect(volume["imperial fl oz"](conversionCandidate)).toEqual(expected);
@@ -12204,11 +12204,11 @@ describe("volume", () => {
       const cubicDecimetersConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
+        imperialFluidOuncesConversion[1],
         cubicDecimetersConversion[0],
-        imperialFluidOuncesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "imperial fl oz"] as const;
+      const expected = [fromBase(toBase(v)), "imperial fl oz"] as const;
       const conversionCandidate = [v, "dm³"] as const;
 
       expect(volume["imperial fl oz"](conversionCandidate)).toEqual(expected);
@@ -12220,11 +12220,11 @@ describe("volume", () => {
       const cubicMillimetersConversion = linearConversion(0.000001);
 
       const [toBase, fromBase] = [
+        imperialFluidOuncesConversion[1],
         cubicMillimetersConversion[0],
-        imperialFluidOuncesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "imperial fl oz"] as const;
+      const expected = [fromBase(toBase(v)), "imperial fl oz"] as const;
       const conversionCandidate = [v, "mm³"] as const;
 
       expect(volume["imperial fl oz"](conversionCandidate)).toEqual(expected);
@@ -12236,11 +12236,11 @@ describe("volume", () => {
       const cubicInchesConversion = linearConversion(0.0163871);
 
       const [toBase, fromBase] = [
+        imperialFluidOuncesConversion[1],
         cubicInchesConversion[0],
-        imperialFluidOuncesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "imperial fl oz"] as const;
+      const expected = [fromBase(toBase(v)), "imperial fl oz"] as const;
       const conversionCandidate = [v, "in³"] as const;
 
       expect(volume["imperial fl oz"](conversionCandidate)).toEqual(expected);
@@ -12252,11 +12252,11 @@ describe("volume", () => {
       const cubicFeetConversion = linearConversion(28.3168);
 
       const [toBase, fromBase] = [
+        imperialFluidOuncesConversion[1],
         cubicFeetConversion[0],
-        imperialFluidOuncesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "imperial fl oz"] as const;
+      const expected = [fromBase(toBase(v)), "imperial fl oz"] as const;
       const conversionCandidate = [v, "ft³"] as const;
 
       expect(volume["imperial fl oz"](conversionCandidate)).toEqual(expected);
@@ -12268,11 +12268,11 @@ describe("volume", () => {
       const cubicYardsConversion = linearConversion(764.555);
 
       const [toBase, fromBase] = [
+        imperialFluidOuncesConversion[1],
         cubicYardsConversion[0],
-        imperialFluidOuncesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "imperial fl oz"] as const;
+      const expected = [fromBase(toBase(v)), "imperial fl oz"] as const;
       const conversionCandidate = [v, "yd³"] as const;
 
       expect(volume["imperial fl oz"](conversionCandidate)).toEqual(expected);
@@ -12284,11 +12284,11 @@ describe("volume", () => {
       const cubicMilesConversion = linearConversion(4168000000000);
 
       const [toBase, fromBase] = [
+        imperialFluidOuncesConversion[1],
         cubicMilesConversion[0],
-        imperialFluidOuncesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "imperial fl oz"] as const;
+      const expected = [fromBase(toBase(v)), "imperial fl oz"] as const;
       const conversionCandidate = [v, "mi³"] as const;
 
       expect(volume["imperial fl oz"](conversionCandidate)).toEqual(expected);
@@ -12300,11 +12300,11 @@ describe("volume", () => {
       const acreFeetConversion = linearConversion(1233000);
 
       const [toBase, fromBase] = [
+        imperialFluidOuncesConversion[1],
         acreFeetConversion[0],
-        imperialFluidOuncesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "imperial fl oz"] as const;
+      const expected = [fromBase(toBase(v)), "imperial fl oz"] as const;
       const conversionCandidate = [v, "af"] as const;
 
       expect(volume["imperial fl oz"](conversionCandidate)).toEqual(expected);
@@ -12316,11 +12316,11 @@ describe("volume", () => {
       const bushelsConversion = linearConversion(35.2391);
 
       const [toBase, fromBase] = [
+        imperialFluidOuncesConversion[1],
         bushelsConversion[0],
-        imperialFluidOuncesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "imperial fl oz"] as const;
+      const expected = [fromBase(toBase(v)), "imperial fl oz"] as const;
       const conversionCandidate = [v, "bsh"] as const;
 
       expect(volume["imperial fl oz"](conversionCandidate)).toEqual(expected);
@@ -12332,11 +12332,11 @@ describe("volume", () => {
       const teaspoonsConversion = linearConversion(0.00492892);
 
       const [toBase, fromBase] = [
+        imperialFluidOuncesConversion[1],
         teaspoonsConversion[0],
-        imperialFluidOuncesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "imperial fl oz"] as const;
+      const expected = [fromBase(toBase(v)), "imperial fl oz"] as const;
       const conversionCandidate = [v, "tsp"] as const;
 
       expect(volume["imperial fl oz"](conversionCandidate)).toEqual(expected);
@@ -12348,11 +12348,11 @@ describe("volume", () => {
       const tablespoonsConversion = linearConversion(0.0147868);
 
       const [toBase, fromBase] = [
+        imperialFluidOuncesConversion[1],
         tablespoonsConversion[0],
-        imperialFluidOuncesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "imperial fl oz"] as const;
+      const expected = [fromBase(toBase(v)), "imperial fl oz"] as const;
       const conversionCandidate = [v, "tbsp"] as const;
 
       expect(volume["imperial fl oz"](conversionCandidate)).toEqual(expected);
@@ -12364,11 +12364,11 @@ describe("volume", () => {
       const fluidOuncesConversion = linearConversion(0.0295735);
 
       const [toBase, fromBase] = [
+        imperialFluidOuncesConversion[1],
         fluidOuncesConversion[0],
-        imperialFluidOuncesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "imperial fl oz"] as const;
+      const expected = [fromBase(toBase(v)), "imperial fl oz"] as const;
       const conversionCandidate = [v, "fl oz"] as const;
 
       expect(volume["imperial fl oz"](conversionCandidate)).toEqual(expected);
@@ -12380,11 +12380,11 @@ describe("volume", () => {
       const cupsConversion = linearConversion(0.24);
 
       const [toBase, fromBase] = [
+        imperialFluidOuncesConversion[1],
         cupsConversion[0],
-        imperialFluidOuncesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "imperial fl oz"] as const;
+      const expected = [fromBase(toBase(v)), "imperial fl oz"] as const;
       const conversionCandidate = [v, "cup"] as const;
 
       expect(volume["imperial fl oz"](conversionCandidate)).toEqual(expected);
@@ -12396,11 +12396,11 @@ describe("volume", () => {
       const pintsConversion = linearConversion(0.473176);
 
       const [toBase, fromBase] = [
+        imperialFluidOuncesConversion[1],
         pintsConversion[0],
-        imperialFluidOuncesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "imperial fl oz"] as const;
+      const expected = [fromBase(toBase(v)), "imperial fl oz"] as const;
       const conversionCandidate = [v, "pt"] as const;
 
       expect(volume["imperial fl oz"](conversionCandidate)).toEqual(expected);
@@ -12412,11 +12412,11 @@ describe("volume", () => {
       const quartsConversion = linearConversion(0.946353);
 
       const [toBase, fromBase] = [
+        imperialFluidOuncesConversion[1],
         quartsConversion[0],
-        imperialFluidOuncesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "imperial fl oz"] as const;
+      const expected = [fromBase(toBase(v)), "imperial fl oz"] as const;
       const conversionCandidate = [v, "qt"] as const;
 
       expect(volume["imperial fl oz"](conversionCandidate)).toEqual(expected);
@@ -12428,11 +12428,11 @@ describe("volume", () => {
       const gallonsConversion = linearConversion(3.78541);
 
       const [toBase, fromBase] = [
+        imperialFluidOuncesConversion[1],
         gallonsConversion[0],
-        imperialFluidOuncesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "imperial fl oz"] as const;
+      const expected = [fromBase(toBase(v)), "imperial fl oz"] as const;
       const conversionCandidate = [v, "gal"] as const;
 
       expect(volume["imperial fl oz"](conversionCandidate)).toEqual(expected);
@@ -12444,11 +12444,11 @@ describe("volume", () => {
       const imperialTeaspoonsConversion = linearConversion(0.00591939);
 
       const [toBase, fromBase] = [
+        imperialFluidOuncesConversion[1],
         imperialTeaspoonsConversion[0],
-        imperialFluidOuncesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "imperial fl oz"] as const;
+      const expected = [fromBase(toBase(v)), "imperial fl oz"] as const;
       const conversionCandidate = [v, "imperial tsp"] as const;
 
       expect(volume["imperial fl oz"](conversionCandidate)).toEqual(expected);
@@ -12460,11 +12460,11 @@ describe("volume", () => {
       const imperialTablespoonsConversion = linearConversion(0.0177582);
 
       const [toBase, fromBase] = [
+        imperialFluidOuncesConversion[1],
         imperialTablespoonsConversion[0],
-        imperialFluidOuncesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "imperial fl oz"] as const;
+      const expected = [fromBase(toBase(v)), "imperial fl oz"] as const;
       const conversionCandidate = [v, "imperial tbsp"] as const;
 
       expect(volume["imperial fl oz"](conversionCandidate)).toEqual(expected);
@@ -12478,11 +12478,11 @@ describe("volume", () => {
       const imperialPintsConversion = linearConversion(0.568261);
 
       const [toBase, fromBase] = [
+        imperialFluidOuncesConversion[1],
         imperialPintsConversion[0],
-        imperialFluidOuncesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "imperial fl oz"] as const;
+      const expected = [fromBase(toBase(v)), "imperial fl oz"] as const;
       const conversionCandidate = [v, "imperial pt"] as const;
 
       expect(volume["imperial fl oz"](conversionCandidate)).toEqual(expected);
@@ -12494,11 +12494,11 @@ describe("volume", () => {
       const imperialQuartsConversion = linearConversion(1.13652);
 
       const [toBase, fromBase] = [
+        imperialFluidOuncesConversion[1],
         imperialQuartsConversion[0],
-        imperialFluidOuncesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "imperial fl oz"] as const;
+      const expected = [fromBase(toBase(v)), "imperial fl oz"] as const;
       const conversionCandidate = [v, "imperial qt"] as const;
 
       expect(volume["imperial fl oz"](conversionCandidate)).toEqual(expected);
@@ -12510,11 +12510,11 @@ describe("volume", () => {
       const imperialGallonsConversion = linearConversion(4.54609);
 
       const [toBase, fromBase] = [
+        imperialFluidOuncesConversion[1],
         imperialGallonsConversion[0],
-        imperialFluidOuncesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "imperial fl oz"] as const;
+      const expected = [fromBase(toBase(v)), "imperial fl oz"] as const;
       const conversionCandidate = [v, "imperial gal"] as const;
 
       expect(volume["imperial fl oz"](conversionCandidate)).toEqual(expected);
@@ -12526,11 +12526,11 @@ describe("volume", () => {
       const metricCupsConversion = linearConversion(0.25);
 
       const [toBase, fromBase] = [
+        imperialFluidOuncesConversion[1],
         metricCupsConversion[0],
-        imperialFluidOuncesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "imperial fl oz"] as const;
+      const expected = [fromBase(toBase(v)), "imperial fl oz"] as const;
       const conversionCandidate = [v, "metric cup"] as const;
 
       expect(volume["imperial fl oz"](conversionCandidate)).toEqual(expected);
@@ -12550,11 +12550,11 @@ describe("volume", () => {
       const megalitersConversion = linearConversion(1000000);
 
       const [toBase, fromBase] = [
+        imperialPintsConversion[1],
         megalitersConversion[0],
-        imperialPintsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "imperial pt"] as const;
+      const expected = [fromBase(toBase(v)), "imperial pt"] as const;
       const conversionCandidate = [v, "ML"] as const;
 
       expect(volume["imperial pt"](conversionCandidate)).toEqual(expected);
@@ -12566,11 +12566,11 @@ describe("volume", () => {
       const kilolitersConversion = linearConversion(1000);
 
       const [toBase, fromBase] = [
+        imperialPintsConversion[1],
         kilolitersConversion[0],
-        imperialPintsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "imperial pt"] as const;
+      const expected = [fromBase(toBase(v)), "imperial pt"] as const;
       const conversionCandidate = [v, "kL"] as const;
 
       expect(volume["imperial pt"](conversionCandidate)).toEqual(expected);
@@ -12582,11 +12582,11 @@ describe("volume", () => {
       const litersConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
+        imperialPintsConversion[1],
         litersConversion[0],
-        imperialPintsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "imperial pt"] as const;
+      const expected = [fromBase(toBase(v)), "imperial pt"] as const;
       const conversionCandidate = [v, "L"] as const;
 
       expect(volume["imperial pt"](conversionCandidate)).toEqual(expected);
@@ -12598,11 +12598,11 @@ describe("volume", () => {
       const decilitersConversion = linearConversion(0.1);
 
       const [toBase, fromBase] = [
+        imperialPintsConversion[1],
         decilitersConversion[0],
-        imperialPintsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "imperial pt"] as const;
+      const expected = [fromBase(toBase(v)), "imperial pt"] as const;
       const conversionCandidate = [v, "dL"] as const;
 
       expect(volume["imperial pt"](conversionCandidate)).toEqual(expected);
@@ -12614,11 +12614,11 @@ describe("volume", () => {
       const centilitersConversion = linearConversion(0.01);
 
       const [toBase, fromBase] = [
+        imperialPintsConversion[1],
         centilitersConversion[0],
-        imperialPintsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "imperial pt"] as const;
+      const expected = [fromBase(toBase(v)), "imperial pt"] as const;
       const conversionCandidate = [v, "cL"] as const;
 
       expect(volume["imperial pt"](conversionCandidate)).toEqual(expected);
@@ -12630,11 +12630,11 @@ describe("volume", () => {
       const millilitersConversion = linearConversion(0.001);
 
       const [toBase, fromBase] = [
+        imperialPintsConversion[1],
         millilitersConversion[0],
-        imperialPintsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "imperial pt"] as const;
+      const expected = [fromBase(toBase(v)), "imperial pt"] as const;
       const conversionCandidate = [v, "mL"] as const;
 
       expect(volume["imperial pt"](conversionCandidate)).toEqual(expected);
@@ -12646,11 +12646,11 @@ describe("volume", () => {
       const cubicKilometersConversion = linearConversion(1000000000000);
 
       const [toBase, fromBase] = [
+        imperialPintsConversion[1],
         cubicKilometersConversion[0],
-        imperialPintsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "imperial pt"] as const;
+      const expected = [fromBase(toBase(v)), "imperial pt"] as const;
       const conversionCandidate = [v, "km³"] as const;
 
       expect(volume["imperial pt"](conversionCandidate)).toEqual(expected);
@@ -12662,11 +12662,11 @@ describe("volume", () => {
       const cubicMetersConversion = linearConversion(1000);
 
       const [toBase, fromBase] = [
+        imperialPintsConversion[1],
         cubicMetersConversion[0],
-        imperialPintsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "imperial pt"] as const;
+      const expected = [fromBase(toBase(v)), "imperial pt"] as const;
       const conversionCandidate = [v, "m³"] as const;
 
       expect(volume["imperial pt"](conversionCandidate)).toEqual(expected);
@@ -12678,11 +12678,11 @@ describe("volume", () => {
       const cubicDecimetersConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
+        imperialPintsConversion[1],
         cubicDecimetersConversion[0],
-        imperialPintsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "imperial pt"] as const;
+      const expected = [fromBase(toBase(v)), "imperial pt"] as const;
       const conversionCandidate = [v, "dm³"] as const;
 
       expect(volume["imperial pt"](conversionCandidate)).toEqual(expected);
@@ -12694,11 +12694,11 @@ describe("volume", () => {
       const cubicMillimetersConversion = linearConversion(0.000001);
 
       const [toBase, fromBase] = [
+        imperialPintsConversion[1],
         cubicMillimetersConversion[0],
-        imperialPintsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "imperial pt"] as const;
+      const expected = [fromBase(toBase(v)), "imperial pt"] as const;
       const conversionCandidate = [v, "mm³"] as const;
 
       expect(volume["imperial pt"](conversionCandidate)).toEqual(expected);
@@ -12710,11 +12710,11 @@ describe("volume", () => {
       const cubicInchesConversion = linearConversion(0.0163871);
 
       const [toBase, fromBase] = [
+        imperialPintsConversion[1],
         cubicInchesConversion[0],
-        imperialPintsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "imperial pt"] as const;
+      const expected = [fromBase(toBase(v)), "imperial pt"] as const;
       const conversionCandidate = [v, "in³"] as const;
 
       expect(volume["imperial pt"](conversionCandidate)).toEqual(expected);
@@ -12726,11 +12726,11 @@ describe("volume", () => {
       const cubicFeetConversion = linearConversion(28.3168);
 
       const [toBase, fromBase] = [
+        imperialPintsConversion[1],
         cubicFeetConversion[0],
-        imperialPintsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "imperial pt"] as const;
+      const expected = [fromBase(toBase(v)), "imperial pt"] as const;
       const conversionCandidate = [v, "ft³"] as const;
 
       expect(volume["imperial pt"](conversionCandidate)).toEqual(expected);
@@ -12742,11 +12742,11 @@ describe("volume", () => {
       const cubicYardsConversion = linearConversion(764.555);
 
       const [toBase, fromBase] = [
+        imperialPintsConversion[1],
         cubicYardsConversion[0],
-        imperialPintsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "imperial pt"] as const;
+      const expected = [fromBase(toBase(v)), "imperial pt"] as const;
       const conversionCandidate = [v, "yd³"] as const;
 
       expect(volume["imperial pt"](conversionCandidate)).toEqual(expected);
@@ -12758,11 +12758,11 @@ describe("volume", () => {
       const cubicMilesConversion = linearConversion(4168000000000);
 
       const [toBase, fromBase] = [
+        imperialPintsConversion[1],
         cubicMilesConversion[0],
-        imperialPintsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "imperial pt"] as const;
+      const expected = [fromBase(toBase(v)), "imperial pt"] as const;
       const conversionCandidate = [v, "mi³"] as const;
 
       expect(volume["imperial pt"](conversionCandidate)).toEqual(expected);
@@ -12774,11 +12774,11 @@ describe("volume", () => {
       const acreFeetConversion = linearConversion(1233000);
 
       const [toBase, fromBase] = [
+        imperialPintsConversion[1],
         acreFeetConversion[0],
-        imperialPintsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "imperial pt"] as const;
+      const expected = [fromBase(toBase(v)), "imperial pt"] as const;
       const conversionCandidate = [v, "af"] as const;
 
       expect(volume["imperial pt"](conversionCandidate)).toEqual(expected);
@@ -12790,11 +12790,11 @@ describe("volume", () => {
       const bushelsConversion = linearConversion(35.2391);
 
       const [toBase, fromBase] = [
+        imperialPintsConversion[1],
         bushelsConversion[0],
-        imperialPintsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "imperial pt"] as const;
+      const expected = [fromBase(toBase(v)), "imperial pt"] as const;
       const conversionCandidate = [v, "bsh"] as const;
 
       expect(volume["imperial pt"](conversionCandidate)).toEqual(expected);
@@ -12806,11 +12806,11 @@ describe("volume", () => {
       const teaspoonsConversion = linearConversion(0.00492892);
 
       const [toBase, fromBase] = [
+        imperialPintsConversion[1],
         teaspoonsConversion[0],
-        imperialPintsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "imperial pt"] as const;
+      const expected = [fromBase(toBase(v)), "imperial pt"] as const;
       const conversionCandidate = [v, "tsp"] as const;
 
       expect(volume["imperial pt"](conversionCandidate)).toEqual(expected);
@@ -12822,11 +12822,11 @@ describe("volume", () => {
       const tablespoonsConversion = linearConversion(0.0147868);
 
       const [toBase, fromBase] = [
+        imperialPintsConversion[1],
         tablespoonsConversion[0],
-        imperialPintsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "imperial pt"] as const;
+      const expected = [fromBase(toBase(v)), "imperial pt"] as const;
       const conversionCandidate = [v, "tbsp"] as const;
 
       expect(volume["imperial pt"](conversionCandidate)).toEqual(expected);
@@ -12838,11 +12838,11 @@ describe("volume", () => {
       const fluidOuncesConversion = linearConversion(0.0295735);
 
       const [toBase, fromBase] = [
+        imperialPintsConversion[1],
         fluidOuncesConversion[0],
-        imperialPintsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "imperial pt"] as const;
+      const expected = [fromBase(toBase(v)), "imperial pt"] as const;
       const conversionCandidate = [v, "fl oz"] as const;
 
       expect(volume["imperial pt"](conversionCandidate)).toEqual(expected);
@@ -12854,11 +12854,11 @@ describe("volume", () => {
       const cupsConversion = linearConversion(0.24);
 
       const [toBase, fromBase] = [
+        imperialPintsConversion[1],
         cupsConversion[0],
-        imperialPintsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "imperial pt"] as const;
+      const expected = [fromBase(toBase(v)), "imperial pt"] as const;
       const conversionCandidate = [v, "cup"] as const;
 
       expect(volume["imperial pt"](conversionCandidate)).toEqual(expected);
@@ -12870,11 +12870,11 @@ describe("volume", () => {
       const pintsConversion = linearConversion(0.473176);
 
       const [toBase, fromBase] = [
+        imperialPintsConversion[1],
         pintsConversion[0],
-        imperialPintsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "imperial pt"] as const;
+      const expected = [fromBase(toBase(v)), "imperial pt"] as const;
       const conversionCandidate = [v, "pt"] as const;
 
       expect(volume["imperial pt"](conversionCandidate)).toEqual(expected);
@@ -12886,11 +12886,11 @@ describe("volume", () => {
       const quartsConversion = linearConversion(0.946353);
 
       const [toBase, fromBase] = [
+        imperialPintsConversion[1],
         quartsConversion[0],
-        imperialPintsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "imperial pt"] as const;
+      const expected = [fromBase(toBase(v)), "imperial pt"] as const;
       const conversionCandidate = [v, "qt"] as const;
 
       expect(volume["imperial pt"](conversionCandidate)).toEqual(expected);
@@ -12902,11 +12902,11 @@ describe("volume", () => {
       const gallonsConversion = linearConversion(3.78541);
 
       const [toBase, fromBase] = [
+        imperialPintsConversion[1],
         gallonsConversion[0],
-        imperialPintsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "imperial pt"] as const;
+      const expected = [fromBase(toBase(v)), "imperial pt"] as const;
       const conversionCandidate = [v, "gal"] as const;
 
       expect(volume["imperial pt"](conversionCandidate)).toEqual(expected);
@@ -12918,11 +12918,11 @@ describe("volume", () => {
       const imperialTeaspoonsConversion = linearConversion(0.00591939);
 
       const [toBase, fromBase] = [
+        imperialPintsConversion[1],
         imperialTeaspoonsConversion[0],
-        imperialPintsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "imperial pt"] as const;
+      const expected = [fromBase(toBase(v)), "imperial pt"] as const;
       const conversionCandidate = [v, "imperial tsp"] as const;
 
       expect(volume["imperial pt"](conversionCandidate)).toEqual(expected);
@@ -12934,11 +12934,11 @@ describe("volume", () => {
       const imperialTablespoonsConversion = linearConversion(0.0177582);
 
       const [toBase, fromBase] = [
+        imperialPintsConversion[1],
         imperialTablespoonsConversion[0],
-        imperialPintsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "imperial pt"] as const;
+      const expected = [fromBase(toBase(v)), "imperial pt"] as const;
       const conversionCandidate = [v, "imperial tbsp"] as const;
 
       expect(volume["imperial pt"](conversionCandidate)).toEqual(expected);
@@ -12950,11 +12950,11 @@ describe("volume", () => {
       const imperialFluidOuncesConversion = linearConversion(0.0284131);
 
       const [toBase, fromBase] = [
+        imperialPintsConversion[1],
         imperialFluidOuncesConversion[0],
-        imperialPintsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "imperial pt"] as const;
+      const expected = [fromBase(toBase(v)), "imperial pt"] as const;
       const conversionCandidate = [v, "imperial fl oz"] as const;
 
       expect(volume["imperial pt"](conversionCandidate)).toEqual(expected);
@@ -12968,11 +12968,11 @@ describe("volume", () => {
       const imperialQuartsConversion = linearConversion(1.13652);
 
       const [toBase, fromBase] = [
+        imperialPintsConversion[1],
         imperialQuartsConversion[0],
-        imperialPintsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "imperial pt"] as const;
+      const expected = [fromBase(toBase(v)), "imperial pt"] as const;
       const conversionCandidate = [v, "imperial qt"] as const;
 
       expect(volume["imperial pt"](conversionCandidate)).toEqual(expected);
@@ -12984,11 +12984,11 @@ describe("volume", () => {
       const imperialGallonsConversion = linearConversion(4.54609);
 
       const [toBase, fromBase] = [
+        imperialPintsConversion[1],
         imperialGallonsConversion[0],
-        imperialPintsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "imperial pt"] as const;
+      const expected = [fromBase(toBase(v)), "imperial pt"] as const;
       const conversionCandidate = [v, "imperial gal"] as const;
 
       expect(volume["imperial pt"](conversionCandidate)).toEqual(expected);
@@ -13000,11 +13000,11 @@ describe("volume", () => {
       const metricCupsConversion = linearConversion(0.25);
 
       const [toBase, fromBase] = [
+        imperialPintsConversion[1],
         metricCupsConversion[0],
-        imperialPintsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "imperial pt"] as const;
+      const expected = [fromBase(toBase(v)), "imperial pt"] as const;
       const conversionCandidate = [v, "metric cup"] as const;
 
       expect(volume["imperial pt"](conversionCandidate)).toEqual(expected);
@@ -13024,11 +13024,11 @@ describe("volume", () => {
       const megalitersConversion = linearConversion(1000000);
 
       const [toBase, fromBase] = [
+        imperialQuartsConversion[1],
         megalitersConversion[0],
-        imperialQuartsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "imperial qt"] as const;
+      const expected = [fromBase(toBase(v)), "imperial qt"] as const;
       const conversionCandidate = [v, "ML"] as const;
 
       expect(volume["imperial qt"](conversionCandidate)).toEqual(expected);
@@ -13040,11 +13040,11 @@ describe("volume", () => {
       const kilolitersConversion = linearConversion(1000);
 
       const [toBase, fromBase] = [
+        imperialQuartsConversion[1],
         kilolitersConversion[0],
-        imperialQuartsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "imperial qt"] as const;
+      const expected = [fromBase(toBase(v)), "imperial qt"] as const;
       const conversionCandidate = [v, "kL"] as const;
 
       expect(volume["imperial qt"](conversionCandidate)).toEqual(expected);
@@ -13056,11 +13056,11 @@ describe("volume", () => {
       const litersConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
+        imperialQuartsConversion[1],
         litersConversion[0],
-        imperialQuartsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "imperial qt"] as const;
+      const expected = [fromBase(toBase(v)), "imperial qt"] as const;
       const conversionCandidate = [v, "L"] as const;
 
       expect(volume["imperial qt"](conversionCandidate)).toEqual(expected);
@@ -13072,11 +13072,11 @@ describe("volume", () => {
       const decilitersConversion = linearConversion(0.1);
 
       const [toBase, fromBase] = [
+        imperialQuartsConversion[1],
         decilitersConversion[0],
-        imperialQuartsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "imperial qt"] as const;
+      const expected = [fromBase(toBase(v)), "imperial qt"] as const;
       const conversionCandidate = [v, "dL"] as const;
 
       expect(volume["imperial qt"](conversionCandidate)).toEqual(expected);
@@ -13088,11 +13088,11 @@ describe("volume", () => {
       const centilitersConversion = linearConversion(0.01);
 
       const [toBase, fromBase] = [
+        imperialQuartsConversion[1],
         centilitersConversion[0],
-        imperialQuartsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "imperial qt"] as const;
+      const expected = [fromBase(toBase(v)), "imperial qt"] as const;
       const conversionCandidate = [v, "cL"] as const;
 
       expect(volume["imperial qt"](conversionCandidate)).toEqual(expected);
@@ -13104,11 +13104,11 @@ describe("volume", () => {
       const millilitersConversion = linearConversion(0.001);
 
       const [toBase, fromBase] = [
+        imperialQuartsConversion[1],
         millilitersConversion[0],
-        imperialQuartsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "imperial qt"] as const;
+      const expected = [fromBase(toBase(v)), "imperial qt"] as const;
       const conversionCandidate = [v, "mL"] as const;
 
       expect(volume["imperial qt"](conversionCandidate)).toEqual(expected);
@@ -13120,11 +13120,11 @@ describe("volume", () => {
       const cubicKilometersConversion = linearConversion(1000000000000);
 
       const [toBase, fromBase] = [
+        imperialQuartsConversion[1],
         cubicKilometersConversion[0],
-        imperialQuartsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "imperial qt"] as const;
+      const expected = [fromBase(toBase(v)), "imperial qt"] as const;
       const conversionCandidate = [v, "km³"] as const;
 
       expect(volume["imperial qt"](conversionCandidate)).toEqual(expected);
@@ -13136,11 +13136,11 @@ describe("volume", () => {
       const cubicMetersConversion = linearConversion(1000);
 
       const [toBase, fromBase] = [
+        imperialQuartsConversion[1],
         cubicMetersConversion[0],
-        imperialQuartsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "imperial qt"] as const;
+      const expected = [fromBase(toBase(v)), "imperial qt"] as const;
       const conversionCandidate = [v, "m³"] as const;
 
       expect(volume["imperial qt"](conversionCandidate)).toEqual(expected);
@@ -13152,11 +13152,11 @@ describe("volume", () => {
       const cubicDecimetersConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
+        imperialQuartsConversion[1],
         cubicDecimetersConversion[0],
-        imperialQuartsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "imperial qt"] as const;
+      const expected = [fromBase(toBase(v)), "imperial qt"] as const;
       const conversionCandidate = [v, "dm³"] as const;
 
       expect(volume["imperial qt"](conversionCandidate)).toEqual(expected);
@@ -13168,11 +13168,11 @@ describe("volume", () => {
       const cubicMillimetersConversion = linearConversion(0.000001);
 
       const [toBase, fromBase] = [
+        imperialQuartsConversion[1],
         cubicMillimetersConversion[0],
-        imperialQuartsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "imperial qt"] as const;
+      const expected = [fromBase(toBase(v)), "imperial qt"] as const;
       const conversionCandidate = [v, "mm³"] as const;
 
       expect(volume["imperial qt"](conversionCandidate)).toEqual(expected);
@@ -13184,11 +13184,11 @@ describe("volume", () => {
       const cubicInchesConversion = linearConversion(0.0163871);
 
       const [toBase, fromBase] = [
+        imperialQuartsConversion[1],
         cubicInchesConversion[0],
-        imperialQuartsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "imperial qt"] as const;
+      const expected = [fromBase(toBase(v)), "imperial qt"] as const;
       const conversionCandidate = [v, "in³"] as const;
 
       expect(volume["imperial qt"](conversionCandidate)).toEqual(expected);
@@ -13200,11 +13200,11 @@ describe("volume", () => {
       const cubicFeetConversion = linearConversion(28.3168);
 
       const [toBase, fromBase] = [
+        imperialQuartsConversion[1],
         cubicFeetConversion[0],
-        imperialQuartsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "imperial qt"] as const;
+      const expected = [fromBase(toBase(v)), "imperial qt"] as const;
       const conversionCandidate = [v, "ft³"] as const;
 
       expect(volume["imperial qt"](conversionCandidate)).toEqual(expected);
@@ -13216,11 +13216,11 @@ describe("volume", () => {
       const cubicYardsConversion = linearConversion(764.555);
 
       const [toBase, fromBase] = [
+        imperialQuartsConversion[1],
         cubicYardsConversion[0],
-        imperialQuartsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "imperial qt"] as const;
+      const expected = [fromBase(toBase(v)), "imperial qt"] as const;
       const conversionCandidate = [v, "yd³"] as const;
 
       expect(volume["imperial qt"](conversionCandidate)).toEqual(expected);
@@ -13232,11 +13232,11 @@ describe("volume", () => {
       const cubicMilesConversion = linearConversion(4168000000000);
 
       const [toBase, fromBase] = [
+        imperialQuartsConversion[1],
         cubicMilesConversion[0],
-        imperialQuartsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "imperial qt"] as const;
+      const expected = [fromBase(toBase(v)), "imperial qt"] as const;
       const conversionCandidate = [v, "mi³"] as const;
 
       expect(volume["imperial qt"](conversionCandidate)).toEqual(expected);
@@ -13248,11 +13248,11 @@ describe("volume", () => {
       const acreFeetConversion = linearConversion(1233000);
 
       const [toBase, fromBase] = [
+        imperialQuartsConversion[1],
         acreFeetConversion[0],
-        imperialQuartsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "imperial qt"] as const;
+      const expected = [fromBase(toBase(v)), "imperial qt"] as const;
       const conversionCandidate = [v, "af"] as const;
 
       expect(volume["imperial qt"](conversionCandidate)).toEqual(expected);
@@ -13264,11 +13264,11 @@ describe("volume", () => {
       const bushelsConversion = linearConversion(35.2391);
 
       const [toBase, fromBase] = [
+        imperialQuartsConversion[1],
         bushelsConversion[0],
-        imperialQuartsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "imperial qt"] as const;
+      const expected = [fromBase(toBase(v)), "imperial qt"] as const;
       const conversionCandidate = [v, "bsh"] as const;
 
       expect(volume["imperial qt"](conversionCandidate)).toEqual(expected);
@@ -13280,11 +13280,11 @@ describe("volume", () => {
       const teaspoonsConversion = linearConversion(0.00492892);
 
       const [toBase, fromBase] = [
+        imperialQuartsConversion[1],
         teaspoonsConversion[0],
-        imperialQuartsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "imperial qt"] as const;
+      const expected = [fromBase(toBase(v)), "imperial qt"] as const;
       const conversionCandidate = [v, "tsp"] as const;
 
       expect(volume["imperial qt"](conversionCandidate)).toEqual(expected);
@@ -13296,11 +13296,11 @@ describe("volume", () => {
       const tablespoonsConversion = linearConversion(0.0147868);
 
       const [toBase, fromBase] = [
+        imperialQuartsConversion[1],
         tablespoonsConversion[0],
-        imperialQuartsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "imperial qt"] as const;
+      const expected = [fromBase(toBase(v)), "imperial qt"] as const;
       const conversionCandidate = [v, "tbsp"] as const;
 
       expect(volume["imperial qt"](conversionCandidate)).toEqual(expected);
@@ -13312,11 +13312,11 @@ describe("volume", () => {
       const fluidOuncesConversion = linearConversion(0.0295735);
 
       const [toBase, fromBase] = [
+        imperialQuartsConversion[1],
         fluidOuncesConversion[0],
-        imperialQuartsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "imperial qt"] as const;
+      const expected = [fromBase(toBase(v)), "imperial qt"] as const;
       const conversionCandidate = [v, "fl oz"] as const;
 
       expect(volume["imperial qt"](conversionCandidate)).toEqual(expected);
@@ -13328,11 +13328,11 @@ describe("volume", () => {
       const cupsConversion = linearConversion(0.24);
 
       const [toBase, fromBase] = [
+        imperialQuartsConversion[1],
         cupsConversion[0],
-        imperialQuartsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "imperial qt"] as const;
+      const expected = [fromBase(toBase(v)), "imperial qt"] as const;
       const conversionCandidate = [v, "cup"] as const;
 
       expect(volume["imperial qt"](conversionCandidate)).toEqual(expected);
@@ -13344,11 +13344,11 @@ describe("volume", () => {
       const pintsConversion = linearConversion(0.473176);
 
       const [toBase, fromBase] = [
+        imperialQuartsConversion[1],
         pintsConversion[0],
-        imperialQuartsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "imperial qt"] as const;
+      const expected = [fromBase(toBase(v)), "imperial qt"] as const;
       const conversionCandidate = [v, "pt"] as const;
 
       expect(volume["imperial qt"](conversionCandidate)).toEqual(expected);
@@ -13360,11 +13360,11 @@ describe("volume", () => {
       const quartsConversion = linearConversion(0.946353);
 
       const [toBase, fromBase] = [
+        imperialQuartsConversion[1],
         quartsConversion[0],
-        imperialQuartsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "imperial qt"] as const;
+      const expected = [fromBase(toBase(v)), "imperial qt"] as const;
       const conversionCandidate = [v, "qt"] as const;
 
       expect(volume["imperial qt"](conversionCandidate)).toEqual(expected);
@@ -13376,11 +13376,11 @@ describe("volume", () => {
       const gallonsConversion = linearConversion(3.78541);
 
       const [toBase, fromBase] = [
+        imperialQuartsConversion[1],
         gallonsConversion[0],
-        imperialQuartsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "imperial qt"] as const;
+      const expected = [fromBase(toBase(v)), "imperial qt"] as const;
       const conversionCandidate = [v, "gal"] as const;
 
       expect(volume["imperial qt"](conversionCandidate)).toEqual(expected);
@@ -13392,11 +13392,11 @@ describe("volume", () => {
       const imperialTeaspoonsConversion = linearConversion(0.00591939);
 
       const [toBase, fromBase] = [
+        imperialQuartsConversion[1],
         imperialTeaspoonsConversion[0],
-        imperialQuartsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "imperial qt"] as const;
+      const expected = [fromBase(toBase(v)), "imperial qt"] as const;
       const conversionCandidate = [v, "imperial tsp"] as const;
 
       expect(volume["imperial qt"](conversionCandidate)).toEqual(expected);
@@ -13408,11 +13408,11 @@ describe("volume", () => {
       const imperialTablespoonsConversion = linearConversion(0.0177582);
 
       const [toBase, fromBase] = [
+        imperialQuartsConversion[1],
         imperialTablespoonsConversion[0],
-        imperialQuartsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "imperial qt"] as const;
+      const expected = [fromBase(toBase(v)), "imperial qt"] as const;
       const conversionCandidate = [v, "imperial tbsp"] as const;
 
       expect(volume["imperial qt"](conversionCandidate)).toEqual(expected);
@@ -13424,11 +13424,11 @@ describe("volume", () => {
       const imperialFluidOuncesConversion = linearConversion(0.0284131);
 
       const [toBase, fromBase] = [
+        imperialQuartsConversion[1],
         imperialFluidOuncesConversion[0],
-        imperialQuartsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "imperial qt"] as const;
+      const expected = [fromBase(toBase(v)), "imperial qt"] as const;
       const conversionCandidate = [v, "imperial fl oz"] as const;
 
       expect(volume["imperial qt"](conversionCandidate)).toEqual(expected);
@@ -13440,11 +13440,11 @@ describe("volume", () => {
       const imperialPintsConversion = linearConversion(0.568261);
 
       const [toBase, fromBase] = [
+        imperialQuartsConversion[1],
         imperialPintsConversion[0],
-        imperialQuartsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "imperial qt"] as const;
+      const expected = [fromBase(toBase(v)), "imperial qt"] as const;
       const conversionCandidate = [v, "imperial pt"] as const;
 
       expect(volume["imperial qt"](conversionCandidate)).toEqual(expected);
@@ -13458,11 +13458,11 @@ describe("volume", () => {
       const imperialGallonsConversion = linearConversion(4.54609);
 
       const [toBase, fromBase] = [
+        imperialQuartsConversion[1],
         imperialGallonsConversion[0],
-        imperialQuartsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "imperial qt"] as const;
+      const expected = [fromBase(toBase(v)), "imperial qt"] as const;
       const conversionCandidate = [v, "imperial gal"] as const;
 
       expect(volume["imperial qt"](conversionCandidate)).toEqual(expected);
@@ -13474,11 +13474,11 @@ describe("volume", () => {
       const metricCupsConversion = linearConversion(0.25);
 
       const [toBase, fromBase] = [
+        imperialQuartsConversion[1],
         metricCupsConversion[0],
-        imperialQuartsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "imperial qt"] as const;
+      const expected = [fromBase(toBase(v)), "imperial qt"] as const;
       const conversionCandidate = [v, "metric cup"] as const;
 
       expect(volume["imperial qt"](conversionCandidate)).toEqual(expected);
@@ -13498,11 +13498,11 @@ describe("volume", () => {
       const megalitersConversion = linearConversion(1000000);
 
       const [toBase, fromBase] = [
+        imperialGallonsConversion[1],
         megalitersConversion[0],
-        imperialGallonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "imperial gal"] as const;
+      const expected = [fromBase(toBase(v)), "imperial gal"] as const;
       const conversionCandidate = [v, "ML"] as const;
 
       expect(volume["imperial gal"](conversionCandidate)).toEqual(expected);
@@ -13514,11 +13514,11 @@ describe("volume", () => {
       const kilolitersConversion = linearConversion(1000);
 
       const [toBase, fromBase] = [
+        imperialGallonsConversion[1],
         kilolitersConversion[0],
-        imperialGallonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "imperial gal"] as const;
+      const expected = [fromBase(toBase(v)), "imperial gal"] as const;
       const conversionCandidate = [v, "kL"] as const;
 
       expect(volume["imperial gal"](conversionCandidate)).toEqual(expected);
@@ -13530,11 +13530,11 @@ describe("volume", () => {
       const litersConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
+        imperialGallonsConversion[1],
         litersConversion[0],
-        imperialGallonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "imperial gal"] as const;
+      const expected = [fromBase(toBase(v)), "imperial gal"] as const;
       const conversionCandidate = [v, "L"] as const;
 
       expect(volume["imperial gal"](conversionCandidate)).toEqual(expected);
@@ -13546,11 +13546,11 @@ describe("volume", () => {
       const decilitersConversion = linearConversion(0.1);
 
       const [toBase, fromBase] = [
+        imperialGallonsConversion[1],
         decilitersConversion[0],
-        imperialGallonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "imperial gal"] as const;
+      const expected = [fromBase(toBase(v)), "imperial gal"] as const;
       const conversionCandidate = [v, "dL"] as const;
 
       expect(volume["imperial gal"](conversionCandidate)).toEqual(expected);
@@ -13562,11 +13562,11 @@ describe("volume", () => {
       const centilitersConversion = linearConversion(0.01);
 
       const [toBase, fromBase] = [
+        imperialGallonsConversion[1],
         centilitersConversion[0],
-        imperialGallonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "imperial gal"] as const;
+      const expected = [fromBase(toBase(v)), "imperial gal"] as const;
       const conversionCandidate = [v, "cL"] as const;
 
       expect(volume["imperial gal"](conversionCandidate)).toEqual(expected);
@@ -13578,11 +13578,11 @@ describe("volume", () => {
       const millilitersConversion = linearConversion(0.001);
 
       const [toBase, fromBase] = [
+        imperialGallonsConversion[1],
         millilitersConversion[0],
-        imperialGallonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "imperial gal"] as const;
+      const expected = [fromBase(toBase(v)), "imperial gal"] as const;
       const conversionCandidate = [v, "mL"] as const;
 
       expect(volume["imperial gal"](conversionCandidate)).toEqual(expected);
@@ -13594,11 +13594,11 @@ describe("volume", () => {
       const cubicKilometersConversion = linearConversion(1000000000000);
 
       const [toBase, fromBase] = [
+        imperialGallonsConversion[1],
         cubicKilometersConversion[0],
-        imperialGallonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "imperial gal"] as const;
+      const expected = [fromBase(toBase(v)), "imperial gal"] as const;
       const conversionCandidate = [v, "km³"] as const;
 
       expect(volume["imperial gal"](conversionCandidate)).toEqual(expected);
@@ -13610,11 +13610,11 @@ describe("volume", () => {
       const cubicMetersConversion = linearConversion(1000);
 
       const [toBase, fromBase] = [
+        imperialGallonsConversion[1],
         cubicMetersConversion[0],
-        imperialGallonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "imperial gal"] as const;
+      const expected = [fromBase(toBase(v)), "imperial gal"] as const;
       const conversionCandidate = [v, "m³"] as const;
 
       expect(volume["imperial gal"](conversionCandidate)).toEqual(expected);
@@ -13626,11 +13626,11 @@ describe("volume", () => {
       const cubicDecimetersConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
+        imperialGallonsConversion[1],
         cubicDecimetersConversion[0],
-        imperialGallonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "imperial gal"] as const;
+      const expected = [fromBase(toBase(v)), "imperial gal"] as const;
       const conversionCandidate = [v, "dm³"] as const;
 
       expect(volume["imperial gal"](conversionCandidate)).toEqual(expected);
@@ -13642,11 +13642,11 @@ describe("volume", () => {
       const cubicMillimetersConversion = linearConversion(0.000001);
 
       const [toBase, fromBase] = [
+        imperialGallonsConversion[1],
         cubicMillimetersConversion[0],
-        imperialGallonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "imperial gal"] as const;
+      const expected = [fromBase(toBase(v)), "imperial gal"] as const;
       const conversionCandidate = [v, "mm³"] as const;
 
       expect(volume["imperial gal"](conversionCandidate)).toEqual(expected);
@@ -13658,11 +13658,11 @@ describe("volume", () => {
       const cubicInchesConversion = linearConversion(0.0163871);
 
       const [toBase, fromBase] = [
+        imperialGallonsConversion[1],
         cubicInchesConversion[0],
-        imperialGallonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "imperial gal"] as const;
+      const expected = [fromBase(toBase(v)), "imperial gal"] as const;
       const conversionCandidate = [v, "in³"] as const;
 
       expect(volume["imperial gal"](conversionCandidate)).toEqual(expected);
@@ -13674,11 +13674,11 @@ describe("volume", () => {
       const cubicFeetConversion = linearConversion(28.3168);
 
       const [toBase, fromBase] = [
+        imperialGallonsConversion[1],
         cubicFeetConversion[0],
-        imperialGallonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "imperial gal"] as const;
+      const expected = [fromBase(toBase(v)), "imperial gal"] as const;
       const conversionCandidate = [v, "ft³"] as const;
 
       expect(volume["imperial gal"](conversionCandidate)).toEqual(expected);
@@ -13690,11 +13690,11 @@ describe("volume", () => {
       const cubicYardsConversion = linearConversion(764.555);
 
       const [toBase, fromBase] = [
+        imperialGallonsConversion[1],
         cubicYardsConversion[0],
-        imperialGallonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "imperial gal"] as const;
+      const expected = [fromBase(toBase(v)), "imperial gal"] as const;
       const conversionCandidate = [v, "yd³"] as const;
 
       expect(volume["imperial gal"](conversionCandidate)).toEqual(expected);
@@ -13706,11 +13706,11 @@ describe("volume", () => {
       const cubicMilesConversion = linearConversion(4168000000000);
 
       const [toBase, fromBase] = [
+        imperialGallonsConversion[1],
         cubicMilesConversion[0],
-        imperialGallonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "imperial gal"] as const;
+      const expected = [fromBase(toBase(v)), "imperial gal"] as const;
       const conversionCandidate = [v, "mi³"] as const;
 
       expect(volume["imperial gal"](conversionCandidate)).toEqual(expected);
@@ -13722,11 +13722,11 @@ describe("volume", () => {
       const acreFeetConversion = linearConversion(1233000);
 
       const [toBase, fromBase] = [
+        imperialGallonsConversion[1],
         acreFeetConversion[0],
-        imperialGallonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "imperial gal"] as const;
+      const expected = [fromBase(toBase(v)), "imperial gal"] as const;
       const conversionCandidate = [v, "af"] as const;
 
       expect(volume["imperial gal"](conversionCandidate)).toEqual(expected);
@@ -13738,11 +13738,11 @@ describe("volume", () => {
       const bushelsConversion = linearConversion(35.2391);
 
       const [toBase, fromBase] = [
+        imperialGallonsConversion[1],
         bushelsConversion[0],
-        imperialGallonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "imperial gal"] as const;
+      const expected = [fromBase(toBase(v)), "imperial gal"] as const;
       const conversionCandidate = [v, "bsh"] as const;
 
       expect(volume["imperial gal"](conversionCandidate)).toEqual(expected);
@@ -13754,11 +13754,11 @@ describe("volume", () => {
       const teaspoonsConversion = linearConversion(0.00492892);
 
       const [toBase, fromBase] = [
+        imperialGallonsConversion[1],
         teaspoonsConversion[0],
-        imperialGallonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "imperial gal"] as const;
+      const expected = [fromBase(toBase(v)), "imperial gal"] as const;
       const conversionCandidate = [v, "tsp"] as const;
 
       expect(volume["imperial gal"](conversionCandidate)).toEqual(expected);
@@ -13770,11 +13770,11 @@ describe("volume", () => {
       const tablespoonsConversion = linearConversion(0.0147868);
 
       const [toBase, fromBase] = [
+        imperialGallonsConversion[1],
         tablespoonsConversion[0],
-        imperialGallonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "imperial gal"] as const;
+      const expected = [fromBase(toBase(v)), "imperial gal"] as const;
       const conversionCandidate = [v, "tbsp"] as const;
 
       expect(volume["imperial gal"](conversionCandidate)).toEqual(expected);
@@ -13786,11 +13786,11 @@ describe("volume", () => {
       const fluidOuncesConversion = linearConversion(0.0295735);
 
       const [toBase, fromBase] = [
+        imperialGallonsConversion[1],
         fluidOuncesConversion[0],
-        imperialGallonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "imperial gal"] as const;
+      const expected = [fromBase(toBase(v)), "imperial gal"] as const;
       const conversionCandidate = [v, "fl oz"] as const;
 
       expect(volume["imperial gal"](conversionCandidate)).toEqual(expected);
@@ -13802,11 +13802,11 @@ describe("volume", () => {
       const cupsConversion = linearConversion(0.24);
 
       const [toBase, fromBase] = [
+        imperialGallonsConversion[1],
         cupsConversion[0],
-        imperialGallonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "imperial gal"] as const;
+      const expected = [fromBase(toBase(v)), "imperial gal"] as const;
       const conversionCandidate = [v, "cup"] as const;
 
       expect(volume["imperial gal"](conversionCandidate)).toEqual(expected);
@@ -13818,11 +13818,11 @@ describe("volume", () => {
       const pintsConversion = linearConversion(0.473176);
 
       const [toBase, fromBase] = [
+        imperialGallonsConversion[1],
         pintsConversion[0],
-        imperialGallonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "imperial gal"] as const;
+      const expected = [fromBase(toBase(v)), "imperial gal"] as const;
       const conversionCandidate = [v, "pt"] as const;
 
       expect(volume["imperial gal"](conversionCandidate)).toEqual(expected);
@@ -13834,11 +13834,11 @@ describe("volume", () => {
       const quartsConversion = linearConversion(0.946353);
 
       const [toBase, fromBase] = [
+        imperialGallonsConversion[1],
         quartsConversion[0],
-        imperialGallonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "imperial gal"] as const;
+      const expected = [fromBase(toBase(v)), "imperial gal"] as const;
       const conversionCandidate = [v, "qt"] as const;
 
       expect(volume["imperial gal"](conversionCandidate)).toEqual(expected);
@@ -13850,11 +13850,11 @@ describe("volume", () => {
       const gallonsConversion = linearConversion(3.78541);
 
       const [toBase, fromBase] = [
+        imperialGallonsConversion[1],
         gallonsConversion[0],
-        imperialGallonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "imperial gal"] as const;
+      const expected = [fromBase(toBase(v)), "imperial gal"] as const;
       const conversionCandidate = [v, "gal"] as const;
 
       expect(volume["imperial gal"](conversionCandidate)).toEqual(expected);
@@ -13866,11 +13866,11 @@ describe("volume", () => {
       const imperialTeaspoonsConversion = linearConversion(0.00591939);
 
       const [toBase, fromBase] = [
+        imperialGallonsConversion[1],
         imperialTeaspoonsConversion[0],
-        imperialGallonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "imperial gal"] as const;
+      const expected = [fromBase(toBase(v)), "imperial gal"] as const;
       const conversionCandidate = [v, "imperial tsp"] as const;
 
       expect(volume["imperial gal"](conversionCandidate)).toEqual(expected);
@@ -13882,11 +13882,11 @@ describe("volume", () => {
       const imperialTablespoonsConversion = linearConversion(0.0177582);
 
       const [toBase, fromBase] = [
+        imperialGallonsConversion[1],
         imperialTablespoonsConversion[0],
-        imperialGallonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "imperial gal"] as const;
+      const expected = [fromBase(toBase(v)), "imperial gal"] as const;
       const conversionCandidate = [v, "imperial tbsp"] as const;
 
       expect(volume["imperial gal"](conversionCandidate)).toEqual(expected);
@@ -13898,11 +13898,11 @@ describe("volume", () => {
       const imperialFluidOuncesConversion = linearConversion(0.0284131);
 
       const [toBase, fromBase] = [
+        imperialGallonsConversion[1],
         imperialFluidOuncesConversion[0],
-        imperialGallonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "imperial gal"] as const;
+      const expected = [fromBase(toBase(v)), "imperial gal"] as const;
       const conversionCandidate = [v, "imperial fl oz"] as const;
 
       expect(volume["imperial gal"](conversionCandidate)).toEqual(expected);
@@ -13914,11 +13914,11 @@ describe("volume", () => {
       const imperialPintsConversion = linearConversion(0.568261);
 
       const [toBase, fromBase] = [
+        imperialGallonsConversion[1],
         imperialPintsConversion[0],
-        imperialGallonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "imperial gal"] as const;
+      const expected = [fromBase(toBase(v)), "imperial gal"] as const;
       const conversionCandidate = [v, "imperial pt"] as const;
 
       expect(volume["imperial gal"](conversionCandidate)).toEqual(expected);
@@ -13930,11 +13930,11 @@ describe("volume", () => {
       const imperialQuartsConversion = linearConversion(1.13652);
 
       const [toBase, fromBase] = [
+        imperialGallonsConversion[1],
         imperialQuartsConversion[0],
-        imperialGallonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "imperial gal"] as const;
+      const expected = [fromBase(toBase(v)), "imperial gal"] as const;
       const conversionCandidate = [v, "imperial qt"] as const;
 
       expect(volume["imperial gal"](conversionCandidate)).toEqual(expected);
@@ -13948,11 +13948,11 @@ describe("volume", () => {
       const metricCupsConversion = linearConversion(0.25);
 
       const [toBase, fromBase] = [
+        imperialGallonsConversion[1],
         metricCupsConversion[0],
-        imperialGallonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "imperial gal"] as const;
+      const expected = [fromBase(toBase(v)), "imperial gal"] as const;
       const conversionCandidate = [v, "metric cup"] as const;
 
       expect(volume["imperial gal"](conversionCandidate)).toEqual(expected);
@@ -13972,11 +13972,11 @@ describe("volume", () => {
       const megalitersConversion = linearConversion(1000000);
 
       const [toBase, fromBase] = [
+        metricCupsConversion[1],
         megalitersConversion[0],
-        metricCupsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "metric cup"] as const;
+      const expected = [fromBase(toBase(v)), "metric cup"] as const;
       const conversionCandidate = [v, "ML"] as const;
 
       expect(volume["metric cup"](conversionCandidate)).toEqual(expected);
@@ -13988,11 +13988,11 @@ describe("volume", () => {
       const kilolitersConversion = linearConversion(1000);
 
       const [toBase, fromBase] = [
+        metricCupsConversion[1],
         kilolitersConversion[0],
-        metricCupsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "metric cup"] as const;
+      const expected = [fromBase(toBase(v)), "metric cup"] as const;
       const conversionCandidate = [v, "kL"] as const;
 
       expect(volume["metric cup"](conversionCandidate)).toEqual(expected);
@@ -14004,11 +14004,11 @@ describe("volume", () => {
       const litersConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
+        metricCupsConversion[1],
         litersConversion[0],
-        metricCupsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "metric cup"] as const;
+      const expected = [fromBase(toBase(v)), "metric cup"] as const;
       const conversionCandidate = [v, "L"] as const;
 
       expect(volume["metric cup"](conversionCandidate)).toEqual(expected);
@@ -14020,11 +14020,11 @@ describe("volume", () => {
       const decilitersConversion = linearConversion(0.1);
 
       const [toBase, fromBase] = [
+        metricCupsConversion[1],
         decilitersConversion[0],
-        metricCupsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "metric cup"] as const;
+      const expected = [fromBase(toBase(v)), "metric cup"] as const;
       const conversionCandidate = [v, "dL"] as const;
 
       expect(volume["metric cup"](conversionCandidate)).toEqual(expected);
@@ -14036,11 +14036,11 @@ describe("volume", () => {
       const centilitersConversion = linearConversion(0.01);
 
       const [toBase, fromBase] = [
+        metricCupsConversion[1],
         centilitersConversion[0],
-        metricCupsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "metric cup"] as const;
+      const expected = [fromBase(toBase(v)), "metric cup"] as const;
       const conversionCandidate = [v, "cL"] as const;
 
       expect(volume["metric cup"](conversionCandidate)).toEqual(expected);
@@ -14052,11 +14052,11 @@ describe("volume", () => {
       const millilitersConversion = linearConversion(0.001);
 
       const [toBase, fromBase] = [
+        metricCupsConversion[1],
         millilitersConversion[0],
-        metricCupsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "metric cup"] as const;
+      const expected = [fromBase(toBase(v)), "metric cup"] as const;
       const conversionCandidate = [v, "mL"] as const;
 
       expect(volume["metric cup"](conversionCandidate)).toEqual(expected);
@@ -14068,11 +14068,11 @@ describe("volume", () => {
       const cubicKilometersConversion = linearConversion(1000000000000);
 
       const [toBase, fromBase] = [
+        metricCupsConversion[1],
         cubicKilometersConversion[0],
-        metricCupsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "metric cup"] as const;
+      const expected = [fromBase(toBase(v)), "metric cup"] as const;
       const conversionCandidate = [v, "km³"] as const;
 
       expect(volume["metric cup"](conversionCandidate)).toEqual(expected);
@@ -14084,11 +14084,11 @@ describe("volume", () => {
       const cubicMetersConversion = linearConversion(1000);
 
       const [toBase, fromBase] = [
+        metricCupsConversion[1],
         cubicMetersConversion[0],
-        metricCupsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "metric cup"] as const;
+      const expected = [fromBase(toBase(v)), "metric cup"] as const;
       const conversionCandidate = [v, "m³"] as const;
 
       expect(volume["metric cup"](conversionCandidate)).toEqual(expected);
@@ -14100,11 +14100,11 @@ describe("volume", () => {
       const cubicDecimetersConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
+        metricCupsConversion[1],
         cubicDecimetersConversion[0],
-        metricCupsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "metric cup"] as const;
+      const expected = [fromBase(toBase(v)), "metric cup"] as const;
       const conversionCandidate = [v, "dm³"] as const;
 
       expect(volume["metric cup"](conversionCandidate)).toEqual(expected);
@@ -14116,11 +14116,11 @@ describe("volume", () => {
       const cubicMillimetersConversion = linearConversion(0.000001);
 
       const [toBase, fromBase] = [
+        metricCupsConversion[1],
         cubicMillimetersConversion[0],
-        metricCupsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "metric cup"] as const;
+      const expected = [fromBase(toBase(v)), "metric cup"] as const;
       const conversionCandidate = [v, "mm³"] as const;
 
       expect(volume["metric cup"](conversionCandidate)).toEqual(expected);
@@ -14132,11 +14132,11 @@ describe("volume", () => {
       const cubicInchesConversion = linearConversion(0.0163871);
 
       const [toBase, fromBase] = [
+        metricCupsConversion[1],
         cubicInchesConversion[0],
-        metricCupsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "metric cup"] as const;
+      const expected = [fromBase(toBase(v)), "metric cup"] as const;
       const conversionCandidate = [v, "in³"] as const;
 
       expect(volume["metric cup"](conversionCandidate)).toEqual(expected);
@@ -14148,11 +14148,11 @@ describe("volume", () => {
       const cubicFeetConversion = linearConversion(28.3168);
 
       const [toBase, fromBase] = [
+        metricCupsConversion[1],
         cubicFeetConversion[0],
-        metricCupsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "metric cup"] as const;
+      const expected = [fromBase(toBase(v)), "metric cup"] as const;
       const conversionCandidate = [v, "ft³"] as const;
 
       expect(volume["metric cup"](conversionCandidate)).toEqual(expected);
@@ -14164,11 +14164,11 @@ describe("volume", () => {
       const cubicYardsConversion = linearConversion(764.555);
 
       const [toBase, fromBase] = [
+        metricCupsConversion[1],
         cubicYardsConversion[0],
-        metricCupsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "metric cup"] as const;
+      const expected = [fromBase(toBase(v)), "metric cup"] as const;
       const conversionCandidate = [v, "yd³"] as const;
 
       expect(volume["metric cup"](conversionCandidate)).toEqual(expected);
@@ -14180,11 +14180,11 @@ describe("volume", () => {
       const cubicMilesConversion = linearConversion(4168000000000);
 
       const [toBase, fromBase] = [
+        metricCupsConversion[1],
         cubicMilesConversion[0],
-        metricCupsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "metric cup"] as const;
+      const expected = [fromBase(toBase(v)), "metric cup"] as const;
       const conversionCandidate = [v, "mi³"] as const;
 
       expect(volume["metric cup"](conversionCandidate)).toEqual(expected);
@@ -14196,11 +14196,11 @@ describe("volume", () => {
       const acreFeetConversion = linearConversion(1233000);
 
       const [toBase, fromBase] = [
+        metricCupsConversion[1],
         acreFeetConversion[0],
-        metricCupsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "metric cup"] as const;
+      const expected = [fromBase(toBase(v)), "metric cup"] as const;
       const conversionCandidate = [v, "af"] as const;
 
       expect(volume["metric cup"](conversionCandidate)).toEqual(expected);
@@ -14212,11 +14212,11 @@ describe("volume", () => {
       const bushelsConversion = linearConversion(35.2391);
 
       const [toBase, fromBase] = [
+        metricCupsConversion[1],
         bushelsConversion[0],
-        metricCupsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "metric cup"] as const;
+      const expected = [fromBase(toBase(v)), "metric cup"] as const;
       const conversionCandidate = [v, "bsh"] as const;
 
       expect(volume["metric cup"](conversionCandidate)).toEqual(expected);
@@ -14228,11 +14228,11 @@ describe("volume", () => {
       const teaspoonsConversion = linearConversion(0.00492892);
 
       const [toBase, fromBase] = [
+        metricCupsConversion[1],
         teaspoonsConversion[0],
-        metricCupsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "metric cup"] as const;
+      const expected = [fromBase(toBase(v)), "metric cup"] as const;
       const conversionCandidate = [v, "tsp"] as const;
 
       expect(volume["metric cup"](conversionCandidate)).toEqual(expected);
@@ -14244,11 +14244,11 @@ describe("volume", () => {
       const tablespoonsConversion = linearConversion(0.0147868);
 
       const [toBase, fromBase] = [
+        metricCupsConversion[1],
         tablespoonsConversion[0],
-        metricCupsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "metric cup"] as const;
+      const expected = [fromBase(toBase(v)), "metric cup"] as const;
       const conversionCandidate = [v, "tbsp"] as const;
 
       expect(volume["metric cup"](conversionCandidate)).toEqual(expected);
@@ -14260,11 +14260,11 @@ describe("volume", () => {
       const fluidOuncesConversion = linearConversion(0.0295735);
 
       const [toBase, fromBase] = [
+        metricCupsConversion[1],
         fluidOuncesConversion[0],
-        metricCupsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "metric cup"] as const;
+      const expected = [fromBase(toBase(v)), "metric cup"] as const;
       const conversionCandidate = [v, "fl oz"] as const;
 
       expect(volume["metric cup"](conversionCandidate)).toEqual(expected);
@@ -14276,11 +14276,11 @@ describe("volume", () => {
       const cupsConversion = linearConversion(0.24);
 
       const [toBase, fromBase] = [
+        metricCupsConversion[1],
         cupsConversion[0],
-        metricCupsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "metric cup"] as const;
+      const expected = [fromBase(toBase(v)), "metric cup"] as const;
       const conversionCandidate = [v, "cup"] as const;
 
       expect(volume["metric cup"](conversionCandidate)).toEqual(expected);
@@ -14292,11 +14292,11 @@ describe("volume", () => {
       const pintsConversion = linearConversion(0.473176);
 
       const [toBase, fromBase] = [
+        metricCupsConversion[1],
         pintsConversion[0],
-        metricCupsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "metric cup"] as const;
+      const expected = [fromBase(toBase(v)), "metric cup"] as const;
       const conversionCandidate = [v, "pt"] as const;
 
       expect(volume["metric cup"](conversionCandidate)).toEqual(expected);
@@ -14308,11 +14308,11 @@ describe("volume", () => {
       const quartsConversion = linearConversion(0.946353);
 
       const [toBase, fromBase] = [
+        metricCupsConversion[1],
         quartsConversion[0],
-        metricCupsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "metric cup"] as const;
+      const expected = [fromBase(toBase(v)), "metric cup"] as const;
       const conversionCandidate = [v, "qt"] as const;
 
       expect(volume["metric cup"](conversionCandidate)).toEqual(expected);
@@ -14324,11 +14324,11 @@ describe("volume", () => {
       const gallonsConversion = linearConversion(3.78541);
 
       const [toBase, fromBase] = [
+        metricCupsConversion[1],
         gallonsConversion[0],
-        metricCupsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "metric cup"] as const;
+      const expected = [fromBase(toBase(v)), "metric cup"] as const;
       const conversionCandidate = [v, "gal"] as const;
 
       expect(volume["metric cup"](conversionCandidate)).toEqual(expected);
@@ -14340,11 +14340,11 @@ describe("volume", () => {
       const imperialTeaspoonsConversion = linearConversion(0.00591939);
 
       const [toBase, fromBase] = [
+        metricCupsConversion[1],
         imperialTeaspoonsConversion[0],
-        metricCupsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "metric cup"] as const;
+      const expected = [fromBase(toBase(v)), "metric cup"] as const;
       const conversionCandidate = [v, "imperial tsp"] as const;
 
       expect(volume["metric cup"](conversionCandidate)).toEqual(expected);
@@ -14356,11 +14356,11 @@ describe("volume", () => {
       const imperialTablespoonsConversion = linearConversion(0.0177582);
 
       const [toBase, fromBase] = [
+        metricCupsConversion[1],
         imperialTablespoonsConversion[0],
-        metricCupsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "metric cup"] as const;
+      const expected = [fromBase(toBase(v)), "metric cup"] as const;
       const conversionCandidate = [v, "imperial tbsp"] as const;
 
       expect(volume["metric cup"](conversionCandidate)).toEqual(expected);
@@ -14372,11 +14372,11 @@ describe("volume", () => {
       const imperialFluidOuncesConversion = linearConversion(0.0284131);
 
       const [toBase, fromBase] = [
+        metricCupsConversion[1],
         imperialFluidOuncesConversion[0],
-        metricCupsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "metric cup"] as const;
+      const expected = [fromBase(toBase(v)), "metric cup"] as const;
       const conversionCandidate = [v, "imperial fl oz"] as const;
 
       expect(volume["metric cup"](conversionCandidate)).toEqual(expected);
@@ -14388,11 +14388,11 @@ describe("volume", () => {
       const imperialPintsConversion = linearConversion(0.568261);
 
       const [toBase, fromBase] = [
+        metricCupsConversion[1],
         imperialPintsConversion[0],
-        metricCupsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "metric cup"] as const;
+      const expected = [fromBase(toBase(v)), "metric cup"] as const;
       const conversionCandidate = [v, "imperial pt"] as const;
 
       expect(volume["metric cup"](conversionCandidate)).toEqual(expected);
@@ -14404,11 +14404,11 @@ describe("volume", () => {
       const imperialQuartsConversion = linearConversion(1.13652);
 
       const [toBase, fromBase] = [
+        metricCupsConversion[1],
         imperialQuartsConversion[0],
-        metricCupsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "metric cup"] as const;
+      const expected = [fromBase(toBase(v)), "metric cup"] as const;
       const conversionCandidate = [v, "imperial qt"] as const;
 
       expect(volume["metric cup"](conversionCandidate)).toEqual(expected);
@@ -14420,11 +14420,11 @@ describe("volume", () => {
       const imperialGallonsConversion = linearConversion(4.54609);
 
       const [toBase, fromBase] = [
+        metricCupsConversion[1],
         imperialGallonsConversion[0],
-        metricCupsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "metric cup"] as const;
+      const expected = [fromBase(toBase(v)), "metric cup"] as const;
       const conversionCandidate = [v, "imperial gal"] as const;
 
       expect(volume["metric cup"](conversionCandidate)).toEqual(expected);

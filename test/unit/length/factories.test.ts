@@ -193,11 +193,11 @@ describe("length", () => {
       const kilometersConversion = linearConversion(1000);
 
       const [toBase, fromBase] = [
+        megametersConversion[1],
         kilometersConversion[0],
-        megametersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Mm"] as const;
+      const expected = [fromBase(toBase(v)), "Mm"] as const;
       const conversionCandidate = [v, "kM"] as const;
 
       expect(length["Mm"](conversionCandidate)).toEqual(expected);
@@ -209,11 +209,11 @@ describe("length", () => {
       const hectometersConversion = linearConversion(100);
 
       const [toBase, fromBase] = [
+        megametersConversion[1],
         hectometersConversion[0],
-        megametersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Mm"] as const;
+      const expected = [fromBase(toBase(v)), "Mm"] as const;
       const conversionCandidate = [v, "hm"] as const;
 
       expect(length["Mm"](conversionCandidate)).toEqual(expected);
@@ -225,11 +225,11 @@ describe("length", () => {
       const decametersConversion = linearConversion(10);
 
       const [toBase, fromBase] = [
+        megametersConversion[1],
         decametersConversion[0],
-        megametersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Mm"] as const;
+      const expected = [fromBase(toBase(v)), "Mm"] as const;
       const conversionCandidate = [v, "dam"] as const;
 
       expect(length["Mm"](conversionCandidate)).toEqual(expected);
@@ -241,11 +241,11 @@ describe("length", () => {
       const metersConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
+        megametersConversion[1],
         metersConversion[0],
-        megametersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Mm"] as const;
+      const expected = [fromBase(toBase(v)), "Mm"] as const;
       const conversionCandidate = [v, "m"] as const;
 
       expect(length["Mm"](conversionCandidate)).toEqual(expected);
@@ -257,11 +257,11 @@ describe("length", () => {
       const decimetersConversion = linearConversion(0.1);
 
       const [toBase, fromBase] = [
+        megametersConversion[1],
         decimetersConversion[0],
-        megametersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Mm"] as const;
+      const expected = [fromBase(toBase(v)), "Mm"] as const;
       const conversionCandidate = [v, "dm"] as const;
 
       expect(length["Mm"](conversionCandidate)).toEqual(expected);
@@ -273,11 +273,11 @@ describe("length", () => {
       const centimetersConversion = linearConversion(0.01);
 
       const [toBase, fromBase] = [
+        megametersConversion[1],
         centimetersConversion[0],
-        megametersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Mm"] as const;
+      const expected = [fromBase(toBase(v)), "Mm"] as const;
       const conversionCandidate = [v, "cm"] as const;
 
       expect(length["Mm"](conversionCandidate)).toEqual(expected);
@@ -289,11 +289,11 @@ describe("length", () => {
       const millimetersConversion = linearConversion(0.001);
 
       const [toBase, fromBase] = [
+        megametersConversion[1],
         millimetersConversion[0],
-        megametersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Mm"] as const;
+      const expected = [fromBase(toBase(v)), "Mm"] as const;
       const conversionCandidate = [v, "mm"] as const;
 
       expect(length["Mm"](conversionCandidate)).toEqual(expected);
@@ -305,11 +305,11 @@ describe("length", () => {
       const micrometersConversion = linearConversion(0.000001);
 
       const [toBase, fromBase] = [
+        megametersConversion[1],
         micrometersConversion[0],
-        megametersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Mm"] as const;
+      const expected = [fromBase(toBase(v)), "Mm"] as const;
       const conversionCandidate = [v, "µm"] as const;
 
       expect(length["Mm"](conversionCandidate)).toEqual(expected);
@@ -321,11 +321,11 @@ describe("length", () => {
       const nanometersConversion = linearConversion(1e-9);
 
       const [toBase, fromBase] = [
+        megametersConversion[1],
         nanometersConversion[0],
-        megametersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Mm"] as const;
+      const expected = [fromBase(toBase(v)), "Mm"] as const;
       const conversionCandidate = [v, "nm"] as const;
 
       expect(length["Mm"](conversionCandidate)).toEqual(expected);
@@ -337,11 +337,11 @@ describe("length", () => {
       const picometersConversion = linearConversion(1e-12);
 
       const [toBase, fromBase] = [
+        megametersConversion[1],
         picometersConversion[0],
-        megametersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Mm"] as const;
+      const expected = [fromBase(toBase(v)), "Mm"] as const;
       const conversionCandidate = [v, "pm"] as const;
 
       expect(length["Mm"](conversionCandidate)).toEqual(expected);
@@ -353,11 +353,11 @@ describe("length", () => {
       const twipsConversion = linearConversion(0.00001763888888888889);
 
       const [toBase, fromBase] = [
+        megametersConversion[1],
         twipsConversion[0],
-        megametersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Mm"] as const;
+      const expected = [fromBase(toBase(v)), "Mm"] as const;
       const conversionCandidate = [v, "tw"] as const;
 
       expect(length["Mm"](conversionCandidate)).toEqual(expected);
@@ -369,11 +369,11 @@ describe("length", () => {
       const pointsConversion = linearConversion(0.0003527777777777778);
 
       const [toBase, fromBase] = [
+        megametersConversion[1],
         pointsConversion[0],
-        megametersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Mm"] as const;
+      const expected = [fromBase(toBase(v)), "Mm"] as const;
       const conversionCandidate = [v, "pt"] as const;
 
       expect(length["Mm"](conversionCandidate)).toEqual(expected);
@@ -385,11 +385,11 @@ describe("length", () => {
       const picasConversion = linearConversion(0.004233333333333334);
 
       const [toBase, fromBase] = [
+        megametersConversion[1],
         picasConversion[0],
-        megametersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Mm"] as const;
+      const expected = [fromBase(toBase(v)), "Mm"] as const;
       const conversionCandidate = [v, "P"] as const;
 
       expect(length["Mm"](conversionCandidate)).toEqual(expected);
@@ -401,11 +401,11 @@ describe("length", () => {
       const inchesConversion = linearConversion(0.0254);
 
       const [toBase, fromBase] = [
+        megametersConversion[1],
         inchesConversion[0],
-        megametersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Mm"] as const;
+      const expected = [fromBase(toBase(v)), "Mm"] as const;
       const conversionCandidate = [v, "in"] as const;
 
       expect(length["Mm"](conversionCandidate)).toEqual(expected);
@@ -417,11 +417,11 @@ describe("length", () => {
       const feetConversion = linearConversion(0.3048);
 
       const [toBase, fromBase] = [
+        megametersConversion[1],
         feetConversion[0],
-        megametersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Mm"] as const;
+      const expected = [fromBase(toBase(v)), "Mm"] as const;
       const conversionCandidate = [v, "ft"] as const;
 
       expect(length["Mm"](conversionCandidate)).toEqual(expected);
@@ -433,11 +433,11 @@ describe("length", () => {
       const yardsConversion = linearConversion(0.9144);
 
       const [toBase, fromBase] = [
+        megametersConversion[1],
         yardsConversion[0],
-        megametersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Mm"] as const;
+      const expected = [fromBase(toBase(v)), "Mm"] as const;
       const conversionCandidate = [v, "yd"] as const;
 
       expect(length["Mm"](conversionCandidate)).toEqual(expected);
@@ -449,11 +449,11 @@ describe("length", () => {
       const milesConversion = linearConversion(1609.34);
 
       const [toBase, fromBase] = [
+        megametersConversion[1],
         milesConversion[0],
-        megametersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Mm"] as const;
+      const expected = [fromBase(toBase(v)), "Mm"] as const;
       const conversionCandidate = [v, "mi"] as const;
 
       expect(length["Mm"](conversionCandidate)).toEqual(expected);
@@ -465,11 +465,11 @@ describe("length", () => {
       const scandinavianMilesConversion = linearConversion(10000);
 
       const [toBase, fromBase] = [
+        megametersConversion[1],
         scandinavianMilesConversion[0],
-        megametersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Mm"] as const;
+      const expected = [fromBase(toBase(v)), "Mm"] as const;
       const conversionCandidate = [v, "smi"] as const;
 
       expect(length["Mm"](conversionCandidate)).toEqual(expected);
@@ -481,11 +481,11 @@ describe("length", () => {
       const lightyearsConversion = linearConversion(9461000000000000);
 
       const [toBase, fromBase] = [
+        megametersConversion[1],
         lightyearsConversion[0],
-        megametersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Mm"] as const;
+      const expected = [fromBase(toBase(v)), "Mm"] as const;
       const conversionCandidate = [v, "ly"] as const;
 
       expect(length["Mm"](conversionCandidate)).toEqual(expected);
@@ -497,11 +497,11 @@ describe("length", () => {
       const nauticalMilesConversion = linearConversion(1852);
 
       const [toBase, fromBase] = [
+        megametersConversion[1],
         nauticalMilesConversion[0],
-        megametersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Mm"] as const;
+      const expected = [fromBase(toBase(v)), "Mm"] as const;
       const conversionCandidate = [v, "NM"] as const;
 
       expect(length["Mm"](conversionCandidate)).toEqual(expected);
@@ -513,11 +513,11 @@ describe("length", () => {
       const fathomsConversion = linearConversion(1.8288);
 
       const [toBase, fromBase] = [
+        megametersConversion[1],
         fathomsConversion[0],
-        megametersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Mm"] as const;
+      const expected = [fromBase(toBase(v)), "Mm"] as const;
       const conversionCandidate = [v, "ftm"] as const;
 
       expect(length["Mm"](conversionCandidate)).toEqual(expected);
@@ -529,11 +529,11 @@ describe("length", () => {
       const furlongsConversion = linearConversion(201.168);
 
       const [toBase, fromBase] = [
+        megametersConversion[1],
         furlongsConversion[0],
-        megametersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Mm"] as const;
+      const expected = [fromBase(toBase(v)), "Mm"] as const;
       const conversionCandidate = [v, "fur"] as const;
 
       expect(length["Mm"](conversionCandidate)).toEqual(expected);
@@ -545,11 +545,11 @@ describe("length", () => {
       const astronomicalUnitsConversion = linearConversion(149600000000);
 
       const [toBase, fromBase] = [
+        megametersConversion[1],
         astronomicalUnitsConversion[0],
-        megametersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Mm"] as const;
+      const expected = [fromBase(toBase(v)), "Mm"] as const;
       const conversionCandidate = [v, "ua"] as const;
 
       expect(length["Mm"](conversionCandidate)).toEqual(expected);
@@ -561,11 +561,11 @@ describe("length", () => {
       const parsecsConversion = linearConversion(30860000000000000);
 
       const [toBase, fromBase] = [
+        megametersConversion[1],
         parsecsConversion[0],
-        megametersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Mm"] as const;
+      const expected = [fromBase(toBase(v)), "Mm"] as const;
       const conversionCandidate = [v, "pc"] as const;
 
       expect(length["Mm"](conversionCandidate)).toEqual(expected);
@@ -585,11 +585,11 @@ describe("length", () => {
       const megametersConversion = linearConversion(1000000);
 
       const [toBase, fromBase] = [
+        kilometersConversion[1],
         megametersConversion[0],
-        kilometersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "kM"] as const;
+      const expected = [fromBase(toBase(v)), "kM"] as const;
       const conversionCandidate = [v, "Mm"] as const;
 
       expect(length["kM"](conversionCandidate)).toEqual(expected);
@@ -603,11 +603,11 @@ describe("length", () => {
       const hectometersConversion = linearConversion(100);
 
       const [toBase, fromBase] = [
+        kilometersConversion[1],
         hectometersConversion[0],
-        kilometersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "kM"] as const;
+      const expected = [fromBase(toBase(v)), "kM"] as const;
       const conversionCandidate = [v, "hm"] as const;
 
       expect(length["kM"](conversionCandidate)).toEqual(expected);
@@ -619,11 +619,11 @@ describe("length", () => {
       const decametersConversion = linearConversion(10);
 
       const [toBase, fromBase] = [
+        kilometersConversion[1],
         decametersConversion[0],
-        kilometersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "kM"] as const;
+      const expected = [fromBase(toBase(v)), "kM"] as const;
       const conversionCandidate = [v, "dam"] as const;
 
       expect(length["kM"](conversionCandidate)).toEqual(expected);
@@ -635,11 +635,11 @@ describe("length", () => {
       const metersConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
+        kilometersConversion[1],
         metersConversion[0],
-        kilometersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "kM"] as const;
+      const expected = [fromBase(toBase(v)), "kM"] as const;
       const conversionCandidate = [v, "m"] as const;
 
       expect(length["kM"](conversionCandidate)).toEqual(expected);
@@ -651,11 +651,11 @@ describe("length", () => {
       const decimetersConversion = linearConversion(0.1);
 
       const [toBase, fromBase] = [
+        kilometersConversion[1],
         decimetersConversion[0],
-        kilometersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "kM"] as const;
+      const expected = [fromBase(toBase(v)), "kM"] as const;
       const conversionCandidate = [v, "dm"] as const;
 
       expect(length["kM"](conversionCandidate)).toEqual(expected);
@@ -667,11 +667,11 @@ describe("length", () => {
       const centimetersConversion = linearConversion(0.01);
 
       const [toBase, fromBase] = [
+        kilometersConversion[1],
         centimetersConversion[0],
-        kilometersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "kM"] as const;
+      const expected = [fromBase(toBase(v)), "kM"] as const;
       const conversionCandidate = [v, "cm"] as const;
 
       expect(length["kM"](conversionCandidate)).toEqual(expected);
@@ -683,11 +683,11 @@ describe("length", () => {
       const millimetersConversion = linearConversion(0.001);
 
       const [toBase, fromBase] = [
+        kilometersConversion[1],
         millimetersConversion[0],
-        kilometersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "kM"] as const;
+      const expected = [fromBase(toBase(v)), "kM"] as const;
       const conversionCandidate = [v, "mm"] as const;
 
       expect(length["kM"](conversionCandidate)).toEqual(expected);
@@ -699,11 +699,11 @@ describe("length", () => {
       const micrometersConversion = linearConversion(0.000001);
 
       const [toBase, fromBase] = [
+        kilometersConversion[1],
         micrometersConversion[0],
-        kilometersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "kM"] as const;
+      const expected = [fromBase(toBase(v)), "kM"] as const;
       const conversionCandidate = [v, "µm"] as const;
 
       expect(length["kM"](conversionCandidate)).toEqual(expected);
@@ -715,11 +715,11 @@ describe("length", () => {
       const nanometersConversion = linearConversion(1e-9);
 
       const [toBase, fromBase] = [
+        kilometersConversion[1],
         nanometersConversion[0],
-        kilometersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "kM"] as const;
+      const expected = [fromBase(toBase(v)), "kM"] as const;
       const conversionCandidate = [v, "nm"] as const;
 
       expect(length["kM"](conversionCandidate)).toEqual(expected);
@@ -731,11 +731,11 @@ describe("length", () => {
       const picometersConversion = linearConversion(1e-12);
 
       const [toBase, fromBase] = [
+        kilometersConversion[1],
         picometersConversion[0],
-        kilometersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "kM"] as const;
+      const expected = [fromBase(toBase(v)), "kM"] as const;
       const conversionCandidate = [v, "pm"] as const;
 
       expect(length["kM"](conversionCandidate)).toEqual(expected);
@@ -747,11 +747,11 @@ describe("length", () => {
       const twipsConversion = linearConversion(0.00001763888888888889);
 
       const [toBase, fromBase] = [
+        kilometersConversion[1],
         twipsConversion[0],
-        kilometersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "kM"] as const;
+      const expected = [fromBase(toBase(v)), "kM"] as const;
       const conversionCandidate = [v, "tw"] as const;
 
       expect(length["kM"](conversionCandidate)).toEqual(expected);
@@ -763,11 +763,11 @@ describe("length", () => {
       const pointsConversion = linearConversion(0.0003527777777777778);
 
       const [toBase, fromBase] = [
+        kilometersConversion[1],
         pointsConversion[0],
-        kilometersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "kM"] as const;
+      const expected = [fromBase(toBase(v)), "kM"] as const;
       const conversionCandidate = [v, "pt"] as const;
 
       expect(length["kM"](conversionCandidate)).toEqual(expected);
@@ -779,11 +779,11 @@ describe("length", () => {
       const picasConversion = linearConversion(0.004233333333333334);
 
       const [toBase, fromBase] = [
+        kilometersConversion[1],
         picasConversion[0],
-        kilometersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "kM"] as const;
+      const expected = [fromBase(toBase(v)), "kM"] as const;
       const conversionCandidate = [v, "P"] as const;
 
       expect(length["kM"](conversionCandidate)).toEqual(expected);
@@ -795,11 +795,11 @@ describe("length", () => {
       const inchesConversion = linearConversion(0.0254);
 
       const [toBase, fromBase] = [
+        kilometersConversion[1],
         inchesConversion[0],
-        kilometersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "kM"] as const;
+      const expected = [fromBase(toBase(v)), "kM"] as const;
       const conversionCandidate = [v, "in"] as const;
 
       expect(length["kM"](conversionCandidate)).toEqual(expected);
@@ -811,11 +811,11 @@ describe("length", () => {
       const feetConversion = linearConversion(0.3048);
 
       const [toBase, fromBase] = [
+        kilometersConversion[1],
         feetConversion[0],
-        kilometersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "kM"] as const;
+      const expected = [fromBase(toBase(v)), "kM"] as const;
       const conversionCandidate = [v, "ft"] as const;
 
       expect(length["kM"](conversionCandidate)).toEqual(expected);
@@ -827,11 +827,11 @@ describe("length", () => {
       const yardsConversion = linearConversion(0.9144);
 
       const [toBase, fromBase] = [
+        kilometersConversion[1],
         yardsConversion[0],
-        kilometersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "kM"] as const;
+      const expected = [fromBase(toBase(v)), "kM"] as const;
       const conversionCandidate = [v, "yd"] as const;
 
       expect(length["kM"](conversionCandidate)).toEqual(expected);
@@ -843,11 +843,11 @@ describe("length", () => {
       const milesConversion = linearConversion(1609.34);
 
       const [toBase, fromBase] = [
+        kilometersConversion[1],
         milesConversion[0],
-        kilometersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "kM"] as const;
+      const expected = [fromBase(toBase(v)), "kM"] as const;
       const conversionCandidate = [v, "mi"] as const;
 
       expect(length["kM"](conversionCandidate)).toEqual(expected);
@@ -859,11 +859,11 @@ describe("length", () => {
       const scandinavianMilesConversion = linearConversion(10000);
 
       const [toBase, fromBase] = [
+        kilometersConversion[1],
         scandinavianMilesConversion[0],
-        kilometersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "kM"] as const;
+      const expected = [fromBase(toBase(v)), "kM"] as const;
       const conversionCandidate = [v, "smi"] as const;
 
       expect(length["kM"](conversionCandidate)).toEqual(expected);
@@ -875,11 +875,11 @@ describe("length", () => {
       const lightyearsConversion = linearConversion(9461000000000000);
 
       const [toBase, fromBase] = [
+        kilometersConversion[1],
         lightyearsConversion[0],
-        kilometersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "kM"] as const;
+      const expected = [fromBase(toBase(v)), "kM"] as const;
       const conversionCandidate = [v, "ly"] as const;
 
       expect(length["kM"](conversionCandidate)).toEqual(expected);
@@ -891,11 +891,11 @@ describe("length", () => {
       const nauticalMilesConversion = linearConversion(1852);
 
       const [toBase, fromBase] = [
+        kilometersConversion[1],
         nauticalMilesConversion[0],
-        kilometersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "kM"] as const;
+      const expected = [fromBase(toBase(v)), "kM"] as const;
       const conversionCandidate = [v, "NM"] as const;
 
       expect(length["kM"](conversionCandidate)).toEqual(expected);
@@ -907,11 +907,11 @@ describe("length", () => {
       const fathomsConversion = linearConversion(1.8288);
 
       const [toBase, fromBase] = [
+        kilometersConversion[1],
         fathomsConversion[0],
-        kilometersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "kM"] as const;
+      const expected = [fromBase(toBase(v)), "kM"] as const;
       const conversionCandidate = [v, "ftm"] as const;
 
       expect(length["kM"](conversionCandidate)).toEqual(expected);
@@ -923,11 +923,11 @@ describe("length", () => {
       const furlongsConversion = linearConversion(201.168);
 
       const [toBase, fromBase] = [
+        kilometersConversion[1],
         furlongsConversion[0],
-        kilometersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "kM"] as const;
+      const expected = [fromBase(toBase(v)), "kM"] as const;
       const conversionCandidate = [v, "fur"] as const;
 
       expect(length["kM"](conversionCandidate)).toEqual(expected);
@@ -939,11 +939,11 @@ describe("length", () => {
       const astronomicalUnitsConversion = linearConversion(149600000000);
 
       const [toBase, fromBase] = [
+        kilometersConversion[1],
         astronomicalUnitsConversion[0],
-        kilometersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "kM"] as const;
+      const expected = [fromBase(toBase(v)), "kM"] as const;
       const conversionCandidate = [v, "ua"] as const;
 
       expect(length["kM"](conversionCandidate)).toEqual(expected);
@@ -955,11 +955,11 @@ describe("length", () => {
       const parsecsConversion = linearConversion(30860000000000000);
 
       const [toBase, fromBase] = [
+        kilometersConversion[1],
         parsecsConversion[0],
-        kilometersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "kM"] as const;
+      const expected = [fromBase(toBase(v)), "kM"] as const;
       const conversionCandidate = [v, "pc"] as const;
 
       expect(length["kM"](conversionCandidate)).toEqual(expected);
@@ -979,11 +979,11 @@ describe("length", () => {
       const megametersConversion = linearConversion(1000000);
 
       const [toBase, fromBase] = [
+        hectometersConversion[1],
         megametersConversion[0],
-        hectometersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "hm"] as const;
+      const expected = [fromBase(toBase(v)), "hm"] as const;
       const conversionCandidate = [v, "Mm"] as const;
 
       expect(length["hm"](conversionCandidate)).toEqual(expected);
@@ -995,11 +995,11 @@ describe("length", () => {
       const kilometersConversion = linearConversion(1000);
 
       const [toBase, fromBase] = [
+        hectometersConversion[1],
         kilometersConversion[0],
-        hectometersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "hm"] as const;
+      const expected = [fromBase(toBase(v)), "hm"] as const;
       const conversionCandidate = [v, "kM"] as const;
 
       expect(length["hm"](conversionCandidate)).toEqual(expected);
@@ -1013,11 +1013,11 @@ describe("length", () => {
       const decametersConversion = linearConversion(10);
 
       const [toBase, fromBase] = [
+        hectometersConversion[1],
         decametersConversion[0],
-        hectometersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "hm"] as const;
+      const expected = [fromBase(toBase(v)), "hm"] as const;
       const conversionCandidate = [v, "dam"] as const;
 
       expect(length["hm"](conversionCandidate)).toEqual(expected);
@@ -1029,11 +1029,11 @@ describe("length", () => {
       const metersConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
+        hectometersConversion[1],
         metersConversion[0],
-        hectometersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "hm"] as const;
+      const expected = [fromBase(toBase(v)), "hm"] as const;
       const conversionCandidate = [v, "m"] as const;
 
       expect(length["hm"](conversionCandidate)).toEqual(expected);
@@ -1045,11 +1045,11 @@ describe("length", () => {
       const decimetersConversion = linearConversion(0.1);
 
       const [toBase, fromBase] = [
+        hectometersConversion[1],
         decimetersConversion[0],
-        hectometersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "hm"] as const;
+      const expected = [fromBase(toBase(v)), "hm"] as const;
       const conversionCandidate = [v, "dm"] as const;
 
       expect(length["hm"](conversionCandidate)).toEqual(expected);
@@ -1061,11 +1061,11 @@ describe("length", () => {
       const centimetersConversion = linearConversion(0.01);
 
       const [toBase, fromBase] = [
+        hectometersConversion[1],
         centimetersConversion[0],
-        hectometersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "hm"] as const;
+      const expected = [fromBase(toBase(v)), "hm"] as const;
       const conversionCandidate = [v, "cm"] as const;
 
       expect(length["hm"](conversionCandidate)).toEqual(expected);
@@ -1077,11 +1077,11 @@ describe("length", () => {
       const millimetersConversion = linearConversion(0.001);
 
       const [toBase, fromBase] = [
+        hectometersConversion[1],
         millimetersConversion[0],
-        hectometersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "hm"] as const;
+      const expected = [fromBase(toBase(v)), "hm"] as const;
       const conversionCandidate = [v, "mm"] as const;
 
       expect(length["hm"](conversionCandidate)).toEqual(expected);
@@ -1093,11 +1093,11 @@ describe("length", () => {
       const micrometersConversion = linearConversion(0.000001);
 
       const [toBase, fromBase] = [
+        hectometersConversion[1],
         micrometersConversion[0],
-        hectometersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "hm"] as const;
+      const expected = [fromBase(toBase(v)), "hm"] as const;
       const conversionCandidate = [v, "µm"] as const;
 
       expect(length["hm"](conversionCandidate)).toEqual(expected);
@@ -1109,11 +1109,11 @@ describe("length", () => {
       const nanometersConversion = linearConversion(1e-9);
 
       const [toBase, fromBase] = [
+        hectometersConversion[1],
         nanometersConversion[0],
-        hectometersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "hm"] as const;
+      const expected = [fromBase(toBase(v)), "hm"] as const;
       const conversionCandidate = [v, "nm"] as const;
 
       expect(length["hm"](conversionCandidate)).toEqual(expected);
@@ -1125,11 +1125,11 @@ describe("length", () => {
       const picometersConversion = linearConversion(1e-12);
 
       const [toBase, fromBase] = [
+        hectometersConversion[1],
         picometersConversion[0],
-        hectometersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "hm"] as const;
+      const expected = [fromBase(toBase(v)), "hm"] as const;
       const conversionCandidate = [v, "pm"] as const;
 
       expect(length["hm"](conversionCandidate)).toEqual(expected);
@@ -1141,11 +1141,11 @@ describe("length", () => {
       const twipsConversion = linearConversion(0.00001763888888888889);
 
       const [toBase, fromBase] = [
+        hectometersConversion[1],
         twipsConversion[0],
-        hectometersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "hm"] as const;
+      const expected = [fromBase(toBase(v)), "hm"] as const;
       const conversionCandidate = [v, "tw"] as const;
 
       expect(length["hm"](conversionCandidate)).toEqual(expected);
@@ -1157,11 +1157,11 @@ describe("length", () => {
       const pointsConversion = linearConversion(0.0003527777777777778);
 
       const [toBase, fromBase] = [
+        hectometersConversion[1],
         pointsConversion[0],
-        hectometersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "hm"] as const;
+      const expected = [fromBase(toBase(v)), "hm"] as const;
       const conversionCandidate = [v, "pt"] as const;
 
       expect(length["hm"](conversionCandidate)).toEqual(expected);
@@ -1173,11 +1173,11 @@ describe("length", () => {
       const picasConversion = linearConversion(0.004233333333333334);
 
       const [toBase, fromBase] = [
+        hectometersConversion[1],
         picasConversion[0],
-        hectometersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "hm"] as const;
+      const expected = [fromBase(toBase(v)), "hm"] as const;
       const conversionCandidate = [v, "P"] as const;
 
       expect(length["hm"](conversionCandidate)).toEqual(expected);
@@ -1189,11 +1189,11 @@ describe("length", () => {
       const inchesConversion = linearConversion(0.0254);
 
       const [toBase, fromBase] = [
+        hectometersConversion[1],
         inchesConversion[0],
-        hectometersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "hm"] as const;
+      const expected = [fromBase(toBase(v)), "hm"] as const;
       const conversionCandidate = [v, "in"] as const;
 
       expect(length["hm"](conversionCandidate)).toEqual(expected);
@@ -1205,11 +1205,11 @@ describe("length", () => {
       const feetConversion = linearConversion(0.3048);
 
       const [toBase, fromBase] = [
+        hectometersConversion[1],
         feetConversion[0],
-        hectometersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "hm"] as const;
+      const expected = [fromBase(toBase(v)), "hm"] as const;
       const conversionCandidate = [v, "ft"] as const;
 
       expect(length["hm"](conversionCandidate)).toEqual(expected);
@@ -1221,11 +1221,11 @@ describe("length", () => {
       const yardsConversion = linearConversion(0.9144);
 
       const [toBase, fromBase] = [
+        hectometersConversion[1],
         yardsConversion[0],
-        hectometersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "hm"] as const;
+      const expected = [fromBase(toBase(v)), "hm"] as const;
       const conversionCandidate = [v, "yd"] as const;
 
       expect(length["hm"](conversionCandidate)).toEqual(expected);
@@ -1237,11 +1237,11 @@ describe("length", () => {
       const milesConversion = linearConversion(1609.34);
 
       const [toBase, fromBase] = [
+        hectometersConversion[1],
         milesConversion[0],
-        hectometersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "hm"] as const;
+      const expected = [fromBase(toBase(v)), "hm"] as const;
       const conversionCandidate = [v, "mi"] as const;
 
       expect(length["hm"](conversionCandidate)).toEqual(expected);
@@ -1253,11 +1253,11 @@ describe("length", () => {
       const scandinavianMilesConversion = linearConversion(10000);
 
       const [toBase, fromBase] = [
+        hectometersConversion[1],
         scandinavianMilesConversion[0],
-        hectometersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "hm"] as const;
+      const expected = [fromBase(toBase(v)), "hm"] as const;
       const conversionCandidate = [v, "smi"] as const;
 
       expect(length["hm"](conversionCandidate)).toEqual(expected);
@@ -1269,11 +1269,11 @@ describe("length", () => {
       const lightyearsConversion = linearConversion(9461000000000000);
 
       const [toBase, fromBase] = [
+        hectometersConversion[1],
         lightyearsConversion[0],
-        hectometersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "hm"] as const;
+      const expected = [fromBase(toBase(v)), "hm"] as const;
       const conversionCandidate = [v, "ly"] as const;
 
       expect(length["hm"](conversionCandidate)).toEqual(expected);
@@ -1285,11 +1285,11 @@ describe("length", () => {
       const nauticalMilesConversion = linearConversion(1852);
 
       const [toBase, fromBase] = [
+        hectometersConversion[1],
         nauticalMilesConversion[0],
-        hectometersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "hm"] as const;
+      const expected = [fromBase(toBase(v)), "hm"] as const;
       const conversionCandidate = [v, "NM"] as const;
 
       expect(length["hm"](conversionCandidate)).toEqual(expected);
@@ -1301,11 +1301,11 @@ describe("length", () => {
       const fathomsConversion = linearConversion(1.8288);
 
       const [toBase, fromBase] = [
+        hectometersConversion[1],
         fathomsConversion[0],
-        hectometersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "hm"] as const;
+      const expected = [fromBase(toBase(v)), "hm"] as const;
       const conversionCandidate = [v, "ftm"] as const;
 
       expect(length["hm"](conversionCandidate)).toEqual(expected);
@@ -1317,11 +1317,11 @@ describe("length", () => {
       const furlongsConversion = linearConversion(201.168);
 
       const [toBase, fromBase] = [
+        hectometersConversion[1],
         furlongsConversion[0],
-        hectometersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "hm"] as const;
+      const expected = [fromBase(toBase(v)), "hm"] as const;
       const conversionCandidate = [v, "fur"] as const;
 
       expect(length["hm"](conversionCandidate)).toEqual(expected);
@@ -1333,11 +1333,11 @@ describe("length", () => {
       const astronomicalUnitsConversion = linearConversion(149600000000);
 
       const [toBase, fromBase] = [
+        hectometersConversion[1],
         astronomicalUnitsConversion[0],
-        hectometersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "hm"] as const;
+      const expected = [fromBase(toBase(v)), "hm"] as const;
       const conversionCandidate = [v, "ua"] as const;
 
       expect(length["hm"](conversionCandidate)).toEqual(expected);
@@ -1349,11 +1349,11 @@ describe("length", () => {
       const parsecsConversion = linearConversion(30860000000000000);
 
       const [toBase, fromBase] = [
+        hectometersConversion[1],
         parsecsConversion[0],
-        hectometersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "hm"] as const;
+      const expected = [fromBase(toBase(v)), "hm"] as const;
       const conversionCandidate = [v, "pc"] as const;
 
       expect(length["hm"](conversionCandidate)).toEqual(expected);
@@ -1373,11 +1373,11 @@ describe("length", () => {
       const megametersConversion = linearConversion(1000000);
 
       const [toBase, fromBase] = [
+        decametersConversion[1],
         megametersConversion[0],
-        decametersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "dam"] as const;
+      const expected = [fromBase(toBase(v)), "dam"] as const;
       const conversionCandidate = [v, "Mm"] as const;
 
       expect(length["dam"](conversionCandidate)).toEqual(expected);
@@ -1389,11 +1389,11 @@ describe("length", () => {
       const kilometersConversion = linearConversion(1000);
 
       const [toBase, fromBase] = [
+        decametersConversion[1],
         kilometersConversion[0],
-        decametersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "dam"] as const;
+      const expected = [fromBase(toBase(v)), "dam"] as const;
       const conversionCandidate = [v, "kM"] as const;
 
       expect(length["dam"](conversionCandidate)).toEqual(expected);
@@ -1405,11 +1405,11 @@ describe("length", () => {
       const hectometersConversion = linearConversion(100);
 
       const [toBase, fromBase] = [
+        decametersConversion[1],
         hectometersConversion[0],
-        decametersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "dam"] as const;
+      const expected = [fromBase(toBase(v)), "dam"] as const;
       const conversionCandidate = [v, "hm"] as const;
 
       expect(length["dam"](conversionCandidate)).toEqual(expected);
@@ -1423,11 +1423,11 @@ describe("length", () => {
       const metersConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
+        decametersConversion[1],
         metersConversion[0],
-        decametersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "dam"] as const;
+      const expected = [fromBase(toBase(v)), "dam"] as const;
       const conversionCandidate = [v, "m"] as const;
 
       expect(length["dam"](conversionCandidate)).toEqual(expected);
@@ -1439,11 +1439,11 @@ describe("length", () => {
       const decimetersConversion = linearConversion(0.1);
 
       const [toBase, fromBase] = [
+        decametersConversion[1],
         decimetersConversion[0],
-        decametersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "dam"] as const;
+      const expected = [fromBase(toBase(v)), "dam"] as const;
       const conversionCandidate = [v, "dm"] as const;
 
       expect(length["dam"](conversionCandidate)).toEqual(expected);
@@ -1455,11 +1455,11 @@ describe("length", () => {
       const centimetersConversion = linearConversion(0.01);
 
       const [toBase, fromBase] = [
+        decametersConversion[1],
         centimetersConversion[0],
-        decametersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "dam"] as const;
+      const expected = [fromBase(toBase(v)), "dam"] as const;
       const conversionCandidate = [v, "cm"] as const;
 
       expect(length["dam"](conversionCandidate)).toEqual(expected);
@@ -1471,11 +1471,11 @@ describe("length", () => {
       const millimetersConversion = linearConversion(0.001);
 
       const [toBase, fromBase] = [
+        decametersConversion[1],
         millimetersConversion[0],
-        decametersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "dam"] as const;
+      const expected = [fromBase(toBase(v)), "dam"] as const;
       const conversionCandidate = [v, "mm"] as const;
 
       expect(length["dam"](conversionCandidate)).toEqual(expected);
@@ -1487,11 +1487,11 @@ describe("length", () => {
       const micrometersConversion = linearConversion(0.000001);
 
       const [toBase, fromBase] = [
+        decametersConversion[1],
         micrometersConversion[0],
-        decametersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "dam"] as const;
+      const expected = [fromBase(toBase(v)), "dam"] as const;
       const conversionCandidate = [v, "µm"] as const;
 
       expect(length["dam"](conversionCandidate)).toEqual(expected);
@@ -1503,11 +1503,11 @@ describe("length", () => {
       const nanometersConversion = linearConversion(1e-9);
 
       const [toBase, fromBase] = [
+        decametersConversion[1],
         nanometersConversion[0],
-        decametersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "dam"] as const;
+      const expected = [fromBase(toBase(v)), "dam"] as const;
       const conversionCandidate = [v, "nm"] as const;
 
       expect(length["dam"](conversionCandidate)).toEqual(expected);
@@ -1519,11 +1519,11 @@ describe("length", () => {
       const picometersConversion = linearConversion(1e-12);
 
       const [toBase, fromBase] = [
+        decametersConversion[1],
         picometersConversion[0],
-        decametersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "dam"] as const;
+      const expected = [fromBase(toBase(v)), "dam"] as const;
       const conversionCandidate = [v, "pm"] as const;
 
       expect(length["dam"](conversionCandidate)).toEqual(expected);
@@ -1535,11 +1535,11 @@ describe("length", () => {
       const twipsConversion = linearConversion(0.00001763888888888889);
 
       const [toBase, fromBase] = [
+        decametersConversion[1],
         twipsConversion[0],
-        decametersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "dam"] as const;
+      const expected = [fromBase(toBase(v)), "dam"] as const;
       const conversionCandidate = [v, "tw"] as const;
 
       expect(length["dam"](conversionCandidate)).toEqual(expected);
@@ -1551,11 +1551,11 @@ describe("length", () => {
       const pointsConversion = linearConversion(0.0003527777777777778);
 
       const [toBase, fromBase] = [
+        decametersConversion[1],
         pointsConversion[0],
-        decametersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "dam"] as const;
+      const expected = [fromBase(toBase(v)), "dam"] as const;
       const conversionCandidate = [v, "pt"] as const;
 
       expect(length["dam"](conversionCandidate)).toEqual(expected);
@@ -1567,11 +1567,11 @@ describe("length", () => {
       const picasConversion = linearConversion(0.004233333333333334);
 
       const [toBase, fromBase] = [
+        decametersConversion[1],
         picasConversion[0],
-        decametersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "dam"] as const;
+      const expected = [fromBase(toBase(v)), "dam"] as const;
       const conversionCandidate = [v, "P"] as const;
 
       expect(length["dam"](conversionCandidate)).toEqual(expected);
@@ -1583,11 +1583,11 @@ describe("length", () => {
       const inchesConversion = linearConversion(0.0254);
 
       const [toBase, fromBase] = [
+        decametersConversion[1],
         inchesConversion[0],
-        decametersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "dam"] as const;
+      const expected = [fromBase(toBase(v)), "dam"] as const;
       const conversionCandidate = [v, "in"] as const;
 
       expect(length["dam"](conversionCandidate)).toEqual(expected);
@@ -1599,11 +1599,11 @@ describe("length", () => {
       const feetConversion = linearConversion(0.3048);
 
       const [toBase, fromBase] = [
+        decametersConversion[1],
         feetConversion[0],
-        decametersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "dam"] as const;
+      const expected = [fromBase(toBase(v)), "dam"] as const;
       const conversionCandidate = [v, "ft"] as const;
 
       expect(length["dam"](conversionCandidate)).toEqual(expected);
@@ -1615,11 +1615,11 @@ describe("length", () => {
       const yardsConversion = linearConversion(0.9144);
 
       const [toBase, fromBase] = [
+        decametersConversion[1],
         yardsConversion[0],
-        decametersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "dam"] as const;
+      const expected = [fromBase(toBase(v)), "dam"] as const;
       const conversionCandidate = [v, "yd"] as const;
 
       expect(length["dam"](conversionCandidate)).toEqual(expected);
@@ -1631,11 +1631,11 @@ describe("length", () => {
       const milesConversion = linearConversion(1609.34);
 
       const [toBase, fromBase] = [
+        decametersConversion[1],
         milesConversion[0],
-        decametersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "dam"] as const;
+      const expected = [fromBase(toBase(v)), "dam"] as const;
       const conversionCandidate = [v, "mi"] as const;
 
       expect(length["dam"](conversionCandidate)).toEqual(expected);
@@ -1647,11 +1647,11 @@ describe("length", () => {
       const scandinavianMilesConversion = linearConversion(10000);
 
       const [toBase, fromBase] = [
+        decametersConversion[1],
         scandinavianMilesConversion[0],
-        decametersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "dam"] as const;
+      const expected = [fromBase(toBase(v)), "dam"] as const;
       const conversionCandidate = [v, "smi"] as const;
 
       expect(length["dam"](conversionCandidate)).toEqual(expected);
@@ -1663,11 +1663,11 @@ describe("length", () => {
       const lightyearsConversion = linearConversion(9461000000000000);
 
       const [toBase, fromBase] = [
+        decametersConversion[1],
         lightyearsConversion[0],
-        decametersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "dam"] as const;
+      const expected = [fromBase(toBase(v)), "dam"] as const;
       const conversionCandidate = [v, "ly"] as const;
 
       expect(length["dam"](conversionCandidate)).toEqual(expected);
@@ -1679,11 +1679,11 @@ describe("length", () => {
       const nauticalMilesConversion = linearConversion(1852);
 
       const [toBase, fromBase] = [
+        decametersConversion[1],
         nauticalMilesConversion[0],
-        decametersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "dam"] as const;
+      const expected = [fromBase(toBase(v)), "dam"] as const;
       const conversionCandidate = [v, "NM"] as const;
 
       expect(length["dam"](conversionCandidate)).toEqual(expected);
@@ -1695,11 +1695,11 @@ describe("length", () => {
       const fathomsConversion = linearConversion(1.8288);
 
       const [toBase, fromBase] = [
+        decametersConversion[1],
         fathomsConversion[0],
-        decametersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "dam"] as const;
+      const expected = [fromBase(toBase(v)), "dam"] as const;
       const conversionCandidate = [v, "ftm"] as const;
 
       expect(length["dam"](conversionCandidate)).toEqual(expected);
@@ -1711,11 +1711,11 @@ describe("length", () => {
       const furlongsConversion = linearConversion(201.168);
 
       const [toBase, fromBase] = [
+        decametersConversion[1],
         furlongsConversion[0],
-        decametersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "dam"] as const;
+      const expected = [fromBase(toBase(v)), "dam"] as const;
       const conversionCandidate = [v, "fur"] as const;
 
       expect(length["dam"](conversionCandidate)).toEqual(expected);
@@ -1727,11 +1727,11 @@ describe("length", () => {
       const astronomicalUnitsConversion = linearConversion(149600000000);
 
       const [toBase, fromBase] = [
+        decametersConversion[1],
         astronomicalUnitsConversion[0],
-        decametersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "dam"] as const;
+      const expected = [fromBase(toBase(v)), "dam"] as const;
       const conversionCandidate = [v, "ua"] as const;
 
       expect(length["dam"](conversionCandidate)).toEqual(expected);
@@ -1743,11 +1743,11 @@ describe("length", () => {
       const parsecsConversion = linearConversion(30860000000000000);
 
       const [toBase, fromBase] = [
+        decametersConversion[1],
         parsecsConversion[0],
-        decametersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "dam"] as const;
+      const expected = [fromBase(toBase(v)), "dam"] as const;
       const conversionCandidate = [v, "pc"] as const;
 
       expect(length["dam"](conversionCandidate)).toEqual(expected);
@@ -1767,11 +1767,11 @@ describe("length", () => {
       const megametersConversion = linearConversion(1000000);
 
       const [toBase, fromBase] = [
+        metersConversion[1],
         megametersConversion[0],
-        metersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "m"] as const;
+      const expected = [fromBase(toBase(v)), "m"] as const;
       const conversionCandidate = [v, "Mm"] as const;
 
       expect(length["m"](conversionCandidate)).toEqual(expected);
@@ -1783,11 +1783,11 @@ describe("length", () => {
       const kilometersConversion = linearConversion(1000);
 
       const [toBase, fromBase] = [
+        metersConversion[1],
         kilometersConversion[0],
-        metersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "m"] as const;
+      const expected = [fromBase(toBase(v)), "m"] as const;
       const conversionCandidate = [v, "kM"] as const;
 
       expect(length["m"](conversionCandidate)).toEqual(expected);
@@ -1799,11 +1799,11 @@ describe("length", () => {
       const hectometersConversion = linearConversion(100);
 
       const [toBase, fromBase] = [
+        metersConversion[1],
         hectometersConversion[0],
-        metersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "m"] as const;
+      const expected = [fromBase(toBase(v)), "m"] as const;
       const conversionCandidate = [v, "hm"] as const;
 
       expect(length["m"](conversionCandidate)).toEqual(expected);
@@ -1815,11 +1815,11 @@ describe("length", () => {
       const decametersConversion = linearConversion(10);
 
       const [toBase, fromBase] = [
+        metersConversion[1],
         decametersConversion[0],
-        metersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "m"] as const;
+      const expected = [fromBase(toBase(v)), "m"] as const;
       const conversionCandidate = [v, "dam"] as const;
 
       expect(length["m"](conversionCandidate)).toEqual(expected);
@@ -1833,11 +1833,11 @@ describe("length", () => {
       const decimetersConversion = linearConversion(0.1);
 
       const [toBase, fromBase] = [
+        metersConversion[1],
         decimetersConversion[0],
-        metersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "m"] as const;
+      const expected = [fromBase(toBase(v)), "m"] as const;
       const conversionCandidate = [v, "dm"] as const;
 
       expect(length["m"](conversionCandidate)).toEqual(expected);
@@ -1849,11 +1849,11 @@ describe("length", () => {
       const centimetersConversion = linearConversion(0.01);
 
       const [toBase, fromBase] = [
+        metersConversion[1],
         centimetersConversion[0],
-        metersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "m"] as const;
+      const expected = [fromBase(toBase(v)), "m"] as const;
       const conversionCandidate = [v, "cm"] as const;
 
       expect(length["m"](conversionCandidate)).toEqual(expected);
@@ -1865,11 +1865,11 @@ describe("length", () => {
       const millimetersConversion = linearConversion(0.001);
 
       const [toBase, fromBase] = [
+        metersConversion[1],
         millimetersConversion[0],
-        metersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "m"] as const;
+      const expected = [fromBase(toBase(v)), "m"] as const;
       const conversionCandidate = [v, "mm"] as const;
 
       expect(length["m"](conversionCandidate)).toEqual(expected);
@@ -1881,11 +1881,11 @@ describe("length", () => {
       const micrometersConversion = linearConversion(0.000001);
 
       const [toBase, fromBase] = [
+        metersConversion[1],
         micrometersConversion[0],
-        metersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "m"] as const;
+      const expected = [fromBase(toBase(v)), "m"] as const;
       const conversionCandidate = [v, "µm"] as const;
 
       expect(length["m"](conversionCandidate)).toEqual(expected);
@@ -1897,11 +1897,11 @@ describe("length", () => {
       const nanometersConversion = linearConversion(1e-9);
 
       const [toBase, fromBase] = [
+        metersConversion[1],
         nanometersConversion[0],
-        metersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "m"] as const;
+      const expected = [fromBase(toBase(v)), "m"] as const;
       const conversionCandidate = [v, "nm"] as const;
 
       expect(length["m"](conversionCandidate)).toEqual(expected);
@@ -1913,11 +1913,11 @@ describe("length", () => {
       const picometersConversion = linearConversion(1e-12);
 
       const [toBase, fromBase] = [
+        metersConversion[1],
         picometersConversion[0],
-        metersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "m"] as const;
+      const expected = [fromBase(toBase(v)), "m"] as const;
       const conversionCandidate = [v, "pm"] as const;
 
       expect(length["m"](conversionCandidate)).toEqual(expected);
@@ -1929,11 +1929,11 @@ describe("length", () => {
       const twipsConversion = linearConversion(0.00001763888888888889);
 
       const [toBase, fromBase] = [
+        metersConversion[1],
         twipsConversion[0],
-        metersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "m"] as const;
+      const expected = [fromBase(toBase(v)), "m"] as const;
       const conversionCandidate = [v, "tw"] as const;
 
       expect(length["m"](conversionCandidate)).toEqual(expected);
@@ -1945,11 +1945,11 @@ describe("length", () => {
       const pointsConversion = linearConversion(0.0003527777777777778);
 
       const [toBase, fromBase] = [
+        metersConversion[1],
         pointsConversion[0],
-        metersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "m"] as const;
+      const expected = [fromBase(toBase(v)), "m"] as const;
       const conversionCandidate = [v, "pt"] as const;
 
       expect(length["m"](conversionCandidate)).toEqual(expected);
@@ -1961,11 +1961,11 @@ describe("length", () => {
       const picasConversion = linearConversion(0.004233333333333334);
 
       const [toBase, fromBase] = [
+        metersConversion[1],
         picasConversion[0],
-        metersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "m"] as const;
+      const expected = [fromBase(toBase(v)), "m"] as const;
       const conversionCandidate = [v, "P"] as const;
 
       expect(length["m"](conversionCandidate)).toEqual(expected);
@@ -1977,11 +1977,11 @@ describe("length", () => {
       const inchesConversion = linearConversion(0.0254);
 
       const [toBase, fromBase] = [
+        metersConversion[1],
         inchesConversion[0],
-        metersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "m"] as const;
+      const expected = [fromBase(toBase(v)), "m"] as const;
       const conversionCandidate = [v, "in"] as const;
 
       expect(length["m"](conversionCandidate)).toEqual(expected);
@@ -1993,11 +1993,11 @@ describe("length", () => {
       const feetConversion = linearConversion(0.3048);
 
       const [toBase, fromBase] = [
+        metersConversion[1],
         feetConversion[0],
-        metersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "m"] as const;
+      const expected = [fromBase(toBase(v)), "m"] as const;
       const conversionCandidate = [v, "ft"] as const;
 
       expect(length["m"](conversionCandidate)).toEqual(expected);
@@ -2009,11 +2009,11 @@ describe("length", () => {
       const yardsConversion = linearConversion(0.9144);
 
       const [toBase, fromBase] = [
+        metersConversion[1],
         yardsConversion[0],
-        metersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "m"] as const;
+      const expected = [fromBase(toBase(v)), "m"] as const;
       const conversionCandidate = [v, "yd"] as const;
 
       expect(length["m"](conversionCandidate)).toEqual(expected);
@@ -2025,11 +2025,11 @@ describe("length", () => {
       const milesConversion = linearConversion(1609.34);
 
       const [toBase, fromBase] = [
+        metersConversion[1],
         milesConversion[0],
-        metersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "m"] as const;
+      const expected = [fromBase(toBase(v)), "m"] as const;
       const conversionCandidate = [v, "mi"] as const;
 
       expect(length["m"](conversionCandidate)).toEqual(expected);
@@ -2041,11 +2041,11 @@ describe("length", () => {
       const scandinavianMilesConversion = linearConversion(10000);
 
       const [toBase, fromBase] = [
+        metersConversion[1],
         scandinavianMilesConversion[0],
-        metersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "m"] as const;
+      const expected = [fromBase(toBase(v)), "m"] as const;
       const conversionCandidate = [v, "smi"] as const;
 
       expect(length["m"](conversionCandidate)).toEqual(expected);
@@ -2057,11 +2057,11 @@ describe("length", () => {
       const lightyearsConversion = linearConversion(9461000000000000);
 
       const [toBase, fromBase] = [
+        metersConversion[1],
         lightyearsConversion[0],
-        metersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "m"] as const;
+      const expected = [fromBase(toBase(v)), "m"] as const;
       const conversionCandidate = [v, "ly"] as const;
 
       expect(length["m"](conversionCandidate)).toEqual(expected);
@@ -2073,11 +2073,11 @@ describe("length", () => {
       const nauticalMilesConversion = linearConversion(1852);
 
       const [toBase, fromBase] = [
+        metersConversion[1],
         nauticalMilesConversion[0],
-        metersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "m"] as const;
+      const expected = [fromBase(toBase(v)), "m"] as const;
       const conversionCandidate = [v, "NM"] as const;
 
       expect(length["m"](conversionCandidate)).toEqual(expected);
@@ -2089,11 +2089,11 @@ describe("length", () => {
       const fathomsConversion = linearConversion(1.8288);
 
       const [toBase, fromBase] = [
+        metersConversion[1],
         fathomsConversion[0],
-        metersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "m"] as const;
+      const expected = [fromBase(toBase(v)), "m"] as const;
       const conversionCandidate = [v, "ftm"] as const;
 
       expect(length["m"](conversionCandidate)).toEqual(expected);
@@ -2105,11 +2105,11 @@ describe("length", () => {
       const furlongsConversion = linearConversion(201.168);
 
       const [toBase, fromBase] = [
+        metersConversion[1],
         furlongsConversion[0],
-        metersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "m"] as const;
+      const expected = [fromBase(toBase(v)), "m"] as const;
       const conversionCandidate = [v, "fur"] as const;
 
       expect(length["m"](conversionCandidate)).toEqual(expected);
@@ -2121,11 +2121,11 @@ describe("length", () => {
       const astronomicalUnitsConversion = linearConversion(149600000000);
 
       const [toBase, fromBase] = [
+        metersConversion[1],
         astronomicalUnitsConversion[0],
-        metersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "m"] as const;
+      const expected = [fromBase(toBase(v)), "m"] as const;
       const conversionCandidate = [v, "ua"] as const;
 
       expect(length["m"](conversionCandidate)).toEqual(expected);
@@ -2137,11 +2137,11 @@ describe("length", () => {
       const parsecsConversion = linearConversion(30860000000000000);
 
       const [toBase, fromBase] = [
+        metersConversion[1],
         parsecsConversion[0],
-        metersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "m"] as const;
+      const expected = [fromBase(toBase(v)), "m"] as const;
       const conversionCandidate = [v, "pc"] as const;
 
       expect(length["m"](conversionCandidate)).toEqual(expected);
@@ -2161,11 +2161,11 @@ describe("length", () => {
       const megametersConversion = linearConversion(1000000);
 
       const [toBase, fromBase] = [
+        decimetersConversion[1],
         megametersConversion[0],
-        decimetersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "dm"] as const;
+      const expected = [fromBase(toBase(v)), "dm"] as const;
       const conversionCandidate = [v, "Mm"] as const;
 
       expect(length["dm"](conversionCandidate)).toEqual(expected);
@@ -2177,11 +2177,11 @@ describe("length", () => {
       const kilometersConversion = linearConversion(1000);
 
       const [toBase, fromBase] = [
+        decimetersConversion[1],
         kilometersConversion[0],
-        decimetersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "dm"] as const;
+      const expected = [fromBase(toBase(v)), "dm"] as const;
       const conversionCandidate = [v, "kM"] as const;
 
       expect(length["dm"](conversionCandidate)).toEqual(expected);
@@ -2193,11 +2193,11 @@ describe("length", () => {
       const hectometersConversion = linearConversion(100);
 
       const [toBase, fromBase] = [
+        decimetersConversion[1],
         hectometersConversion[0],
-        decimetersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "dm"] as const;
+      const expected = [fromBase(toBase(v)), "dm"] as const;
       const conversionCandidate = [v, "hm"] as const;
 
       expect(length["dm"](conversionCandidate)).toEqual(expected);
@@ -2209,11 +2209,11 @@ describe("length", () => {
       const decametersConversion = linearConversion(10);
 
       const [toBase, fromBase] = [
+        decimetersConversion[1],
         decametersConversion[0],
-        decimetersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "dm"] as const;
+      const expected = [fromBase(toBase(v)), "dm"] as const;
       const conversionCandidate = [v, "dam"] as const;
 
       expect(length["dm"](conversionCandidate)).toEqual(expected);
@@ -2225,11 +2225,11 @@ describe("length", () => {
       const metersConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
+        decimetersConversion[1],
         metersConversion[0],
-        decimetersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "dm"] as const;
+      const expected = [fromBase(toBase(v)), "dm"] as const;
       const conversionCandidate = [v, "m"] as const;
 
       expect(length["dm"](conversionCandidate)).toEqual(expected);
@@ -2243,11 +2243,11 @@ describe("length", () => {
       const centimetersConversion = linearConversion(0.01);
 
       const [toBase, fromBase] = [
+        decimetersConversion[1],
         centimetersConversion[0],
-        decimetersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "dm"] as const;
+      const expected = [fromBase(toBase(v)), "dm"] as const;
       const conversionCandidate = [v, "cm"] as const;
 
       expect(length["dm"](conversionCandidate)).toEqual(expected);
@@ -2259,11 +2259,11 @@ describe("length", () => {
       const millimetersConversion = linearConversion(0.001);
 
       const [toBase, fromBase] = [
+        decimetersConversion[1],
         millimetersConversion[0],
-        decimetersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "dm"] as const;
+      const expected = [fromBase(toBase(v)), "dm"] as const;
       const conversionCandidate = [v, "mm"] as const;
 
       expect(length["dm"](conversionCandidate)).toEqual(expected);
@@ -2275,11 +2275,11 @@ describe("length", () => {
       const micrometersConversion = linearConversion(0.000001);
 
       const [toBase, fromBase] = [
+        decimetersConversion[1],
         micrometersConversion[0],
-        decimetersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "dm"] as const;
+      const expected = [fromBase(toBase(v)), "dm"] as const;
       const conversionCandidate = [v, "µm"] as const;
 
       expect(length["dm"](conversionCandidate)).toEqual(expected);
@@ -2291,11 +2291,11 @@ describe("length", () => {
       const nanometersConversion = linearConversion(1e-9);
 
       const [toBase, fromBase] = [
+        decimetersConversion[1],
         nanometersConversion[0],
-        decimetersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "dm"] as const;
+      const expected = [fromBase(toBase(v)), "dm"] as const;
       const conversionCandidate = [v, "nm"] as const;
 
       expect(length["dm"](conversionCandidate)).toEqual(expected);
@@ -2307,11 +2307,11 @@ describe("length", () => {
       const picometersConversion = linearConversion(1e-12);
 
       const [toBase, fromBase] = [
+        decimetersConversion[1],
         picometersConversion[0],
-        decimetersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "dm"] as const;
+      const expected = [fromBase(toBase(v)), "dm"] as const;
       const conversionCandidate = [v, "pm"] as const;
 
       expect(length["dm"](conversionCandidate)).toEqual(expected);
@@ -2323,11 +2323,11 @@ describe("length", () => {
       const twipsConversion = linearConversion(0.00001763888888888889);
 
       const [toBase, fromBase] = [
+        decimetersConversion[1],
         twipsConversion[0],
-        decimetersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "dm"] as const;
+      const expected = [fromBase(toBase(v)), "dm"] as const;
       const conversionCandidate = [v, "tw"] as const;
 
       expect(length["dm"](conversionCandidate)).toEqual(expected);
@@ -2339,11 +2339,11 @@ describe("length", () => {
       const pointsConversion = linearConversion(0.0003527777777777778);
 
       const [toBase, fromBase] = [
+        decimetersConversion[1],
         pointsConversion[0],
-        decimetersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "dm"] as const;
+      const expected = [fromBase(toBase(v)), "dm"] as const;
       const conversionCandidate = [v, "pt"] as const;
 
       expect(length["dm"](conversionCandidate)).toEqual(expected);
@@ -2355,11 +2355,11 @@ describe("length", () => {
       const picasConversion = linearConversion(0.004233333333333334);
 
       const [toBase, fromBase] = [
+        decimetersConversion[1],
         picasConversion[0],
-        decimetersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "dm"] as const;
+      const expected = [fromBase(toBase(v)), "dm"] as const;
       const conversionCandidate = [v, "P"] as const;
 
       expect(length["dm"](conversionCandidate)).toEqual(expected);
@@ -2371,11 +2371,11 @@ describe("length", () => {
       const inchesConversion = linearConversion(0.0254);
 
       const [toBase, fromBase] = [
+        decimetersConversion[1],
         inchesConversion[0],
-        decimetersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "dm"] as const;
+      const expected = [fromBase(toBase(v)), "dm"] as const;
       const conversionCandidate = [v, "in"] as const;
 
       expect(length["dm"](conversionCandidate)).toEqual(expected);
@@ -2387,11 +2387,11 @@ describe("length", () => {
       const feetConversion = linearConversion(0.3048);
 
       const [toBase, fromBase] = [
+        decimetersConversion[1],
         feetConversion[0],
-        decimetersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "dm"] as const;
+      const expected = [fromBase(toBase(v)), "dm"] as const;
       const conversionCandidate = [v, "ft"] as const;
 
       expect(length["dm"](conversionCandidate)).toEqual(expected);
@@ -2403,11 +2403,11 @@ describe("length", () => {
       const yardsConversion = linearConversion(0.9144);
 
       const [toBase, fromBase] = [
+        decimetersConversion[1],
         yardsConversion[0],
-        decimetersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "dm"] as const;
+      const expected = [fromBase(toBase(v)), "dm"] as const;
       const conversionCandidate = [v, "yd"] as const;
 
       expect(length["dm"](conversionCandidate)).toEqual(expected);
@@ -2419,11 +2419,11 @@ describe("length", () => {
       const milesConversion = linearConversion(1609.34);
 
       const [toBase, fromBase] = [
+        decimetersConversion[1],
         milesConversion[0],
-        decimetersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "dm"] as const;
+      const expected = [fromBase(toBase(v)), "dm"] as const;
       const conversionCandidate = [v, "mi"] as const;
 
       expect(length["dm"](conversionCandidate)).toEqual(expected);
@@ -2435,11 +2435,11 @@ describe("length", () => {
       const scandinavianMilesConversion = linearConversion(10000);
 
       const [toBase, fromBase] = [
+        decimetersConversion[1],
         scandinavianMilesConversion[0],
-        decimetersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "dm"] as const;
+      const expected = [fromBase(toBase(v)), "dm"] as const;
       const conversionCandidate = [v, "smi"] as const;
 
       expect(length["dm"](conversionCandidate)).toEqual(expected);
@@ -2451,11 +2451,11 @@ describe("length", () => {
       const lightyearsConversion = linearConversion(9461000000000000);
 
       const [toBase, fromBase] = [
+        decimetersConversion[1],
         lightyearsConversion[0],
-        decimetersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "dm"] as const;
+      const expected = [fromBase(toBase(v)), "dm"] as const;
       const conversionCandidate = [v, "ly"] as const;
 
       expect(length["dm"](conversionCandidate)).toEqual(expected);
@@ -2467,11 +2467,11 @@ describe("length", () => {
       const nauticalMilesConversion = linearConversion(1852);
 
       const [toBase, fromBase] = [
+        decimetersConversion[1],
         nauticalMilesConversion[0],
-        decimetersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "dm"] as const;
+      const expected = [fromBase(toBase(v)), "dm"] as const;
       const conversionCandidate = [v, "NM"] as const;
 
       expect(length["dm"](conversionCandidate)).toEqual(expected);
@@ -2483,11 +2483,11 @@ describe("length", () => {
       const fathomsConversion = linearConversion(1.8288);
 
       const [toBase, fromBase] = [
+        decimetersConversion[1],
         fathomsConversion[0],
-        decimetersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "dm"] as const;
+      const expected = [fromBase(toBase(v)), "dm"] as const;
       const conversionCandidate = [v, "ftm"] as const;
 
       expect(length["dm"](conversionCandidate)).toEqual(expected);
@@ -2499,11 +2499,11 @@ describe("length", () => {
       const furlongsConversion = linearConversion(201.168);
 
       const [toBase, fromBase] = [
+        decimetersConversion[1],
         furlongsConversion[0],
-        decimetersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "dm"] as const;
+      const expected = [fromBase(toBase(v)), "dm"] as const;
       const conversionCandidate = [v, "fur"] as const;
 
       expect(length["dm"](conversionCandidate)).toEqual(expected);
@@ -2515,11 +2515,11 @@ describe("length", () => {
       const astronomicalUnitsConversion = linearConversion(149600000000);
 
       const [toBase, fromBase] = [
+        decimetersConversion[1],
         astronomicalUnitsConversion[0],
-        decimetersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "dm"] as const;
+      const expected = [fromBase(toBase(v)), "dm"] as const;
       const conversionCandidate = [v, "ua"] as const;
 
       expect(length["dm"](conversionCandidate)).toEqual(expected);
@@ -2531,11 +2531,11 @@ describe("length", () => {
       const parsecsConversion = linearConversion(30860000000000000);
 
       const [toBase, fromBase] = [
+        decimetersConversion[1],
         parsecsConversion[0],
-        decimetersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "dm"] as const;
+      const expected = [fromBase(toBase(v)), "dm"] as const;
       const conversionCandidate = [v, "pc"] as const;
 
       expect(length["dm"](conversionCandidate)).toEqual(expected);
@@ -2555,11 +2555,11 @@ describe("length", () => {
       const megametersConversion = linearConversion(1000000);
 
       const [toBase, fromBase] = [
+        centimetersConversion[1],
         megametersConversion[0],
-        centimetersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "cm"] as const;
+      const expected = [fromBase(toBase(v)), "cm"] as const;
       const conversionCandidate = [v, "Mm"] as const;
 
       expect(length["cm"](conversionCandidate)).toEqual(expected);
@@ -2571,11 +2571,11 @@ describe("length", () => {
       const kilometersConversion = linearConversion(1000);
 
       const [toBase, fromBase] = [
+        centimetersConversion[1],
         kilometersConversion[0],
-        centimetersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "cm"] as const;
+      const expected = [fromBase(toBase(v)), "cm"] as const;
       const conversionCandidate = [v, "kM"] as const;
 
       expect(length["cm"](conversionCandidate)).toEqual(expected);
@@ -2587,11 +2587,11 @@ describe("length", () => {
       const hectometersConversion = linearConversion(100);
 
       const [toBase, fromBase] = [
+        centimetersConversion[1],
         hectometersConversion[0],
-        centimetersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "cm"] as const;
+      const expected = [fromBase(toBase(v)), "cm"] as const;
       const conversionCandidate = [v, "hm"] as const;
 
       expect(length["cm"](conversionCandidate)).toEqual(expected);
@@ -2603,11 +2603,11 @@ describe("length", () => {
       const decametersConversion = linearConversion(10);
 
       const [toBase, fromBase] = [
+        centimetersConversion[1],
         decametersConversion[0],
-        centimetersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "cm"] as const;
+      const expected = [fromBase(toBase(v)), "cm"] as const;
       const conversionCandidate = [v, "dam"] as const;
 
       expect(length["cm"](conversionCandidate)).toEqual(expected);
@@ -2619,11 +2619,11 @@ describe("length", () => {
       const metersConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
+        centimetersConversion[1],
         metersConversion[0],
-        centimetersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "cm"] as const;
+      const expected = [fromBase(toBase(v)), "cm"] as const;
       const conversionCandidate = [v, "m"] as const;
 
       expect(length["cm"](conversionCandidate)).toEqual(expected);
@@ -2635,11 +2635,11 @@ describe("length", () => {
       const decimetersConversion = linearConversion(0.1);
 
       const [toBase, fromBase] = [
+        centimetersConversion[1],
         decimetersConversion[0],
-        centimetersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "cm"] as const;
+      const expected = [fromBase(toBase(v)), "cm"] as const;
       const conversionCandidate = [v, "dm"] as const;
 
       expect(length["cm"](conversionCandidate)).toEqual(expected);
@@ -2653,11 +2653,11 @@ describe("length", () => {
       const millimetersConversion = linearConversion(0.001);
 
       const [toBase, fromBase] = [
+        centimetersConversion[1],
         millimetersConversion[0],
-        centimetersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "cm"] as const;
+      const expected = [fromBase(toBase(v)), "cm"] as const;
       const conversionCandidate = [v, "mm"] as const;
 
       expect(length["cm"](conversionCandidate)).toEqual(expected);
@@ -2669,11 +2669,11 @@ describe("length", () => {
       const micrometersConversion = linearConversion(0.000001);
 
       const [toBase, fromBase] = [
+        centimetersConversion[1],
         micrometersConversion[0],
-        centimetersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "cm"] as const;
+      const expected = [fromBase(toBase(v)), "cm"] as const;
       const conversionCandidate = [v, "µm"] as const;
 
       expect(length["cm"](conversionCandidate)).toEqual(expected);
@@ -2685,11 +2685,11 @@ describe("length", () => {
       const nanometersConversion = linearConversion(1e-9);
 
       const [toBase, fromBase] = [
+        centimetersConversion[1],
         nanometersConversion[0],
-        centimetersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "cm"] as const;
+      const expected = [fromBase(toBase(v)), "cm"] as const;
       const conversionCandidate = [v, "nm"] as const;
 
       expect(length["cm"](conversionCandidate)).toEqual(expected);
@@ -2701,11 +2701,11 @@ describe("length", () => {
       const picometersConversion = linearConversion(1e-12);
 
       const [toBase, fromBase] = [
+        centimetersConversion[1],
         picometersConversion[0],
-        centimetersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "cm"] as const;
+      const expected = [fromBase(toBase(v)), "cm"] as const;
       const conversionCandidate = [v, "pm"] as const;
 
       expect(length["cm"](conversionCandidate)).toEqual(expected);
@@ -2717,11 +2717,11 @@ describe("length", () => {
       const twipsConversion = linearConversion(0.00001763888888888889);
 
       const [toBase, fromBase] = [
+        centimetersConversion[1],
         twipsConversion[0],
-        centimetersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "cm"] as const;
+      const expected = [fromBase(toBase(v)), "cm"] as const;
       const conversionCandidate = [v, "tw"] as const;
 
       expect(length["cm"](conversionCandidate)).toEqual(expected);
@@ -2733,11 +2733,11 @@ describe("length", () => {
       const pointsConversion = linearConversion(0.0003527777777777778);
 
       const [toBase, fromBase] = [
+        centimetersConversion[1],
         pointsConversion[0],
-        centimetersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "cm"] as const;
+      const expected = [fromBase(toBase(v)), "cm"] as const;
       const conversionCandidate = [v, "pt"] as const;
 
       expect(length["cm"](conversionCandidate)).toEqual(expected);
@@ -2749,11 +2749,11 @@ describe("length", () => {
       const picasConversion = linearConversion(0.004233333333333334);
 
       const [toBase, fromBase] = [
+        centimetersConversion[1],
         picasConversion[0],
-        centimetersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "cm"] as const;
+      const expected = [fromBase(toBase(v)), "cm"] as const;
       const conversionCandidate = [v, "P"] as const;
 
       expect(length["cm"](conversionCandidate)).toEqual(expected);
@@ -2765,11 +2765,11 @@ describe("length", () => {
       const inchesConversion = linearConversion(0.0254);
 
       const [toBase, fromBase] = [
+        centimetersConversion[1],
         inchesConversion[0],
-        centimetersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "cm"] as const;
+      const expected = [fromBase(toBase(v)), "cm"] as const;
       const conversionCandidate = [v, "in"] as const;
 
       expect(length["cm"](conversionCandidate)).toEqual(expected);
@@ -2781,11 +2781,11 @@ describe("length", () => {
       const feetConversion = linearConversion(0.3048);
 
       const [toBase, fromBase] = [
+        centimetersConversion[1],
         feetConversion[0],
-        centimetersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "cm"] as const;
+      const expected = [fromBase(toBase(v)), "cm"] as const;
       const conversionCandidate = [v, "ft"] as const;
 
       expect(length["cm"](conversionCandidate)).toEqual(expected);
@@ -2797,11 +2797,11 @@ describe("length", () => {
       const yardsConversion = linearConversion(0.9144);
 
       const [toBase, fromBase] = [
+        centimetersConversion[1],
         yardsConversion[0],
-        centimetersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "cm"] as const;
+      const expected = [fromBase(toBase(v)), "cm"] as const;
       const conversionCandidate = [v, "yd"] as const;
 
       expect(length["cm"](conversionCandidate)).toEqual(expected);
@@ -2813,11 +2813,11 @@ describe("length", () => {
       const milesConversion = linearConversion(1609.34);
 
       const [toBase, fromBase] = [
+        centimetersConversion[1],
         milesConversion[0],
-        centimetersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "cm"] as const;
+      const expected = [fromBase(toBase(v)), "cm"] as const;
       const conversionCandidate = [v, "mi"] as const;
 
       expect(length["cm"](conversionCandidate)).toEqual(expected);
@@ -2829,11 +2829,11 @@ describe("length", () => {
       const scandinavianMilesConversion = linearConversion(10000);
 
       const [toBase, fromBase] = [
+        centimetersConversion[1],
         scandinavianMilesConversion[0],
-        centimetersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "cm"] as const;
+      const expected = [fromBase(toBase(v)), "cm"] as const;
       const conversionCandidate = [v, "smi"] as const;
 
       expect(length["cm"](conversionCandidate)).toEqual(expected);
@@ -2845,11 +2845,11 @@ describe("length", () => {
       const lightyearsConversion = linearConversion(9461000000000000);
 
       const [toBase, fromBase] = [
+        centimetersConversion[1],
         lightyearsConversion[0],
-        centimetersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "cm"] as const;
+      const expected = [fromBase(toBase(v)), "cm"] as const;
       const conversionCandidate = [v, "ly"] as const;
 
       expect(length["cm"](conversionCandidate)).toEqual(expected);
@@ -2861,11 +2861,11 @@ describe("length", () => {
       const nauticalMilesConversion = linearConversion(1852);
 
       const [toBase, fromBase] = [
+        centimetersConversion[1],
         nauticalMilesConversion[0],
-        centimetersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "cm"] as const;
+      const expected = [fromBase(toBase(v)), "cm"] as const;
       const conversionCandidate = [v, "NM"] as const;
 
       expect(length["cm"](conversionCandidate)).toEqual(expected);
@@ -2877,11 +2877,11 @@ describe("length", () => {
       const fathomsConversion = linearConversion(1.8288);
 
       const [toBase, fromBase] = [
+        centimetersConversion[1],
         fathomsConversion[0],
-        centimetersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "cm"] as const;
+      const expected = [fromBase(toBase(v)), "cm"] as const;
       const conversionCandidate = [v, "ftm"] as const;
 
       expect(length["cm"](conversionCandidate)).toEqual(expected);
@@ -2893,11 +2893,11 @@ describe("length", () => {
       const furlongsConversion = linearConversion(201.168);
 
       const [toBase, fromBase] = [
+        centimetersConversion[1],
         furlongsConversion[0],
-        centimetersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "cm"] as const;
+      const expected = [fromBase(toBase(v)), "cm"] as const;
       const conversionCandidate = [v, "fur"] as const;
 
       expect(length["cm"](conversionCandidate)).toEqual(expected);
@@ -2909,11 +2909,11 @@ describe("length", () => {
       const astronomicalUnitsConversion = linearConversion(149600000000);
 
       const [toBase, fromBase] = [
+        centimetersConversion[1],
         astronomicalUnitsConversion[0],
-        centimetersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "cm"] as const;
+      const expected = [fromBase(toBase(v)), "cm"] as const;
       const conversionCandidate = [v, "ua"] as const;
 
       expect(length["cm"](conversionCandidate)).toEqual(expected);
@@ -2925,11 +2925,11 @@ describe("length", () => {
       const parsecsConversion = linearConversion(30860000000000000);
 
       const [toBase, fromBase] = [
+        centimetersConversion[1],
         parsecsConversion[0],
-        centimetersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "cm"] as const;
+      const expected = [fromBase(toBase(v)), "cm"] as const;
       const conversionCandidate = [v, "pc"] as const;
 
       expect(length["cm"](conversionCandidate)).toEqual(expected);
@@ -2949,11 +2949,11 @@ describe("length", () => {
       const megametersConversion = linearConversion(1000000);
 
       const [toBase, fromBase] = [
+        millimetersConversion[1],
         megametersConversion[0],
-        millimetersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "mm"] as const;
+      const expected = [fromBase(toBase(v)), "mm"] as const;
       const conversionCandidate = [v, "Mm"] as const;
 
       expect(length["mm"](conversionCandidate)).toEqual(expected);
@@ -2965,11 +2965,11 @@ describe("length", () => {
       const kilometersConversion = linearConversion(1000);
 
       const [toBase, fromBase] = [
+        millimetersConversion[1],
         kilometersConversion[0],
-        millimetersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "mm"] as const;
+      const expected = [fromBase(toBase(v)), "mm"] as const;
       const conversionCandidate = [v, "kM"] as const;
 
       expect(length["mm"](conversionCandidate)).toEqual(expected);
@@ -2981,11 +2981,11 @@ describe("length", () => {
       const hectometersConversion = linearConversion(100);
 
       const [toBase, fromBase] = [
+        millimetersConversion[1],
         hectometersConversion[0],
-        millimetersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "mm"] as const;
+      const expected = [fromBase(toBase(v)), "mm"] as const;
       const conversionCandidate = [v, "hm"] as const;
 
       expect(length["mm"](conversionCandidate)).toEqual(expected);
@@ -2997,11 +2997,11 @@ describe("length", () => {
       const decametersConversion = linearConversion(10);
 
       const [toBase, fromBase] = [
+        millimetersConversion[1],
         decametersConversion[0],
-        millimetersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "mm"] as const;
+      const expected = [fromBase(toBase(v)), "mm"] as const;
       const conversionCandidate = [v, "dam"] as const;
 
       expect(length["mm"](conversionCandidate)).toEqual(expected);
@@ -3013,11 +3013,11 @@ describe("length", () => {
       const metersConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
+        millimetersConversion[1],
         metersConversion[0],
-        millimetersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "mm"] as const;
+      const expected = [fromBase(toBase(v)), "mm"] as const;
       const conversionCandidate = [v, "m"] as const;
 
       expect(length["mm"](conversionCandidate)).toEqual(expected);
@@ -3029,11 +3029,11 @@ describe("length", () => {
       const decimetersConversion = linearConversion(0.1);
 
       const [toBase, fromBase] = [
+        millimetersConversion[1],
         decimetersConversion[0],
-        millimetersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "mm"] as const;
+      const expected = [fromBase(toBase(v)), "mm"] as const;
       const conversionCandidate = [v, "dm"] as const;
 
       expect(length["mm"](conversionCandidate)).toEqual(expected);
@@ -3045,11 +3045,11 @@ describe("length", () => {
       const centimetersConversion = linearConversion(0.01);
 
       const [toBase, fromBase] = [
+        millimetersConversion[1],
         centimetersConversion[0],
-        millimetersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "mm"] as const;
+      const expected = [fromBase(toBase(v)), "mm"] as const;
       const conversionCandidate = [v, "cm"] as const;
 
       expect(length["mm"](conversionCandidate)).toEqual(expected);
@@ -3063,11 +3063,11 @@ describe("length", () => {
       const micrometersConversion = linearConversion(0.000001);
 
       const [toBase, fromBase] = [
+        millimetersConversion[1],
         micrometersConversion[0],
-        millimetersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "mm"] as const;
+      const expected = [fromBase(toBase(v)), "mm"] as const;
       const conversionCandidate = [v, "µm"] as const;
 
       expect(length["mm"](conversionCandidate)).toEqual(expected);
@@ -3079,11 +3079,11 @@ describe("length", () => {
       const nanometersConversion = linearConversion(1e-9);
 
       const [toBase, fromBase] = [
+        millimetersConversion[1],
         nanometersConversion[0],
-        millimetersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "mm"] as const;
+      const expected = [fromBase(toBase(v)), "mm"] as const;
       const conversionCandidate = [v, "nm"] as const;
 
       expect(length["mm"](conversionCandidate)).toEqual(expected);
@@ -3095,11 +3095,11 @@ describe("length", () => {
       const picometersConversion = linearConversion(1e-12);
 
       const [toBase, fromBase] = [
+        millimetersConversion[1],
         picometersConversion[0],
-        millimetersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "mm"] as const;
+      const expected = [fromBase(toBase(v)), "mm"] as const;
       const conversionCandidate = [v, "pm"] as const;
 
       expect(length["mm"](conversionCandidate)).toEqual(expected);
@@ -3111,11 +3111,11 @@ describe("length", () => {
       const twipsConversion = linearConversion(0.00001763888888888889);
 
       const [toBase, fromBase] = [
+        millimetersConversion[1],
         twipsConversion[0],
-        millimetersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "mm"] as const;
+      const expected = [fromBase(toBase(v)), "mm"] as const;
       const conversionCandidate = [v, "tw"] as const;
 
       expect(length["mm"](conversionCandidate)).toEqual(expected);
@@ -3127,11 +3127,11 @@ describe("length", () => {
       const pointsConversion = linearConversion(0.0003527777777777778);
 
       const [toBase, fromBase] = [
+        millimetersConversion[1],
         pointsConversion[0],
-        millimetersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "mm"] as const;
+      const expected = [fromBase(toBase(v)), "mm"] as const;
       const conversionCandidate = [v, "pt"] as const;
 
       expect(length["mm"](conversionCandidate)).toEqual(expected);
@@ -3143,11 +3143,11 @@ describe("length", () => {
       const picasConversion = linearConversion(0.004233333333333334);
 
       const [toBase, fromBase] = [
+        millimetersConversion[1],
         picasConversion[0],
-        millimetersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "mm"] as const;
+      const expected = [fromBase(toBase(v)), "mm"] as const;
       const conversionCandidate = [v, "P"] as const;
 
       expect(length["mm"](conversionCandidate)).toEqual(expected);
@@ -3159,11 +3159,11 @@ describe("length", () => {
       const inchesConversion = linearConversion(0.0254);
 
       const [toBase, fromBase] = [
+        millimetersConversion[1],
         inchesConversion[0],
-        millimetersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "mm"] as const;
+      const expected = [fromBase(toBase(v)), "mm"] as const;
       const conversionCandidate = [v, "in"] as const;
 
       expect(length["mm"](conversionCandidate)).toEqual(expected);
@@ -3175,11 +3175,11 @@ describe("length", () => {
       const feetConversion = linearConversion(0.3048);
 
       const [toBase, fromBase] = [
+        millimetersConversion[1],
         feetConversion[0],
-        millimetersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "mm"] as const;
+      const expected = [fromBase(toBase(v)), "mm"] as const;
       const conversionCandidate = [v, "ft"] as const;
 
       expect(length["mm"](conversionCandidate)).toEqual(expected);
@@ -3191,11 +3191,11 @@ describe("length", () => {
       const yardsConversion = linearConversion(0.9144);
 
       const [toBase, fromBase] = [
+        millimetersConversion[1],
         yardsConversion[0],
-        millimetersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "mm"] as const;
+      const expected = [fromBase(toBase(v)), "mm"] as const;
       const conversionCandidate = [v, "yd"] as const;
 
       expect(length["mm"](conversionCandidate)).toEqual(expected);
@@ -3207,11 +3207,11 @@ describe("length", () => {
       const milesConversion = linearConversion(1609.34);
 
       const [toBase, fromBase] = [
+        millimetersConversion[1],
         milesConversion[0],
-        millimetersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "mm"] as const;
+      const expected = [fromBase(toBase(v)), "mm"] as const;
       const conversionCandidate = [v, "mi"] as const;
 
       expect(length["mm"](conversionCandidate)).toEqual(expected);
@@ -3223,11 +3223,11 @@ describe("length", () => {
       const scandinavianMilesConversion = linearConversion(10000);
 
       const [toBase, fromBase] = [
+        millimetersConversion[1],
         scandinavianMilesConversion[0],
-        millimetersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "mm"] as const;
+      const expected = [fromBase(toBase(v)), "mm"] as const;
       const conversionCandidate = [v, "smi"] as const;
 
       expect(length["mm"](conversionCandidate)).toEqual(expected);
@@ -3239,11 +3239,11 @@ describe("length", () => {
       const lightyearsConversion = linearConversion(9461000000000000);
 
       const [toBase, fromBase] = [
+        millimetersConversion[1],
         lightyearsConversion[0],
-        millimetersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "mm"] as const;
+      const expected = [fromBase(toBase(v)), "mm"] as const;
       const conversionCandidate = [v, "ly"] as const;
 
       expect(length["mm"](conversionCandidate)).toEqual(expected);
@@ -3255,11 +3255,11 @@ describe("length", () => {
       const nauticalMilesConversion = linearConversion(1852);
 
       const [toBase, fromBase] = [
+        millimetersConversion[1],
         nauticalMilesConversion[0],
-        millimetersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "mm"] as const;
+      const expected = [fromBase(toBase(v)), "mm"] as const;
       const conversionCandidate = [v, "NM"] as const;
 
       expect(length["mm"](conversionCandidate)).toEqual(expected);
@@ -3271,11 +3271,11 @@ describe("length", () => {
       const fathomsConversion = linearConversion(1.8288);
 
       const [toBase, fromBase] = [
+        millimetersConversion[1],
         fathomsConversion[0],
-        millimetersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "mm"] as const;
+      const expected = [fromBase(toBase(v)), "mm"] as const;
       const conversionCandidate = [v, "ftm"] as const;
 
       expect(length["mm"](conversionCandidate)).toEqual(expected);
@@ -3287,11 +3287,11 @@ describe("length", () => {
       const furlongsConversion = linearConversion(201.168);
 
       const [toBase, fromBase] = [
+        millimetersConversion[1],
         furlongsConversion[0],
-        millimetersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "mm"] as const;
+      const expected = [fromBase(toBase(v)), "mm"] as const;
       const conversionCandidate = [v, "fur"] as const;
 
       expect(length["mm"](conversionCandidate)).toEqual(expected);
@@ -3303,11 +3303,11 @@ describe("length", () => {
       const astronomicalUnitsConversion = linearConversion(149600000000);
 
       const [toBase, fromBase] = [
+        millimetersConversion[1],
         astronomicalUnitsConversion[0],
-        millimetersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "mm"] as const;
+      const expected = [fromBase(toBase(v)), "mm"] as const;
       const conversionCandidate = [v, "ua"] as const;
 
       expect(length["mm"](conversionCandidate)).toEqual(expected);
@@ -3319,11 +3319,11 @@ describe("length", () => {
       const parsecsConversion = linearConversion(30860000000000000);
 
       const [toBase, fromBase] = [
+        millimetersConversion[1],
         parsecsConversion[0],
-        millimetersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "mm"] as const;
+      const expected = [fromBase(toBase(v)), "mm"] as const;
       const conversionCandidate = [v, "pc"] as const;
 
       expect(length["mm"](conversionCandidate)).toEqual(expected);
@@ -3343,11 +3343,11 @@ describe("length", () => {
       const megametersConversion = linearConversion(1000000);
 
       const [toBase, fromBase] = [
+        micrometersConversion[1],
         megametersConversion[0],
-        micrometersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "µm"] as const;
+      const expected = [fromBase(toBase(v)), "µm"] as const;
       const conversionCandidate = [v, "Mm"] as const;
 
       expect(length["µm"](conversionCandidate)).toEqual(expected);
@@ -3359,11 +3359,11 @@ describe("length", () => {
       const kilometersConversion = linearConversion(1000);
 
       const [toBase, fromBase] = [
+        micrometersConversion[1],
         kilometersConversion[0],
-        micrometersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "µm"] as const;
+      const expected = [fromBase(toBase(v)), "µm"] as const;
       const conversionCandidate = [v, "kM"] as const;
 
       expect(length["µm"](conversionCandidate)).toEqual(expected);
@@ -3375,11 +3375,11 @@ describe("length", () => {
       const hectometersConversion = linearConversion(100);
 
       const [toBase, fromBase] = [
+        micrometersConversion[1],
         hectometersConversion[0],
-        micrometersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "µm"] as const;
+      const expected = [fromBase(toBase(v)), "µm"] as const;
       const conversionCandidate = [v, "hm"] as const;
 
       expect(length["µm"](conversionCandidate)).toEqual(expected);
@@ -3391,11 +3391,11 @@ describe("length", () => {
       const decametersConversion = linearConversion(10);
 
       const [toBase, fromBase] = [
+        micrometersConversion[1],
         decametersConversion[0],
-        micrometersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "µm"] as const;
+      const expected = [fromBase(toBase(v)), "µm"] as const;
       const conversionCandidate = [v, "dam"] as const;
 
       expect(length["µm"](conversionCandidate)).toEqual(expected);
@@ -3407,11 +3407,11 @@ describe("length", () => {
       const metersConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
+        micrometersConversion[1],
         metersConversion[0],
-        micrometersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "µm"] as const;
+      const expected = [fromBase(toBase(v)), "µm"] as const;
       const conversionCandidate = [v, "m"] as const;
 
       expect(length["µm"](conversionCandidate)).toEqual(expected);
@@ -3423,11 +3423,11 @@ describe("length", () => {
       const decimetersConversion = linearConversion(0.1);
 
       const [toBase, fromBase] = [
+        micrometersConversion[1],
         decimetersConversion[0],
-        micrometersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "µm"] as const;
+      const expected = [fromBase(toBase(v)), "µm"] as const;
       const conversionCandidate = [v, "dm"] as const;
 
       expect(length["µm"](conversionCandidate)).toEqual(expected);
@@ -3439,11 +3439,11 @@ describe("length", () => {
       const centimetersConversion = linearConversion(0.01);
 
       const [toBase, fromBase] = [
+        micrometersConversion[1],
         centimetersConversion[0],
-        micrometersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "µm"] as const;
+      const expected = [fromBase(toBase(v)), "µm"] as const;
       const conversionCandidate = [v, "cm"] as const;
 
       expect(length["µm"](conversionCandidate)).toEqual(expected);
@@ -3455,11 +3455,11 @@ describe("length", () => {
       const millimetersConversion = linearConversion(0.001);
 
       const [toBase, fromBase] = [
+        micrometersConversion[1],
         millimetersConversion[0],
-        micrometersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "µm"] as const;
+      const expected = [fromBase(toBase(v)), "µm"] as const;
       const conversionCandidate = [v, "mm"] as const;
 
       expect(length["µm"](conversionCandidate)).toEqual(expected);
@@ -3473,11 +3473,11 @@ describe("length", () => {
       const nanometersConversion = linearConversion(1e-9);
 
       const [toBase, fromBase] = [
+        micrometersConversion[1],
         nanometersConversion[0],
-        micrometersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "µm"] as const;
+      const expected = [fromBase(toBase(v)), "µm"] as const;
       const conversionCandidate = [v, "nm"] as const;
 
       expect(length["µm"](conversionCandidate)).toEqual(expected);
@@ -3489,11 +3489,11 @@ describe("length", () => {
       const picometersConversion = linearConversion(1e-12);
 
       const [toBase, fromBase] = [
+        micrometersConversion[1],
         picometersConversion[0],
-        micrometersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "µm"] as const;
+      const expected = [fromBase(toBase(v)), "µm"] as const;
       const conversionCandidate = [v, "pm"] as const;
 
       expect(length["µm"](conversionCandidate)).toEqual(expected);
@@ -3505,11 +3505,11 @@ describe("length", () => {
       const twipsConversion = linearConversion(0.00001763888888888889);
 
       const [toBase, fromBase] = [
+        micrometersConversion[1],
         twipsConversion[0],
-        micrometersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "µm"] as const;
+      const expected = [fromBase(toBase(v)), "µm"] as const;
       const conversionCandidate = [v, "tw"] as const;
 
       expect(length["µm"](conversionCandidate)).toEqual(expected);
@@ -3521,11 +3521,11 @@ describe("length", () => {
       const pointsConversion = linearConversion(0.0003527777777777778);
 
       const [toBase, fromBase] = [
+        micrometersConversion[1],
         pointsConversion[0],
-        micrometersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "µm"] as const;
+      const expected = [fromBase(toBase(v)), "µm"] as const;
       const conversionCandidate = [v, "pt"] as const;
 
       expect(length["µm"](conversionCandidate)).toEqual(expected);
@@ -3537,11 +3537,11 @@ describe("length", () => {
       const picasConversion = linearConversion(0.004233333333333334);
 
       const [toBase, fromBase] = [
+        micrometersConversion[1],
         picasConversion[0],
-        micrometersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "µm"] as const;
+      const expected = [fromBase(toBase(v)), "µm"] as const;
       const conversionCandidate = [v, "P"] as const;
 
       expect(length["µm"](conversionCandidate)).toEqual(expected);
@@ -3553,11 +3553,11 @@ describe("length", () => {
       const inchesConversion = linearConversion(0.0254);
 
       const [toBase, fromBase] = [
+        micrometersConversion[1],
         inchesConversion[0],
-        micrometersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "µm"] as const;
+      const expected = [fromBase(toBase(v)), "µm"] as const;
       const conversionCandidate = [v, "in"] as const;
 
       expect(length["µm"](conversionCandidate)).toEqual(expected);
@@ -3569,11 +3569,11 @@ describe("length", () => {
       const feetConversion = linearConversion(0.3048);
 
       const [toBase, fromBase] = [
+        micrometersConversion[1],
         feetConversion[0],
-        micrometersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "µm"] as const;
+      const expected = [fromBase(toBase(v)), "µm"] as const;
       const conversionCandidate = [v, "ft"] as const;
 
       expect(length["µm"](conversionCandidate)).toEqual(expected);
@@ -3585,11 +3585,11 @@ describe("length", () => {
       const yardsConversion = linearConversion(0.9144);
 
       const [toBase, fromBase] = [
+        micrometersConversion[1],
         yardsConversion[0],
-        micrometersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "µm"] as const;
+      const expected = [fromBase(toBase(v)), "µm"] as const;
       const conversionCandidate = [v, "yd"] as const;
 
       expect(length["µm"](conversionCandidate)).toEqual(expected);
@@ -3601,11 +3601,11 @@ describe("length", () => {
       const milesConversion = linearConversion(1609.34);
 
       const [toBase, fromBase] = [
+        micrometersConversion[1],
         milesConversion[0],
-        micrometersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "µm"] as const;
+      const expected = [fromBase(toBase(v)), "µm"] as const;
       const conversionCandidate = [v, "mi"] as const;
 
       expect(length["µm"](conversionCandidate)).toEqual(expected);
@@ -3617,11 +3617,11 @@ describe("length", () => {
       const scandinavianMilesConversion = linearConversion(10000);
 
       const [toBase, fromBase] = [
+        micrometersConversion[1],
         scandinavianMilesConversion[0],
-        micrometersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "µm"] as const;
+      const expected = [fromBase(toBase(v)), "µm"] as const;
       const conversionCandidate = [v, "smi"] as const;
 
       expect(length["µm"](conversionCandidate)).toEqual(expected);
@@ -3633,11 +3633,11 @@ describe("length", () => {
       const lightyearsConversion = linearConversion(9461000000000000);
 
       const [toBase, fromBase] = [
+        micrometersConversion[1],
         lightyearsConversion[0],
-        micrometersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "µm"] as const;
+      const expected = [fromBase(toBase(v)), "µm"] as const;
       const conversionCandidate = [v, "ly"] as const;
 
       expect(length["µm"](conversionCandidate)).toEqual(expected);
@@ -3649,11 +3649,11 @@ describe("length", () => {
       const nauticalMilesConversion = linearConversion(1852);
 
       const [toBase, fromBase] = [
+        micrometersConversion[1],
         nauticalMilesConversion[0],
-        micrometersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "µm"] as const;
+      const expected = [fromBase(toBase(v)), "µm"] as const;
       const conversionCandidate = [v, "NM"] as const;
 
       expect(length["µm"](conversionCandidate)).toEqual(expected);
@@ -3665,11 +3665,11 @@ describe("length", () => {
       const fathomsConversion = linearConversion(1.8288);
 
       const [toBase, fromBase] = [
+        micrometersConversion[1],
         fathomsConversion[0],
-        micrometersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "µm"] as const;
+      const expected = [fromBase(toBase(v)), "µm"] as const;
       const conversionCandidate = [v, "ftm"] as const;
 
       expect(length["µm"](conversionCandidate)).toEqual(expected);
@@ -3681,11 +3681,11 @@ describe("length", () => {
       const furlongsConversion = linearConversion(201.168);
 
       const [toBase, fromBase] = [
+        micrometersConversion[1],
         furlongsConversion[0],
-        micrometersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "µm"] as const;
+      const expected = [fromBase(toBase(v)), "µm"] as const;
       const conversionCandidate = [v, "fur"] as const;
 
       expect(length["µm"](conversionCandidate)).toEqual(expected);
@@ -3697,11 +3697,11 @@ describe("length", () => {
       const astronomicalUnitsConversion = linearConversion(149600000000);
 
       const [toBase, fromBase] = [
+        micrometersConversion[1],
         astronomicalUnitsConversion[0],
-        micrometersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "µm"] as const;
+      const expected = [fromBase(toBase(v)), "µm"] as const;
       const conversionCandidate = [v, "ua"] as const;
 
       expect(length["µm"](conversionCandidate)).toEqual(expected);
@@ -3713,11 +3713,11 @@ describe("length", () => {
       const parsecsConversion = linearConversion(30860000000000000);
 
       const [toBase, fromBase] = [
+        micrometersConversion[1],
         parsecsConversion[0],
-        micrometersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "µm"] as const;
+      const expected = [fromBase(toBase(v)), "µm"] as const;
       const conversionCandidate = [v, "pc"] as const;
 
       expect(length["µm"](conversionCandidate)).toEqual(expected);
@@ -3737,11 +3737,11 @@ describe("length", () => {
       const megametersConversion = linearConversion(1000000);
 
       const [toBase, fromBase] = [
+        nanometersConversion[1],
         megametersConversion[0],
-        nanometersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "nm"] as const;
+      const expected = [fromBase(toBase(v)), "nm"] as const;
       const conversionCandidate = [v, "Mm"] as const;
 
       expect(length["nm"](conversionCandidate)).toEqual(expected);
@@ -3753,11 +3753,11 @@ describe("length", () => {
       const kilometersConversion = linearConversion(1000);
 
       const [toBase, fromBase] = [
+        nanometersConversion[1],
         kilometersConversion[0],
-        nanometersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "nm"] as const;
+      const expected = [fromBase(toBase(v)), "nm"] as const;
       const conversionCandidate = [v, "kM"] as const;
 
       expect(length["nm"](conversionCandidate)).toEqual(expected);
@@ -3769,11 +3769,11 @@ describe("length", () => {
       const hectometersConversion = linearConversion(100);
 
       const [toBase, fromBase] = [
+        nanometersConversion[1],
         hectometersConversion[0],
-        nanometersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "nm"] as const;
+      const expected = [fromBase(toBase(v)), "nm"] as const;
       const conversionCandidate = [v, "hm"] as const;
 
       expect(length["nm"](conversionCandidate)).toEqual(expected);
@@ -3785,11 +3785,11 @@ describe("length", () => {
       const decametersConversion = linearConversion(10);
 
       const [toBase, fromBase] = [
+        nanometersConversion[1],
         decametersConversion[0],
-        nanometersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "nm"] as const;
+      const expected = [fromBase(toBase(v)), "nm"] as const;
       const conversionCandidate = [v, "dam"] as const;
 
       expect(length["nm"](conversionCandidate)).toEqual(expected);
@@ -3801,11 +3801,11 @@ describe("length", () => {
       const metersConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
+        nanometersConversion[1],
         metersConversion[0],
-        nanometersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "nm"] as const;
+      const expected = [fromBase(toBase(v)), "nm"] as const;
       const conversionCandidate = [v, "m"] as const;
 
       expect(length["nm"](conversionCandidate)).toEqual(expected);
@@ -3817,11 +3817,11 @@ describe("length", () => {
       const decimetersConversion = linearConversion(0.1);
 
       const [toBase, fromBase] = [
+        nanometersConversion[1],
         decimetersConversion[0],
-        nanometersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "nm"] as const;
+      const expected = [fromBase(toBase(v)), "nm"] as const;
       const conversionCandidate = [v, "dm"] as const;
 
       expect(length["nm"](conversionCandidate)).toEqual(expected);
@@ -3833,11 +3833,11 @@ describe("length", () => {
       const centimetersConversion = linearConversion(0.01);
 
       const [toBase, fromBase] = [
+        nanometersConversion[1],
         centimetersConversion[0],
-        nanometersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "nm"] as const;
+      const expected = [fromBase(toBase(v)), "nm"] as const;
       const conversionCandidate = [v, "cm"] as const;
 
       expect(length["nm"](conversionCandidate)).toEqual(expected);
@@ -3849,11 +3849,11 @@ describe("length", () => {
       const millimetersConversion = linearConversion(0.001);
 
       const [toBase, fromBase] = [
+        nanometersConversion[1],
         millimetersConversion[0],
-        nanometersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "nm"] as const;
+      const expected = [fromBase(toBase(v)), "nm"] as const;
       const conversionCandidate = [v, "mm"] as const;
 
       expect(length["nm"](conversionCandidate)).toEqual(expected);
@@ -3865,11 +3865,11 @@ describe("length", () => {
       const micrometersConversion = linearConversion(0.000001);
 
       const [toBase, fromBase] = [
+        nanometersConversion[1],
         micrometersConversion[0],
-        nanometersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "nm"] as const;
+      const expected = [fromBase(toBase(v)), "nm"] as const;
       const conversionCandidate = [v, "µm"] as const;
 
       expect(length["nm"](conversionCandidate)).toEqual(expected);
@@ -3883,11 +3883,11 @@ describe("length", () => {
       const picometersConversion = linearConversion(1e-12);
 
       const [toBase, fromBase] = [
+        nanometersConversion[1],
         picometersConversion[0],
-        nanometersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "nm"] as const;
+      const expected = [fromBase(toBase(v)), "nm"] as const;
       const conversionCandidate = [v, "pm"] as const;
 
       expect(length["nm"](conversionCandidate)).toEqual(expected);
@@ -3899,11 +3899,11 @@ describe("length", () => {
       const twipsConversion = linearConversion(0.00001763888888888889);
 
       const [toBase, fromBase] = [
+        nanometersConversion[1],
         twipsConversion[0],
-        nanometersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "nm"] as const;
+      const expected = [fromBase(toBase(v)), "nm"] as const;
       const conversionCandidate = [v, "tw"] as const;
 
       expect(length["nm"](conversionCandidate)).toEqual(expected);
@@ -3915,11 +3915,11 @@ describe("length", () => {
       const pointsConversion = linearConversion(0.0003527777777777778);
 
       const [toBase, fromBase] = [
+        nanometersConversion[1],
         pointsConversion[0],
-        nanometersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "nm"] as const;
+      const expected = [fromBase(toBase(v)), "nm"] as const;
       const conversionCandidate = [v, "pt"] as const;
 
       expect(length["nm"](conversionCandidate)).toEqual(expected);
@@ -3931,11 +3931,11 @@ describe("length", () => {
       const picasConversion = linearConversion(0.004233333333333334);
 
       const [toBase, fromBase] = [
+        nanometersConversion[1],
         picasConversion[0],
-        nanometersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "nm"] as const;
+      const expected = [fromBase(toBase(v)), "nm"] as const;
       const conversionCandidate = [v, "P"] as const;
 
       expect(length["nm"](conversionCandidate)).toEqual(expected);
@@ -3947,11 +3947,11 @@ describe("length", () => {
       const inchesConversion = linearConversion(0.0254);
 
       const [toBase, fromBase] = [
+        nanometersConversion[1],
         inchesConversion[0],
-        nanometersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "nm"] as const;
+      const expected = [fromBase(toBase(v)), "nm"] as const;
       const conversionCandidate = [v, "in"] as const;
 
       expect(length["nm"](conversionCandidate)).toEqual(expected);
@@ -3963,11 +3963,11 @@ describe("length", () => {
       const feetConversion = linearConversion(0.3048);
 
       const [toBase, fromBase] = [
+        nanometersConversion[1],
         feetConversion[0],
-        nanometersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "nm"] as const;
+      const expected = [fromBase(toBase(v)), "nm"] as const;
       const conversionCandidate = [v, "ft"] as const;
 
       expect(length["nm"](conversionCandidate)).toEqual(expected);
@@ -3979,11 +3979,11 @@ describe("length", () => {
       const yardsConversion = linearConversion(0.9144);
 
       const [toBase, fromBase] = [
+        nanometersConversion[1],
         yardsConversion[0],
-        nanometersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "nm"] as const;
+      const expected = [fromBase(toBase(v)), "nm"] as const;
       const conversionCandidate = [v, "yd"] as const;
 
       expect(length["nm"](conversionCandidate)).toEqual(expected);
@@ -3995,11 +3995,11 @@ describe("length", () => {
       const milesConversion = linearConversion(1609.34);
 
       const [toBase, fromBase] = [
+        nanometersConversion[1],
         milesConversion[0],
-        nanometersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "nm"] as const;
+      const expected = [fromBase(toBase(v)), "nm"] as const;
       const conversionCandidate = [v, "mi"] as const;
 
       expect(length["nm"](conversionCandidate)).toEqual(expected);
@@ -4011,11 +4011,11 @@ describe("length", () => {
       const scandinavianMilesConversion = linearConversion(10000);
 
       const [toBase, fromBase] = [
+        nanometersConversion[1],
         scandinavianMilesConversion[0],
-        nanometersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "nm"] as const;
+      const expected = [fromBase(toBase(v)), "nm"] as const;
       const conversionCandidate = [v, "smi"] as const;
 
       expect(length["nm"](conversionCandidate)).toEqual(expected);
@@ -4027,11 +4027,11 @@ describe("length", () => {
       const lightyearsConversion = linearConversion(9461000000000000);
 
       const [toBase, fromBase] = [
+        nanometersConversion[1],
         lightyearsConversion[0],
-        nanometersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "nm"] as const;
+      const expected = [fromBase(toBase(v)), "nm"] as const;
       const conversionCandidate = [v, "ly"] as const;
 
       expect(length["nm"](conversionCandidate)).toEqual(expected);
@@ -4043,11 +4043,11 @@ describe("length", () => {
       const nauticalMilesConversion = linearConversion(1852);
 
       const [toBase, fromBase] = [
+        nanometersConversion[1],
         nauticalMilesConversion[0],
-        nanometersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "nm"] as const;
+      const expected = [fromBase(toBase(v)), "nm"] as const;
       const conversionCandidate = [v, "NM"] as const;
 
       expect(length["nm"](conversionCandidate)).toEqual(expected);
@@ -4059,11 +4059,11 @@ describe("length", () => {
       const fathomsConversion = linearConversion(1.8288);
 
       const [toBase, fromBase] = [
+        nanometersConversion[1],
         fathomsConversion[0],
-        nanometersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "nm"] as const;
+      const expected = [fromBase(toBase(v)), "nm"] as const;
       const conversionCandidate = [v, "ftm"] as const;
 
       expect(length["nm"](conversionCandidate)).toEqual(expected);
@@ -4075,11 +4075,11 @@ describe("length", () => {
       const furlongsConversion = linearConversion(201.168);
 
       const [toBase, fromBase] = [
+        nanometersConversion[1],
         furlongsConversion[0],
-        nanometersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "nm"] as const;
+      const expected = [fromBase(toBase(v)), "nm"] as const;
       const conversionCandidate = [v, "fur"] as const;
 
       expect(length["nm"](conversionCandidate)).toEqual(expected);
@@ -4091,11 +4091,11 @@ describe("length", () => {
       const astronomicalUnitsConversion = linearConversion(149600000000);
 
       const [toBase, fromBase] = [
+        nanometersConversion[1],
         astronomicalUnitsConversion[0],
-        nanometersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "nm"] as const;
+      const expected = [fromBase(toBase(v)), "nm"] as const;
       const conversionCandidate = [v, "ua"] as const;
 
       expect(length["nm"](conversionCandidate)).toEqual(expected);
@@ -4107,11 +4107,11 @@ describe("length", () => {
       const parsecsConversion = linearConversion(30860000000000000);
 
       const [toBase, fromBase] = [
+        nanometersConversion[1],
         parsecsConversion[0],
-        nanometersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "nm"] as const;
+      const expected = [fromBase(toBase(v)), "nm"] as const;
       const conversionCandidate = [v, "pc"] as const;
 
       expect(length["nm"](conversionCandidate)).toEqual(expected);
@@ -4131,11 +4131,11 @@ describe("length", () => {
       const megametersConversion = linearConversion(1000000);
 
       const [toBase, fromBase] = [
+        picometersConversion[1],
         megametersConversion[0],
-        picometersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "pm"] as const;
+      const expected = [fromBase(toBase(v)), "pm"] as const;
       const conversionCandidate = [v, "Mm"] as const;
 
       expect(length["pm"](conversionCandidate)).toEqual(expected);
@@ -4147,11 +4147,11 @@ describe("length", () => {
       const kilometersConversion = linearConversion(1000);
 
       const [toBase, fromBase] = [
+        picometersConversion[1],
         kilometersConversion[0],
-        picometersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "pm"] as const;
+      const expected = [fromBase(toBase(v)), "pm"] as const;
       const conversionCandidate = [v, "kM"] as const;
 
       expect(length["pm"](conversionCandidate)).toEqual(expected);
@@ -4163,11 +4163,11 @@ describe("length", () => {
       const hectometersConversion = linearConversion(100);
 
       const [toBase, fromBase] = [
+        picometersConversion[1],
         hectometersConversion[0],
-        picometersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "pm"] as const;
+      const expected = [fromBase(toBase(v)), "pm"] as const;
       const conversionCandidate = [v, "hm"] as const;
 
       expect(length["pm"](conversionCandidate)).toEqual(expected);
@@ -4179,11 +4179,11 @@ describe("length", () => {
       const decametersConversion = linearConversion(10);
 
       const [toBase, fromBase] = [
+        picometersConversion[1],
         decametersConversion[0],
-        picometersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "pm"] as const;
+      const expected = [fromBase(toBase(v)), "pm"] as const;
       const conversionCandidate = [v, "dam"] as const;
 
       expect(length["pm"](conversionCandidate)).toEqual(expected);
@@ -4195,11 +4195,11 @@ describe("length", () => {
       const metersConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
+        picometersConversion[1],
         metersConversion[0],
-        picometersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "pm"] as const;
+      const expected = [fromBase(toBase(v)), "pm"] as const;
       const conversionCandidate = [v, "m"] as const;
 
       expect(length["pm"](conversionCandidate)).toEqual(expected);
@@ -4211,11 +4211,11 @@ describe("length", () => {
       const decimetersConversion = linearConversion(0.1);
 
       const [toBase, fromBase] = [
+        picometersConversion[1],
         decimetersConversion[0],
-        picometersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "pm"] as const;
+      const expected = [fromBase(toBase(v)), "pm"] as const;
       const conversionCandidate = [v, "dm"] as const;
 
       expect(length["pm"](conversionCandidate)).toEqual(expected);
@@ -4227,11 +4227,11 @@ describe("length", () => {
       const centimetersConversion = linearConversion(0.01);
 
       const [toBase, fromBase] = [
+        picometersConversion[1],
         centimetersConversion[0],
-        picometersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "pm"] as const;
+      const expected = [fromBase(toBase(v)), "pm"] as const;
       const conversionCandidate = [v, "cm"] as const;
 
       expect(length["pm"](conversionCandidate)).toEqual(expected);
@@ -4243,11 +4243,11 @@ describe("length", () => {
       const millimetersConversion = linearConversion(0.001);
 
       const [toBase, fromBase] = [
+        picometersConversion[1],
         millimetersConversion[0],
-        picometersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "pm"] as const;
+      const expected = [fromBase(toBase(v)), "pm"] as const;
       const conversionCandidate = [v, "mm"] as const;
 
       expect(length["pm"](conversionCandidate)).toEqual(expected);
@@ -4259,11 +4259,11 @@ describe("length", () => {
       const micrometersConversion = linearConversion(0.000001);
 
       const [toBase, fromBase] = [
+        picometersConversion[1],
         micrometersConversion[0],
-        picometersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "pm"] as const;
+      const expected = [fromBase(toBase(v)), "pm"] as const;
       const conversionCandidate = [v, "µm"] as const;
 
       expect(length["pm"](conversionCandidate)).toEqual(expected);
@@ -4275,11 +4275,11 @@ describe("length", () => {
       const nanometersConversion = linearConversion(1e-9);
 
       const [toBase, fromBase] = [
+        picometersConversion[1],
         nanometersConversion[0],
-        picometersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "pm"] as const;
+      const expected = [fromBase(toBase(v)), "pm"] as const;
       const conversionCandidate = [v, "nm"] as const;
 
       expect(length["pm"](conversionCandidate)).toEqual(expected);
@@ -4293,11 +4293,11 @@ describe("length", () => {
       const twipsConversion = linearConversion(0.00001763888888888889);
 
       const [toBase, fromBase] = [
+        picometersConversion[1],
         twipsConversion[0],
-        picometersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "pm"] as const;
+      const expected = [fromBase(toBase(v)), "pm"] as const;
       const conversionCandidate = [v, "tw"] as const;
 
       expect(length["pm"](conversionCandidate)).toEqual(expected);
@@ -4309,11 +4309,11 @@ describe("length", () => {
       const pointsConversion = linearConversion(0.0003527777777777778);
 
       const [toBase, fromBase] = [
+        picometersConversion[1],
         pointsConversion[0],
-        picometersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "pm"] as const;
+      const expected = [fromBase(toBase(v)), "pm"] as const;
       const conversionCandidate = [v, "pt"] as const;
 
       expect(length["pm"](conversionCandidate)).toEqual(expected);
@@ -4325,11 +4325,11 @@ describe("length", () => {
       const picasConversion = linearConversion(0.004233333333333334);
 
       const [toBase, fromBase] = [
+        picometersConversion[1],
         picasConversion[0],
-        picometersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "pm"] as const;
+      const expected = [fromBase(toBase(v)), "pm"] as const;
       const conversionCandidate = [v, "P"] as const;
 
       expect(length["pm"](conversionCandidate)).toEqual(expected);
@@ -4341,11 +4341,11 @@ describe("length", () => {
       const inchesConversion = linearConversion(0.0254);
 
       const [toBase, fromBase] = [
+        picometersConversion[1],
         inchesConversion[0],
-        picometersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "pm"] as const;
+      const expected = [fromBase(toBase(v)), "pm"] as const;
       const conversionCandidate = [v, "in"] as const;
 
       expect(length["pm"](conversionCandidate)).toEqual(expected);
@@ -4357,11 +4357,11 @@ describe("length", () => {
       const feetConversion = linearConversion(0.3048);
 
       const [toBase, fromBase] = [
+        picometersConversion[1],
         feetConversion[0],
-        picometersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "pm"] as const;
+      const expected = [fromBase(toBase(v)), "pm"] as const;
       const conversionCandidate = [v, "ft"] as const;
 
       expect(length["pm"](conversionCandidate)).toEqual(expected);
@@ -4373,11 +4373,11 @@ describe("length", () => {
       const yardsConversion = linearConversion(0.9144);
 
       const [toBase, fromBase] = [
+        picometersConversion[1],
         yardsConversion[0],
-        picometersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "pm"] as const;
+      const expected = [fromBase(toBase(v)), "pm"] as const;
       const conversionCandidate = [v, "yd"] as const;
 
       expect(length["pm"](conversionCandidate)).toEqual(expected);
@@ -4389,11 +4389,11 @@ describe("length", () => {
       const milesConversion = linearConversion(1609.34);
 
       const [toBase, fromBase] = [
+        picometersConversion[1],
         milesConversion[0],
-        picometersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "pm"] as const;
+      const expected = [fromBase(toBase(v)), "pm"] as const;
       const conversionCandidate = [v, "mi"] as const;
 
       expect(length["pm"](conversionCandidate)).toEqual(expected);
@@ -4405,11 +4405,11 @@ describe("length", () => {
       const scandinavianMilesConversion = linearConversion(10000);
 
       const [toBase, fromBase] = [
+        picometersConversion[1],
         scandinavianMilesConversion[0],
-        picometersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "pm"] as const;
+      const expected = [fromBase(toBase(v)), "pm"] as const;
       const conversionCandidate = [v, "smi"] as const;
 
       expect(length["pm"](conversionCandidate)).toEqual(expected);
@@ -4421,11 +4421,11 @@ describe("length", () => {
       const lightyearsConversion = linearConversion(9461000000000000);
 
       const [toBase, fromBase] = [
+        picometersConversion[1],
         lightyearsConversion[0],
-        picometersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "pm"] as const;
+      const expected = [fromBase(toBase(v)), "pm"] as const;
       const conversionCandidate = [v, "ly"] as const;
 
       expect(length["pm"](conversionCandidate)).toEqual(expected);
@@ -4437,11 +4437,11 @@ describe("length", () => {
       const nauticalMilesConversion = linearConversion(1852);
 
       const [toBase, fromBase] = [
+        picometersConversion[1],
         nauticalMilesConversion[0],
-        picometersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "pm"] as const;
+      const expected = [fromBase(toBase(v)), "pm"] as const;
       const conversionCandidate = [v, "NM"] as const;
 
       expect(length["pm"](conversionCandidate)).toEqual(expected);
@@ -4453,11 +4453,11 @@ describe("length", () => {
       const fathomsConversion = linearConversion(1.8288);
 
       const [toBase, fromBase] = [
+        picometersConversion[1],
         fathomsConversion[0],
-        picometersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "pm"] as const;
+      const expected = [fromBase(toBase(v)), "pm"] as const;
       const conversionCandidate = [v, "ftm"] as const;
 
       expect(length["pm"](conversionCandidate)).toEqual(expected);
@@ -4469,11 +4469,11 @@ describe("length", () => {
       const furlongsConversion = linearConversion(201.168);
 
       const [toBase, fromBase] = [
+        picometersConversion[1],
         furlongsConversion[0],
-        picometersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "pm"] as const;
+      const expected = [fromBase(toBase(v)), "pm"] as const;
       const conversionCandidate = [v, "fur"] as const;
 
       expect(length["pm"](conversionCandidate)).toEqual(expected);
@@ -4485,11 +4485,11 @@ describe("length", () => {
       const astronomicalUnitsConversion = linearConversion(149600000000);
 
       const [toBase, fromBase] = [
+        picometersConversion[1],
         astronomicalUnitsConversion[0],
-        picometersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "pm"] as const;
+      const expected = [fromBase(toBase(v)), "pm"] as const;
       const conversionCandidate = [v, "ua"] as const;
 
       expect(length["pm"](conversionCandidate)).toEqual(expected);
@@ -4501,11 +4501,11 @@ describe("length", () => {
       const parsecsConversion = linearConversion(30860000000000000);
 
       const [toBase, fromBase] = [
+        picometersConversion[1],
         parsecsConversion[0],
-        picometersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "pm"] as const;
+      const expected = [fromBase(toBase(v)), "pm"] as const;
       const conversionCandidate = [v, "pc"] as const;
 
       expect(length["pm"](conversionCandidate)).toEqual(expected);
@@ -4525,11 +4525,11 @@ describe("length", () => {
       const megametersConversion = linearConversion(1000000);
 
       const [toBase, fromBase] = [
+        twipsConversion[1],
         megametersConversion[0],
-        twipsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "tw"] as const;
+      const expected = [fromBase(toBase(v)), "tw"] as const;
       const conversionCandidate = [v, "Mm"] as const;
 
       expect(length["tw"](conversionCandidate)).toEqual(expected);
@@ -4541,11 +4541,11 @@ describe("length", () => {
       const kilometersConversion = linearConversion(1000);
 
       const [toBase, fromBase] = [
+        twipsConversion[1],
         kilometersConversion[0],
-        twipsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "tw"] as const;
+      const expected = [fromBase(toBase(v)), "tw"] as const;
       const conversionCandidate = [v, "kM"] as const;
 
       expect(length["tw"](conversionCandidate)).toEqual(expected);
@@ -4557,11 +4557,11 @@ describe("length", () => {
       const hectometersConversion = linearConversion(100);
 
       const [toBase, fromBase] = [
+        twipsConversion[1],
         hectometersConversion[0],
-        twipsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "tw"] as const;
+      const expected = [fromBase(toBase(v)), "tw"] as const;
       const conversionCandidate = [v, "hm"] as const;
 
       expect(length["tw"](conversionCandidate)).toEqual(expected);
@@ -4573,11 +4573,11 @@ describe("length", () => {
       const decametersConversion = linearConversion(10);
 
       const [toBase, fromBase] = [
+        twipsConversion[1],
         decametersConversion[0],
-        twipsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "tw"] as const;
+      const expected = [fromBase(toBase(v)), "tw"] as const;
       const conversionCandidate = [v, "dam"] as const;
 
       expect(length["tw"](conversionCandidate)).toEqual(expected);
@@ -4589,11 +4589,11 @@ describe("length", () => {
       const metersConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
+        twipsConversion[1],
         metersConversion[0],
-        twipsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "tw"] as const;
+      const expected = [fromBase(toBase(v)), "tw"] as const;
       const conversionCandidate = [v, "m"] as const;
 
       expect(length["tw"](conversionCandidate)).toEqual(expected);
@@ -4605,11 +4605,11 @@ describe("length", () => {
       const decimetersConversion = linearConversion(0.1);
 
       const [toBase, fromBase] = [
+        twipsConversion[1],
         decimetersConversion[0],
-        twipsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "tw"] as const;
+      const expected = [fromBase(toBase(v)), "tw"] as const;
       const conversionCandidate = [v, "dm"] as const;
 
       expect(length["tw"](conversionCandidate)).toEqual(expected);
@@ -4621,11 +4621,11 @@ describe("length", () => {
       const centimetersConversion = linearConversion(0.01);
 
       const [toBase, fromBase] = [
+        twipsConversion[1],
         centimetersConversion[0],
-        twipsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "tw"] as const;
+      const expected = [fromBase(toBase(v)), "tw"] as const;
       const conversionCandidate = [v, "cm"] as const;
 
       expect(length["tw"](conversionCandidate)).toEqual(expected);
@@ -4637,11 +4637,11 @@ describe("length", () => {
       const millimetersConversion = linearConversion(0.001);
 
       const [toBase, fromBase] = [
+        twipsConversion[1],
         millimetersConversion[0],
-        twipsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "tw"] as const;
+      const expected = [fromBase(toBase(v)), "tw"] as const;
       const conversionCandidate = [v, "mm"] as const;
 
       expect(length["tw"](conversionCandidate)).toEqual(expected);
@@ -4653,11 +4653,11 @@ describe("length", () => {
       const micrometersConversion = linearConversion(0.000001);
 
       const [toBase, fromBase] = [
+        twipsConversion[1],
         micrometersConversion[0],
-        twipsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "tw"] as const;
+      const expected = [fromBase(toBase(v)), "tw"] as const;
       const conversionCandidate = [v, "µm"] as const;
 
       expect(length["tw"](conversionCandidate)).toEqual(expected);
@@ -4669,11 +4669,11 @@ describe("length", () => {
       const nanometersConversion = linearConversion(1e-9);
 
       const [toBase, fromBase] = [
+        twipsConversion[1],
         nanometersConversion[0],
-        twipsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "tw"] as const;
+      const expected = [fromBase(toBase(v)), "tw"] as const;
       const conversionCandidate = [v, "nm"] as const;
 
       expect(length["tw"](conversionCandidate)).toEqual(expected);
@@ -4685,11 +4685,11 @@ describe("length", () => {
       const picometersConversion = linearConversion(1e-12);
 
       const [toBase, fromBase] = [
+        twipsConversion[1],
         picometersConversion[0],
-        twipsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "tw"] as const;
+      const expected = [fromBase(toBase(v)), "tw"] as const;
       const conversionCandidate = [v, "pm"] as const;
 
       expect(length["tw"](conversionCandidate)).toEqual(expected);
@@ -4703,11 +4703,11 @@ describe("length", () => {
       const pointsConversion = linearConversion(0.0003527777777777778);
 
       const [toBase, fromBase] = [
+        twipsConversion[1],
         pointsConversion[0],
-        twipsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "tw"] as const;
+      const expected = [fromBase(toBase(v)), "tw"] as const;
       const conversionCandidate = [v, "pt"] as const;
 
       expect(length["tw"](conversionCandidate)).toEqual(expected);
@@ -4719,11 +4719,11 @@ describe("length", () => {
       const picasConversion = linearConversion(0.004233333333333334);
 
       const [toBase, fromBase] = [
+        twipsConversion[1],
         picasConversion[0],
-        twipsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "tw"] as const;
+      const expected = [fromBase(toBase(v)), "tw"] as const;
       const conversionCandidate = [v, "P"] as const;
 
       expect(length["tw"](conversionCandidate)).toEqual(expected);
@@ -4735,11 +4735,11 @@ describe("length", () => {
       const inchesConversion = linearConversion(0.0254);
 
       const [toBase, fromBase] = [
+        twipsConversion[1],
         inchesConversion[0],
-        twipsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "tw"] as const;
+      const expected = [fromBase(toBase(v)), "tw"] as const;
       const conversionCandidate = [v, "in"] as const;
 
       expect(length["tw"](conversionCandidate)).toEqual(expected);
@@ -4751,11 +4751,11 @@ describe("length", () => {
       const feetConversion = linearConversion(0.3048);
 
       const [toBase, fromBase] = [
+        twipsConversion[1],
         feetConversion[0],
-        twipsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "tw"] as const;
+      const expected = [fromBase(toBase(v)), "tw"] as const;
       const conversionCandidate = [v, "ft"] as const;
 
       expect(length["tw"](conversionCandidate)).toEqual(expected);
@@ -4767,11 +4767,11 @@ describe("length", () => {
       const yardsConversion = linearConversion(0.9144);
 
       const [toBase, fromBase] = [
+        twipsConversion[1],
         yardsConversion[0],
-        twipsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "tw"] as const;
+      const expected = [fromBase(toBase(v)), "tw"] as const;
       const conversionCandidate = [v, "yd"] as const;
 
       expect(length["tw"](conversionCandidate)).toEqual(expected);
@@ -4783,11 +4783,11 @@ describe("length", () => {
       const milesConversion = linearConversion(1609.34);
 
       const [toBase, fromBase] = [
+        twipsConversion[1],
         milesConversion[0],
-        twipsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "tw"] as const;
+      const expected = [fromBase(toBase(v)), "tw"] as const;
       const conversionCandidate = [v, "mi"] as const;
 
       expect(length["tw"](conversionCandidate)).toEqual(expected);
@@ -4799,11 +4799,11 @@ describe("length", () => {
       const scandinavianMilesConversion = linearConversion(10000);
 
       const [toBase, fromBase] = [
+        twipsConversion[1],
         scandinavianMilesConversion[0],
-        twipsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "tw"] as const;
+      const expected = [fromBase(toBase(v)), "tw"] as const;
       const conversionCandidate = [v, "smi"] as const;
 
       expect(length["tw"](conversionCandidate)).toEqual(expected);
@@ -4815,11 +4815,11 @@ describe("length", () => {
       const lightyearsConversion = linearConversion(9461000000000000);
 
       const [toBase, fromBase] = [
+        twipsConversion[1],
         lightyearsConversion[0],
-        twipsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "tw"] as const;
+      const expected = [fromBase(toBase(v)), "tw"] as const;
       const conversionCandidate = [v, "ly"] as const;
 
       expect(length["tw"](conversionCandidate)).toEqual(expected);
@@ -4831,11 +4831,11 @@ describe("length", () => {
       const nauticalMilesConversion = linearConversion(1852);
 
       const [toBase, fromBase] = [
+        twipsConversion[1],
         nauticalMilesConversion[0],
-        twipsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "tw"] as const;
+      const expected = [fromBase(toBase(v)), "tw"] as const;
       const conversionCandidate = [v, "NM"] as const;
 
       expect(length["tw"](conversionCandidate)).toEqual(expected);
@@ -4847,11 +4847,11 @@ describe("length", () => {
       const fathomsConversion = linearConversion(1.8288);
 
       const [toBase, fromBase] = [
+        twipsConversion[1],
         fathomsConversion[0],
-        twipsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "tw"] as const;
+      const expected = [fromBase(toBase(v)), "tw"] as const;
       const conversionCandidate = [v, "ftm"] as const;
 
       expect(length["tw"](conversionCandidate)).toEqual(expected);
@@ -4863,11 +4863,11 @@ describe("length", () => {
       const furlongsConversion = linearConversion(201.168);
 
       const [toBase, fromBase] = [
+        twipsConversion[1],
         furlongsConversion[0],
-        twipsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "tw"] as const;
+      const expected = [fromBase(toBase(v)), "tw"] as const;
       const conversionCandidate = [v, "fur"] as const;
 
       expect(length["tw"](conversionCandidate)).toEqual(expected);
@@ -4879,11 +4879,11 @@ describe("length", () => {
       const astronomicalUnitsConversion = linearConversion(149600000000);
 
       const [toBase, fromBase] = [
+        twipsConversion[1],
         astronomicalUnitsConversion[0],
-        twipsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "tw"] as const;
+      const expected = [fromBase(toBase(v)), "tw"] as const;
       const conversionCandidate = [v, "ua"] as const;
 
       expect(length["tw"](conversionCandidate)).toEqual(expected);
@@ -4895,11 +4895,11 @@ describe("length", () => {
       const parsecsConversion = linearConversion(30860000000000000);
 
       const [toBase, fromBase] = [
+        twipsConversion[1],
         parsecsConversion[0],
-        twipsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "tw"] as const;
+      const expected = [fromBase(toBase(v)), "tw"] as const;
       const conversionCandidate = [v, "pc"] as const;
 
       expect(length["tw"](conversionCandidate)).toEqual(expected);
@@ -4919,11 +4919,11 @@ describe("length", () => {
       const megametersConversion = linearConversion(1000000);
 
       const [toBase, fromBase] = [
+        pointsConversion[1],
         megametersConversion[0],
-        pointsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "pt"] as const;
+      const expected = [fromBase(toBase(v)), "pt"] as const;
       const conversionCandidate = [v, "Mm"] as const;
 
       expect(length["pt"](conversionCandidate)).toEqual(expected);
@@ -4935,11 +4935,11 @@ describe("length", () => {
       const kilometersConversion = linearConversion(1000);
 
       const [toBase, fromBase] = [
+        pointsConversion[1],
         kilometersConversion[0],
-        pointsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "pt"] as const;
+      const expected = [fromBase(toBase(v)), "pt"] as const;
       const conversionCandidate = [v, "kM"] as const;
 
       expect(length["pt"](conversionCandidate)).toEqual(expected);
@@ -4951,11 +4951,11 @@ describe("length", () => {
       const hectometersConversion = linearConversion(100);
 
       const [toBase, fromBase] = [
+        pointsConversion[1],
         hectometersConversion[0],
-        pointsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "pt"] as const;
+      const expected = [fromBase(toBase(v)), "pt"] as const;
       const conversionCandidate = [v, "hm"] as const;
 
       expect(length["pt"](conversionCandidate)).toEqual(expected);
@@ -4967,11 +4967,11 @@ describe("length", () => {
       const decametersConversion = linearConversion(10);
 
       const [toBase, fromBase] = [
+        pointsConversion[1],
         decametersConversion[0],
-        pointsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "pt"] as const;
+      const expected = [fromBase(toBase(v)), "pt"] as const;
       const conversionCandidate = [v, "dam"] as const;
 
       expect(length["pt"](conversionCandidate)).toEqual(expected);
@@ -4983,11 +4983,11 @@ describe("length", () => {
       const metersConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
+        pointsConversion[1],
         metersConversion[0],
-        pointsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "pt"] as const;
+      const expected = [fromBase(toBase(v)), "pt"] as const;
       const conversionCandidate = [v, "m"] as const;
 
       expect(length["pt"](conversionCandidate)).toEqual(expected);
@@ -4999,11 +4999,11 @@ describe("length", () => {
       const decimetersConversion = linearConversion(0.1);
 
       const [toBase, fromBase] = [
+        pointsConversion[1],
         decimetersConversion[0],
-        pointsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "pt"] as const;
+      const expected = [fromBase(toBase(v)), "pt"] as const;
       const conversionCandidate = [v, "dm"] as const;
 
       expect(length["pt"](conversionCandidate)).toEqual(expected);
@@ -5015,11 +5015,11 @@ describe("length", () => {
       const centimetersConversion = linearConversion(0.01);
 
       const [toBase, fromBase] = [
+        pointsConversion[1],
         centimetersConversion[0],
-        pointsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "pt"] as const;
+      const expected = [fromBase(toBase(v)), "pt"] as const;
       const conversionCandidate = [v, "cm"] as const;
 
       expect(length["pt"](conversionCandidate)).toEqual(expected);
@@ -5031,11 +5031,11 @@ describe("length", () => {
       const millimetersConversion = linearConversion(0.001);
 
       const [toBase, fromBase] = [
+        pointsConversion[1],
         millimetersConversion[0],
-        pointsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "pt"] as const;
+      const expected = [fromBase(toBase(v)), "pt"] as const;
       const conversionCandidate = [v, "mm"] as const;
 
       expect(length["pt"](conversionCandidate)).toEqual(expected);
@@ -5047,11 +5047,11 @@ describe("length", () => {
       const micrometersConversion = linearConversion(0.000001);
 
       const [toBase, fromBase] = [
+        pointsConversion[1],
         micrometersConversion[0],
-        pointsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "pt"] as const;
+      const expected = [fromBase(toBase(v)), "pt"] as const;
       const conversionCandidate = [v, "µm"] as const;
 
       expect(length["pt"](conversionCandidate)).toEqual(expected);
@@ -5063,11 +5063,11 @@ describe("length", () => {
       const nanometersConversion = linearConversion(1e-9);
 
       const [toBase, fromBase] = [
+        pointsConversion[1],
         nanometersConversion[0],
-        pointsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "pt"] as const;
+      const expected = [fromBase(toBase(v)), "pt"] as const;
       const conversionCandidate = [v, "nm"] as const;
 
       expect(length["pt"](conversionCandidate)).toEqual(expected);
@@ -5079,11 +5079,11 @@ describe("length", () => {
       const picometersConversion = linearConversion(1e-12);
 
       const [toBase, fromBase] = [
+        pointsConversion[1],
         picometersConversion[0],
-        pointsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "pt"] as const;
+      const expected = [fromBase(toBase(v)), "pt"] as const;
       const conversionCandidate = [v, "pm"] as const;
 
       expect(length["pt"](conversionCandidate)).toEqual(expected);
@@ -5095,11 +5095,11 @@ describe("length", () => {
       const twipsConversion = linearConversion(0.00001763888888888889);
 
       const [toBase, fromBase] = [
+        pointsConversion[1],
         twipsConversion[0],
-        pointsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "pt"] as const;
+      const expected = [fromBase(toBase(v)), "pt"] as const;
       const conversionCandidate = [v, "tw"] as const;
 
       expect(length["pt"](conversionCandidate)).toEqual(expected);
@@ -5113,11 +5113,11 @@ describe("length", () => {
       const picasConversion = linearConversion(0.004233333333333334);
 
       const [toBase, fromBase] = [
+        pointsConversion[1],
         picasConversion[0],
-        pointsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "pt"] as const;
+      const expected = [fromBase(toBase(v)), "pt"] as const;
       const conversionCandidate = [v, "P"] as const;
 
       expect(length["pt"](conversionCandidate)).toEqual(expected);
@@ -5129,11 +5129,11 @@ describe("length", () => {
       const inchesConversion = linearConversion(0.0254);
 
       const [toBase, fromBase] = [
+        pointsConversion[1],
         inchesConversion[0],
-        pointsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "pt"] as const;
+      const expected = [fromBase(toBase(v)), "pt"] as const;
       const conversionCandidate = [v, "in"] as const;
 
       expect(length["pt"](conversionCandidate)).toEqual(expected);
@@ -5145,11 +5145,11 @@ describe("length", () => {
       const feetConversion = linearConversion(0.3048);
 
       const [toBase, fromBase] = [
+        pointsConversion[1],
         feetConversion[0],
-        pointsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "pt"] as const;
+      const expected = [fromBase(toBase(v)), "pt"] as const;
       const conversionCandidate = [v, "ft"] as const;
 
       expect(length["pt"](conversionCandidate)).toEqual(expected);
@@ -5161,11 +5161,11 @@ describe("length", () => {
       const yardsConversion = linearConversion(0.9144);
 
       const [toBase, fromBase] = [
+        pointsConversion[1],
         yardsConversion[0],
-        pointsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "pt"] as const;
+      const expected = [fromBase(toBase(v)), "pt"] as const;
       const conversionCandidate = [v, "yd"] as const;
 
       expect(length["pt"](conversionCandidate)).toEqual(expected);
@@ -5177,11 +5177,11 @@ describe("length", () => {
       const milesConversion = linearConversion(1609.34);
 
       const [toBase, fromBase] = [
+        pointsConversion[1],
         milesConversion[0],
-        pointsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "pt"] as const;
+      const expected = [fromBase(toBase(v)), "pt"] as const;
       const conversionCandidate = [v, "mi"] as const;
 
       expect(length["pt"](conversionCandidate)).toEqual(expected);
@@ -5193,11 +5193,11 @@ describe("length", () => {
       const scandinavianMilesConversion = linearConversion(10000);
 
       const [toBase, fromBase] = [
+        pointsConversion[1],
         scandinavianMilesConversion[0],
-        pointsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "pt"] as const;
+      const expected = [fromBase(toBase(v)), "pt"] as const;
       const conversionCandidate = [v, "smi"] as const;
 
       expect(length["pt"](conversionCandidate)).toEqual(expected);
@@ -5209,11 +5209,11 @@ describe("length", () => {
       const lightyearsConversion = linearConversion(9461000000000000);
 
       const [toBase, fromBase] = [
+        pointsConversion[1],
         lightyearsConversion[0],
-        pointsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "pt"] as const;
+      const expected = [fromBase(toBase(v)), "pt"] as const;
       const conversionCandidate = [v, "ly"] as const;
 
       expect(length["pt"](conversionCandidate)).toEqual(expected);
@@ -5225,11 +5225,11 @@ describe("length", () => {
       const nauticalMilesConversion = linearConversion(1852);
 
       const [toBase, fromBase] = [
+        pointsConversion[1],
         nauticalMilesConversion[0],
-        pointsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "pt"] as const;
+      const expected = [fromBase(toBase(v)), "pt"] as const;
       const conversionCandidate = [v, "NM"] as const;
 
       expect(length["pt"](conversionCandidate)).toEqual(expected);
@@ -5241,11 +5241,11 @@ describe("length", () => {
       const fathomsConversion = linearConversion(1.8288);
 
       const [toBase, fromBase] = [
+        pointsConversion[1],
         fathomsConversion[0],
-        pointsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "pt"] as const;
+      const expected = [fromBase(toBase(v)), "pt"] as const;
       const conversionCandidate = [v, "ftm"] as const;
 
       expect(length["pt"](conversionCandidate)).toEqual(expected);
@@ -5257,11 +5257,11 @@ describe("length", () => {
       const furlongsConversion = linearConversion(201.168);
 
       const [toBase, fromBase] = [
+        pointsConversion[1],
         furlongsConversion[0],
-        pointsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "pt"] as const;
+      const expected = [fromBase(toBase(v)), "pt"] as const;
       const conversionCandidate = [v, "fur"] as const;
 
       expect(length["pt"](conversionCandidate)).toEqual(expected);
@@ -5273,11 +5273,11 @@ describe("length", () => {
       const astronomicalUnitsConversion = linearConversion(149600000000);
 
       const [toBase, fromBase] = [
+        pointsConversion[1],
         astronomicalUnitsConversion[0],
-        pointsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "pt"] as const;
+      const expected = [fromBase(toBase(v)), "pt"] as const;
       const conversionCandidate = [v, "ua"] as const;
 
       expect(length["pt"](conversionCandidate)).toEqual(expected);
@@ -5289,11 +5289,11 @@ describe("length", () => {
       const parsecsConversion = linearConversion(30860000000000000);
 
       const [toBase, fromBase] = [
+        pointsConversion[1],
         parsecsConversion[0],
-        pointsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "pt"] as const;
+      const expected = [fromBase(toBase(v)), "pt"] as const;
       const conversionCandidate = [v, "pc"] as const;
 
       expect(length["pt"](conversionCandidate)).toEqual(expected);
@@ -5313,11 +5313,11 @@ describe("length", () => {
       const megametersConversion = linearConversion(1000000);
 
       const [toBase, fromBase] = [
+        picasConversion[1],
         megametersConversion[0],
-        picasConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "P"] as const;
+      const expected = [fromBase(toBase(v)), "P"] as const;
       const conversionCandidate = [v, "Mm"] as const;
 
       expect(length["P"](conversionCandidate)).toEqual(expected);
@@ -5329,11 +5329,11 @@ describe("length", () => {
       const kilometersConversion = linearConversion(1000);
 
       const [toBase, fromBase] = [
+        picasConversion[1],
         kilometersConversion[0],
-        picasConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "P"] as const;
+      const expected = [fromBase(toBase(v)), "P"] as const;
       const conversionCandidate = [v, "kM"] as const;
 
       expect(length["P"](conversionCandidate)).toEqual(expected);
@@ -5345,11 +5345,11 @@ describe("length", () => {
       const hectometersConversion = linearConversion(100);
 
       const [toBase, fromBase] = [
+        picasConversion[1],
         hectometersConversion[0],
-        picasConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "P"] as const;
+      const expected = [fromBase(toBase(v)), "P"] as const;
       const conversionCandidate = [v, "hm"] as const;
 
       expect(length["P"](conversionCandidate)).toEqual(expected);
@@ -5361,11 +5361,11 @@ describe("length", () => {
       const decametersConversion = linearConversion(10);
 
       const [toBase, fromBase] = [
+        picasConversion[1],
         decametersConversion[0],
-        picasConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "P"] as const;
+      const expected = [fromBase(toBase(v)), "P"] as const;
       const conversionCandidate = [v, "dam"] as const;
 
       expect(length["P"](conversionCandidate)).toEqual(expected);
@@ -5377,11 +5377,11 @@ describe("length", () => {
       const metersConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
+        picasConversion[1],
         metersConversion[0],
-        picasConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "P"] as const;
+      const expected = [fromBase(toBase(v)), "P"] as const;
       const conversionCandidate = [v, "m"] as const;
 
       expect(length["P"](conversionCandidate)).toEqual(expected);
@@ -5393,11 +5393,11 @@ describe("length", () => {
       const decimetersConversion = linearConversion(0.1);
 
       const [toBase, fromBase] = [
+        picasConversion[1],
         decimetersConversion[0],
-        picasConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "P"] as const;
+      const expected = [fromBase(toBase(v)), "P"] as const;
       const conversionCandidate = [v, "dm"] as const;
 
       expect(length["P"](conversionCandidate)).toEqual(expected);
@@ -5409,11 +5409,11 @@ describe("length", () => {
       const centimetersConversion = linearConversion(0.01);
 
       const [toBase, fromBase] = [
+        picasConversion[1],
         centimetersConversion[0],
-        picasConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "P"] as const;
+      const expected = [fromBase(toBase(v)), "P"] as const;
       const conversionCandidate = [v, "cm"] as const;
 
       expect(length["P"](conversionCandidate)).toEqual(expected);
@@ -5425,11 +5425,11 @@ describe("length", () => {
       const millimetersConversion = linearConversion(0.001);
 
       const [toBase, fromBase] = [
+        picasConversion[1],
         millimetersConversion[0],
-        picasConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "P"] as const;
+      const expected = [fromBase(toBase(v)), "P"] as const;
       const conversionCandidate = [v, "mm"] as const;
 
       expect(length["P"](conversionCandidate)).toEqual(expected);
@@ -5441,11 +5441,11 @@ describe("length", () => {
       const micrometersConversion = linearConversion(0.000001);
 
       const [toBase, fromBase] = [
+        picasConversion[1],
         micrometersConversion[0],
-        picasConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "P"] as const;
+      const expected = [fromBase(toBase(v)), "P"] as const;
       const conversionCandidate = [v, "µm"] as const;
 
       expect(length["P"](conversionCandidate)).toEqual(expected);
@@ -5457,11 +5457,11 @@ describe("length", () => {
       const nanometersConversion = linearConversion(1e-9);
 
       const [toBase, fromBase] = [
+        picasConversion[1],
         nanometersConversion[0],
-        picasConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "P"] as const;
+      const expected = [fromBase(toBase(v)), "P"] as const;
       const conversionCandidate = [v, "nm"] as const;
 
       expect(length["P"](conversionCandidate)).toEqual(expected);
@@ -5473,11 +5473,11 @@ describe("length", () => {
       const picometersConversion = linearConversion(1e-12);
 
       const [toBase, fromBase] = [
+        picasConversion[1],
         picometersConversion[0],
-        picasConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "P"] as const;
+      const expected = [fromBase(toBase(v)), "P"] as const;
       const conversionCandidate = [v, "pm"] as const;
 
       expect(length["P"](conversionCandidate)).toEqual(expected);
@@ -5489,11 +5489,11 @@ describe("length", () => {
       const twipsConversion = linearConversion(0.00001763888888888889);
 
       const [toBase, fromBase] = [
+        picasConversion[1],
         twipsConversion[0],
-        picasConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "P"] as const;
+      const expected = [fromBase(toBase(v)), "P"] as const;
       const conversionCandidate = [v, "tw"] as const;
 
       expect(length["P"](conversionCandidate)).toEqual(expected);
@@ -5505,11 +5505,11 @@ describe("length", () => {
       const pointsConversion = linearConversion(0.0003527777777777778);
 
       const [toBase, fromBase] = [
+        picasConversion[1],
         pointsConversion[0],
-        picasConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "P"] as const;
+      const expected = [fromBase(toBase(v)), "P"] as const;
       const conversionCandidate = [v, "pt"] as const;
 
       expect(length["P"](conversionCandidate)).toEqual(expected);
@@ -5523,11 +5523,11 @@ describe("length", () => {
       const inchesConversion = linearConversion(0.0254);
 
       const [toBase, fromBase] = [
+        picasConversion[1],
         inchesConversion[0],
-        picasConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "P"] as const;
+      const expected = [fromBase(toBase(v)), "P"] as const;
       const conversionCandidate = [v, "in"] as const;
 
       expect(length["P"](conversionCandidate)).toEqual(expected);
@@ -5539,11 +5539,11 @@ describe("length", () => {
       const feetConversion = linearConversion(0.3048);
 
       const [toBase, fromBase] = [
+        picasConversion[1],
         feetConversion[0],
-        picasConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "P"] as const;
+      const expected = [fromBase(toBase(v)), "P"] as const;
       const conversionCandidate = [v, "ft"] as const;
 
       expect(length["P"](conversionCandidate)).toEqual(expected);
@@ -5555,11 +5555,11 @@ describe("length", () => {
       const yardsConversion = linearConversion(0.9144);
 
       const [toBase, fromBase] = [
+        picasConversion[1],
         yardsConversion[0],
-        picasConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "P"] as const;
+      const expected = [fromBase(toBase(v)), "P"] as const;
       const conversionCandidate = [v, "yd"] as const;
 
       expect(length["P"](conversionCandidate)).toEqual(expected);
@@ -5571,11 +5571,11 @@ describe("length", () => {
       const milesConversion = linearConversion(1609.34);
 
       const [toBase, fromBase] = [
+        picasConversion[1],
         milesConversion[0],
-        picasConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "P"] as const;
+      const expected = [fromBase(toBase(v)), "P"] as const;
       const conversionCandidate = [v, "mi"] as const;
 
       expect(length["P"](conversionCandidate)).toEqual(expected);
@@ -5587,11 +5587,11 @@ describe("length", () => {
       const scandinavianMilesConversion = linearConversion(10000);
 
       const [toBase, fromBase] = [
+        picasConversion[1],
         scandinavianMilesConversion[0],
-        picasConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "P"] as const;
+      const expected = [fromBase(toBase(v)), "P"] as const;
       const conversionCandidate = [v, "smi"] as const;
 
       expect(length["P"](conversionCandidate)).toEqual(expected);
@@ -5603,11 +5603,11 @@ describe("length", () => {
       const lightyearsConversion = linearConversion(9461000000000000);
 
       const [toBase, fromBase] = [
+        picasConversion[1],
         lightyearsConversion[0],
-        picasConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "P"] as const;
+      const expected = [fromBase(toBase(v)), "P"] as const;
       const conversionCandidate = [v, "ly"] as const;
 
       expect(length["P"](conversionCandidate)).toEqual(expected);
@@ -5619,11 +5619,11 @@ describe("length", () => {
       const nauticalMilesConversion = linearConversion(1852);
 
       const [toBase, fromBase] = [
+        picasConversion[1],
         nauticalMilesConversion[0],
-        picasConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "P"] as const;
+      const expected = [fromBase(toBase(v)), "P"] as const;
       const conversionCandidate = [v, "NM"] as const;
 
       expect(length["P"](conversionCandidate)).toEqual(expected);
@@ -5635,11 +5635,11 @@ describe("length", () => {
       const fathomsConversion = linearConversion(1.8288);
 
       const [toBase, fromBase] = [
+        picasConversion[1],
         fathomsConversion[0],
-        picasConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "P"] as const;
+      const expected = [fromBase(toBase(v)), "P"] as const;
       const conversionCandidate = [v, "ftm"] as const;
 
       expect(length["P"](conversionCandidate)).toEqual(expected);
@@ -5651,11 +5651,11 @@ describe("length", () => {
       const furlongsConversion = linearConversion(201.168);
 
       const [toBase, fromBase] = [
+        picasConversion[1],
         furlongsConversion[0],
-        picasConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "P"] as const;
+      const expected = [fromBase(toBase(v)), "P"] as const;
       const conversionCandidate = [v, "fur"] as const;
 
       expect(length["P"](conversionCandidate)).toEqual(expected);
@@ -5667,11 +5667,11 @@ describe("length", () => {
       const astronomicalUnitsConversion = linearConversion(149600000000);
 
       const [toBase, fromBase] = [
+        picasConversion[1],
         astronomicalUnitsConversion[0],
-        picasConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "P"] as const;
+      const expected = [fromBase(toBase(v)), "P"] as const;
       const conversionCandidate = [v, "ua"] as const;
 
       expect(length["P"](conversionCandidate)).toEqual(expected);
@@ -5683,11 +5683,11 @@ describe("length", () => {
       const parsecsConversion = linearConversion(30860000000000000);
 
       const [toBase, fromBase] = [
+        picasConversion[1],
         parsecsConversion[0],
-        picasConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "P"] as const;
+      const expected = [fromBase(toBase(v)), "P"] as const;
       const conversionCandidate = [v, "pc"] as const;
 
       expect(length["P"](conversionCandidate)).toEqual(expected);
@@ -5707,11 +5707,11 @@ describe("length", () => {
       const megametersConversion = linearConversion(1000000);
 
       const [toBase, fromBase] = [
+        inchesConversion[1],
         megametersConversion[0],
-        inchesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "in"] as const;
+      const expected = [fromBase(toBase(v)), "in"] as const;
       const conversionCandidate = [v, "Mm"] as const;
 
       expect(length["in"](conversionCandidate)).toEqual(expected);
@@ -5723,11 +5723,11 @@ describe("length", () => {
       const kilometersConversion = linearConversion(1000);
 
       const [toBase, fromBase] = [
+        inchesConversion[1],
         kilometersConversion[0],
-        inchesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "in"] as const;
+      const expected = [fromBase(toBase(v)), "in"] as const;
       const conversionCandidate = [v, "kM"] as const;
 
       expect(length["in"](conversionCandidate)).toEqual(expected);
@@ -5739,11 +5739,11 @@ describe("length", () => {
       const hectometersConversion = linearConversion(100);
 
       const [toBase, fromBase] = [
+        inchesConversion[1],
         hectometersConversion[0],
-        inchesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "in"] as const;
+      const expected = [fromBase(toBase(v)), "in"] as const;
       const conversionCandidate = [v, "hm"] as const;
 
       expect(length["in"](conversionCandidate)).toEqual(expected);
@@ -5755,11 +5755,11 @@ describe("length", () => {
       const decametersConversion = linearConversion(10);
 
       const [toBase, fromBase] = [
+        inchesConversion[1],
         decametersConversion[0],
-        inchesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "in"] as const;
+      const expected = [fromBase(toBase(v)), "in"] as const;
       const conversionCandidate = [v, "dam"] as const;
 
       expect(length["in"](conversionCandidate)).toEqual(expected);
@@ -5771,11 +5771,11 @@ describe("length", () => {
       const metersConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
+        inchesConversion[1],
         metersConversion[0],
-        inchesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "in"] as const;
+      const expected = [fromBase(toBase(v)), "in"] as const;
       const conversionCandidate = [v, "m"] as const;
 
       expect(length["in"](conversionCandidate)).toEqual(expected);
@@ -5787,11 +5787,11 @@ describe("length", () => {
       const decimetersConversion = linearConversion(0.1);
 
       const [toBase, fromBase] = [
+        inchesConversion[1],
         decimetersConversion[0],
-        inchesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "in"] as const;
+      const expected = [fromBase(toBase(v)), "in"] as const;
       const conversionCandidate = [v, "dm"] as const;
 
       expect(length["in"](conversionCandidate)).toEqual(expected);
@@ -5803,11 +5803,11 @@ describe("length", () => {
       const centimetersConversion = linearConversion(0.01);
 
       const [toBase, fromBase] = [
+        inchesConversion[1],
         centimetersConversion[0],
-        inchesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "in"] as const;
+      const expected = [fromBase(toBase(v)), "in"] as const;
       const conversionCandidate = [v, "cm"] as const;
 
       expect(length["in"](conversionCandidate)).toEqual(expected);
@@ -5819,11 +5819,11 @@ describe("length", () => {
       const millimetersConversion = linearConversion(0.001);
 
       const [toBase, fromBase] = [
+        inchesConversion[1],
         millimetersConversion[0],
-        inchesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "in"] as const;
+      const expected = [fromBase(toBase(v)), "in"] as const;
       const conversionCandidate = [v, "mm"] as const;
 
       expect(length["in"](conversionCandidate)).toEqual(expected);
@@ -5835,11 +5835,11 @@ describe("length", () => {
       const micrometersConversion = linearConversion(0.000001);
 
       const [toBase, fromBase] = [
+        inchesConversion[1],
         micrometersConversion[0],
-        inchesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "in"] as const;
+      const expected = [fromBase(toBase(v)), "in"] as const;
       const conversionCandidate = [v, "µm"] as const;
 
       expect(length["in"](conversionCandidate)).toEqual(expected);
@@ -5851,11 +5851,11 @@ describe("length", () => {
       const nanometersConversion = linearConversion(1e-9);
 
       const [toBase, fromBase] = [
+        inchesConversion[1],
         nanometersConversion[0],
-        inchesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "in"] as const;
+      const expected = [fromBase(toBase(v)), "in"] as const;
       const conversionCandidate = [v, "nm"] as const;
 
       expect(length["in"](conversionCandidate)).toEqual(expected);
@@ -5867,11 +5867,11 @@ describe("length", () => {
       const picometersConversion = linearConversion(1e-12);
 
       const [toBase, fromBase] = [
+        inchesConversion[1],
         picometersConversion[0],
-        inchesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "in"] as const;
+      const expected = [fromBase(toBase(v)), "in"] as const;
       const conversionCandidate = [v, "pm"] as const;
 
       expect(length["in"](conversionCandidate)).toEqual(expected);
@@ -5883,11 +5883,11 @@ describe("length", () => {
       const twipsConversion = linearConversion(0.00001763888888888889);
 
       const [toBase, fromBase] = [
+        inchesConversion[1],
         twipsConversion[0],
-        inchesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "in"] as const;
+      const expected = [fromBase(toBase(v)), "in"] as const;
       const conversionCandidate = [v, "tw"] as const;
 
       expect(length["in"](conversionCandidate)).toEqual(expected);
@@ -5899,11 +5899,11 @@ describe("length", () => {
       const pointsConversion = linearConversion(0.0003527777777777778);
 
       const [toBase, fromBase] = [
+        inchesConversion[1],
         pointsConversion[0],
-        inchesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "in"] as const;
+      const expected = [fromBase(toBase(v)), "in"] as const;
       const conversionCandidate = [v, "pt"] as const;
 
       expect(length["in"](conversionCandidate)).toEqual(expected);
@@ -5915,11 +5915,11 @@ describe("length", () => {
       const picasConversion = linearConversion(0.004233333333333334);
 
       const [toBase, fromBase] = [
+        inchesConversion[1],
         picasConversion[0],
-        inchesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "in"] as const;
+      const expected = [fromBase(toBase(v)), "in"] as const;
       const conversionCandidate = [v, "P"] as const;
 
       expect(length["in"](conversionCandidate)).toEqual(expected);
@@ -5933,11 +5933,11 @@ describe("length", () => {
       const feetConversion = linearConversion(0.3048);
 
       const [toBase, fromBase] = [
+        inchesConversion[1],
         feetConversion[0],
-        inchesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "in"] as const;
+      const expected = [fromBase(toBase(v)), "in"] as const;
       const conversionCandidate = [v, "ft"] as const;
 
       expect(length["in"](conversionCandidate)).toEqual(expected);
@@ -5949,11 +5949,11 @@ describe("length", () => {
       const yardsConversion = linearConversion(0.9144);
 
       const [toBase, fromBase] = [
+        inchesConversion[1],
         yardsConversion[0],
-        inchesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "in"] as const;
+      const expected = [fromBase(toBase(v)), "in"] as const;
       const conversionCandidate = [v, "yd"] as const;
 
       expect(length["in"](conversionCandidate)).toEqual(expected);
@@ -5965,11 +5965,11 @@ describe("length", () => {
       const milesConversion = linearConversion(1609.34);
 
       const [toBase, fromBase] = [
+        inchesConversion[1],
         milesConversion[0],
-        inchesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "in"] as const;
+      const expected = [fromBase(toBase(v)), "in"] as const;
       const conversionCandidate = [v, "mi"] as const;
 
       expect(length["in"](conversionCandidate)).toEqual(expected);
@@ -5981,11 +5981,11 @@ describe("length", () => {
       const scandinavianMilesConversion = linearConversion(10000);
 
       const [toBase, fromBase] = [
+        inchesConversion[1],
         scandinavianMilesConversion[0],
-        inchesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "in"] as const;
+      const expected = [fromBase(toBase(v)), "in"] as const;
       const conversionCandidate = [v, "smi"] as const;
 
       expect(length["in"](conversionCandidate)).toEqual(expected);
@@ -5997,11 +5997,11 @@ describe("length", () => {
       const lightyearsConversion = linearConversion(9461000000000000);
 
       const [toBase, fromBase] = [
+        inchesConversion[1],
         lightyearsConversion[0],
-        inchesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "in"] as const;
+      const expected = [fromBase(toBase(v)), "in"] as const;
       const conversionCandidate = [v, "ly"] as const;
 
       expect(length["in"](conversionCandidate)).toEqual(expected);
@@ -6013,11 +6013,11 @@ describe("length", () => {
       const nauticalMilesConversion = linearConversion(1852);
 
       const [toBase, fromBase] = [
+        inchesConversion[1],
         nauticalMilesConversion[0],
-        inchesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "in"] as const;
+      const expected = [fromBase(toBase(v)), "in"] as const;
       const conversionCandidate = [v, "NM"] as const;
 
       expect(length["in"](conversionCandidate)).toEqual(expected);
@@ -6029,11 +6029,11 @@ describe("length", () => {
       const fathomsConversion = linearConversion(1.8288);
 
       const [toBase, fromBase] = [
+        inchesConversion[1],
         fathomsConversion[0],
-        inchesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "in"] as const;
+      const expected = [fromBase(toBase(v)), "in"] as const;
       const conversionCandidate = [v, "ftm"] as const;
 
       expect(length["in"](conversionCandidate)).toEqual(expected);
@@ -6045,11 +6045,11 @@ describe("length", () => {
       const furlongsConversion = linearConversion(201.168);
 
       const [toBase, fromBase] = [
+        inchesConversion[1],
         furlongsConversion[0],
-        inchesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "in"] as const;
+      const expected = [fromBase(toBase(v)), "in"] as const;
       const conversionCandidate = [v, "fur"] as const;
 
       expect(length["in"](conversionCandidate)).toEqual(expected);
@@ -6061,11 +6061,11 @@ describe("length", () => {
       const astronomicalUnitsConversion = linearConversion(149600000000);
 
       const [toBase, fromBase] = [
+        inchesConversion[1],
         astronomicalUnitsConversion[0],
-        inchesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "in"] as const;
+      const expected = [fromBase(toBase(v)), "in"] as const;
       const conversionCandidate = [v, "ua"] as const;
 
       expect(length["in"](conversionCandidate)).toEqual(expected);
@@ -6077,11 +6077,11 @@ describe("length", () => {
       const parsecsConversion = linearConversion(30860000000000000);
 
       const [toBase, fromBase] = [
+        inchesConversion[1],
         parsecsConversion[0],
-        inchesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "in"] as const;
+      const expected = [fromBase(toBase(v)), "in"] as const;
       const conversionCandidate = [v, "pc"] as const;
 
       expect(length["in"](conversionCandidate)).toEqual(expected);
@@ -6101,11 +6101,11 @@ describe("length", () => {
       const megametersConversion = linearConversion(1000000);
 
       const [toBase, fromBase] = [
+        feetConversion[1],
         megametersConversion[0],
-        feetConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ft"] as const;
+      const expected = [fromBase(toBase(v)), "ft"] as const;
       const conversionCandidate = [v, "Mm"] as const;
 
       expect(length["ft"](conversionCandidate)).toEqual(expected);
@@ -6117,11 +6117,11 @@ describe("length", () => {
       const kilometersConversion = linearConversion(1000);
 
       const [toBase, fromBase] = [
+        feetConversion[1],
         kilometersConversion[0],
-        feetConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ft"] as const;
+      const expected = [fromBase(toBase(v)), "ft"] as const;
       const conversionCandidate = [v, "kM"] as const;
 
       expect(length["ft"](conversionCandidate)).toEqual(expected);
@@ -6133,11 +6133,11 @@ describe("length", () => {
       const hectometersConversion = linearConversion(100);
 
       const [toBase, fromBase] = [
+        feetConversion[1],
         hectometersConversion[0],
-        feetConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ft"] as const;
+      const expected = [fromBase(toBase(v)), "ft"] as const;
       const conversionCandidate = [v, "hm"] as const;
 
       expect(length["ft"](conversionCandidate)).toEqual(expected);
@@ -6149,11 +6149,11 @@ describe("length", () => {
       const decametersConversion = linearConversion(10);
 
       const [toBase, fromBase] = [
+        feetConversion[1],
         decametersConversion[0],
-        feetConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ft"] as const;
+      const expected = [fromBase(toBase(v)), "ft"] as const;
       const conversionCandidate = [v, "dam"] as const;
 
       expect(length["ft"](conversionCandidate)).toEqual(expected);
@@ -6165,11 +6165,11 @@ describe("length", () => {
       const metersConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
+        feetConversion[1],
         metersConversion[0],
-        feetConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ft"] as const;
+      const expected = [fromBase(toBase(v)), "ft"] as const;
       const conversionCandidate = [v, "m"] as const;
 
       expect(length["ft"](conversionCandidate)).toEqual(expected);
@@ -6181,11 +6181,11 @@ describe("length", () => {
       const decimetersConversion = linearConversion(0.1);
 
       const [toBase, fromBase] = [
+        feetConversion[1],
         decimetersConversion[0],
-        feetConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ft"] as const;
+      const expected = [fromBase(toBase(v)), "ft"] as const;
       const conversionCandidate = [v, "dm"] as const;
 
       expect(length["ft"](conversionCandidate)).toEqual(expected);
@@ -6197,11 +6197,11 @@ describe("length", () => {
       const centimetersConversion = linearConversion(0.01);
 
       const [toBase, fromBase] = [
+        feetConversion[1],
         centimetersConversion[0],
-        feetConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ft"] as const;
+      const expected = [fromBase(toBase(v)), "ft"] as const;
       const conversionCandidate = [v, "cm"] as const;
 
       expect(length["ft"](conversionCandidate)).toEqual(expected);
@@ -6213,11 +6213,11 @@ describe("length", () => {
       const millimetersConversion = linearConversion(0.001);
 
       const [toBase, fromBase] = [
+        feetConversion[1],
         millimetersConversion[0],
-        feetConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ft"] as const;
+      const expected = [fromBase(toBase(v)), "ft"] as const;
       const conversionCandidate = [v, "mm"] as const;
 
       expect(length["ft"](conversionCandidate)).toEqual(expected);
@@ -6229,11 +6229,11 @@ describe("length", () => {
       const micrometersConversion = linearConversion(0.000001);
 
       const [toBase, fromBase] = [
+        feetConversion[1],
         micrometersConversion[0],
-        feetConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ft"] as const;
+      const expected = [fromBase(toBase(v)), "ft"] as const;
       const conversionCandidate = [v, "µm"] as const;
 
       expect(length["ft"](conversionCandidate)).toEqual(expected);
@@ -6245,11 +6245,11 @@ describe("length", () => {
       const nanometersConversion = linearConversion(1e-9);
 
       const [toBase, fromBase] = [
+        feetConversion[1],
         nanometersConversion[0],
-        feetConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ft"] as const;
+      const expected = [fromBase(toBase(v)), "ft"] as const;
       const conversionCandidate = [v, "nm"] as const;
 
       expect(length["ft"](conversionCandidate)).toEqual(expected);
@@ -6261,11 +6261,11 @@ describe("length", () => {
       const picometersConversion = linearConversion(1e-12);
 
       const [toBase, fromBase] = [
+        feetConversion[1],
         picometersConversion[0],
-        feetConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ft"] as const;
+      const expected = [fromBase(toBase(v)), "ft"] as const;
       const conversionCandidate = [v, "pm"] as const;
 
       expect(length["ft"](conversionCandidate)).toEqual(expected);
@@ -6277,11 +6277,11 @@ describe("length", () => {
       const twipsConversion = linearConversion(0.00001763888888888889);
 
       const [toBase, fromBase] = [
+        feetConversion[1],
         twipsConversion[0],
-        feetConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ft"] as const;
+      const expected = [fromBase(toBase(v)), "ft"] as const;
       const conversionCandidate = [v, "tw"] as const;
 
       expect(length["ft"](conversionCandidate)).toEqual(expected);
@@ -6293,11 +6293,11 @@ describe("length", () => {
       const pointsConversion = linearConversion(0.0003527777777777778);
 
       const [toBase, fromBase] = [
+        feetConversion[1],
         pointsConversion[0],
-        feetConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ft"] as const;
+      const expected = [fromBase(toBase(v)), "ft"] as const;
       const conversionCandidate = [v, "pt"] as const;
 
       expect(length["ft"](conversionCandidate)).toEqual(expected);
@@ -6309,11 +6309,11 @@ describe("length", () => {
       const picasConversion = linearConversion(0.004233333333333334);
 
       const [toBase, fromBase] = [
+        feetConversion[1],
         picasConversion[0],
-        feetConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ft"] as const;
+      const expected = [fromBase(toBase(v)), "ft"] as const;
       const conversionCandidate = [v, "P"] as const;
 
       expect(length["ft"](conversionCandidate)).toEqual(expected);
@@ -6325,11 +6325,11 @@ describe("length", () => {
       const inchesConversion = linearConversion(0.0254);
 
       const [toBase, fromBase] = [
+        feetConversion[1],
         inchesConversion[0],
-        feetConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ft"] as const;
+      const expected = [fromBase(toBase(v)), "ft"] as const;
       const conversionCandidate = [v, "in"] as const;
 
       expect(length["ft"](conversionCandidate)).toEqual(expected);
@@ -6343,11 +6343,11 @@ describe("length", () => {
       const yardsConversion = linearConversion(0.9144);
 
       const [toBase, fromBase] = [
+        feetConversion[1],
         yardsConversion[0],
-        feetConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ft"] as const;
+      const expected = [fromBase(toBase(v)), "ft"] as const;
       const conversionCandidate = [v, "yd"] as const;
 
       expect(length["ft"](conversionCandidate)).toEqual(expected);
@@ -6359,11 +6359,11 @@ describe("length", () => {
       const milesConversion = linearConversion(1609.34);
 
       const [toBase, fromBase] = [
+        feetConversion[1],
         milesConversion[0],
-        feetConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ft"] as const;
+      const expected = [fromBase(toBase(v)), "ft"] as const;
       const conversionCandidate = [v, "mi"] as const;
 
       expect(length["ft"](conversionCandidate)).toEqual(expected);
@@ -6375,11 +6375,11 @@ describe("length", () => {
       const scandinavianMilesConversion = linearConversion(10000);
 
       const [toBase, fromBase] = [
+        feetConversion[1],
         scandinavianMilesConversion[0],
-        feetConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ft"] as const;
+      const expected = [fromBase(toBase(v)), "ft"] as const;
       const conversionCandidate = [v, "smi"] as const;
 
       expect(length["ft"](conversionCandidate)).toEqual(expected);
@@ -6391,11 +6391,11 @@ describe("length", () => {
       const lightyearsConversion = linearConversion(9461000000000000);
 
       const [toBase, fromBase] = [
+        feetConversion[1],
         lightyearsConversion[0],
-        feetConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ft"] as const;
+      const expected = [fromBase(toBase(v)), "ft"] as const;
       const conversionCandidate = [v, "ly"] as const;
 
       expect(length["ft"](conversionCandidate)).toEqual(expected);
@@ -6407,11 +6407,11 @@ describe("length", () => {
       const nauticalMilesConversion = linearConversion(1852);
 
       const [toBase, fromBase] = [
+        feetConversion[1],
         nauticalMilesConversion[0],
-        feetConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ft"] as const;
+      const expected = [fromBase(toBase(v)), "ft"] as const;
       const conversionCandidate = [v, "NM"] as const;
 
       expect(length["ft"](conversionCandidate)).toEqual(expected);
@@ -6423,11 +6423,11 @@ describe("length", () => {
       const fathomsConversion = linearConversion(1.8288);
 
       const [toBase, fromBase] = [
+        feetConversion[1],
         fathomsConversion[0],
-        feetConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ft"] as const;
+      const expected = [fromBase(toBase(v)), "ft"] as const;
       const conversionCandidate = [v, "ftm"] as const;
 
       expect(length["ft"](conversionCandidate)).toEqual(expected);
@@ -6439,11 +6439,11 @@ describe("length", () => {
       const furlongsConversion = linearConversion(201.168);
 
       const [toBase, fromBase] = [
+        feetConversion[1],
         furlongsConversion[0],
-        feetConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ft"] as const;
+      const expected = [fromBase(toBase(v)), "ft"] as const;
       const conversionCandidate = [v, "fur"] as const;
 
       expect(length["ft"](conversionCandidate)).toEqual(expected);
@@ -6455,11 +6455,11 @@ describe("length", () => {
       const astronomicalUnitsConversion = linearConversion(149600000000);
 
       const [toBase, fromBase] = [
+        feetConversion[1],
         astronomicalUnitsConversion[0],
-        feetConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ft"] as const;
+      const expected = [fromBase(toBase(v)), "ft"] as const;
       const conversionCandidate = [v, "ua"] as const;
 
       expect(length["ft"](conversionCandidate)).toEqual(expected);
@@ -6471,11 +6471,11 @@ describe("length", () => {
       const parsecsConversion = linearConversion(30860000000000000);
 
       const [toBase, fromBase] = [
+        feetConversion[1],
         parsecsConversion[0],
-        feetConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ft"] as const;
+      const expected = [fromBase(toBase(v)), "ft"] as const;
       const conversionCandidate = [v, "pc"] as const;
 
       expect(length["ft"](conversionCandidate)).toEqual(expected);
@@ -6495,11 +6495,11 @@ describe("length", () => {
       const megametersConversion = linearConversion(1000000);
 
       const [toBase, fromBase] = [
+        yardsConversion[1],
         megametersConversion[0],
-        yardsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "yd"] as const;
+      const expected = [fromBase(toBase(v)), "yd"] as const;
       const conversionCandidate = [v, "Mm"] as const;
 
       expect(length["yd"](conversionCandidate)).toEqual(expected);
@@ -6511,11 +6511,11 @@ describe("length", () => {
       const kilometersConversion = linearConversion(1000);
 
       const [toBase, fromBase] = [
+        yardsConversion[1],
         kilometersConversion[0],
-        yardsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "yd"] as const;
+      const expected = [fromBase(toBase(v)), "yd"] as const;
       const conversionCandidate = [v, "kM"] as const;
 
       expect(length["yd"](conversionCandidate)).toEqual(expected);
@@ -6527,11 +6527,11 @@ describe("length", () => {
       const hectometersConversion = linearConversion(100);
 
       const [toBase, fromBase] = [
+        yardsConversion[1],
         hectometersConversion[0],
-        yardsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "yd"] as const;
+      const expected = [fromBase(toBase(v)), "yd"] as const;
       const conversionCandidate = [v, "hm"] as const;
 
       expect(length["yd"](conversionCandidate)).toEqual(expected);
@@ -6543,11 +6543,11 @@ describe("length", () => {
       const decametersConversion = linearConversion(10);
 
       const [toBase, fromBase] = [
+        yardsConversion[1],
         decametersConversion[0],
-        yardsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "yd"] as const;
+      const expected = [fromBase(toBase(v)), "yd"] as const;
       const conversionCandidate = [v, "dam"] as const;
 
       expect(length["yd"](conversionCandidate)).toEqual(expected);
@@ -6559,11 +6559,11 @@ describe("length", () => {
       const metersConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
+        yardsConversion[1],
         metersConversion[0],
-        yardsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "yd"] as const;
+      const expected = [fromBase(toBase(v)), "yd"] as const;
       const conversionCandidate = [v, "m"] as const;
 
       expect(length["yd"](conversionCandidate)).toEqual(expected);
@@ -6575,11 +6575,11 @@ describe("length", () => {
       const decimetersConversion = linearConversion(0.1);
 
       const [toBase, fromBase] = [
+        yardsConversion[1],
         decimetersConversion[0],
-        yardsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "yd"] as const;
+      const expected = [fromBase(toBase(v)), "yd"] as const;
       const conversionCandidate = [v, "dm"] as const;
 
       expect(length["yd"](conversionCandidate)).toEqual(expected);
@@ -6591,11 +6591,11 @@ describe("length", () => {
       const centimetersConversion = linearConversion(0.01);
 
       const [toBase, fromBase] = [
+        yardsConversion[1],
         centimetersConversion[0],
-        yardsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "yd"] as const;
+      const expected = [fromBase(toBase(v)), "yd"] as const;
       const conversionCandidate = [v, "cm"] as const;
 
       expect(length["yd"](conversionCandidate)).toEqual(expected);
@@ -6607,11 +6607,11 @@ describe("length", () => {
       const millimetersConversion = linearConversion(0.001);
 
       const [toBase, fromBase] = [
+        yardsConversion[1],
         millimetersConversion[0],
-        yardsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "yd"] as const;
+      const expected = [fromBase(toBase(v)), "yd"] as const;
       const conversionCandidate = [v, "mm"] as const;
 
       expect(length["yd"](conversionCandidate)).toEqual(expected);
@@ -6623,11 +6623,11 @@ describe("length", () => {
       const micrometersConversion = linearConversion(0.000001);
 
       const [toBase, fromBase] = [
+        yardsConversion[1],
         micrometersConversion[0],
-        yardsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "yd"] as const;
+      const expected = [fromBase(toBase(v)), "yd"] as const;
       const conversionCandidate = [v, "µm"] as const;
 
       expect(length["yd"](conversionCandidate)).toEqual(expected);
@@ -6639,11 +6639,11 @@ describe("length", () => {
       const nanometersConversion = linearConversion(1e-9);
 
       const [toBase, fromBase] = [
+        yardsConversion[1],
         nanometersConversion[0],
-        yardsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "yd"] as const;
+      const expected = [fromBase(toBase(v)), "yd"] as const;
       const conversionCandidate = [v, "nm"] as const;
 
       expect(length["yd"](conversionCandidate)).toEqual(expected);
@@ -6655,11 +6655,11 @@ describe("length", () => {
       const picometersConversion = linearConversion(1e-12);
 
       const [toBase, fromBase] = [
+        yardsConversion[1],
         picometersConversion[0],
-        yardsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "yd"] as const;
+      const expected = [fromBase(toBase(v)), "yd"] as const;
       const conversionCandidate = [v, "pm"] as const;
 
       expect(length["yd"](conversionCandidate)).toEqual(expected);
@@ -6671,11 +6671,11 @@ describe("length", () => {
       const twipsConversion = linearConversion(0.00001763888888888889);
 
       const [toBase, fromBase] = [
+        yardsConversion[1],
         twipsConversion[0],
-        yardsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "yd"] as const;
+      const expected = [fromBase(toBase(v)), "yd"] as const;
       const conversionCandidate = [v, "tw"] as const;
 
       expect(length["yd"](conversionCandidate)).toEqual(expected);
@@ -6687,11 +6687,11 @@ describe("length", () => {
       const pointsConversion = linearConversion(0.0003527777777777778);
 
       const [toBase, fromBase] = [
+        yardsConversion[1],
         pointsConversion[0],
-        yardsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "yd"] as const;
+      const expected = [fromBase(toBase(v)), "yd"] as const;
       const conversionCandidate = [v, "pt"] as const;
 
       expect(length["yd"](conversionCandidate)).toEqual(expected);
@@ -6703,11 +6703,11 @@ describe("length", () => {
       const picasConversion = linearConversion(0.004233333333333334);
 
       const [toBase, fromBase] = [
+        yardsConversion[1],
         picasConversion[0],
-        yardsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "yd"] as const;
+      const expected = [fromBase(toBase(v)), "yd"] as const;
       const conversionCandidate = [v, "P"] as const;
 
       expect(length["yd"](conversionCandidate)).toEqual(expected);
@@ -6719,11 +6719,11 @@ describe("length", () => {
       const inchesConversion = linearConversion(0.0254);
 
       const [toBase, fromBase] = [
+        yardsConversion[1],
         inchesConversion[0],
-        yardsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "yd"] as const;
+      const expected = [fromBase(toBase(v)), "yd"] as const;
       const conversionCandidate = [v, "in"] as const;
 
       expect(length["yd"](conversionCandidate)).toEqual(expected);
@@ -6735,11 +6735,11 @@ describe("length", () => {
       const feetConversion = linearConversion(0.3048);
 
       const [toBase, fromBase] = [
+        yardsConversion[1],
         feetConversion[0],
-        yardsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "yd"] as const;
+      const expected = [fromBase(toBase(v)), "yd"] as const;
       const conversionCandidate = [v, "ft"] as const;
 
       expect(length["yd"](conversionCandidate)).toEqual(expected);
@@ -6753,11 +6753,11 @@ describe("length", () => {
       const milesConversion = linearConversion(1609.34);
 
       const [toBase, fromBase] = [
+        yardsConversion[1],
         milesConversion[0],
-        yardsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "yd"] as const;
+      const expected = [fromBase(toBase(v)), "yd"] as const;
       const conversionCandidate = [v, "mi"] as const;
 
       expect(length["yd"](conversionCandidate)).toEqual(expected);
@@ -6769,11 +6769,11 @@ describe("length", () => {
       const scandinavianMilesConversion = linearConversion(10000);
 
       const [toBase, fromBase] = [
+        yardsConversion[1],
         scandinavianMilesConversion[0],
-        yardsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "yd"] as const;
+      const expected = [fromBase(toBase(v)), "yd"] as const;
       const conversionCandidate = [v, "smi"] as const;
 
       expect(length["yd"](conversionCandidate)).toEqual(expected);
@@ -6785,11 +6785,11 @@ describe("length", () => {
       const lightyearsConversion = linearConversion(9461000000000000);
 
       const [toBase, fromBase] = [
+        yardsConversion[1],
         lightyearsConversion[0],
-        yardsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "yd"] as const;
+      const expected = [fromBase(toBase(v)), "yd"] as const;
       const conversionCandidate = [v, "ly"] as const;
 
       expect(length["yd"](conversionCandidate)).toEqual(expected);
@@ -6801,11 +6801,11 @@ describe("length", () => {
       const nauticalMilesConversion = linearConversion(1852);
 
       const [toBase, fromBase] = [
+        yardsConversion[1],
         nauticalMilesConversion[0],
-        yardsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "yd"] as const;
+      const expected = [fromBase(toBase(v)), "yd"] as const;
       const conversionCandidate = [v, "NM"] as const;
 
       expect(length["yd"](conversionCandidate)).toEqual(expected);
@@ -6817,11 +6817,11 @@ describe("length", () => {
       const fathomsConversion = linearConversion(1.8288);
 
       const [toBase, fromBase] = [
+        yardsConversion[1],
         fathomsConversion[0],
-        yardsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "yd"] as const;
+      const expected = [fromBase(toBase(v)), "yd"] as const;
       const conversionCandidate = [v, "ftm"] as const;
 
       expect(length["yd"](conversionCandidate)).toEqual(expected);
@@ -6833,11 +6833,11 @@ describe("length", () => {
       const furlongsConversion = linearConversion(201.168);
 
       const [toBase, fromBase] = [
+        yardsConversion[1],
         furlongsConversion[0],
-        yardsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "yd"] as const;
+      const expected = [fromBase(toBase(v)), "yd"] as const;
       const conversionCandidate = [v, "fur"] as const;
 
       expect(length["yd"](conversionCandidate)).toEqual(expected);
@@ -6849,11 +6849,11 @@ describe("length", () => {
       const astronomicalUnitsConversion = linearConversion(149600000000);
 
       const [toBase, fromBase] = [
+        yardsConversion[1],
         astronomicalUnitsConversion[0],
-        yardsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "yd"] as const;
+      const expected = [fromBase(toBase(v)), "yd"] as const;
       const conversionCandidate = [v, "ua"] as const;
 
       expect(length["yd"](conversionCandidate)).toEqual(expected);
@@ -6865,11 +6865,11 @@ describe("length", () => {
       const parsecsConversion = linearConversion(30860000000000000);
 
       const [toBase, fromBase] = [
+        yardsConversion[1],
         parsecsConversion[0],
-        yardsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "yd"] as const;
+      const expected = [fromBase(toBase(v)), "yd"] as const;
       const conversionCandidate = [v, "pc"] as const;
 
       expect(length["yd"](conversionCandidate)).toEqual(expected);
@@ -6889,11 +6889,11 @@ describe("length", () => {
       const megametersConversion = linearConversion(1000000);
 
       const [toBase, fromBase] = [
+        milesConversion[1],
         megametersConversion[0],
-        milesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "mi"] as const;
+      const expected = [fromBase(toBase(v)), "mi"] as const;
       const conversionCandidate = [v, "Mm"] as const;
 
       expect(length["mi"](conversionCandidate)).toEqual(expected);
@@ -6905,11 +6905,11 @@ describe("length", () => {
       const kilometersConversion = linearConversion(1000);
 
       const [toBase, fromBase] = [
+        milesConversion[1],
         kilometersConversion[0],
-        milesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "mi"] as const;
+      const expected = [fromBase(toBase(v)), "mi"] as const;
       const conversionCandidate = [v, "kM"] as const;
 
       expect(length["mi"](conversionCandidate)).toEqual(expected);
@@ -6921,11 +6921,11 @@ describe("length", () => {
       const hectometersConversion = linearConversion(100);
 
       const [toBase, fromBase] = [
+        milesConversion[1],
         hectometersConversion[0],
-        milesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "mi"] as const;
+      const expected = [fromBase(toBase(v)), "mi"] as const;
       const conversionCandidate = [v, "hm"] as const;
 
       expect(length["mi"](conversionCandidate)).toEqual(expected);
@@ -6937,11 +6937,11 @@ describe("length", () => {
       const decametersConversion = linearConversion(10);
 
       const [toBase, fromBase] = [
+        milesConversion[1],
         decametersConversion[0],
-        milesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "mi"] as const;
+      const expected = [fromBase(toBase(v)), "mi"] as const;
       const conversionCandidate = [v, "dam"] as const;
 
       expect(length["mi"](conversionCandidate)).toEqual(expected);
@@ -6953,11 +6953,11 @@ describe("length", () => {
       const metersConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
+        milesConversion[1],
         metersConversion[0],
-        milesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "mi"] as const;
+      const expected = [fromBase(toBase(v)), "mi"] as const;
       const conversionCandidate = [v, "m"] as const;
 
       expect(length["mi"](conversionCandidate)).toEqual(expected);
@@ -6969,11 +6969,11 @@ describe("length", () => {
       const decimetersConversion = linearConversion(0.1);
 
       const [toBase, fromBase] = [
+        milesConversion[1],
         decimetersConversion[0],
-        milesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "mi"] as const;
+      const expected = [fromBase(toBase(v)), "mi"] as const;
       const conversionCandidate = [v, "dm"] as const;
 
       expect(length["mi"](conversionCandidate)).toEqual(expected);
@@ -6985,11 +6985,11 @@ describe("length", () => {
       const centimetersConversion = linearConversion(0.01);
 
       const [toBase, fromBase] = [
+        milesConversion[1],
         centimetersConversion[0],
-        milesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "mi"] as const;
+      const expected = [fromBase(toBase(v)), "mi"] as const;
       const conversionCandidate = [v, "cm"] as const;
 
       expect(length["mi"](conversionCandidate)).toEqual(expected);
@@ -7001,11 +7001,11 @@ describe("length", () => {
       const millimetersConversion = linearConversion(0.001);
 
       const [toBase, fromBase] = [
+        milesConversion[1],
         millimetersConversion[0],
-        milesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "mi"] as const;
+      const expected = [fromBase(toBase(v)), "mi"] as const;
       const conversionCandidate = [v, "mm"] as const;
 
       expect(length["mi"](conversionCandidate)).toEqual(expected);
@@ -7017,11 +7017,11 @@ describe("length", () => {
       const micrometersConversion = linearConversion(0.000001);
 
       const [toBase, fromBase] = [
+        milesConversion[1],
         micrometersConversion[0],
-        milesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "mi"] as const;
+      const expected = [fromBase(toBase(v)), "mi"] as const;
       const conversionCandidate = [v, "µm"] as const;
 
       expect(length["mi"](conversionCandidate)).toEqual(expected);
@@ -7033,11 +7033,11 @@ describe("length", () => {
       const nanometersConversion = linearConversion(1e-9);
 
       const [toBase, fromBase] = [
+        milesConversion[1],
         nanometersConversion[0],
-        milesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "mi"] as const;
+      const expected = [fromBase(toBase(v)), "mi"] as const;
       const conversionCandidate = [v, "nm"] as const;
 
       expect(length["mi"](conversionCandidate)).toEqual(expected);
@@ -7049,11 +7049,11 @@ describe("length", () => {
       const picometersConversion = linearConversion(1e-12);
 
       const [toBase, fromBase] = [
+        milesConversion[1],
         picometersConversion[0],
-        milesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "mi"] as const;
+      const expected = [fromBase(toBase(v)), "mi"] as const;
       const conversionCandidate = [v, "pm"] as const;
 
       expect(length["mi"](conversionCandidate)).toEqual(expected);
@@ -7065,11 +7065,11 @@ describe("length", () => {
       const twipsConversion = linearConversion(0.00001763888888888889);
 
       const [toBase, fromBase] = [
+        milesConversion[1],
         twipsConversion[0],
-        milesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "mi"] as const;
+      const expected = [fromBase(toBase(v)), "mi"] as const;
       const conversionCandidate = [v, "tw"] as const;
 
       expect(length["mi"](conversionCandidate)).toEqual(expected);
@@ -7081,11 +7081,11 @@ describe("length", () => {
       const pointsConversion = linearConversion(0.0003527777777777778);
 
       const [toBase, fromBase] = [
+        milesConversion[1],
         pointsConversion[0],
-        milesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "mi"] as const;
+      const expected = [fromBase(toBase(v)), "mi"] as const;
       const conversionCandidate = [v, "pt"] as const;
 
       expect(length["mi"](conversionCandidate)).toEqual(expected);
@@ -7097,11 +7097,11 @@ describe("length", () => {
       const picasConversion = linearConversion(0.004233333333333334);
 
       const [toBase, fromBase] = [
+        milesConversion[1],
         picasConversion[0],
-        milesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "mi"] as const;
+      const expected = [fromBase(toBase(v)), "mi"] as const;
       const conversionCandidate = [v, "P"] as const;
 
       expect(length["mi"](conversionCandidate)).toEqual(expected);
@@ -7113,11 +7113,11 @@ describe("length", () => {
       const inchesConversion = linearConversion(0.0254);
 
       const [toBase, fromBase] = [
+        milesConversion[1],
         inchesConversion[0],
-        milesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "mi"] as const;
+      const expected = [fromBase(toBase(v)), "mi"] as const;
       const conversionCandidate = [v, "in"] as const;
 
       expect(length["mi"](conversionCandidate)).toEqual(expected);
@@ -7129,11 +7129,11 @@ describe("length", () => {
       const feetConversion = linearConversion(0.3048);
 
       const [toBase, fromBase] = [
+        milesConversion[1],
         feetConversion[0],
-        milesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "mi"] as const;
+      const expected = [fromBase(toBase(v)), "mi"] as const;
       const conversionCandidate = [v, "ft"] as const;
 
       expect(length["mi"](conversionCandidate)).toEqual(expected);
@@ -7145,11 +7145,11 @@ describe("length", () => {
       const yardsConversion = linearConversion(0.9144);
 
       const [toBase, fromBase] = [
+        milesConversion[1],
         yardsConversion[0],
-        milesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "mi"] as const;
+      const expected = [fromBase(toBase(v)), "mi"] as const;
       const conversionCandidate = [v, "yd"] as const;
 
       expect(length["mi"](conversionCandidate)).toEqual(expected);
@@ -7163,11 +7163,11 @@ describe("length", () => {
       const scandinavianMilesConversion = linearConversion(10000);
 
       const [toBase, fromBase] = [
+        milesConversion[1],
         scandinavianMilesConversion[0],
-        milesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "mi"] as const;
+      const expected = [fromBase(toBase(v)), "mi"] as const;
       const conversionCandidate = [v, "smi"] as const;
 
       expect(length["mi"](conversionCandidate)).toEqual(expected);
@@ -7179,11 +7179,11 @@ describe("length", () => {
       const lightyearsConversion = linearConversion(9461000000000000);
 
       const [toBase, fromBase] = [
+        milesConversion[1],
         lightyearsConversion[0],
-        milesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "mi"] as const;
+      const expected = [fromBase(toBase(v)), "mi"] as const;
       const conversionCandidate = [v, "ly"] as const;
 
       expect(length["mi"](conversionCandidate)).toEqual(expected);
@@ -7195,11 +7195,11 @@ describe("length", () => {
       const nauticalMilesConversion = linearConversion(1852);
 
       const [toBase, fromBase] = [
+        milesConversion[1],
         nauticalMilesConversion[0],
-        milesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "mi"] as const;
+      const expected = [fromBase(toBase(v)), "mi"] as const;
       const conversionCandidate = [v, "NM"] as const;
 
       expect(length["mi"](conversionCandidate)).toEqual(expected);
@@ -7211,11 +7211,11 @@ describe("length", () => {
       const fathomsConversion = linearConversion(1.8288);
 
       const [toBase, fromBase] = [
+        milesConversion[1],
         fathomsConversion[0],
-        milesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "mi"] as const;
+      const expected = [fromBase(toBase(v)), "mi"] as const;
       const conversionCandidate = [v, "ftm"] as const;
 
       expect(length["mi"](conversionCandidate)).toEqual(expected);
@@ -7227,11 +7227,11 @@ describe("length", () => {
       const furlongsConversion = linearConversion(201.168);
 
       const [toBase, fromBase] = [
+        milesConversion[1],
         furlongsConversion[0],
-        milesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "mi"] as const;
+      const expected = [fromBase(toBase(v)), "mi"] as const;
       const conversionCandidate = [v, "fur"] as const;
 
       expect(length["mi"](conversionCandidate)).toEqual(expected);
@@ -7243,11 +7243,11 @@ describe("length", () => {
       const astronomicalUnitsConversion = linearConversion(149600000000);
 
       const [toBase, fromBase] = [
+        milesConversion[1],
         astronomicalUnitsConversion[0],
-        milesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "mi"] as const;
+      const expected = [fromBase(toBase(v)), "mi"] as const;
       const conversionCandidate = [v, "ua"] as const;
 
       expect(length["mi"](conversionCandidate)).toEqual(expected);
@@ -7259,11 +7259,11 @@ describe("length", () => {
       const parsecsConversion = linearConversion(30860000000000000);
 
       const [toBase, fromBase] = [
+        milesConversion[1],
         parsecsConversion[0],
-        milesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "mi"] as const;
+      const expected = [fromBase(toBase(v)), "mi"] as const;
       const conversionCandidate = [v, "pc"] as const;
 
       expect(length["mi"](conversionCandidate)).toEqual(expected);
@@ -7283,11 +7283,11 @@ describe("length", () => {
       const megametersConversion = linearConversion(1000000);
 
       const [toBase, fromBase] = [
+        scandinavianMilesConversion[1],
         megametersConversion[0],
-        scandinavianMilesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "smi"] as const;
+      const expected = [fromBase(toBase(v)), "smi"] as const;
       const conversionCandidate = [v, "Mm"] as const;
 
       expect(length["smi"](conversionCandidate)).toEqual(expected);
@@ -7299,11 +7299,11 @@ describe("length", () => {
       const kilometersConversion = linearConversion(1000);
 
       const [toBase, fromBase] = [
+        scandinavianMilesConversion[1],
         kilometersConversion[0],
-        scandinavianMilesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "smi"] as const;
+      const expected = [fromBase(toBase(v)), "smi"] as const;
       const conversionCandidate = [v, "kM"] as const;
 
       expect(length["smi"](conversionCandidate)).toEqual(expected);
@@ -7315,11 +7315,11 @@ describe("length", () => {
       const hectometersConversion = linearConversion(100);
 
       const [toBase, fromBase] = [
+        scandinavianMilesConversion[1],
         hectometersConversion[0],
-        scandinavianMilesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "smi"] as const;
+      const expected = [fromBase(toBase(v)), "smi"] as const;
       const conversionCandidate = [v, "hm"] as const;
 
       expect(length["smi"](conversionCandidate)).toEqual(expected);
@@ -7331,11 +7331,11 @@ describe("length", () => {
       const decametersConversion = linearConversion(10);
 
       const [toBase, fromBase] = [
+        scandinavianMilesConversion[1],
         decametersConversion[0],
-        scandinavianMilesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "smi"] as const;
+      const expected = [fromBase(toBase(v)), "smi"] as const;
       const conversionCandidate = [v, "dam"] as const;
 
       expect(length["smi"](conversionCandidate)).toEqual(expected);
@@ -7347,11 +7347,11 @@ describe("length", () => {
       const metersConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
+        scandinavianMilesConversion[1],
         metersConversion[0],
-        scandinavianMilesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "smi"] as const;
+      const expected = [fromBase(toBase(v)), "smi"] as const;
       const conversionCandidate = [v, "m"] as const;
 
       expect(length["smi"](conversionCandidate)).toEqual(expected);
@@ -7363,11 +7363,11 @@ describe("length", () => {
       const decimetersConversion = linearConversion(0.1);
 
       const [toBase, fromBase] = [
+        scandinavianMilesConversion[1],
         decimetersConversion[0],
-        scandinavianMilesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "smi"] as const;
+      const expected = [fromBase(toBase(v)), "smi"] as const;
       const conversionCandidate = [v, "dm"] as const;
 
       expect(length["smi"](conversionCandidate)).toEqual(expected);
@@ -7379,11 +7379,11 @@ describe("length", () => {
       const centimetersConversion = linearConversion(0.01);
 
       const [toBase, fromBase] = [
+        scandinavianMilesConversion[1],
         centimetersConversion[0],
-        scandinavianMilesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "smi"] as const;
+      const expected = [fromBase(toBase(v)), "smi"] as const;
       const conversionCandidate = [v, "cm"] as const;
 
       expect(length["smi"](conversionCandidate)).toEqual(expected);
@@ -7395,11 +7395,11 @@ describe("length", () => {
       const millimetersConversion = linearConversion(0.001);
 
       const [toBase, fromBase] = [
+        scandinavianMilesConversion[1],
         millimetersConversion[0],
-        scandinavianMilesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "smi"] as const;
+      const expected = [fromBase(toBase(v)), "smi"] as const;
       const conversionCandidate = [v, "mm"] as const;
 
       expect(length["smi"](conversionCandidate)).toEqual(expected);
@@ -7411,11 +7411,11 @@ describe("length", () => {
       const micrometersConversion = linearConversion(0.000001);
 
       const [toBase, fromBase] = [
+        scandinavianMilesConversion[1],
         micrometersConversion[0],
-        scandinavianMilesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "smi"] as const;
+      const expected = [fromBase(toBase(v)), "smi"] as const;
       const conversionCandidate = [v, "µm"] as const;
 
       expect(length["smi"](conversionCandidate)).toEqual(expected);
@@ -7427,11 +7427,11 @@ describe("length", () => {
       const nanometersConversion = linearConversion(1e-9);
 
       const [toBase, fromBase] = [
+        scandinavianMilesConversion[1],
         nanometersConversion[0],
-        scandinavianMilesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "smi"] as const;
+      const expected = [fromBase(toBase(v)), "smi"] as const;
       const conversionCandidate = [v, "nm"] as const;
 
       expect(length["smi"](conversionCandidate)).toEqual(expected);
@@ -7443,11 +7443,11 @@ describe("length", () => {
       const picometersConversion = linearConversion(1e-12);
 
       const [toBase, fromBase] = [
+        scandinavianMilesConversion[1],
         picometersConversion[0],
-        scandinavianMilesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "smi"] as const;
+      const expected = [fromBase(toBase(v)), "smi"] as const;
       const conversionCandidate = [v, "pm"] as const;
 
       expect(length["smi"](conversionCandidate)).toEqual(expected);
@@ -7459,11 +7459,11 @@ describe("length", () => {
       const twipsConversion = linearConversion(0.00001763888888888889);
 
       const [toBase, fromBase] = [
+        scandinavianMilesConversion[1],
         twipsConversion[0],
-        scandinavianMilesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "smi"] as const;
+      const expected = [fromBase(toBase(v)), "smi"] as const;
       const conversionCandidate = [v, "tw"] as const;
 
       expect(length["smi"](conversionCandidate)).toEqual(expected);
@@ -7475,11 +7475,11 @@ describe("length", () => {
       const pointsConversion = linearConversion(0.0003527777777777778);
 
       const [toBase, fromBase] = [
+        scandinavianMilesConversion[1],
         pointsConversion[0],
-        scandinavianMilesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "smi"] as const;
+      const expected = [fromBase(toBase(v)), "smi"] as const;
       const conversionCandidate = [v, "pt"] as const;
 
       expect(length["smi"](conversionCandidate)).toEqual(expected);
@@ -7491,11 +7491,11 @@ describe("length", () => {
       const picasConversion = linearConversion(0.004233333333333334);
 
       const [toBase, fromBase] = [
+        scandinavianMilesConversion[1],
         picasConversion[0],
-        scandinavianMilesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "smi"] as const;
+      const expected = [fromBase(toBase(v)), "smi"] as const;
       const conversionCandidate = [v, "P"] as const;
 
       expect(length["smi"](conversionCandidate)).toEqual(expected);
@@ -7507,11 +7507,11 @@ describe("length", () => {
       const inchesConversion = linearConversion(0.0254);
 
       const [toBase, fromBase] = [
+        scandinavianMilesConversion[1],
         inchesConversion[0],
-        scandinavianMilesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "smi"] as const;
+      const expected = [fromBase(toBase(v)), "smi"] as const;
       const conversionCandidate = [v, "in"] as const;
 
       expect(length["smi"](conversionCandidate)).toEqual(expected);
@@ -7523,11 +7523,11 @@ describe("length", () => {
       const feetConversion = linearConversion(0.3048);
 
       const [toBase, fromBase] = [
+        scandinavianMilesConversion[1],
         feetConversion[0],
-        scandinavianMilesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "smi"] as const;
+      const expected = [fromBase(toBase(v)), "smi"] as const;
       const conversionCandidate = [v, "ft"] as const;
 
       expect(length["smi"](conversionCandidate)).toEqual(expected);
@@ -7539,11 +7539,11 @@ describe("length", () => {
       const yardsConversion = linearConversion(0.9144);
 
       const [toBase, fromBase] = [
+        scandinavianMilesConversion[1],
         yardsConversion[0],
-        scandinavianMilesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "smi"] as const;
+      const expected = [fromBase(toBase(v)), "smi"] as const;
       const conversionCandidate = [v, "yd"] as const;
 
       expect(length["smi"](conversionCandidate)).toEqual(expected);
@@ -7555,11 +7555,11 @@ describe("length", () => {
       const milesConversion = linearConversion(1609.34);
 
       const [toBase, fromBase] = [
+        scandinavianMilesConversion[1],
         milesConversion[0],
-        scandinavianMilesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "smi"] as const;
+      const expected = [fromBase(toBase(v)), "smi"] as const;
       const conversionCandidate = [v, "mi"] as const;
 
       expect(length["smi"](conversionCandidate)).toEqual(expected);
@@ -7573,11 +7573,11 @@ describe("length", () => {
       const lightyearsConversion = linearConversion(9461000000000000);
 
       const [toBase, fromBase] = [
+        scandinavianMilesConversion[1],
         lightyearsConversion[0],
-        scandinavianMilesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "smi"] as const;
+      const expected = [fromBase(toBase(v)), "smi"] as const;
       const conversionCandidate = [v, "ly"] as const;
 
       expect(length["smi"](conversionCandidate)).toEqual(expected);
@@ -7589,11 +7589,11 @@ describe("length", () => {
       const nauticalMilesConversion = linearConversion(1852);
 
       const [toBase, fromBase] = [
+        scandinavianMilesConversion[1],
         nauticalMilesConversion[0],
-        scandinavianMilesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "smi"] as const;
+      const expected = [fromBase(toBase(v)), "smi"] as const;
       const conversionCandidate = [v, "NM"] as const;
 
       expect(length["smi"](conversionCandidate)).toEqual(expected);
@@ -7605,11 +7605,11 @@ describe("length", () => {
       const fathomsConversion = linearConversion(1.8288);
 
       const [toBase, fromBase] = [
+        scandinavianMilesConversion[1],
         fathomsConversion[0],
-        scandinavianMilesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "smi"] as const;
+      const expected = [fromBase(toBase(v)), "smi"] as const;
       const conversionCandidate = [v, "ftm"] as const;
 
       expect(length["smi"](conversionCandidate)).toEqual(expected);
@@ -7621,11 +7621,11 @@ describe("length", () => {
       const furlongsConversion = linearConversion(201.168);
 
       const [toBase, fromBase] = [
+        scandinavianMilesConversion[1],
         furlongsConversion[0],
-        scandinavianMilesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "smi"] as const;
+      const expected = [fromBase(toBase(v)), "smi"] as const;
       const conversionCandidate = [v, "fur"] as const;
 
       expect(length["smi"](conversionCandidate)).toEqual(expected);
@@ -7637,11 +7637,11 @@ describe("length", () => {
       const astronomicalUnitsConversion = linearConversion(149600000000);
 
       const [toBase, fromBase] = [
+        scandinavianMilesConversion[1],
         astronomicalUnitsConversion[0],
-        scandinavianMilesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "smi"] as const;
+      const expected = [fromBase(toBase(v)), "smi"] as const;
       const conversionCandidate = [v, "ua"] as const;
 
       expect(length["smi"](conversionCandidate)).toEqual(expected);
@@ -7653,11 +7653,11 @@ describe("length", () => {
       const parsecsConversion = linearConversion(30860000000000000);
 
       const [toBase, fromBase] = [
+        scandinavianMilesConversion[1],
         parsecsConversion[0],
-        scandinavianMilesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "smi"] as const;
+      const expected = [fromBase(toBase(v)), "smi"] as const;
       const conversionCandidate = [v, "pc"] as const;
 
       expect(length["smi"](conversionCandidate)).toEqual(expected);
@@ -7677,11 +7677,11 @@ describe("length", () => {
       const megametersConversion = linearConversion(1000000);
 
       const [toBase, fromBase] = [
+        lightyearsConversion[1],
         megametersConversion[0],
-        lightyearsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ly"] as const;
+      const expected = [fromBase(toBase(v)), "ly"] as const;
       const conversionCandidate = [v, "Mm"] as const;
 
       expect(length["ly"](conversionCandidate)).toEqual(expected);
@@ -7693,11 +7693,11 @@ describe("length", () => {
       const kilometersConversion = linearConversion(1000);
 
       const [toBase, fromBase] = [
+        lightyearsConversion[1],
         kilometersConversion[0],
-        lightyearsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ly"] as const;
+      const expected = [fromBase(toBase(v)), "ly"] as const;
       const conversionCandidate = [v, "kM"] as const;
 
       expect(length["ly"](conversionCandidate)).toEqual(expected);
@@ -7709,11 +7709,11 @@ describe("length", () => {
       const hectometersConversion = linearConversion(100);
 
       const [toBase, fromBase] = [
+        lightyearsConversion[1],
         hectometersConversion[0],
-        lightyearsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ly"] as const;
+      const expected = [fromBase(toBase(v)), "ly"] as const;
       const conversionCandidate = [v, "hm"] as const;
 
       expect(length["ly"](conversionCandidate)).toEqual(expected);
@@ -7725,11 +7725,11 @@ describe("length", () => {
       const decametersConversion = linearConversion(10);
 
       const [toBase, fromBase] = [
+        lightyearsConversion[1],
         decametersConversion[0],
-        lightyearsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ly"] as const;
+      const expected = [fromBase(toBase(v)), "ly"] as const;
       const conversionCandidate = [v, "dam"] as const;
 
       expect(length["ly"](conversionCandidate)).toEqual(expected);
@@ -7741,11 +7741,11 @@ describe("length", () => {
       const metersConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
+        lightyearsConversion[1],
         metersConversion[0],
-        lightyearsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ly"] as const;
+      const expected = [fromBase(toBase(v)), "ly"] as const;
       const conversionCandidate = [v, "m"] as const;
 
       expect(length["ly"](conversionCandidate)).toEqual(expected);
@@ -7757,11 +7757,11 @@ describe("length", () => {
       const decimetersConversion = linearConversion(0.1);
 
       const [toBase, fromBase] = [
+        lightyearsConversion[1],
         decimetersConversion[0],
-        lightyearsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ly"] as const;
+      const expected = [fromBase(toBase(v)), "ly"] as const;
       const conversionCandidate = [v, "dm"] as const;
 
       expect(length["ly"](conversionCandidate)).toEqual(expected);
@@ -7773,11 +7773,11 @@ describe("length", () => {
       const centimetersConversion = linearConversion(0.01);
 
       const [toBase, fromBase] = [
+        lightyearsConversion[1],
         centimetersConversion[0],
-        lightyearsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ly"] as const;
+      const expected = [fromBase(toBase(v)), "ly"] as const;
       const conversionCandidate = [v, "cm"] as const;
 
       expect(length["ly"](conversionCandidate)).toEqual(expected);
@@ -7789,11 +7789,11 @@ describe("length", () => {
       const millimetersConversion = linearConversion(0.001);
 
       const [toBase, fromBase] = [
+        lightyearsConversion[1],
         millimetersConversion[0],
-        lightyearsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ly"] as const;
+      const expected = [fromBase(toBase(v)), "ly"] as const;
       const conversionCandidate = [v, "mm"] as const;
 
       expect(length["ly"](conversionCandidate)).toEqual(expected);
@@ -7805,11 +7805,11 @@ describe("length", () => {
       const micrometersConversion = linearConversion(0.000001);
 
       const [toBase, fromBase] = [
+        lightyearsConversion[1],
         micrometersConversion[0],
-        lightyearsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ly"] as const;
+      const expected = [fromBase(toBase(v)), "ly"] as const;
       const conversionCandidate = [v, "µm"] as const;
 
       expect(length["ly"](conversionCandidate)).toEqual(expected);
@@ -7821,11 +7821,11 @@ describe("length", () => {
       const nanometersConversion = linearConversion(1e-9);
 
       const [toBase, fromBase] = [
+        lightyearsConversion[1],
         nanometersConversion[0],
-        lightyearsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ly"] as const;
+      const expected = [fromBase(toBase(v)), "ly"] as const;
       const conversionCandidate = [v, "nm"] as const;
 
       expect(length["ly"](conversionCandidate)).toEqual(expected);
@@ -7837,11 +7837,11 @@ describe("length", () => {
       const picometersConversion = linearConversion(1e-12);
 
       const [toBase, fromBase] = [
+        lightyearsConversion[1],
         picometersConversion[0],
-        lightyearsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ly"] as const;
+      const expected = [fromBase(toBase(v)), "ly"] as const;
       const conversionCandidate = [v, "pm"] as const;
 
       expect(length["ly"](conversionCandidate)).toEqual(expected);
@@ -7853,11 +7853,11 @@ describe("length", () => {
       const twipsConversion = linearConversion(0.00001763888888888889);
 
       const [toBase, fromBase] = [
+        lightyearsConversion[1],
         twipsConversion[0],
-        lightyearsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ly"] as const;
+      const expected = [fromBase(toBase(v)), "ly"] as const;
       const conversionCandidate = [v, "tw"] as const;
 
       expect(length["ly"](conversionCandidate)).toEqual(expected);
@@ -7869,11 +7869,11 @@ describe("length", () => {
       const pointsConversion = linearConversion(0.0003527777777777778);
 
       const [toBase, fromBase] = [
+        lightyearsConversion[1],
         pointsConversion[0],
-        lightyearsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ly"] as const;
+      const expected = [fromBase(toBase(v)), "ly"] as const;
       const conversionCandidate = [v, "pt"] as const;
 
       expect(length["ly"](conversionCandidate)).toEqual(expected);
@@ -7885,11 +7885,11 @@ describe("length", () => {
       const picasConversion = linearConversion(0.004233333333333334);
 
       const [toBase, fromBase] = [
+        lightyearsConversion[1],
         picasConversion[0],
-        lightyearsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ly"] as const;
+      const expected = [fromBase(toBase(v)), "ly"] as const;
       const conversionCandidate = [v, "P"] as const;
 
       expect(length["ly"](conversionCandidate)).toEqual(expected);
@@ -7901,11 +7901,11 @@ describe("length", () => {
       const inchesConversion = linearConversion(0.0254);
 
       const [toBase, fromBase] = [
+        lightyearsConversion[1],
         inchesConversion[0],
-        lightyearsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ly"] as const;
+      const expected = [fromBase(toBase(v)), "ly"] as const;
       const conversionCandidate = [v, "in"] as const;
 
       expect(length["ly"](conversionCandidate)).toEqual(expected);
@@ -7917,11 +7917,11 @@ describe("length", () => {
       const feetConversion = linearConversion(0.3048);
 
       const [toBase, fromBase] = [
+        lightyearsConversion[1],
         feetConversion[0],
-        lightyearsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ly"] as const;
+      const expected = [fromBase(toBase(v)), "ly"] as const;
       const conversionCandidate = [v, "ft"] as const;
 
       expect(length["ly"](conversionCandidate)).toEqual(expected);
@@ -7933,11 +7933,11 @@ describe("length", () => {
       const yardsConversion = linearConversion(0.9144);
 
       const [toBase, fromBase] = [
+        lightyearsConversion[1],
         yardsConversion[0],
-        lightyearsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ly"] as const;
+      const expected = [fromBase(toBase(v)), "ly"] as const;
       const conversionCandidate = [v, "yd"] as const;
 
       expect(length["ly"](conversionCandidate)).toEqual(expected);
@@ -7949,11 +7949,11 @@ describe("length", () => {
       const milesConversion = linearConversion(1609.34);
 
       const [toBase, fromBase] = [
+        lightyearsConversion[1],
         milesConversion[0],
-        lightyearsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ly"] as const;
+      const expected = [fromBase(toBase(v)), "ly"] as const;
       const conversionCandidate = [v, "mi"] as const;
 
       expect(length["ly"](conversionCandidate)).toEqual(expected);
@@ -7965,11 +7965,11 @@ describe("length", () => {
       const scandinavianMilesConversion = linearConversion(10000);
 
       const [toBase, fromBase] = [
+        lightyearsConversion[1],
         scandinavianMilesConversion[0],
-        lightyearsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ly"] as const;
+      const expected = [fromBase(toBase(v)), "ly"] as const;
       const conversionCandidate = [v, "smi"] as const;
 
       expect(length["ly"](conversionCandidate)).toEqual(expected);
@@ -7983,11 +7983,11 @@ describe("length", () => {
       const nauticalMilesConversion = linearConversion(1852);
 
       const [toBase, fromBase] = [
+        lightyearsConversion[1],
         nauticalMilesConversion[0],
-        lightyearsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ly"] as const;
+      const expected = [fromBase(toBase(v)), "ly"] as const;
       const conversionCandidate = [v, "NM"] as const;
 
       expect(length["ly"](conversionCandidate)).toEqual(expected);
@@ -7999,11 +7999,11 @@ describe("length", () => {
       const fathomsConversion = linearConversion(1.8288);
 
       const [toBase, fromBase] = [
+        lightyearsConversion[1],
         fathomsConversion[0],
-        lightyearsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ly"] as const;
+      const expected = [fromBase(toBase(v)), "ly"] as const;
       const conversionCandidate = [v, "ftm"] as const;
 
       expect(length["ly"](conversionCandidate)).toEqual(expected);
@@ -8015,11 +8015,11 @@ describe("length", () => {
       const furlongsConversion = linearConversion(201.168);
 
       const [toBase, fromBase] = [
+        lightyearsConversion[1],
         furlongsConversion[0],
-        lightyearsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ly"] as const;
+      const expected = [fromBase(toBase(v)), "ly"] as const;
       const conversionCandidate = [v, "fur"] as const;
 
       expect(length["ly"](conversionCandidate)).toEqual(expected);
@@ -8031,11 +8031,11 @@ describe("length", () => {
       const astronomicalUnitsConversion = linearConversion(149600000000);
 
       const [toBase, fromBase] = [
+        lightyearsConversion[1],
         astronomicalUnitsConversion[0],
-        lightyearsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ly"] as const;
+      const expected = [fromBase(toBase(v)), "ly"] as const;
       const conversionCandidate = [v, "ua"] as const;
 
       expect(length["ly"](conversionCandidate)).toEqual(expected);
@@ -8047,11 +8047,11 @@ describe("length", () => {
       const parsecsConversion = linearConversion(30860000000000000);
 
       const [toBase, fromBase] = [
+        lightyearsConversion[1],
         parsecsConversion[0],
-        lightyearsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ly"] as const;
+      const expected = [fromBase(toBase(v)), "ly"] as const;
       const conversionCandidate = [v, "pc"] as const;
 
       expect(length["ly"](conversionCandidate)).toEqual(expected);
@@ -8071,11 +8071,11 @@ describe("length", () => {
       const megametersConversion = linearConversion(1000000);
 
       const [toBase, fromBase] = [
+        nauticalMilesConversion[1],
         megametersConversion[0],
-        nauticalMilesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "NM"] as const;
+      const expected = [fromBase(toBase(v)), "NM"] as const;
       const conversionCandidate = [v, "Mm"] as const;
 
       expect(length["NM"](conversionCandidate)).toEqual(expected);
@@ -8087,11 +8087,11 @@ describe("length", () => {
       const kilometersConversion = linearConversion(1000);
 
       const [toBase, fromBase] = [
+        nauticalMilesConversion[1],
         kilometersConversion[0],
-        nauticalMilesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "NM"] as const;
+      const expected = [fromBase(toBase(v)), "NM"] as const;
       const conversionCandidate = [v, "kM"] as const;
 
       expect(length["NM"](conversionCandidate)).toEqual(expected);
@@ -8103,11 +8103,11 @@ describe("length", () => {
       const hectometersConversion = linearConversion(100);
 
       const [toBase, fromBase] = [
+        nauticalMilesConversion[1],
         hectometersConversion[0],
-        nauticalMilesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "NM"] as const;
+      const expected = [fromBase(toBase(v)), "NM"] as const;
       const conversionCandidate = [v, "hm"] as const;
 
       expect(length["NM"](conversionCandidate)).toEqual(expected);
@@ -8119,11 +8119,11 @@ describe("length", () => {
       const decametersConversion = linearConversion(10);
 
       const [toBase, fromBase] = [
+        nauticalMilesConversion[1],
         decametersConversion[0],
-        nauticalMilesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "NM"] as const;
+      const expected = [fromBase(toBase(v)), "NM"] as const;
       const conversionCandidate = [v, "dam"] as const;
 
       expect(length["NM"](conversionCandidate)).toEqual(expected);
@@ -8135,11 +8135,11 @@ describe("length", () => {
       const metersConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
+        nauticalMilesConversion[1],
         metersConversion[0],
-        nauticalMilesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "NM"] as const;
+      const expected = [fromBase(toBase(v)), "NM"] as const;
       const conversionCandidate = [v, "m"] as const;
 
       expect(length["NM"](conversionCandidate)).toEqual(expected);
@@ -8151,11 +8151,11 @@ describe("length", () => {
       const decimetersConversion = linearConversion(0.1);
 
       const [toBase, fromBase] = [
+        nauticalMilesConversion[1],
         decimetersConversion[0],
-        nauticalMilesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "NM"] as const;
+      const expected = [fromBase(toBase(v)), "NM"] as const;
       const conversionCandidate = [v, "dm"] as const;
 
       expect(length["NM"](conversionCandidate)).toEqual(expected);
@@ -8167,11 +8167,11 @@ describe("length", () => {
       const centimetersConversion = linearConversion(0.01);
 
       const [toBase, fromBase] = [
+        nauticalMilesConversion[1],
         centimetersConversion[0],
-        nauticalMilesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "NM"] as const;
+      const expected = [fromBase(toBase(v)), "NM"] as const;
       const conversionCandidate = [v, "cm"] as const;
 
       expect(length["NM"](conversionCandidate)).toEqual(expected);
@@ -8183,11 +8183,11 @@ describe("length", () => {
       const millimetersConversion = linearConversion(0.001);
 
       const [toBase, fromBase] = [
+        nauticalMilesConversion[1],
         millimetersConversion[0],
-        nauticalMilesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "NM"] as const;
+      const expected = [fromBase(toBase(v)), "NM"] as const;
       const conversionCandidate = [v, "mm"] as const;
 
       expect(length["NM"](conversionCandidate)).toEqual(expected);
@@ -8199,11 +8199,11 @@ describe("length", () => {
       const micrometersConversion = linearConversion(0.000001);
 
       const [toBase, fromBase] = [
+        nauticalMilesConversion[1],
         micrometersConversion[0],
-        nauticalMilesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "NM"] as const;
+      const expected = [fromBase(toBase(v)), "NM"] as const;
       const conversionCandidate = [v, "µm"] as const;
 
       expect(length["NM"](conversionCandidate)).toEqual(expected);
@@ -8215,11 +8215,11 @@ describe("length", () => {
       const nanometersConversion = linearConversion(1e-9);
 
       const [toBase, fromBase] = [
+        nauticalMilesConversion[1],
         nanometersConversion[0],
-        nauticalMilesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "NM"] as const;
+      const expected = [fromBase(toBase(v)), "NM"] as const;
       const conversionCandidate = [v, "nm"] as const;
 
       expect(length["NM"](conversionCandidate)).toEqual(expected);
@@ -8231,11 +8231,11 @@ describe("length", () => {
       const picometersConversion = linearConversion(1e-12);
 
       const [toBase, fromBase] = [
+        nauticalMilesConversion[1],
         picometersConversion[0],
-        nauticalMilesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "NM"] as const;
+      const expected = [fromBase(toBase(v)), "NM"] as const;
       const conversionCandidate = [v, "pm"] as const;
 
       expect(length["NM"](conversionCandidate)).toEqual(expected);
@@ -8247,11 +8247,11 @@ describe("length", () => {
       const twipsConversion = linearConversion(0.00001763888888888889);
 
       const [toBase, fromBase] = [
+        nauticalMilesConversion[1],
         twipsConversion[0],
-        nauticalMilesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "NM"] as const;
+      const expected = [fromBase(toBase(v)), "NM"] as const;
       const conversionCandidate = [v, "tw"] as const;
 
       expect(length["NM"](conversionCandidate)).toEqual(expected);
@@ -8263,11 +8263,11 @@ describe("length", () => {
       const pointsConversion = linearConversion(0.0003527777777777778);
 
       const [toBase, fromBase] = [
+        nauticalMilesConversion[1],
         pointsConversion[0],
-        nauticalMilesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "NM"] as const;
+      const expected = [fromBase(toBase(v)), "NM"] as const;
       const conversionCandidate = [v, "pt"] as const;
 
       expect(length["NM"](conversionCandidate)).toEqual(expected);
@@ -8279,11 +8279,11 @@ describe("length", () => {
       const picasConversion = linearConversion(0.004233333333333334);
 
       const [toBase, fromBase] = [
+        nauticalMilesConversion[1],
         picasConversion[0],
-        nauticalMilesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "NM"] as const;
+      const expected = [fromBase(toBase(v)), "NM"] as const;
       const conversionCandidate = [v, "P"] as const;
 
       expect(length["NM"](conversionCandidate)).toEqual(expected);
@@ -8295,11 +8295,11 @@ describe("length", () => {
       const inchesConversion = linearConversion(0.0254);
 
       const [toBase, fromBase] = [
+        nauticalMilesConversion[1],
         inchesConversion[0],
-        nauticalMilesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "NM"] as const;
+      const expected = [fromBase(toBase(v)), "NM"] as const;
       const conversionCandidate = [v, "in"] as const;
 
       expect(length["NM"](conversionCandidate)).toEqual(expected);
@@ -8311,11 +8311,11 @@ describe("length", () => {
       const feetConversion = linearConversion(0.3048);
 
       const [toBase, fromBase] = [
+        nauticalMilesConversion[1],
         feetConversion[0],
-        nauticalMilesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "NM"] as const;
+      const expected = [fromBase(toBase(v)), "NM"] as const;
       const conversionCandidate = [v, "ft"] as const;
 
       expect(length["NM"](conversionCandidate)).toEqual(expected);
@@ -8327,11 +8327,11 @@ describe("length", () => {
       const yardsConversion = linearConversion(0.9144);
 
       const [toBase, fromBase] = [
+        nauticalMilesConversion[1],
         yardsConversion[0],
-        nauticalMilesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "NM"] as const;
+      const expected = [fromBase(toBase(v)), "NM"] as const;
       const conversionCandidate = [v, "yd"] as const;
 
       expect(length["NM"](conversionCandidate)).toEqual(expected);
@@ -8343,11 +8343,11 @@ describe("length", () => {
       const milesConversion = linearConversion(1609.34);
 
       const [toBase, fromBase] = [
+        nauticalMilesConversion[1],
         milesConversion[0],
-        nauticalMilesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "NM"] as const;
+      const expected = [fromBase(toBase(v)), "NM"] as const;
       const conversionCandidate = [v, "mi"] as const;
 
       expect(length["NM"](conversionCandidate)).toEqual(expected);
@@ -8359,11 +8359,11 @@ describe("length", () => {
       const scandinavianMilesConversion = linearConversion(10000);
 
       const [toBase, fromBase] = [
+        nauticalMilesConversion[1],
         scandinavianMilesConversion[0],
-        nauticalMilesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "NM"] as const;
+      const expected = [fromBase(toBase(v)), "NM"] as const;
       const conversionCandidate = [v, "smi"] as const;
 
       expect(length["NM"](conversionCandidate)).toEqual(expected);
@@ -8375,11 +8375,11 @@ describe("length", () => {
       const lightyearsConversion = linearConversion(9461000000000000);
 
       const [toBase, fromBase] = [
+        nauticalMilesConversion[1],
         lightyearsConversion[0],
-        nauticalMilesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "NM"] as const;
+      const expected = [fromBase(toBase(v)), "NM"] as const;
       const conversionCandidate = [v, "ly"] as const;
 
       expect(length["NM"](conversionCandidate)).toEqual(expected);
@@ -8393,11 +8393,11 @@ describe("length", () => {
       const fathomsConversion = linearConversion(1.8288);
 
       const [toBase, fromBase] = [
+        nauticalMilesConversion[1],
         fathomsConversion[0],
-        nauticalMilesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "NM"] as const;
+      const expected = [fromBase(toBase(v)), "NM"] as const;
       const conversionCandidate = [v, "ftm"] as const;
 
       expect(length["NM"](conversionCandidate)).toEqual(expected);
@@ -8409,11 +8409,11 @@ describe("length", () => {
       const furlongsConversion = linearConversion(201.168);
 
       const [toBase, fromBase] = [
+        nauticalMilesConversion[1],
         furlongsConversion[0],
-        nauticalMilesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "NM"] as const;
+      const expected = [fromBase(toBase(v)), "NM"] as const;
       const conversionCandidate = [v, "fur"] as const;
 
       expect(length["NM"](conversionCandidate)).toEqual(expected);
@@ -8425,11 +8425,11 @@ describe("length", () => {
       const astronomicalUnitsConversion = linearConversion(149600000000);
 
       const [toBase, fromBase] = [
+        nauticalMilesConversion[1],
         astronomicalUnitsConversion[0],
-        nauticalMilesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "NM"] as const;
+      const expected = [fromBase(toBase(v)), "NM"] as const;
       const conversionCandidate = [v, "ua"] as const;
 
       expect(length["NM"](conversionCandidate)).toEqual(expected);
@@ -8441,11 +8441,11 @@ describe("length", () => {
       const parsecsConversion = linearConversion(30860000000000000);
 
       const [toBase, fromBase] = [
+        nauticalMilesConversion[1],
         parsecsConversion[0],
-        nauticalMilesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "NM"] as const;
+      const expected = [fromBase(toBase(v)), "NM"] as const;
       const conversionCandidate = [v, "pc"] as const;
 
       expect(length["NM"](conversionCandidate)).toEqual(expected);
@@ -8465,11 +8465,11 @@ describe("length", () => {
       const megametersConversion = linearConversion(1000000);
 
       const [toBase, fromBase] = [
+        fathomsConversion[1],
         megametersConversion[0],
-        fathomsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ftm"] as const;
+      const expected = [fromBase(toBase(v)), "ftm"] as const;
       const conversionCandidate = [v, "Mm"] as const;
 
       expect(length["ftm"](conversionCandidate)).toEqual(expected);
@@ -8481,11 +8481,11 @@ describe("length", () => {
       const kilometersConversion = linearConversion(1000);
 
       const [toBase, fromBase] = [
+        fathomsConversion[1],
         kilometersConversion[0],
-        fathomsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ftm"] as const;
+      const expected = [fromBase(toBase(v)), "ftm"] as const;
       const conversionCandidate = [v, "kM"] as const;
 
       expect(length["ftm"](conversionCandidate)).toEqual(expected);
@@ -8497,11 +8497,11 @@ describe("length", () => {
       const hectometersConversion = linearConversion(100);
 
       const [toBase, fromBase] = [
+        fathomsConversion[1],
         hectometersConversion[0],
-        fathomsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ftm"] as const;
+      const expected = [fromBase(toBase(v)), "ftm"] as const;
       const conversionCandidate = [v, "hm"] as const;
 
       expect(length["ftm"](conversionCandidate)).toEqual(expected);
@@ -8513,11 +8513,11 @@ describe("length", () => {
       const decametersConversion = linearConversion(10);
 
       const [toBase, fromBase] = [
+        fathomsConversion[1],
         decametersConversion[0],
-        fathomsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ftm"] as const;
+      const expected = [fromBase(toBase(v)), "ftm"] as const;
       const conversionCandidate = [v, "dam"] as const;
 
       expect(length["ftm"](conversionCandidate)).toEqual(expected);
@@ -8529,11 +8529,11 @@ describe("length", () => {
       const metersConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
+        fathomsConversion[1],
         metersConversion[0],
-        fathomsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ftm"] as const;
+      const expected = [fromBase(toBase(v)), "ftm"] as const;
       const conversionCandidate = [v, "m"] as const;
 
       expect(length["ftm"](conversionCandidate)).toEqual(expected);
@@ -8545,11 +8545,11 @@ describe("length", () => {
       const decimetersConversion = linearConversion(0.1);
 
       const [toBase, fromBase] = [
+        fathomsConversion[1],
         decimetersConversion[0],
-        fathomsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ftm"] as const;
+      const expected = [fromBase(toBase(v)), "ftm"] as const;
       const conversionCandidate = [v, "dm"] as const;
 
       expect(length["ftm"](conversionCandidate)).toEqual(expected);
@@ -8561,11 +8561,11 @@ describe("length", () => {
       const centimetersConversion = linearConversion(0.01);
 
       const [toBase, fromBase] = [
+        fathomsConversion[1],
         centimetersConversion[0],
-        fathomsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ftm"] as const;
+      const expected = [fromBase(toBase(v)), "ftm"] as const;
       const conversionCandidate = [v, "cm"] as const;
 
       expect(length["ftm"](conversionCandidate)).toEqual(expected);
@@ -8577,11 +8577,11 @@ describe("length", () => {
       const millimetersConversion = linearConversion(0.001);
 
       const [toBase, fromBase] = [
+        fathomsConversion[1],
         millimetersConversion[0],
-        fathomsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ftm"] as const;
+      const expected = [fromBase(toBase(v)), "ftm"] as const;
       const conversionCandidate = [v, "mm"] as const;
 
       expect(length["ftm"](conversionCandidate)).toEqual(expected);
@@ -8593,11 +8593,11 @@ describe("length", () => {
       const micrometersConversion = linearConversion(0.000001);
 
       const [toBase, fromBase] = [
+        fathomsConversion[1],
         micrometersConversion[0],
-        fathomsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ftm"] as const;
+      const expected = [fromBase(toBase(v)), "ftm"] as const;
       const conversionCandidate = [v, "µm"] as const;
 
       expect(length["ftm"](conversionCandidate)).toEqual(expected);
@@ -8609,11 +8609,11 @@ describe("length", () => {
       const nanometersConversion = linearConversion(1e-9);
 
       const [toBase, fromBase] = [
+        fathomsConversion[1],
         nanometersConversion[0],
-        fathomsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ftm"] as const;
+      const expected = [fromBase(toBase(v)), "ftm"] as const;
       const conversionCandidate = [v, "nm"] as const;
 
       expect(length["ftm"](conversionCandidate)).toEqual(expected);
@@ -8625,11 +8625,11 @@ describe("length", () => {
       const picometersConversion = linearConversion(1e-12);
 
       const [toBase, fromBase] = [
+        fathomsConversion[1],
         picometersConversion[0],
-        fathomsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ftm"] as const;
+      const expected = [fromBase(toBase(v)), "ftm"] as const;
       const conversionCandidate = [v, "pm"] as const;
 
       expect(length["ftm"](conversionCandidate)).toEqual(expected);
@@ -8641,11 +8641,11 @@ describe("length", () => {
       const twipsConversion = linearConversion(0.00001763888888888889);
 
       const [toBase, fromBase] = [
+        fathomsConversion[1],
         twipsConversion[0],
-        fathomsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ftm"] as const;
+      const expected = [fromBase(toBase(v)), "ftm"] as const;
       const conversionCandidate = [v, "tw"] as const;
 
       expect(length["ftm"](conversionCandidate)).toEqual(expected);
@@ -8657,11 +8657,11 @@ describe("length", () => {
       const pointsConversion = linearConversion(0.0003527777777777778);
 
       const [toBase, fromBase] = [
+        fathomsConversion[1],
         pointsConversion[0],
-        fathomsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ftm"] as const;
+      const expected = [fromBase(toBase(v)), "ftm"] as const;
       const conversionCandidate = [v, "pt"] as const;
 
       expect(length["ftm"](conversionCandidate)).toEqual(expected);
@@ -8673,11 +8673,11 @@ describe("length", () => {
       const picasConversion = linearConversion(0.004233333333333334);
 
       const [toBase, fromBase] = [
+        fathomsConversion[1],
         picasConversion[0],
-        fathomsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ftm"] as const;
+      const expected = [fromBase(toBase(v)), "ftm"] as const;
       const conversionCandidate = [v, "P"] as const;
 
       expect(length["ftm"](conversionCandidate)).toEqual(expected);
@@ -8689,11 +8689,11 @@ describe("length", () => {
       const inchesConversion = linearConversion(0.0254);
 
       const [toBase, fromBase] = [
+        fathomsConversion[1],
         inchesConversion[0],
-        fathomsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ftm"] as const;
+      const expected = [fromBase(toBase(v)), "ftm"] as const;
       const conversionCandidate = [v, "in"] as const;
 
       expect(length["ftm"](conversionCandidate)).toEqual(expected);
@@ -8705,11 +8705,11 @@ describe("length", () => {
       const feetConversion = linearConversion(0.3048);
 
       const [toBase, fromBase] = [
+        fathomsConversion[1],
         feetConversion[0],
-        fathomsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ftm"] as const;
+      const expected = [fromBase(toBase(v)), "ftm"] as const;
       const conversionCandidate = [v, "ft"] as const;
 
       expect(length["ftm"](conversionCandidate)).toEqual(expected);
@@ -8721,11 +8721,11 @@ describe("length", () => {
       const yardsConversion = linearConversion(0.9144);
 
       const [toBase, fromBase] = [
+        fathomsConversion[1],
         yardsConversion[0],
-        fathomsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ftm"] as const;
+      const expected = [fromBase(toBase(v)), "ftm"] as const;
       const conversionCandidate = [v, "yd"] as const;
 
       expect(length["ftm"](conversionCandidate)).toEqual(expected);
@@ -8737,11 +8737,11 @@ describe("length", () => {
       const milesConversion = linearConversion(1609.34);
 
       const [toBase, fromBase] = [
+        fathomsConversion[1],
         milesConversion[0],
-        fathomsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ftm"] as const;
+      const expected = [fromBase(toBase(v)), "ftm"] as const;
       const conversionCandidate = [v, "mi"] as const;
 
       expect(length["ftm"](conversionCandidate)).toEqual(expected);
@@ -8753,11 +8753,11 @@ describe("length", () => {
       const scandinavianMilesConversion = linearConversion(10000);
 
       const [toBase, fromBase] = [
+        fathomsConversion[1],
         scandinavianMilesConversion[0],
-        fathomsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ftm"] as const;
+      const expected = [fromBase(toBase(v)), "ftm"] as const;
       const conversionCandidate = [v, "smi"] as const;
 
       expect(length["ftm"](conversionCandidate)).toEqual(expected);
@@ -8769,11 +8769,11 @@ describe("length", () => {
       const lightyearsConversion = linearConversion(9461000000000000);
 
       const [toBase, fromBase] = [
+        fathomsConversion[1],
         lightyearsConversion[0],
-        fathomsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ftm"] as const;
+      const expected = [fromBase(toBase(v)), "ftm"] as const;
       const conversionCandidate = [v, "ly"] as const;
 
       expect(length["ftm"](conversionCandidate)).toEqual(expected);
@@ -8785,11 +8785,11 @@ describe("length", () => {
       const nauticalMilesConversion = linearConversion(1852);
 
       const [toBase, fromBase] = [
+        fathomsConversion[1],
         nauticalMilesConversion[0],
-        fathomsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ftm"] as const;
+      const expected = [fromBase(toBase(v)), "ftm"] as const;
       const conversionCandidate = [v, "NM"] as const;
 
       expect(length["ftm"](conversionCandidate)).toEqual(expected);
@@ -8803,11 +8803,11 @@ describe("length", () => {
       const furlongsConversion = linearConversion(201.168);
 
       const [toBase, fromBase] = [
+        fathomsConversion[1],
         furlongsConversion[0],
-        fathomsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ftm"] as const;
+      const expected = [fromBase(toBase(v)), "ftm"] as const;
       const conversionCandidate = [v, "fur"] as const;
 
       expect(length["ftm"](conversionCandidate)).toEqual(expected);
@@ -8819,11 +8819,11 @@ describe("length", () => {
       const astronomicalUnitsConversion = linearConversion(149600000000);
 
       const [toBase, fromBase] = [
+        fathomsConversion[1],
         astronomicalUnitsConversion[0],
-        fathomsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ftm"] as const;
+      const expected = [fromBase(toBase(v)), "ftm"] as const;
       const conversionCandidate = [v, "ua"] as const;
 
       expect(length["ftm"](conversionCandidate)).toEqual(expected);
@@ -8835,11 +8835,11 @@ describe("length", () => {
       const parsecsConversion = linearConversion(30860000000000000);
 
       const [toBase, fromBase] = [
+        fathomsConversion[1],
         parsecsConversion[0],
-        fathomsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ftm"] as const;
+      const expected = [fromBase(toBase(v)), "ftm"] as const;
       const conversionCandidate = [v, "pc"] as const;
 
       expect(length["ftm"](conversionCandidate)).toEqual(expected);
@@ -8859,11 +8859,11 @@ describe("length", () => {
       const megametersConversion = linearConversion(1000000);
 
       const [toBase, fromBase] = [
+        furlongsConversion[1],
         megametersConversion[0],
-        furlongsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "fur"] as const;
+      const expected = [fromBase(toBase(v)), "fur"] as const;
       const conversionCandidate = [v, "Mm"] as const;
 
       expect(length["fur"](conversionCandidate)).toEqual(expected);
@@ -8875,11 +8875,11 @@ describe("length", () => {
       const kilometersConversion = linearConversion(1000);
 
       const [toBase, fromBase] = [
+        furlongsConversion[1],
         kilometersConversion[0],
-        furlongsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "fur"] as const;
+      const expected = [fromBase(toBase(v)), "fur"] as const;
       const conversionCandidate = [v, "kM"] as const;
 
       expect(length["fur"](conversionCandidate)).toEqual(expected);
@@ -8891,11 +8891,11 @@ describe("length", () => {
       const hectometersConversion = linearConversion(100);
 
       const [toBase, fromBase] = [
+        furlongsConversion[1],
         hectometersConversion[0],
-        furlongsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "fur"] as const;
+      const expected = [fromBase(toBase(v)), "fur"] as const;
       const conversionCandidate = [v, "hm"] as const;
 
       expect(length["fur"](conversionCandidate)).toEqual(expected);
@@ -8907,11 +8907,11 @@ describe("length", () => {
       const decametersConversion = linearConversion(10);
 
       const [toBase, fromBase] = [
+        furlongsConversion[1],
         decametersConversion[0],
-        furlongsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "fur"] as const;
+      const expected = [fromBase(toBase(v)), "fur"] as const;
       const conversionCandidate = [v, "dam"] as const;
 
       expect(length["fur"](conversionCandidate)).toEqual(expected);
@@ -8923,11 +8923,11 @@ describe("length", () => {
       const metersConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
+        furlongsConversion[1],
         metersConversion[0],
-        furlongsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "fur"] as const;
+      const expected = [fromBase(toBase(v)), "fur"] as const;
       const conversionCandidate = [v, "m"] as const;
 
       expect(length["fur"](conversionCandidate)).toEqual(expected);
@@ -8939,11 +8939,11 @@ describe("length", () => {
       const decimetersConversion = linearConversion(0.1);
 
       const [toBase, fromBase] = [
+        furlongsConversion[1],
         decimetersConversion[0],
-        furlongsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "fur"] as const;
+      const expected = [fromBase(toBase(v)), "fur"] as const;
       const conversionCandidate = [v, "dm"] as const;
 
       expect(length["fur"](conversionCandidate)).toEqual(expected);
@@ -8955,11 +8955,11 @@ describe("length", () => {
       const centimetersConversion = linearConversion(0.01);
 
       const [toBase, fromBase] = [
+        furlongsConversion[1],
         centimetersConversion[0],
-        furlongsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "fur"] as const;
+      const expected = [fromBase(toBase(v)), "fur"] as const;
       const conversionCandidate = [v, "cm"] as const;
 
       expect(length["fur"](conversionCandidate)).toEqual(expected);
@@ -8971,11 +8971,11 @@ describe("length", () => {
       const millimetersConversion = linearConversion(0.001);
 
       const [toBase, fromBase] = [
+        furlongsConversion[1],
         millimetersConversion[0],
-        furlongsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "fur"] as const;
+      const expected = [fromBase(toBase(v)), "fur"] as const;
       const conversionCandidate = [v, "mm"] as const;
 
       expect(length["fur"](conversionCandidate)).toEqual(expected);
@@ -8987,11 +8987,11 @@ describe("length", () => {
       const micrometersConversion = linearConversion(0.000001);
 
       const [toBase, fromBase] = [
+        furlongsConversion[1],
         micrometersConversion[0],
-        furlongsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "fur"] as const;
+      const expected = [fromBase(toBase(v)), "fur"] as const;
       const conversionCandidate = [v, "µm"] as const;
 
       expect(length["fur"](conversionCandidate)).toEqual(expected);
@@ -9003,11 +9003,11 @@ describe("length", () => {
       const nanometersConversion = linearConversion(1e-9);
 
       const [toBase, fromBase] = [
+        furlongsConversion[1],
         nanometersConversion[0],
-        furlongsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "fur"] as const;
+      const expected = [fromBase(toBase(v)), "fur"] as const;
       const conversionCandidate = [v, "nm"] as const;
 
       expect(length["fur"](conversionCandidate)).toEqual(expected);
@@ -9019,11 +9019,11 @@ describe("length", () => {
       const picometersConversion = linearConversion(1e-12);
 
       const [toBase, fromBase] = [
+        furlongsConversion[1],
         picometersConversion[0],
-        furlongsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "fur"] as const;
+      const expected = [fromBase(toBase(v)), "fur"] as const;
       const conversionCandidate = [v, "pm"] as const;
 
       expect(length["fur"](conversionCandidate)).toEqual(expected);
@@ -9035,11 +9035,11 @@ describe("length", () => {
       const twipsConversion = linearConversion(0.00001763888888888889);
 
       const [toBase, fromBase] = [
+        furlongsConversion[1],
         twipsConversion[0],
-        furlongsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "fur"] as const;
+      const expected = [fromBase(toBase(v)), "fur"] as const;
       const conversionCandidate = [v, "tw"] as const;
 
       expect(length["fur"](conversionCandidate)).toEqual(expected);
@@ -9051,11 +9051,11 @@ describe("length", () => {
       const pointsConversion = linearConversion(0.0003527777777777778);
 
       const [toBase, fromBase] = [
+        furlongsConversion[1],
         pointsConversion[0],
-        furlongsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "fur"] as const;
+      const expected = [fromBase(toBase(v)), "fur"] as const;
       const conversionCandidate = [v, "pt"] as const;
 
       expect(length["fur"](conversionCandidate)).toEqual(expected);
@@ -9067,11 +9067,11 @@ describe("length", () => {
       const picasConversion = linearConversion(0.004233333333333334);
 
       const [toBase, fromBase] = [
+        furlongsConversion[1],
         picasConversion[0],
-        furlongsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "fur"] as const;
+      const expected = [fromBase(toBase(v)), "fur"] as const;
       const conversionCandidate = [v, "P"] as const;
 
       expect(length["fur"](conversionCandidate)).toEqual(expected);
@@ -9083,11 +9083,11 @@ describe("length", () => {
       const inchesConversion = linearConversion(0.0254);
 
       const [toBase, fromBase] = [
+        furlongsConversion[1],
         inchesConversion[0],
-        furlongsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "fur"] as const;
+      const expected = [fromBase(toBase(v)), "fur"] as const;
       const conversionCandidate = [v, "in"] as const;
 
       expect(length["fur"](conversionCandidate)).toEqual(expected);
@@ -9099,11 +9099,11 @@ describe("length", () => {
       const feetConversion = linearConversion(0.3048);
 
       const [toBase, fromBase] = [
+        furlongsConversion[1],
         feetConversion[0],
-        furlongsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "fur"] as const;
+      const expected = [fromBase(toBase(v)), "fur"] as const;
       const conversionCandidate = [v, "ft"] as const;
 
       expect(length["fur"](conversionCandidate)).toEqual(expected);
@@ -9115,11 +9115,11 @@ describe("length", () => {
       const yardsConversion = linearConversion(0.9144);
 
       const [toBase, fromBase] = [
+        furlongsConversion[1],
         yardsConversion[0],
-        furlongsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "fur"] as const;
+      const expected = [fromBase(toBase(v)), "fur"] as const;
       const conversionCandidate = [v, "yd"] as const;
 
       expect(length["fur"](conversionCandidate)).toEqual(expected);
@@ -9131,11 +9131,11 @@ describe("length", () => {
       const milesConversion = linearConversion(1609.34);
 
       const [toBase, fromBase] = [
+        furlongsConversion[1],
         milesConversion[0],
-        furlongsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "fur"] as const;
+      const expected = [fromBase(toBase(v)), "fur"] as const;
       const conversionCandidate = [v, "mi"] as const;
 
       expect(length["fur"](conversionCandidate)).toEqual(expected);
@@ -9147,11 +9147,11 @@ describe("length", () => {
       const scandinavianMilesConversion = linearConversion(10000);
 
       const [toBase, fromBase] = [
+        furlongsConversion[1],
         scandinavianMilesConversion[0],
-        furlongsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "fur"] as const;
+      const expected = [fromBase(toBase(v)), "fur"] as const;
       const conversionCandidate = [v, "smi"] as const;
 
       expect(length["fur"](conversionCandidate)).toEqual(expected);
@@ -9163,11 +9163,11 @@ describe("length", () => {
       const lightyearsConversion = linearConversion(9461000000000000);
 
       const [toBase, fromBase] = [
+        furlongsConversion[1],
         lightyearsConversion[0],
-        furlongsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "fur"] as const;
+      const expected = [fromBase(toBase(v)), "fur"] as const;
       const conversionCandidate = [v, "ly"] as const;
 
       expect(length["fur"](conversionCandidate)).toEqual(expected);
@@ -9179,11 +9179,11 @@ describe("length", () => {
       const nauticalMilesConversion = linearConversion(1852);
 
       const [toBase, fromBase] = [
+        furlongsConversion[1],
         nauticalMilesConversion[0],
-        furlongsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "fur"] as const;
+      const expected = [fromBase(toBase(v)), "fur"] as const;
       const conversionCandidate = [v, "NM"] as const;
 
       expect(length["fur"](conversionCandidate)).toEqual(expected);
@@ -9195,11 +9195,11 @@ describe("length", () => {
       const fathomsConversion = linearConversion(1.8288);
 
       const [toBase, fromBase] = [
+        furlongsConversion[1],
         fathomsConversion[0],
-        furlongsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "fur"] as const;
+      const expected = [fromBase(toBase(v)), "fur"] as const;
       const conversionCandidate = [v, "ftm"] as const;
 
       expect(length["fur"](conversionCandidate)).toEqual(expected);
@@ -9213,11 +9213,11 @@ describe("length", () => {
       const astronomicalUnitsConversion = linearConversion(149600000000);
 
       const [toBase, fromBase] = [
+        furlongsConversion[1],
         astronomicalUnitsConversion[0],
-        furlongsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "fur"] as const;
+      const expected = [fromBase(toBase(v)), "fur"] as const;
       const conversionCandidate = [v, "ua"] as const;
 
       expect(length["fur"](conversionCandidate)).toEqual(expected);
@@ -9229,11 +9229,11 @@ describe("length", () => {
       const parsecsConversion = linearConversion(30860000000000000);
 
       const [toBase, fromBase] = [
+        furlongsConversion[1],
         parsecsConversion[0],
-        furlongsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "fur"] as const;
+      const expected = [fromBase(toBase(v)), "fur"] as const;
       const conversionCandidate = [v, "pc"] as const;
 
       expect(length["fur"](conversionCandidate)).toEqual(expected);
@@ -9253,11 +9253,11 @@ describe("length", () => {
       const megametersConversion = linearConversion(1000000);
 
       const [toBase, fromBase] = [
+        astronomicalUnitsConversion[1],
         megametersConversion[0],
-        astronomicalUnitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ua"] as const;
+      const expected = [fromBase(toBase(v)), "ua"] as const;
       const conversionCandidate = [v, "Mm"] as const;
 
       expect(length["ua"](conversionCandidate)).toEqual(expected);
@@ -9269,11 +9269,11 @@ describe("length", () => {
       const kilometersConversion = linearConversion(1000);
 
       const [toBase, fromBase] = [
+        astronomicalUnitsConversion[1],
         kilometersConversion[0],
-        astronomicalUnitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ua"] as const;
+      const expected = [fromBase(toBase(v)), "ua"] as const;
       const conversionCandidate = [v, "kM"] as const;
 
       expect(length["ua"](conversionCandidate)).toEqual(expected);
@@ -9285,11 +9285,11 @@ describe("length", () => {
       const hectometersConversion = linearConversion(100);
 
       const [toBase, fromBase] = [
+        astronomicalUnitsConversion[1],
         hectometersConversion[0],
-        astronomicalUnitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ua"] as const;
+      const expected = [fromBase(toBase(v)), "ua"] as const;
       const conversionCandidate = [v, "hm"] as const;
 
       expect(length["ua"](conversionCandidate)).toEqual(expected);
@@ -9301,11 +9301,11 @@ describe("length", () => {
       const decametersConversion = linearConversion(10);
 
       const [toBase, fromBase] = [
+        astronomicalUnitsConversion[1],
         decametersConversion[0],
-        astronomicalUnitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ua"] as const;
+      const expected = [fromBase(toBase(v)), "ua"] as const;
       const conversionCandidate = [v, "dam"] as const;
 
       expect(length["ua"](conversionCandidate)).toEqual(expected);
@@ -9317,11 +9317,11 @@ describe("length", () => {
       const metersConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
+        astronomicalUnitsConversion[1],
         metersConversion[0],
-        astronomicalUnitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ua"] as const;
+      const expected = [fromBase(toBase(v)), "ua"] as const;
       const conversionCandidate = [v, "m"] as const;
 
       expect(length["ua"](conversionCandidate)).toEqual(expected);
@@ -9333,11 +9333,11 @@ describe("length", () => {
       const decimetersConversion = linearConversion(0.1);
 
       const [toBase, fromBase] = [
+        astronomicalUnitsConversion[1],
         decimetersConversion[0],
-        astronomicalUnitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ua"] as const;
+      const expected = [fromBase(toBase(v)), "ua"] as const;
       const conversionCandidate = [v, "dm"] as const;
 
       expect(length["ua"](conversionCandidate)).toEqual(expected);
@@ -9349,11 +9349,11 @@ describe("length", () => {
       const centimetersConversion = linearConversion(0.01);
 
       const [toBase, fromBase] = [
+        astronomicalUnitsConversion[1],
         centimetersConversion[0],
-        astronomicalUnitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ua"] as const;
+      const expected = [fromBase(toBase(v)), "ua"] as const;
       const conversionCandidate = [v, "cm"] as const;
 
       expect(length["ua"](conversionCandidate)).toEqual(expected);
@@ -9365,11 +9365,11 @@ describe("length", () => {
       const millimetersConversion = linearConversion(0.001);
 
       const [toBase, fromBase] = [
+        astronomicalUnitsConversion[1],
         millimetersConversion[0],
-        astronomicalUnitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ua"] as const;
+      const expected = [fromBase(toBase(v)), "ua"] as const;
       const conversionCandidate = [v, "mm"] as const;
 
       expect(length["ua"](conversionCandidate)).toEqual(expected);
@@ -9381,11 +9381,11 @@ describe("length", () => {
       const micrometersConversion = linearConversion(0.000001);
 
       const [toBase, fromBase] = [
+        astronomicalUnitsConversion[1],
         micrometersConversion[0],
-        astronomicalUnitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ua"] as const;
+      const expected = [fromBase(toBase(v)), "ua"] as const;
       const conversionCandidate = [v, "µm"] as const;
 
       expect(length["ua"](conversionCandidate)).toEqual(expected);
@@ -9397,11 +9397,11 @@ describe("length", () => {
       const nanometersConversion = linearConversion(1e-9);
 
       const [toBase, fromBase] = [
+        astronomicalUnitsConversion[1],
         nanometersConversion[0],
-        astronomicalUnitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ua"] as const;
+      const expected = [fromBase(toBase(v)), "ua"] as const;
       const conversionCandidate = [v, "nm"] as const;
 
       expect(length["ua"](conversionCandidate)).toEqual(expected);
@@ -9413,11 +9413,11 @@ describe("length", () => {
       const picometersConversion = linearConversion(1e-12);
 
       const [toBase, fromBase] = [
+        astronomicalUnitsConversion[1],
         picometersConversion[0],
-        astronomicalUnitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ua"] as const;
+      const expected = [fromBase(toBase(v)), "ua"] as const;
       const conversionCandidate = [v, "pm"] as const;
 
       expect(length["ua"](conversionCandidate)).toEqual(expected);
@@ -9429,11 +9429,11 @@ describe("length", () => {
       const twipsConversion = linearConversion(0.00001763888888888889);
 
       const [toBase, fromBase] = [
+        astronomicalUnitsConversion[1],
         twipsConversion[0],
-        astronomicalUnitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ua"] as const;
+      const expected = [fromBase(toBase(v)), "ua"] as const;
       const conversionCandidate = [v, "tw"] as const;
 
       expect(length["ua"](conversionCandidate)).toEqual(expected);
@@ -9445,11 +9445,11 @@ describe("length", () => {
       const pointsConversion = linearConversion(0.0003527777777777778);
 
       const [toBase, fromBase] = [
+        astronomicalUnitsConversion[1],
         pointsConversion[0],
-        astronomicalUnitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ua"] as const;
+      const expected = [fromBase(toBase(v)), "ua"] as const;
       const conversionCandidate = [v, "pt"] as const;
 
       expect(length["ua"](conversionCandidate)).toEqual(expected);
@@ -9461,11 +9461,11 @@ describe("length", () => {
       const picasConversion = linearConversion(0.004233333333333334);
 
       const [toBase, fromBase] = [
+        astronomicalUnitsConversion[1],
         picasConversion[0],
-        astronomicalUnitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ua"] as const;
+      const expected = [fromBase(toBase(v)), "ua"] as const;
       const conversionCandidate = [v, "P"] as const;
 
       expect(length["ua"](conversionCandidate)).toEqual(expected);
@@ -9477,11 +9477,11 @@ describe("length", () => {
       const inchesConversion = linearConversion(0.0254);
 
       const [toBase, fromBase] = [
+        astronomicalUnitsConversion[1],
         inchesConversion[0],
-        astronomicalUnitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ua"] as const;
+      const expected = [fromBase(toBase(v)), "ua"] as const;
       const conversionCandidate = [v, "in"] as const;
 
       expect(length["ua"](conversionCandidate)).toEqual(expected);
@@ -9493,11 +9493,11 @@ describe("length", () => {
       const feetConversion = linearConversion(0.3048);
 
       const [toBase, fromBase] = [
+        astronomicalUnitsConversion[1],
         feetConversion[0],
-        astronomicalUnitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ua"] as const;
+      const expected = [fromBase(toBase(v)), "ua"] as const;
       const conversionCandidate = [v, "ft"] as const;
 
       expect(length["ua"](conversionCandidate)).toEqual(expected);
@@ -9509,11 +9509,11 @@ describe("length", () => {
       const yardsConversion = linearConversion(0.9144);
 
       const [toBase, fromBase] = [
+        astronomicalUnitsConversion[1],
         yardsConversion[0],
-        astronomicalUnitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ua"] as const;
+      const expected = [fromBase(toBase(v)), "ua"] as const;
       const conversionCandidate = [v, "yd"] as const;
 
       expect(length["ua"](conversionCandidate)).toEqual(expected);
@@ -9525,11 +9525,11 @@ describe("length", () => {
       const milesConversion = linearConversion(1609.34);
 
       const [toBase, fromBase] = [
+        astronomicalUnitsConversion[1],
         milesConversion[0],
-        astronomicalUnitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ua"] as const;
+      const expected = [fromBase(toBase(v)), "ua"] as const;
       const conversionCandidate = [v, "mi"] as const;
 
       expect(length["ua"](conversionCandidate)).toEqual(expected);
@@ -9541,11 +9541,11 @@ describe("length", () => {
       const scandinavianMilesConversion = linearConversion(10000);
 
       const [toBase, fromBase] = [
+        astronomicalUnitsConversion[1],
         scandinavianMilesConversion[0],
-        astronomicalUnitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ua"] as const;
+      const expected = [fromBase(toBase(v)), "ua"] as const;
       const conversionCandidate = [v, "smi"] as const;
 
       expect(length["ua"](conversionCandidate)).toEqual(expected);
@@ -9557,11 +9557,11 @@ describe("length", () => {
       const lightyearsConversion = linearConversion(9461000000000000);
 
       const [toBase, fromBase] = [
+        astronomicalUnitsConversion[1],
         lightyearsConversion[0],
-        astronomicalUnitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ua"] as const;
+      const expected = [fromBase(toBase(v)), "ua"] as const;
       const conversionCandidate = [v, "ly"] as const;
 
       expect(length["ua"](conversionCandidate)).toEqual(expected);
@@ -9573,11 +9573,11 @@ describe("length", () => {
       const nauticalMilesConversion = linearConversion(1852);
 
       const [toBase, fromBase] = [
+        astronomicalUnitsConversion[1],
         nauticalMilesConversion[0],
-        astronomicalUnitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ua"] as const;
+      const expected = [fromBase(toBase(v)), "ua"] as const;
       const conversionCandidate = [v, "NM"] as const;
 
       expect(length["ua"](conversionCandidate)).toEqual(expected);
@@ -9589,11 +9589,11 @@ describe("length", () => {
       const fathomsConversion = linearConversion(1.8288);
 
       const [toBase, fromBase] = [
+        astronomicalUnitsConversion[1],
         fathomsConversion[0],
-        astronomicalUnitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ua"] as const;
+      const expected = [fromBase(toBase(v)), "ua"] as const;
       const conversionCandidate = [v, "ftm"] as const;
 
       expect(length["ua"](conversionCandidate)).toEqual(expected);
@@ -9605,11 +9605,11 @@ describe("length", () => {
       const furlongsConversion = linearConversion(201.168);
 
       const [toBase, fromBase] = [
+        astronomicalUnitsConversion[1],
         furlongsConversion[0],
-        astronomicalUnitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ua"] as const;
+      const expected = [fromBase(toBase(v)), "ua"] as const;
       const conversionCandidate = [v, "fur"] as const;
 
       expect(length["ua"](conversionCandidate)).toEqual(expected);
@@ -9623,11 +9623,11 @@ describe("length", () => {
       const parsecsConversion = linearConversion(30860000000000000);
 
       const [toBase, fromBase] = [
+        astronomicalUnitsConversion[1],
         parsecsConversion[0],
-        astronomicalUnitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ua"] as const;
+      const expected = [fromBase(toBase(v)), "ua"] as const;
       const conversionCandidate = [v, "pc"] as const;
 
       expect(length["ua"](conversionCandidate)).toEqual(expected);
@@ -9647,11 +9647,11 @@ describe("length", () => {
       const megametersConversion = linearConversion(1000000);
 
       const [toBase, fromBase] = [
+        parsecsConversion[1],
         megametersConversion[0],
-        parsecsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "pc"] as const;
+      const expected = [fromBase(toBase(v)), "pc"] as const;
       const conversionCandidate = [v, "Mm"] as const;
 
       expect(length["pc"](conversionCandidate)).toEqual(expected);
@@ -9663,11 +9663,11 @@ describe("length", () => {
       const kilometersConversion = linearConversion(1000);
 
       const [toBase, fromBase] = [
+        parsecsConversion[1],
         kilometersConversion[0],
-        parsecsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "pc"] as const;
+      const expected = [fromBase(toBase(v)), "pc"] as const;
       const conversionCandidate = [v, "kM"] as const;
 
       expect(length["pc"](conversionCandidate)).toEqual(expected);
@@ -9679,11 +9679,11 @@ describe("length", () => {
       const hectometersConversion = linearConversion(100);
 
       const [toBase, fromBase] = [
+        parsecsConversion[1],
         hectometersConversion[0],
-        parsecsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "pc"] as const;
+      const expected = [fromBase(toBase(v)), "pc"] as const;
       const conversionCandidate = [v, "hm"] as const;
 
       expect(length["pc"](conversionCandidate)).toEqual(expected);
@@ -9695,11 +9695,11 @@ describe("length", () => {
       const decametersConversion = linearConversion(10);
 
       const [toBase, fromBase] = [
+        parsecsConversion[1],
         decametersConversion[0],
-        parsecsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "pc"] as const;
+      const expected = [fromBase(toBase(v)), "pc"] as const;
       const conversionCandidate = [v, "dam"] as const;
 
       expect(length["pc"](conversionCandidate)).toEqual(expected);
@@ -9711,11 +9711,11 @@ describe("length", () => {
       const metersConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
+        parsecsConversion[1],
         metersConversion[0],
-        parsecsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "pc"] as const;
+      const expected = [fromBase(toBase(v)), "pc"] as const;
       const conversionCandidate = [v, "m"] as const;
 
       expect(length["pc"](conversionCandidate)).toEqual(expected);
@@ -9727,11 +9727,11 @@ describe("length", () => {
       const decimetersConversion = linearConversion(0.1);
 
       const [toBase, fromBase] = [
+        parsecsConversion[1],
         decimetersConversion[0],
-        parsecsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "pc"] as const;
+      const expected = [fromBase(toBase(v)), "pc"] as const;
       const conversionCandidate = [v, "dm"] as const;
 
       expect(length["pc"](conversionCandidate)).toEqual(expected);
@@ -9743,11 +9743,11 @@ describe("length", () => {
       const centimetersConversion = linearConversion(0.01);
 
       const [toBase, fromBase] = [
+        parsecsConversion[1],
         centimetersConversion[0],
-        parsecsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "pc"] as const;
+      const expected = [fromBase(toBase(v)), "pc"] as const;
       const conversionCandidate = [v, "cm"] as const;
 
       expect(length["pc"](conversionCandidate)).toEqual(expected);
@@ -9759,11 +9759,11 @@ describe("length", () => {
       const millimetersConversion = linearConversion(0.001);
 
       const [toBase, fromBase] = [
+        parsecsConversion[1],
         millimetersConversion[0],
-        parsecsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "pc"] as const;
+      const expected = [fromBase(toBase(v)), "pc"] as const;
       const conversionCandidate = [v, "mm"] as const;
 
       expect(length["pc"](conversionCandidate)).toEqual(expected);
@@ -9775,11 +9775,11 @@ describe("length", () => {
       const micrometersConversion = linearConversion(0.000001);
 
       const [toBase, fromBase] = [
+        parsecsConversion[1],
         micrometersConversion[0],
-        parsecsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "pc"] as const;
+      const expected = [fromBase(toBase(v)), "pc"] as const;
       const conversionCandidate = [v, "µm"] as const;
 
       expect(length["pc"](conversionCandidate)).toEqual(expected);
@@ -9791,11 +9791,11 @@ describe("length", () => {
       const nanometersConversion = linearConversion(1e-9);
 
       const [toBase, fromBase] = [
+        parsecsConversion[1],
         nanometersConversion[0],
-        parsecsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "pc"] as const;
+      const expected = [fromBase(toBase(v)), "pc"] as const;
       const conversionCandidate = [v, "nm"] as const;
 
       expect(length["pc"](conversionCandidate)).toEqual(expected);
@@ -9807,11 +9807,11 @@ describe("length", () => {
       const picometersConversion = linearConversion(1e-12);
 
       const [toBase, fromBase] = [
+        parsecsConversion[1],
         picometersConversion[0],
-        parsecsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "pc"] as const;
+      const expected = [fromBase(toBase(v)), "pc"] as const;
       const conversionCandidate = [v, "pm"] as const;
 
       expect(length["pc"](conversionCandidate)).toEqual(expected);
@@ -9823,11 +9823,11 @@ describe("length", () => {
       const twipsConversion = linearConversion(0.00001763888888888889);
 
       const [toBase, fromBase] = [
+        parsecsConversion[1],
         twipsConversion[0],
-        parsecsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "pc"] as const;
+      const expected = [fromBase(toBase(v)), "pc"] as const;
       const conversionCandidate = [v, "tw"] as const;
 
       expect(length["pc"](conversionCandidate)).toEqual(expected);
@@ -9839,11 +9839,11 @@ describe("length", () => {
       const pointsConversion = linearConversion(0.0003527777777777778);
 
       const [toBase, fromBase] = [
+        parsecsConversion[1],
         pointsConversion[0],
-        parsecsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "pc"] as const;
+      const expected = [fromBase(toBase(v)), "pc"] as const;
       const conversionCandidate = [v, "pt"] as const;
 
       expect(length["pc"](conversionCandidate)).toEqual(expected);
@@ -9855,11 +9855,11 @@ describe("length", () => {
       const picasConversion = linearConversion(0.004233333333333334);
 
       const [toBase, fromBase] = [
+        parsecsConversion[1],
         picasConversion[0],
-        parsecsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "pc"] as const;
+      const expected = [fromBase(toBase(v)), "pc"] as const;
       const conversionCandidate = [v, "P"] as const;
 
       expect(length["pc"](conversionCandidate)).toEqual(expected);
@@ -9871,11 +9871,11 @@ describe("length", () => {
       const inchesConversion = linearConversion(0.0254);
 
       const [toBase, fromBase] = [
+        parsecsConversion[1],
         inchesConversion[0],
-        parsecsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "pc"] as const;
+      const expected = [fromBase(toBase(v)), "pc"] as const;
       const conversionCandidate = [v, "in"] as const;
 
       expect(length["pc"](conversionCandidate)).toEqual(expected);
@@ -9887,11 +9887,11 @@ describe("length", () => {
       const feetConversion = linearConversion(0.3048);
 
       const [toBase, fromBase] = [
+        parsecsConversion[1],
         feetConversion[0],
-        parsecsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "pc"] as const;
+      const expected = [fromBase(toBase(v)), "pc"] as const;
       const conversionCandidate = [v, "ft"] as const;
 
       expect(length["pc"](conversionCandidate)).toEqual(expected);
@@ -9903,11 +9903,11 @@ describe("length", () => {
       const yardsConversion = linearConversion(0.9144);
 
       const [toBase, fromBase] = [
+        parsecsConversion[1],
         yardsConversion[0],
-        parsecsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "pc"] as const;
+      const expected = [fromBase(toBase(v)), "pc"] as const;
       const conversionCandidate = [v, "yd"] as const;
 
       expect(length["pc"](conversionCandidate)).toEqual(expected);
@@ -9919,11 +9919,11 @@ describe("length", () => {
       const milesConversion = linearConversion(1609.34);
 
       const [toBase, fromBase] = [
+        parsecsConversion[1],
         milesConversion[0],
-        parsecsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "pc"] as const;
+      const expected = [fromBase(toBase(v)), "pc"] as const;
       const conversionCandidate = [v, "mi"] as const;
 
       expect(length["pc"](conversionCandidate)).toEqual(expected);
@@ -9935,11 +9935,11 @@ describe("length", () => {
       const scandinavianMilesConversion = linearConversion(10000);
 
       const [toBase, fromBase] = [
+        parsecsConversion[1],
         scandinavianMilesConversion[0],
-        parsecsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "pc"] as const;
+      const expected = [fromBase(toBase(v)), "pc"] as const;
       const conversionCandidate = [v, "smi"] as const;
 
       expect(length["pc"](conversionCandidate)).toEqual(expected);
@@ -9951,11 +9951,11 @@ describe("length", () => {
       const lightyearsConversion = linearConversion(9461000000000000);
 
       const [toBase, fromBase] = [
+        parsecsConversion[1],
         lightyearsConversion[0],
-        parsecsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "pc"] as const;
+      const expected = [fromBase(toBase(v)), "pc"] as const;
       const conversionCandidate = [v, "ly"] as const;
 
       expect(length["pc"](conversionCandidate)).toEqual(expected);
@@ -9967,11 +9967,11 @@ describe("length", () => {
       const nauticalMilesConversion = linearConversion(1852);
 
       const [toBase, fromBase] = [
+        parsecsConversion[1],
         nauticalMilesConversion[0],
-        parsecsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "pc"] as const;
+      const expected = [fromBase(toBase(v)), "pc"] as const;
       const conversionCandidate = [v, "NM"] as const;
 
       expect(length["pc"](conversionCandidate)).toEqual(expected);
@@ -9983,11 +9983,11 @@ describe("length", () => {
       const fathomsConversion = linearConversion(1.8288);
 
       const [toBase, fromBase] = [
+        parsecsConversion[1],
         fathomsConversion[0],
-        parsecsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "pc"] as const;
+      const expected = [fromBase(toBase(v)), "pc"] as const;
       const conversionCandidate = [v, "ftm"] as const;
 
       expect(length["pc"](conversionCandidate)).toEqual(expected);
@@ -9999,11 +9999,11 @@ describe("length", () => {
       const furlongsConversion = linearConversion(201.168);
 
       const [toBase, fromBase] = [
+        parsecsConversion[1],
         furlongsConversion[0],
-        parsecsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "pc"] as const;
+      const expected = [fromBase(toBase(v)), "pc"] as const;
       const conversionCandidate = [v, "fur"] as const;
 
       expect(length["pc"](conversionCandidate)).toEqual(expected);
@@ -10015,11 +10015,11 @@ describe("length", () => {
       const astronomicalUnitsConversion = linearConversion(149600000000);
 
       const [toBase, fromBase] = [
+        parsecsConversion[1],
         astronomicalUnitsConversion[0],
-        parsecsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "pc"] as const;
+      const expected = [fromBase(toBase(v)), "pc"] as const;
       const conversionCandidate = [v, "ua"] as const;
 
       expect(length["pc"](conversionCandidate)).toEqual(expected);

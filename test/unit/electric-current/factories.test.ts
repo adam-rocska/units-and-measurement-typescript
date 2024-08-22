@@ -53,11 +53,11 @@ describe("electricCurrent", () => {
       const kiloamperesConversion = linearConversion(1000);
 
       const [toBase, fromBase] = [
+        megaamperesConversion[1],
         kiloamperesConversion[0],
-        megaamperesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "MA"] as const;
+      const expected = [fromBase(toBase(v)), "MA"] as const;
       const conversionCandidate = [v, "kA"] as const;
 
       expect(electricCurrent["MA"](conversionCandidate)).toEqual(expected);
@@ -69,11 +69,11 @@ describe("electricCurrent", () => {
       const amperesConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
+        megaamperesConversion[1],
         amperesConversion[0],
-        megaamperesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "MA"] as const;
+      const expected = [fromBase(toBase(v)), "MA"] as const;
       const conversionCandidate = [v, "A"] as const;
 
       expect(electricCurrent["MA"](conversionCandidate)).toEqual(expected);
@@ -85,11 +85,11 @@ describe("electricCurrent", () => {
       const milliamperesConversion = linearConversion(0.001);
 
       const [toBase, fromBase] = [
+        megaamperesConversion[1],
         milliamperesConversion[0],
-        megaamperesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "MA"] as const;
+      const expected = [fromBase(toBase(v)), "MA"] as const;
       const conversionCandidate = [v, "mA"] as const;
 
       expect(electricCurrent["MA"](conversionCandidate)).toEqual(expected);
@@ -101,11 +101,11 @@ describe("electricCurrent", () => {
       const microamperesConversion = linearConversion(0.000001);
 
       const [toBase, fromBase] = [
+        megaamperesConversion[1],
         microamperesConversion[0],
-        megaamperesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "MA"] as const;
+      const expected = [fromBase(toBase(v)), "MA"] as const;
       const conversionCandidate = [v, "µA"] as const;
 
       expect(electricCurrent["MA"](conversionCandidate)).toEqual(expected);
@@ -125,11 +125,11 @@ describe("electricCurrent", () => {
       const megaamperesConversion = linearConversion(1000000);
 
       const [toBase, fromBase] = [
+        kiloamperesConversion[1],
         megaamperesConversion[0],
-        kiloamperesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "kA"] as const;
+      const expected = [fromBase(toBase(v)), "kA"] as const;
       const conversionCandidate = [v, "MA"] as const;
 
       expect(electricCurrent["kA"](conversionCandidate)).toEqual(expected);
@@ -143,11 +143,11 @@ describe("electricCurrent", () => {
       const amperesConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
+        kiloamperesConversion[1],
         amperesConversion[0],
-        kiloamperesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "kA"] as const;
+      const expected = [fromBase(toBase(v)), "kA"] as const;
       const conversionCandidate = [v, "A"] as const;
 
       expect(electricCurrent["kA"](conversionCandidate)).toEqual(expected);
@@ -159,11 +159,11 @@ describe("electricCurrent", () => {
       const milliamperesConversion = linearConversion(0.001);
 
       const [toBase, fromBase] = [
+        kiloamperesConversion[1],
         milliamperesConversion[0],
-        kiloamperesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "kA"] as const;
+      const expected = [fromBase(toBase(v)), "kA"] as const;
       const conversionCandidate = [v, "mA"] as const;
 
       expect(electricCurrent["kA"](conversionCandidate)).toEqual(expected);
@@ -175,11 +175,11 @@ describe("electricCurrent", () => {
       const microamperesConversion = linearConversion(0.000001);
 
       const [toBase, fromBase] = [
+        kiloamperesConversion[1],
         microamperesConversion[0],
-        kiloamperesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "kA"] as const;
+      const expected = [fromBase(toBase(v)), "kA"] as const;
       const conversionCandidate = [v, "µA"] as const;
 
       expect(electricCurrent["kA"](conversionCandidate)).toEqual(expected);
@@ -199,11 +199,11 @@ describe("electricCurrent", () => {
       const megaamperesConversion = linearConversion(1000000);
 
       const [toBase, fromBase] = [
+        amperesConversion[1],
         megaamperesConversion[0],
-        amperesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "A"] as const;
+      const expected = [fromBase(toBase(v)), "A"] as const;
       const conversionCandidate = [v, "MA"] as const;
 
       expect(electricCurrent["A"](conversionCandidate)).toEqual(expected);
@@ -215,11 +215,11 @@ describe("electricCurrent", () => {
       const kiloamperesConversion = linearConversion(1000);
 
       const [toBase, fromBase] = [
+        amperesConversion[1],
         kiloamperesConversion[0],
-        amperesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "A"] as const;
+      const expected = [fromBase(toBase(v)), "A"] as const;
       const conversionCandidate = [v, "kA"] as const;
 
       expect(electricCurrent["A"](conversionCandidate)).toEqual(expected);
@@ -233,11 +233,11 @@ describe("electricCurrent", () => {
       const milliamperesConversion = linearConversion(0.001);
 
       const [toBase, fromBase] = [
+        amperesConversion[1],
         milliamperesConversion[0],
-        amperesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "A"] as const;
+      const expected = [fromBase(toBase(v)), "A"] as const;
       const conversionCandidate = [v, "mA"] as const;
 
       expect(electricCurrent["A"](conversionCandidate)).toEqual(expected);
@@ -249,11 +249,11 @@ describe("electricCurrent", () => {
       const microamperesConversion = linearConversion(0.000001);
 
       const [toBase, fromBase] = [
+        amperesConversion[1],
         microamperesConversion[0],
-        amperesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "A"] as const;
+      const expected = [fromBase(toBase(v)), "A"] as const;
       const conversionCandidate = [v, "µA"] as const;
 
       expect(electricCurrent["A"](conversionCandidate)).toEqual(expected);
@@ -273,11 +273,11 @@ describe("electricCurrent", () => {
       const megaamperesConversion = linearConversion(1000000);
 
       const [toBase, fromBase] = [
+        milliamperesConversion[1],
         megaamperesConversion[0],
-        milliamperesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "mA"] as const;
+      const expected = [fromBase(toBase(v)), "mA"] as const;
       const conversionCandidate = [v, "MA"] as const;
 
       expect(electricCurrent["mA"](conversionCandidate)).toEqual(expected);
@@ -289,11 +289,11 @@ describe("electricCurrent", () => {
       const kiloamperesConversion = linearConversion(1000);
 
       const [toBase, fromBase] = [
+        milliamperesConversion[1],
         kiloamperesConversion[0],
-        milliamperesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "mA"] as const;
+      const expected = [fromBase(toBase(v)), "mA"] as const;
       const conversionCandidate = [v, "kA"] as const;
 
       expect(electricCurrent["mA"](conversionCandidate)).toEqual(expected);
@@ -305,11 +305,11 @@ describe("electricCurrent", () => {
       const amperesConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
+        milliamperesConversion[1],
         amperesConversion[0],
-        milliamperesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "mA"] as const;
+      const expected = [fromBase(toBase(v)), "mA"] as const;
       const conversionCandidate = [v, "A"] as const;
 
       expect(electricCurrent["mA"](conversionCandidate)).toEqual(expected);
@@ -323,11 +323,11 @@ describe("electricCurrent", () => {
       const microamperesConversion = linearConversion(0.000001);
 
       const [toBase, fromBase] = [
+        milliamperesConversion[1],
         microamperesConversion[0],
-        milliamperesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "mA"] as const;
+      const expected = [fromBase(toBase(v)), "mA"] as const;
       const conversionCandidate = [v, "µA"] as const;
 
       expect(electricCurrent["mA"](conversionCandidate)).toEqual(expected);
@@ -347,11 +347,11 @@ describe("electricCurrent", () => {
       const megaamperesConversion = linearConversion(1000000);
 
       const [toBase, fromBase] = [
+        microamperesConversion[1],
         megaamperesConversion[0],
-        microamperesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "µA"] as const;
+      const expected = [fromBase(toBase(v)), "µA"] as const;
       const conversionCandidate = [v, "MA"] as const;
 
       expect(electricCurrent["µA"](conversionCandidate)).toEqual(expected);
@@ -363,11 +363,11 @@ describe("electricCurrent", () => {
       const kiloamperesConversion = linearConversion(1000);
 
       const [toBase, fromBase] = [
+        microamperesConversion[1],
         kiloamperesConversion[0],
-        microamperesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "µA"] as const;
+      const expected = [fromBase(toBase(v)), "µA"] as const;
       const conversionCandidate = [v, "kA"] as const;
 
       expect(electricCurrent["µA"](conversionCandidate)).toEqual(expected);
@@ -379,11 +379,11 @@ describe("electricCurrent", () => {
       const amperesConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
+        microamperesConversion[1],
         amperesConversion[0],
-        microamperesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "µA"] as const;
+      const expected = [fromBase(toBase(v)), "µA"] as const;
       const conversionCandidate = [v, "A"] as const;
 
       expect(electricCurrent["µA"](conversionCandidate)).toEqual(expected);
@@ -395,11 +395,11 @@ describe("electricCurrent", () => {
       const milliamperesConversion = linearConversion(0.001);
 
       const [toBase, fromBase] = [
+        microamperesConversion[1],
         milliamperesConversion[0],
-        microamperesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "µA"] as const;
+      const expected = [fromBase(toBase(v)), "µA"] as const;
       const conversionCandidate = [v, "mA"] as const;
 
       expect(electricCurrent["µA"](conversionCandidate)).toEqual(expected);

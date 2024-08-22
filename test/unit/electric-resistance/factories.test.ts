@@ -53,11 +53,11 @@ describe("electricResistance", () => {
       const kiloohmsConversion = linearConversion(1000);
 
       const [toBase, fromBase] = [
+        megaohmsConversion[1],
         kiloohmsConversion[0],
-        megaohmsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "MΩ"] as const;
+      const expected = [fromBase(toBase(v)), "MΩ"] as const;
       const conversionCandidate = [v, "kΩ"] as const;
 
       expect(electricResistance["MΩ"](conversionCandidate)).toEqual(expected);
@@ -69,11 +69,11 @@ describe("electricResistance", () => {
       const ohmsConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
+        megaohmsConversion[1],
         ohmsConversion[0],
-        megaohmsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "MΩ"] as const;
+      const expected = [fromBase(toBase(v)), "MΩ"] as const;
       const conversionCandidate = [v, "Ω"] as const;
 
       expect(electricResistance["MΩ"](conversionCandidate)).toEqual(expected);
@@ -85,11 +85,11 @@ describe("electricResistance", () => {
       const milliohmsConversion = linearConversion(0.001);
 
       const [toBase, fromBase] = [
+        megaohmsConversion[1],
         milliohmsConversion[0],
-        megaohmsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "MΩ"] as const;
+      const expected = [fromBase(toBase(v)), "MΩ"] as const;
       const conversionCandidate = [v, "mΩ"] as const;
 
       expect(electricResistance["MΩ"](conversionCandidate)).toEqual(expected);
@@ -101,11 +101,11 @@ describe("electricResistance", () => {
       const microohmsConversion = linearConversion(0.000001);
 
       const [toBase, fromBase] = [
+        megaohmsConversion[1],
         microohmsConversion[0],
-        megaohmsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "MΩ"] as const;
+      const expected = [fromBase(toBase(v)), "MΩ"] as const;
       const conversionCandidate = [v, "µΩ"] as const;
 
       expect(electricResistance["MΩ"](conversionCandidate)).toEqual(expected);
@@ -125,11 +125,11 @@ describe("electricResistance", () => {
       const megaohmsConversion = linearConversion(1000000);
 
       const [toBase, fromBase] = [
+        kiloohmsConversion[1],
         megaohmsConversion[0],
-        kiloohmsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "kΩ"] as const;
+      const expected = [fromBase(toBase(v)), "kΩ"] as const;
       const conversionCandidate = [v, "MΩ"] as const;
 
       expect(electricResistance["kΩ"](conversionCandidate)).toEqual(expected);
@@ -143,11 +143,11 @@ describe("electricResistance", () => {
       const ohmsConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
+        kiloohmsConversion[1],
         ohmsConversion[0],
-        kiloohmsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "kΩ"] as const;
+      const expected = [fromBase(toBase(v)), "kΩ"] as const;
       const conversionCandidate = [v, "Ω"] as const;
 
       expect(electricResistance["kΩ"](conversionCandidate)).toEqual(expected);
@@ -159,11 +159,11 @@ describe("electricResistance", () => {
       const milliohmsConversion = linearConversion(0.001);
 
       const [toBase, fromBase] = [
+        kiloohmsConversion[1],
         milliohmsConversion[0],
-        kiloohmsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "kΩ"] as const;
+      const expected = [fromBase(toBase(v)), "kΩ"] as const;
       const conversionCandidate = [v, "mΩ"] as const;
 
       expect(electricResistance["kΩ"](conversionCandidate)).toEqual(expected);
@@ -175,11 +175,11 @@ describe("electricResistance", () => {
       const microohmsConversion = linearConversion(0.000001);
 
       const [toBase, fromBase] = [
+        kiloohmsConversion[1],
         microohmsConversion[0],
-        kiloohmsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "kΩ"] as const;
+      const expected = [fromBase(toBase(v)), "kΩ"] as const;
       const conversionCandidate = [v, "µΩ"] as const;
 
       expect(electricResistance["kΩ"](conversionCandidate)).toEqual(expected);
@@ -199,11 +199,11 @@ describe("electricResistance", () => {
       const megaohmsConversion = linearConversion(1000000);
 
       const [toBase, fromBase] = [
+        ohmsConversion[1],
         megaohmsConversion[0],
-        ohmsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Ω"] as const;
+      const expected = [fromBase(toBase(v)), "Ω"] as const;
       const conversionCandidate = [v, "MΩ"] as const;
 
       expect(electricResistance["Ω"](conversionCandidate)).toEqual(expected);
@@ -215,11 +215,11 @@ describe("electricResistance", () => {
       const kiloohmsConversion = linearConversion(1000);
 
       const [toBase, fromBase] = [
+        ohmsConversion[1],
         kiloohmsConversion[0],
-        ohmsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Ω"] as const;
+      const expected = [fromBase(toBase(v)), "Ω"] as const;
       const conversionCandidate = [v, "kΩ"] as const;
 
       expect(electricResistance["Ω"](conversionCandidate)).toEqual(expected);
@@ -233,11 +233,11 @@ describe("electricResistance", () => {
       const milliohmsConversion = linearConversion(0.001);
 
       const [toBase, fromBase] = [
+        ohmsConversion[1],
         milliohmsConversion[0],
-        ohmsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Ω"] as const;
+      const expected = [fromBase(toBase(v)), "Ω"] as const;
       const conversionCandidate = [v, "mΩ"] as const;
 
       expect(electricResistance["Ω"](conversionCandidate)).toEqual(expected);
@@ -249,11 +249,11 @@ describe("electricResistance", () => {
       const microohmsConversion = linearConversion(0.000001);
 
       const [toBase, fromBase] = [
+        ohmsConversion[1],
         microohmsConversion[0],
-        ohmsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Ω"] as const;
+      const expected = [fromBase(toBase(v)), "Ω"] as const;
       const conversionCandidate = [v, "µΩ"] as const;
 
       expect(electricResistance["Ω"](conversionCandidate)).toEqual(expected);
@@ -273,11 +273,11 @@ describe("electricResistance", () => {
       const megaohmsConversion = linearConversion(1000000);
 
       const [toBase, fromBase] = [
+        milliohmsConversion[1],
         megaohmsConversion[0],
-        milliohmsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "mΩ"] as const;
+      const expected = [fromBase(toBase(v)), "mΩ"] as const;
       const conversionCandidate = [v, "MΩ"] as const;
 
       expect(electricResistance["mΩ"](conversionCandidate)).toEqual(expected);
@@ -289,11 +289,11 @@ describe("electricResistance", () => {
       const kiloohmsConversion = linearConversion(1000);
 
       const [toBase, fromBase] = [
+        milliohmsConversion[1],
         kiloohmsConversion[0],
-        milliohmsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "mΩ"] as const;
+      const expected = [fromBase(toBase(v)), "mΩ"] as const;
       const conversionCandidate = [v, "kΩ"] as const;
 
       expect(electricResistance["mΩ"](conversionCandidate)).toEqual(expected);
@@ -305,11 +305,11 @@ describe("electricResistance", () => {
       const ohmsConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
+        milliohmsConversion[1],
         ohmsConversion[0],
-        milliohmsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "mΩ"] as const;
+      const expected = [fromBase(toBase(v)), "mΩ"] as const;
       const conversionCandidate = [v, "Ω"] as const;
 
       expect(electricResistance["mΩ"](conversionCandidate)).toEqual(expected);
@@ -323,11 +323,11 @@ describe("electricResistance", () => {
       const microohmsConversion = linearConversion(0.000001);
 
       const [toBase, fromBase] = [
+        milliohmsConversion[1],
         microohmsConversion[0],
-        milliohmsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "mΩ"] as const;
+      const expected = [fromBase(toBase(v)), "mΩ"] as const;
       const conversionCandidate = [v, "µΩ"] as const;
 
       expect(electricResistance["mΩ"](conversionCandidate)).toEqual(expected);
@@ -347,11 +347,11 @@ describe("electricResistance", () => {
       const megaohmsConversion = linearConversion(1000000);
 
       const [toBase, fromBase] = [
+        microohmsConversion[1],
         megaohmsConversion[0],
-        microohmsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "µΩ"] as const;
+      const expected = [fromBase(toBase(v)), "µΩ"] as const;
       const conversionCandidate = [v, "MΩ"] as const;
 
       expect(electricResistance["µΩ"](conversionCandidate)).toEqual(expected);
@@ -363,11 +363,11 @@ describe("electricResistance", () => {
       const kiloohmsConversion = linearConversion(1000);
 
       const [toBase, fromBase] = [
+        microohmsConversion[1],
         kiloohmsConversion[0],
-        microohmsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "µΩ"] as const;
+      const expected = [fromBase(toBase(v)), "µΩ"] as const;
       const conversionCandidate = [v, "kΩ"] as const;
 
       expect(electricResistance["µΩ"](conversionCandidate)).toEqual(expected);
@@ -379,11 +379,11 @@ describe("electricResistance", () => {
       const ohmsConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
+        microohmsConversion[1],
         ohmsConversion[0],
-        microohmsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "µΩ"] as const;
+      const expected = [fromBase(toBase(v)), "µΩ"] as const;
       const conversionCandidate = [v, "Ω"] as const;
 
       expect(electricResistance["µΩ"](conversionCandidate)).toEqual(expected);
@@ -395,11 +395,11 @@ describe("electricResistance", () => {
       const milliohmsConversion = linearConversion(0.001);
 
       const [toBase, fromBase] = [
+        microohmsConversion[1],
         milliohmsConversion[0],
-        microohmsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "µΩ"] as const;
+      const expected = [fromBase(toBase(v)), "µΩ"] as const;
       const conversionCandidate = [v, "mΩ"] as const;
 
       expect(electricResistance["µΩ"](conversionCandidate)).toEqual(expected);

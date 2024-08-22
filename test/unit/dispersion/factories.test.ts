@@ -39,11 +39,11 @@ describe("dispersion", () => {
       const partsPerBillionConversion = linearConversion(0.001);
 
       const [toBase, fromBase] = [
+        partsPerMillionConversion[1],
         partsPerBillionConversion[0],
-        partsPerMillionConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ppm"] as const;
+      const expected = [fromBase(toBase(v)), "ppm"] as const;
       const conversionCandidate = [v, "ppb"] as const;
 
       expect(dispersion["ppm"](conversionCandidate)).toEqual(expected);
@@ -55,11 +55,11 @@ describe("dispersion", () => {
       const partsPerTrillionConversion = linearConversion(0.000001);
 
       const [toBase, fromBase] = [
+        partsPerMillionConversion[1],
         partsPerTrillionConversion[0],
-        partsPerMillionConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ppm"] as const;
+      const expected = [fromBase(toBase(v)), "ppm"] as const;
       const conversionCandidate = [v, "ppt"] as const;
 
       expect(dispersion["ppm"](conversionCandidate)).toEqual(expected);
@@ -79,11 +79,11 @@ describe("dispersion", () => {
       const partsPerMillionConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
+        partsPerBillionConversion[1],
         partsPerMillionConversion[0],
-        partsPerBillionConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ppb"] as const;
+      const expected = [fromBase(toBase(v)), "ppb"] as const;
       const conversionCandidate = [v, "ppm"] as const;
 
       expect(dispersion["ppb"](conversionCandidate)).toEqual(expected);
@@ -97,11 +97,11 @@ describe("dispersion", () => {
       const partsPerTrillionConversion = linearConversion(0.000001);
 
       const [toBase, fromBase] = [
+        partsPerBillionConversion[1],
         partsPerTrillionConversion[0],
-        partsPerBillionConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ppb"] as const;
+      const expected = [fromBase(toBase(v)), "ppb"] as const;
       const conversionCandidate = [v, "ppt"] as const;
 
       expect(dispersion["ppb"](conversionCandidate)).toEqual(expected);
@@ -121,11 +121,11 @@ describe("dispersion", () => {
       const partsPerMillionConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
+        partsPerTrillionConversion[1],
         partsPerMillionConversion[0],
-        partsPerTrillionConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ppt"] as const;
+      const expected = [fromBase(toBase(v)), "ppt"] as const;
       const conversionCandidate = [v, "ppm"] as const;
 
       expect(dispersion["ppt"](conversionCandidate)).toEqual(expected);
@@ -137,11 +137,11 @@ describe("dispersion", () => {
       const partsPerBillionConversion = linearConversion(0.001);
 
       const [toBase, fromBase] = [
+        partsPerTrillionConversion[1],
         partsPerBillionConversion[0],
-        partsPerTrillionConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ppt"] as const;
+      const expected = [fromBase(toBase(v)), "ppt"] as const;
       const conversionCandidate = [v, "ppb"] as const;
 
       expect(dispersion["ppt"](conversionCandidate)).toEqual(expected);

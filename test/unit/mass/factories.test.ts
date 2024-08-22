@@ -130,11 +130,11 @@ describe("mass", () => {
       const gramsConversion = linearConversion(0.001);
 
       const [toBase, fromBase] = [
+        kilogramsConversion[1],
         gramsConversion[0],
-        kilogramsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "kg"] as const;
+      const expected = [fromBase(toBase(v)), "kg"] as const;
       const conversionCandidate = [v, "g"] as const;
 
       expect(mass["kg"](conversionCandidate)).toEqual(expected);
@@ -146,11 +146,11 @@ describe("mass", () => {
       const decigramsConversion = linearConversion(0.0001);
 
       const [toBase, fromBase] = [
+        kilogramsConversion[1],
         decigramsConversion[0],
-        kilogramsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "kg"] as const;
+      const expected = [fromBase(toBase(v)), "kg"] as const;
       const conversionCandidate = [v, "dg"] as const;
 
       expect(mass["kg"](conversionCandidate)).toEqual(expected);
@@ -162,11 +162,11 @@ describe("mass", () => {
       const centigramsConversion = linearConversion(0.00001);
 
       const [toBase, fromBase] = [
+        kilogramsConversion[1],
         centigramsConversion[0],
-        kilogramsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "kg"] as const;
+      const expected = [fromBase(toBase(v)), "kg"] as const;
       const conversionCandidate = [v, "cg"] as const;
 
       expect(mass["kg"](conversionCandidate)).toEqual(expected);
@@ -178,11 +178,11 @@ describe("mass", () => {
       const milligramsConversion = linearConversion(0.000001);
 
       const [toBase, fromBase] = [
+        kilogramsConversion[1],
         milligramsConversion[0],
-        kilogramsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "kg"] as const;
+      const expected = [fromBase(toBase(v)), "kg"] as const;
       const conversionCandidate = [v, "mg"] as const;
 
       expect(mass["kg"](conversionCandidate)).toEqual(expected);
@@ -194,11 +194,11 @@ describe("mass", () => {
       const microgramsConversion = linearConversion(1e-9);
 
       const [toBase, fromBase] = [
+        kilogramsConversion[1],
         microgramsConversion[0],
-        kilogramsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "kg"] as const;
+      const expected = [fromBase(toBase(v)), "kg"] as const;
       const conversionCandidate = [v, "µg"] as const;
 
       expect(mass["kg"](conversionCandidate)).toEqual(expected);
@@ -210,11 +210,11 @@ describe("mass", () => {
       const nanogramsConversion = linearConversion(1e-12);
 
       const [toBase, fromBase] = [
+        kilogramsConversion[1],
         nanogramsConversion[0],
-        kilogramsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "kg"] as const;
+      const expected = [fromBase(toBase(v)), "kg"] as const;
       const conversionCandidate = [v, "ng"] as const;
 
       expect(mass["kg"](conversionCandidate)).toEqual(expected);
@@ -226,11 +226,11 @@ describe("mass", () => {
       const picogramsConversion = linearConversion(1e-15);
 
       const [toBase, fromBase] = [
+        kilogramsConversion[1],
         picogramsConversion[0],
-        kilogramsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "kg"] as const;
+      const expected = [fromBase(toBase(v)), "kg"] as const;
       const conversionCandidate = [v, "pg"] as const;
 
       expect(mass["kg"](conversionCandidate)).toEqual(expected);
@@ -242,11 +242,11 @@ describe("mass", () => {
       const ouncesConversion = linearConversion(0.0283495);
 
       const [toBase, fromBase] = [
+        kilogramsConversion[1],
         ouncesConversion[0],
-        kilogramsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "kg"] as const;
+      const expected = [fromBase(toBase(v)), "kg"] as const;
       const conversionCandidate = [v, "oz"] as const;
 
       expect(mass["kg"](conversionCandidate)).toEqual(expected);
@@ -258,11 +258,11 @@ describe("mass", () => {
       const poundsConversion = linearConversion(0.453592);
 
       const [toBase, fromBase] = [
+        kilogramsConversion[1],
         poundsConversion[0],
-        kilogramsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "kg"] as const;
+      const expected = [fromBase(toBase(v)), "kg"] as const;
       const conversionCandidate = [v, "lb"] as const;
 
       expect(mass["kg"](conversionCandidate)).toEqual(expected);
@@ -274,11 +274,11 @@ describe("mass", () => {
       const stonesConversion = linearConversion(0.157473);
 
       const [toBase, fromBase] = [
+        kilogramsConversion[1],
         stonesConversion[0],
-        kilogramsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "kg"] as const;
+      const expected = [fromBase(toBase(v)), "kg"] as const;
       const conversionCandidate = [v, "st"] as const;
 
       expect(mass["kg"](conversionCandidate)).toEqual(expected);
@@ -290,11 +290,11 @@ describe("mass", () => {
       const metricTonsConversion = linearConversion(1000);
 
       const [toBase, fromBase] = [
+        kilogramsConversion[1],
         metricTonsConversion[0],
-        kilogramsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "kg"] as const;
+      const expected = [fromBase(toBase(v)), "kg"] as const;
       const conversionCandidate = [v, "t"] as const;
 
       expect(mass["kg"](conversionCandidate)).toEqual(expected);
@@ -306,11 +306,11 @@ describe("mass", () => {
       const shortTonsConversion = linearConversion(907.185);
 
       const [toBase, fromBase] = [
+        kilogramsConversion[1],
         shortTonsConversion[0],
-        kilogramsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "kg"] as const;
+      const expected = [fromBase(toBase(v)), "kg"] as const;
       const conversionCandidate = [v, "ton"] as const;
 
       expect(mass["kg"](conversionCandidate)).toEqual(expected);
@@ -322,11 +322,11 @@ describe("mass", () => {
       const caratsConversion = linearConversion(0.0002);
 
       const [toBase, fromBase] = [
+        kilogramsConversion[1],
         caratsConversion[0],
-        kilogramsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "kg"] as const;
+      const expected = [fromBase(toBase(v)), "kg"] as const;
       const conversionCandidate = [v, "ct"] as const;
 
       expect(mass["kg"](conversionCandidate)).toEqual(expected);
@@ -338,11 +338,11 @@ describe("mass", () => {
       const ouncesTroyConversion = linearConversion(0.03110348);
 
       const [toBase, fromBase] = [
+        kilogramsConversion[1],
         ouncesTroyConversion[0],
-        kilogramsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "kg"] as const;
+      const expected = [fromBase(toBase(v)), "kg"] as const;
       const conversionCandidate = [v, "oz t"] as const;
 
       expect(mass["kg"](conversionCandidate)).toEqual(expected);
@@ -354,11 +354,11 @@ describe("mass", () => {
       const slugsConversion = linearConversion(14.5939);
 
       const [toBase, fromBase] = [
+        kilogramsConversion[1],
         slugsConversion[0],
-        kilogramsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "kg"] as const;
+      const expected = [fromBase(toBase(v)), "kg"] as const;
       const conversionCandidate = [v, "slug"] as const;
 
       expect(mass["kg"](conversionCandidate)).toEqual(expected);
@@ -378,11 +378,11 @@ describe("mass", () => {
       const kilogramsConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
+        gramsConversion[1],
         kilogramsConversion[0],
-        gramsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "g"] as const;
+      const expected = [fromBase(toBase(v)), "g"] as const;
       const conversionCandidate = [v, "kg"] as const;
 
       expect(mass["g"](conversionCandidate)).toEqual(expected);
@@ -396,11 +396,11 @@ describe("mass", () => {
       const decigramsConversion = linearConversion(0.0001);
 
       const [toBase, fromBase] = [
+        gramsConversion[1],
         decigramsConversion[0],
-        gramsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "g"] as const;
+      const expected = [fromBase(toBase(v)), "g"] as const;
       const conversionCandidate = [v, "dg"] as const;
 
       expect(mass["g"](conversionCandidate)).toEqual(expected);
@@ -412,11 +412,11 @@ describe("mass", () => {
       const centigramsConversion = linearConversion(0.00001);
 
       const [toBase, fromBase] = [
+        gramsConversion[1],
         centigramsConversion[0],
-        gramsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "g"] as const;
+      const expected = [fromBase(toBase(v)), "g"] as const;
       const conversionCandidate = [v, "cg"] as const;
 
       expect(mass["g"](conversionCandidate)).toEqual(expected);
@@ -428,11 +428,11 @@ describe("mass", () => {
       const milligramsConversion = linearConversion(0.000001);
 
       const [toBase, fromBase] = [
+        gramsConversion[1],
         milligramsConversion[0],
-        gramsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "g"] as const;
+      const expected = [fromBase(toBase(v)), "g"] as const;
       const conversionCandidate = [v, "mg"] as const;
 
       expect(mass["g"](conversionCandidate)).toEqual(expected);
@@ -444,11 +444,11 @@ describe("mass", () => {
       const microgramsConversion = linearConversion(1e-9);
 
       const [toBase, fromBase] = [
+        gramsConversion[1],
         microgramsConversion[0],
-        gramsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "g"] as const;
+      const expected = [fromBase(toBase(v)), "g"] as const;
       const conversionCandidate = [v, "µg"] as const;
 
       expect(mass["g"](conversionCandidate)).toEqual(expected);
@@ -460,11 +460,11 @@ describe("mass", () => {
       const nanogramsConversion = linearConversion(1e-12);
 
       const [toBase, fromBase] = [
+        gramsConversion[1],
         nanogramsConversion[0],
-        gramsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "g"] as const;
+      const expected = [fromBase(toBase(v)), "g"] as const;
       const conversionCandidate = [v, "ng"] as const;
 
       expect(mass["g"](conversionCandidate)).toEqual(expected);
@@ -476,11 +476,11 @@ describe("mass", () => {
       const picogramsConversion = linearConversion(1e-15);
 
       const [toBase, fromBase] = [
+        gramsConversion[1],
         picogramsConversion[0],
-        gramsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "g"] as const;
+      const expected = [fromBase(toBase(v)), "g"] as const;
       const conversionCandidate = [v, "pg"] as const;
 
       expect(mass["g"](conversionCandidate)).toEqual(expected);
@@ -492,11 +492,11 @@ describe("mass", () => {
       const ouncesConversion = linearConversion(0.0283495);
 
       const [toBase, fromBase] = [
+        gramsConversion[1],
         ouncesConversion[0],
-        gramsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "g"] as const;
+      const expected = [fromBase(toBase(v)), "g"] as const;
       const conversionCandidate = [v, "oz"] as const;
 
       expect(mass["g"](conversionCandidate)).toEqual(expected);
@@ -508,11 +508,11 @@ describe("mass", () => {
       const poundsConversion = linearConversion(0.453592);
 
       const [toBase, fromBase] = [
+        gramsConversion[1],
         poundsConversion[0],
-        gramsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "g"] as const;
+      const expected = [fromBase(toBase(v)), "g"] as const;
       const conversionCandidate = [v, "lb"] as const;
 
       expect(mass["g"](conversionCandidate)).toEqual(expected);
@@ -524,11 +524,11 @@ describe("mass", () => {
       const stonesConversion = linearConversion(0.157473);
 
       const [toBase, fromBase] = [
+        gramsConversion[1],
         stonesConversion[0],
-        gramsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "g"] as const;
+      const expected = [fromBase(toBase(v)), "g"] as const;
       const conversionCandidate = [v, "st"] as const;
 
       expect(mass["g"](conversionCandidate)).toEqual(expected);
@@ -540,11 +540,11 @@ describe("mass", () => {
       const metricTonsConversion = linearConversion(1000);
 
       const [toBase, fromBase] = [
+        gramsConversion[1],
         metricTonsConversion[0],
-        gramsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "g"] as const;
+      const expected = [fromBase(toBase(v)), "g"] as const;
       const conversionCandidate = [v, "t"] as const;
 
       expect(mass["g"](conversionCandidate)).toEqual(expected);
@@ -556,11 +556,11 @@ describe("mass", () => {
       const shortTonsConversion = linearConversion(907.185);
 
       const [toBase, fromBase] = [
+        gramsConversion[1],
         shortTonsConversion[0],
-        gramsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "g"] as const;
+      const expected = [fromBase(toBase(v)), "g"] as const;
       const conversionCandidate = [v, "ton"] as const;
 
       expect(mass["g"](conversionCandidate)).toEqual(expected);
@@ -572,11 +572,11 @@ describe("mass", () => {
       const caratsConversion = linearConversion(0.0002);
 
       const [toBase, fromBase] = [
+        gramsConversion[1],
         caratsConversion[0],
-        gramsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "g"] as const;
+      const expected = [fromBase(toBase(v)), "g"] as const;
       const conversionCandidate = [v, "ct"] as const;
 
       expect(mass["g"](conversionCandidate)).toEqual(expected);
@@ -588,11 +588,11 @@ describe("mass", () => {
       const ouncesTroyConversion = linearConversion(0.03110348);
 
       const [toBase, fromBase] = [
+        gramsConversion[1],
         ouncesTroyConversion[0],
-        gramsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "g"] as const;
+      const expected = [fromBase(toBase(v)), "g"] as const;
       const conversionCandidate = [v, "oz t"] as const;
 
       expect(mass["g"](conversionCandidate)).toEqual(expected);
@@ -604,11 +604,11 @@ describe("mass", () => {
       const slugsConversion = linearConversion(14.5939);
 
       const [toBase, fromBase] = [
+        gramsConversion[1],
         slugsConversion[0],
-        gramsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "g"] as const;
+      const expected = [fromBase(toBase(v)), "g"] as const;
       const conversionCandidate = [v, "slug"] as const;
 
       expect(mass["g"](conversionCandidate)).toEqual(expected);
@@ -628,11 +628,11 @@ describe("mass", () => {
       const kilogramsConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
+        decigramsConversion[1],
         kilogramsConversion[0],
-        decigramsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "dg"] as const;
+      const expected = [fromBase(toBase(v)), "dg"] as const;
       const conversionCandidate = [v, "kg"] as const;
 
       expect(mass["dg"](conversionCandidate)).toEqual(expected);
@@ -644,11 +644,11 @@ describe("mass", () => {
       const gramsConversion = linearConversion(0.001);
 
       const [toBase, fromBase] = [
+        decigramsConversion[1],
         gramsConversion[0],
-        decigramsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "dg"] as const;
+      const expected = [fromBase(toBase(v)), "dg"] as const;
       const conversionCandidate = [v, "g"] as const;
 
       expect(mass["dg"](conversionCandidate)).toEqual(expected);
@@ -662,11 +662,11 @@ describe("mass", () => {
       const centigramsConversion = linearConversion(0.00001);
 
       const [toBase, fromBase] = [
+        decigramsConversion[1],
         centigramsConversion[0],
-        decigramsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "dg"] as const;
+      const expected = [fromBase(toBase(v)), "dg"] as const;
       const conversionCandidate = [v, "cg"] as const;
 
       expect(mass["dg"](conversionCandidate)).toEqual(expected);
@@ -678,11 +678,11 @@ describe("mass", () => {
       const milligramsConversion = linearConversion(0.000001);
 
       const [toBase, fromBase] = [
+        decigramsConversion[1],
         milligramsConversion[0],
-        decigramsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "dg"] as const;
+      const expected = [fromBase(toBase(v)), "dg"] as const;
       const conversionCandidate = [v, "mg"] as const;
 
       expect(mass["dg"](conversionCandidate)).toEqual(expected);
@@ -694,11 +694,11 @@ describe("mass", () => {
       const microgramsConversion = linearConversion(1e-9);
 
       const [toBase, fromBase] = [
+        decigramsConversion[1],
         microgramsConversion[0],
-        decigramsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "dg"] as const;
+      const expected = [fromBase(toBase(v)), "dg"] as const;
       const conversionCandidate = [v, "µg"] as const;
 
       expect(mass["dg"](conversionCandidate)).toEqual(expected);
@@ -710,11 +710,11 @@ describe("mass", () => {
       const nanogramsConversion = linearConversion(1e-12);
 
       const [toBase, fromBase] = [
+        decigramsConversion[1],
         nanogramsConversion[0],
-        decigramsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "dg"] as const;
+      const expected = [fromBase(toBase(v)), "dg"] as const;
       const conversionCandidate = [v, "ng"] as const;
 
       expect(mass["dg"](conversionCandidate)).toEqual(expected);
@@ -726,11 +726,11 @@ describe("mass", () => {
       const picogramsConversion = linearConversion(1e-15);
 
       const [toBase, fromBase] = [
+        decigramsConversion[1],
         picogramsConversion[0],
-        decigramsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "dg"] as const;
+      const expected = [fromBase(toBase(v)), "dg"] as const;
       const conversionCandidate = [v, "pg"] as const;
 
       expect(mass["dg"](conversionCandidate)).toEqual(expected);
@@ -742,11 +742,11 @@ describe("mass", () => {
       const ouncesConversion = linearConversion(0.0283495);
 
       const [toBase, fromBase] = [
+        decigramsConversion[1],
         ouncesConversion[0],
-        decigramsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "dg"] as const;
+      const expected = [fromBase(toBase(v)), "dg"] as const;
       const conversionCandidate = [v, "oz"] as const;
 
       expect(mass["dg"](conversionCandidate)).toEqual(expected);
@@ -758,11 +758,11 @@ describe("mass", () => {
       const poundsConversion = linearConversion(0.453592);
 
       const [toBase, fromBase] = [
+        decigramsConversion[1],
         poundsConversion[0],
-        decigramsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "dg"] as const;
+      const expected = [fromBase(toBase(v)), "dg"] as const;
       const conversionCandidate = [v, "lb"] as const;
 
       expect(mass["dg"](conversionCandidate)).toEqual(expected);
@@ -774,11 +774,11 @@ describe("mass", () => {
       const stonesConversion = linearConversion(0.157473);
 
       const [toBase, fromBase] = [
+        decigramsConversion[1],
         stonesConversion[0],
-        decigramsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "dg"] as const;
+      const expected = [fromBase(toBase(v)), "dg"] as const;
       const conversionCandidate = [v, "st"] as const;
 
       expect(mass["dg"](conversionCandidate)).toEqual(expected);
@@ -790,11 +790,11 @@ describe("mass", () => {
       const metricTonsConversion = linearConversion(1000);
 
       const [toBase, fromBase] = [
+        decigramsConversion[1],
         metricTonsConversion[0],
-        decigramsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "dg"] as const;
+      const expected = [fromBase(toBase(v)), "dg"] as const;
       const conversionCandidate = [v, "t"] as const;
 
       expect(mass["dg"](conversionCandidate)).toEqual(expected);
@@ -806,11 +806,11 @@ describe("mass", () => {
       const shortTonsConversion = linearConversion(907.185);
 
       const [toBase, fromBase] = [
+        decigramsConversion[1],
         shortTonsConversion[0],
-        decigramsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "dg"] as const;
+      const expected = [fromBase(toBase(v)), "dg"] as const;
       const conversionCandidate = [v, "ton"] as const;
 
       expect(mass["dg"](conversionCandidate)).toEqual(expected);
@@ -822,11 +822,11 @@ describe("mass", () => {
       const caratsConversion = linearConversion(0.0002);
 
       const [toBase, fromBase] = [
+        decigramsConversion[1],
         caratsConversion[0],
-        decigramsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "dg"] as const;
+      const expected = [fromBase(toBase(v)), "dg"] as const;
       const conversionCandidate = [v, "ct"] as const;
 
       expect(mass["dg"](conversionCandidate)).toEqual(expected);
@@ -838,11 +838,11 @@ describe("mass", () => {
       const ouncesTroyConversion = linearConversion(0.03110348);
 
       const [toBase, fromBase] = [
+        decigramsConversion[1],
         ouncesTroyConversion[0],
-        decigramsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "dg"] as const;
+      const expected = [fromBase(toBase(v)), "dg"] as const;
       const conversionCandidate = [v, "oz t"] as const;
 
       expect(mass["dg"](conversionCandidate)).toEqual(expected);
@@ -854,11 +854,11 @@ describe("mass", () => {
       const slugsConversion = linearConversion(14.5939);
 
       const [toBase, fromBase] = [
+        decigramsConversion[1],
         slugsConversion[0],
-        decigramsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "dg"] as const;
+      const expected = [fromBase(toBase(v)), "dg"] as const;
       const conversionCandidate = [v, "slug"] as const;
 
       expect(mass["dg"](conversionCandidate)).toEqual(expected);
@@ -878,11 +878,11 @@ describe("mass", () => {
       const kilogramsConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
+        centigramsConversion[1],
         kilogramsConversion[0],
-        centigramsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "cg"] as const;
+      const expected = [fromBase(toBase(v)), "cg"] as const;
       const conversionCandidate = [v, "kg"] as const;
 
       expect(mass["cg"](conversionCandidate)).toEqual(expected);
@@ -894,11 +894,11 @@ describe("mass", () => {
       const gramsConversion = linearConversion(0.001);
 
       const [toBase, fromBase] = [
+        centigramsConversion[1],
         gramsConversion[0],
-        centigramsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "cg"] as const;
+      const expected = [fromBase(toBase(v)), "cg"] as const;
       const conversionCandidate = [v, "g"] as const;
 
       expect(mass["cg"](conversionCandidate)).toEqual(expected);
@@ -910,11 +910,11 @@ describe("mass", () => {
       const decigramsConversion = linearConversion(0.0001);
 
       const [toBase, fromBase] = [
+        centigramsConversion[1],
         decigramsConversion[0],
-        centigramsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "cg"] as const;
+      const expected = [fromBase(toBase(v)), "cg"] as const;
       const conversionCandidate = [v, "dg"] as const;
 
       expect(mass["cg"](conversionCandidate)).toEqual(expected);
@@ -928,11 +928,11 @@ describe("mass", () => {
       const milligramsConversion = linearConversion(0.000001);
 
       const [toBase, fromBase] = [
+        centigramsConversion[1],
         milligramsConversion[0],
-        centigramsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "cg"] as const;
+      const expected = [fromBase(toBase(v)), "cg"] as const;
       const conversionCandidate = [v, "mg"] as const;
 
       expect(mass["cg"](conversionCandidate)).toEqual(expected);
@@ -944,11 +944,11 @@ describe("mass", () => {
       const microgramsConversion = linearConversion(1e-9);
 
       const [toBase, fromBase] = [
+        centigramsConversion[1],
         microgramsConversion[0],
-        centigramsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "cg"] as const;
+      const expected = [fromBase(toBase(v)), "cg"] as const;
       const conversionCandidate = [v, "µg"] as const;
 
       expect(mass["cg"](conversionCandidate)).toEqual(expected);
@@ -960,11 +960,11 @@ describe("mass", () => {
       const nanogramsConversion = linearConversion(1e-12);
 
       const [toBase, fromBase] = [
+        centigramsConversion[1],
         nanogramsConversion[0],
-        centigramsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "cg"] as const;
+      const expected = [fromBase(toBase(v)), "cg"] as const;
       const conversionCandidate = [v, "ng"] as const;
 
       expect(mass["cg"](conversionCandidate)).toEqual(expected);
@@ -976,11 +976,11 @@ describe("mass", () => {
       const picogramsConversion = linearConversion(1e-15);
 
       const [toBase, fromBase] = [
+        centigramsConversion[1],
         picogramsConversion[0],
-        centigramsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "cg"] as const;
+      const expected = [fromBase(toBase(v)), "cg"] as const;
       const conversionCandidate = [v, "pg"] as const;
 
       expect(mass["cg"](conversionCandidate)).toEqual(expected);
@@ -992,11 +992,11 @@ describe("mass", () => {
       const ouncesConversion = linearConversion(0.0283495);
 
       const [toBase, fromBase] = [
+        centigramsConversion[1],
         ouncesConversion[0],
-        centigramsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "cg"] as const;
+      const expected = [fromBase(toBase(v)), "cg"] as const;
       const conversionCandidate = [v, "oz"] as const;
 
       expect(mass["cg"](conversionCandidate)).toEqual(expected);
@@ -1008,11 +1008,11 @@ describe("mass", () => {
       const poundsConversion = linearConversion(0.453592);
 
       const [toBase, fromBase] = [
+        centigramsConversion[1],
         poundsConversion[0],
-        centigramsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "cg"] as const;
+      const expected = [fromBase(toBase(v)), "cg"] as const;
       const conversionCandidate = [v, "lb"] as const;
 
       expect(mass["cg"](conversionCandidate)).toEqual(expected);
@@ -1024,11 +1024,11 @@ describe("mass", () => {
       const stonesConversion = linearConversion(0.157473);
 
       const [toBase, fromBase] = [
+        centigramsConversion[1],
         stonesConversion[0],
-        centigramsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "cg"] as const;
+      const expected = [fromBase(toBase(v)), "cg"] as const;
       const conversionCandidate = [v, "st"] as const;
 
       expect(mass["cg"](conversionCandidate)).toEqual(expected);
@@ -1040,11 +1040,11 @@ describe("mass", () => {
       const metricTonsConversion = linearConversion(1000);
 
       const [toBase, fromBase] = [
+        centigramsConversion[1],
         metricTonsConversion[0],
-        centigramsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "cg"] as const;
+      const expected = [fromBase(toBase(v)), "cg"] as const;
       const conversionCandidate = [v, "t"] as const;
 
       expect(mass["cg"](conversionCandidate)).toEqual(expected);
@@ -1056,11 +1056,11 @@ describe("mass", () => {
       const shortTonsConversion = linearConversion(907.185);
 
       const [toBase, fromBase] = [
+        centigramsConversion[1],
         shortTonsConversion[0],
-        centigramsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "cg"] as const;
+      const expected = [fromBase(toBase(v)), "cg"] as const;
       const conversionCandidate = [v, "ton"] as const;
 
       expect(mass["cg"](conversionCandidate)).toEqual(expected);
@@ -1072,11 +1072,11 @@ describe("mass", () => {
       const caratsConversion = linearConversion(0.0002);
 
       const [toBase, fromBase] = [
+        centigramsConversion[1],
         caratsConversion[0],
-        centigramsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "cg"] as const;
+      const expected = [fromBase(toBase(v)), "cg"] as const;
       const conversionCandidate = [v, "ct"] as const;
 
       expect(mass["cg"](conversionCandidate)).toEqual(expected);
@@ -1088,11 +1088,11 @@ describe("mass", () => {
       const ouncesTroyConversion = linearConversion(0.03110348);
 
       const [toBase, fromBase] = [
+        centigramsConversion[1],
         ouncesTroyConversion[0],
-        centigramsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "cg"] as const;
+      const expected = [fromBase(toBase(v)), "cg"] as const;
       const conversionCandidate = [v, "oz t"] as const;
 
       expect(mass["cg"](conversionCandidate)).toEqual(expected);
@@ -1104,11 +1104,11 @@ describe("mass", () => {
       const slugsConversion = linearConversion(14.5939);
 
       const [toBase, fromBase] = [
+        centigramsConversion[1],
         slugsConversion[0],
-        centigramsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "cg"] as const;
+      const expected = [fromBase(toBase(v)), "cg"] as const;
       const conversionCandidate = [v, "slug"] as const;
 
       expect(mass["cg"](conversionCandidate)).toEqual(expected);
@@ -1128,11 +1128,11 @@ describe("mass", () => {
       const kilogramsConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
+        milligramsConversion[1],
         kilogramsConversion[0],
-        milligramsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "mg"] as const;
+      const expected = [fromBase(toBase(v)), "mg"] as const;
       const conversionCandidate = [v, "kg"] as const;
 
       expect(mass["mg"](conversionCandidate)).toEqual(expected);
@@ -1144,11 +1144,11 @@ describe("mass", () => {
       const gramsConversion = linearConversion(0.001);
 
       const [toBase, fromBase] = [
+        milligramsConversion[1],
         gramsConversion[0],
-        milligramsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "mg"] as const;
+      const expected = [fromBase(toBase(v)), "mg"] as const;
       const conversionCandidate = [v, "g"] as const;
 
       expect(mass["mg"](conversionCandidate)).toEqual(expected);
@@ -1160,11 +1160,11 @@ describe("mass", () => {
       const decigramsConversion = linearConversion(0.0001);
 
       const [toBase, fromBase] = [
+        milligramsConversion[1],
         decigramsConversion[0],
-        milligramsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "mg"] as const;
+      const expected = [fromBase(toBase(v)), "mg"] as const;
       const conversionCandidate = [v, "dg"] as const;
 
       expect(mass["mg"](conversionCandidate)).toEqual(expected);
@@ -1176,11 +1176,11 @@ describe("mass", () => {
       const centigramsConversion = linearConversion(0.00001);
 
       const [toBase, fromBase] = [
+        milligramsConversion[1],
         centigramsConversion[0],
-        milligramsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "mg"] as const;
+      const expected = [fromBase(toBase(v)), "mg"] as const;
       const conversionCandidate = [v, "cg"] as const;
 
       expect(mass["mg"](conversionCandidate)).toEqual(expected);
@@ -1194,11 +1194,11 @@ describe("mass", () => {
       const microgramsConversion = linearConversion(1e-9);
 
       const [toBase, fromBase] = [
+        milligramsConversion[1],
         microgramsConversion[0],
-        milligramsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "mg"] as const;
+      const expected = [fromBase(toBase(v)), "mg"] as const;
       const conversionCandidate = [v, "µg"] as const;
 
       expect(mass["mg"](conversionCandidate)).toEqual(expected);
@@ -1210,11 +1210,11 @@ describe("mass", () => {
       const nanogramsConversion = linearConversion(1e-12);
 
       const [toBase, fromBase] = [
+        milligramsConversion[1],
         nanogramsConversion[0],
-        milligramsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "mg"] as const;
+      const expected = [fromBase(toBase(v)), "mg"] as const;
       const conversionCandidate = [v, "ng"] as const;
 
       expect(mass["mg"](conversionCandidate)).toEqual(expected);
@@ -1226,11 +1226,11 @@ describe("mass", () => {
       const picogramsConversion = linearConversion(1e-15);
 
       const [toBase, fromBase] = [
+        milligramsConversion[1],
         picogramsConversion[0],
-        milligramsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "mg"] as const;
+      const expected = [fromBase(toBase(v)), "mg"] as const;
       const conversionCandidate = [v, "pg"] as const;
 
       expect(mass["mg"](conversionCandidate)).toEqual(expected);
@@ -1242,11 +1242,11 @@ describe("mass", () => {
       const ouncesConversion = linearConversion(0.0283495);
 
       const [toBase, fromBase] = [
+        milligramsConversion[1],
         ouncesConversion[0],
-        milligramsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "mg"] as const;
+      const expected = [fromBase(toBase(v)), "mg"] as const;
       const conversionCandidate = [v, "oz"] as const;
 
       expect(mass["mg"](conversionCandidate)).toEqual(expected);
@@ -1258,11 +1258,11 @@ describe("mass", () => {
       const poundsConversion = linearConversion(0.453592);
 
       const [toBase, fromBase] = [
+        milligramsConversion[1],
         poundsConversion[0],
-        milligramsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "mg"] as const;
+      const expected = [fromBase(toBase(v)), "mg"] as const;
       const conversionCandidate = [v, "lb"] as const;
 
       expect(mass["mg"](conversionCandidate)).toEqual(expected);
@@ -1274,11 +1274,11 @@ describe("mass", () => {
       const stonesConversion = linearConversion(0.157473);
 
       const [toBase, fromBase] = [
+        milligramsConversion[1],
         stonesConversion[0],
-        milligramsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "mg"] as const;
+      const expected = [fromBase(toBase(v)), "mg"] as const;
       const conversionCandidate = [v, "st"] as const;
 
       expect(mass["mg"](conversionCandidate)).toEqual(expected);
@@ -1290,11 +1290,11 @@ describe("mass", () => {
       const metricTonsConversion = linearConversion(1000);
 
       const [toBase, fromBase] = [
+        milligramsConversion[1],
         metricTonsConversion[0],
-        milligramsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "mg"] as const;
+      const expected = [fromBase(toBase(v)), "mg"] as const;
       const conversionCandidate = [v, "t"] as const;
 
       expect(mass["mg"](conversionCandidate)).toEqual(expected);
@@ -1306,11 +1306,11 @@ describe("mass", () => {
       const shortTonsConversion = linearConversion(907.185);
 
       const [toBase, fromBase] = [
+        milligramsConversion[1],
         shortTonsConversion[0],
-        milligramsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "mg"] as const;
+      const expected = [fromBase(toBase(v)), "mg"] as const;
       const conversionCandidate = [v, "ton"] as const;
 
       expect(mass["mg"](conversionCandidate)).toEqual(expected);
@@ -1322,11 +1322,11 @@ describe("mass", () => {
       const caratsConversion = linearConversion(0.0002);
 
       const [toBase, fromBase] = [
+        milligramsConversion[1],
         caratsConversion[0],
-        milligramsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "mg"] as const;
+      const expected = [fromBase(toBase(v)), "mg"] as const;
       const conversionCandidate = [v, "ct"] as const;
 
       expect(mass["mg"](conversionCandidate)).toEqual(expected);
@@ -1338,11 +1338,11 @@ describe("mass", () => {
       const ouncesTroyConversion = linearConversion(0.03110348);
 
       const [toBase, fromBase] = [
+        milligramsConversion[1],
         ouncesTroyConversion[0],
-        milligramsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "mg"] as const;
+      const expected = [fromBase(toBase(v)), "mg"] as const;
       const conversionCandidate = [v, "oz t"] as const;
 
       expect(mass["mg"](conversionCandidate)).toEqual(expected);
@@ -1354,11 +1354,11 @@ describe("mass", () => {
       const slugsConversion = linearConversion(14.5939);
 
       const [toBase, fromBase] = [
+        milligramsConversion[1],
         slugsConversion[0],
-        milligramsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "mg"] as const;
+      const expected = [fromBase(toBase(v)), "mg"] as const;
       const conversionCandidate = [v, "slug"] as const;
 
       expect(mass["mg"](conversionCandidate)).toEqual(expected);
@@ -1378,11 +1378,11 @@ describe("mass", () => {
       const kilogramsConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
+        microgramsConversion[1],
         kilogramsConversion[0],
-        microgramsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "µg"] as const;
+      const expected = [fromBase(toBase(v)), "µg"] as const;
       const conversionCandidate = [v, "kg"] as const;
 
       expect(mass["µg"](conversionCandidate)).toEqual(expected);
@@ -1394,11 +1394,11 @@ describe("mass", () => {
       const gramsConversion = linearConversion(0.001);
 
       const [toBase, fromBase] = [
+        microgramsConversion[1],
         gramsConversion[0],
-        microgramsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "µg"] as const;
+      const expected = [fromBase(toBase(v)), "µg"] as const;
       const conversionCandidate = [v, "g"] as const;
 
       expect(mass["µg"](conversionCandidate)).toEqual(expected);
@@ -1410,11 +1410,11 @@ describe("mass", () => {
       const decigramsConversion = linearConversion(0.0001);
 
       const [toBase, fromBase] = [
+        microgramsConversion[1],
         decigramsConversion[0],
-        microgramsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "µg"] as const;
+      const expected = [fromBase(toBase(v)), "µg"] as const;
       const conversionCandidate = [v, "dg"] as const;
 
       expect(mass["µg"](conversionCandidate)).toEqual(expected);
@@ -1426,11 +1426,11 @@ describe("mass", () => {
       const centigramsConversion = linearConversion(0.00001);
 
       const [toBase, fromBase] = [
+        microgramsConversion[1],
         centigramsConversion[0],
-        microgramsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "µg"] as const;
+      const expected = [fromBase(toBase(v)), "µg"] as const;
       const conversionCandidate = [v, "cg"] as const;
 
       expect(mass["µg"](conversionCandidate)).toEqual(expected);
@@ -1442,11 +1442,11 @@ describe("mass", () => {
       const milligramsConversion = linearConversion(0.000001);
 
       const [toBase, fromBase] = [
+        microgramsConversion[1],
         milligramsConversion[0],
-        microgramsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "µg"] as const;
+      const expected = [fromBase(toBase(v)), "µg"] as const;
       const conversionCandidate = [v, "mg"] as const;
 
       expect(mass["µg"](conversionCandidate)).toEqual(expected);
@@ -1460,11 +1460,11 @@ describe("mass", () => {
       const nanogramsConversion = linearConversion(1e-12);
 
       const [toBase, fromBase] = [
+        microgramsConversion[1],
         nanogramsConversion[0],
-        microgramsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "µg"] as const;
+      const expected = [fromBase(toBase(v)), "µg"] as const;
       const conversionCandidate = [v, "ng"] as const;
 
       expect(mass["µg"](conversionCandidate)).toEqual(expected);
@@ -1476,11 +1476,11 @@ describe("mass", () => {
       const picogramsConversion = linearConversion(1e-15);
 
       const [toBase, fromBase] = [
+        microgramsConversion[1],
         picogramsConversion[0],
-        microgramsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "µg"] as const;
+      const expected = [fromBase(toBase(v)), "µg"] as const;
       const conversionCandidate = [v, "pg"] as const;
 
       expect(mass["µg"](conversionCandidate)).toEqual(expected);
@@ -1492,11 +1492,11 @@ describe("mass", () => {
       const ouncesConversion = linearConversion(0.0283495);
 
       const [toBase, fromBase] = [
+        microgramsConversion[1],
         ouncesConversion[0],
-        microgramsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "µg"] as const;
+      const expected = [fromBase(toBase(v)), "µg"] as const;
       const conversionCandidate = [v, "oz"] as const;
 
       expect(mass["µg"](conversionCandidate)).toEqual(expected);
@@ -1508,11 +1508,11 @@ describe("mass", () => {
       const poundsConversion = linearConversion(0.453592);
 
       const [toBase, fromBase] = [
+        microgramsConversion[1],
         poundsConversion[0],
-        microgramsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "µg"] as const;
+      const expected = [fromBase(toBase(v)), "µg"] as const;
       const conversionCandidate = [v, "lb"] as const;
 
       expect(mass["µg"](conversionCandidate)).toEqual(expected);
@@ -1524,11 +1524,11 @@ describe("mass", () => {
       const stonesConversion = linearConversion(0.157473);
 
       const [toBase, fromBase] = [
+        microgramsConversion[1],
         stonesConversion[0],
-        microgramsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "µg"] as const;
+      const expected = [fromBase(toBase(v)), "µg"] as const;
       const conversionCandidate = [v, "st"] as const;
 
       expect(mass["µg"](conversionCandidate)).toEqual(expected);
@@ -1540,11 +1540,11 @@ describe("mass", () => {
       const metricTonsConversion = linearConversion(1000);
 
       const [toBase, fromBase] = [
+        microgramsConversion[1],
         metricTonsConversion[0],
-        microgramsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "µg"] as const;
+      const expected = [fromBase(toBase(v)), "µg"] as const;
       const conversionCandidate = [v, "t"] as const;
 
       expect(mass["µg"](conversionCandidate)).toEqual(expected);
@@ -1556,11 +1556,11 @@ describe("mass", () => {
       const shortTonsConversion = linearConversion(907.185);
 
       const [toBase, fromBase] = [
+        microgramsConversion[1],
         shortTonsConversion[0],
-        microgramsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "µg"] as const;
+      const expected = [fromBase(toBase(v)), "µg"] as const;
       const conversionCandidate = [v, "ton"] as const;
 
       expect(mass["µg"](conversionCandidate)).toEqual(expected);
@@ -1572,11 +1572,11 @@ describe("mass", () => {
       const caratsConversion = linearConversion(0.0002);
 
       const [toBase, fromBase] = [
+        microgramsConversion[1],
         caratsConversion[0],
-        microgramsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "µg"] as const;
+      const expected = [fromBase(toBase(v)), "µg"] as const;
       const conversionCandidate = [v, "ct"] as const;
 
       expect(mass["µg"](conversionCandidate)).toEqual(expected);
@@ -1588,11 +1588,11 @@ describe("mass", () => {
       const ouncesTroyConversion = linearConversion(0.03110348);
 
       const [toBase, fromBase] = [
+        microgramsConversion[1],
         ouncesTroyConversion[0],
-        microgramsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "µg"] as const;
+      const expected = [fromBase(toBase(v)), "µg"] as const;
       const conversionCandidate = [v, "oz t"] as const;
 
       expect(mass["µg"](conversionCandidate)).toEqual(expected);
@@ -1604,11 +1604,11 @@ describe("mass", () => {
       const slugsConversion = linearConversion(14.5939);
 
       const [toBase, fromBase] = [
+        microgramsConversion[1],
         slugsConversion[0],
-        microgramsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "µg"] as const;
+      const expected = [fromBase(toBase(v)), "µg"] as const;
       const conversionCandidate = [v, "slug"] as const;
 
       expect(mass["µg"](conversionCandidate)).toEqual(expected);
@@ -1628,11 +1628,11 @@ describe("mass", () => {
       const kilogramsConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
+        nanogramsConversion[1],
         kilogramsConversion[0],
-        nanogramsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ng"] as const;
+      const expected = [fromBase(toBase(v)), "ng"] as const;
       const conversionCandidate = [v, "kg"] as const;
 
       expect(mass["ng"](conversionCandidate)).toEqual(expected);
@@ -1644,11 +1644,11 @@ describe("mass", () => {
       const gramsConversion = linearConversion(0.001);
 
       const [toBase, fromBase] = [
+        nanogramsConversion[1],
         gramsConversion[0],
-        nanogramsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ng"] as const;
+      const expected = [fromBase(toBase(v)), "ng"] as const;
       const conversionCandidate = [v, "g"] as const;
 
       expect(mass["ng"](conversionCandidate)).toEqual(expected);
@@ -1660,11 +1660,11 @@ describe("mass", () => {
       const decigramsConversion = linearConversion(0.0001);
 
       const [toBase, fromBase] = [
+        nanogramsConversion[1],
         decigramsConversion[0],
-        nanogramsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ng"] as const;
+      const expected = [fromBase(toBase(v)), "ng"] as const;
       const conversionCandidate = [v, "dg"] as const;
 
       expect(mass["ng"](conversionCandidate)).toEqual(expected);
@@ -1676,11 +1676,11 @@ describe("mass", () => {
       const centigramsConversion = linearConversion(0.00001);
 
       const [toBase, fromBase] = [
+        nanogramsConversion[1],
         centigramsConversion[0],
-        nanogramsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ng"] as const;
+      const expected = [fromBase(toBase(v)), "ng"] as const;
       const conversionCandidate = [v, "cg"] as const;
 
       expect(mass["ng"](conversionCandidate)).toEqual(expected);
@@ -1692,11 +1692,11 @@ describe("mass", () => {
       const milligramsConversion = linearConversion(0.000001);
 
       const [toBase, fromBase] = [
+        nanogramsConversion[1],
         milligramsConversion[0],
-        nanogramsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ng"] as const;
+      const expected = [fromBase(toBase(v)), "ng"] as const;
       const conversionCandidate = [v, "mg"] as const;
 
       expect(mass["ng"](conversionCandidate)).toEqual(expected);
@@ -1708,11 +1708,11 @@ describe("mass", () => {
       const microgramsConversion = linearConversion(1e-9);
 
       const [toBase, fromBase] = [
+        nanogramsConversion[1],
         microgramsConversion[0],
-        nanogramsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ng"] as const;
+      const expected = [fromBase(toBase(v)), "ng"] as const;
       const conversionCandidate = [v, "µg"] as const;
 
       expect(mass["ng"](conversionCandidate)).toEqual(expected);
@@ -1726,11 +1726,11 @@ describe("mass", () => {
       const picogramsConversion = linearConversion(1e-15);
 
       const [toBase, fromBase] = [
+        nanogramsConversion[1],
         picogramsConversion[0],
-        nanogramsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ng"] as const;
+      const expected = [fromBase(toBase(v)), "ng"] as const;
       const conversionCandidate = [v, "pg"] as const;
 
       expect(mass["ng"](conversionCandidate)).toEqual(expected);
@@ -1742,11 +1742,11 @@ describe("mass", () => {
       const ouncesConversion = linearConversion(0.0283495);
 
       const [toBase, fromBase] = [
+        nanogramsConversion[1],
         ouncesConversion[0],
-        nanogramsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ng"] as const;
+      const expected = [fromBase(toBase(v)), "ng"] as const;
       const conversionCandidate = [v, "oz"] as const;
 
       expect(mass["ng"](conversionCandidate)).toEqual(expected);
@@ -1758,11 +1758,11 @@ describe("mass", () => {
       const poundsConversion = linearConversion(0.453592);
 
       const [toBase, fromBase] = [
+        nanogramsConversion[1],
         poundsConversion[0],
-        nanogramsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ng"] as const;
+      const expected = [fromBase(toBase(v)), "ng"] as const;
       const conversionCandidate = [v, "lb"] as const;
 
       expect(mass["ng"](conversionCandidate)).toEqual(expected);
@@ -1774,11 +1774,11 @@ describe("mass", () => {
       const stonesConversion = linearConversion(0.157473);
 
       const [toBase, fromBase] = [
+        nanogramsConversion[1],
         stonesConversion[0],
-        nanogramsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ng"] as const;
+      const expected = [fromBase(toBase(v)), "ng"] as const;
       const conversionCandidate = [v, "st"] as const;
 
       expect(mass["ng"](conversionCandidate)).toEqual(expected);
@@ -1790,11 +1790,11 @@ describe("mass", () => {
       const metricTonsConversion = linearConversion(1000);
 
       const [toBase, fromBase] = [
+        nanogramsConversion[1],
         metricTonsConversion[0],
-        nanogramsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ng"] as const;
+      const expected = [fromBase(toBase(v)), "ng"] as const;
       const conversionCandidate = [v, "t"] as const;
 
       expect(mass["ng"](conversionCandidate)).toEqual(expected);
@@ -1806,11 +1806,11 @@ describe("mass", () => {
       const shortTonsConversion = linearConversion(907.185);
 
       const [toBase, fromBase] = [
+        nanogramsConversion[1],
         shortTonsConversion[0],
-        nanogramsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ng"] as const;
+      const expected = [fromBase(toBase(v)), "ng"] as const;
       const conversionCandidate = [v, "ton"] as const;
 
       expect(mass["ng"](conversionCandidate)).toEqual(expected);
@@ -1822,11 +1822,11 @@ describe("mass", () => {
       const caratsConversion = linearConversion(0.0002);
 
       const [toBase, fromBase] = [
+        nanogramsConversion[1],
         caratsConversion[0],
-        nanogramsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ng"] as const;
+      const expected = [fromBase(toBase(v)), "ng"] as const;
       const conversionCandidate = [v, "ct"] as const;
 
       expect(mass["ng"](conversionCandidate)).toEqual(expected);
@@ -1838,11 +1838,11 @@ describe("mass", () => {
       const ouncesTroyConversion = linearConversion(0.03110348);
 
       const [toBase, fromBase] = [
+        nanogramsConversion[1],
         ouncesTroyConversion[0],
-        nanogramsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ng"] as const;
+      const expected = [fromBase(toBase(v)), "ng"] as const;
       const conversionCandidate = [v, "oz t"] as const;
 
       expect(mass["ng"](conversionCandidate)).toEqual(expected);
@@ -1854,11 +1854,11 @@ describe("mass", () => {
       const slugsConversion = linearConversion(14.5939);
 
       const [toBase, fromBase] = [
+        nanogramsConversion[1],
         slugsConversion[0],
-        nanogramsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ng"] as const;
+      const expected = [fromBase(toBase(v)), "ng"] as const;
       const conversionCandidate = [v, "slug"] as const;
 
       expect(mass["ng"](conversionCandidate)).toEqual(expected);
@@ -1878,11 +1878,11 @@ describe("mass", () => {
       const kilogramsConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
+        picogramsConversion[1],
         kilogramsConversion[0],
-        picogramsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "pg"] as const;
+      const expected = [fromBase(toBase(v)), "pg"] as const;
       const conversionCandidate = [v, "kg"] as const;
 
       expect(mass["pg"](conversionCandidate)).toEqual(expected);
@@ -1894,11 +1894,11 @@ describe("mass", () => {
       const gramsConversion = linearConversion(0.001);
 
       const [toBase, fromBase] = [
+        picogramsConversion[1],
         gramsConversion[0],
-        picogramsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "pg"] as const;
+      const expected = [fromBase(toBase(v)), "pg"] as const;
       const conversionCandidate = [v, "g"] as const;
 
       expect(mass["pg"](conversionCandidate)).toEqual(expected);
@@ -1910,11 +1910,11 @@ describe("mass", () => {
       const decigramsConversion = linearConversion(0.0001);
 
       const [toBase, fromBase] = [
+        picogramsConversion[1],
         decigramsConversion[0],
-        picogramsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "pg"] as const;
+      const expected = [fromBase(toBase(v)), "pg"] as const;
       const conversionCandidate = [v, "dg"] as const;
 
       expect(mass["pg"](conversionCandidate)).toEqual(expected);
@@ -1926,11 +1926,11 @@ describe("mass", () => {
       const centigramsConversion = linearConversion(0.00001);
 
       const [toBase, fromBase] = [
+        picogramsConversion[1],
         centigramsConversion[0],
-        picogramsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "pg"] as const;
+      const expected = [fromBase(toBase(v)), "pg"] as const;
       const conversionCandidate = [v, "cg"] as const;
 
       expect(mass["pg"](conversionCandidate)).toEqual(expected);
@@ -1942,11 +1942,11 @@ describe("mass", () => {
       const milligramsConversion = linearConversion(0.000001);
 
       const [toBase, fromBase] = [
+        picogramsConversion[1],
         milligramsConversion[0],
-        picogramsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "pg"] as const;
+      const expected = [fromBase(toBase(v)), "pg"] as const;
       const conversionCandidate = [v, "mg"] as const;
 
       expect(mass["pg"](conversionCandidate)).toEqual(expected);
@@ -1958,11 +1958,11 @@ describe("mass", () => {
       const microgramsConversion = linearConversion(1e-9);
 
       const [toBase, fromBase] = [
+        picogramsConversion[1],
         microgramsConversion[0],
-        picogramsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "pg"] as const;
+      const expected = [fromBase(toBase(v)), "pg"] as const;
       const conversionCandidate = [v, "µg"] as const;
 
       expect(mass["pg"](conversionCandidate)).toEqual(expected);
@@ -1974,11 +1974,11 @@ describe("mass", () => {
       const nanogramsConversion = linearConversion(1e-12);
 
       const [toBase, fromBase] = [
+        picogramsConversion[1],
         nanogramsConversion[0],
-        picogramsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "pg"] as const;
+      const expected = [fromBase(toBase(v)), "pg"] as const;
       const conversionCandidate = [v, "ng"] as const;
 
       expect(mass["pg"](conversionCandidate)).toEqual(expected);
@@ -1992,11 +1992,11 @@ describe("mass", () => {
       const ouncesConversion = linearConversion(0.0283495);
 
       const [toBase, fromBase] = [
+        picogramsConversion[1],
         ouncesConversion[0],
-        picogramsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "pg"] as const;
+      const expected = [fromBase(toBase(v)), "pg"] as const;
       const conversionCandidate = [v, "oz"] as const;
 
       expect(mass["pg"](conversionCandidate)).toEqual(expected);
@@ -2008,11 +2008,11 @@ describe("mass", () => {
       const poundsConversion = linearConversion(0.453592);
 
       const [toBase, fromBase] = [
+        picogramsConversion[1],
         poundsConversion[0],
-        picogramsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "pg"] as const;
+      const expected = [fromBase(toBase(v)), "pg"] as const;
       const conversionCandidate = [v, "lb"] as const;
 
       expect(mass["pg"](conversionCandidate)).toEqual(expected);
@@ -2024,11 +2024,11 @@ describe("mass", () => {
       const stonesConversion = linearConversion(0.157473);
 
       const [toBase, fromBase] = [
+        picogramsConversion[1],
         stonesConversion[0],
-        picogramsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "pg"] as const;
+      const expected = [fromBase(toBase(v)), "pg"] as const;
       const conversionCandidate = [v, "st"] as const;
 
       expect(mass["pg"](conversionCandidate)).toEqual(expected);
@@ -2040,11 +2040,11 @@ describe("mass", () => {
       const metricTonsConversion = linearConversion(1000);
 
       const [toBase, fromBase] = [
+        picogramsConversion[1],
         metricTonsConversion[0],
-        picogramsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "pg"] as const;
+      const expected = [fromBase(toBase(v)), "pg"] as const;
       const conversionCandidate = [v, "t"] as const;
 
       expect(mass["pg"](conversionCandidate)).toEqual(expected);
@@ -2056,11 +2056,11 @@ describe("mass", () => {
       const shortTonsConversion = linearConversion(907.185);
 
       const [toBase, fromBase] = [
+        picogramsConversion[1],
         shortTonsConversion[0],
-        picogramsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "pg"] as const;
+      const expected = [fromBase(toBase(v)), "pg"] as const;
       const conversionCandidate = [v, "ton"] as const;
 
       expect(mass["pg"](conversionCandidate)).toEqual(expected);
@@ -2072,11 +2072,11 @@ describe("mass", () => {
       const caratsConversion = linearConversion(0.0002);
 
       const [toBase, fromBase] = [
+        picogramsConversion[1],
         caratsConversion[0],
-        picogramsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "pg"] as const;
+      const expected = [fromBase(toBase(v)), "pg"] as const;
       const conversionCandidate = [v, "ct"] as const;
 
       expect(mass["pg"](conversionCandidate)).toEqual(expected);
@@ -2088,11 +2088,11 @@ describe("mass", () => {
       const ouncesTroyConversion = linearConversion(0.03110348);
 
       const [toBase, fromBase] = [
+        picogramsConversion[1],
         ouncesTroyConversion[0],
-        picogramsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "pg"] as const;
+      const expected = [fromBase(toBase(v)), "pg"] as const;
       const conversionCandidate = [v, "oz t"] as const;
 
       expect(mass["pg"](conversionCandidate)).toEqual(expected);
@@ -2104,11 +2104,11 @@ describe("mass", () => {
       const slugsConversion = linearConversion(14.5939);
 
       const [toBase, fromBase] = [
+        picogramsConversion[1],
         slugsConversion[0],
-        picogramsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "pg"] as const;
+      const expected = [fromBase(toBase(v)), "pg"] as const;
       const conversionCandidate = [v, "slug"] as const;
 
       expect(mass["pg"](conversionCandidate)).toEqual(expected);
@@ -2128,11 +2128,11 @@ describe("mass", () => {
       const kilogramsConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
+        ouncesConversion[1],
         kilogramsConversion[0],
-        ouncesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "oz"] as const;
+      const expected = [fromBase(toBase(v)), "oz"] as const;
       const conversionCandidate = [v, "kg"] as const;
 
       expect(mass["oz"](conversionCandidate)).toEqual(expected);
@@ -2144,11 +2144,11 @@ describe("mass", () => {
       const gramsConversion = linearConversion(0.001);
 
       const [toBase, fromBase] = [
+        ouncesConversion[1],
         gramsConversion[0],
-        ouncesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "oz"] as const;
+      const expected = [fromBase(toBase(v)), "oz"] as const;
       const conversionCandidate = [v, "g"] as const;
 
       expect(mass["oz"](conversionCandidate)).toEqual(expected);
@@ -2160,11 +2160,11 @@ describe("mass", () => {
       const decigramsConversion = linearConversion(0.0001);
 
       const [toBase, fromBase] = [
+        ouncesConversion[1],
         decigramsConversion[0],
-        ouncesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "oz"] as const;
+      const expected = [fromBase(toBase(v)), "oz"] as const;
       const conversionCandidate = [v, "dg"] as const;
 
       expect(mass["oz"](conversionCandidate)).toEqual(expected);
@@ -2176,11 +2176,11 @@ describe("mass", () => {
       const centigramsConversion = linearConversion(0.00001);
 
       const [toBase, fromBase] = [
+        ouncesConversion[1],
         centigramsConversion[0],
-        ouncesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "oz"] as const;
+      const expected = [fromBase(toBase(v)), "oz"] as const;
       const conversionCandidate = [v, "cg"] as const;
 
       expect(mass["oz"](conversionCandidate)).toEqual(expected);
@@ -2192,11 +2192,11 @@ describe("mass", () => {
       const milligramsConversion = linearConversion(0.000001);
 
       const [toBase, fromBase] = [
+        ouncesConversion[1],
         milligramsConversion[0],
-        ouncesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "oz"] as const;
+      const expected = [fromBase(toBase(v)), "oz"] as const;
       const conversionCandidate = [v, "mg"] as const;
 
       expect(mass["oz"](conversionCandidate)).toEqual(expected);
@@ -2208,11 +2208,11 @@ describe("mass", () => {
       const microgramsConversion = linearConversion(1e-9);
 
       const [toBase, fromBase] = [
+        ouncesConversion[1],
         microgramsConversion[0],
-        ouncesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "oz"] as const;
+      const expected = [fromBase(toBase(v)), "oz"] as const;
       const conversionCandidate = [v, "µg"] as const;
 
       expect(mass["oz"](conversionCandidate)).toEqual(expected);
@@ -2224,11 +2224,11 @@ describe("mass", () => {
       const nanogramsConversion = linearConversion(1e-12);
 
       const [toBase, fromBase] = [
+        ouncesConversion[1],
         nanogramsConversion[0],
-        ouncesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "oz"] as const;
+      const expected = [fromBase(toBase(v)), "oz"] as const;
       const conversionCandidate = [v, "ng"] as const;
 
       expect(mass["oz"](conversionCandidate)).toEqual(expected);
@@ -2240,11 +2240,11 @@ describe("mass", () => {
       const picogramsConversion = linearConversion(1e-15);
 
       const [toBase, fromBase] = [
+        ouncesConversion[1],
         picogramsConversion[0],
-        ouncesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "oz"] as const;
+      const expected = [fromBase(toBase(v)), "oz"] as const;
       const conversionCandidate = [v, "pg"] as const;
 
       expect(mass["oz"](conversionCandidate)).toEqual(expected);
@@ -2258,11 +2258,11 @@ describe("mass", () => {
       const poundsConversion = linearConversion(0.453592);
 
       const [toBase, fromBase] = [
+        ouncesConversion[1],
         poundsConversion[0],
-        ouncesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "oz"] as const;
+      const expected = [fromBase(toBase(v)), "oz"] as const;
       const conversionCandidate = [v, "lb"] as const;
 
       expect(mass["oz"](conversionCandidate)).toEqual(expected);
@@ -2274,11 +2274,11 @@ describe("mass", () => {
       const stonesConversion = linearConversion(0.157473);
 
       const [toBase, fromBase] = [
+        ouncesConversion[1],
         stonesConversion[0],
-        ouncesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "oz"] as const;
+      const expected = [fromBase(toBase(v)), "oz"] as const;
       const conversionCandidate = [v, "st"] as const;
 
       expect(mass["oz"](conversionCandidate)).toEqual(expected);
@@ -2290,11 +2290,11 @@ describe("mass", () => {
       const metricTonsConversion = linearConversion(1000);
 
       const [toBase, fromBase] = [
+        ouncesConversion[1],
         metricTonsConversion[0],
-        ouncesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "oz"] as const;
+      const expected = [fromBase(toBase(v)), "oz"] as const;
       const conversionCandidate = [v, "t"] as const;
 
       expect(mass["oz"](conversionCandidate)).toEqual(expected);
@@ -2306,11 +2306,11 @@ describe("mass", () => {
       const shortTonsConversion = linearConversion(907.185);
 
       const [toBase, fromBase] = [
+        ouncesConversion[1],
         shortTonsConversion[0],
-        ouncesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "oz"] as const;
+      const expected = [fromBase(toBase(v)), "oz"] as const;
       const conversionCandidate = [v, "ton"] as const;
 
       expect(mass["oz"](conversionCandidate)).toEqual(expected);
@@ -2322,11 +2322,11 @@ describe("mass", () => {
       const caratsConversion = linearConversion(0.0002);
 
       const [toBase, fromBase] = [
+        ouncesConversion[1],
         caratsConversion[0],
-        ouncesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "oz"] as const;
+      const expected = [fromBase(toBase(v)), "oz"] as const;
       const conversionCandidate = [v, "ct"] as const;
 
       expect(mass["oz"](conversionCandidate)).toEqual(expected);
@@ -2338,11 +2338,11 @@ describe("mass", () => {
       const ouncesTroyConversion = linearConversion(0.03110348);
 
       const [toBase, fromBase] = [
+        ouncesConversion[1],
         ouncesTroyConversion[0],
-        ouncesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "oz"] as const;
+      const expected = [fromBase(toBase(v)), "oz"] as const;
       const conversionCandidate = [v, "oz t"] as const;
 
       expect(mass["oz"](conversionCandidate)).toEqual(expected);
@@ -2354,11 +2354,11 @@ describe("mass", () => {
       const slugsConversion = linearConversion(14.5939);
 
       const [toBase, fromBase] = [
+        ouncesConversion[1],
         slugsConversion[0],
-        ouncesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "oz"] as const;
+      const expected = [fromBase(toBase(v)), "oz"] as const;
       const conversionCandidate = [v, "slug"] as const;
 
       expect(mass["oz"](conversionCandidate)).toEqual(expected);
@@ -2378,11 +2378,11 @@ describe("mass", () => {
       const kilogramsConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
+        poundsConversion[1],
         kilogramsConversion[0],
-        poundsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "lb"] as const;
+      const expected = [fromBase(toBase(v)), "lb"] as const;
       const conversionCandidate = [v, "kg"] as const;
 
       expect(mass["lb"](conversionCandidate)).toEqual(expected);
@@ -2394,11 +2394,11 @@ describe("mass", () => {
       const gramsConversion = linearConversion(0.001);
 
       const [toBase, fromBase] = [
+        poundsConversion[1],
         gramsConversion[0],
-        poundsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "lb"] as const;
+      const expected = [fromBase(toBase(v)), "lb"] as const;
       const conversionCandidate = [v, "g"] as const;
 
       expect(mass["lb"](conversionCandidate)).toEqual(expected);
@@ -2410,11 +2410,11 @@ describe("mass", () => {
       const decigramsConversion = linearConversion(0.0001);
 
       const [toBase, fromBase] = [
+        poundsConversion[1],
         decigramsConversion[0],
-        poundsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "lb"] as const;
+      const expected = [fromBase(toBase(v)), "lb"] as const;
       const conversionCandidate = [v, "dg"] as const;
 
       expect(mass["lb"](conversionCandidate)).toEqual(expected);
@@ -2426,11 +2426,11 @@ describe("mass", () => {
       const centigramsConversion = linearConversion(0.00001);
 
       const [toBase, fromBase] = [
+        poundsConversion[1],
         centigramsConversion[0],
-        poundsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "lb"] as const;
+      const expected = [fromBase(toBase(v)), "lb"] as const;
       const conversionCandidate = [v, "cg"] as const;
 
       expect(mass["lb"](conversionCandidate)).toEqual(expected);
@@ -2442,11 +2442,11 @@ describe("mass", () => {
       const milligramsConversion = linearConversion(0.000001);
 
       const [toBase, fromBase] = [
+        poundsConversion[1],
         milligramsConversion[0],
-        poundsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "lb"] as const;
+      const expected = [fromBase(toBase(v)), "lb"] as const;
       const conversionCandidate = [v, "mg"] as const;
 
       expect(mass["lb"](conversionCandidate)).toEqual(expected);
@@ -2458,11 +2458,11 @@ describe("mass", () => {
       const microgramsConversion = linearConversion(1e-9);
 
       const [toBase, fromBase] = [
+        poundsConversion[1],
         microgramsConversion[0],
-        poundsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "lb"] as const;
+      const expected = [fromBase(toBase(v)), "lb"] as const;
       const conversionCandidate = [v, "µg"] as const;
 
       expect(mass["lb"](conversionCandidate)).toEqual(expected);
@@ -2474,11 +2474,11 @@ describe("mass", () => {
       const nanogramsConversion = linearConversion(1e-12);
 
       const [toBase, fromBase] = [
+        poundsConversion[1],
         nanogramsConversion[0],
-        poundsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "lb"] as const;
+      const expected = [fromBase(toBase(v)), "lb"] as const;
       const conversionCandidate = [v, "ng"] as const;
 
       expect(mass["lb"](conversionCandidate)).toEqual(expected);
@@ -2490,11 +2490,11 @@ describe("mass", () => {
       const picogramsConversion = linearConversion(1e-15);
 
       const [toBase, fromBase] = [
+        poundsConversion[1],
         picogramsConversion[0],
-        poundsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "lb"] as const;
+      const expected = [fromBase(toBase(v)), "lb"] as const;
       const conversionCandidate = [v, "pg"] as const;
 
       expect(mass["lb"](conversionCandidate)).toEqual(expected);
@@ -2506,11 +2506,11 @@ describe("mass", () => {
       const ouncesConversion = linearConversion(0.0283495);
 
       const [toBase, fromBase] = [
+        poundsConversion[1],
         ouncesConversion[0],
-        poundsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "lb"] as const;
+      const expected = [fromBase(toBase(v)), "lb"] as const;
       const conversionCandidate = [v, "oz"] as const;
 
       expect(mass["lb"](conversionCandidate)).toEqual(expected);
@@ -2524,11 +2524,11 @@ describe("mass", () => {
       const stonesConversion = linearConversion(0.157473);
 
       const [toBase, fromBase] = [
+        poundsConversion[1],
         stonesConversion[0],
-        poundsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "lb"] as const;
+      const expected = [fromBase(toBase(v)), "lb"] as const;
       const conversionCandidate = [v, "st"] as const;
 
       expect(mass["lb"](conversionCandidate)).toEqual(expected);
@@ -2540,11 +2540,11 @@ describe("mass", () => {
       const metricTonsConversion = linearConversion(1000);
 
       const [toBase, fromBase] = [
+        poundsConversion[1],
         metricTonsConversion[0],
-        poundsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "lb"] as const;
+      const expected = [fromBase(toBase(v)), "lb"] as const;
       const conversionCandidate = [v, "t"] as const;
 
       expect(mass["lb"](conversionCandidate)).toEqual(expected);
@@ -2556,11 +2556,11 @@ describe("mass", () => {
       const shortTonsConversion = linearConversion(907.185);
 
       const [toBase, fromBase] = [
+        poundsConversion[1],
         shortTonsConversion[0],
-        poundsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "lb"] as const;
+      const expected = [fromBase(toBase(v)), "lb"] as const;
       const conversionCandidate = [v, "ton"] as const;
 
       expect(mass["lb"](conversionCandidate)).toEqual(expected);
@@ -2572,11 +2572,11 @@ describe("mass", () => {
       const caratsConversion = linearConversion(0.0002);
 
       const [toBase, fromBase] = [
+        poundsConversion[1],
         caratsConversion[0],
-        poundsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "lb"] as const;
+      const expected = [fromBase(toBase(v)), "lb"] as const;
       const conversionCandidate = [v, "ct"] as const;
 
       expect(mass["lb"](conversionCandidate)).toEqual(expected);
@@ -2588,11 +2588,11 @@ describe("mass", () => {
       const ouncesTroyConversion = linearConversion(0.03110348);
 
       const [toBase, fromBase] = [
+        poundsConversion[1],
         ouncesTroyConversion[0],
-        poundsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "lb"] as const;
+      const expected = [fromBase(toBase(v)), "lb"] as const;
       const conversionCandidate = [v, "oz t"] as const;
 
       expect(mass["lb"](conversionCandidate)).toEqual(expected);
@@ -2604,11 +2604,11 @@ describe("mass", () => {
       const slugsConversion = linearConversion(14.5939);
 
       const [toBase, fromBase] = [
+        poundsConversion[1],
         slugsConversion[0],
-        poundsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "lb"] as const;
+      const expected = [fromBase(toBase(v)), "lb"] as const;
       const conversionCandidate = [v, "slug"] as const;
 
       expect(mass["lb"](conversionCandidate)).toEqual(expected);
@@ -2628,11 +2628,11 @@ describe("mass", () => {
       const kilogramsConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
+        stonesConversion[1],
         kilogramsConversion[0],
-        stonesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "st"] as const;
+      const expected = [fromBase(toBase(v)), "st"] as const;
       const conversionCandidate = [v, "kg"] as const;
 
       expect(mass["st"](conversionCandidate)).toEqual(expected);
@@ -2644,11 +2644,11 @@ describe("mass", () => {
       const gramsConversion = linearConversion(0.001);
 
       const [toBase, fromBase] = [
+        stonesConversion[1],
         gramsConversion[0],
-        stonesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "st"] as const;
+      const expected = [fromBase(toBase(v)), "st"] as const;
       const conversionCandidate = [v, "g"] as const;
 
       expect(mass["st"](conversionCandidate)).toEqual(expected);
@@ -2660,11 +2660,11 @@ describe("mass", () => {
       const decigramsConversion = linearConversion(0.0001);
 
       const [toBase, fromBase] = [
+        stonesConversion[1],
         decigramsConversion[0],
-        stonesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "st"] as const;
+      const expected = [fromBase(toBase(v)), "st"] as const;
       const conversionCandidate = [v, "dg"] as const;
 
       expect(mass["st"](conversionCandidate)).toEqual(expected);
@@ -2676,11 +2676,11 @@ describe("mass", () => {
       const centigramsConversion = linearConversion(0.00001);
 
       const [toBase, fromBase] = [
+        stonesConversion[1],
         centigramsConversion[0],
-        stonesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "st"] as const;
+      const expected = [fromBase(toBase(v)), "st"] as const;
       const conversionCandidate = [v, "cg"] as const;
 
       expect(mass["st"](conversionCandidate)).toEqual(expected);
@@ -2692,11 +2692,11 @@ describe("mass", () => {
       const milligramsConversion = linearConversion(0.000001);
 
       const [toBase, fromBase] = [
+        stonesConversion[1],
         milligramsConversion[0],
-        stonesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "st"] as const;
+      const expected = [fromBase(toBase(v)), "st"] as const;
       const conversionCandidate = [v, "mg"] as const;
 
       expect(mass["st"](conversionCandidate)).toEqual(expected);
@@ -2708,11 +2708,11 @@ describe("mass", () => {
       const microgramsConversion = linearConversion(1e-9);
 
       const [toBase, fromBase] = [
+        stonesConversion[1],
         microgramsConversion[0],
-        stonesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "st"] as const;
+      const expected = [fromBase(toBase(v)), "st"] as const;
       const conversionCandidate = [v, "µg"] as const;
 
       expect(mass["st"](conversionCandidate)).toEqual(expected);
@@ -2724,11 +2724,11 @@ describe("mass", () => {
       const nanogramsConversion = linearConversion(1e-12);
 
       const [toBase, fromBase] = [
+        stonesConversion[1],
         nanogramsConversion[0],
-        stonesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "st"] as const;
+      const expected = [fromBase(toBase(v)), "st"] as const;
       const conversionCandidate = [v, "ng"] as const;
 
       expect(mass["st"](conversionCandidate)).toEqual(expected);
@@ -2740,11 +2740,11 @@ describe("mass", () => {
       const picogramsConversion = linearConversion(1e-15);
 
       const [toBase, fromBase] = [
+        stonesConversion[1],
         picogramsConversion[0],
-        stonesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "st"] as const;
+      const expected = [fromBase(toBase(v)), "st"] as const;
       const conversionCandidate = [v, "pg"] as const;
 
       expect(mass["st"](conversionCandidate)).toEqual(expected);
@@ -2756,11 +2756,11 @@ describe("mass", () => {
       const ouncesConversion = linearConversion(0.0283495);
 
       const [toBase, fromBase] = [
+        stonesConversion[1],
         ouncesConversion[0],
-        stonesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "st"] as const;
+      const expected = [fromBase(toBase(v)), "st"] as const;
       const conversionCandidate = [v, "oz"] as const;
 
       expect(mass["st"](conversionCandidate)).toEqual(expected);
@@ -2772,11 +2772,11 @@ describe("mass", () => {
       const poundsConversion = linearConversion(0.453592);
 
       const [toBase, fromBase] = [
+        stonesConversion[1],
         poundsConversion[0],
-        stonesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "st"] as const;
+      const expected = [fromBase(toBase(v)), "st"] as const;
       const conversionCandidate = [v, "lb"] as const;
 
       expect(mass["st"](conversionCandidate)).toEqual(expected);
@@ -2790,11 +2790,11 @@ describe("mass", () => {
       const metricTonsConversion = linearConversion(1000);
 
       const [toBase, fromBase] = [
+        stonesConversion[1],
         metricTonsConversion[0],
-        stonesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "st"] as const;
+      const expected = [fromBase(toBase(v)), "st"] as const;
       const conversionCandidate = [v, "t"] as const;
 
       expect(mass["st"](conversionCandidate)).toEqual(expected);
@@ -2806,11 +2806,11 @@ describe("mass", () => {
       const shortTonsConversion = linearConversion(907.185);
 
       const [toBase, fromBase] = [
+        stonesConversion[1],
         shortTonsConversion[0],
-        stonesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "st"] as const;
+      const expected = [fromBase(toBase(v)), "st"] as const;
       const conversionCandidate = [v, "ton"] as const;
 
       expect(mass["st"](conversionCandidate)).toEqual(expected);
@@ -2822,11 +2822,11 @@ describe("mass", () => {
       const caratsConversion = linearConversion(0.0002);
 
       const [toBase, fromBase] = [
+        stonesConversion[1],
         caratsConversion[0],
-        stonesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "st"] as const;
+      const expected = [fromBase(toBase(v)), "st"] as const;
       const conversionCandidate = [v, "ct"] as const;
 
       expect(mass["st"](conversionCandidate)).toEqual(expected);
@@ -2838,11 +2838,11 @@ describe("mass", () => {
       const ouncesTroyConversion = linearConversion(0.03110348);
 
       const [toBase, fromBase] = [
+        stonesConversion[1],
         ouncesTroyConversion[0],
-        stonesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "st"] as const;
+      const expected = [fromBase(toBase(v)), "st"] as const;
       const conversionCandidate = [v, "oz t"] as const;
 
       expect(mass["st"](conversionCandidate)).toEqual(expected);
@@ -2854,11 +2854,11 @@ describe("mass", () => {
       const slugsConversion = linearConversion(14.5939);
 
       const [toBase, fromBase] = [
+        stonesConversion[1],
         slugsConversion[0],
-        stonesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "st"] as const;
+      const expected = [fromBase(toBase(v)), "st"] as const;
       const conversionCandidate = [v, "slug"] as const;
 
       expect(mass["st"](conversionCandidate)).toEqual(expected);
@@ -2878,11 +2878,11 @@ describe("mass", () => {
       const kilogramsConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
+        metricTonsConversion[1],
         kilogramsConversion[0],
-        metricTonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "t"] as const;
+      const expected = [fromBase(toBase(v)), "t"] as const;
       const conversionCandidate = [v, "kg"] as const;
 
       expect(mass["t"](conversionCandidate)).toEqual(expected);
@@ -2894,11 +2894,11 @@ describe("mass", () => {
       const gramsConversion = linearConversion(0.001);
 
       const [toBase, fromBase] = [
+        metricTonsConversion[1],
         gramsConversion[0],
-        metricTonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "t"] as const;
+      const expected = [fromBase(toBase(v)), "t"] as const;
       const conversionCandidate = [v, "g"] as const;
 
       expect(mass["t"](conversionCandidate)).toEqual(expected);
@@ -2910,11 +2910,11 @@ describe("mass", () => {
       const decigramsConversion = linearConversion(0.0001);
 
       const [toBase, fromBase] = [
+        metricTonsConversion[1],
         decigramsConversion[0],
-        metricTonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "t"] as const;
+      const expected = [fromBase(toBase(v)), "t"] as const;
       const conversionCandidate = [v, "dg"] as const;
 
       expect(mass["t"](conversionCandidate)).toEqual(expected);
@@ -2926,11 +2926,11 @@ describe("mass", () => {
       const centigramsConversion = linearConversion(0.00001);
 
       const [toBase, fromBase] = [
+        metricTonsConversion[1],
         centigramsConversion[0],
-        metricTonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "t"] as const;
+      const expected = [fromBase(toBase(v)), "t"] as const;
       const conversionCandidate = [v, "cg"] as const;
 
       expect(mass["t"](conversionCandidate)).toEqual(expected);
@@ -2942,11 +2942,11 @@ describe("mass", () => {
       const milligramsConversion = linearConversion(0.000001);
 
       const [toBase, fromBase] = [
+        metricTonsConversion[1],
         milligramsConversion[0],
-        metricTonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "t"] as const;
+      const expected = [fromBase(toBase(v)), "t"] as const;
       const conversionCandidate = [v, "mg"] as const;
 
       expect(mass["t"](conversionCandidate)).toEqual(expected);
@@ -2958,11 +2958,11 @@ describe("mass", () => {
       const microgramsConversion = linearConversion(1e-9);
 
       const [toBase, fromBase] = [
+        metricTonsConversion[1],
         microgramsConversion[0],
-        metricTonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "t"] as const;
+      const expected = [fromBase(toBase(v)), "t"] as const;
       const conversionCandidate = [v, "µg"] as const;
 
       expect(mass["t"](conversionCandidate)).toEqual(expected);
@@ -2974,11 +2974,11 @@ describe("mass", () => {
       const nanogramsConversion = linearConversion(1e-12);
 
       const [toBase, fromBase] = [
+        metricTonsConversion[1],
         nanogramsConversion[0],
-        metricTonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "t"] as const;
+      const expected = [fromBase(toBase(v)), "t"] as const;
       const conversionCandidate = [v, "ng"] as const;
 
       expect(mass["t"](conversionCandidate)).toEqual(expected);
@@ -2990,11 +2990,11 @@ describe("mass", () => {
       const picogramsConversion = linearConversion(1e-15);
 
       const [toBase, fromBase] = [
+        metricTonsConversion[1],
         picogramsConversion[0],
-        metricTonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "t"] as const;
+      const expected = [fromBase(toBase(v)), "t"] as const;
       const conversionCandidate = [v, "pg"] as const;
 
       expect(mass["t"](conversionCandidate)).toEqual(expected);
@@ -3006,11 +3006,11 @@ describe("mass", () => {
       const ouncesConversion = linearConversion(0.0283495);
 
       const [toBase, fromBase] = [
+        metricTonsConversion[1],
         ouncesConversion[0],
-        metricTonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "t"] as const;
+      const expected = [fromBase(toBase(v)), "t"] as const;
       const conversionCandidate = [v, "oz"] as const;
 
       expect(mass["t"](conversionCandidate)).toEqual(expected);
@@ -3022,11 +3022,11 @@ describe("mass", () => {
       const poundsConversion = linearConversion(0.453592);
 
       const [toBase, fromBase] = [
+        metricTonsConversion[1],
         poundsConversion[0],
-        metricTonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "t"] as const;
+      const expected = [fromBase(toBase(v)), "t"] as const;
       const conversionCandidate = [v, "lb"] as const;
 
       expect(mass["t"](conversionCandidate)).toEqual(expected);
@@ -3038,11 +3038,11 @@ describe("mass", () => {
       const stonesConversion = linearConversion(0.157473);
 
       const [toBase, fromBase] = [
+        metricTonsConversion[1],
         stonesConversion[0],
-        metricTonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "t"] as const;
+      const expected = [fromBase(toBase(v)), "t"] as const;
       const conversionCandidate = [v, "st"] as const;
 
       expect(mass["t"](conversionCandidate)).toEqual(expected);
@@ -3056,11 +3056,11 @@ describe("mass", () => {
       const shortTonsConversion = linearConversion(907.185);
 
       const [toBase, fromBase] = [
+        metricTonsConversion[1],
         shortTonsConversion[0],
-        metricTonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "t"] as const;
+      const expected = [fromBase(toBase(v)), "t"] as const;
       const conversionCandidate = [v, "ton"] as const;
 
       expect(mass["t"](conversionCandidate)).toEqual(expected);
@@ -3072,11 +3072,11 @@ describe("mass", () => {
       const caratsConversion = linearConversion(0.0002);
 
       const [toBase, fromBase] = [
+        metricTonsConversion[1],
         caratsConversion[0],
-        metricTonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "t"] as const;
+      const expected = [fromBase(toBase(v)), "t"] as const;
       const conversionCandidate = [v, "ct"] as const;
 
       expect(mass["t"](conversionCandidate)).toEqual(expected);
@@ -3088,11 +3088,11 @@ describe("mass", () => {
       const ouncesTroyConversion = linearConversion(0.03110348);
 
       const [toBase, fromBase] = [
+        metricTonsConversion[1],
         ouncesTroyConversion[0],
-        metricTonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "t"] as const;
+      const expected = [fromBase(toBase(v)), "t"] as const;
       const conversionCandidate = [v, "oz t"] as const;
 
       expect(mass["t"](conversionCandidate)).toEqual(expected);
@@ -3104,11 +3104,11 @@ describe("mass", () => {
       const slugsConversion = linearConversion(14.5939);
 
       const [toBase, fromBase] = [
+        metricTonsConversion[1],
         slugsConversion[0],
-        metricTonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "t"] as const;
+      const expected = [fromBase(toBase(v)), "t"] as const;
       const conversionCandidate = [v, "slug"] as const;
 
       expect(mass["t"](conversionCandidate)).toEqual(expected);
@@ -3128,11 +3128,11 @@ describe("mass", () => {
       const kilogramsConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
+        shortTonsConversion[1],
         kilogramsConversion[0],
-        shortTonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ton"] as const;
+      const expected = [fromBase(toBase(v)), "ton"] as const;
       const conversionCandidate = [v, "kg"] as const;
 
       expect(mass["ton"](conversionCandidate)).toEqual(expected);
@@ -3144,11 +3144,11 @@ describe("mass", () => {
       const gramsConversion = linearConversion(0.001);
 
       const [toBase, fromBase] = [
+        shortTonsConversion[1],
         gramsConversion[0],
-        shortTonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ton"] as const;
+      const expected = [fromBase(toBase(v)), "ton"] as const;
       const conversionCandidate = [v, "g"] as const;
 
       expect(mass["ton"](conversionCandidate)).toEqual(expected);
@@ -3160,11 +3160,11 @@ describe("mass", () => {
       const decigramsConversion = linearConversion(0.0001);
 
       const [toBase, fromBase] = [
+        shortTonsConversion[1],
         decigramsConversion[0],
-        shortTonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ton"] as const;
+      const expected = [fromBase(toBase(v)), "ton"] as const;
       const conversionCandidate = [v, "dg"] as const;
 
       expect(mass["ton"](conversionCandidate)).toEqual(expected);
@@ -3176,11 +3176,11 @@ describe("mass", () => {
       const centigramsConversion = linearConversion(0.00001);
 
       const [toBase, fromBase] = [
+        shortTonsConversion[1],
         centigramsConversion[0],
-        shortTonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ton"] as const;
+      const expected = [fromBase(toBase(v)), "ton"] as const;
       const conversionCandidate = [v, "cg"] as const;
 
       expect(mass["ton"](conversionCandidate)).toEqual(expected);
@@ -3192,11 +3192,11 @@ describe("mass", () => {
       const milligramsConversion = linearConversion(0.000001);
 
       const [toBase, fromBase] = [
+        shortTonsConversion[1],
         milligramsConversion[0],
-        shortTonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ton"] as const;
+      const expected = [fromBase(toBase(v)), "ton"] as const;
       const conversionCandidate = [v, "mg"] as const;
 
       expect(mass["ton"](conversionCandidate)).toEqual(expected);
@@ -3208,11 +3208,11 @@ describe("mass", () => {
       const microgramsConversion = linearConversion(1e-9);
 
       const [toBase, fromBase] = [
+        shortTonsConversion[1],
         microgramsConversion[0],
-        shortTonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ton"] as const;
+      const expected = [fromBase(toBase(v)), "ton"] as const;
       const conversionCandidate = [v, "µg"] as const;
 
       expect(mass["ton"](conversionCandidate)).toEqual(expected);
@@ -3224,11 +3224,11 @@ describe("mass", () => {
       const nanogramsConversion = linearConversion(1e-12);
 
       const [toBase, fromBase] = [
+        shortTonsConversion[1],
         nanogramsConversion[0],
-        shortTonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ton"] as const;
+      const expected = [fromBase(toBase(v)), "ton"] as const;
       const conversionCandidate = [v, "ng"] as const;
 
       expect(mass["ton"](conversionCandidate)).toEqual(expected);
@@ -3240,11 +3240,11 @@ describe("mass", () => {
       const picogramsConversion = linearConversion(1e-15);
 
       const [toBase, fromBase] = [
+        shortTonsConversion[1],
         picogramsConversion[0],
-        shortTonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ton"] as const;
+      const expected = [fromBase(toBase(v)), "ton"] as const;
       const conversionCandidate = [v, "pg"] as const;
 
       expect(mass["ton"](conversionCandidate)).toEqual(expected);
@@ -3256,11 +3256,11 @@ describe("mass", () => {
       const ouncesConversion = linearConversion(0.0283495);
 
       const [toBase, fromBase] = [
+        shortTonsConversion[1],
         ouncesConversion[0],
-        shortTonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ton"] as const;
+      const expected = [fromBase(toBase(v)), "ton"] as const;
       const conversionCandidate = [v, "oz"] as const;
 
       expect(mass["ton"](conversionCandidate)).toEqual(expected);
@@ -3272,11 +3272,11 @@ describe("mass", () => {
       const poundsConversion = linearConversion(0.453592);
 
       const [toBase, fromBase] = [
+        shortTonsConversion[1],
         poundsConversion[0],
-        shortTonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ton"] as const;
+      const expected = [fromBase(toBase(v)), "ton"] as const;
       const conversionCandidate = [v, "lb"] as const;
 
       expect(mass["ton"](conversionCandidate)).toEqual(expected);
@@ -3288,11 +3288,11 @@ describe("mass", () => {
       const stonesConversion = linearConversion(0.157473);
 
       const [toBase, fromBase] = [
+        shortTonsConversion[1],
         stonesConversion[0],
-        shortTonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ton"] as const;
+      const expected = [fromBase(toBase(v)), "ton"] as const;
       const conversionCandidate = [v, "st"] as const;
 
       expect(mass["ton"](conversionCandidate)).toEqual(expected);
@@ -3304,11 +3304,11 @@ describe("mass", () => {
       const metricTonsConversion = linearConversion(1000);
 
       const [toBase, fromBase] = [
+        shortTonsConversion[1],
         metricTonsConversion[0],
-        shortTonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ton"] as const;
+      const expected = [fromBase(toBase(v)), "ton"] as const;
       const conversionCandidate = [v, "t"] as const;
 
       expect(mass["ton"](conversionCandidate)).toEqual(expected);
@@ -3322,11 +3322,11 @@ describe("mass", () => {
       const caratsConversion = linearConversion(0.0002);
 
       const [toBase, fromBase] = [
+        shortTonsConversion[1],
         caratsConversion[0],
-        shortTonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ton"] as const;
+      const expected = [fromBase(toBase(v)), "ton"] as const;
       const conversionCandidate = [v, "ct"] as const;
 
       expect(mass["ton"](conversionCandidate)).toEqual(expected);
@@ -3338,11 +3338,11 @@ describe("mass", () => {
       const ouncesTroyConversion = linearConversion(0.03110348);
 
       const [toBase, fromBase] = [
+        shortTonsConversion[1],
         ouncesTroyConversion[0],
-        shortTonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ton"] as const;
+      const expected = [fromBase(toBase(v)), "ton"] as const;
       const conversionCandidate = [v, "oz t"] as const;
 
       expect(mass["ton"](conversionCandidate)).toEqual(expected);
@@ -3354,11 +3354,11 @@ describe("mass", () => {
       const slugsConversion = linearConversion(14.5939);
 
       const [toBase, fromBase] = [
+        shortTonsConversion[1],
         slugsConversion[0],
-        shortTonsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ton"] as const;
+      const expected = [fromBase(toBase(v)), "ton"] as const;
       const conversionCandidate = [v, "slug"] as const;
 
       expect(mass["ton"](conversionCandidate)).toEqual(expected);
@@ -3378,11 +3378,11 @@ describe("mass", () => {
       const kilogramsConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
+        caratsConversion[1],
         kilogramsConversion[0],
-        caratsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ct"] as const;
+      const expected = [fromBase(toBase(v)), "ct"] as const;
       const conversionCandidate = [v, "kg"] as const;
 
       expect(mass["ct"](conversionCandidate)).toEqual(expected);
@@ -3394,11 +3394,11 @@ describe("mass", () => {
       const gramsConversion = linearConversion(0.001);
 
       const [toBase, fromBase] = [
+        caratsConversion[1],
         gramsConversion[0],
-        caratsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ct"] as const;
+      const expected = [fromBase(toBase(v)), "ct"] as const;
       const conversionCandidate = [v, "g"] as const;
 
       expect(mass["ct"](conversionCandidate)).toEqual(expected);
@@ -3410,11 +3410,11 @@ describe("mass", () => {
       const decigramsConversion = linearConversion(0.0001);
 
       const [toBase, fromBase] = [
+        caratsConversion[1],
         decigramsConversion[0],
-        caratsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ct"] as const;
+      const expected = [fromBase(toBase(v)), "ct"] as const;
       const conversionCandidate = [v, "dg"] as const;
 
       expect(mass["ct"](conversionCandidate)).toEqual(expected);
@@ -3426,11 +3426,11 @@ describe("mass", () => {
       const centigramsConversion = linearConversion(0.00001);
 
       const [toBase, fromBase] = [
+        caratsConversion[1],
         centigramsConversion[0],
-        caratsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ct"] as const;
+      const expected = [fromBase(toBase(v)), "ct"] as const;
       const conversionCandidate = [v, "cg"] as const;
 
       expect(mass["ct"](conversionCandidate)).toEqual(expected);
@@ -3442,11 +3442,11 @@ describe("mass", () => {
       const milligramsConversion = linearConversion(0.000001);
 
       const [toBase, fromBase] = [
+        caratsConversion[1],
         milligramsConversion[0],
-        caratsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ct"] as const;
+      const expected = [fromBase(toBase(v)), "ct"] as const;
       const conversionCandidate = [v, "mg"] as const;
 
       expect(mass["ct"](conversionCandidate)).toEqual(expected);
@@ -3458,11 +3458,11 @@ describe("mass", () => {
       const microgramsConversion = linearConversion(1e-9);
 
       const [toBase, fromBase] = [
+        caratsConversion[1],
         microgramsConversion[0],
-        caratsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ct"] as const;
+      const expected = [fromBase(toBase(v)), "ct"] as const;
       const conversionCandidate = [v, "µg"] as const;
 
       expect(mass["ct"](conversionCandidate)).toEqual(expected);
@@ -3474,11 +3474,11 @@ describe("mass", () => {
       const nanogramsConversion = linearConversion(1e-12);
 
       const [toBase, fromBase] = [
+        caratsConversion[1],
         nanogramsConversion[0],
-        caratsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ct"] as const;
+      const expected = [fromBase(toBase(v)), "ct"] as const;
       const conversionCandidate = [v, "ng"] as const;
 
       expect(mass["ct"](conversionCandidate)).toEqual(expected);
@@ -3490,11 +3490,11 @@ describe("mass", () => {
       const picogramsConversion = linearConversion(1e-15);
 
       const [toBase, fromBase] = [
+        caratsConversion[1],
         picogramsConversion[0],
-        caratsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ct"] as const;
+      const expected = [fromBase(toBase(v)), "ct"] as const;
       const conversionCandidate = [v, "pg"] as const;
 
       expect(mass["ct"](conversionCandidate)).toEqual(expected);
@@ -3506,11 +3506,11 @@ describe("mass", () => {
       const ouncesConversion = linearConversion(0.0283495);
 
       const [toBase, fromBase] = [
+        caratsConversion[1],
         ouncesConversion[0],
-        caratsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ct"] as const;
+      const expected = [fromBase(toBase(v)), "ct"] as const;
       const conversionCandidate = [v, "oz"] as const;
 
       expect(mass["ct"](conversionCandidate)).toEqual(expected);
@@ -3522,11 +3522,11 @@ describe("mass", () => {
       const poundsConversion = linearConversion(0.453592);
 
       const [toBase, fromBase] = [
+        caratsConversion[1],
         poundsConversion[0],
-        caratsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ct"] as const;
+      const expected = [fromBase(toBase(v)), "ct"] as const;
       const conversionCandidate = [v, "lb"] as const;
 
       expect(mass["ct"](conversionCandidate)).toEqual(expected);
@@ -3538,11 +3538,11 @@ describe("mass", () => {
       const stonesConversion = linearConversion(0.157473);
 
       const [toBase, fromBase] = [
+        caratsConversion[1],
         stonesConversion[0],
-        caratsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ct"] as const;
+      const expected = [fromBase(toBase(v)), "ct"] as const;
       const conversionCandidate = [v, "st"] as const;
 
       expect(mass["ct"](conversionCandidate)).toEqual(expected);
@@ -3554,11 +3554,11 @@ describe("mass", () => {
       const metricTonsConversion = linearConversion(1000);
 
       const [toBase, fromBase] = [
+        caratsConversion[1],
         metricTonsConversion[0],
-        caratsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ct"] as const;
+      const expected = [fromBase(toBase(v)), "ct"] as const;
       const conversionCandidate = [v, "t"] as const;
 
       expect(mass["ct"](conversionCandidate)).toEqual(expected);
@@ -3570,11 +3570,11 @@ describe("mass", () => {
       const shortTonsConversion = linearConversion(907.185);
 
       const [toBase, fromBase] = [
+        caratsConversion[1],
         shortTonsConversion[0],
-        caratsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ct"] as const;
+      const expected = [fromBase(toBase(v)), "ct"] as const;
       const conversionCandidate = [v, "ton"] as const;
 
       expect(mass["ct"](conversionCandidate)).toEqual(expected);
@@ -3588,11 +3588,11 @@ describe("mass", () => {
       const ouncesTroyConversion = linearConversion(0.03110348);
 
       const [toBase, fromBase] = [
+        caratsConversion[1],
         ouncesTroyConversion[0],
-        caratsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ct"] as const;
+      const expected = [fromBase(toBase(v)), "ct"] as const;
       const conversionCandidate = [v, "oz t"] as const;
 
       expect(mass["ct"](conversionCandidate)).toEqual(expected);
@@ -3604,11 +3604,11 @@ describe("mass", () => {
       const slugsConversion = linearConversion(14.5939);
 
       const [toBase, fromBase] = [
+        caratsConversion[1],
         slugsConversion[0],
-        caratsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ct"] as const;
+      const expected = [fromBase(toBase(v)), "ct"] as const;
       const conversionCandidate = [v, "slug"] as const;
 
       expect(mass["ct"](conversionCandidate)).toEqual(expected);
@@ -3628,11 +3628,11 @@ describe("mass", () => {
       const kilogramsConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
+        ouncesTroyConversion[1],
         kilogramsConversion[0],
-        ouncesTroyConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "oz t"] as const;
+      const expected = [fromBase(toBase(v)), "oz t"] as const;
       const conversionCandidate = [v, "kg"] as const;
 
       expect(mass["oz t"](conversionCandidate)).toEqual(expected);
@@ -3644,11 +3644,11 @@ describe("mass", () => {
       const gramsConversion = linearConversion(0.001);
 
       const [toBase, fromBase] = [
+        ouncesTroyConversion[1],
         gramsConversion[0],
-        ouncesTroyConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "oz t"] as const;
+      const expected = [fromBase(toBase(v)), "oz t"] as const;
       const conversionCandidate = [v, "g"] as const;
 
       expect(mass["oz t"](conversionCandidate)).toEqual(expected);
@@ -3660,11 +3660,11 @@ describe("mass", () => {
       const decigramsConversion = linearConversion(0.0001);
 
       const [toBase, fromBase] = [
+        ouncesTroyConversion[1],
         decigramsConversion[0],
-        ouncesTroyConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "oz t"] as const;
+      const expected = [fromBase(toBase(v)), "oz t"] as const;
       const conversionCandidate = [v, "dg"] as const;
 
       expect(mass["oz t"](conversionCandidate)).toEqual(expected);
@@ -3676,11 +3676,11 @@ describe("mass", () => {
       const centigramsConversion = linearConversion(0.00001);
 
       const [toBase, fromBase] = [
+        ouncesTroyConversion[1],
         centigramsConversion[0],
-        ouncesTroyConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "oz t"] as const;
+      const expected = [fromBase(toBase(v)), "oz t"] as const;
       const conversionCandidate = [v, "cg"] as const;
 
       expect(mass["oz t"](conversionCandidate)).toEqual(expected);
@@ -3692,11 +3692,11 @@ describe("mass", () => {
       const milligramsConversion = linearConversion(0.000001);
 
       const [toBase, fromBase] = [
+        ouncesTroyConversion[1],
         milligramsConversion[0],
-        ouncesTroyConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "oz t"] as const;
+      const expected = [fromBase(toBase(v)), "oz t"] as const;
       const conversionCandidate = [v, "mg"] as const;
 
       expect(mass["oz t"](conversionCandidate)).toEqual(expected);
@@ -3708,11 +3708,11 @@ describe("mass", () => {
       const microgramsConversion = linearConversion(1e-9);
 
       const [toBase, fromBase] = [
+        ouncesTroyConversion[1],
         microgramsConversion[0],
-        ouncesTroyConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "oz t"] as const;
+      const expected = [fromBase(toBase(v)), "oz t"] as const;
       const conversionCandidate = [v, "µg"] as const;
 
       expect(mass["oz t"](conversionCandidate)).toEqual(expected);
@@ -3724,11 +3724,11 @@ describe("mass", () => {
       const nanogramsConversion = linearConversion(1e-12);
 
       const [toBase, fromBase] = [
+        ouncesTroyConversion[1],
         nanogramsConversion[0],
-        ouncesTroyConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "oz t"] as const;
+      const expected = [fromBase(toBase(v)), "oz t"] as const;
       const conversionCandidate = [v, "ng"] as const;
 
       expect(mass["oz t"](conversionCandidate)).toEqual(expected);
@@ -3740,11 +3740,11 @@ describe("mass", () => {
       const picogramsConversion = linearConversion(1e-15);
 
       const [toBase, fromBase] = [
+        ouncesTroyConversion[1],
         picogramsConversion[0],
-        ouncesTroyConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "oz t"] as const;
+      const expected = [fromBase(toBase(v)), "oz t"] as const;
       const conversionCandidate = [v, "pg"] as const;
 
       expect(mass["oz t"](conversionCandidate)).toEqual(expected);
@@ -3756,11 +3756,11 @@ describe("mass", () => {
       const ouncesConversion = linearConversion(0.0283495);
 
       const [toBase, fromBase] = [
+        ouncesTroyConversion[1],
         ouncesConversion[0],
-        ouncesTroyConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "oz t"] as const;
+      const expected = [fromBase(toBase(v)), "oz t"] as const;
       const conversionCandidate = [v, "oz"] as const;
 
       expect(mass["oz t"](conversionCandidate)).toEqual(expected);
@@ -3772,11 +3772,11 @@ describe("mass", () => {
       const poundsConversion = linearConversion(0.453592);
 
       const [toBase, fromBase] = [
+        ouncesTroyConversion[1],
         poundsConversion[0],
-        ouncesTroyConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "oz t"] as const;
+      const expected = [fromBase(toBase(v)), "oz t"] as const;
       const conversionCandidate = [v, "lb"] as const;
 
       expect(mass["oz t"](conversionCandidate)).toEqual(expected);
@@ -3788,11 +3788,11 @@ describe("mass", () => {
       const stonesConversion = linearConversion(0.157473);
 
       const [toBase, fromBase] = [
+        ouncesTroyConversion[1],
         stonesConversion[0],
-        ouncesTroyConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "oz t"] as const;
+      const expected = [fromBase(toBase(v)), "oz t"] as const;
       const conversionCandidate = [v, "st"] as const;
 
       expect(mass["oz t"](conversionCandidate)).toEqual(expected);
@@ -3804,11 +3804,11 @@ describe("mass", () => {
       const metricTonsConversion = linearConversion(1000);
 
       const [toBase, fromBase] = [
+        ouncesTroyConversion[1],
         metricTonsConversion[0],
-        ouncesTroyConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "oz t"] as const;
+      const expected = [fromBase(toBase(v)), "oz t"] as const;
       const conversionCandidate = [v, "t"] as const;
 
       expect(mass["oz t"](conversionCandidate)).toEqual(expected);
@@ -3820,11 +3820,11 @@ describe("mass", () => {
       const shortTonsConversion = linearConversion(907.185);
 
       const [toBase, fromBase] = [
+        ouncesTroyConversion[1],
         shortTonsConversion[0],
-        ouncesTroyConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "oz t"] as const;
+      const expected = [fromBase(toBase(v)), "oz t"] as const;
       const conversionCandidate = [v, "ton"] as const;
 
       expect(mass["oz t"](conversionCandidate)).toEqual(expected);
@@ -3836,11 +3836,11 @@ describe("mass", () => {
       const caratsConversion = linearConversion(0.0002);
 
       const [toBase, fromBase] = [
+        ouncesTroyConversion[1],
         caratsConversion[0],
-        ouncesTroyConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "oz t"] as const;
+      const expected = [fromBase(toBase(v)), "oz t"] as const;
       const conversionCandidate = [v, "ct"] as const;
 
       expect(mass["oz t"](conversionCandidate)).toEqual(expected);
@@ -3854,11 +3854,11 @@ describe("mass", () => {
       const slugsConversion = linearConversion(14.5939);
 
       const [toBase, fromBase] = [
+        ouncesTroyConversion[1],
         slugsConversion[0],
-        ouncesTroyConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "oz t"] as const;
+      const expected = [fromBase(toBase(v)), "oz t"] as const;
       const conversionCandidate = [v, "slug"] as const;
 
       expect(mass["oz t"](conversionCandidate)).toEqual(expected);
@@ -3878,11 +3878,11 @@ describe("mass", () => {
       const kilogramsConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
+        slugsConversion[1],
         kilogramsConversion[0],
-        slugsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "slug"] as const;
+      const expected = [fromBase(toBase(v)), "slug"] as const;
       const conversionCandidate = [v, "kg"] as const;
 
       expect(mass["slug"](conversionCandidate)).toEqual(expected);
@@ -3894,11 +3894,11 @@ describe("mass", () => {
       const gramsConversion = linearConversion(0.001);
 
       const [toBase, fromBase] = [
+        slugsConversion[1],
         gramsConversion[0],
-        slugsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "slug"] as const;
+      const expected = [fromBase(toBase(v)), "slug"] as const;
       const conversionCandidate = [v, "g"] as const;
 
       expect(mass["slug"](conversionCandidate)).toEqual(expected);
@@ -3910,11 +3910,11 @@ describe("mass", () => {
       const decigramsConversion = linearConversion(0.0001);
 
       const [toBase, fromBase] = [
+        slugsConversion[1],
         decigramsConversion[0],
-        slugsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "slug"] as const;
+      const expected = [fromBase(toBase(v)), "slug"] as const;
       const conversionCandidate = [v, "dg"] as const;
 
       expect(mass["slug"](conversionCandidate)).toEqual(expected);
@@ -3926,11 +3926,11 @@ describe("mass", () => {
       const centigramsConversion = linearConversion(0.00001);
 
       const [toBase, fromBase] = [
+        slugsConversion[1],
         centigramsConversion[0],
-        slugsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "slug"] as const;
+      const expected = [fromBase(toBase(v)), "slug"] as const;
       const conversionCandidate = [v, "cg"] as const;
 
       expect(mass["slug"](conversionCandidate)).toEqual(expected);
@@ -3942,11 +3942,11 @@ describe("mass", () => {
       const milligramsConversion = linearConversion(0.000001);
 
       const [toBase, fromBase] = [
+        slugsConversion[1],
         milligramsConversion[0],
-        slugsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "slug"] as const;
+      const expected = [fromBase(toBase(v)), "slug"] as const;
       const conversionCandidate = [v, "mg"] as const;
 
       expect(mass["slug"](conversionCandidate)).toEqual(expected);
@@ -3958,11 +3958,11 @@ describe("mass", () => {
       const microgramsConversion = linearConversion(1e-9);
 
       const [toBase, fromBase] = [
+        slugsConversion[1],
         microgramsConversion[0],
-        slugsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "slug"] as const;
+      const expected = [fromBase(toBase(v)), "slug"] as const;
       const conversionCandidate = [v, "µg"] as const;
 
       expect(mass["slug"](conversionCandidate)).toEqual(expected);
@@ -3974,11 +3974,11 @@ describe("mass", () => {
       const nanogramsConversion = linearConversion(1e-12);
 
       const [toBase, fromBase] = [
+        slugsConversion[1],
         nanogramsConversion[0],
-        slugsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "slug"] as const;
+      const expected = [fromBase(toBase(v)), "slug"] as const;
       const conversionCandidate = [v, "ng"] as const;
 
       expect(mass["slug"](conversionCandidate)).toEqual(expected);
@@ -3990,11 +3990,11 @@ describe("mass", () => {
       const picogramsConversion = linearConversion(1e-15);
 
       const [toBase, fromBase] = [
+        slugsConversion[1],
         picogramsConversion[0],
-        slugsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "slug"] as const;
+      const expected = [fromBase(toBase(v)), "slug"] as const;
       const conversionCandidate = [v, "pg"] as const;
 
       expect(mass["slug"](conversionCandidate)).toEqual(expected);
@@ -4006,11 +4006,11 @@ describe("mass", () => {
       const ouncesConversion = linearConversion(0.0283495);
 
       const [toBase, fromBase] = [
+        slugsConversion[1],
         ouncesConversion[0],
-        slugsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "slug"] as const;
+      const expected = [fromBase(toBase(v)), "slug"] as const;
       const conversionCandidate = [v, "oz"] as const;
 
       expect(mass["slug"](conversionCandidate)).toEqual(expected);
@@ -4022,11 +4022,11 @@ describe("mass", () => {
       const poundsConversion = linearConversion(0.453592);
 
       const [toBase, fromBase] = [
+        slugsConversion[1],
         poundsConversion[0],
-        slugsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "slug"] as const;
+      const expected = [fromBase(toBase(v)), "slug"] as const;
       const conversionCandidate = [v, "lb"] as const;
 
       expect(mass["slug"](conversionCandidate)).toEqual(expected);
@@ -4038,11 +4038,11 @@ describe("mass", () => {
       const stonesConversion = linearConversion(0.157473);
 
       const [toBase, fromBase] = [
+        slugsConversion[1],
         stonesConversion[0],
-        slugsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "slug"] as const;
+      const expected = [fromBase(toBase(v)), "slug"] as const;
       const conversionCandidate = [v, "st"] as const;
 
       expect(mass["slug"](conversionCandidate)).toEqual(expected);
@@ -4054,11 +4054,11 @@ describe("mass", () => {
       const metricTonsConversion = linearConversion(1000);
 
       const [toBase, fromBase] = [
+        slugsConversion[1],
         metricTonsConversion[0],
-        slugsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "slug"] as const;
+      const expected = [fromBase(toBase(v)), "slug"] as const;
       const conversionCandidate = [v, "t"] as const;
 
       expect(mass["slug"](conversionCandidate)).toEqual(expected);
@@ -4070,11 +4070,11 @@ describe("mass", () => {
       const shortTonsConversion = linearConversion(907.185);
 
       const [toBase, fromBase] = [
+        slugsConversion[1],
         shortTonsConversion[0],
-        slugsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "slug"] as const;
+      const expected = [fromBase(toBase(v)), "slug"] as const;
       const conversionCandidate = [v, "ton"] as const;
 
       expect(mass["slug"](conversionCandidate)).toEqual(expected);
@@ -4086,11 +4086,11 @@ describe("mass", () => {
       const caratsConversion = linearConversion(0.0002);
 
       const [toBase, fromBase] = [
+        slugsConversion[1],
         caratsConversion[0],
-        slugsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "slug"] as const;
+      const expected = [fromBase(toBase(v)), "slug"] as const;
       const conversionCandidate = [v, "ct"] as const;
 
       expect(mass["slug"](conversionCandidate)).toEqual(expected);
@@ -4102,11 +4102,11 @@ describe("mass", () => {
       const ouncesTroyConversion = linearConversion(0.03110348);
 
       const [toBase, fromBase] = [
+        slugsConversion[1],
         ouncesTroyConversion[0],
-        slugsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "slug"] as const;
+      const expected = [fromBase(toBase(v)), "slug"] as const;
       const conversionCandidate = [v, "oz t"] as const;
 
       expect(mass["slug"](conversionCandidate)).toEqual(expected);

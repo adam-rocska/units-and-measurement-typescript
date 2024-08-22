@@ -116,11 +116,11 @@ describe("area", () => {
       const squareKilometersConversion = linearConversion(1000000);
 
       const [toBase, fromBase] = [
+        squareMegametersConversion[1],
         squareKilometersConversion[0],
-        squareMegametersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Mm²"] as const;
+      const expected = [fromBase(toBase(v)), "Mm²"] as const;
       const conversionCandidate = [v, "km²"] as const;
 
       expect(area["Mm²"](conversionCandidate)).toEqual(expected);
@@ -132,11 +132,11 @@ describe("area", () => {
       const squareMetersConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
+        squareMegametersConversion[1],
         squareMetersConversion[0],
-        squareMegametersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Mm²"] as const;
+      const expected = [fromBase(toBase(v)), "Mm²"] as const;
       const conversionCandidate = [v, "m²"] as const;
 
       expect(area["Mm²"](conversionCandidate)).toEqual(expected);
@@ -148,11 +148,11 @@ describe("area", () => {
       const squareCentimetersConversion = linearConversion(0.0001);
 
       const [toBase, fromBase] = [
+        squareMegametersConversion[1],
         squareCentimetersConversion[0],
-        squareMegametersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Mm²"] as const;
+      const expected = [fromBase(toBase(v)), "Mm²"] as const;
       const conversionCandidate = [v, "cm²"] as const;
 
       expect(area["Mm²"](conversionCandidate)).toEqual(expected);
@@ -164,11 +164,11 @@ describe("area", () => {
       const squareMillimetersConversion = linearConversion(0.000001);
 
       const [toBase, fromBase] = [
+        squareMegametersConversion[1],
         squareMillimetersConversion[0],
-        squareMegametersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Mm²"] as const;
+      const expected = [fromBase(toBase(v)), "Mm²"] as const;
       const conversionCandidate = [v, "mm²"] as const;
 
       expect(area["Mm²"](conversionCandidate)).toEqual(expected);
@@ -180,11 +180,11 @@ describe("area", () => {
       const squareMicrometersConversion = linearConversion(1e-12);
 
       const [toBase, fromBase] = [
+        squareMegametersConversion[1],
         squareMicrometersConversion[0],
-        squareMegametersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Mm²"] as const;
+      const expected = [fromBase(toBase(v)), "Mm²"] as const;
       const conversionCandidate = [v, "µm²"] as const;
 
       expect(area["Mm²"](conversionCandidate)).toEqual(expected);
@@ -196,11 +196,11 @@ describe("area", () => {
       const squareNanometersConversion = linearConversion(1e-18);
 
       const [toBase, fromBase] = [
+        squareMegametersConversion[1],
         squareNanometersConversion[0],
-        squareMegametersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Mm²"] as const;
+      const expected = [fromBase(toBase(v)), "Mm²"] as const;
       const conversionCandidate = [v, "nm²"] as const;
 
       expect(area["Mm²"](conversionCandidate)).toEqual(expected);
@@ -212,11 +212,11 @@ describe("area", () => {
       const squareInchesConversion = linearConversion(0.00064516);
 
       const [toBase, fromBase] = [
+        squareMegametersConversion[1],
         squareInchesConversion[0],
-        squareMegametersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Mm²"] as const;
+      const expected = [fromBase(toBase(v)), "Mm²"] as const;
       const conversionCandidate = [v, "in²"] as const;
 
       expect(area["Mm²"](conversionCandidate)).toEqual(expected);
@@ -228,11 +228,11 @@ describe("area", () => {
       const squareFeetConversion = linearConversion(0.092903);
 
       const [toBase, fromBase] = [
+        squareMegametersConversion[1],
         squareFeetConversion[0],
-        squareMegametersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Mm²"] as const;
+      const expected = [fromBase(toBase(v)), "Mm²"] as const;
       const conversionCandidate = [v, "ft²"] as const;
 
       expect(area["Mm²"](conversionCandidate)).toEqual(expected);
@@ -244,11 +244,11 @@ describe("area", () => {
       const squareYardsConversion = linearConversion(0.836127);
 
       const [toBase, fromBase] = [
+        squareMegametersConversion[1],
         squareYardsConversion[0],
-        squareMegametersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Mm²"] as const;
+      const expected = [fromBase(toBase(v)), "Mm²"] as const;
       const conversionCandidate = [v, "yd²"] as const;
 
       expect(area["Mm²"](conversionCandidate)).toEqual(expected);
@@ -260,11 +260,11 @@ describe("area", () => {
       const squareMilesConversion = linearConversion(2590000);
 
       const [toBase, fromBase] = [
+        squareMegametersConversion[1],
         squareMilesConversion[0],
-        squareMegametersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Mm²"] as const;
+      const expected = [fromBase(toBase(v)), "Mm²"] as const;
       const conversionCandidate = [v, "mi²"] as const;
 
       expect(area["Mm²"](conversionCandidate)).toEqual(expected);
@@ -276,11 +276,11 @@ describe("area", () => {
       const acresConversion = linearConversion(4046.86);
 
       const [toBase, fromBase] = [
+        squareMegametersConversion[1],
         acresConversion[0],
-        squareMegametersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Mm²"] as const;
+      const expected = [fromBase(toBase(v)), "Mm²"] as const;
       const conversionCandidate = [v, "ac"] as const;
 
       expect(area["Mm²"](conversionCandidate)).toEqual(expected);
@@ -292,11 +292,11 @@ describe("area", () => {
       const aresConversion = linearConversion(100);
 
       const [toBase, fromBase] = [
+        squareMegametersConversion[1],
         aresConversion[0],
-        squareMegametersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Mm²"] as const;
+      const expected = [fromBase(toBase(v)), "Mm²"] as const;
       const conversionCandidate = [v, "a"] as const;
 
       expect(area["Mm²"](conversionCandidate)).toEqual(expected);
@@ -308,11 +308,11 @@ describe("area", () => {
       const hectaresConversion = linearConversion(10000);
 
       const [toBase, fromBase] = [
+        squareMegametersConversion[1],
         hectaresConversion[0],
-        squareMegametersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Mm²"] as const;
+      const expected = [fromBase(toBase(v)), "Mm²"] as const;
       const conversionCandidate = [v, "ha"] as const;
 
       expect(area["Mm²"](conversionCandidate)).toEqual(expected);
@@ -332,11 +332,11 @@ describe("area", () => {
       const squareMegametersConversion = linearConversion(1000000000000);
 
       const [toBase, fromBase] = [
+        squareKilometersConversion[1],
         squareMegametersConversion[0],
-        squareKilometersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "km²"] as const;
+      const expected = [fromBase(toBase(v)), "km²"] as const;
       const conversionCandidate = [v, "Mm²"] as const;
 
       expect(area["km²"](conversionCandidate)).toEqual(expected);
@@ -350,11 +350,11 @@ describe("area", () => {
       const squareMetersConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
+        squareKilometersConversion[1],
         squareMetersConversion[0],
-        squareKilometersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "km²"] as const;
+      const expected = [fromBase(toBase(v)), "km²"] as const;
       const conversionCandidate = [v, "m²"] as const;
 
       expect(area["km²"](conversionCandidate)).toEqual(expected);
@@ -366,11 +366,11 @@ describe("area", () => {
       const squareCentimetersConversion = linearConversion(0.0001);
 
       const [toBase, fromBase] = [
+        squareKilometersConversion[1],
         squareCentimetersConversion[0],
-        squareKilometersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "km²"] as const;
+      const expected = [fromBase(toBase(v)), "km²"] as const;
       const conversionCandidate = [v, "cm²"] as const;
 
       expect(area["km²"](conversionCandidate)).toEqual(expected);
@@ -382,11 +382,11 @@ describe("area", () => {
       const squareMillimetersConversion = linearConversion(0.000001);
 
       const [toBase, fromBase] = [
+        squareKilometersConversion[1],
         squareMillimetersConversion[0],
-        squareKilometersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "km²"] as const;
+      const expected = [fromBase(toBase(v)), "km²"] as const;
       const conversionCandidate = [v, "mm²"] as const;
 
       expect(area["km²"](conversionCandidate)).toEqual(expected);
@@ -398,11 +398,11 @@ describe("area", () => {
       const squareMicrometersConversion = linearConversion(1e-12);
 
       const [toBase, fromBase] = [
+        squareKilometersConversion[1],
         squareMicrometersConversion[0],
-        squareKilometersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "km²"] as const;
+      const expected = [fromBase(toBase(v)), "km²"] as const;
       const conversionCandidate = [v, "µm²"] as const;
 
       expect(area["km²"](conversionCandidate)).toEqual(expected);
@@ -414,11 +414,11 @@ describe("area", () => {
       const squareNanometersConversion = linearConversion(1e-18);
 
       const [toBase, fromBase] = [
+        squareKilometersConversion[1],
         squareNanometersConversion[0],
-        squareKilometersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "km²"] as const;
+      const expected = [fromBase(toBase(v)), "km²"] as const;
       const conversionCandidate = [v, "nm²"] as const;
 
       expect(area["km²"](conversionCandidate)).toEqual(expected);
@@ -430,11 +430,11 @@ describe("area", () => {
       const squareInchesConversion = linearConversion(0.00064516);
 
       const [toBase, fromBase] = [
+        squareKilometersConversion[1],
         squareInchesConversion[0],
-        squareKilometersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "km²"] as const;
+      const expected = [fromBase(toBase(v)), "km²"] as const;
       const conversionCandidate = [v, "in²"] as const;
 
       expect(area["km²"](conversionCandidate)).toEqual(expected);
@@ -446,11 +446,11 @@ describe("area", () => {
       const squareFeetConversion = linearConversion(0.092903);
 
       const [toBase, fromBase] = [
+        squareKilometersConversion[1],
         squareFeetConversion[0],
-        squareKilometersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "km²"] as const;
+      const expected = [fromBase(toBase(v)), "km²"] as const;
       const conversionCandidate = [v, "ft²"] as const;
 
       expect(area["km²"](conversionCandidate)).toEqual(expected);
@@ -462,11 +462,11 @@ describe("area", () => {
       const squareYardsConversion = linearConversion(0.836127);
 
       const [toBase, fromBase] = [
+        squareKilometersConversion[1],
         squareYardsConversion[0],
-        squareKilometersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "km²"] as const;
+      const expected = [fromBase(toBase(v)), "km²"] as const;
       const conversionCandidate = [v, "yd²"] as const;
 
       expect(area["km²"](conversionCandidate)).toEqual(expected);
@@ -478,11 +478,11 @@ describe("area", () => {
       const squareMilesConversion = linearConversion(2590000);
 
       const [toBase, fromBase] = [
+        squareKilometersConversion[1],
         squareMilesConversion[0],
-        squareKilometersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "km²"] as const;
+      const expected = [fromBase(toBase(v)), "km²"] as const;
       const conversionCandidate = [v, "mi²"] as const;
 
       expect(area["km²"](conversionCandidate)).toEqual(expected);
@@ -494,11 +494,11 @@ describe("area", () => {
       const acresConversion = linearConversion(4046.86);
 
       const [toBase, fromBase] = [
+        squareKilometersConversion[1],
         acresConversion[0],
-        squareKilometersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "km²"] as const;
+      const expected = [fromBase(toBase(v)), "km²"] as const;
       const conversionCandidate = [v, "ac"] as const;
 
       expect(area["km²"](conversionCandidate)).toEqual(expected);
@@ -510,11 +510,11 @@ describe("area", () => {
       const aresConversion = linearConversion(100);
 
       const [toBase, fromBase] = [
+        squareKilometersConversion[1],
         aresConversion[0],
-        squareKilometersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "km²"] as const;
+      const expected = [fromBase(toBase(v)), "km²"] as const;
       const conversionCandidate = [v, "a"] as const;
 
       expect(area["km²"](conversionCandidate)).toEqual(expected);
@@ -526,11 +526,11 @@ describe("area", () => {
       const hectaresConversion = linearConversion(10000);
 
       const [toBase, fromBase] = [
+        squareKilometersConversion[1],
         hectaresConversion[0],
-        squareKilometersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "km²"] as const;
+      const expected = [fromBase(toBase(v)), "km²"] as const;
       const conversionCandidate = [v, "ha"] as const;
 
       expect(area["km²"](conversionCandidate)).toEqual(expected);
@@ -550,11 +550,11 @@ describe("area", () => {
       const squareMegametersConversion = linearConversion(1000000000000);
 
       const [toBase, fromBase] = [
+        squareMetersConversion[1],
         squareMegametersConversion[0],
-        squareMetersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "m²"] as const;
+      const expected = [fromBase(toBase(v)), "m²"] as const;
       const conversionCandidate = [v, "Mm²"] as const;
 
       expect(area["m²"](conversionCandidate)).toEqual(expected);
@@ -566,11 +566,11 @@ describe("area", () => {
       const squareKilometersConversion = linearConversion(1000000);
 
       const [toBase, fromBase] = [
+        squareMetersConversion[1],
         squareKilometersConversion[0],
-        squareMetersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "m²"] as const;
+      const expected = [fromBase(toBase(v)), "m²"] as const;
       const conversionCandidate = [v, "km²"] as const;
 
       expect(area["m²"](conversionCandidate)).toEqual(expected);
@@ -584,11 +584,11 @@ describe("area", () => {
       const squareCentimetersConversion = linearConversion(0.0001);
 
       const [toBase, fromBase] = [
+        squareMetersConversion[1],
         squareCentimetersConversion[0],
-        squareMetersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "m²"] as const;
+      const expected = [fromBase(toBase(v)), "m²"] as const;
       const conversionCandidate = [v, "cm²"] as const;
 
       expect(area["m²"](conversionCandidate)).toEqual(expected);
@@ -600,11 +600,11 @@ describe("area", () => {
       const squareMillimetersConversion = linearConversion(0.000001);
 
       const [toBase, fromBase] = [
+        squareMetersConversion[1],
         squareMillimetersConversion[0],
-        squareMetersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "m²"] as const;
+      const expected = [fromBase(toBase(v)), "m²"] as const;
       const conversionCandidate = [v, "mm²"] as const;
 
       expect(area["m²"](conversionCandidate)).toEqual(expected);
@@ -616,11 +616,11 @@ describe("area", () => {
       const squareMicrometersConversion = linearConversion(1e-12);
 
       const [toBase, fromBase] = [
+        squareMetersConversion[1],
         squareMicrometersConversion[0],
-        squareMetersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "m²"] as const;
+      const expected = [fromBase(toBase(v)), "m²"] as const;
       const conversionCandidate = [v, "µm²"] as const;
 
       expect(area["m²"](conversionCandidate)).toEqual(expected);
@@ -632,11 +632,11 @@ describe("area", () => {
       const squareNanometersConversion = linearConversion(1e-18);
 
       const [toBase, fromBase] = [
+        squareMetersConversion[1],
         squareNanometersConversion[0],
-        squareMetersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "m²"] as const;
+      const expected = [fromBase(toBase(v)), "m²"] as const;
       const conversionCandidate = [v, "nm²"] as const;
 
       expect(area["m²"](conversionCandidate)).toEqual(expected);
@@ -648,11 +648,11 @@ describe("area", () => {
       const squareInchesConversion = linearConversion(0.00064516);
 
       const [toBase, fromBase] = [
+        squareMetersConversion[1],
         squareInchesConversion[0],
-        squareMetersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "m²"] as const;
+      const expected = [fromBase(toBase(v)), "m²"] as const;
       const conversionCandidate = [v, "in²"] as const;
 
       expect(area["m²"](conversionCandidate)).toEqual(expected);
@@ -664,11 +664,11 @@ describe("area", () => {
       const squareFeetConversion = linearConversion(0.092903);
 
       const [toBase, fromBase] = [
+        squareMetersConversion[1],
         squareFeetConversion[0],
-        squareMetersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "m²"] as const;
+      const expected = [fromBase(toBase(v)), "m²"] as const;
       const conversionCandidate = [v, "ft²"] as const;
 
       expect(area["m²"](conversionCandidate)).toEqual(expected);
@@ -680,11 +680,11 @@ describe("area", () => {
       const squareYardsConversion = linearConversion(0.836127);
 
       const [toBase, fromBase] = [
+        squareMetersConversion[1],
         squareYardsConversion[0],
-        squareMetersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "m²"] as const;
+      const expected = [fromBase(toBase(v)), "m²"] as const;
       const conversionCandidate = [v, "yd²"] as const;
 
       expect(area["m²"](conversionCandidate)).toEqual(expected);
@@ -696,11 +696,11 @@ describe("area", () => {
       const squareMilesConversion = linearConversion(2590000);
 
       const [toBase, fromBase] = [
+        squareMetersConversion[1],
         squareMilesConversion[0],
-        squareMetersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "m²"] as const;
+      const expected = [fromBase(toBase(v)), "m²"] as const;
       const conversionCandidate = [v, "mi²"] as const;
 
       expect(area["m²"](conversionCandidate)).toEqual(expected);
@@ -712,11 +712,11 @@ describe("area", () => {
       const acresConversion = linearConversion(4046.86);
 
       const [toBase, fromBase] = [
+        squareMetersConversion[1],
         acresConversion[0],
-        squareMetersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "m²"] as const;
+      const expected = [fromBase(toBase(v)), "m²"] as const;
       const conversionCandidate = [v, "ac"] as const;
 
       expect(area["m²"](conversionCandidate)).toEqual(expected);
@@ -728,11 +728,11 @@ describe("area", () => {
       const aresConversion = linearConversion(100);
 
       const [toBase, fromBase] = [
+        squareMetersConversion[1],
         aresConversion[0],
-        squareMetersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "m²"] as const;
+      const expected = [fromBase(toBase(v)), "m²"] as const;
       const conversionCandidate = [v, "a"] as const;
 
       expect(area["m²"](conversionCandidate)).toEqual(expected);
@@ -744,11 +744,11 @@ describe("area", () => {
       const hectaresConversion = linearConversion(10000);
 
       const [toBase, fromBase] = [
+        squareMetersConversion[1],
         hectaresConversion[0],
-        squareMetersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "m²"] as const;
+      const expected = [fromBase(toBase(v)), "m²"] as const;
       const conversionCandidate = [v, "ha"] as const;
 
       expect(area["m²"](conversionCandidate)).toEqual(expected);
@@ -768,11 +768,11 @@ describe("area", () => {
       const squareMegametersConversion = linearConversion(1000000000000);
 
       const [toBase, fromBase] = [
+        squareCentimetersConversion[1],
         squareMegametersConversion[0],
-        squareCentimetersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "cm²"] as const;
+      const expected = [fromBase(toBase(v)), "cm²"] as const;
       const conversionCandidate = [v, "Mm²"] as const;
 
       expect(area["cm²"](conversionCandidate)).toEqual(expected);
@@ -784,11 +784,11 @@ describe("area", () => {
       const squareKilometersConversion = linearConversion(1000000);
 
       const [toBase, fromBase] = [
+        squareCentimetersConversion[1],
         squareKilometersConversion[0],
-        squareCentimetersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "cm²"] as const;
+      const expected = [fromBase(toBase(v)), "cm²"] as const;
       const conversionCandidate = [v, "km²"] as const;
 
       expect(area["cm²"](conversionCandidate)).toEqual(expected);
@@ -800,11 +800,11 @@ describe("area", () => {
       const squareMetersConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
+        squareCentimetersConversion[1],
         squareMetersConversion[0],
-        squareCentimetersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "cm²"] as const;
+      const expected = [fromBase(toBase(v)), "cm²"] as const;
       const conversionCandidate = [v, "m²"] as const;
 
       expect(area["cm²"](conversionCandidate)).toEqual(expected);
@@ -818,11 +818,11 @@ describe("area", () => {
       const squareMillimetersConversion = linearConversion(0.000001);
 
       const [toBase, fromBase] = [
+        squareCentimetersConversion[1],
         squareMillimetersConversion[0],
-        squareCentimetersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "cm²"] as const;
+      const expected = [fromBase(toBase(v)), "cm²"] as const;
       const conversionCandidate = [v, "mm²"] as const;
 
       expect(area["cm²"](conversionCandidate)).toEqual(expected);
@@ -834,11 +834,11 @@ describe("area", () => {
       const squareMicrometersConversion = linearConversion(1e-12);
 
       const [toBase, fromBase] = [
+        squareCentimetersConversion[1],
         squareMicrometersConversion[0],
-        squareCentimetersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "cm²"] as const;
+      const expected = [fromBase(toBase(v)), "cm²"] as const;
       const conversionCandidate = [v, "µm²"] as const;
 
       expect(area["cm²"](conversionCandidate)).toEqual(expected);
@@ -850,11 +850,11 @@ describe("area", () => {
       const squareNanometersConversion = linearConversion(1e-18);
 
       const [toBase, fromBase] = [
+        squareCentimetersConversion[1],
         squareNanometersConversion[0],
-        squareCentimetersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "cm²"] as const;
+      const expected = [fromBase(toBase(v)), "cm²"] as const;
       const conversionCandidate = [v, "nm²"] as const;
 
       expect(area["cm²"](conversionCandidate)).toEqual(expected);
@@ -866,11 +866,11 @@ describe("area", () => {
       const squareInchesConversion = linearConversion(0.00064516);
 
       const [toBase, fromBase] = [
+        squareCentimetersConversion[1],
         squareInchesConversion[0],
-        squareCentimetersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "cm²"] as const;
+      const expected = [fromBase(toBase(v)), "cm²"] as const;
       const conversionCandidate = [v, "in²"] as const;
 
       expect(area["cm²"](conversionCandidate)).toEqual(expected);
@@ -882,11 +882,11 @@ describe("area", () => {
       const squareFeetConversion = linearConversion(0.092903);
 
       const [toBase, fromBase] = [
+        squareCentimetersConversion[1],
         squareFeetConversion[0],
-        squareCentimetersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "cm²"] as const;
+      const expected = [fromBase(toBase(v)), "cm²"] as const;
       const conversionCandidate = [v, "ft²"] as const;
 
       expect(area["cm²"](conversionCandidate)).toEqual(expected);
@@ -898,11 +898,11 @@ describe("area", () => {
       const squareYardsConversion = linearConversion(0.836127);
 
       const [toBase, fromBase] = [
+        squareCentimetersConversion[1],
         squareYardsConversion[0],
-        squareCentimetersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "cm²"] as const;
+      const expected = [fromBase(toBase(v)), "cm²"] as const;
       const conversionCandidate = [v, "yd²"] as const;
 
       expect(area["cm²"](conversionCandidate)).toEqual(expected);
@@ -914,11 +914,11 @@ describe("area", () => {
       const squareMilesConversion = linearConversion(2590000);
 
       const [toBase, fromBase] = [
+        squareCentimetersConversion[1],
         squareMilesConversion[0],
-        squareCentimetersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "cm²"] as const;
+      const expected = [fromBase(toBase(v)), "cm²"] as const;
       const conversionCandidate = [v, "mi²"] as const;
 
       expect(area["cm²"](conversionCandidate)).toEqual(expected);
@@ -930,11 +930,11 @@ describe("area", () => {
       const acresConversion = linearConversion(4046.86);
 
       const [toBase, fromBase] = [
+        squareCentimetersConversion[1],
         acresConversion[0],
-        squareCentimetersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "cm²"] as const;
+      const expected = [fromBase(toBase(v)), "cm²"] as const;
       const conversionCandidate = [v, "ac"] as const;
 
       expect(area["cm²"](conversionCandidate)).toEqual(expected);
@@ -946,11 +946,11 @@ describe("area", () => {
       const aresConversion = linearConversion(100);
 
       const [toBase, fromBase] = [
+        squareCentimetersConversion[1],
         aresConversion[0],
-        squareCentimetersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "cm²"] as const;
+      const expected = [fromBase(toBase(v)), "cm²"] as const;
       const conversionCandidate = [v, "a"] as const;
 
       expect(area["cm²"](conversionCandidate)).toEqual(expected);
@@ -962,11 +962,11 @@ describe("area", () => {
       const hectaresConversion = linearConversion(10000);
 
       const [toBase, fromBase] = [
+        squareCentimetersConversion[1],
         hectaresConversion[0],
-        squareCentimetersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "cm²"] as const;
+      const expected = [fromBase(toBase(v)), "cm²"] as const;
       const conversionCandidate = [v, "ha"] as const;
 
       expect(area["cm²"](conversionCandidate)).toEqual(expected);
@@ -986,11 +986,11 @@ describe("area", () => {
       const squareMegametersConversion = linearConversion(1000000000000);
 
       const [toBase, fromBase] = [
+        squareMillimetersConversion[1],
         squareMegametersConversion[0],
-        squareMillimetersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "mm²"] as const;
+      const expected = [fromBase(toBase(v)), "mm²"] as const;
       const conversionCandidate = [v, "Mm²"] as const;
 
       expect(area["mm²"](conversionCandidate)).toEqual(expected);
@@ -1002,11 +1002,11 @@ describe("area", () => {
       const squareKilometersConversion = linearConversion(1000000);
 
       const [toBase, fromBase] = [
+        squareMillimetersConversion[1],
         squareKilometersConversion[0],
-        squareMillimetersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "mm²"] as const;
+      const expected = [fromBase(toBase(v)), "mm²"] as const;
       const conversionCandidate = [v, "km²"] as const;
 
       expect(area["mm²"](conversionCandidate)).toEqual(expected);
@@ -1018,11 +1018,11 @@ describe("area", () => {
       const squareMetersConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
+        squareMillimetersConversion[1],
         squareMetersConversion[0],
-        squareMillimetersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "mm²"] as const;
+      const expected = [fromBase(toBase(v)), "mm²"] as const;
       const conversionCandidate = [v, "m²"] as const;
 
       expect(area["mm²"](conversionCandidate)).toEqual(expected);
@@ -1034,11 +1034,11 @@ describe("area", () => {
       const squareCentimetersConversion = linearConversion(0.0001);
 
       const [toBase, fromBase] = [
+        squareMillimetersConversion[1],
         squareCentimetersConversion[0],
-        squareMillimetersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "mm²"] as const;
+      const expected = [fromBase(toBase(v)), "mm²"] as const;
       const conversionCandidate = [v, "cm²"] as const;
 
       expect(area["mm²"](conversionCandidate)).toEqual(expected);
@@ -1052,11 +1052,11 @@ describe("area", () => {
       const squareMicrometersConversion = linearConversion(1e-12);
 
       const [toBase, fromBase] = [
+        squareMillimetersConversion[1],
         squareMicrometersConversion[0],
-        squareMillimetersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "mm²"] as const;
+      const expected = [fromBase(toBase(v)), "mm²"] as const;
       const conversionCandidate = [v, "µm²"] as const;
 
       expect(area["mm²"](conversionCandidate)).toEqual(expected);
@@ -1068,11 +1068,11 @@ describe("area", () => {
       const squareNanometersConversion = linearConversion(1e-18);
 
       const [toBase, fromBase] = [
+        squareMillimetersConversion[1],
         squareNanometersConversion[0],
-        squareMillimetersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "mm²"] as const;
+      const expected = [fromBase(toBase(v)), "mm²"] as const;
       const conversionCandidate = [v, "nm²"] as const;
 
       expect(area["mm²"](conversionCandidate)).toEqual(expected);
@@ -1084,11 +1084,11 @@ describe("area", () => {
       const squareInchesConversion = linearConversion(0.00064516);
 
       const [toBase, fromBase] = [
+        squareMillimetersConversion[1],
         squareInchesConversion[0],
-        squareMillimetersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "mm²"] as const;
+      const expected = [fromBase(toBase(v)), "mm²"] as const;
       const conversionCandidate = [v, "in²"] as const;
 
       expect(area["mm²"](conversionCandidate)).toEqual(expected);
@@ -1100,11 +1100,11 @@ describe("area", () => {
       const squareFeetConversion = linearConversion(0.092903);
 
       const [toBase, fromBase] = [
+        squareMillimetersConversion[1],
         squareFeetConversion[0],
-        squareMillimetersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "mm²"] as const;
+      const expected = [fromBase(toBase(v)), "mm²"] as const;
       const conversionCandidate = [v, "ft²"] as const;
 
       expect(area["mm²"](conversionCandidate)).toEqual(expected);
@@ -1116,11 +1116,11 @@ describe("area", () => {
       const squareYardsConversion = linearConversion(0.836127);
 
       const [toBase, fromBase] = [
+        squareMillimetersConversion[1],
         squareYardsConversion[0],
-        squareMillimetersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "mm²"] as const;
+      const expected = [fromBase(toBase(v)), "mm²"] as const;
       const conversionCandidate = [v, "yd²"] as const;
 
       expect(area["mm²"](conversionCandidate)).toEqual(expected);
@@ -1132,11 +1132,11 @@ describe("area", () => {
       const squareMilesConversion = linearConversion(2590000);
 
       const [toBase, fromBase] = [
+        squareMillimetersConversion[1],
         squareMilesConversion[0],
-        squareMillimetersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "mm²"] as const;
+      const expected = [fromBase(toBase(v)), "mm²"] as const;
       const conversionCandidate = [v, "mi²"] as const;
 
       expect(area["mm²"](conversionCandidate)).toEqual(expected);
@@ -1148,11 +1148,11 @@ describe("area", () => {
       const acresConversion = linearConversion(4046.86);
 
       const [toBase, fromBase] = [
+        squareMillimetersConversion[1],
         acresConversion[0],
-        squareMillimetersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "mm²"] as const;
+      const expected = [fromBase(toBase(v)), "mm²"] as const;
       const conversionCandidate = [v, "ac"] as const;
 
       expect(area["mm²"](conversionCandidate)).toEqual(expected);
@@ -1164,11 +1164,11 @@ describe("area", () => {
       const aresConversion = linearConversion(100);
 
       const [toBase, fromBase] = [
+        squareMillimetersConversion[1],
         aresConversion[0],
-        squareMillimetersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "mm²"] as const;
+      const expected = [fromBase(toBase(v)), "mm²"] as const;
       const conversionCandidate = [v, "a"] as const;
 
       expect(area["mm²"](conversionCandidate)).toEqual(expected);
@@ -1180,11 +1180,11 @@ describe("area", () => {
       const hectaresConversion = linearConversion(10000);
 
       const [toBase, fromBase] = [
+        squareMillimetersConversion[1],
         hectaresConversion[0],
-        squareMillimetersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "mm²"] as const;
+      const expected = [fromBase(toBase(v)), "mm²"] as const;
       const conversionCandidate = [v, "ha"] as const;
 
       expect(area["mm²"](conversionCandidate)).toEqual(expected);
@@ -1204,11 +1204,11 @@ describe("area", () => {
       const squareMegametersConversion = linearConversion(1000000000000);
 
       const [toBase, fromBase] = [
+        squareMicrometersConversion[1],
         squareMegametersConversion[0],
-        squareMicrometersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "µm²"] as const;
+      const expected = [fromBase(toBase(v)), "µm²"] as const;
       const conversionCandidate = [v, "Mm²"] as const;
 
       expect(area["µm²"](conversionCandidate)).toEqual(expected);
@@ -1220,11 +1220,11 @@ describe("area", () => {
       const squareKilometersConversion = linearConversion(1000000);
 
       const [toBase, fromBase] = [
+        squareMicrometersConversion[1],
         squareKilometersConversion[0],
-        squareMicrometersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "µm²"] as const;
+      const expected = [fromBase(toBase(v)), "µm²"] as const;
       const conversionCandidate = [v, "km²"] as const;
 
       expect(area["µm²"](conversionCandidate)).toEqual(expected);
@@ -1236,11 +1236,11 @@ describe("area", () => {
       const squareMetersConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
+        squareMicrometersConversion[1],
         squareMetersConversion[0],
-        squareMicrometersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "µm²"] as const;
+      const expected = [fromBase(toBase(v)), "µm²"] as const;
       const conversionCandidate = [v, "m²"] as const;
 
       expect(area["µm²"](conversionCandidate)).toEqual(expected);
@@ -1252,11 +1252,11 @@ describe("area", () => {
       const squareCentimetersConversion = linearConversion(0.0001);
 
       const [toBase, fromBase] = [
+        squareMicrometersConversion[1],
         squareCentimetersConversion[0],
-        squareMicrometersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "µm²"] as const;
+      const expected = [fromBase(toBase(v)), "µm²"] as const;
       const conversionCandidate = [v, "cm²"] as const;
 
       expect(area["µm²"](conversionCandidate)).toEqual(expected);
@@ -1268,11 +1268,11 @@ describe("area", () => {
       const squareMillimetersConversion = linearConversion(0.000001);
 
       const [toBase, fromBase] = [
+        squareMicrometersConversion[1],
         squareMillimetersConversion[0],
-        squareMicrometersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "µm²"] as const;
+      const expected = [fromBase(toBase(v)), "µm²"] as const;
       const conversionCandidate = [v, "mm²"] as const;
 
       expect(area["µm²"](conversionCandidate)).toEqual(expected);
@@ -1286,11 +1286,11 @@ describe("area", () => {
       const squareNanometersConversion = linearConversion(1e-18);
 
       const [toBase, fromBase] = [
+        squareMicrometersConversion[1],
         squareNanometersConversion[0],
-        squareMicrometersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "µm²"] as const;
+      const expected = [fromBase(toBase(v)), "µm²"] as const;
       const conversionCandidate = [v, "nm²"] as const;
 
       expect(area["µm²"](conversionCandidate)).toEqual(expected);
@@ -1302,11 +1302,11 @@ describe("area", () => {
       const squareInchesConversion = linearConversion(0.00064516);
 
       const [toBase, fromBase] = [
+        squareMicrometersConversion[1],
         squareInchesConversion[0],
-        squareMicrometersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "µm²"] as const;
+      const expected = [fromBase(toBase(v)), "µm²"] as const;
       const conversionCandidate = [v, "in²"] as const;
 
       expect(area["µm²"](conversionCandidate)).toEqual(expected);
@@ -1318,11 +1318,11 @@ describe("area", () => {
       const squareFeetConversion = linearConversion(0.092903);
 
       const [toBase, fromBase] = [
+        squareMicrometersConversion[1],
         squareFeetConversion[0],
-        squareMicrometersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "µm²"] as const;
+      const expected = [fromBase(toBase(v)), "µm²"] as const;
       const conversionCandidate = [v, "ft²"] as const;
 
       expect(area["µm²"](conversionCandidate)).toEqual(expected);
@@ -1334,11 +1334,11 @@ describe("area", () => {
       const squareYardsConversion = linearConversion(0.836127);
 
       const [toBase, fromBase] = [
+        squareMicrometersConversion[1],
         squareYardsConversion[0],
-        squareMicrometersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "µm²"] as const;
+      const expected = [fromBase(toBase(v)), "µm²"] as const;
       const conversionCandidate = [v, "yd²"] as const;
 
       expect(area["µm²"](conversionCandidate)).toEqual(expected);
@@ -1350,11 +1350,11 @@ describe("area", () => {
       const squareMilesConversion = linearConversion(2590000);
 
       const [toBase, fromBase] = [
+        squareMicrometersConversion[1],
         squareMilesConversion[0],
-        squareMicrometersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "µm²"] as const;
+      const expected = [fromBase(toBase(v)), "µm²"] as const;
       const conversionCandidate = [v, "mi²"] as const;
 
       expect(area["µm²"](conversionCandidate)).toEqual(expected);
@@ -1366,11 +1366,11 @@ describe("area", () => {
       const acresConversion = linearConversion(4046.86);
 
       const [toBase, fromBase] = [
+        squareMicrometersConversion[1],
         acresConversion[0],
-        squareMicrometersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "µm²"] as const;
+      const expected = [fromBase(toBase(v)), "µm²"] as const;
       const conversionCandidate = [v, "ac"] as const;
 
       expect(area["µm²"](conversionCandidate)).toEqual(expected);
@@ -1382,11 +1382,11 @@ describe("area", () => {
       const aresConversion = linearConversion(100);
 
       const [toBase, fromBase] = [
+        squareMicrometersConversion[1],
         aresConversion[0],
-        squareMicrometersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "µm²"] as const;
+      const expected = [fromBase(toBase(v)), "µm²"] as const;
       const conversionCandidate = [v, "a"] as const;
 
       expect(area["µm²"](conversionCandidate)).toEqual(expected);
@@ -1398,11 +1398,11 @@ describe("area", () => {
       const hectaresConversion = linearConversion(10000);
 
       const [toBase, fromBase] = [
+        squareMicrometersConversion[1],
         hectaresConversion[0],
-        squareMicrometersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "µm²"] as const;
+      const expected = [fromBase(toBase(v)), "µm²"] as const;
       const conversionCandidate = [v, "ha"] as const;
 
       expect(area["µm²"](conversionCandidate)).toEqual(expected);
@@ -1422,11 +1422,11 @@ describe("area", () => {
       const squareMegametersConversion = linearConversion(1000000000000);
 
       const [toBase, fromBase] = [
+        squareNanometersConversion[1],
         squareMegametersConversion[0],
-        squareNanometersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "nm²"] as const;
+      const expected = [fromBase(toBase(v)), "nm²"] as const;
       const conversionCandidate = [v, "Mm²"] as const;
 
       expect(area["nm²"](conversionCandidate)).toEqual(expected);
@@ -1438,11 +1438,11 @@ describe("area", () => {
       const squareKilometersConversion = linearConversion(1000000);
 
       const [toBase, fromBase] = [
+        squareNanometersConversion[1],
         squareKilometersConversion[0],
-        squareNanometersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "nm²"] as const;
+      const expected = [fromBase(toBase(v)), "nm²"] as const;
       const conversionCandidate = [v, "km²"] as const;
 
       expect(area["nm²"](conversionCandidate)).toEqual(expected);
@@ -1454,11 +1454,11 @@ describe("area", () => {
       const squareMetersConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
+        squareNanometersConversion[1],
         squareMetersConversion[0],
-        squareNanometersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "nm²"] as const;
+      const expected = [fromBase(toBase(v)), "nm²"] as const;
       const conversionCandidate = [v, "m²"] as const;
 
       expect(area["nm²"](conversionCandidate)).toEqual(expected);
@@ -1470,11 +1470,11 @@ describe("area", () => {
       const squareCentimetersConversion = linearConversion(0.0001);
 
       const [toBase, fromBase] = [
+        squareNanometersConversion[1],
         squareCentimetersConversion[0],
-        squareNanometersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "nm²"] as const;
+      const expected = [fromBase(toBase(v)), "nm²"] as const;
       const conversionCandidate = [v, "cm²"] as const;
 
       expect(area["nm²"](conversionCandidate)).toEqual(expected);
@@ -1486,11 +1486,11 @@ describe("area", () => {
       const squareMillimetersConversion = linearConversion(0.000001);
 
       const [toBase, fromBase] = [
+        squareNanometersConversion[1],
         squareMillimetersConversion[0],
-        squareNanometersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "nm²"] as const;
+      const expected = [fromBase(toBase(v)), "nm²"] as const;
       const conversionCandidate = [v, "mm²"] as const;
 
       expect(area["nm²"](conversionCandidate)).toEqual(expected);
@@ -1502,11 +1502,11 @@ describe("area", () => {
       const squareMicrometersConversion = linearConversion(1e-12);
 
       const [toBase, fromBase] = [
+        squareNanometersConversion[1],
         squareMicrometersConversion[0],
-        squareNanometersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "nm²"] as const;
+      const expected = [fromBase(toBase(v)), "nm²"] as const;
       const conversionCandidate = [v, "µm²"] as const;
 
       expect(area["nm²"](conversionCandidate)).toEqual(expected);
@@ -1520,11 +1520,11 @@ describe("area", () => {
       const squareInchesConversion = linearConversion(0.00064516);
 
       const [toBase, fromBase] = [
+        squareNanometersConversion[1],
         squareInchesConversion[0],
-        squareNanometersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "nm²"] as const;
+      const expected = [fromBase(toBase(v)), "nm²"] as const;
       const conversionCandidate = [v, "in²"] as const;
 
       expect(area["nm²"](conversionCandidate)).toEqual(expected);
@@ -1536,11 +1536,11 @@ describe("area", () => {
       const squareFeetConversion = linearConversion(0.092903);
 
       const [toBase, fromBase] = [
+        squareNanometersConversion[1],
         squareFeetConversion[0],
-        squareNanometersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "nm²"] as const;
+      const expected = [fromBase(toBase(v)), "nm²"] as const;
       const conversionCandidate = [v, "ft²"] as const;
 
       expect(area["nm²"](conversionCandidate)).toEqual(expected);
@@ -1552,11 +1552,11 @@ describe("area", () => {
       const squareYardsConversion = linearConversion(0.836127);
 
       const [toBase, fromBase] = [
+        squareNanometersConversion[1],
         squareYardsConversion[0],
-        squareNanometersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "nm²"] as const;
+      const expected = [fromBase(toBase(v)), "nm²"] as const;
       const conversionCandidate = [v, "yd²"] as const;
 
       expect(area["nm²"](conversionCandidate)).toEqual(expected);
@@ -1568,11 +1568,11 @@ describe("area", () => {
       const squareMilesConversion = linearConversion(2590000);
 
       const [toBase, fromBase] = [
+        squareNanometersConversion[1],
         squareMilesConversion[0],
-        squareNanometersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "nm²"] as const;
+      const expected = [fromBase(toBase(v)), "nm²"] as const;
       const conversionCandidate = [v, "mi²"] as const;
 
       expect(area["nm²"](conversionCandidate)).toEqual(expected);
@@ -1584,11 +1584,11 @@ describe("area", () => {
       const acresConversion = linearConversion(4046.86);
 
       const [toBase, fromBase] = [
+        squareNanometersConversion[1],
         acresConversion[0],
-        squareNanometersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "nm²"] as const;
+      const expected = [fromBase(toBase(v)), "nm²"] as const;
       const conversionCandidate = [v, "ac"] as const;
 
       expect(area["nm²"](conversionCandidate)).toEqual(expected);
@@ -1600,11 +1600,11 @@ describe("area", () => {
       const aresConversion = linearConversion(100);
 
       const [toBase, fromBase] = [
+        squareNanometersConversion[1],
         aresConversion[0],
-        squareNanometersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "nm²"] as const;
+      const expected = [fromBase(toBase(v)), "nm²"] as const;
       const conversionCandidate = [v, "a"] as const;
 
       expect(area["nm²"](conversionCandidate)).toEqual(expected);
@@ -1616,11 +1616,11 @@ describe("area", () => {
       const hectaresConversion = linearConversion(10000);
 
       const [toBase, fromBase] = [
+        squareNanometersConversion[1],
         hectaresConversion[0],
-        squareNanometersConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "nm²"] as const;
+      const expected = [fromBase(toBase(v)), "nm²"] as const;
       const conversionCandidate = [v, "ha"] as const;
 
       expect(area["nm²"](conversionCandidate)).toEqual(expected);
@@ -1640,11 +1640,11 @@ describe("area", () => {
       const squareMegametersConversion = linearConversion(1000000000000);
 
       const [toBase, fromBase] = [
+        squareInchesConversion[1],
         squareMegametersConversion[0],
-        squareInchesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "in²"] as const;
+      const expected = [fromBase(toBase(v)), "in²"] as const;
       const conversionCandidate = [v, "Mm²"] as const;
 
       expect(area["in²"](conversionCandidate)).toEqual(expected);
@@ -1656,11 +1656,11 @@ describe("area", () => {
       const squareKilometersConversion = linearConversion(1000000);
 
       const [toBase, fromBase] = [
+        squareInchesConversion[1],
         squareKilometersConversion[0],
-        squareInchesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "in²"] as const;
+      const expected = [fromBase(toBase(v)), "in²"] as const;
       const conversionCandidate = [v, "km²"] as const;
 
       expect(area["in²"](conversionCandidate)).toEqual(expected);
@@ -1672,11 +1672,11 @@ describe("area", () => {
       const squareMetersConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
+        squareInchesConversion[1],
         squareMetersConversion[0],
-        squareInchesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "in²"] as const;
+      const expected = [fromBase(toBase(v)), "in²"] as const;
       const conversionCandidate = [v, "m²"] as const;
 
       expect(area["in²"](conversionCandidate)).toEqual(expected);
@@ -1688,11 +1688,11 @@ describe("area", () => {
       const squareCentimetersConversion = linearConversion(0.0001);
 
       const [toBase, fromBase] = [
+        squareInchesConversion[1],
         squareCentimetersConversion[0],
-        squareInchesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "in²"] as const;
+      const expected = [fromBase(toBase(v)), "in²"] as const;
       const conversionCandidate = [v, "cm²"] as const;
 
       expect(area["in²"](conversionCandidate)).toEqual(expected);
@@ -1704,11 +1704,11 @@ describe("area", () => {
       const squareMillimetersConversion = linearConversion(0.000001);
 
       const [toBase, fromBase] = [
+        squareInchesConversion[1],
         squareMillimetersConversion[0],
-        squareInchesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "in²"] as const;
+      const expected = [fromBase(toBase(v)), "in²"] as const;
       const conversionCandidate = [v, "mm²"] as const;
 
       expect(area["in²"](conversionCandidate)).toEqual(expected);
@@ -1720,11 +1720,11 @@ describe("area", () => {
       const squareMicrometersConversion = linearConversion(1e-12);
 
       const [toBase, fromBase] = [
+        squareInchesConversion[1],
         squareMicrometersConversion[0],
-        squareInchesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "in²"] as const;
+      const expected = [fromBase(toBase(v)), "in²"] as const;
       const conversionCandidate = [v, "µm²"] as const;
 
       expect(area["in²"](conversionCandidate)).toEqual(expected);
@@ -1736,11 +1736,11 @@ describe("area", () => {
       const squareNanometersConversion = linearConversion(1e-18);
 
       const [toBase, fromBase] = [
+        squareInchesConversion[1],
         squareNanometersConversion[0],
-        squareInchesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "in²"] as const;
+      const expected = [fromBase(toBase(v)), "in²"] as const;
       const conversionCandidate = [v, "nm²"] as const;
 
       expect(area["in²"](conversionCandidate)).toEqual(expected);
@@ -1754,11 +1754,11 @@ describe("area", () => {
       const squareFeetConversion = linearConversion(0.092903);
 
       const [toBase, fromBase] = [
+        squareInchesConversion[1],
         squareFeetConversion[0],
-        squareInchesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "in²"] as const;
+      const expected = [fromBase(toBase(v)), "in²"] as const;
       const conversionCandidate = [v, "ft²"] as const;
 
       expect(area["in²"](conversionCandidate)).toEqual(expected);
@@ -1770,11 +1770,11 @@ describe("area", () => {
       const squareYardsConversion = linearConversion(0.836127);
 
       const [toBase, fromBase] = [
+        squareInchesConversion[1],
         squareYardsConversion[0],
-        squareInchesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "in²"] as const;
+      const expected = [fromBase(toBase(v)), "in²"] as const;
       const conversionCandidate = [v, "yd²"] as const;
 
       expect(area["in²"](conversionCandidate)).toEqual(expected);
@@ -1786,11 +1786,11 @@ describe("area", () => {
       const squareMilesConversion = linearConversion(2590000);
 
       const [toBase, fromBase] = [
+        squareInchesConversion[1],
         squareMilesConversion[0],
-        squareInchesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "in²"] as const;
+      const expected = [fromBase(toBase(v)), "in²"] as const;
       const conversionCandidate = [v, "mi²"] as const;
 
       expect(area["in²"](conversionCandidate)).toEqual(expected);
@@ -1802,11 +1802,11 @@ describe("area", () => {
       const acresConversion = linearConversion(4046.86);
 
       const [toBase, fromBase] = [
+        squareInchesConversion[1],
         acresConversion[0],
-        squareInchesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "in²"] as const;
+      const expected = [fromBase(toBase(v)), "in²"] as const;
       const conversionCandidate = [v, "ac"] as const;
 
       expect(area["in²"](conversionCandidate)).toEqual(expected);
@@ -1818,11 +1818,11 @@ describe("area", () => {
       const aresConversion = linearConversion(100);
 
       const [toBase, fromBase] = [
+        squareInchesConversion[1],
         aresConversion[0],
-        squareInchesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "in²"] as const;
+      const expected = [fromBase(toBase(v)), "in²"] as const;
       const conversionCandidate = [v, "a"] as const;
 
       expect(area["in²"](conversionCandidate)).toEqual(expected);
@@ -1834,11 +1834,11 @@ describe("area", () => {
       const hectaresConversion = linearConversion(10000);
 
       const [toBase, fromBase] = [
+        squareInchesConversion[1],
         hectaresConversion[0],
-        squareInchesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "in²"] as const;
+      const expected = [fromBase(toBase(v)), "in²"] as const;
       const conversionCandidate = [v, "ha"] as const;
 
       expect(area["in²"](conversionCandidate)).toEqual(expected);
@@ -1858,11 +1858,11 @@ describe("area", () => {
       const squareMegametersConversion = linearConversion(1000000000000);
 
       const [toBase, fromBase] = [
+        squareFeetConversion[1],
         squareMegametersConversion[0],
-        squareFeetConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ft²"] as const;
+      const expected = [fromBase(toBase(v)), "ft²"] as const;
       const conversionCandidate = [v, "Mm²"] as const;
 
       expect(area["ft²"](conversionCandidate)).toEqual(expected);
@@ -1874,11 +1874,11 @@ describe("area", () => {
       const squareKilometersConversion = linearConversion(1000000);
 
       const [toBase, fromBase] = [
+        squareFeetConversion[1],
         squareKilometersConversion[0],
-        squareFeetConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ft²"] as const;
+      const expected = [fromBase(toBase(v)), "ft²"] as const;
       const conversionCandidate = [v, "km²"] as const;
 
       expect(area["ft²"](conversionCandidate)).toEqual(expected);
@@ -1890,11 +1890,11 @@ describe("area", () => {
       const squareMetersConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
+        squareFeetConversion[1],
         squareMetersConversion[0],
-        squareFeetConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ft²"] as const;
+      const expected = [fromBase(toBase(v)), "ft²"] as const;
       const conversionCandidate = [v, "m²"] as const;
 
       expect(area["ft²"](conversionCandidate)).toEqual(expected);
@@ -1906,11 +1906,11 @@ describe("area", () => {
       const squareCentimetersConversion = linearConversion(0.0001);
 
       const [toBase, fromBase] = [
+        squareFeetConversion[1],
         squareCentimetersConversion[0],
-        squareFeetConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ft²"] as const;
+      const expected = [fromBase(toBase(v)), "ft²"] as const;
       const conversionCandidate = [v, "cm²"] as const;
 
       expect(area["ft²"](conversionCandidate)).toEqual(expected);
@@ -1922,11 +1922,11 @@ describe("area", () => {
       const squareMillimetersConversion = linearConversion(0.000001);
 
       const [toBase, fromBase] = [
+        squareFeetConversion[1],
         squareMillimetersConversion[0],
-        squareFeetConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ft²"] as const;
+      const expected = [fromBase(toBase(v)), "ft²"] as const;
       const conversionCandidate = [v, "mm²"] as const;
 
       expect(area["ft²"](conversionCandidate)).toEqual(expected);
@@ -1938,11 +1938,11 @@ describe("area", () => {
       const squareMicrometersConversion = linearConversion(1e-12);
 
       const [toBase, fromBase] = [
+        squareFeetConversion[1],
         squareMicrometersConversion[0],
-        squareFeetConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ft²"] as const;
+      const expected = [fromBase(toBase(v)), "ft²"] as const;
       const conversionCandidate = [v, "µm²"] as const;
 
       expect(area["ft²"](conversionCandidate)).toEqual(expected);
@@ -1954,11 +1954,11 @@ describe("area", () => {
       const squareNanometersConversion = linearConversion(1e-18);
 
       const [toBase, fromBase] = [
+        squareFeetConversion[1],
         squareNanometersConversion[0],
-        squareFeetConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ft²"] as const;
+      const expected = [fromBase(toBase(v)), "ft²"] as const;
       const conversionCandidate = [v, "nm²"] as const;
 
       expect(area["ft²"](conversionCandidate)).toEqual(expected);
@@ -1970,11 +1970,11 @@ describe("area", () => {
       const squareInchesConversion = linearConversion(0.00064516);
 
       const [toBase, fromBase] = [
+        squareFeetConversion[1],
         squareInchesConversion[0],
-        squareFeetConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ft²"] as const;
+      const expected = [fromBase(toBase(v)), "ft²"] as const;
       const conversionCandidate = [v, "in²"] as const;
 
       expect(area["ft²"](conversionCandidate)).toEqual(expected);
@@ -1988,11 +1988,11 @@ describe("area", () => {
       const squareYardsConversion = linearConversion(0.836127);
 
       const [toBase, fromBase] = [
+        squareFeetConversion[1],
         squareYardsConversion[0],
-        squareFeetConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ft²"] as const;
+      const expected = [fromBase(toBase(v)), "ft²"] as const;
       const conversionCandidate = [v, "yd²"] as const;
 
       expect(area["ft²"](conversionCandidate)).toEqual(expected);
@@ -2004,11 +2004,11 @@ describe("area", () => {
       const squareMilesConversion = linearConversion(2590000);
 
       const [toBase, fromBase] = [
+        squareFeetConversion[1],
         squareMilesConversion[0],
-        squareFeetConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ft²"] as const;
+      const expected = [fromBase(toBase(v)), "ft²"] as const;
       const conversionCandidate = [v, "mi²"] as const;
 
       expect(area["ft²"](conversionCandidate)).toEqual(expected);
@@ -2020,11 +2020,11 @@ describe("area", () => {
       const acresConversion = linearConversion(4046.86);
 
       const [toBase, fromBase] = [
+        squareFeetConversion[1],
         acresConversion[0],
-        squareFeetConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ft²"] as const;
+      const expected = [fromBase(toBase(v)), "ft²"] as const;
       const conversionCandidate = [v, "ac"] as const;
 
       expect(area["ft²"](conversionCandidate)).toEqual(expected);
@@ -2036,11 +2036,11 @@ describe("area", () => {
       const aresConversion = linearConversion(100);
 
       const [toBase, fromBase] = [
+        squareFeetConversion[1],
         aresConversion[0],
-        squareFeetConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ft²"] as const;
+      const expected = [fromBase(toBase(v)), "ft²"] as const;
       const conversionCandidate = [v, "a"] as const;
 
       expect(area["ft²"](conversionCandidate)).toEqual(expected);
@@ -2052,11 +2052,11 @@ describe("area", () => {
       const hectaresConversion = linearConversion(10000);
 
       const [toBase, fromBase] = [
+        squareFeetConversion[1],
         hectaresConversion[0],
-        squareFeetConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ft²"] as const;
+      const expected = [fromBase(toBase(v)), "ft²"] as const;
       const conversionCandidate = [v, "ha"] as const;
 
       expect(area["ft²"](conversionCandidate)).toEqual(expected);
@@ -2076,11 +2076,11 @@ describe("area", () => {
       const squareMegametersConversion = linearConversion(1000000000000);
 
       const [toBase, fromBase] = [
+        squareYardsConversion[1],
         squareMegametersConversion[0],
-        squareYardsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "yd²"] as const;
+      const expected = [fromBase(toBase(v)), "yd²"] as const;
       const conversionCandidate = [v, "Mm²"] as const;
 
       expect(area["yd²"](conversionCandidate)).toEqual(expected);
@@ -2092,11 +2092,11 @@ describe("area", () => {
       const squareKilometersConversion = linearConversion(1000000);
 
       const [toBase, fromBase] = [
+        squareYardsConversion[1],
         squareKilometersConversion[0],
-        squareYardsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "yd²"] as const;
+      const expected = [fromBase(toBase(v)), "yd²"] as const;
       const conversionCandidate = [v, "km²"] as const;
 
       expect(area["yd²"](conversionCandidate)).toEqual(expected);
@@ -2108,11 +2108,11 @@ describe("area", () => {
       const squareMetersConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
+        squareYardsConversion[1],
         squareMetersConversion[0],
-        squareYardsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "yd²"] as const;
+      const expected = [fromBase(toBase(v)), "yd²"] as const;
       const conversionCandidate = [v, "m²"] as const;
 
       expect(area["yd²"](conversionCandidate)).toEqual(expected);
@@ -2124,11 +2124,11 @@ describe("area", () => {
       const squareCentimetersConversion = linearConversion(0.0001);
 
       const [toBase, fromBase] = [
+        squareYardsConversion[1],
         squareCentimetersConversion[0],
-        squareYardsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "yd²"] as const;
+      const expected = [fromBase(toBase(v)), "yd²"] as const;
       const conversionCandidate = [v, "cm²"] as const;
 
       expect(area["yd²"](conversionCandidate)).toEqual(expected);
@@ -2140,11 +2140,11 @@ describe("area", () => {
       const squareMillimetersConversion = linearConversion(0.000001);
 
       const [toBase, fromBase] = [
+        squareYardsConversion[1],
         squareMillimetersConversion[0],
-        squareYardsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "yd²"] as const;
+      const expected = [fromBase(toBase(v)), "yd²"] as const;
       const conversionCandidate = [v, "mm²"] as const;
 
       expect(area["yd²"](conversionCandidate)).toEqual(expected);
@@ -2156,11 +2156,11 @@ describe("area", () => {
       const squareMicrometersConversion = linearConversion(1e-12);
 
       const [toBase, fromBase] = [
+        squareYardsConversion[1],
         squareMicrometersConversion[0],
-        squareYardsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "yd²"] as const;
+      const expected = [fromBase(toBase(v)), "yd²"] as const;
       const conversionCandidate = [v, "µm²"] as const;
 
       expect(area["yd²"](conversionCandidate)).toEqual(expected);
@@ -2172,11 +2172,11 @@ describe("area", () => {
       const squareNanometersConversion = linearConversion(1e-18);
 
       const [toBase, fromBase] = [
+        squareYardsConversion[1],
         squareNanometersConversion[0],
-        squareYardsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "yd²"] as const;
+      const expected = [fromBase(toBase(v)), "yd²"] as const;
       const conversionCandidate = [v, "nm²"] as const;
 
       expect(area["yd²"](conversionCandidate)).toEqual(expected);
@@ -2188,11 +2188,11 @@ describe("area", () => {
       const squareInchesConversion = linearConversion(0.00064516);
 
       const [toBase, fromBase] = [
+        squareYardsConversion[1],
         squareInchesConversion[0],
-        squareYardsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "yd²"] as const;
+      const expected = [fromBase(toBase(v)), "yd²"] as const;
       const conversionCandidate = [v, "in²"] as const;
 
       expect(area["yd²"](conversionCandidate)).toEqual(expected);
@@ -2204,11 +2204,11 @@ describe("area", () => {
       const squareFeetConversion = linearConversion(0.092903);
 
       const [toBase, fromBase] = [
+        squareYardsConversion[1],
         squareFeetConversion[0],
-        squareYardsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "yd²"] as const;
+      const expected = [fromBase(toBase(v)), "yd²"] as const;
       const conversionCandidate = [v, "ft²"] as const;
 
       expect(area["yd²"](conversionCandidate)).toEqual(expected);
@@ -2222,11 +2222,11 @@ describe("area", () => {
       const squareMilesConversion = linearConversion(2590000);
 
       const [toBase, fromBase] = [
+        squareYardsConversion[1],
         squareMilesConversion[0],
-        squareYardsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "yd²"] as const;
+      const expected = [fromBase(toBase(v)), "yd²"] as const;
       const conversionCandidate = [v, "mi²"] as const;
 
       expect(area["yd²"](conversionCandidate)).toEqual(expected);
@@ -2238,11 +2238,11 @@ describe("area", () => {
       const acresConversion = linearConversion(4046.86);
 
       const [toBase, fromBase] = [
+        squareYardsConversion[1],
         acresConversion[0],
-        squareYardsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "yd²"] as const;
+      const expected = [fromBase(toBase(v)), "yd²"] as const;
       const conversionCandidate = [v, "ac"] as const;
 
       expect(area["yd²"](conversionCandidate)).toEqual(expected);
@@ -2254,11 +2254,11 @@ describe("area", () => {
       const aresConversion = linearConversion(100);
 
       const [toBase, fromBase] = [
+        squareYardsConversion[1],
         aresConversion[0],
-        squareYardsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "yd²"] as const;
+      const expected = [fromBase(toBase(v)), "yd²"] as const;
       const conversionCandidate = [v, "a"] as const;
 
       expect(area["yd²"](conversionCandidate)).toEqual(expected);
@@ -2270,11 +2270,11 @@ describe("area", () => {
       const hectaresConversion = linearConversion(10000);
 
       const [toBase, fromBase] = [
+        squareYardsConversion[1],
         hectaresConversion[0],
-        squareYardsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "yd²"] as const;
+      const expected = [fromBase(toBase(v)), "yd²"] as const;
       const conversionCandidate = [v, "ha"] as const;
 
       expect(area["yd²"](conversionCandidate)).toEqual(expected);
@@ -2294,11 +2294,11 @@ describe("area", () => {
       const squareMegametersConversion = linearConversion(1000000000000);
 
       const [toBase, fromBase] = [
+        squareMilesConversion[1],
         squareMegametersConversion[0],
-        squareMilesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "mi²"] as const;
+      const expected = [fromBase(toBase(v)), "mi²"] as const;
       const conversionCandidate = [v, "Mm²"] as const;
 
       expect(area["mi²"](conversionCandidate)).toEqual(expected);
@@ -2310,11 +2310,11 @@ describe("area", () => {
       const squareKilometersConversion = linearConversion(1000000);
 
       const [toBase, fromBase] = [
+        squareMilesConversion[1],
         squareKilometersConversion[0],
-        squareMilesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "mi²"] as const;
+      const expected = [fromBase(toBase(v)), "mi²"] as const;
       const conversionCandidate = [v, "km²"] as const;
 
       expect(area["mi²"](conversionCandidate)).toEqual(expected);
@@ -2326,11 +2326,11 @@ describe("area", () => {
       const squareMetersConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
+        squareMilesConversion[1],
         squareMetersConversion[0],
-        squareMilesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "mi²"] as const;
+      const expected = [fromBase(toBase(v)), "mi²"] as const;
       const conversionCandidate = [v, "m²"] as const;
 
       expect(area["mi²"](conversionCandidate)).toEqual(expected);
@@ -2342,11 +2342,11 @@ describe("area", () => {
       const squareCentimetersConversion = linearConversion(0.0001);
 
       const [toBase, fromBase] = [
+        squareMilesConversion[1],
         squareCentimetersConversion[0],
-        squareMilesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "mi²"] as const;
+      const expected = [fromBase(toBase(v)), "mi²"] as const;
       const conversionCandidate = [v, "cm²"] as const;
 
       expect(area["mi²"](conversionCandidate)).toEqual(expected);
@@ -2358,11 +2358,11 @@ describe("area", () => {
       const squareMillimetersConversion = linearConversion(0.000001);
 
       const [toBase, fromBase] = [
+        squareMilesConversion[1],
         squareMillimetersConversion[0],
-        squareMilesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "mi²"] as const;
+      const expected = [fromBase(toBase(v)), "mi²"] as const;
       const conversionCandidate = [v, "mm²"] as const;
 
       expect(area["mi²"](conversionCandidate)).toEqual(expected);
@@ -2374,11 +2374,11 @@ describe("area", () => {
       const squareMicrometersConversion = linearConversion(1e-12);
 
       const [toBase, fromBase] = [
+        squareMilesConversion[1],
         squareMicrometersConversion[0],
-        squareMilesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "mi²"] as const;
+      const expected = [fromBase(toBase(v)), "mi²"] as const;
       const conversionCandidate = [v, "µm²"] as const;
 
       expect(area["mi²"](conversionCandidate)).toEqual(expected);
@@ -2390,11 +2390,11 @@ describe("area", () => {
       const squareNanometersConversion = linearConversion(1e-18);
 
       const [toBase, fromBase] = [
+        squareMilesConversion[1],
         squareNanometersConversion[0],
-        squareMilesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "mi²"] as const;
+      const expected = [fromBase(toBase(v)), "mi²"] as const;
       const conversionCandidate = [v, "nm²"] as const;
 
       expect(area["mi²"](conversionCandidate)).toEqual(expected);
@@ -2406,11 +2406,11 @@ describe("area", () => {
       const squareInchesConversion = linearConversion(0.00064516);
 
       const [toBase, fromBase] = [
+        squareMilesConversion[1],
         squareInchesConversion[0],
-        squareMilesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "mi²"] as const;
+      const expected = [fromBase(toBase(v)), "mi²"] as const;
       const conversionCandidate = [v, "in²"] as const;
 
       expect(area["mi²"](conversionCandidate)).toEqual(expected);
@@ -2422,11 +2422,11 @@ describe("area", () => {
       const squareFeetConversion = linearConversion(0.092903);
 
       const [toBase, fromBase] = [
+        squareMilesConversion[1],
         squareFeetConversion[0],
-        squareMilesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "mi²"] as const;
+      const expected = [fromBase(toBase(v)), "mi²"] as const;
       const conversionCandidate = [v, "ft²"] as const;
 
       expect(area["mi²"](conversionCandidate)).toEqual(expected);
@@ -2438,11 +2438,11 @@ describe("area", () => {
       const squareYardsConversion = linearConversion(0.836127);
 
       const [toBase, fromBase] = [
+        squareMilesConversion[1],
         squareYardsConversion[0],
-        squareMilesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "mi²"] as const;
+      const expected = [fromBase(toBase(v)), "mi²"] as const;
       const conversionCandidate = [v, "yd²"] as const;
 
       expect(area["mi²"](conversionCandidate)).toEqual(expected);
@@ -2456,11 +2456,11 @@ describe("area", () => {
       const acresConversion = linearConversion(4046.86);
 
       const [toBase, fromBase] = [
+        squareMilesConversion[1],
         acresConversion[0],
-        squareMilesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "mi²"] as const;
+      const expected = [fromBase(toBase(v)), "mi²"] as const;
       const conversionCandidate = [v, "ac"] as const;
 
       expect(area["mi²"](conversionCandidate)).toEqual(expected);
@@ -2472,11 +2472,11 @@ describe("area", () => {
       const aresConversion = linearConversion(100);
 
       const [toBase, fromBase] = [
+        squareMilesConversion[1],
         aresConversion[0],
-        squareMilesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "mi²"] as const;
+      const expected = [fromBase(toBase(v)), "mi²"] as const;
       const conversionCandidate = [v, "a"] as const;
 
       expect(area["mi²"](conversionCandidate)).toEqual(expected);
@@ -2488,11 +2488,11 @@ describe("area", () => {
       const hectaresConversion = linearConversion(10000);
 
       const [toBase, fromBase] = [
+        squareMilesConversion[1],
         hectaresConversion[0],
-        squareMilesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "mi²"] as const;
+      const expected = [fromBase(toBase(v)), "mi²"] as const;
       const conversionCandidate = [v, "ha"] as const;
 
       expect(area["mi²"](conversionCandidate)).toEqual(expected);
@@ -2512,11 +2512,11 @@ describe("area", () => {
       const squareMegametersConversion = linearConversion(1000000000000);
 
       const [toBase, fromBase] = [
+        acresConversion[1],
         squareMegametersConversion[0],
-        acresConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ac"] as const;
+      const expected = [fromBase(toBase(v)), "ac"] as const;
       const conversionCandidate = [v, "Mm²"] as const;
 
       expect(area["ac"](conversionCandidate)).toEqual(expected);
@@ -2528,11 +2528,11 @@ describe("area", () => {
       const squareKilometersConversion = linearConversion(1000000);
 
       const [toBase, fromBase] = [
+        acresConversion[1],
         squareKilometersConversion[0],
-        acresConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ac"] as const;
+      const expected = [fromBase(toBase(v)), "ac"] as const;
       const conversionCandidate = [v, "km²"] as const;
 
       expect(area["ac"](conversionCandidate)).toEqual(expected);
@@ -2544,11 +2544,11 @@ describe("area", () => {
       const squareMetersConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
+        acresConversion[1],
         squareMetersConversion[0],
-        acresConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ac"] as const;
+      const expected = [fromBase(toBase(v)), "ac"] as const;
       const conversionCandidate = [v, "m²"] as const;
 
       expect(area["ac"](conversionCandidate)).toEqual(expected);
@@ -2560,11 +2560,11 @@ describe("area", () => {
       const squareCentimetersConversion = linearConversion(0.0001);
 
       const [toBase, fromBase] = [
+        acresConversion[1],
         squareCentimetersConversion[0],
-        acresConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ac"] as const;
+      const expected = [fromBase(toBase(v)), "ac"] as const;
       const conversionCandidate = [v, "cm²"] as const;
 
       expect(area["ac"](conversionCandidate)).toEqual(expected);
@@ -2576,11 +2576,11 @@ describe("area", () => {
       const squareMillimetersConversion = linearConversion(0.000001);
 
       const [toBase, fromBase] = [
+        acresConversion[1],
         squareMillimetersConversion[0],
-        acresConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ac"] as const;
+      const expected = [fromBase(toBase(v)), "ac"] as const;
       const conversionCandidate = [v, "mm²"] as const;
 
       expect(area["ac"](conversionCandidate)).toEqual(expected);
@@ -2592,11 +2592,11 @@ describe("area", () => {
       const squareMicrometersConversion = linearConversion(1e-12);
 
       const [toBase, fromBase] = [
+        acresConversion[1],
         squareMicrometersConversion[0],
-        acresConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ac"] as const;
+      const expected = [fromBase(toBase(v)), "ac"] as const;
       const conversionCandidate = [v, "µm²"] as const;
 
       expect(area["ac"](conversionCandidate)).toEqual(expected);
@@ -2608,11 +2608,11 @@ describe("area", () => {
       const squareNanometersConversion = linearConversion(1e-18);
 
       const [toBase, fromBase] = [
+        acresConversion[1],
         squareNanometersConversion[0],
-        acresConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ac"] as const;
+      const expected = [fromBase(toBase(v)), "ac"] as const;
       const conversionCandidate = [v, "nm²"] as const;
 
       expect(area["ac"](conversionCandidate)).toEqual(expected);
@@ -2624,11 +2624,11 @@ describe("area", () => {
       const squareInchesConversion = linearConversion(0.00064516);
 
       const [toBase, fromBase] = [
+        acresConversion[1],
         squareInchesConversion[0],
-        acresConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ac"] as const;
+      const expected = [fromBase(toBase(v)), "ac"] as const;
       const conversionCandidate = [v, "in²"] as const;
 
       expect(area["ac"](conversionCandidate)).toEqual(expected);
@@ -2640,11 +2640,11 @@ describe("area", () => {
       const squareFeetConversion = linearConversion(0.092903);
 
       const [toBase, fromBase] = [
+        acresConversion[1],
         squareFeetConversion[0],
-        acresConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ac"] as const;
+      const expected = [fromBase(toBase(v)), "ac"] as const;
       const conversionCandidate = [v, "ft²"] as const;
 
       expect(area["ac"](conversionCandidate)).toEqual(expected);
@@ -2656,11 +2656,11 @@ describe("area", () => {
       const squareYardsConversion = linearConversion(0.836127);
 
       const [toBase, fromBase] = [
+        acresConversion[1],
         squareYardsConversion[0],
-        acresConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ac"] as const;
+      const expected = [fromBase(toBase(v)), "ac"] as const;
       const conversionCandidate = [v, "yd²"] as const;
 
       expect(area["ac"](conversionCandidate)).toEqual(expected);
@@ -2672,11 +2672,11 @@ describe("area", () => {
       const squareMilesConversion = linearConversion(2590000);
 
       const [toBase, fromBase] = [
+        acresConversion[1],
         squareMilesConversion[0],
-        acresConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ac"] as const;
+      const expected = [fromBase(toBase(v)), "ac"] as const;
       const conversionCandidate = [v, "mi²"] as const;
 
       expect(area["ac"](conversionCandidate)).toEqual(expected);
@@ -2690,11 +2690,11 @@ describe("area", () => {
       const aresConversion = linearConversion(100);
 
       const [toBase, fromBase] = [
+        acresConversion[1],
         aresConversion[0],
-        acresConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ac"] as const;
+      const expected = [fromBase(toBase(v)), "ac"] as const;
       const conversionCandidate = [v, "a"] as const;
 
       expect(area["ac"](conversionCandidate)).toEqual(expected);
@@ -2706,11 +2706,11 @@ describe("area", () => {
       const hectaresConversion = linearConversion(10000);
 
       const [toBase, fromBase] = [
+        acresConversion[1],
         hectaresConversion[0],
-        acresConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ac"] as const;
+      const expected = [fromBase(toBase(v)), "ac"] as const;
       const conversionCandidate = [v, "ha"] as const;
 
       expect(area["ac"](conversionCandidate)).toEqual(expected);
@@ -2730,11 +2730,11 @@ describe("area", () => {
       const squareMegametersConversion = linearConversion(1000000000000);
 
       const [toBase, fromBase] = [
+        aresConversion[1],
         squareMegametersConversion[0],
-        aresConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "a"] as const;
+      const expected = [fromBase(toBase(v)), "a"] as const;
       const conversionCandidate = [v, "Mm²"] as const;
 
       expect(area["a"](conversionCandidate)).toEqual(expected);
@@ -2746,11 +2746,11 @@ describe("area", () => {
       const squareKilometersConversion = linearConversion(1000000);
 
       const [toBase, fromBase] = [
+        aresConversion[1],
         squareKilometersConversion[0],
-        aresConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "a"] as const;
+      const expected = [fromBase(toBase(v)), "a"] as const;
       const conversionCandidate = [v, "km²"] as const;
 
       expect(area["a"](conversionCandidate)).toEqual(expected);
@@ -2762,11 +2762,11 @@ describe("area", () => {
       const squareMetersConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
+        aresConversion[1],
         squareMetersConversion[0],
-        aresConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "a"] as const;
+      const expected = [fromBase(toBase(v)), "a"] as const;
       const conversionCandidate = [v, "m²"] as const;
 
       expect(area["a"](conversionCandidate)).toEqual(expected);
@@ -2778,11 +2778,11 @@ describe("area", () => {
       const squareCentimetersConversion = linearConversion(0.0001);
 
       const [toBase, fromBase] = [
+        aresConversion[1],
         squareCentimetersConversion[0],
-        aresConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "a"] as const;
+      const expected = [fromBase(toBase(v)), "a"] as const;
       const conversionCandidate = [v, "cm²"] as const;
 
       expect(area["a"](conversionCandidate)).toEqual(expected);
@@ -2794,11 +2794,11 @@ describe("area", () => {
       const squareMillimetersConversion = linearConversion(0.000001);
 
       const [toBase, fromBase] = [
+        aresConversion[1],
         squareMillimetersConversion[0],
-        aresConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "a"] as const;
+      const expected = [fromBase(toBase(v)), "a"] as const;
       const conversionCandidate = [v, "mm²"] as const;
 
       expect(area["a"](conversionCandidate)).toEqual(expected);
@@ -2810,11 +2810,11 @@ describe("area", () => {
       const squareMicrometersConversion = linearConversion(1e-12);
 
       const [toBase, fromBase] = [
+        aresConversion[1],
         squareMicrometersConversion[0],
-        aresConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "a"] as const;
+      const expected = [fromBase(toBase(v)), "a"] as const;
       const conversionCandidate = [v, "µm²"] as const;
 
       expect(area["a"](conversionCandidate)).toEqual(expected);
@@ -2826,11 +2826,11 @@ describe("area", () => {
       const squareNanometersConversion = linearConversion(1e-18);
 
       const [toBase, fromBase] = [
+        aresConversion[1],
         squareNanometersConversion[0],
-        aresConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "a"] as const;
+      const expected = [fromBase(toBase(v)), "a"] as const;
       const conversionCandidate = [v, "nm²"] as const;
 
       expect(area["a"](conversionCandidate)).toEqual(expected);
@@ -2842,11 +2842,11 @@ describe("area", () => {
       const squareInchesConversion = linearConversion(0.00064516);
 
       const [toBase, fromBase] = [
+        aresConversion[1],
         squareInchesConversion[0],
-        aresConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "a"] as const;
+      const expected = [fromBase(toBase(v)), "a"] as const;
       const conversionCandidate = [v, "in²"] as const;
 
       expect(area["a"](conversionCandidate)).toEqual(expected);
@@ -2858,11 +2858,11 @@ describe("area", () => {
       const squareFeetConversion = linearConversion(0.092903);
 
       const [toBase, fromBase] = [
+        aresConversion[1],
         squareFeetConversion[0],
-        aresConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "a"] as const;
+      const expected = [fromBase(toBase(v)), "a"] as const;
       const conversionCandidate = [v, "ft²"] as const;
 
       expect(area["a"](conversionCandidate)).toEqual(expected);
@@ -2874,11 +2874,11 @@ describe("area", () => {
       const squareYardsConversion = linearConversion(0.836127);
 
       const [toBase, fromBase] = [
+        aresConversion[1],
         squareYardsConversion[0],
-        aresConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "a"] as const;
+      const expected = [fromBase(toBase(v)), "a"] as const;
       const conversionCandidate = [v, "yd²"] as const;
 
       expect(area["a"](conversionCandidate)).toEqual(expected);
@@ -2890,11 +2890,11 @@ describe("area", () => {
       const squareMilesConversion = linearConversion(2590000);
 
       const [toBase, fromBase] = [
+        aresConversion[1],
         squareMilesConversion[0],
-        aresConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "a"] as const;
+      const expected = [fromBase(toBase(v)), "a"] as const;
       const conversionCandidate = [v, "mi²"] as const;
 
       expect(area["a"](conversionCandidate)).toEqual(expected);
@@ -2906,11 +2906,11 @@ describe("area", () => {
       const acresConversion = linearConversion(4046.86);
 
       const [toBase, fromBase] = [
+        aresConversion[1],
         acresConversion[0],
-        aresConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "a"] as const;
+      const expected = [fromBase(toBase(v)), "a"] as const;
       const conversionCandidate = [v, "ac"] as const;
 
       expect(area["a"](conversionCandidate)).toEqual(expected);
@@ -2924,11 +2924,11 @@ describe("area", () => {
       const hectaresConversion = linearConversion(10000);
 
       const [toBase, fromBase] = [
+        aresConversion[1],
         hectaresConversion[0],
-        aresConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "a"] as const;
+      const expected = [fromBase(toBase(v)), "a"] as const;
       const conversionCandidate = [v, "ha"] as const;
 
       expect(area["a"](conversionCandidate)).toEqual(expected);
@@ -2948,11 +2948,11 @@ describe("area", () => {
       const squareMegametersConversion = linearConversion(1000000000000);
 
       const [toBase, fromBase] = [
+        hectaresConversion[1],
         squareMegametersConversion[0],
-        hectaresConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ha"] as const;
+      const expected = [fromBase(toBase(v)), "ha"] as const;
       const conversionCandidate = [v, "Mm²"] as const;
 
       expect(area["ha"](conversionCandidate)).toEqual(expected);
@@ -2964,11 +2964,11 @@ describe("area", () => {
       const squareKilometersConversion = linearConversion(1000000);
 
       const [toBase, fromBase] = [
+        hectaresConversion[1],
         squareKilometersConversion[0],
-        hectaresConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ha"] as const;
+      const expected = [fromBase(toBase(v)), "ha"] as const;
       const conversionCandidate = [v, "km²"] as const;
 
       expect(area["ha"](conversionCandidate)).toEqual(expected);
@@ -2980,11 +2980,11 @@ describe("area", () => {
       const squareMetersConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
+        hectaresConversion[1],
         squareMetersConversion[0],
-        hectaresConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ha"] as const;
+      const expected = [fromBase(toBase(v)), "ha"] as const;
       const conversionCandidate = [v, "m²"] as const;
 
       expect(area["ha"](conversionCandidate)).toEqual(expected);
@@ -2996,11 +2996,11 @@ describe("area", () => {
       const squareCentimetersConversion = linearConversion(0.0001);
 
       const [toBase, fromBase] = [
+        hectaresConversion[1],
         squareCentimetersConversion[0],
-        hectaresConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ha"] as const;
+      const expected = [fromBase(toBase(v)), "ha"] as const;
       const conversionCandidate = [v, "cm²"] as const;
 
       expect(area["ha"](conversionCandidate)).toEqual(expected);
@@ -3012,11 +3012,11 @@ describe("area", () => {
       const squareMillimetersConversion = linearConversion(0.000001);
 
       const [toBase, fromBase] = [
+        hectaresConversion[1],
         squareMillimetersConversion[0],
-        hectaresConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ha"] as const;
+      const expected = [fromBase(toBase(v)), "ha"] as const;
       const conversionCandidate = [v, "mm²"] as const;
 
       expect(area["ha"](conversionCandidate)).toEqual(expected);
@@ -3028,11 +3028,11 @@ describe("area", () => {
       const squareMicrometersConversion = linearConversion(1e-12);
 
       const [toBase, fromBase] = [
+        hectaresConversion[1],
         squareMicrometersConversion[0],
-        hectaresConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ha"] as const;
+      const expected = [fromBase(toBase(v)), "ha"] as const;
       const conversionCandidate = [v, "µm²"] as const;
 
       expect(area["ha"](conversionCandidate)).toEqual(expected);
@@ -3044,11 +3044,11 @@ describe("area", () => {
       const squareNanometersConversion = linearConversion(1e-18);
 
       const [toBase, fromBase] = [
+        hectaresConversion[1],
         squareNanometersConversion[0],
-        hectaresConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ha"] as const;
+      const expected = [fromBase(toBase(v)), "ha"] as const;
       const conversionCandidate = [v, "nm²"] as const;
 
       expect(area["ha"](conversionCandidate)).toEqual(expected);
@@ -3060,11 +3060,11 @@ describe("area", () => {
       const squareInchesConversion = linearConversion(0.00064516);
 
       const [toBase, fromBase] = [
+        hectaresConversion[1],
         squareInchesConversion[0],
-        hectaresConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ha"] as const;
+      const expected = [fromBase(toBase(v)), "ha"] as const;
       const conversionCandidate = [v, "in²"] as const;
 
       expect(area["ha"](conversionCandidate)).toEqual(expected);
@@ -3076,11 +3076,11 @@ describe("area", () => {
       const squareFeetConversion = linearConversion(0.092903);
 
       const [toBase, fromBase] = [
+        hectaresConversion[1],
         squareFeetConversion[0],
-        hectaresConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ha"] as const;
+      const expected = [fromBase(toBase(v)), "ha"] as const;
       const conversionCandidate = [v, "ft²"] as const;
 
       expect(area["ha"](conversionCandidate)).toEqual(expected);
@@ -3092,11 +3092,11 @@ describe("area", () => {
       const squareYardsConversion = linearConversion(0.836127);
 
       const [toBase, fromBase] = [
+        hectaresConversion[1],
         squareYardsConversion[0],
-        hectaresConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ha"] as const;
+      const expected = [fromBase(toBase(v)), "ha"] as const;
       const conversionCandidate = [v, "yd²"] as const;
 
       expect(area["ha"](conversionCandidate)).toEqual(expected);
@@ -3108,11 +3108,11 @@ describe("area", () => {
       const squareMilesConversion = linearConversion(2590000);
 
       const [toBase, fromBase] = [
+        hectaresConversion[1],
         squareMilesConversion[0],
-        hectaresConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ha"] as const;
+      const expected = [fromBase(toBase(v)), "ha"] as const;
       const conversionCandidate = [v, "mi²"] as const;
 
       expect(area["ha"](conversionCandidate)).toEqual(expected);
@@ -3124,11 +3124,11 @@ describe("area", () => {
       const acresConversion = linearConversion(4046.86);
 
       const [toBase, fromBase] = [
+        hectaresConversion[1],
         acresConversion[0],
-        hectaresConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ha"] as const;
+      const expected = [fromBase(toBase(v)), "ha"] as const;
       const conversionCandidate = [v, "ac"] as const;
 
       expect(area["ha"](conversionCandidate)).toEqual(expected);
@@ -3140,11 +3140,11 @@ describe("area", () => {
       const aresConversion = linearConversion(100);
 
       const [toBase, fromBase] = [
+        hectaresConversion[1],
         aresConversion[0],
-        hectaresConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ha"] as const;
+      const expected = [fromBase(toBase(v)), "ha"] as const;
       const conversionCandidate = [v, "a"] as const;
 
       expect(area["ha"](conversionCandidate)).toEqual(expected);

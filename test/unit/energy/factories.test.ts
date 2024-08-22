@@ -67,11 +67,11 @@ describe("energy", () => {
       const joulesConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
+        kilojoulesConversion[1],
         joulesConversion[0],
-        kilojoulesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "kJ"] as const;
+      const expected = [fromBase(toBase(v)), "kJ"] as const;
       const conversionCandidate = [v, "J"] as const;
 
       expect(energy["kJ"](conversionCandidate)).toEqual(expected);
@@ -83,11 +83,11 @@ describe("energy", () => {
       const kilocaloriesConversion = linearConversion(4184);
 
       const [toBase, fromBase] = [
+        kilojoulesConversion[1],
         kilocaloriesConversion[0],
-        kilojoulesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "kJ"] as const;
+      const expected = [fromBase(toBase(v)), "kJ"] as const;
       const conversionCandidate = [v, "kCal"] as const;
 
       expect(energy["kJ"](conversionCandidate)).toEqual(expected);
@@ -99,11 +99,11 @@ describe("energy", () => {
       const caloriesConversion = linearConversion(4.184);
 
       const [toBase, fromBase] = [
+        kilojoulesConversion[1],
         caloriesConversion[0],
-        kilojoulesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "kJ"] as const;
+      const expected = [fromBase(toBase(v)), "kJ"] as const;
       const conversionCandidate = [v, "cal"] as const;
 
       expect(energy["kJ"](conversionCandidate)).toEqual(expected);
@@ -115,11 +115,11 @@ describe("energy", () => {
       const kilowattHoursConversion = linearConversion(3600000);
 
       const [toBase, fromBase] = [
+        kilojoulesConversion[1],
         kilowattHoursConversion[0],
-        kilojoulesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "kJ"] as const;
+      const expected = [fromBase(toBase(v)), "kJ"] as const;
       const conversionCandidate = [v, "kWh"] as const;
 
       expect(energy["kJ"](conversionCandidate)).toEqual(expected);
@@ -131,11 +131,11 @@ describe("energy", () => {
       const wattHoursConversion = linearConversion(3600);
 
       const [toBase, fromBase] = [
+        kilojoulesConversion[1],
         wattHoursConversion[0],
-        kilojoulesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "kJ"] as const;
+      const expected = [fromBase(toBase(v)), "kJ"] as const;
       const conversionCandidate = [v, "Wh"] as const;
 
       expect(energy["kJ"](conversionCandidate)).toEqual(expected);
@@ -147,11 +147,11 @@ describe("energy", () => {
       const electronvoltsConversion = linearConversion(1.60218e-19);
 
       const [toBase, fromBase] = [
+        kilojoulesConversion[1],
         electronvoltsConversion[0],
-        kilojoulesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "kJ"] as const;
+      const expected = [fromBase(toBase(v)), "kJ"] as const;
       const conversionCandidate = [v, "eV"] as const;
 
       expect(energy["kJ"](conversionCandidate)).toEqual(expected);
@@ -171,11 +171,11 @@ describe("energy", () => {
       const kilojoulesConversion = linearConversion(1000);
 
       const [toBase, fromBase] = [
+        joulesConversion[1],
         kilojoulesConversion[0],
-        joulesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "J"] as const;
+      const expected = [fromBase(toBase(v)), "J"] as const;
       const conversionCandidate = [v, "kJ"] as const;
 
       expect(energy["J"](conversionCandidate)).toEqual(expected);
@@ -189,11 +189,11 @@ describe("energy", () => {
       const kilocaloriesConversion = linearConversion(4184);
 
       const [toBase, fromBase] = [
+        joulesConversion[1],
         kilocaloriesConversion[0],
-        joulesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "J"] as const;
+      const expected = [fromBase(toBase(v)), "J"] as const;
       const conversionCandidate = [v, "kCal"] as const;
 
       expect(energy["J"](conversionCandidate)).toEqual(expected);
@@ -205,11 +205,11 @@ describe("energy", () => {
       const caloriesConversion = linearConversion(4.184);
 
       const [toBase, fromBase] = [
+        joulesConversion[1],
         caloriesConversion[0],
-        joulesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "J"] as const;
+      const expected = [fromBase(toBase(v)), "J"] as const;
       const conversionCandidate = [v, "cal"] as const;
 
       expect(energy["J"](conversionCandidate)).toEqual(expected);
@@ -221,11 +221,11 @@ describe("energy", () => {
       const kilowattHoursConversion = linearConversion(3600000);
 
       const [toBase, fromBase] = [
+        joulesConversion[1],
         kilowattHoursConversion[0],
-        joulesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "J"] as const;
+      const expected = [fromBase(toBase(v)), "J"] as const;
       const conversionCandidate = [v, "kWh"] as const;
 
       expect(energy["J"](conversionCandidate)).toEqual(expected);
@@ -237,11 +237,11 @@ describe("energy", () => {
       const wattHoursConversion = linearConversion(3600);
 
       const [toBase, fromBase] = [
+        joulesConversion[1],
         wattHoursConversion[0],
-        joulesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "J"] as const;
+      const expected = [fromBase(toBase(v)), "J"] as const;
       const conversionCandidate = [v, "Wh"] as const;
 
       expect(energy["J"](conversionCandidate)).toEqual(expected);
@@ -253,11 +253,11 @@ describe("energy", () => {
       const electronvoltsConversion = linearConversion(1.60218e-19);
 
       const [toBase, fromBase] = [
+        joulesConversion[1],
         electronvoltsConversion[0],
-        joulesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "J"] as const;
+      const expected = [fromBase(toBase(v)), "J"] as const;
       const conversionCandidate = [v, "eV"] as const;
 
       expect(energy["J"](conversionCandidate)).toEqual(expected);
@@ -277,11 +277,11 @@ describe("energy", () => {
       const kilojoulesConversion = linearConversion(1000);
 
       const [toBase, fromBase] = [
+        kilocaloriesConversion[1],
         kilojoulesConversion[0],
-        kilocaloriesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "kCal"] as const;
+      const expected = [fromBase(toBase(v)), "kCal"] as const;
       const conversionCandidate = [v, "kJ"] as const;
 
       expect(energy["kCal"](conversionCandidate)).toEqual(expected);
@@ -293,11 +293,11 @@ describe("energy", () => {
       const joulesConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
+        kilocaloriesConversion[1],
         joulesConversion[0],
-        kilocaloriesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "kCal"] as const;
+      const expected = [fromBase(toBase(v)), "kCal"] as const;
       const conversionCandidate = [v, "J"] as const;
 
       expect(energy["kCal"](conversionCandidate)).toEqual(expected);
@@ -311,11 +311,11 @@ describe("energy", () => {
       const caloriesConversion = linearConversion(4.184);
 
       const [toBase, fromBase] = [
+        kilocaloriesConversion[1],
         caloriesConversion[0],
-        kilocaloriesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "kCal"] as const;
+      const expected = [fromBase(toBase(v)), "kCal"] as const;
       const conversionCandidate = [v, "cal"] as const;
 
       expect(energy["kCal"](conversionCandidate)).toEqual(expected);
@@ -327,11 +327,11 @@ describe("energy", () => {
       const kilowattHoursConversion = linearConversion(3600000);
 
       const [toBase, fromBase] = [
+        kilocaloriesConversion[1],
         kilowattHoursConversion[0],
-        kilocaloriesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "kCal"] as const;
+      const expected = [fromBase(toBase(v)), "kCal"] as const;
       const conversionCandidate = [v, "kWh"] as const;
 
       expect(energy["kCal"](conversionCandidate)).toEqual(expected);
@@ -343,11 +343,11 @@ describe("energy", () => {
       const wattHoursConversion = linearConversion(3600);
 
       const [toBase, fromBase] = [
+        kilocaloriesConversion[1],
         wattHoursConversion[0],
-        kilocaloriesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "kCal"] as const;
+      const expected = [fromBase(toBase(v)), "kCal"] as const;
       const conversionCandidate = [v, "Wh"] as const;
 
       expect(energy["kCal"](conversionCandidate)).toEqual(expected);
@@ -359,11 +359,11 @@ describe("energy", () => {
       const electronvoltsConversion = linearConversion(1.60218e-19);
 
       const [toBase, fromBase] = [
+        kilocaloriesConversion[1],
         electronvoltsConversion[0],
-        kilocaloriesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "kCal"] as const;
+      const expected = [fromBase(toBase(v)), "kCal"] as const;
       const conversionCandidate = [v, "eV"] as const;
 
       expect(energy["kCal"](conversionCandidate)).toEqual(expected);
@@ -383,11 +383,11 @@ describe("energy", () => {
       const kilojoulesConversion = linearConversion(1000);
 
       const [toBase, fromBase] = [
+        caloriesConversion[1],
         kilojoulesConversion[0],
-        caloriesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "cal"] as const;
+      const expected = [fromBase(toBase(v)), "cal"] as const;
       const conversionCandidate = [v, "kJ"] as const;
 
       expect(energy["cal"](conversionCandidate)).toEqual(expected);
@@ -399,11 +399,11 @@ describe("energy", () => {
       const joulesConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
+        caloriesConversion[1],
         joulesConversion[0],
-        caloriesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "cal"] as const;
+      const expected = [fromBase(toBase(v)), "cal"] as const;
       const conversionCandidate = [v, "J"] as const;
 
       expect(energy["cal"](conversionCandidate)).toEqual(expected);
@@ -412,14 +412,14 @@ describe("energy", () => {
 
     it.each([1, 10, 100])('should convert kCal to cal.', v => {
       const caloriesConversion = linearConversion(4.184);
-      const kilocaloriesConversion = linearConversion(4184.0);
+      const kilocaloriesConversion = linearConversion(4184);
 
       const [toBase, fromBase] = [
+        caloriesConversion[1],
         kilocaloriesConversion[0],
-        caloriesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "cal"] as const;
+      const expected = [fromBase(toBase(v)), "cal"] as const;
       const conversionCandidate = [v, "kCal"] as const;
 
       expect(energy["cal"](conversionCandidate)).toEqual(expected);
@@ -433,11 +433,11 @@ describe("energy", () => {
       const kilowattHoursConversion = linearConversion(3600000);
 
       const [toBase, fromBase] = [
+        caloriesConversion[1],
         kilowattHoursConversion[0],
-        caloriesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "cal"] as const;
+      const expected = [fromBase(toBase(v)), "cal"] as const;
       const conversionCandidate = [v, "kWh"] as const;
 
       expect(energy["cal"](conversionCandidate)).toEqual(expected);
@@ -449,11 +449,11 @@ describe("energy", () => {
       const wattHoursConversion = linearConversion(3600);
 
       const [toBase, fromBase] = [
+        caloriesConversion[1],
         wattHoursConversion[0],
-        caloriesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "cal"] as const;
+      const expected = [fromBase(toBase(v)), "cal"] as const;
       const conversionCandidate = [v, "Wh"] as const;
 
       expect(energy["cal"](conversionCandidate)).toEqual(expected);
@@ -465,11 +465,11 @@ describe("energy", () => {
       const electronvoltsConversion = linearConversion(1.60218e-19);
 
       const [toBase, fromBase] = [
+        caloriesConversion[1],
         electronvoltsConversion[0],
-        caloriesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "cal"] as const;
+      const expected = [fromBase(toBase(v)), "cal"] as const;
       const conversionCandidate = [v, "eV"] as const;
 
       expect(energy["cal"](conversionCandidate)).toEqual(expected);
@@ -489,11 +489,11 @@ describe("energy", () => {
       const kilojoulesConversion = linearConversion(1000);
 
       const [toBase, fromBase] = [
+        kilowattHoursConversion[1],
         kilojoulesConversion[0],
-        kilowattHoursConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "kWh"] as const;
+      const expected = [fromBase(toBase(v)), "kWh"] as const;
       const conversionCandidate = [v, "kJ"] as const;
 
       expect(energy["kWh"](conversionCandidate)).toEqual(expected);
@@ -505,11 +505,11 @@ describe("energy", () => {
       const joulesConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
+        kilowattHoursConversion[1],
         joulesConversion[0],
-        kilowattHoursConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "kWh"] as const;
+      const expected = [fromBase(toBase(v)), "kWh"] as const;
       const conversionCandidate = [v, "J"] as const;
 
       expect(energy["kWh"](conversionCandidate)).toEqual(expected);
@@ -521,11 +521,11 @@ describe("energy", () => {
       const kilocaloriesConversion = linearConversion(4184);
 
       const [toBase, fromBase] = [
+        kilowattHoursConversion[1],
         kilocaloriesConversion[0],
-        kilowattHoursConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "kWh"] as const;
+      const expected = [fromBase(toBase(v)), "kWh"] as const;
       const conversionCandidate = [v, "kCal"] as const;
 
       expect(energy["kWh"](conversionCandidate)).toEqual(expected);
@@ -537,11 +537,11 @@ describe("energy", () => {
       const caloriesConversion = linearConversion(4.184);
 
       const [toBase, fromBase] = [
+        kilowattHoursConversion[1],
         caloriesConversion[0],
-        kilowattHoursConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "kWh"] as const;
+      const expected = [fromBase(toBase(v)), "kWh"] as const;
       const conversionCandidate = [v, "cal"] as const;
 
       expect(energy["kWh"](conversionCandidate)).toEqual(expected);
@@ -555,11 +555,11 @@ describe("energy", () => {
       const wattHoursConversion = linearConversion(3600);
 
       const [toBase, fromBase] = [
+        kilowattHoursConversion[1],
         wattHoursConversion[0],
-        kilowattHoursConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "kWh"] as const;
+      const expected = [fromBase(toBase(v)), "kWh"] as const;
       const conversionCandidate = [v, "Wh"] as const;
 
       expect(energy["kWh"](conversionCandidate)).toEqual(expected);
@@ -571,11 +571,11 @@ describe("energy", () => {
       const electronvoltsConversion = linearConversion(1.60218e-19);
 
       const [toBase, fromBase] = [
+        kilowattHoursConversion[1],
         electronvoltsConversion[0],
-        kilowattHoursConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "kWh"] as const;
+      const expected = [fromBase(toBase(v)), "kWh"] as const;
       const conversionCandidate = [v, "eV"] as const;
 
       expect(energy["kWh"](conversionCandidate)).toEqual(expected);
@@ -595,11 +595,11 @@ describe("energy", () => {
       const kilojoulesConversion = linearConversion(1000);
 
       const [toBase, fromBase] = [
+        wattHoursConversion[1],
         kilojoulesConversion[0],
-        wattHoursConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Wh"] as const;
+      const expected = [fromBase(toBase(v)), "Wh"] as const;
       const conversionCandidate = [v, "kJ"] as const;
 
       expect(energy["Wh"](conversionCandidate)).toEqual(expected);
@@ -611,11 +611,11 @@ describe("energy", () => {
       const joulesConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
+        wattHoursConversion[1],
         joulesConversion[0],
-        wattHoursConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Wh"] as const;
+      const expected = [fromBase(toBase(v)), "Wh"] as const;
       const conversionCandidate = [v, "J"] as const;
 
       expect(energy["Wh"](conversionCandidate)).toEqual(expected);
@@ -627,11 +627,11 @@ describe("energy", () => {
       const kilocaloriesConversion = linearConversion(4184);
 
       const [toBase, fromBase] = [
+        wattHoursConversion[1],
         kilocaloriesConversion[0],
-        wattHoursConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Wh"] as const;
+      const expected = [fromBase(toBase(v)), "Wh"] as const;
       const conversionCandidate = [v, "kCal"] as const;
 
       expect(energy["Wh"](conversionCandidate)).toEqual(expected);
@@ -643,11 +643,11 @@ describe("energy", () => {
       const caloriesConversion = linearConversion(4.184);
 
       const [toBase, fromBase] = [
+        wattHoursConversion[1],
         caloriesConversion[0],
-        wattHoursConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Wh"] as const;
+      const expected = [fromBase(toBase(v)), "Wh"] as const;
       const conversionCandidate = [v, "cal"] as const;
 
       expect(energy["Wh"](conversionCandidate)).toEqual(expected);
@@ -659,11 +659,11 @@ describe("energy", () => {
       const kilowattHoursConversion = linearConversion(3600000);
 
       const [toBase, fromBase] = [
+        wattHoursConversion[1],
         kilowattHoursConversion[0],
-        wattHoursConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Wh"] as const;
+      const expected = [fromBase(toBase(v)), "Wh"] as const;
       const conversionCandidate = [v, "kWh"] as const;
 
       expect(energy["Wh"](conversionCandidate)).toEqual(expected);
@@ -677,11 +677,11 @@ describe("energy", () => {
       const electronvoltsConversion = linearConversion(1.60218e-19);
 
       const [toBase, fromBase] = [
+        wattHoursConversion[1],
         electronvoltsConversion[0],
-        wattHoursConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Wh"] as const;
+      const expected = [fromBase(toBase(v)), "Wh"] as const;
       const conversionCandidate = [v, "eV"] as const;
 
       expect(energy["Wh"](conversionCandidate)).toEqual(expected);
@@ -701,11 +701,11 @@ describe("energy", () => {
       const kilojoulesConversion = linearConversion(1000);
 
       const [toBase, fromBase] = [
+        electronvoltsConversion[1],
         kilojoulesConversion[0],
-        electronvoltsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "eV"] as const;
+      const expected = [fromBase(toBase(v)), "eV"] as const;
       const conversionCandidate = [v, "kJ"] as const;
 
       expect(energy["eV"](conversionCandidate)).toEqual(expected);
@@ -717,11 +717,11 @@ describe("energy", () => {
       const joulesConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
+        electronvoltsConversion[1],
         joulesConversion[0],
-        electronvoltsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "eV"] as const;
+      const expected = [fromBase(toBase(v)), "eV"] as const;
       const conversionCandidate = [v, "J"] as const;
 
       expect(energy["eV"](conversionCandidate)).toEqual(expected);
@@ -733,11 +733,11 @@ describe("energy", () => {
       const kilocaloriesConversion = linearConversion(4184);
 
       const [toBase, fromBase] = [
+        electronvoltsConversion[1],
         kilocaloriesConversion[0],
-        electronvoltsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "eV"] as const;
+      const expected = [fromBase(toBase(v)), "eV"] as const;
       const conversionCandidate = [v, "kCal"] as const;
 
       expect(energy["eV"](conversionCandidate)).toEqual(expected);
@@ -749,11 +749,11 @@ describe("energy", () => {
       const caloriesConversion = linearConversion(4.184);
 
       const [toBase, fromBase] = [
+        electronvoltsConversion[1],
         caloriesConversion[0],
-        electronvoltsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "eV"] as const;
+      const expected = [fromBase(toBase(v)), "eV"] as const;
       const conversionCandidate = [v, "cal"] as const;
 
       expect(energy["eV"](conversionCandidate)).toEqual(expected);
@@ -765,11 +765,11 @@ describe("energy", () => {
       const kilowattHoursConversion = linearConversion(3600000);
 
       const [toBase, fromBase] = [
+        electronvoltsConversion[1],
         kilowattHoursConversion[0],
-        electronvoltsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "eV"] as const;
+      const expected = [fromBase(toBase(v)), "eV"] as const;
       const conversionCandidate = [v, "kWh"] as const;
 
       expect(energy["eV"](conversionCandidate)).toEqual(expected);
@@ -781,11 +781,11 @@ describe("energy", () => {
       const wattHoursConversion = linearConversion(3600);
 
       const [toBase, fromBase] = [
+        electronvoltsConversion[1],
         wattHoursConversion[0],
-        electronvoltsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "eV"] as const;
+      const expected = [fromBase(toBase(v)), "eV"] as const;
       const conversionCandidate = [v, "Wh"] as const;
 
       expect(energy["eV"](conversionCandidate)).toEqual(expected);

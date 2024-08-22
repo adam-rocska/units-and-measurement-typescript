@@ -74,11 +74,11 @@ describe("frequency", () => {
       const gigahertzConversion = linearConversion(1000000000);
 
       const [toBase, fromBase] = [
+        terahertzConversion[1],
         gigahertzConversion[0],
-        terahertzConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "THz"] as const;
+      const expected = [fromBase(toBase(v)), "THz"] as const;
       const conversionCandidate = [v, "GHz"] as const;
 
       expect(frequency["THz"](conversionCandidate)).toEqual(expected);
@@ -90,11 +90,11 @@ describe("frequency", () => {
       const megahertzConversion = linearConversion(1000000);
 
       const [toBase, fromBase] = [
+        terahertzConversion[1],
         megahertzConversion[0],
-        terahertzConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "THz"] as const;
+      const expected = [fromBase(toBase(v)), "THz"] as const;
       const conversionCandidate = [v, "MHz"] as const;
 
       expect(frequency["THz"](conversionCandidate)).toEqual(expected);
@@ -106,11 +106,11 @@ describe("frequency", () => {
       const kilohertzConversion = linearConversion(1000);
 
       const [toBase, fromBase] = [
+        terahertzConversion[1],
         kilohertzConversion[0],
-        terahertzConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "THz"] as const;
+      const expected = [fromBase(toBase(v)), "THz"] as const;
       const conversionCandidate = [v, "kHz"] as const;
 
       expect(frequency["THz"](conversionCandidate)).toEqual(expected);
@@ -122,11 +122,11 @@ describe("frequency", () => {
       const hertzConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
+        terahertzConversion[1],
         hertzConversion[0],
-        terahertzConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "THz"] as const;
+      const expected = [fromBase(toBase(v)), "THz"] as const;
       const conversionCandidate = [v, "Hz"] as const;
 
       expect(frequency["THz"](conversionCandidate)).toEqual(expected);
@@ -138,11 +138,11 @@ describe("frequency", () => {
       const millihertzConversion = linearConversion(0.001);
 
       const [toBase, fromBase] = [
+        terahertzConversion[1],
         millihertzConversion[0],
-        terahertzConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "THz"] as const;
+      const expected = [fromBase(toBase(v)), "THz"] as const;
       const conversionCandidate = [v, "mHz"] as const;
 
       expect(frequency["THz"](conversionCandidate)).toEqual(expected);
@@ -154,11 +154,11 @@ describe("frequency", () => {
       const microhertzConversion = linearConversion(0.000001);
 
       const [toBase, fromBase] = [
+        terahertzConversion[1],
         microhertzConversion[0],
-        terahertzConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "THz"] as const;
+      const expected = [fromBase(toBase(v)), "THz"] as const;
       const conversionCandidate = [v, "µHz"] as const;
 
       expect(frequency["THz"](conversionCandidate)).toEqual(expected);
@@ -170,11 +170,11 @@ describe("frequency", () => {
       const nanohertzConversion = linearConversion(1e-9);
 
       const [toBase, fromBase] = [
+        terahertzConversion[1],
         nanohertzConversion[0],
-        terahertzConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "THz"] as const;
+      const expected = [fromBase(toBase(v)), "THz"] as const;
       const conversionCandidate = [v, "nHz"] as const;
 
       expect(frequency["THz"](conversionCandidate)).toEqual(expected);
@@ -194,11 +194,11 @@ describe("frequency", () => {
       const terahertzConversion = linearConversion(1000000000000);
 
       const [toBase, fromBase] = [
+        gigahertzConversion[1],
         terahertzConversion[0],
-        gigahertzConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "GHz"] as const;
+      const expected = [fromBase(toBase(v)), "GHz"] as const;
       const conversionCandidate = [v, "THz"] as const;
 
       expect(frequency["GHz"](conversionCandidate)).toEqual(expected);
@@ -212,11 +212,11 @@ describe("frequency", () => {
       const megahertzConversion = linearConversion(1000000);
 
       const [toBase, fromBase] = [
+        gigahertzConversion[1],
         megahertzConversion[0],
-        gigahertzConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "GHz"] as const;
+      const expected = [fromBase(toBase(v)), "GHz"] as const;
       const conversionCandidate = [v, "MHz"] as const;
 
       expect(frequency["GHz"](conversionCandidate)).toEqual(expected);
@@ -228,11 +228,11 @@ describe("frequency", () => {
       const kilohertzConversion = linearConversion(1000);
 
       const [toBase, fromBase] = [
+        gigahertzConversion[1],
         kilohertzConversion[0],
-        gigahertzConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "GHz"] as const;
+      const expected = [fromBase(toBase(v)), "GHz"] as const;
       const conversionCandidate = [v, "kHz"] as const;
 
       expect(frequency["GHz"](conversionCandidate)).toEqual(expected);
@@ -244,11 +244,11 @@ describe("frequency", () => {
       const hertzConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
+        gigahertzConversion[1],
         hertzConversion[0],
-        gigahertzConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "GHz"] as const;
+      const expected = [fromBase(toBase(v)), "GHz"] as const;
       const conversionCandidate = [v, "Hz"] as const;
 
       expect(frequency["GHz"](conversionCandidate)).toEqual(expected);
@@ -260,11 +260,11 @@ describe("frequency", () => {
       const millihertzConversion = linearConversion(0.001);
 
       const [toBase, fromBase] = [
+        gigahertzConversion[1],
         millihertzConversion[0],
-        gigahertzConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "GHz"] as const;
+      const expected = [fromBase(toBase(v)), "GHz"] as const;
       const conversionCandidate = [v, "mHz"] as const;
 
       expect(frequency["GHz"](conversionCandidate)).toEqual(expected);
@@ -276,11 +276,11 @@ describe("frequency", () => {
       const microhertzConversion = linearConversion(0.000001);
 
       const [toBase, fromBase] = [
+        gigahertzConversion[1],
         microhertzConversion[0],
-        gigahertzConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "GHz"] as const;
+      const expected = [fromBase(toBase(v)), "GHz"] as const;
       const conversionCandidate = [v, "µHz"] as const;
 
       expect(frequency["GHz"](conversionCandidate)).toEqual(expected);
@@ -292,11 +292,11 @@ describe("frequency", () => {
       const nanohertzConversion = linearConversion(1e-9);
 
       const [toBase, fromBase] = [
+        gigahertzConversion[1],
         nanohertzConversion[0],
-        gigahertzConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "GHz"] as const;
+      const expected = [fromBase(toBase(v)), "GHz"] as const;
       const conversionCandidate = [v, "nHz"] as const;
 
       expect(frequency["GHz"](conversionCandidate)).toEqual(expected);
@@ -316,11 +316,11 @@ describe("frequency", () => {
       const terahertzConversion = linearConversion(1000000000000);
 
       const [toBase, fromBase] = [
+        megahertzConversion[1],
         terahertzConversion[0],
-        megahertzConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "MHz"] as const;
+      const expected = [fromBase(toBase(v)), "MHz"] as const;
       const conversionCandidate = [v, "THz"] as const;
 
       expect(frequency["MHz"](conversionCandidate)).toEqual(expected);
@@ -332,11 +332,11 @@ describe("frequency", () => {
       const gigahertzConversion = linearConversion(1000000000);
 
       const [toBase, fromBase] = [
+        megahertzConversion[1],
         gigahertzConversion[0],
-        megahertzConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "MHz"] as const;
+      const expected = [fromBase(toBase(v)), "MHz"] as const;
       const conversionCandidate = [v, "GHz"] as const;
 
       expect(frequency["MHz"](conversionCandidate)).toEqual(expected);
@@ -350,11 +350,11 @@ describe("frequency", () => {
       const kilohertzConversion = linearConversion(1000);
 
       const [toBase, fromBase] = [
+        megahertzConversion[1],
         kilohertzConversion[0],
-        megahertzConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "MHz"] as const;
+      const expected = [fromBase(toBase(v)), "MHz"] as const;
       const conversionCandidate = [v, "kHz"] as const;
 
       expect(frequency["MHz"](conversionCandidate)).toEqual(expected);
@@ -366,11 +366,11 @@ describe("frequency", () => {
       const hertzConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
+        megahertzConversion[1],
         hertzConversion[0],
-        megahertzConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "MHz"] as const;
+      const expected = [fromBase(toBase(v)), "MHz"] as const;
       const conversionCandidate = [v, "Hz"] as const;
 
       expect(frequency["MHz"](conversionCandidate)).toEqual(expected);
@@ -382,11 +382,11 @@ describe("frequency", () => {
       const millihertzConversion = linearConversion(0.001);
 
       const [toBase, fromBase] = [
+        megahertzConversion[1],
         millihertzConversion[0],
-        megahertzConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "MHz"] as const;
+      const expected = [fromBase(toBase(v)), "MHz"] as const;
       const conversionCandidate = [v, "mHz"] as const;
 
       expect(frequency["MHz"](conversionCandidate)).toEqual(expected);
@@ -398,11 +398,11 @@ describe("frequency", () => {
       const microhertzConversion = linearConversion(0.000001);
 
       const [toBase, fromBase] = [
+        megahertzConversion[1],
         microhertzConversion[0],
-        megahertzConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "MHz"] as const;
+      const expected = [fromBase(toBase(v)), "MHz"] as const;
       const conversionCandidate = [v, "µHz"] as const;
 
       expect(frequency["MHz"](conversionCandidate)).toEqual(expected);
@@ -414,11 +414,11 @@ describe("frequency", () => {
       const nanohertzConversion = linearConversion(1e-9);
 
       const [toBase, fromBase] = [
+        megahertzConversion[1],
         nanohertzConversion[0],
-        megahertzConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "MHz"] as const;
+      const expected = [fromBase(toBase(v)), "MHz"] as const;
       const conversionCandidate = [v, "nHz"] as const;
 
       expect(frequency["MHz"](conversionCandidate)).toEqual(expected);
@@ -438,11 +438,11 @@ describe("frequency", () => {
       const terahertzConversion = linearConversion(1000000000000);
 
       const [toBase, fromBase] = [
+        kilohertzConversion[1],
         terahertzConversion[0],
-        kilohertzConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "kHz"] as const;
+      const expected = [fromBase(toBase(v)), "kHz"] as const;
       const conversionCandidate = [v, "THz"] as const;
 
       expect(frequency["kHz"](conversionCandidate)).toEqual(expected);
@@ -454,11 +454,11 @@ describe("frequency", () => {
       const gigahertzConversion = linearConversion(1000000000);
 
       const [toBase, fromBase] = [
+        kilohertzConversion[1],
         gigahertzConversion[0],
-        kilohertzConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "kHz"] as const;
+      const expected = [fromBase(toBase(v)), "kHz"] as const;
       const conversionCandidate = [v, "GHz"] as const;
 
       expect(frequency["kHz"](conversionCandidate)).toEqual(expected);
@@ -470,11 +470,11 @@ describe("frequency", () => {
       const megahertzConversion = linearConversion(1000000);
 
       const [toBase, fromBase] = [
+        kilohertzConversion[1],
         megahertzConversion[0],
-        kilohertzConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "kHz"] as const;
+      const expected = [fromBase(toBase(v)), "kHz"] as const;
       const conversionCandidate = [v, "MHz"] as const;
 
       expect(frequency["kHz"](conversionCandidate)).toEqual(expected);
@@ -488,11 +488,11 @@ describe("frequency", () => {
       const hertzConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
+        kilohertzConversion[1],
         hertzConversion[0],
-        kilohertzConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "kHz"] as const;
+      const expected = [fromBase(toBase(v)), "kHz"] as const;
       const conversionCandidate = [v, "Hz"] as const;
 
       expect(frequency["kHz"](conversionCandidate)).toEqual(expected);
@@ -504,11 +504,11 @@ describe("frequency", () => {
       const millihertzConversion = linearConversion(0.001);
 
       const [toBase, fromBase] = [
+        kilohertzConversion[1],
         millihertzConversion[0],
-        kilohertzConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "kHz"] as const;
+      const expected = [fromBase(toBase(v)), "kHz"] as const;
       const conversionCandidate = [v, "mHz"] as const;
 
       expect(frequency["kHz"](conversionCandidate)).toEqual(expected);
@@ -520,11 +520,11 @@ describe("frequency", () => {
       const microhertzConversion = linearConversion(0.000001);
 
       const [toBase, fromBase] = [
+        kilohertzConversion[1],
         microhertzConversion[0],
-        kilohertzConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "kHz"] as const;
+      const expected = [fromBase(toBase(v)), "kHz"] as const;
       const conversionCandidate = [v, "µHz"] as const;
 
       expect(frequency["kHz"](conversionCandidate)).toEqual(expected);
@@ -536,11 +536,11 @@ describe("frequency", () => {
       const nanohertzConversion = linearConversion(1e-9);
 
       const [toBase, fromBase] = [
+        kilohertzConversion[1],
         nanohertzConversion[0],
-        kilohertzConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "kHz"] as const;
+      const expected = [fromBase(toBase(v)), "kHz"] as const;
       const conversionCandidate = [v, "nHz"] as const;
 
       expect(frequency["kHz"](conversionCandidate)).toEqual(expected);
@@ -560,11 +560,11 @@ describe("frequency", () => {
       const terahertzConversion = linearConversion(1000000000000);
 
       const [toBase, fromBase] = [
+        hertzConversion[1],
         terahertzConversion[0],
-        hertzConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Hz"] as const;
+      const expected = [fromBase(toBase(v)), "Hz"] as const;
       const conversionCandidate = [v, "THz"] as const;
 
       expect(frequency["Hz"](conversionCandidate)).toEqual(expected);
@@ -576,11 +576,11 @@ describe("frequency", () => {
       const gigahertzConversion = linearConversion(1000000000);
 
       const [toBase, fromBase] = [
+        hertzConversion[1],
         gigahertzConversion[0],
-        hertzConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Hz"] as const;
+      const expected = [fromBase(toBase(v)), "Hz"] as const;
       const conversionCandidate = [v, "GHz"] as const;
 
       expect(frequency["Hz"](conversionCandidate)).toEqual(expected);
@@ -592,11 +592,11 @@ describe("frequency", () => {
       const megahertzConversion = linearConversion(1000000);
 
       const [toBase, fromBase] = [
+        hertzConversion[1],
         megahertzConversion[0],
-        hertzConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Hz"] as const;
+      const expected = [fromBase(toBase(v)), "Hz"] as const;
       const conversionCandidate = [v, "MHz"] as const;
 
       expect(frequency["Hz"](conversionCandidate)).toEqual(expected);
@@ -608,11 +608,11 @@ describe("frequency", () => {
       const kilohertzConversion = linearConversion(1000);
 
       const [toBase, fromBase] = [
+        hertzConversion[1],
         kilohertzConversion[0],
-        hertzConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Hz"] as const;
+      const expected = [fromBase(toBase(v)), "Hz"] as const;
       const conversionCandidate = [v, "kHz"] as const;
 
       expect(frequency["Hz"](conversionCandidate)).toEqual(expected);
@@ -626,11 +626,11 @@ describe("frequency", () => {
       const millihertzConversion = linearConversion(0.001);
 
       const [toBase, fromBase] = [
+        hertzConversion[1],
         millihertzConversion[0],
-        hertzConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Hz"] as const;
+      const expected = [fromBase(toBase(v)), "Hz"] as const;
       const conversionCandidate = [v, "mHz"] as const;
 
       expect(frequency["Hz"](conversionCandidate)).toEqual(expected);
@@ -642,11 +642,11 @@ describe("frequency", () => {
       const microhertzConversion = linearConversion(0.000001);
 
       const [toBase, fromBase] = [
+        hertzConversion[1],
         microhertzConversion[0],
-        hertzConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Hz"] as const;
+      const expected = [fromBase(toBase(v)), "Hz"] as const;
       const conversionCandidate = [v, "µHz"] as const;
 
       expect(frequency["Hz"](conversionCandidate)).toEqual(expected);
@@ -658,11 +658,11 @@ describe("frequency", () => {
       const nanohertzConversion = linearConversion(1e-9);
 
       const [toBase, fromBase] = [
+        hertzConversion[1],
         nanohertzConversion[0],
-        hertzConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Hz"] as const;
+      const expected = [fromBase(toBase(v)), "Hz"] as const;
       const conversionCandidate = [v, "nHz"] as const;
 
       expect(frequency["Hz"](conversionCandidate)).toEqual(expected);
@@ -682,11 +682,11 @@ describe("frequency", () => {
       const terahertzConversion = linearConversion(1000000000000);
 
       const [toBase, fromBase] = [
+        millihertzConversion[1],
         terahertzConversion[0],
-        millihertzConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "mHz"] as const;
+      const expected = [fromBase(toBase(v)), "mHz"] as const;
       const conversionCandidate = [v, "THz"] as const;
 
       expect(frequency["mHz"](conversionCandidate)).toEqual(expected);
@@ -698,11 +698,11 @@ describe("frequency", () => {
       const gigahertzConversion = linearConversion(1000000000);
 
       const [toBase, fromBase] = [
+        millihertzConversion[1],
         gigahertzConversion[0],
-        millihertzConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "mHz"] as const;
+      const expected = [fromBase(toBase(v)), "mHz"] as const;
       const conversionCandidate = [v, "GHz"] as const;
 
       expect(frequency["mHz"](conversionCandidate)).toEqual(expected);
@@ -714,11 +714,11 @@ describe("frequency", () => {
       const megahertzConversion = linearConversion(1000000);
 
       const [toBase, fromBase] = [
+        millihertzConversion[1],
         megahertzConversion[0],
-        millihertzConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "mHz"] as const;
+      const expected = [fromBase(toBase(v)), "mHz"] as const;
       const conversionCandidate = [v, "MHz"] as const;
 
       expect(frequency["mHz"](conversionCandidate)).toEqual(expected);
@@ -730,11 +730,11 @@ describe("frequency", () => {
       const kilohertzConversion = linearConversion(1000);
 
       const [toBase, fromBase] = [
+        millihertzConversion[1],
         kilohertzConversion[0],
-        millihertzConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "mHz"] as const;
+      const expected = [fromBase(toBase(v)), "mHz"] as const;
       const conversionCandidate = [v, "kHz"] as const;
 
       expect(frequency["mHz"](conversionCandidate)).toEqual(expected);
@@ -746,11 +746,11 @@ describe("frequency", () => {
       const hertzConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
+        millihertzConversion[1],
         hertzConversion[0],
-        millihertzConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "mHz"] as const;
+      const expected = [fromBase(toBase(v)), "mHz"] as const;
       const conversionCandidate = [v, "Hz"] as const;
 
       expect(frequency["mHz"](conversionCandidate)).toEqual(expected);
@@ -764,11 +764,11 @@ describe("frequency", () => {
       const microhertzConversion = linearConversion(0.000001);
 
       const [toBase, fromBase] = [
+        millihertzConversion[1],
         microhertzConversion[0],
-        millihertzConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "mHz"] as const;
+      const expected = [fromBase(toBase(v)), "mHz"] as const;
       const conversionCandidate = [v, "µHz"] as const;
 
       expect(frequency["mHz"](conversionCandidate)).toEqual(expected);
@@ -780,11 +780,11 @@ describe("frequency", () => {
       const nanohertzConversion = linearConversion(1e-9);
 
       const [toBase, fromBase] = [
+        millihertzConversion[1],
         nanohertzConversion[0],
-        millihertzConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "mHz"] as const;
+      const expected = [fromBase(toBase(v)), "mHz"] as const;
       const conversionCandidate = [v, "nHz"] as const;
 
       expect(frequency["mHz"](conversionCandidate)).toEqual(expected);
@@ -804,11 +804,11 @@ describe("frequency", () => {
       const terahertzConversion = linearConversion(1000000000000);
 
       const [toBase, fromBase] = [
+        microhertzConversion[1],
         terahertzConversion[0],
-        microhertzConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "µHz"] as const;
+      const expected = [fromBase(toBase(v)), "µHz"] as const;
       const conversionCandidate = [v, "THz"] as const;
 
       expect(frequency["µHz"](conversionCandidate)).toEqual(expected);
@@ -820,11 +820,11 @@ describe("frequency", () => {
       const gigahertzConversion = linearConversion(1000000000);
 
       const [toBase, fromBase] = [
+        microhertzConversion[1],
         gigahertzConversion[0],
-        microhertzConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "µHz"] as const;
+      const expected = [fromBase(toBase(v)), "µHz"] as const;
       const conversionCandidate = [v, "GHz"] as const;
 
       expect(frequency["µHz"](conversionCandidate)).toEqual(expected);
@@ -836,11 +836,11 @@ describe("frequency", () => {
       const megahertzConversion = linearConversion(1000000);
 
       const [toBase, fromBase] = [
+        microhertzConversion[1],
         megahertzConversion[0],
-        microhertzConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "µHz"] as const;
+      const expected = [fromBase(toBase(v)), "µHz"] as const;
       const conversionCandidate = [v, "MHz"] as const;
 
       expect(frequency["µHz"](conversionCandidate)).toEqual(expected);
@@ -852,11 +852,11 @@ describe("frequency", () => {
       const kilohertzConversion = linearConversion(1000);
 
       const [toBase, fromBase] = [
+        microhertzConversion[1],
         kilohertzConversion[0],
-        microhertzConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "µHz"] as const;
+      const expected = [fromBase(toBase(v)), "µHz"] as const;
       const conversionCandidate = [v, "kHz"] as const;
 
       expect(frequency["µHz"](conversionCandidate)).toEqual(expected);
@@ -868,11 +868,11 @@ describe("frequency", () => {
       const hertzConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
+        microhertzConversion[1],
         hertzConversion[0],
-        microhertzConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "µHz"] as const;
+      const expected = [fromBase(toBase(v)), "µHz"] as const;
       const conversionCandidate = [v, "Hz"] as const;
 
       expect(frequency["µHz"](conversionCandidate)).toEqual(expected);
@@ -884,11 +884,11 @@ describe("frequency", () => {
       const millihertzConversion = linearConversion(0.001);
 
       const [toBase, fromBase] = [
+        microhertzConversion[1],
         millihertzConversion[0],
-        microhertzConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "µHz"] as const;
+      const expected = [fromBase(toBase(v)), "µHz"] as const;
       const conversionCandidate = [v, "mHz"] as const;
 
       expect(frequency["µHz"](conversionCandidate)).toEqual(expected);
@@ -902,11 +902,11 @@ describe("frequency", () => {
       const nanohertzConversion = linearConversion(1e-9);
 
       const [toBase, fromBase] = [
+        microhertzConversion[1],
         nanohertzConversion[0],
-        microhertzConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "µHz"] as const;
+      const expected = [fromBase(toBase(v)), "µHz"] as const;
       const conversionCandidate = [v, "nHz"] as const;
 
       expect(frequency["µHz"](conversionCandidate)).toEqual(expected);
@@ -926,11 +926,11 @@ describe("frequency", () => {
       const terahertzConversion = linearConversion(1000000000000);
 
       const [toBase, fromBase] = [
+        nanohertzConversion[1],
         terahertzConversion[0],
-        nanohertzConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "nHz"] as const;
+      const expected = [fromBase(toBase(v)), "nHz"] as const;
       const conversionCandidate = [v, "THz"] as const;
 
       expect(frequency["nHz"](conversionCandidate)).toEqual(expected);
@@ -942,11 +942,11 @@ describe("frequency", () => {
       const gigahertzConversion = linearConversion(1000000000);
 
       const [toBase, fromBase] = [
+        nanohertzConversion[1],
         gigahertzConversion[0],
-        nanohertzConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "nHz"] as const;
+      const expected = [fromBase(toBase(v)), "nHz"] as const;
       const conversionCandidate = [v, "GHz"] as const;
 
       expect(frequency["nHz"](conversionCandidate)).toEqual(expected);
@@ -958,11 +958,11 @@ describe("frequency", () => {
       const megahertzConversion = linearConversion(1000000);
 
       const [toBase, fromBase] = [
+        nanohertzConversion[1],
         megahertzConversion[0],
-        nanohertzConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "nHz"] as const;
+      const expected = [fromBase(toBase(v)), "nHz"] as const;
       const conversionCandidate = [v, "MHz"] as const;
 
       expect(frequency["nHz"](conversionCandidate)).toEqual(expected);
@@ -974,11 +974,11 @@ describe("frequency", () => {
       const kilohertzConversion = linearConversion(1000);
 
       const [toBase, fromBase] = [
+        nanohertzConversion[1],
         kilohertzConversion[0],
-        nanohertzConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "nHz"] as const;
+      const expected = [fromBase(toBase(v)), "nHz"] as const;
       const conversionCandidate = [v, "kHz"] as const;
 
       expect(frequency["nHz"](conversionCandidate)).toEqual(expected);
@@ -990,11 +990,11 @@ describe("frequency", () => {
       const hertzConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
+        nanohertzConversion[1],
         hertzConversion[0],
-        nanohertzConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "nHz"] as const;
+      const expected = [fromBase(toBase(v)), "nHz"] as const;
       const conversionCandidate = [v, "Hz"] as const;
 
       expect(frequency["nHz"](conversionCandidate)).toEqual(expected);
@@ -1006,11 +1006,11 @@ describe("frequency", () => {
       const millihertzConversion = linearConversion(0.001);
 
       const [toBase, fromBase] = [
+        nanohertzConversion[1],
         millihertzConversion[0],
-        nanohertzConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "nHz"] as const;
+      const expected = [fromBase(toBase(v)), "nHz"] as const;
       const conversionCandidate = [v, "mHz"] as const;
 
       expect(frequency["nHz"](conversionCandidate)).toEqual(expected);
@@ -1022,11 +1022,11 @@ describe("frequency", () => {
       const microhertzConversion = linearConversion(0.000001);
 
       const [toBase, fromBase] = [
+        nanohertzConversion[1],
         microhertzConversion[0],
-        nanohertzConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "nHz"] as const;
+      const expected = [fromBase(toBase(v)), "nHz"] as const;
       const conversionCandidate = [v, "µHz"] as const;
 
       expect(frequency["nHz"](conversionCandidate)).toEqual(expected);

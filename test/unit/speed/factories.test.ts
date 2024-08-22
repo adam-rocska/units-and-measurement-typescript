@@ -46,11 +46,11 @@ describe("speed", () => {
       const kilometersPerHourConversion = linearConversion(0.277778);
 
       const [toBase, fromBase] = [
+        metersPerSecondConversion[1],
         kilometersPerHourConversion[0],
-        metersPerSecondConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "m/s"] as const;
+      const expected = [fromBase(toBase(v)), "m/s"] as const;
       const conversionCandidate = [v, "km/h"] as const;
 
       expect(speed["m/s"](conversionCandidate)).toEqual(expected);
@@ -62,11 +62,11 @@ describe("speed", () => {
       const milesPerHourConversion = linearConversion(0.44704);
 
       const [toBase, fromBase] = [
+        metersPerSecondConversion[1],
         milesPerHourConversion[0],
-        metersPerSecondConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "m/s"] as const;
+      const expected = [fromBase(toBase(v)), "m/s"] as const;
       const conversionCandidate = [v, "mph"] as const;
 
       expect(speed["m/s"](conversionCandidate)).toEqual(expected);
@@ -78,11 +78,11 @@ describe("speed", () => {
       const knotsConversion = linearConversion(0.514444);
 
       const [toBase, fromBase] = [
+        metersPerSecondConversion[1],
         knotsConversion[0],
-        metersPerSecondConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "m/s"] as const;
+      const expected = [fromBase(toBase(v)), "m/s"] as const;
       const conversionCandidate = [v, "kn"] as const;
 
       expect(speed["m/s"](conversionCandidate)).toEqual(expected);
@@ -102,11 +102,11 @@ describe("speed", () => {
       const metersPerSecondConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
+        kilometersPerHourConversion[1],
         metersPerSecondConversion[0],
-        kilometersPerHourConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "km/h"] as const;
+      const expected = [fromBase(toBase(v)), "km/h"] as const;
       const conversionCandidate = [v, "m/s"] as const;
 
       expect(speed["km/h"](conversionCandidate)).toEqual(expected);
@@ -120,11 +120,11 @@ describe("speed", () => {
       const milesPerHourConversion = linearConversion(0.44704);
 
       const [toBase, fromBase] = [
+        kilometersPerHourConversion[1],
         milesPerHourConversion[0],
-        kilometersPerHourConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "km/h"] as const;
+      const expected = [fromBase(toBase(v)), "km/h"] as const;
       const conversionCandidate = [v, "mph"] as const;
 
       expect(speed["km/h"](conversionCandidate)).toEqual(expected);
@@ -136,11 +136,11 @@ describe("speed", () => {
       const knotsConversion = linearConversion(0.514444);
 
       const [toBase, fromBase] = [
+        kilometersPerHourConversion[1],
         knotsConversion[0],
-        kilometersPerHourConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "km/h"] as const;
+      const expected = [fromBase(toBase(v)), "km/h"] as const;
       const conversionCandidate = [v, "kn"] as const;
 
       expect(speed["km/h"](conversionCandidate)).toEqual(expected);
@@ -160,11 +160,11 @@ describe("speed", () => {
       const metersPerSecondConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
+        milesPerHourConversion[1],
         metersPerSecondConversion[0],
-        milesPerHourConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "mph"] as const;
+      const expected = [fromBase(toBase(v)), "mph"] as const;
       const conversionCandidate = [v, "m/s"] as const;
 
       expect(speed["mph"](conversionCandidate)).toEqual(expected);
@@ -176,11 +176,11 @@ describe("speed", () => {
       const kilometersPerHourConversion = linearConversion(0.277778);
 
       const [toBase, fromBase] = [
+        milesPerHourConversion[1],
         kilometersPerHourConversion[0],
-        milesPerHourConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "mph"] as const;
+      const expected = [fromBase(toBase(v)), "mph"] as const;
       const conversionCandidate = [v, "km/h"] as const;
 
       expect(speed["mph"](conversionCandidate)).toEqual(expected);
@@ -194,11 +194,11 @@ describe("speed", () => {
       const knotsConversion = linearConversion(0.514444);
 
       const [toBase, fromBase] = [
+        milesPerHourConversion[1],
         knotsConversion[0],
-        milesPerHourConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "mph"] as const;
+      const expected = [fromBase(toBase(v)), "mph"] as const;
       const conversionCandidate = [v, "kn"] as const;
 
       expect(speed["mph"](conversionCandidate)).toEqual(expected);
@@ -218,11 +218,11 @@ describe("speed", () => {
       const metersPerSecondConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
+        knotsConversion[1],
         metersPerSecondConversion[0],
-        knotsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "kn"] as const;
+      const expected = [fromBase(toBase(v)), "kn"] as const;
       const conversionCandidate = [v, "m/s"] as const;
 
       expect(speed["kn"](conversionCandidate)).toEqual(expected);
@@ -234,11 +234,11 @@ describe("speed", () => {
       const kilometersPerHourConversion = linearConversion(0.277778);
 
       const [toBase, fromBase] = [
+        knotsConversion[1],
         kilometersPerHourConversion[0],
-        knotsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "kn"] as const;
+      const expected = [fromBase(toBase(v)), "kn"] as const;
       const conversionCandidate = [v, "km/h"] as const;
 
       expect(speed["kn"](conversionCandidate)).toEqual(expected);
@@ -250,11 +250,11 @@ describe("speed", () => {
       const milesPerHourConversion = linearConversion(0.44704);
 
       const [toBase, fromBase] = [
+        knotsConversion[1],
         milesPerHourConversion[0],
-        knotsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "kn"] as const;
+      const expected = [fromBase(toBase(v)), "kn"] as const;
       const conversionCandidate = [v, "mph"] as const;
 
       expect(speed["kn"](conversionCandidate)).toEqual(expected);

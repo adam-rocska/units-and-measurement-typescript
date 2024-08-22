@@ -200,11 +200,11 @@ describe("information", () => {
       const bytesConversion = linearConversion(8);
 
       const [toBase, fromBase] = [
+        bitsConversion[1],
         bytesConversion[0],
-        bitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "b"] as const;
+      const expected = [fromBase(toBase(v)), "b"] as const;
       const conversionCandidate = [v, "B"] as const;
 
       expect(information["b"](conversionCandidate)).toEqual(expected);
@@ -216,11 +216,11 @@ describe("information", () => {
       const kilobitsConversion = linearConversion(1000);
 
       const [toBase, fromBase] = [
+        bitsConversion[1],
         kilobitsConversion[0],
-        bitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "b"] as const;
+      const expected = [fromBase(toBase(v)), "b"] as const;
       const conversionCandidate = [v, "kb"] as const;
 
       expect(information["b"](conversionCandidate)).toEqual(expected);
@@ -232,11 +232,11 @@ describe("information", () => {
       const megabitsConversion = linearConversion(100000);
 
       const [toBase, fromBase] = [
+        bitsConversion[1],
         megabitsConversion[0],
-        bitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "b"] as const;
+      const expected = [fromBase(toBase(v)), "b"] as const;
       const conversionCandidate = [v, "Mb"] as const;
 
       expect(information["b"](conversionCandidate)).toEqual(expected);
@@ -248,11 +248,11 @@ describe("information", () => {
       const gigabitsConversion = linearConversion(1000000);
 
       const [toBase, fromBase] = [
+        bitsConversion[1],
         gigabitsConversion[0],
-        bitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "b"] as const;
+      const expected = [fromBase(toBase(v)), "b"] as const;
       const conversionCandidate = [v, "Gb"] as const;
 
       expect(information["b"](conversionCandidate)).toEqual(expected);
@@ -264,11 +264,11 @@ describe("information", () => {
       const terabitsConversion = linearConversion(10000000);
 
       const [toBase, fromBase] = [
+        bitsConversion[1],
         terabitsConversion[0],
-        bitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "b"] as const;
+      const expected = [fromBase(toBase(v)), "b"] as const;
       const conversionCandidate = [v, "Tb"] as const;
 
       expect(information["b"](conversionCandidate)).toEqual(expected);
@@ -280,11 +280,11 @@ describe("information", () => {
       const petabitsConversion = linearConversion(100000000);
 
       const [toBase, fromBase] = [
+        bitsConversion[1],
         petabitsConversion[0],
-        bitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "b"] as const;
+      const expected = [fromBase(toBase(v)), "b"] as const;
       const conversionCandidate = [v, "Pb"] as const;
 
       expect(information["b"](conversionCandidate)).toEqual(expected);
@@ -296,11 +296,11 @@ describe("information", () => {
       const exabitsConversion = linearConversion(1000000000);
 
       const [toBase, fromBase] = [
+        bitsConversion[1],
         exabitsConversion[0],
-        bitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "b"] as const;
+      const expected = [fromBase(toBase(v)), "b"] as const;
       const conversionCandidate = [v, "Eb"] as const;
 
       expect(information["b"](conversionCandidate)).toEqual(expected);
@@ -312,11 +312,11 @@ describe("information", () => {
       const zettabitsConversion = linearConversion(10000000000);
 
       const [toBase, fromBase] = [
+        bitsConversion[1],
         zettabitsConversion[0],
-        bitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "b"] as const;
+      const expected = [fromBase(toBase(v)), "b"] as const;
       const conversionCandidate = [v, "Zb"] as const;
 
       expect(information["b"](conversionCandidate)).toEqual(expected);
@@ -328,11 +328,11 @@ describe("information", () => {
       const yottabitsConversion = linearConversion(100000000000);
 
       const [toBase, fromBase] = [
+        bitsConversion[1],
         yottabitsConversion[0],
-        bitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "b"] as const;
+      const expected = [fromBase(toBase(v)), "b"] as const;
       const conversionCandidate = [v, "Yb"] as const;
 
       expect(information["b"](conversionCandidate)).toEqual(expected);
@@ -344,11 +344,11 @@ describe("information", () => {
       const kibibitsConversion = linearConversion(1024);
 
       const [toBase, fromBase] = [
+        bitsConversion[1],
         kibibitsConversion[0],
-        bitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "b"] as const;
+      const expected = [fromBase(toBase(v)), "b"] as const;
       const conversionCandidate = [v, "Kib"] as const;
 
       expect(information["b"](conversionCandidate)).toEqual(expected);
@@ -360,11 +360,11 @@ describe("information", () => {
       const kilobytesConversion = linearConversion(8192);
 
       const [toBase, fromBase] = [
+        bitsConversion[1],
         kilobytesConversion[0],
-        bitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "b"] as const;
+      const expected = [fromBase(toBase(v)), "b"] as const;
       const conversionCandidate = [v, "KB"] as const;
 
       expect(information["b"](conversionCandidate)).toEqual(expected);
@@ -376,11 +376,11 @@ describe("information", () => {
       const mebibitsConversion = linearConversion(102400);
 
       const [toBase, fromBase] = [
+        bitsConversion[1],
         mebibitsConversion[0],
-        bitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "b"] as const;
+      const expected = [fromBase(toBase(v)), "b"] as const;
       const conversionCandidate = [v, "Mib"] as const;
 
       expect(information["b"](conversionCandidate)).toEqual(expected);
@@ -392,11 +392,11 @@ describe("information", () => {
       const megabytesConversion = linearConversion(819200);
 
       const [toBase, fromBase] = [
+        bitsConversion[1],
         megabytesConversion[0],
-        bitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "b"] as const;
+      const expected = [fromBase(toBase(v)), "b"] as const;
       const conversionCandidate = [v, "MB"] as const;
 
       expect(information["b"](conversionCandidate)).toEqual(expected);
@@ -408,11 +408,11 @@ describe("information", () => {
       const gibibitsConversion = linearConversion(1024000);
 
       const [toBase, fromBase] = [
+        bitsConversion[1],
         gibibitsConversion[0],
-        bitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "b"] as const;
+      const expected = [fromBase(toBase(v)), "b"] as const;
       const conversionCandidate = [v, "Gib"] as const;
 
       expect(information["b"](conversionCandidate)).toEqual(expected);
@@ -424,11 +424,11 @@ describe("information", () => {
       const gigabytesConversion = linearConversion(8192000);
 
       const [toBase, fromBase] = [
+        bitsConversion[1],
         gigabytesConversion[0],
-        bitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "b"] as const;
+      const expected = [fromBase(toBase(v)), "b"] as const;
       const conversionCandidate = [v, "GB"] as const;
 
       expect(information["b"](conversionCandidate)).toEqual(expected);
@@ -440,11 +440,11 @@ describe("information", () => {
       const tebibitsConversion = linearConversion(10240000);
 
       const [toBase, fromBase] = [
+        bitsConversion[1],
         tebibitsConversion[0],
-        bitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "b"] as const;
+      const expected = [fromBase(toBase(v)), "b"] as const;
       const conversionCandidate = [v, "Tib"] as const;
 
       expect(information["b"](conversionCandidate)).toEqual(expected);
@@ -456,11 +456,11 @@ describe("information", () => {
       const terabytesConversion = linearConversion(81920000);
 
       const [toBase, fromBase] = [
+        bitsConversion[1],
         terabytesConversion[0],
-        bitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "b"] as const;
+      const expected = [fromBase(toBase(v)), "b"] as const;
       const conversionCandidate = [v, "TB"] as const;
 
       expect(information["b"](conversionCandidate)).toEqual(expected);
@@ -472,11 +472,11 @@ describe("information", () => {
       const pebibitsConversion = linearConversion(102400000);
 
       const [toBase, fromBase] = [
+        bitsConversion[1],
         pebibitsConversion[0],
-        bitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "b"] as const;
+      const expected = [fromBase(toBase(v)), "b"] as const;
       const conversionCandidate = [v, "Pib"] as const;
 
       expect(information["b"](conversionCandidate)).toEqual(expected);
@@ -488,11 +488,11 @@ describe("information", () => {
       const petabytesConversion = linearConversion(819200000);
 
       const [toBase, fromBase] = [
+        bitsConversion[1],
         petabytesConversion[0],
-        bitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "b"] as const;
+      const expected = [fromBase(toBase(v)), "b"] as const;
       const conversionCandidate = [v, "PB"] as const;
 
       expect(information["b"](conversionCandidate)).toEqual(expected);
@@ -504,11 +504,11 @@ describe("information", () => {
       const exbibitsConversion = linearConversion(1024000000);
 
       const [toBase, fromBase] = [
+        bitsConversion[1],
         exbibitsConversion[0],
-        bitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "b"] as const;
+      const expected = [fromBase(toBase(v)), "b"] as const;
       const conversionCandidate = [v, "Eib"] as const;
 
       expect(information["b"](conversionCandidate)).toEqual(expected);
@@ -520,11 +520,11 @@ describe("information", () => {
       const exabytesConversion = linearConversion(8192000000);
 
       const [toBase, fromBase] = [
+        bitsConversion[1],
         exabytesConversion[0],
-        bitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "b"] as const;
+      const expected = [fromBase(toBase(v)), "b"] as const;
       const conversionCandidate = [v, "EB"] as const;
 
       expect(information["b"](conversionCandidate)).toEqual(expected);
@@ -536,11 +536,11 @@ describe("information", () => {
       const zebibitsConversion = linearConversion(10240000000);
 
       const [toBase, fromBase] = [
+        bitsConversion[1],
         zebibitsConversion[0],
-        bitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "b"] as const;
+      const expected = [fromBase(toBase(v)), "b"] as const;
       const conversionCandidate = [v, "Zib"] as const;
 
       expect(information["b"](conversionCandidate)).toEqual(expected);
@@ -552,11 +552,11 @@ describe("information", () => {
       const zettabytesConversion = linearConversion(81920000000);
 
       const [toBase, fromBase] = [
+        bitsConversion[1],
         zettabytesConversion[0],
-        bitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "b"] as const;
+      const expected = [fromBase(toBase(v)), "b"] as const;
       const conversionCandidate = [v, "ZB"] as const;
 
       expect(information["b"](conversionCandidate)).toEqual(expected);
@@ -568,11 +568,11 @@ describe("information", () => {
       const yobibitsConversion = linearConversion(102400000000);
 
       const [toBase, fromBase] = [
+        bitsConversion[1],
         yobibitsConversion[0],
-        bitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "b"] as const;
+      const expected = [fromBase(toBase(v)), "b"] as const;
       const conversionCandidate = [v, "Yib"] as const;
 
       expect(information["b"](conversionCandidate)).toEqual(expected);
@@ -584,11 +584,11 @@ describe("information", () => {
       const yottabytesConversion = linearConversion(819200000000);
 
       const [toBase, fromBase] = [
+        bitsConversion[1],
         yottabytesConversion[0],
-        bitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "b"] as const;
+      const expected = [fromBase(toBase(v)), "b"] as const;
       const conversionCandidate = [v, "YB"] as const;
 
       expect(information["b"](conversionCandidate)).toEqual(expected);
@@ -608,11 +608,11 @@ describe("information", () => {
       const bitsConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
+        bytesConversion[1],
         bitsConversion[0],
-        bytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "B"] as const;
+      const expected = [fromBase(toBase(v)), "B"] as const;
       const conversionCandidate = [v, "b"] as const;
 
       expect(information["B"](conversionCandidate)).toEqual(expected);
@@ -626,11 +626,11 @@ describe("information", () => {
       const kilobitsConversion = linearConversion(1000);
 
       const [toBase, fromBase] = [
+        bytesConversion[1],
         kilobitsConversion[0],
-        bytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "B"] as const;
+      const expected = [fromBase(toBase(v)), "B"] as const;
       const conversionCandidate = [v, "kb"] as const;
 
       expect(information["B"](conversionCandidate)).toEqual(expected);
@@ -642,11 +642,11 @@ describe("information", () => {
       const megabitsConversion = linearConversion(100000);
 
       const [toBase, fromBase] = [
+        bytesConversion[1],
         megabitsConversion[0],
-        bytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "B"] as const;
+      const expected = [fromBase(toBase(v)), "B"] as const;
       const conversionCandidate = [v, "Mb"] as const;
 
       expect(information["B"](conversionCandidate)).toEqual(expected);
@@ -658,11 +658,11 @@ describe("information", () => {
       const gigabitsConversion = linearConversion(1000000);
 
       const [toBase, fromBase] = [
+        bytesConversion[1],
         gigabitsConversion[0],
-        bytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "B"] as const;
+      const expected = [fromBase(toBase(v)), "B"] as const;
       const conversionCandidate = [v, "Gb"] as const;
 
       expect(information["B"](conversionCandidate)).toEqual(expected);
@@ -674,11 +674,11 @@ describe("information", () => {
       const terabitsConversion = linearConversion(10000000);
 
       const [toBase, fromBase] = [
+        bytesConversion[1],
         terabitsConversion[0],
-        bytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "B"] as const;
+      const expected = [fromBase(toBase(v)), "B"] as const;
       const conversionCandidate = [v, "Tb"] as const;
 
       expect(information["B"](conversionCandidate)).toEqual(expected);
@@ -690,11 +690,11 @@ describe("information", () => {
       const petabitsConversion = linearConversion(100000000);
 
       const [toBase, fromBase] = [
+        bytesConversion[1],
         petabitsConversion[0],
-        bytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "B"] as const;
+      const expected = [fromBase(toBase(v)), "B"] as const;
       const conversionCandidate = [v, "Pb"] as const;
 
       expect(information["B"](conversionCandidate)).toEqual(expected);
@@ -706,11 +706,11 @@ describe("information", () => {
       const exabitsConversion = linearConversion(1000000000);
 
       const [toBase, fromBase] = [
+        bytesConversion[1],
         exabitsConversion[0],
-        bytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "B"] as const;
+      const expected = [fromBase(toBase(v)), "B"] as const;
       const conversionCandidate = [v, "Eb"] as const;
 
       expect(information["B"](conversionCandidate)).toEqual(expected);
@@ -722,11 +722,11 @@ describe("information", () => {
       const zettabitsConversion = linearConversion(10000000000);
 
       const [toBase, fromBase] = [
+        bytesConversion[1],
         zettabitsConversion[0],
-        bytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "B"] as const;
+      const expected = [fromBase(toBase(v)), "B"] as const;
       const conversionCandidate = [v, "Zb"] as const;
 
       expect(information["B"](conversionCandidate)).toEqual(expected);
@@ -738,11 +738,11 @@ describe("information", () => {
       const yottabitsConversion = linearConversion(100000000000);
 
       const [toBase, fromBase] = [
+        bytesConversion[1],
         yottabitsConversion[0],
-        bytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "B"] as const;
+      const expected = [fromBase(toBase(v)), "B"] as const;
       const conversionCandidate = [v, "Yb"] as const;
 
       expect(information["B"](conversionCandidate)).toEqual(expected);
@@ -754,11 +754,11 @@ describe("information", () => {
       const kibibitsConversion = linearConversion(1024);
 
       const [toBase, fromBase] = [
+        bytesConversion[1],
         kibibitsConversion[0],
-        bytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "B"] as const;
+      const expected = [fromBase(toBase(v)), "B"] as const;
       const conversionCandidate = [v, "Kib"] as const;
 
       expect(information["B"](conversionCandidate)).toEqual(expected);
@@ -770,11 +770,11 @@ describe("information", () => {
       const kilobytesConversion = linearConversion(8192);
 
       const [toBase, fromBase] = [
+        bytesConversion[1],
         kilobytesConversion[0],
-        bytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "B"] as const;
+      const expected = [fromBase(toBase(v)), "B"] as const;
       const conversionCandidate = [v, "KB"] as const;
 
       expect(information["B"](conversionCandidate)).toEqual(expected);
@@ -786,11 +786,11 @@ describe("information", () => {
       const mebibitsConversion = linearConversion(102400);
 
       const [toBase, fromBase] = [
+        bytesConversion[1],
         mebibitsConversion[0],
-        bytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "B"] as const;
+      const expected = [fromBase(toBase(v)), "B"] as const;
       const conversionCandidate = [v, "Mib"] as const;
 
       expect(information["B"](conversionCandidate)).toEqual(expected);
@@ -802,11 +802,11 @@ describe("information", () => {
       const megabytesConversion = linearConversion(819200);
 
       const [toBase, fromBase] = [
+        bytesConversion[1],
         megabytesConversion[0],
-        bytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "B"] as const;
+      const expected = [fromBase(toBase(v)), "B"] as const;
       const conversionCandidate = [v, "MB"] as const;
 
       expect(information["B"](conversionCandidate)).toEqual(expected);
@@ -818,11 +818,11 @@ describe("information", () => {
       const gibibitsConversion = linearConversion(1024000);
 
       const [toBase, fromBase] = [
+        bytesConversion[1],
         gibibitsConversion[0],
-        bytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "B"] as const;
+      const expected = [fromBase(toBase(v)), "B"] as const;
       const conversionCandidate = [v, "Gib"] as const;
 
       expect(information["B"](conversionCandidate)).toEqual(expected);
@@ -834,11 +834,11 @@ describe("information", () => {
       const gigabytesConversion = linearConversion(8192000);
 
       const [toBase, fromBase] = [
+        bytesConversion[1],
         gigabytesConversion[0],
-        bytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "B"] as const;
+      const expected = [fromBase(toBase(v)), "B"] as const;
       const conversionCandidate = [v, "GB"] as const;
 
       expect(information["B"](conversionCandidate)).toEqual(expected);
@@ -850,11 +850,11 @@ describe("information", () => {
       const tebibitsConversion = linearConversion(10240000);
 
       const [toBase, fromBase] = [
+        bytesConversion[1],
         tebibitsConversion[0],
-        bytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "B"] as const;
+      const expected = [fromBase(toBase(v)), "B"] as const;
       const conversionCandidate = [v, "Tib"] as const;
 
       expect(information["B"](conversionCandidate)).toEqual(expected);
@@ -866,11 +866,11 @@ describe("information", () => {
       const terabytesConversion = linearConversion(81920000);
 
       const [toBase, fromBase] = [
+        bytesConversion[1],
         terabytesConversion[0],
-        bytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "B"] as const;
+      const expected = [fromBase(toBase(v)), "B"] as const;
       const conversionCandidate = [v, "TB"] as const;
 
       expect(information["B"](conversionCandidate)).toEqual(expected);
@@ -882,11 +882,11 @@ describe("information", () => {
       const pebibitsConversion = linearConversion(102400000);
 
       const [toBase, fromBase] = [
+        bytesConversion[1],
         pebibitsConversion[0],
-        bytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "B"] as const;
+      const expected = [fromBase(toBase(v)), "B"] as const;
       const conversionCandidate = [v, "Pib"] as const;
 
       expect(information["B"](conversionCandidate)).toEqual(expected);
@@ -898,11 +898,11 @@ describe("information", () => {
       const petabytesConversion = linearConversion(819200000);
 
       const [toBase, fromBase] = [
+        bytesConversion[1],
         petabytesConversion[0],
-        bytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "B"] as const;
+      const expected = [fromBase(toBase(v)), "B"] as const;
       const conversionCandidate = [v, "PB"] as const;
 
       expect(information["B"](conversionCandidate)).toEqual(expected);
@@ -914,11 +914,11 @@ describe("information", () => {
       const exbibitsConversion = linearConversion(1024000000);
 
       const [toBase, fromBase] = [
+        bytesConversion[1],
         exbibitsConversion[0],
-        bytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "B"] as const;
+      const expected = [fromBase(toBase(v)), "B"] as const;
       const conversionCandidate = [v, "Eib"] as const;
 
       expect(information["B"](conversionCandidate)).toEqual(expected);
@@ -930,11 +930,11 @@ describe("information", () => {
       const exabytesConversion = linearConversion(8192000000);
 
       const [toBase, fromBase] = [
+        bytesConversion[1],
         exabytesConversion[0],
-        bytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "B"] as const;
+      const expected = [fromBase(toBase(v)), "B"] as const;
       const conversionCandidate = [v, "EB"] as const;
 
       expect(information["B"](conversionCandidate)).toEqual(expected);
@@ -946,11 +946,11 @@ describe("information", () => {
       const zebibitsConversion = linearConversion(10240000000);
 
       const [toBase, fromBase] = [
+        bytesConversion[1],
         zebibitsConversion[0],
-        bytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "B"] as const;
+      const expected = [fromBase(toBase(v)), "B"] as const;
       const conversionCandidate = [v, "Zib"] as const;
 
       expect(information["B"](conversionCandidate)).toEqual(expected);
@@ -962,11 +962,11 @@ describe("information", () => {
       const zettabytesConversion = linearConversion(81920000000);
 
       const [toBase, fromBase] = [
+        bytesConversion[1],
         zettabytesConversion[0],
-        bytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "B"] as const;
+      const expected = [fromBase(toBase(v)), "B"] as const;
       const conversionCandidate = [v, "ZB"] as const;
 
       expect(information["B"](conversionCandidate)).toEqual(expected);
@@ -978,11 +978,11 @@ describe("information", () => {
       const yobibitsConversion = linearConversion(102400000000);
 
       const [toBase, fromBase] = [
+        bytesConversion[1],
         yobibitsConversion[0],
-        bytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "B"] as const;
+      const expected = [fromBase(toBase(v)), "B"] as const;
       const conversionCandidate = [v, "Yib"] as const;
 
       expect(information["B"](conversionCandidate)).toEqual(expected);
@@ -994,11 +994,11 @@ describe("information", () => {
       const yottabytesConversion = linearConversion(819200000000);
 
       const [toBase, fromBase] = [
+        bytesConversion[1],
         yottabytesConversion[0],
-        bytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "B"] as const;
+      const expected = [fromBase(toBase(v)), "B"] as const;
       const conversionCandidate = [v, "YB"] as const;
 
       expect(information["B"](conversionCandidate)).toEqual(expected);
@@ -1018,11 +1018,11 @@ describe("information", () => {
       const bitsConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
+        kilobitsConversion[1],
         bitsConversion[0],
-        kilobitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "kb"] as const;
+      const expected = [fromBase(toBase(v)), "kb"] as const;
       const conversionCandidate = [v, "b"] as const;
 
       expect(information["kb"](conversionCandidate)).toEqual(expected);
@@ -1034,11 +1034,11 @@ describe("information", () => {
       const bytesConversion = linearConversion(8);
 
       const [toBase, fromBase] = [
+        kilobitsConversion[1],
         bytesConversion[0],
-        kilobitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "kb"] as const;
+      const expected = [fromBase(toBase(v)), "kb"] as const;
       const conversionCandidate = [v, "B"] as const;
 
       expect(information["kb"](conversionCandidate)).toEqual(expected);
@@ -1052,11 +1052,11 @@ describe("information", () => {
       const megabitsConversion = linearConversion(100000);
 
       const [toBase, fromBase] = [
+        kilobitsConversion[1],
         megabitsConversion[0],
-        kilobitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "kb"] as const;
+      const expected = [fromBase(toBase(v)), "kb"] as const;
       const conversionCandidate = [v, "Mb"] as const;
 
       expect(information["kb"](conversionCandidate)).toEqual(expected);
@@ -1068,11 +1068,11 @@ describe("information", () => {
       const gigabitsConversion = linearConversion(1000000);
 
       const [toBase, fromBase] = [
+        kilobitsConversion[1],
         gigabitsConversion[0],
-        kilobitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "kb"] as const;
+      const expected = [fromBase(toBase(v)), "kb"] as const;
       const conversionCandidate = [v, "Gb"] as const;
 
       expect(information["kb"](conversionCandidate)).toEqual(expected);
@@ -1084,11 +1084,11 @@ describe("information", () => {
       const terabitsConversion = linearConversion(10000000);
 
       const [toBase, fromBase] = [
+        kilobitsConversion[1],
         terabitsConversion[0],
-        kilobitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "kb"] as const;
+      const expected = [fromBase(toBase(v)), "kb"] as const;
       const conversionCandidate = [v, "Tb"] as const;
 
       expect(information["kb"](conversionCandidate)).toEqual(expected);
@@ -1100,11 +1100,11 @@ describe("information", () => {
       const petabitsConversion = linearConversion(100000000);
 
       const [toBase, fromBase] = [
+        kilobitsConversion[1],
         petabitsConversion[0],
-        kilobitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "kb"] as const;
+      const expected = [fromBase(toBase(v)), "kb"] as const;
       const conversionCandidate = [v, "Pb"] as const;
 
       expect(information["kb"](conversionCandidate)).toEqual(expected);
@@ -1116,11 +1116,11 @@ describe("information", () => {
       const exabitsConversion = linearConversion(1000000000);
 
       const [toBase, fromBase] = [
+        kilobitsConversion[1],
         exabitsConversion[0],
-        kilobitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "kb"] as const;
+      const expected = [fromBase(toBase(v)), "kb"] as const;
       const conversionCandidate = [v, "Eb"] as const;
 
       expect(information["kb"](conversionCandidate)).toEqual(expected);
@@ -1132,11 +1132,11 @@ describe("information", () => {
       const zettabitsConversion = linearConversion(10000000000);
 
       const [toBase, fromBase] = [
+        kilobitsConversion[1],
         zettabitsConversion[0],
-        kilobitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "kb"] as const;
+      const expected = [fromBase(toBase(v)), "kb"] as const;
       const conversionCandidate = [v, "Zb"] as const;
 
       expect(information["kb"](conversionCandidate)).toEqual(expected);
@@ -1148,11 +1148,11 @@ describe("information", () => {
       const yottabitsConversion = linearConversion(100000000000);
 
       const [toBase, fromBase] = [
+        kilobitsConversion[1],
         yottabitsConversion[0],
-        kilobitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "kb"] as const;
+      const expected = [fromBase(toBase(v)), "kb"] as const;
       const conversionCandidate = [v, "Yb"] as const;
 
       expect(information["kb"](conversionCandidate)).toEqual(expected);
@@ -1164,11 +1164,11 @@ describe("information", () => {
       const kibibitsConversion = linearConversion(1024);
 
       const [toBase, fromBase] = [
+        kilobitsConversion[1],
         kibibitsConversion[0],
-        kilobitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "kb"] as const;
+      const expected = [fromBase(toBase(v)), "kb"] as const;
       const conversionCandidate = [v, "Kib"] as const;
 
       expect(information["kb"](conversionCandidate)).toEqual(expected);
@@ -1180,11 +1180,11 @@ describe("information", () => {
       const kilobytesConversion = linearConversion(8192);
 
       const [toBase, fromBase] = [
+        kilobitsConversion[1],
         kilobytesConversion[0],
-        kilobitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "kb"] as const;
+      const expected = [fromBase(toBase(v)), "kb"] as const;
       const conversionCandidate = [v, "KB"] as const;
 
       expect(information["kb"](conversionCandidate)).toEqual(expected);
@@ -1196,11 +1196,11 @@ describe("information", () => {
       const mebibitsConversion = linearConversion(102400);
 
       const [toBase, fromBase] = [
+        kilobitsConversion[1],
         mebibitsConversion[0],
-        kilobitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "kb"] as const;
+      const expected = [fromBase(toBase(v)), "kb"] as const;
       const conversionCandidate = [v, "Mib"] as const;
 
       expect(information["kb"](conversionCandidate)).toEqual(expected);
@@ -1212,11 +1212,11 @@ describe("information", () => {
       const megabytesConversion = linearConversion(819200);
 
       const [toBase, fromBase] = [
+        kilobitsConversion[1],
         megabytesConversion[0],
-        kilobitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "kb"] as const;
+      const expected = [fromBase(toBase(v)), "kb"] as const;
       const conversionCandidate = [v, "MB"] as const;
 
       expect(information["kb"](conversionCandidate)).toEqual(expected);
@@ -1228,11 +1228,11 @@ describe("information", () => {
       const gibibitsConversion = linearConversion(1024000);
 
       const [toBase, fromBase] = [
+        kilobitsConversion[1],
         gibibitsConversion[0],
-        kilobitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "kb"] as const;
+      const expected = [fromBase(toBase(v)), "kb"] as const;
       const conversionCandidate = [v, "Gib"] as const;
 
       expect(information["kb"](conversionCandidate)).toEqual(expected);
@@ -1244,11 +1244,11 @@ describe("information", () => {
       const gigabytesConversion = linearConversion(8192000);
 
       const [toBase, fromBase] = [
+        kilobitsConversion[1],
         gigabytesConversion[0],
-        kilobitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "kb"] as const;
+      const expected = [fromBase(toBase(v)), "kb"] as const;
       const conversionCandidate = [v, "GB"] as const;
 
       expect(information["kb"](conversionCandidate)).toEqual(expected);
@@ -1260,11 +1260,11 @@ describe("information", () => {
       const tebibitsConversion = linearConversion(10240000);
 
       const [toBase, fromBase] = [
+        kilobitsConversion[1],
         tebibitsConversion[0],
-        kilobitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "kb"] as const;
+      const expected = [fromBase(toBase(v)), "kb"] as const;
       const conversionCandidate = [v, "Tib"] as const;
 
       expect(information["kb"](conversionCandidate)).toEqual(expected);
@@ -1276,11 +1276,11 @@ describe("information", () => {
       const terabytesConversion = linearConversion(81920000);
 
       const [toBase, fromBase] = [
+        kilobitsConversion[1],
         terabytesConversion[0],
-        kilobitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "kb"] as const;
+      const expected = [fromBase(toBase(v)), "kb"] as const;
       const conversionCandidate = [v, "TB"] as const;
 
       expect(information["kb"](conversionCandidate)).toEqual(expected);
@@ -1292,11 +1292,11 @@ describe("information", () => {
       const pebibitsConversion = linearConversion(102400000);
 
       const [toBase, fromBase] = [
+        kilobitsConversion[1],
         pebibitsConversion[0],
-        kilobitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "kb"] as const;
+      const expected = [fromBase(toBase(v)), "kb"] as const;
       const conversionCandidate = [v, "Pib"] as const;
 
       expect(information["kb"](conversionCandidate)).toEqual(expected);
@@ -1308,11 +1308,11 @@ describe("information", () => {
       const petabytesConversion = linearConversion(819200000);
 
       const [toBase, fromBase] = [
+        kilobitsConversion[1],
         petabytesConversion[0],
-        kilobitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "kb"] as const;
+      const expected = [fromBase(toBase(v)), "kb"] as const;
       const conversionCandidate = [v, "PB"] as const;
 
       expect(information["kb"](conversionCandidate)).toEqual(expected);
@@ -1324,11 +1324,11 @@ describe("information", () => {
       const exbibitsConversion = linearConversion(1024000000);
 
       const [toBase, fromBase] = [
+        kilobitsConversion[1],
         exbibitsConversion[0],
-        kilobitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "kb"] as const;
+      const expected = [fromBase(toBase(v)), "kb"] as const;
       const conversionCandidate = [v, "Eib"] as const;
 
       expect(information["kb"](conversionCandidate)).toEqual(expected);
@@ -1340,11 +1340,11 @@ describe("information", () => {
       const exabytesConversion = linearConversion(8192000000);
 
       const [toBase, fromBase] = [
+        kilobitsConversion[1],
         exabytesConversion[0],
-        kilobitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "kb"] as const;
+      const expected = [fromBase(toBase(v)), "kb"] as const;
       const conversionCandidate = [v, "EB"] as const;
 
       expect(information["kb"](conversionCandidate)).toEqual(expected);
@@ -1356,11 +1356,11 @@ describe("information", () => {
       const zebibitsConversion = linearConversion(10240000000);
 
       const [toBase, fromBase] = [
+        kilobitsConversion[1],
         zebibitsConversion[0],
-        kilobitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "kb"] as const;
+      const expected = [fromBase(toBase(v)), "kb"] as const;
       const conversionCandidate = [v, "Zib"] as const;
 
       expect(information["kb"](conversionCandidate)).toEqual(expected);
@@ -1372,11 +1372,11 @@ describe("information", () => {
       const zettabytesConversion = linearConversion(81920000000);
 
       const [toBase, fromBase] = [
+        kilobitsConversion[1],
         zettabytesConversion[0],
-        kilobitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "kb"] as const;
+      const expected = [fromBase(toBase(v)), "kb"] as const;
       const conversionCandidate = [v, "ZB"] as const;
 
       expect(information["kb"](conversionCandidate)).toEqual(expected);
@@ -1388,11 +1388,11 @@ describe("information", () => {
       const yobibitsConversion = linearConversion(102400000000);
 
       const [toBase, fromBase] = [
+        kilobitsConversion[1],
         yobibitsConversion[0],
-        kilobitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "kb"] as const;
+      const expected = [fromBase(toBase(v)), "kb"] as const;
       const conversionCandidate = [v, "Yib"] as const;
 
       expect(information["kb"](conversionCandidate)).toEqual(expected);
@@ -1404,11 +1404,11 @@ describe("information", () => {
       const yottabytesConversion = linearConversion(819200000000);
 
       const [toBase, fromBase] = [
+        kilobitsConversion[1],
         yottabytesConversion[0],
-        kilobitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "kb"] as const;
+      const expected = [fromBase(toBase(v)), "kb"] as const;
       const conversionCandidate = [v, "YB"] as const;
 
       expect(information["kb"](conversionCandidate)).toEqual(expected);
@@ -1428,11 +1428,11 @@ describe("information", () => {
       const bitsConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
+        megabitsConversion[1],
         bitsConversion[0],
-        megabitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Mb"] as const;
+      const expected = [fromBase(toBase(v)), "Mb"] as const;
       const conversionCandidate = [v, "b"] as const;
 
       expect(information["Mb"](conversionCandidate)).toEqual(expected);
@@ -1444,11 +1444,11 @@ describe("information", () => {
       const bytesConversion = linearConversion(8);
 
       const [toBase, fromBase] = [
+        megabitsConversion[1],
         bytesConversion[0],
-        megabitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Mb"] as const;
+      const expected = [fromBase(toBase(v)), "Mb"] as const;
       const conversionCandidate = [v, "B"] as const;
 
       expect(information["Mb"](conversionCandidate)).toEqual(expected);
@@ -1460,11 +1460,11 @@ describe("information", () => {
       const kilobitsConversion = linearConversion(1000);
 
       const [toBase, fromBase] = [
+        megabitsConversion[1],
         kilobitsConversion[0],
-        megabitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Mb"] as const;
+      const expected = [fromBase(toBase(v)), "Mb"] as const;
       const conversionCandidate = [v, "kb"] as const;
 
       expect(information["Mb"](conversionCandidate)).toEqual(expected);
@@ -1478,11 +1478,11 @@ describe("information", () => {
       const gigabitsConversion = linearConversion(1000000);
 
       const [toBase, fromBase] = [
+        megabitsConversion[1],
         gigabitsConversion[0],
-        megabitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Mb"] as const;
+      const expected = [fromBase(toBase(v)), "Mb"] as const;
       const conversionCandidate = [v, "Gb"] as const;
 
       expect(information["Mb"](conversionCandidate)).toEqual(expected);
@@ -1494,11 +1494,11 @@ describe("information", () => {
       const terabitsConversion = linearConversion(10000000);
 
       const [toBase, fromBase] = [
+        megabitsConversion[1],
         terabitsConversion[0],
-        megabitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Mb"] as const;
+      const expected = [fromBase(toBase(v)), "Mb"] as const;
       const conversionCandidate = [v, "Tb"] as const;
 
       expect(information["Mb"](conversionCandidate)).toEqual(expected);
@@ -1510,11 +1510,11 @@ describe("information", () => {
       const petabitsConversion = linearConversion(100000000);
 
       const [toBase, fromBase] = [
+        megabitsConversion[1],
         petabitsConversion[0],
-        megabitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Mb"] as const;
+      const expected = [fromBase(toBase(v)), "Mb"] as const;
       const conversionCandidate = [v, "Pb"] as const;
 
       expect(information["Mb"](conversionCandidate)).toEqual(expected);
@@ -1526,11 +1526,11 @@ describe("information", () => {
       const exabitsConversion = linearConversion(1000000000);
 
       const [toBase, fromBase] = [
+        megabitsConversion[1],
         exabitsConversion[0],
-        megabitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Mb"] as const;
+      const expected = [fromBase(toBase(v)), "Mb"] as const;
       const conversionCandidate = [v, "Eb"] as const;
 
       expect(information["Mb"](conversionCandidate)).toEqual(expected);
@@ -1542,11 +1542,11 @@ describe("information", () => {
       const zettabitsConversion = linearConversion(10000000000);
 
       const [toBase, fromBase] = [
+        megabitsConversion[1],
         zettabitsConversion[0],
-        megabitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Mb"] as const;
+      const expected = [fromBase(toBase(v)), "Mb"] as const;
       const conversionCandidate = [v, "Zb"] as const;
 
       expect(information["Mb"](conversionCandidate)).toEqual(expected);
@@ -1558,11 +1558,11 @@ describe("information", () => {
       const yottabitsConversion = linearConversion(100000000000);
 
       const [toBase, fromBase] = [
+        megabitsConversion[1],
         yottabitsConversion[0],
-        megabitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Mb"] as const;
+      const expected = [fromBase(toBase(v)), "Mb"] as const;
       const conversionCandidate = [v, "Yb"] as const;
 
       expect(information["Mb"](conversionCandidate)).toEqual(expected);
@@ -1574,11 +1574,11 @@ describe("information", () => {
       const kibibitsConversion = linearConversion(1024);
 
       const [toBase, fromBase] = [
+        megabitsConversion[1],
         kibibitsConversion[0],
-        megabitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Mb"] as const;
+      const expected = [fromBase(toBase(v)), "Mb"] as const;
       const conversionCandidate = [v, "Kib"] as const;
 
       expect(information["Mb"](conversionCandidate)).toEqual(expected);
@@ -1590,11 +1590,11 @@ describe("information", () => {
       const kilobytesConversion = linearConversion(8192);
 
       const [toBase, fromBase] = [
+        megabitsConversion[1],
         kilobytesConversion[0],
-        megabitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Mb"] as const;
+      const expected = [fromBase(toBase(v)), "Mb"] as const;
       const conversionCandidate = [v, "KB"] as const;
 
       expect(information["Mb"](conversionCandidate)).toEqual(expected);
@@ -1606,11 +1606,11 @@ describe("information", () => {
       const mebibitsConversion = linearConversion(102400);
 
       const [toBase, fromBase] = [
+        megabitsConversion[1],
         mebibitsConversion[0],
-        megabitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Mb"] as const;
+      const expected = [fromBase(toBase(v)), "Mb"] as const;
       const conversionCandidate = [v, "Mib"] as const;
 
       expect(information["Mb"](conversionCandidate)).toEqual(expected);
@@ -1622,11 +1622,11 @@ describe("information", () => {
       const megabytesConversion = linearConversion(819200);
 
       const [toBase, fromBase] = [
+        megabitsConversion[1],
         megabytesConversion[0],
-        megabitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Mb"] as const;
+      const expected = [fromBase(toBase(v)), "Mb"] as const;
       const conversionCandidate = [v, "MB"] as const;
 
       expect(information["Mb"](conversionCandidate)).toEqual(expected);
@@ -1638,11 +1638,11 @@ describe("information", () => {
       const gibibitsConversion = linearConversion(1024000);
 
       const [toBase, fromBase] = [
+        megabitsConversion[1],
         gibibitsConversion[0],
-        megabitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Mb"] as const;
+      const expected = [fromBase(toBase(v)), "Mb"] as const;
       const conversionCandidate = [v, "Gib"] as const;
 
       expect(information["Mb"](conversionCandidate)).toEqual(expected);
@@ -1654,11 +1654,11 @@ describe("information", () => {
       const gigabytesConversion = linearConversion(8192000);
 
       const [toBase, fromBase] = [
+        megabitsConversion[1],
         gigabytesConversion[0],
-        megabitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Mb"] as const;
+      const expected = [fromBase(toBase(v)), "Mb"] as const;
       const conversionCandidate = [v, "GB"] as const;
 
       expect(information["Mb"](conversionCandidate)).toEqual(expected);
@@ -1670,11 +1670,11 @@ describe("information", () => {
       const tebibitsConversion = linearConversion(10240000);
 
       const [toBase, fromBase] = [
+        megabitsConversion[1],
         tebibitsConversion[0],
-        megabitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Mb"] as const;
+      const expected = [fromBase(toBase(v)), "Mb"] as const;
       const conversionCandidate = [v, "Tib"] as const;
 
       expect(information["Mb"](conversionCandidate)).toEqual(expected);
@@ -1686,11 +1686,11 @@ describe("information", () => {
       const terabytesConversion = linearConversion(81920000);
 
       const [toBase, fromBase] = [
+        megabitsConversion[1],
         terabytesConversion[0],
-        megabitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Mb"] as const;
+      const expected = [fromBase(toBase(v)), "Mb"] as const;
       const conversionCandidate = [v, "TB"] as const;
 
       expect(information["Mb"](conversionCandidate)).toEqual(expected);
@@ -1702,11 +1702,11 @@ describe("information", () => {
       const pebibitsConversion = linearConversion(102400000);
 
       const [toBase, fromBase] = [
+        megabitsConversion[1],
         pebibitsConversion[0],
-        megabitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Mb"] as const;
+      const expected = [fromBase(toBase(v)), "Mb"] as const;
       const conversionCandidate = [v, "Pib"] as const;
 
       expect(information["Mb"](conversionCandidate)).toEqual(expected);
@@ -1718,11 +1718,11 @@ describe("information", () => {
       const petabytesConversion = linearConversion(819200000);
 
       const [toBase, fromBase] = [
+        megabitsConversion[1],
         petabytesConversion[0],
-        megabitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Mb"] as const;
+      const expected = [fromBase(toBase(v)), "Mb"] as const;
       const conversionCandidate = [v, "PB"] as const;
 
       expect(information["Mb"](conversionCandidate)).toEqual(expected);
@@ -1734,11 +1734,11 @@ describe("information", () => {
       const exbibitsConversion = linearConversion(1024000000);
 
       const [toBase, fromBase] = [
+        megabitsConversion[1],
         exbibitsConversion[0],
-        megabitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Mb"] as const;
+      const expected = [fromBase(toBase(v)), "Mb"] as const;
       const conversionCandidate = [v, "Eib"] as const;
 
       expect(information["Mb"](conversionCandidate)).toEqual(expected);
@@ -1750,11 +1750,11 @@ describe("information", () => {
       const exabytesConversion = linearConversion(8192000000);
 
       const [toBase, fromBase] = [
+        megabitsConversion[1],
         exabytesConversion[0],
-        megabitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Mb"] as const;
+      const expected = [fromBase(toBase(v)), "Mb"] as const;
       const conversionCandidate = [v, "EB"] as const;
 
       expect(information["Mb"](conversionCandidate)).toEqual(expected);
@@ -1766,11 +1766,11 @@ describe("information", () => {
       const zebibitsConversion = linearConversion(10240000000);
 
       const [toBase, fromBase] = [
+        megabitsConversion[1],
         zebibitsConversion[0],
-        megabitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Mb"] as const;
+      const expected = [fromBase(toBase(v)), "Mb"] as const;
       const conversionCandidate = [v, "Zib"] as const;
 
       expect(information["Mb"](conversionCandidate)).toEqual(expected);
@@ -1782,11 +1782,11 @@ describe("information", () => {
       const zettabytesConversion = linearConversion(81920000000);
 
       const [toBase, fromBase] = [
+        megabitsConversion[1],
         zettabytesConversion[0],
-        megabitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Mb"] as const;
+      const expected = [fromBase(toBase(v)), "Mb"] as const;
       const conversionCandidate = [v, "ZB"] as const;
 
       expect(information["Mb"](conversionCandidate)).toEqual(expected);
@@ -1798,11 +1798,11 @@ describe("information", () => {
       const yobibitsConversion = linearConversion(102400000000);
 
       const [toBase, fromBase] = [
+        megabitsConversion[1],
         yobibitsConversion[0],
-        megabitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Mb"] as const;
+      const expected = [fromBase(toBase(v)), "Mb"] as const;
       const conversionCandidate = [v, "Yib"] as const;
 
       expect(information["Mb"](conversionCandidate)).toEqual(expected);
@@ -1814,11 +1814,11 @@ describe("information", () => {
       const yottabytesConversion = linearConversion(819200000000);
 
       const [toBase, fromBase] = [
+        megabitsConversion[1],
         yottabytesConversion[0],
-        megabitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Mb"] as const;
+      const expected = [fromBase(toBase(v)), "Mb"] as const;
       const conversionCandidate = [v, "YB"] as const;
 
       expect(information["Mb"](conversionCandidate)).toEqual(expected);
@@ -1838,11 +1838,11 @@ describe("information", () => {
       const bitsConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
+        gigabitsConversion[1],
         bitsConversion[0],
-        gigabitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Gb"] as const;
+      const expected = [fromBase(toBase(v)), "Gb"] as const;
       const conversionCandidate = [v, "b"] as const;
 
       expect(information["Gb"](conversionCandidate)).toEqual(expected);
@@ -1854,11 +1854,11 @@ describe("information", () => {
       const bytesConversion = linearConversion(8);
 
       const [toBase, fromBase] = [
+        gigabitsConversion[1],
         bytesConversion[0],
-        gigabitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Gb"] as const;
+      const expected = [fromBase(toBase(v)), "Gb"] as const;
       const conversionCandidate = [v, "B"] as const;
 
       expect(information["Gb"](conversionCandidate)).toEqual(expected);
@@ -1870,11 +1870,11 @@ describe("information", () => {
       const kilobitsConversion = linearConversion(1000);
 
       const [toBase, fromBase] = [
+        gigabitsConversion[1],
         kilobitsConversion[0],
-        gigabitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Gb"] as const;
+      const expected = [fromBase(toBase(v)), "Gb"] as const;
       const conversionCandidate = [v, "kb"] as const;
 
       expect(information["Gb"](conversionCandidate)).toEqual(expected);
@@ -1886,11 +1886,11 @@ describe("information", () => {
       const megabitsConversion = linearConversion(100000);
 
       const [toBase, fromBase] = [
+        gigabitsConversion[1],
         megabitsConversion[0],
-        gigabitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Gb"] as const;
+      const expected = [fromBase(toBase(v)), "Gb"] as const;
       const conversionCandidate = [v, "Mb"] as const;
 
       expect(information["Gb"](conversionCandidate)).toEqual(expected);
@@ -1904,11 +1904,11 @@ describe("information", () => {
       const terabitsConversion = linearConversion(10000000);
 
       const [toBase, fromBase] = [
+        gigabitsConversion[1],
         terabitsConversion[0],
-        gigabitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Gb"] as const;
+      const expected = [fromBase(toBase(v)), "Gb"] as const;
       const conversionCandidate = [v, "Tb"] as const;
 
       expect(information["Gb"](conversionCandidate)).toEqual(expected);
@@ -1920,11 +1920,11 @@ describe("information", () => {
       const petabitsConversion = linearConversion(100000000);
 
       const [toBase, fromBase] = [
+        gigabitsConversion[1],
         petabitsConversion[0],
-        gigabitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Gb"] as const;
+      const expected = [fromBase(toBase(v)), "Gb"] as const;
       const conversionCandidate = [v, "Pb"] as const;
 
       expect(information["Gb"](conversionCandidate)).toEqual(expected);
@@ -1936,11 +1936,11 @@ describe("information", () => {
       const exabitsConversion = linearConversion(1000000000);
 
       const [toBase, fromBase] = [
+        gigabitsConversion[1],
         exabitsConversion[0],
-        gigabitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Gb"] as const;
+      const expected = [fromBase(toBase(v)), "Gb"] as const;
       const conversionCandidate = [v, "Eb"] as const;
 
       expect(information["Gb"](conversionCandidate)).toEqual(expected);
@@ -1952,11 +1952,11 @@ describe("information", () => {
       const zettabitsConversion = linearConversion(10000000000);
 
       const [toBase, fromBase] = [
+        gigabitsConversion[1],
         zettabitsConversion[0],
-        gigabitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Gb"] as const;
+      const expected = [fromBase(toBase(v)), "Gb"] as const;
       const conversionCandidate = [v, "Zb"] as const;
 
       expect(information["Gb"](conversionCandidate)).toEqual(expected);
@@ -1968,11 +1968,11 @@ describe("information", () => {
       const yottabitsConversion = linearConversion(100000000000);
 
       const [toBase, fromBase] = [
+        gigabitsConversion[1],
         yottabitsConversion[0],
-        gigabitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Gb"] as const;
+      const expected = [fromBase(toBase(v)), "Gb"] as const;
       const conversionCandidate = [v, "Yb"] as const;
 
       expect(information["Gb"](conversionCandidate)).toEqual(expected);
@@ -1984,11 +1984,11 @@ describe("information", () => {
       const kibibitsConversion = linearConversion(1024);
 
       const [toBase, fromBase] = [
+        gigabitsConversion[1],
         kibibitsConversion[0],
-        gigabitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Gb"] as const;
+      const expected = [fromBase(toBase(v)), "Gb"] as const;
       const conversionCandidate = [v, "Kib"] as const;
 
       expect(information["Gb"](conversionCandidate)).toEqual(expected);
@@ -2000,11 +2000,11 @@ describe("information", () => {
       const kilobytesConversion = linearConversion(8192);
 
       const [toBase, fromBase] = [
+        gigabitsConversion[1],
         kilobytesConversion[0],
-        gigabitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Gb"] as const;
+      const expected = [fromBase(toBase(v)), "Gb"] as const;
       const conversionCandidate = [v, "KB"] as const;
 
       expect(information["Gb"](conversionCandidate)).toEqual(expected);
@@ -2016,11 +2016,11 @@ describe("information", () => {
       const mebibitsConversion = linearConversion(102400);
 
       const [toBase, fromBase] = [
+        gigabitsConversion[1],
         mebibitsConversion[0],
-        gigabitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Gb"] as const;
+      const expected = [fromBase(toBase(v)), "Gb"] as const;
       const conversionCandidate = [v, "Mib"] as const;
 
       expect(information["Gb"](conversionCandidate)).toEqual(expected);
@@ -2032,11 +2032,11 @@ describe("information", () => {
       const megabytesConversion = linearConversion(819200);
 
       const [toBase, fromBase] = [
+        gigabitsConversion[1],
         megabytesConversion[0],
-        gigabitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Gb"] as const;
+      const expected = [fromBase(toBase(v)), "Gb"] as const;
       const conversionCandidate = [v, "MB"] as const;
 
       expect(information["Gb"](conversionCandidate)).toEqual(expected);
@@ -2048,11 +2048,11 @@ describe("information", () => {
       const gibibitsConversion = linearConversion(1024000);
 
       const [toBase, fromBase] = [
+        gigabitsConversion[1],
         gibibitsConversion[0],
-        gigabitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Gb"] as const;
+      const expected = [fromBase(toBase(v)), "Gb"] as const;
       const conversionCandidate = [v, "Gib"] as const;
 
       expect(information["Gb"](conversionCandidate)).toEqual(expected);
@@ -2064,11 +2064,11 @@ describe("information", () => {
       const gigabytesConversion = linearConversion(8192000);
 
       const [toBase, fromBase] = [
+        gigabitsConversion[1],
         gigabytesConversion[0],
-        gigabitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Gb"] as const;
+      const expected = [fromBase(toBase(v)), "Gb"] as const;
       const conversionCandidate = [v, "GB"] as const;
 
       expect(information["Gb"](conversionCandidate)).toEqual(expected);
@@ -2080,11 +2080,11 @@ describe("information", () => {
       const tebibitsConversion = linearConversion(10240000);
 
       const [toBase, fromBase] = [
+        gigabitsConversion[1],
         tebibitsConversion[0],
-        gigabitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Gb"] as const;
+      const expected = [fromBase(toBase(v)), "Gb"] as const;
       const conversionCandidate = [v, "Tib"] as const;
 
       expect(information["Gb"](conversionCandidate)).toEqual(expected);
@@ -2096,11 +2096,11 @@ describe("information", () => {
       const terabytesConversion = linearConversion(81920000);
 
       const [toBase, fromBase] = [
+        gigabitsConversion[1],
         terabytesConversion[0],
-        gigabitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Gb"] as const;
+      const expected = [fromBase(toBase(v)), "Gb"] as const;
       const conversionCandidate = [v, "TB"] as const;
 
       expect(information["Gb"](conversionCandidate)).toEqual(expected);
@@ -2112,11 +2112,11 @@ describe("information", () => {
       const pebibitsConversion = linearConversion(102400000);
 
       const [toBase, fromBase] = [
+        gigabitsConversion[1],
         pebibitsConversion[0],
-        gigabitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Gb"] as const;
+      const expected = [fromBase(toBase(v)), "Gb"] as const;
       const conversionCandidate = [v, "Pib"] as const;
 
       expect(information["Gb"](conversionCandidate)).toEqual(expected);
@@ -2128,11 +2128,11 @@ describe("information", () => {
       const petabytesConversion = linearConversion(819200000);
 
       const [toBase, fromBase] = [
+        gigabitsConversion[1],
         petabytesConversion[0],
-        gigabitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Gb"] as const;
+      const expected = [fromBase(toBase(v)), "Gb"] as const;
       const conversionCandidate = [v, "PB"] as const;
 
       expect(information["Gb"](conversionCandidate)).toEqual(expected);
@@ -2144,11 +2144,11 @@ describe("information", () => {
       const exbibitsConversion = linearConversion(1024000000);
 
       const [toBase, fromBase] = [
+        gigabitsConversion[1],
         exbibitsConversion[0],
-        gigabitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Gb"] as const;
+      const expected = [fromBase(toBase(v)), "Gb"] as const;
       const conversionCandidate = [v, "Eib"] as const;
 
       expect(information["Gb"](conversionCandidate)).toEqual(expected);
@@ -2160,11 +2160,11 @@ describe("information", () => {
       const exabytesConversion = linearConversion(8192000000);
 
       const [toBase, fromBase] = [
+        gigabitsConversion[1],
         exabytesConversion[0],
-        gigabitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Gb"] as const;
+      const expected = [fromBase(toBase(v)), "Gb"] as const;
       const conversionCandidate = [v, "EB"] as const;
 
       expect(information["Gb"](conversionCandidate)).toEqual(expected);
@@ -2176,11 +2176,11 @@ describe("information", () => {
       const zebibitsConversion = linearConversion(10240000000);
 
       const [toBase, fromBase] = [
+        gigabitsConversion[1],
         zebibitsConversion[0],
-        gigabitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Gb"] as const;
+      const expected = [fromBase(toBase(v)), "Gb"] as const;
       const conversionCandidate = [v, "Zib"] as const;
 
       expect(information["Gb"](conversionCandidate)).toEqual(expected);
@@ -2192,11 +2192,11 @@ describe("information", () => {
       const zettabytesConversion = linearConversion(81920000000);
 
       const [toBase, fromBase] = [
+        gigabitsConversion[1],
         zettabytesConversion[0],
-        gigabitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Gb"] as const;
+      const expected = [fromBase(toBase(v)), "Gb"] as const;
       const conversionCandidate = [v, "ZB"] as const;
 
       expect(information["Gb"](conversionCandidate)).toEqual(expected);
@@ -2208,11 +2208,11 @@ describe("information", () => {
       const yobibitsConversion = linearConversion(102400000000);
 
       const [toBase, fromBase] = [
+        gigabitsConversion[1],
         yobibitsConversion[0],
-        gigabitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Gb"] as const;
+      const expected = [fromBase(toBase(v)), "Gb"] as const;
       const conversionCandidate = [v, "Yib"] as const;
 
       expect(information["Gb"](conversionCandidate)).toEqual(expected);
@@ -2224,11 +2224,11 @@ describe("information", () => {
       const yottabytesConversion = linearConversion(819200000000);
 
       const [toBase, fromBase] = [
+        gigabitsConversion[1],
         yottabytesConversion[0],
-        gigabitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Gb"] as const;
+      const expected = [fromBase(toBase(v)), "Gb"] as const;
       const conversionCandidate = [v, "YB"] as const;
 
       expect(information["Gb"](conversionCandidate)).toEqual(expected);
@@ -2248,11 +2248,11 @@ describe("information", () => {
       const bitsConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
+        terabitsConversion[1],
         bitsConversion[0],
-        terabitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Tb"] as const;
+      const expected = [fromBase(toBase(v)), "Tb"] as const;
       const conversionCandidate = [v, "b"] as const;
 
       expect(information["Tb"](conversionCandidate)).toEqual(expected);
@@ -2264,11 +2264,11 @@ describe("information", () => {
       const bytesConversion = linearConversion(8);
 
       const [toBase, fromBase] = [
+        terabitsConversion[1],
         bytesConversion[0],
-        terabitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Tb"] as const;
+      const expected = [fromBase(toBase(v)), "Tb"] as const;
       const conversionCandidate = [v, "B"] as const;
 
       expect(information["Tb"](conversionCandidate)).toEqual(expected);
@@ -2280,11 +2280,11 @@ describe("information", () => {
       const kilobitsConversion = linearConversion(1000);
 
       const [toBase, fromBase] = [
+        terabitsConversion[1],
         kilobitsConversion[0],
-        terabitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Tb"] as const;
+      const expected = [fromBase(toBase(v)), "Tb"] as const;
       const conversionCandidate = [v, "kb"] as const;
 
       expect(information["Tb"](conversionCandidate)).toEqual(expected);
@@ -2296,11 +2296,11 @@ describe("information", () => {
       const megabitsConversion = linearConversion(100000);
 
       const [toBase, fromBase] = [
+        terabitsConversion[1],
         megabitsConversion[0],
-        terabitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Tb"] as const;
+      const expected = [fromBase(toBase(v)), "Tb"] as const;
       const conversionCandidate = [v, "Mb"] as const;
 
       expect(information["Tb"](conversionCandidate)).toEqual(expected);
@@ -2312,11 +2312,11 @@ describe("information", () => {
       const gigabitsConversion = linearConversion(1000000);
 
       const [toBase, fromBase] = [
+        terabitsConversion[1],
         gigabitsConversion[0],
-        terabitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Tb"] as const;
+      const expected = [fromBase(toBase(v)), "Tb"] as const;
       const conversionCandidate = [v, "Gb"] as const;
 
       expect(information["Tb"](conversionCandidate)).toEqual(expected);
@@ -2330,11 +2330,11 @@ describe("information", () => {
       const petabitsConversion = linearConversion(100000000);
 
       const [toBase, fromBase] = [
+        terabitsConversion[1],
         petabitsConversion[0],
-        terabitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Tb"] as const;
+      const expected = [fromBase(toBase(v)), "Tb"] as const;
       const conversionCandidate = [v, "Pb"] as const;
 
       expect(information["Tb"](conversionCandidate)).toEqual(expected);
@@ -2346,11 +2346,11 @@ describe("information", () => {
       const exabitsConversion = linearConversion(1000000000);
 
       const [toBase, fromBase] = [
+        terabitsConversion[1],
         exabitsConversion[0],
-        terabitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Tb"] as const;
+      const expected = [fromBase(toBase(v)), "Tb"] as const;
       const conversionCandidate = [v, "Eb"] as const;
 
       expect(information["Tb"](conversionCandidate)).toEqual(expected);
@@ -2362,11 +2362,11 @@ describe("information", () => {
       const zettabitsConversion = linearConversion(10000000000);
 
       const [toBase, fromBase] = [
+        terabitsConversion[1],
         zettabitsConversion[0],
-        terabitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Tb"] as const;
+      const expected = [fromBase(toBase(v)), "Tb"] as const;
       const conversionCandidate = [v, "Zb"] as const;
 
       expect(information["Tb"](conversionCandidate)).toEqual(expected);
@@ -2378,11 +2378,11 @@ describe("information", () => {
       const yottabitsConversion = linearConversion(100000000000);
 
       const [toBase, fromBase] = [
+        terabitsConversion[1],
         yottabitsConversion[0],
-        terabitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Tb"] as const;
+      const expected = [fromBase(toBase(v)), "Tb"] as const;
       const conversionCandidate = [v, "Yb"] as const;
 
       expect(information["Tb"](conversionCandidate)).toEqual(expected);
@@ -2394,11 +2394,11 @@ describe("information", () => {
       const kibibitsConversion = linearConversion(1024);
 
       const [toBase, fromBase] = [
+        terabitsConversion[1],
         kibibitsConversion[0],
-        terabitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Tb"] as const;
+      const expected = [fromBase(toBase(v)), "Tb"] as const;
       const conversionCandidate = [v, "Kib"] as const;
 
       expect(information["Tb"](conversionCandidate)).toEqual(expected);
@@ -2410,11 +2410,11 @@ describe("information", () => {
       const kilobytesConversion = linearConversion(8192);
 
       const [toBase, fromBase] = [
+        terabitsConversion[1],
         kilobytesConversion[0],
-        terabitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Tb"] as const;
+      const expected = [fromBase(toBase(v)), "Tb"] as const;
       const conversionCandidate = [v, "KB"] as const;
 
       expect(information["Tb"](conversionCandidate)).toEqual(expected);
@@ -2426,11 +2426,11 @@ describe("information", () => {
       const mebibitsConversion = linearConversion(102400);
 
       const [toBase, fromBase] = [
+        terabitsConversion[1],
         mebibitsConversion[0],
-        terabitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Tb"] as const;
+      const expected = [fromBase(toBase(v)), "Tb"] as const;
       const conversionCandidate = [v, "Mib"] as const;
 
       expect(information["Tb"](conversionCandidate)).toEqual(expected);
@@ -2442,11 +2442,11 @@ describe("information", () => {
       const megabytesConversion = linearConversion(819200);
 
       const [toBase, fromBase] = [
+        terabitsConversion[1],
         megabytesConversion[0],
-        terabitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Tb"] as const;
+      const expected = [fromBase(toBase(v)), "Tb"] as const;
       const conversionCandidate = [v, "MB"] as const;
 
       expect(information["Tb"](conversionCandidate)).toEqual(expected);
@@ -2458,11 +2458,11 @@ describe("information", () => {
       const gibibitsConversion = linearConversion(1024000);
 
       const [toBase, fromBase] = [
+        terabitsConversion[1],
         gibibitsConversion[0],
-        terabitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Tb"] as const;
+      const expected = [fromBase(toBase(v)), "Tb"] as const;
       const conversionCandidate = [v, "Gib"] as const;
 
       expect(information["Tb"](conversionCandidate)).toEqual(expected);
@@ -2474,11 +2474,11 @@ describe("information", () => {
       const gigabytesConversion = linearConversion(8192000);
 
       const [toBase, fromBase] = [
+        terabitsConversion[1],
         gigabytesConversion[0],
-        terabitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Tb"] as const;
+      const expected = [fromBase(toBase(v)), "Tb"] as const;
       const conversionCandidate = [v, "GB"] as const;
 
       expect(information["Tb"](conversionCandidate)).toEqual(expected);
@@ -2490,11 +2490,11 @@ describe("information", () => {
       const tebibitsConversion = linearConversion(10240000);
 
       const [toBase, fromBase] = [
+        terabitsConversion[1],
         tebibitsConversion[0],
-        terabitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Tb"] as const;
+      const expected = [fromBase(toBase(v)), "Tb"] as const;
       const conversionCandidate = [v, "Tib"] as const;
 
       expect(information["Tb"](conversionCandidate)).toEqual(expected);
@@ -2506,11 +2506,11 @@ describe("information", () => {
       const terabytesConversion = linearConversion(81920000);
 
       const [toBase, fromBase] = [
+        terabitsConversion[1],
         terabytesConversion[0],
-        terabitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Tb"] as const;
+      const expected = [fromBase(toBase(v)), "Tb"] as const;
       const conversionCandidate = [v, "TB"] as const;
 
       expect(information["Tb"](conversionCandidate)).toEqual(expected);
@@ -2522,11 +2522,11 @@ describe("information", () => {
       const pebibitsConversion = linearConversion(102400000);
 
       const [toBase, fromBase] = [
+        terabitsConversion[1],
         pebibitsConversion[0],
-        terabitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Tb"] as const;
+      const expected = [fromBase(toBase(v)), "Tb"] as const;
       const conversionCandidate = [v, "Pib"] as const;
 
       expect(information["Tb"](conversionCandidate)).toEqual(expected);
@@ -2538,11 +2538,11 @@ describe("information", () => {
       const petabytesConversion = linearConversion(819200000);
 
       const [toBase, fromBase] = [
+        terabitsConversion[1],
         petabytesConversion[0],
-        terabitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Tb"] as const;
+      const expected = [fromBase(toBase(v)), "Tb"] as const;
       const conversionCandidate = [v, "PB"] as const;
 
       expect(information["Tb"](conversionCandidate)).toEqual(expected);
@@ -2554,11 +2554,11 @@ describe("information", () => {
       const exbibitsConversion = linearConversion(1024000000);
 
       const [toBase, fromBase] = [
+        terabitsConversion[1],
         exbibitsConversion[0],
-        terabitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Tb"] as const;
+      const expected = [fromBase(toBase(v)), "Tb"] as const;
       const conversionCandidate = [v, "Eib"] as const;
 
       expect(information["Tb"](conversionCandidate)).toEqual(expected);
@@ -2570,11 +2570,11 @@ describe("information", () => {
       const exabytesConversion = linearConversion(8192000000);
 
       const [toBase, fromBase] = [
+        terabitsConversion[1],
         exabytesConversion[0],
-        terabitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Tb"] as const;
+      const expected = [fromBase(toBase(v)), "Tb"] as const;
       const conversionCandidate = [v, "EB"] as const;
 
       expect(information["Tb"](conversionCandidate)).toEqual(expected);
@@ -2586,11 +2586,11 @@ describe("information", () => {
       const zebibitsConversion = linearConversion(10240000000);
 
       const [toBase, fromBase] = [
+        terabitsConversion[1],
         zebibitsConversion[0],
-        terabitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Tb"] as const;
+      const expected = [fromBase(toBase(v)), "Tb"] as const;
       const conversionCandidate = [v, "Zib"] as const;
 
       expect(information["Tb"](conversionCandidate)).toEqual(expected);
@@ -2602,11 +2602,11 @@ describe("information", () => {
       const zettabytesConversion = linearConversion(81920000000);
 
       const [toBase, fromBase] = [
+        terabitsConversion[1],
         zettabytesConversion[0],
-        terabitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Tb"] as const;
+      const expected = [fromBase(toBase(v)), "Tb"] as const;
       const conversionCandidate = [v, "ZB"] as const;
 
       expect(information["Tb"](conversionCandidate)).toEqual(expected);
@@ -2618,11 +2618,11 @@ describe("information", () => {
       const yobibitsConversion = linearConversion(102400000000);
 
       const [toBase, fromBase] = [
+        terabitsConversion[1],
         yobibitsConversion[0],
-        terabitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Tb"] as const;
+      const expected = [fromBase(toBase(v)), "Tb"] as const;
       const conversionCandidate = [v, "Yib"] as const;
 
       expect(information["Tb"](conversionCandidate)).toEqual(expected);
@@ -2634,11 +2634,11 @@ describe("information", () => {
       const yottabytesConversion = linearConversion(819200000000);
 
       const [toBase, fromBase] = [
+        terabitsConversion[1],
         yottabytesConversion[0],
-        terabitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Tb"] as const;
+      const expected = [fromBase(toBase(v)), "Tb"] as const;
       const conversionCandidate = [v, "YB"] as const;
 
       expect(information["Tb"](conversionCandidate)).toEqual(expected);
@@ -2658,11 +2658,11 @@ describe("information", () => {
       const bitsConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
+        petabitsConversion[1],
         bitsConversion[0],
-        petabitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Pb"] as const;
+      const expected = [fromBase(toBase(v)), "Pb"] as const;
       const conversionCandidate = [v, "b"] as const;
 
       expect(information["Pb"](conversionCandidate)).toEqual(expected);
@@ -2674,11 +2674,11 @@ describe("information", () => {
       const bytesConversion = linearConversion(8);
 
       const [toBase, fromBase] = [
+        petabitsConversion[1],
         bytesConversion[0],
-        petabitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Pb"] as const;
+      const expected = [fromBase(toBase(v)), "Pb"] as const;
       const conversionCandidate = [v, "B"] as const;
 
       expect(information["Pb"](conversionCandidate)).toEqual(expected);
@@ -2690,11 +2690,11 @@ describe("information", () => {
       const kilobitsConversion = linearConversion(1000);
 
       const [toBase, fromBase] = [
+        petabitsConversion[1],
         kilobitsConversion[0],
-        petabitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Pb"] as const;
+      const expected = [fromBase(toBase(v)), "Pb"] as const;
       const conversionCandidate = [v, "kb"] as const;
 
       expect(information["Pb"](conversionCandidate)).toEqual(expected);
@@ -2706,11 +2706,11 @@ describe("information", () => {
       const megabitsConversion = linearConversion(100000);
 
       const [toBase, fromBase] = [
+        petabitsConversion[1],
         megabitsConversion[0],
-        petabitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Pb"] as const;
+      const expected = [fromBase(toBase(v)), "Pb"] as const;
       const conversionCandidate = [v, "Mb"] as const;
 
       expect(information["Pb"](conversionCandidate)).toEqual(expected);
@@ -2722,11 +2722,11 @@ describe("information", () => {
       const gigabitsConversion = linearConversion(1000000);
 
       const [toBase, fromBase] = [
+        petabitsConversion[1],
         gigabitsConversion[0],
-        petabitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Pb"] as const;
+      const expected = [fromBase(toBase(v)), "Pb"] as const;
       const conversionCandidate = [v, "Gb"] as const;
 
       expect(information["Pb"](conversionCandidate)).toEqual(expected);
@@ -2738,11 +2738,11 @@ describe("information", () => {
       const terabitsConversion = linearConversion(10000000);
 
       const [toBase, fromBase] = [
+        petabitsConversion[1],
         terabitsConversion[0],
-        petabitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Pb"] as const;
+      const expected = [fromBase(toBase(v)), "Pb"] as const;
       const conversionCandidate = [v, "Tb"] as const;
 
       expect(information["Pb"](conversionCandidate)).toEqual(expected);
@@ -2756,11 +2756,11 @@ describe("information", () => {
       const exabitsConversion = linearConversion(1000000000);
 
       const [toBase, fromBase] = [
+        petabitsConversion[1],
         exabitsConversion[0],
-        petabitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Pb"] as const;
+      const expected = [fromBase(toBase(v)), "Pb"] as const;
       const conversionCandidate = [v, "Eb"] as const;
 
       expect(information["Pb"](conversionCandidate)).toEqual(expected);
@@ -2772,11 +2772,11 @@ describe("information", () => {
       const zettabitsConversion = linearConversion(10000000000);
 
       const [toBase, fromBase] = [
+        petabitsConversion[1],
         zettabitsConversion[0],
-        petabitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Pb"] as const;
+      const expected = [fromBase(toBase(v)), "Pb"] as const;
       const conversionCandidate = [v, "Zb"] as const;
 
       expect(information["Pb"](conversionCandidate)).toEqual(expected);
@@ -2788,11 +2788,11 @@ describe("information", () => {
       const yottabitsConversion = linearConversion(100000000000);
 
       const [toBase, fromBase] = [
+        petabitsConversion[1],
         yottabitsConversion[0],
-        petabitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Pb"] as const;
+      const expected = [fromBase(toBase(v)), "Pb"] as const;
       const conversionCandidate = [v, "Yb"] as const;
 
       expect(information["Pb"](conversionCandidate)).toEqual(expected);
@@ -2804,11 +2804,11 @@ describe("information", () => {
       const kibibitsConversion = linearConversion(1024);
 
       const [toBase, fromBase] = [
+        petabitsConversion[1],
         kibibitsConversion[0],
-        petabitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Pb"] as const;
+      const expected = [fromBase(toBase(v)), "Pb"] as const;
       const conversionCandidate = [v, "Kib"] as const;
 
       expect(information["Pb"](conversionCandidate)).toEqual(expected);
@@ -2820,11 +2820,11 @@ describe("information", () => {
       const kilobytesConversion = linearConversion(8192);
 
       const [toBase, fromBase] = [
+        petabitsConversion[1],
         kilobytesConversion[0],
-        petabitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Pb"] as const;
+      const expected = [fromBase(toBase(v)), "Pb"] as const;
       const conversionCandidate = [v, "KB"] as const;
 
       expect(information["Pb"](conversionCandidate)).toEqual(expected);
@@ -2836,11 +2836,11 @@ describe("information", () => {
       const mebibitsConversion = linearConversion(102400);
 
       const [toBase, fromBase] = [
+        petabitsConversion[1],
         mebibitsConversion[0],
-        petabitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Pb"] as const;
+      const expected = [fromBase(toBase(v)), "Pb"] as const;
       const conversionCandidate = [v, "Mib"] as const;
 
       expect(information["Pb"](conversionCandidate)).toEqual(expected);
@@ -2852,11 +2852,11 @@ describe("information", () => {
       const megabytesConversion = linearConversion(819200);
 
       const [toBase, fromBase] = [
+        petabitsConversion[1],
         megabytesConversion[0],
-        petabitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Pb"] as const;
+      const expected = [fromBase(toBase(v)), "Pb"] as const;
       const conversionCandidate = [v, "MB"] as const;
 
       expect(information["Pb"](conversionCandidate)).toEqual(expected);
@@ -2868,11 +2868,11 @@ describe("information", () => {
       const gibibitsConversion = linearConversion(1024000);
 
       const [toBase, fromBase] = [
+        petabitsConversion[1],
         gibibitsConversion[0],
-        petabitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Pb"] as const;
+      const expected = [fromBase(toBase(v)), "Pb"] as const;
       const conversionCandidate = [v, "Gib"] as const;
 
       expect(information["Pb"](conversionCandidate)).toEqual(expected);
@@ -2884,11 +2884,11 @@ describe("information", () => {
       const gigabytesConversion = linearConversion(8192000);
 
       const [toBase, fromBase] = [
+        petabitsConversion[1],
         gigabytesConversion[0],
-        petabitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Pb"] as const;
+      const expected = [fromBase(toBase(v)), "Pb"] as const;
       const conversionCandidate = [v, "GB"] as const;
 
       expect(information["Pb"](conversionCandidate)).toEqual(expected);
@@ -2900,11 +2900,11 @@ describe("information", () => {
       const tebibitsConversion = linearConversion(10240000);
 
       const [toBase, fromBase] = [
+        petabitsConversion[1],
         tebibitsConversion[0],
-        petabitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Pb"] as const;
+      const expected = [fromBase(toBase(v)), "Pb"] as const;
       const conversionCandidate = [v, "Tib"] as const;
 
       expect(information["Pb"](conversionCandidate)).toEqual(expected);
@@ -2916,11 +2916,11 @@ describe("information", () => {
       const terabytesConversion = linearConversion(81920000);
 
       const [toBase, fromBase] = [
+        petabitsConversion[1],
         terabytesConversion[0],
-        petabitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Pb"] as const;
+      const expected = [fromBase(toBase(v)), "Pb"] as const;
       const conversionCandidate = [v, "TB"] as const;
 
       expect(information["Pb"](conversionCandidate)).toEqual(expected);
@@ -2932,11 +2932,11 @@ describe("information", () => {
       const pebibitsConversion = linearConversion(102400000);
 
       const [toBase, fromBase] = [
+        petabitsConversion[1],
         pebibitsConversion[0],
-        petabitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Pb"] as const;
+      const expected = [fromBase(toBase(v)), "Pb"] as const;
       const conversionCandidate = [v, "Pib"] as const;
 
       expect(information["Pb"](conversionCandidate)).toEqual(expected);
@@ -2948,11 +2948,11 @@ describe("information", () => {
       const petabytesConversion = linearConversion(819200000);
 
       const [toBase, fromBase] = [
+        petabitsConversion[1],
         petabytesConversion[0],
-        petabitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Pb"] as const;
+      const expected = [fromBase(toBase(v)), "Pb"] as const;
       const conversionCandidate = [v, "PB"] as const;
 
       expect(information["Pb"](conversionCandidate)).toEqual(expected);
@@ -2964,11 +2964,11 @@ describe("information", () => {
       const exbibitsConversion = linearConversion(1024000000);
 
       const [toBase, fromBase] = [
+        petabitsConversion[1],
         exbibitsConversion[0],
-        petabitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Pb"] as const;
+      const expected = [fromBase(toBase(v)), "Pb"] as const;
       const conversionCandidate = [v, "Eib"] as const;
 
       expect(information["Pb"](conversionCandidate)).toEqual(expected);
@@ -2980,11 +2980,11 @@ describe("information", () => {
       const exabytesConversion = linearConversion(8192000000);
 
       const [toBase, fromBase] = [
+        petabitsConversion[1],
         exabytesConversion[0],
-        petabitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Pb"] as const;
+      const expected = [fromBase(toBase(v)), "Pb"] as const;
       const conversionCandidate = [v, "EB"] as const;
 
       expect(information["Pb"](conversionCandidate)).toEqual(expected);
@@ -2996,11 +2996,11 @@ describe("information", () => {
       const zebibitsConversion = linearConversion(10240000000);
 
       const [toBase, fromBase] = [
+        petabitsConversion[1],
         zebibitsConversion[0],
-        petabitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Pb"] as const;
+      const expected = [fromBase(toBase(v)), "Pb"] as const;
       const conversionCandidate = [v, "Zib"] as const;
 
       expect(information["Pb"](conversionCandidate)).toEqual(expected);
@@ -3012,11 +3012,11 @@ describe("information", () => {
       const zettabytesConversion = linearConversion(81920000000);
 
       const [toBase, fromBase] = [
+        petabitsConversion[1],
         zettabytesConversion[0],
-        petabitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Pb"] as const;
+      const expected = [fromBase(toBase(v)), "Pb"] as const;
       const conversionCandidate = [v, "ZB"] as const;
 
       expect(information["Pb"](conversionCandidate)).toEqual(expected);
@@ -3028,11 +3028,11 @@ describe("information", () => {
       const yobibitsConversion = linearConversion(102400000000);
 
       const [toBase, fromBase] = [
+        petabitsConversion[1],
         yobibitsConversion[0],
-        petabitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Pb"] as const;
+      const expected = [fromBase(toBase(v)), "Pb"] as const;
       const conversionCandidate = [v, "Yib"] as const;
 
       expect(information["Pb"](conversionCandidate)).toEqual(expected);
@@ -3044,11 +3044,11 @@ describe("information", () => {
       const yottabytesConversion = linearConversion(819200000000);
 
       const [toBase, fromBase] = [
+        petabitsConversion[1],
         yottabytesConversion[0],
-        petabitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Pb"] as const;
+      const expected = [fromBase(toBase(v)), "Pb"] as const;
       const conversionCandidate = [v, "YB"] as const;
 
       expect(information["Pb"](conversionCandidate)).toEqual(expected);
@@ -3068,11 +3068,11 @@ describe("information", () => {
       const bitsConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
+        exabitsConversion[1],
         bitsConversion[0],
-        exabitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Eb"] as const;
+      const expected = [fromBase(toBase(v)), "Eb"] as const;
       const conversionCandidate = [v, "b"] as const;
 
       expect(information["Eb"](conversionCandidate)).toEqual(expected);
@@ -3084,11 +3084,11 @@ describe("information", () => {
       const bytesConversion = linearConversion(8);
 
       const [toBase, fromBase] = [
+        exabitsConversion[1],
         bytesConversion[0],
-        exabitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Eb"] as const;
+      const expected = [fromBase(toBase(v)), "Eb"] as const;
       const conversionCandidate = [v, "B"] as const;
 
       expect(information["Eb"](conversionCandidate)).toEqual(expected);
@@ -3100,11 +3100,11 @@ describe("information", () => {
       const kilobitsConversion = linearConversion(1000);
 
       const [toBase, fromBase] = [
+        exabitsConversion[1],
         kilobitsConversion[0],
-        exabitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Eb"] as const;
+      const expected = [fromBase(toBase(v)), "Eb"] as const;
       const conversionCandidate = [v, "kb"] as const;
 
       expect(information["Eb"](conversionCandidate)).toEqual(expected);
@@ -3116,11 +3116,11 @@ describe("information", () => {
       const megabitsConversion = linearConversion(100000);
 
       const [toBase, fromBase] = [
+        exabitsConversion[1],
         megabitsConversion[0],
-        exabitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Eb"] as const;
+      const expected = [fromBase(toBase(v)), "Eb"] as const;
       const conversionCandidate = [v, "Mb"] as const;
 
       expect(information["Eb"](conversionCandidate)).toEqual(expected);
@@ -3132,11 +3132,11 @@ describe("information", () => {
       const gigabitsConversion = linearConversion(1000000);
 
       const [toBase, fromBase] = [
+        exabitsConversion[1],
         gigabitsConversion[0],
-        exabitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Eb"] as const;
+      const expected = [fromBase(toBase(v)), "Eb"] as const;
       const conversionCandidate = [v, "Gb"] as const;
 
       expect(information["Eb"](conversionCandidate)).toEqual(expected);
@@ -3148,11 +3148,11 @@ describe("information", () => {
       const terabitsConversion = linearConversion(10000000);
 
       const [toBase, fromBase] = [
+        exabitsConversion[1],
         terabitsConversion[0],
-        exabitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Eb"] as const;
+      const expected = [fromBase(toBase(v)), "Eb"] as const;
       const conversionCandidate = [v, "Tb"] as const;
 
       expect(information["Eb"](conversionCandidate)).toEqual(expected);
@@ -3164,11 +3164,11 @@ describe("information", () => {
       const petabitsConversion = linearConversion(100000000);
 
       const [toBase, fromBase] = [
+        exabitsConversion[1],
         petabitsConversion[0],
-        exabitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Eb"] as const;
+      const expected = [fromBase(toBase(v)), "Eb"] as const;
       const conversionCandidate = [v, "Pb"] as const;
 
       expect(information["Eb"](conversionCandidate)).toEqual(expected);
@@ -3182,11 +3182,11 @@ describe("information", () => {
       const zettabitsConversion = linearConversion(10000000000);
 
       const [toBase, fromBase] = [
+        exabitsConversion[1],
         zettabitsConversion[0],
-        exabitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Eb"] as const;
+      const expected = [fromBase(toBase(v)), "Eb"] as const;
       const conversionCandidate = [v, "Zb"] as const;
 
       expect(information["Eb"](conversionCandidate)).toEqual(expected);
@@ -3198,11 +3198,11 @@ describe("information", () => {
       const yottabitsConversion = linearConversion(100000000000);
 
       const [toBase, fromBase] = [
+        exabitsConversion[1],
         yottabitsConversion[0],
-        exabitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Eb"] as const;
+      const expected = [fromBase(toBase(v)), "Eb"] as const;
       const conversionCandidate = [v, "Yb"] as const;
 
       expect(information["Eb"](conversionCandidate)).toEqual(expected);
@@ -3214,11 +3214,11 @@ describe("information", () => {
       const kibibitsConversion = linearConversion(1024);
 
       const [toBase, fromBase] = [
+        exabitsConversion[1],
         kibibitsConversion[0],
-        exabitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Eb"] as const;
+      const expected = [fromBase(toBase(v)), "Eb"] as const;
       const conversionCandidate = [v, "Kib"] as const;
 
       expect(information["Eb"](conversionCandidate)).toEqual(expected);
@@ -3230,11 +3230,11 @@ describe("information", () => {
       const kilobytesConversion = linearConversion(8192);
 
       const [toBase, fromBase] = [
+        exabitsConversion[1],
         kilobytesConversion[0],
-        exabitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Eb"] as const;
+      const expected = [fromBase(toBase(v)), "Eb"] as const;
       const conversionCandidate = [v, "KB"] as const;
 
       expect(information["Eb"](conversionCandidate)).toEqual(expected);
@@ -3246,11 +3246,11 @@ describe("information", () => {
       const mebibitsConversion = linearConversion(102400);
 
       const [toBase, fromBase] = [
+        exabitsConversion[1],
         mebibitsConversion[0],
-        exabitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Eb"] as const;
+      const expected = [fromBase(toBase(v)), "Eb"] as const;
       const conversionCandidate = [v, "Mib"] as const;
 
       expect(information["Eb"](conversionCandidate)).toEqual(expected);
@@ -3262,11 +3262,11 @@ describe("information", () => {
       const megabytesConversion = linearConversion(819200);
 
       const [toBase, fromBase] = [
+        exabitsConversion[1],
         megabytesConversion[0],
-        exabitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Eb"] as const;
+      const expected = [fromBase(toBase(v)), "Eb"] as const;
       const conversionCandidate = [v, "MB"] as const;
 
       expect(information["Eb"](conversionCandidate)).toEqual(expected);
@@ -3278,11 +3278,11 @@ describe("information", () => {
       const gibibitsConversion = linearConversion(1024000);
 
       const [toBase, fromBase] = [
+        exabitsConversion[1],
         gibibitsConversion[0],
-        exabitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Eb"] as const;
+      const expected = [fromBase(toBase(v)), "Eb"] as const;
       const conversionCandidate = [v, "Gib"] as const;
 
       expect(information["Eb"](conversionCandidate)).toEqual(expected);
@@ -3294,11 +3294,11 @@ describe("information", () => {
       const gigabytesConversion = linearConversion(8192000);
 
       const [toBase, fromBase] = [
+        exabitsConversion[1],
         gigabytesConversion[0],
-        exabitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Eb"] as const;
+      const expected = [fromBase(toBase(v)), "Eb"] as const;
       const conversionCandidate = [v, "GB"] as const;
 
       expect(information["Eb"](conversionCandidate)).toEqual(expected);
@@ -3310,11 +3310,11 @@ describe("information", () => {
       const tebibitsConversion = linearConversion(10240000);
 
       const [toBase, fromBase] = [
+        exabitsConversion[1],
         tebibitsConversion[0],
-        exabitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Eb"] as const;
+      const expected = [fromBase(toBase(v)), "Eb"] as const;
       const conversionCandidate = [v, "Tib"] as const;
 
       expect(information["Eb"](conversionCandidate)).toEqual(expected);
@@ -3326,11 +3326,11 @@ describe("information", () => {
       const terabytesConversion = linearConversion(81920000);
 
       const [toBase, fromBase] = [
+        exabitsConversion[1],
         terabytesConversion[0],
-        exabitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Eb"] as const;
+      const expected = [fromBase(toBase(v)), "Eb"] as const;
       const conversionCandidate = [v, "TB"] as const;
 
       expect(information["Eb"](conversionCandidate)).toEqual(expected);
@@ -3342,11 +3342,11 @@ describe("information", () => {
       const pebibitsConversion = linearConversion(102400000);
 
       const [toBase, fromBase] = [
+        exabitsConversion[1],
         pebibitsConversion[0],
-        exabitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Eb"] as const;
+      const expected = [fromBase(toBase(v)), "Eb"] as const;
       const conversionCandidate = [v, "Pib"] as const;
 
       expect(information["Eb"](conversionCandidate)).toEqual(expected);
@@ -3358,11 +3358,11 @@ describe("information", () => {
       const petabytesConversion = linearConversion(819200000);
 
       const [toBase, fromBase] = [
+        exabitsConversion[1],
         petabytesConversion[0],
-        exabitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Eb"] as const;
+      const expected = [fromBase(toBase(v)), "Eb"] as const;
       const conversionCandidate = [v, "PB"] as const;
 
       expect(information["Eb"](conversionCandidate)).toEqual(expected);
@@ -3374,11 +3374,11 @@ describe("information", () => {
       const exbibitsConversion = linearConversion(1024000000);
 
       const [toBase, fromBase] = [
+        exabitsConversion[1],
         exbibitsConversion[0],
-        exabitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Eb"] as const;
+      const expected = [fromBase(toBase(v)), "Eb"] as const;
       const conversionCandidate = [v, "Eib"] as const;
 
       expect(information["Eb"](conversionCandidate)).toEqual(expected);
@@ -3390,11 +3390,11 @@ describe("information", () => {
       const exabytesConversion = linearConversion(8192000000);
 
       const [toBase, fromBase] = [
+        exabitsConversion[1],
         exabytesConversion[0],
-        exabitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Eb"] as const;
+      const expected = [fromBase(toBase(v)), "Eb"] as const;
       const conversionCandidate = [v, "EB"] as const;
 
       expect(information["Eb"](conversionCandidate)).toEqual(expected);
@@ -3406,11 +3406,11 @@ describe("information", () => {
       const zebibitsConversion = linearConversion(10240000000);
 
       const [toBase, fromBase] = [
+        exabitsConversion[1],
         zebibitsConversion[0],
-        exabitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Eb"] as const;
+      const expected = [fromBase(toBase(v)), "Eb"] as const;
       const conversionCandidate = [v, "Zib"] as const;
 
       expect(information["Eb"](conversionCandidate)).toEqual(expected);
@@ -3422,11 +3422,11 @@ describe("information", () => {
       const zettabytesConversion = linearConversion(81920000000);
 
       const [toBase, fromBase] = [
+        exabitsConversion[1],
         zettabytesConversion[0],
-        exabitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Eb"] as const;
+      const expected = [fromBase(toBase(v)), "Eb"] as const;
       const conversionCandidate = [v, "ZB"] as const;
 
       expect(information["Eb"](conversionCandidate)).toEqual(expected);
@@ -3438,11 +3438,11 @@ describe("information", () => {
       const yobibitsConversion = linearConversion(102400000000);
 
       const [toBase, fromBase] = [
+        exabitsConversion[1],
         yobibitsConversion[0],
-        exabitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Eb"] as const;
+      const expected = [fromBase(toBase(v)), "Eb"] as const;
       const conversionCandidate = [v, "Yib"] as const;
 
       expect(information["Eb"](conversionCandidate)).toEqual(expected);
@@ -3454,11 +3454,11 @@ describe("information", () => {
       const yottabytesConversion = linearConversion(819200000000);
 
       const [toBase, fromBase] = [
+        exabitsConversion[1],
         yottabytesConversion[0],
-        exabitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Eb"] as const;
+      const expected = [fromBase(toBase(v)), "Eb"] as const;
       const conversionCandidate = [v, "YB"] as const;
 
       expect(information["Eb"](conversionCandidate)).toEqual(expected);
@@ -3478,11 +3478,11 @@ describe("information", () => {
       const bitsConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
+        zettabitsConversion[1],
         bitsConversion[0],
-        zettabitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Zb"] as const;
+      const expected = [fromBase(toBase(v)), "Zb"] as const;
       const conversionCandidate = [v, "b"] as const;
 
       expect(information["Zb"](conversionCandidate)).toEqual(expected);
@@ -3494,11 +3494,11 @@ describe("information", () => {
       const bytesConversion = linearConversion(8);
 
       const [toBase, fromBase] = [
+        zettabitsConversion[1],
         bytesConversion[0],
-        zettabitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Zb"] as const;
+      const expected = [fromBase(toBase(v)), "Zb"] as const;
       const conversionCandidate = [v, "B"] as const;
 
       expect(information["Zb"](conversionCandidate)).toEqual(expected);
@@ -3510,11 +3510,11 @@ describe("information", () => {
       const kilobitsConversion = linearConversion(1000);
 
       const [toBase, fromBase] = [
+        zettabitsConversion[1],
         kilobitsConversion[0],
-        zettabitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Zb"] as const;
+      const expected = [fromBase(toBase(v)), "Zb"] as const;
       const conversionCandidate = [v, "kb"] as const;
 
       expect(information["Zb"](conversionCandidate)).toEqual(expected);
@@ -3526,11 +3526,11 @@ describe("information", () => {
       const megabitsConversion = linearConversion(100000);
 
       const [toBase, fromBase] = [
+        zettabitsConversion[1],
         megabitsConversion[0],
-        zettabitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Zb"] as const;
+      const expected = [fromBase(toBase(v)), "Zb"] as const;
       const conversionCandidate = [v, "Mb"] as const;
 
       expect(information["Zb"](conversionCandidate)).toEqual(expected);
@@ -3542,11 +3542,11 @@ describe("information", () => {
       const gigabitsConversion = linearConversion(1000000);
 
       const [toBase, fromBase] = [
+        zettabitsConversion[1],
         gigabitsConversion[0],
-        zettabitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Zb"] as const;
+      const expected = [fromBase(toBase(v)), "Zb"] as const;
       const conversionCandidate = [v, "Gb"] as const;
 
       expect(information["Zb"](conversionCandidate)).toEqual(expected);
@@ -3558,11 +3558,11 @@ describe("information", () => {
       const terabitsConversion = linearConversion(10000000);
 
       const [toBase, fromBase] = [
+        zettabitsConversion[1],
         terabitsConversion[0],
-        zettabitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Zb"] as const;
+      const expected = [fromBase(toBase(v)), "Zb"] as const;
       const conversionCandidate = [v, "Tb"] as const;
 
       expect(information["Zb"](conversionCandidate)).toEqual(expected);
@@ -3574,11 +3574,11 @@ describe("information", () => {
       const petabitsConversion = linearConversion(100000000);
 
       const [toBase, fromBase] = [
+        zettabitsConversion[1],
         petabitsConversion[0],
-        zettabitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Zb"] as const;
+      const expected = [fromBase(toBase(v)), "Zb"] as const;
       const conversionCandidate = [v, "Pb"] as const;
 
       expect(information["Zb"](conversionCandidate)).toEqual(expected);
@@ -3590,11 +3590,11 @@ describe("information", () => {
       const exabitsConversion = linearConversion(1000000000);
 
       const [toBase, fromBase] = [
+        zettabitsConversion[1],
         exabitsConversion[0],
-        zettabitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Zb"] as const;
+      const expected = [fromBase(toBase(v)), "Zb"] as const;
       const conversionCandidate = [v, "Eb"] as const;
 
       expect(information["Zb"](conversionCandidate)).toEqual(expected);
@@ -3608,11 +3608,11 @@ describe("information", () => {
       const yottabitsConversion = linearConversion(100000000000);
 
       const [toBase, fromBase] = [
+        zettabitsConversion[1],
         yottabitsConversion[0],
-        zettabitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Zb"] as const;
+      const expected = [fromBase(toBase(v)), "Zb"] as const;
       const conversionCandidate = [v, "Yb"] as const;
 
       expect(information["Zb"](conversionCandidate)).toEqual(expected);
@@ -3624,11 +3624,11 @@ describe("information", () => {
       const kibibitsConversion = linearConversion(1024);
 
       const [toBase, fromBase] = [
+        zettabitsConversion[1],
         kibibitsConversion[0],
-        zettabitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Zb"] as const;
+      const expected = [fromBase(toBase(v)), "Zb"] as const;
       const conversionCandidate = [v, "Kib"] as const;
 
       expect(information["Zb"](conversionCandidate)).toEqual(expected);
@@ -3640,11 +3640,11 @@ describe("information", () => {
       const kilobytesConversion = linearConversion(8192);
 
       const [toBase, fromBase] = [
+        zettabitsConversion[1],
         kilobytesConversion[0],
-        zettabitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Zb"] as const;
+      const expected = [fromBase(toBase(v)), "Zb"] as const;
       const conversionCandidate = [v, "KB"] as const;
 
       expect(information["Zb"](conversionCandidate)).toEqual(expected);
@@ -3656,11 +3656,11 @@ describe("information", () => {
       const mebibitsConversion = linearConversion(102400);
 
       const [toBase, fromBase] = [
+        zettabitsConversion[1],
         mebibitsConversion[0],
-        zettabitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Zb"] as const;
+      const expected = [fromBase(toBase(v)), "Zb"] as const;
       const conversionCandidate = [v, "Mib"] as const;
 
       expect(information["Zb"](conversionCandidate)).toEqual(expected);
@@ -3672,11 +3672,11 @@ describe("information", () => {
       const megabytesConversion = linearConversion(819200);
 
       const [toBase, fromBase] = [
+        zettabitsConversion[1],
         megabytesConversion[0],
-        zettabitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Zb"] as const;
+      const expected = [fromBase(toBase(v)), "Zb"] as const;
       const conversionCandidate = [v, "MB"] as const;
 
       expect(information["Zb"](conversionCandidate)).toEqual(expected);
@@ -3688,11 +3688,11 @@ describe("information", () => {
       const gibibitsConversion = linearConversion(1024000);
 
       const [toBase, fromBase] = [
+        zettabitsConversion[1],
         gibibitsConversion[0],
-        zettabitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Zb"] as const;
+      const expected = [fromBase(toBase(v)), "Zb"] as const;
       const conversionCandidate = [v, "Gib"] as const;
 
       expect(information["Zb"](conversionCandidate)).toEqual(expected);
@@ -3704,11 +3704,11 @@ describe("information", () => {
       const gigabytesConversion = linearConversion(8192000);
 
       const [toBase, fromBase] = [
+        zettabitsConversion[1],
         gigabytesConversion[0],
-        zettabitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Zb"] as const;
+      const expected = [fromBase(toBase(v)), "Zb"] as const;
       const conversionCandidate = [v, "GB"] as const;
 
       expect(information["Zb"](conversionCandidate)).toEqual(expected);
@@ -3720,11 +3720,11 @@ describe("information", () => {
       const tebibitsConversion = linearConversion(10240000);
 
       const [toBase, fromBase] = [
+        zettabitsConversion[1],
         tebibitsConversion[0],
-        zettabitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Zb"] as const;
+      const expected = [fromBase(toBase(v)), "Zb"] as const;
       const conversionCandidate = [v, "Tib"] as const;
 
       expect(information["Zb"](conversionCandidate)).toEqual(expected);
@@ -3736,11 +3736,11 @@ describe("information", () => {
       const terabytesConversion = linearConversion(81920000);
 
       const [toBase, fromBase] = [
+        zettabitsConversion[1],
         terabytesConversion[0],
-        zettabitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Zb"] as const;
+      const expected = [fromBase(toBase(v)), "Zb"] as const;
       const conversionCandidate = [v, "TB"] as const;
 
       expect(information["Zb"](conversionCandidate)).toEqual(expected);
@@ -3752,11 +3752,11 @@ describe("information", () => {
       const pebibitsConversion = linearConversion(102400000);
 
       const [toBase, fromBase] = [
+        zettabitsConversion[1],
         pebibitsConversion[0],
-        zettabitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Zb"] as const;
+      const expected = [fromBase(toBase(v)), "Zb"] as const;
       const conversionCandidate = [v, "Pib"] as const;
 
       expect(information["Zb"](conversionCandidate)).toEqual(expected);
@@ -3768,11 +3768,11 @@ describe("information", () => {
       const petabytesConversion = linearConversion(819200000);
 
       const [toBase, fromBase] = [
+        zettabitsConversion[1],
         petabytesConversion[0],
-        zettabitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Zb"] as const;
+      const expected = [fromBase(toBase(v)), "Zb"] as const;
       const conversionCandidate = [v, "PB"] as const;
 
       expect(information["Zb"](conversionCandidate)).toEqual(expected);
@@ -3784,11 +3784,11 @@ describe("information", () => {
       const exbibitsConversion = linearConversion(1024000000);
 
       const [toBase, fromBase] = [
+        zettabitsConversion[1],
         exbibitsConversion[0],
-        zettabitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Zb"] as const;
+      const expected = [fromBase(toBase(v)), "Zb"] as const;
       const conversionCandidate = [v, "Eib"] as const;
 
       expect(information["Zb"](conversionCandidate)).toEqual(expected);
@@ -3800,11 +3800,11 @@ describe("information", () => {
       const exabytesConversion = linearConversion(8192000000);
 
       const [toBase, fromBase] = [
+        zettabitsConversion[1],
         exabytesConversion[0],
-        zettabitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Zb"] as const;
+      const expected = [fromBase(toBase(v)), "Zb"] as const;
       const conversionCandidate = [v, "EB"] as const;
 
       expect(information["Zb"](conversionCandidate)).toEqual(expected);
@@ -3816,11 +3816,11 @@ describe("information", () => {
       const zebibitsConversion = linearConversion(10240000000);
 
       const [toBase, fromBase] = [
+        zettabitsConversion[1],
         zebibitsConversion[0],
-        zettabitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Zb"] as const;
+      const expected = [fromBase(toBase(v)), "Zb"] as const;
       const conversionCandidate = [v, "Zib"] as const;
 
       expect(information["Zb"](conversionCandidate)).toEqual(expected);
@@ -3832,11 +3832,11 @@ describe("information", () => {
       const zettabytesConversion = linearConversion(81920000000);
 
       const [toBase, fromBase] = [
+        zettabitsConversion[1],
         zettabytesConversion[0],
-        zettabitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Zb"] as const;
+      const expected = [fromBase(toBase(v)), "Zb"] as const;
       const conversionCandidate = [v, "ZB"] as const;
 
       expect(information["Zb"](conversionCandidate)).toEqual(expected);
@@ -3848,11 +3848,11 @@ describe("information", () => {
       const yobibitsConversion = linearConversion(102400000000);
 
       const [toBase, fromBase] = [
+        zettabitsConversion[1],
         yobibitsConversion[0],
-        zettabitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Zb"] as const;
+      const expected = [fromBase(toBase(v)), "Zb"] as const;
       const conversionCandidate = [v, "Yib"] as const;
 
       expect(information["Zb"](conversionCandidate)).toEqual(expected);
@@ -3864,11 +3864,11 @@ describe("information", () => {
       const yottabytesConversion = linearConversion(819200000000);
 
       const [toBase, fromBase] = [
+        zettabitsConversion[1],
         yottabytesConversion[0],
-        zettabitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Zb"] as const;
+      const expected = [fromBase(toBase(v)), "Zb"] as const;
       const conversionCandidate = [v, "YB"] as const;
 
       expect(information["Zb"](conversionCandidate)).toEqual(expected);
@@ -3888,11 +3888,11 @@ describe("information", () => {
       const bitsConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
+        yottabitsConversion[1],
         bitsConversion[0],
-        yottabitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Yb"] as const;
+      const expected = [fromBase(toBase(v)), "Yb"] as const;
       const conversionCandidate = [v, "b"] as const;
 
       expect(information["Yb"](conversionCandidate)).toEqual(expected);
@@ -3904,11 +3904,11 @@ describe("information", () => {
       const bytesConversion = linearConversion(8);
 
       const [toBase, fromBase] = [
+        yottabitsConversion[1],
         bytesConversion[0],
-        yottabitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Yb"] as const;
+      const expected = [fromBase(toBase(v)), "Yb"] as const;
       const conversionCandidate = [v, "B"] as const;
 
       expect(information["Yb"](conversionCandidate)).toEqual(expected);
@@ -3920,11 +3920,11 @@ describe("information", () => {
       const kilobitsConversion = linearConversion(1000);
 
       const [toBase, fromBase] = [
+        yottabitsConversion[1],
         kilobitsConversion[0],
-        yottabitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Yb"] as const;
+      const expected = [fromBase(toBase(v)), "Yb"] as const;
       const conversionCandidate = [v, "kb"] as const;
 
       expect(information["Yb"](conversionCandidate)).toEqual(expected);
@@ -3936,11 +3936,11 @@ describe("information", () => {
       const megabitsConversion = linearConversion(100000);
 
       const [toBase, fromBase] = [
+        yottabitsConversion[1],
         megabitsConversion[0],
-        yottabitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Yb"] as const;
+      const expected = [fromBase(toBase(v)), "Yb"] as const;
       const conversionCandidate = [v, "Mb"] as const;
 
       expect(information["Yb"](conversionCandidate)).toEqual(expected);
@@ -3952,11 +3952,11 @@ describe("information", () => {
       const gigabitsConversion = linearConversion(1000000);
 
       const [toBase, fromBase] = [
+        yottabitsConversion[1],
         gigabitsConversion[0],
-        yottabitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Yb"] as const;
+      const expected = [fromBase(toBase(v)), "Yb"] as const;
       const conversionCandidate = [v, "Gb"] as const;
 
       expect(information["Yb"](conversionCandidate)).toEqual(expected);
@@ -3968,11 +3968,11 @@ describe("information", () => {
       const terabitsConversion = linearConversion(10000000);
 
       const [toBase, fromBase] = [
+        yottabitsConversion[1],
         terabitsConversion[0],
-        yottabitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Yb"] as const;
+      const expected = [fromBase(toBase(v)), "Yb"] as const;
       const conversionCandidate = [v, "Tb"] as const;
 
       expect(information["Yb"](conversionCandidate)).toEqual(expected);
@@ -3984,11 +3984,11 @@ describe("information", () => {
       const petabitsConversion = linearConversion(100000000);
 
       const [toBase, fromBase] = [
+        yottabitsConversion[1],
         petabitsConversion[0],
-        yottabitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Yb"] as const;
+      const expected = [fromBase(toBase(v)), "Yb"] as const;
       const conversionCandidate = [v, "Pb"] as const;
 
       expect(information["Yb"](conversionCandidate)).toEqual(expected);
@@ -4000,11 +4000,11 @@ describe("information", () => {
       const exabitsConversion = linearConversion(1000000000);
 
       const [toBase, fromBase] = [
+        yottabitsConversion[1],
         exabitsConversion[0],
-        yottabitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Yb"] as const;
+      const expected = [fromBase(toBase(v)), "Yb"] as const;
       const conversionCandidate = [v, "Eb"] as const;
 
       expect(information["Yb"](conversionCandidate)).toEqual(expected);
@@ -4016,11 +4016,11 @@ describe("information", () => {
       const zettabitsConversion = linearConversion(10000000000);
 
       const [toBase, fromBase] = [
+        yottabitsConversion[1],
         zettabitsConversion[0],
-        yottabitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Yb"] as const;
+      const expected = [fromBase(toBase(v)), "Yb"] as const;
       const conversionCandidate = [v, "Zb"] as const;
 
       expect(information["Yb"](conversionCandidate)).toEqual(expected);
@@ -4034,11 +4034,11 @@ describe("information", () => {
       const kibibitsConversion = linearConversion(1024);
 
       const [toBase, fromBase] = [
+        yottabitsConversion[1],
         kibibitsConversion[0],
-        yottabitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Yb"] as const;
+      const expected = [fromBase(toBase(v)), "Yb"] as const;
       const conversionCandidate = [v, "Kib"] as const;
 
       expect(information["Yb"](conversionCandidate)).toEqual(expected);
@@ -4050,11 +4050,11 @@ describe("information", () => {
       const kilobytesConversion = linearConversion(8192);
 
       const [toBase, fromBase] = [
+        yottabitsConversion[1],
         kilobytesConversion[0],
-        yottabitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Yb"] as const;
+      const expected = [fromBase(toBase(v)), "Yb"] as const;
       const conversionCandidate = [v, "KB"] as const;
 
       expect(information["Yb"](conversionCandidate)).toEqual(expected);
@@ -4066,11 +4066,11 @@ describe("information", () => {
       const mebibitsConversion = linearConversion(102400);
 
       const [toBase, fromBase] = [
+        yottabitsConversion[1],
         mebibitsConversion[0],
-        yottabitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Yb"] as const;
+      const expected = [fromBase(toBase(v)), "Yb"] as const;
       const conversionCandidate = [v, "Mib"] as const;
 
       expect(information["Yb"](conversionCandidate)).toEqual(expected);
@@ -4082,11 +4082,11 @@ describe("information", () => {
       const megabytesConversion = linearConversion(819200);
 
       const [toBase, fromBase] = [
+        yottabitsConversion[1],
         megabytesConversion[0],
-        yottabitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Yb"] as const;
+      const expected = [fromBase(toBase(v)), "Yb"] as const;
       const conversionCandidate = [v, "MB"] as const;
 
       expect(information["Yb"](conversionCandidate)).toEqual(expected);
@@ -4098,11 +4098,11 @@ describe("information", () => {
       const gibibitsConversion = linearConversion(1024000);
 
       const [toBase, fromBase] = [
+        yottabitsConversion[1],
         gibibitsConversion[0],
-        yottabitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Yb"] as const;
+      const expected = [fromBase(toBase(v)), "Yb"] as const;
       const conversionCandidate = [v, "Gib"] as const;
 
       expect(information["Yb"](conversionCandidate)).toEqual(expected);
@@ -4114,11 +4114,11 @@ describe("information", () => {
       const gigabytesConversion = linearConversion(8192000);
 
       const [toBase, fromBase] = [
+        yottabitsConversion[1],
         gigabytesConversion[0],
-        yottabitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Yb"] as const;
+      const expected = [fromBase(toBase(v)), "Yb"] as const;
       const conversionCandidate = [v, "GB"] as const;
 
       expect(information["Yb"](conversionCandidate)).toEqual(expected);
@@ -4130,11 +4130,11 @@ describe("information", () => {
       const tebibitsConversion = linearConversion(10240000);
 
       const [toBase, fromBase] = [
+        yottabitsConversion[1],
         tebibitsConversion[0],
-        yottabitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Yb"] as const;
+      const expected = [fromBase(toBase(v)), "Yb"] as const;
       const conversionCandidate = [v, "Tib"] as const;
 
       expect(information["Yb"](conversionCandidate)).toEqual(expected);
@@ -4146,11 +4146,11 @@ describe("information", () => {
       const terabytesConversion = linearConversion(81920000);
 
       const [toBase, fromBase] = [
+        yottabitsConversion[1],
         terabytesConversion[0],
-        yottabitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Yb"] as const;
+      const expected = [fromBase(toBase(v)), "Yb"] as const;
       const conversionCandidate = [v, "TB"] as const;
 
       expect(information["Yb"](conversionCandidate)).toEqual(expected);
@@ -4162,11 +4162,11 @@ describe("information", () => {
       const pebibitsConversion = linearConversion(102400000);
 
       const [toBase, fromBase] = [
+        yottabitsConversion[1],
         pebibitsConversion[0],
-        yottabitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Yb"] as const;
+      const expected = [fromBase(toBase(v)), "Yb"] as const;
       const conversionCandidate = [v, "Pib"] as const;
 
       expect(information["Yb"](conversionCandidate)).toEqual(expected);
@@ -4178,11 +4178,11 @@ describe("information", () => {
       const petabytesConversion = linearConversion(819200000);
 
       const [toBase, fromBase] = [
+        yottabitsConversion[1],
         petabytesConversion[0],
-        yottabitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Yb"] as const;
+      const expected = [fromBase(toBase(v)), "Yb"] as const;
       const conversionCandidate = [v, "PB"] as const;
 
       expect(information["Yb"](conversionCandidate)).toEqual(expected);
@@ -4194,11 +4194,11 @@ describe("information", () => {
       const exbibitsConversion = linearConversion(1024000000);
 
       const [toBase, fromBase] = [
+        yottabitsConversion[1],
         exbibitsConversion[0],
-        yottabitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Yb"] as const;
+      const expected = [fromBase(toBase(v)), "Yb"] as const;
       const conversionCandidate = [v, "Eib"] as const;
 
       expect(information["Yb"](conversionCandidate)).toEqual(expected);
@@ -4210,11 +4210,11 @@ describe("information", () => {
       const exabytesConversion = linearConversion(8192000000);
 
       const [toBase, fromBase] = [
+        yottabitsConversion[1],
         exabytesConversion[0],
-        yottabitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Yb"] as const;
+      const expected = [fromBase(toBase(v)), "Yb"] as const;
       const conversionCandidate = [v, "EB"] as const;
 
       expect(information["Yb"](conversionCandidate)).toEqual(expected);
@@ -4226,11 +4226,11 @@ describe("information", () => {
       const zebibitsConversion = linearConversion(10240000000);
 
       const [toBase, fromBase] = [
+        yottabitsConversion[1],
         zebibitsConversion[0],
-        yottabitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Yb"] as const;
+      const expected = [fromBase(toBase(v)), "Yb"] as const;
       const conversionCandidate = [v, "Zib"] as const;
 
       expect(information["Yb"](conversionCandidate)).toEqual(expected);
@@ -4242,11 +4242,11 @@ describe("information", () => {
       const zettabytesConversion = linearConversion(81920000000);
 
       const [toBase, fromBase] = [
+        yottabitsConversion[1],
         zettabytesConversion[0],
-        yottabitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Yb"] as const;
+      const expected = [fromBase(toBase(v)), "Yb"] as const;
       const conversionCandidate = [v, "ZB"] as const;
 
       expect(information["Yb"](conversionCandidate)).toEqual(expected);
@@ -4258,11 +4258,11 @@ describe("information", () => {
       const yobibitsConversion = linearConversion(102400000000);
 
       const [toBase, fromBase] = [
+        yottabitsConversion[1],
         yobibitsConversion[0],
-        yottabitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Yb"] as const;
+      const expected = [fromBase(toBase(v)), "Yb"] as const;
       const conversionCandidate = [v, "Yib"] as const;
 
       expect(information["Yb"](conversionCandidate)).toEqual(expected);
@@ -4274,11 +4274,11 @@ describe("information", () => {
       const yottabytesConversion = linearConversion(819200000000);
 
       const [toBase, fromBase] = [
+        yottabitsConversion[1],
         yottabytesConversion[0],
-        yottabitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Yb"] as const;
+      const expected = [fromBase(toBase(v)), "Yb"] as const;
       const conversionCandidate = [v, "YB"] as const;
 
       expect(information["Yb"](conversionCandidate)).toEqual(expected);
@@ -4298,11 +4298,11 @@ describe("information", () => {
       const bitsConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
+        kibibitsConversion[1],
         bitsConversion[0],
-        kibibitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Kib"] as const;
+      const expected = [fromBase(toBase(v)), "Kib"] as const;
       const conversionCandidate = [v, "b"] as const;
 
       expect(information["Kib"](conversionCandidate)).toEqual(expected);
@@ -4314,11 +4314,11 @@ describe("information", () => {
       const bytesConversion = linearConversion(8);
 
       const [toBase, fromBase] = [
+        kibibitsConversion[1],
         bytesConversion[0],
-        kibibitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Kib"] as const;
+      const expected = [fromBase(toBase(v)), "Kib"] as const;
       const conversionCandidate = [v, "B"] as const;
 
       expect(information["Kib"](conversionCandidate)).toEqual(expected);
@@ -4330,11 +4330,11 @@ describe("information", () => {
       const kilobitsConversion = linearConversion(1000);
 
       const [toBase, fromBase] = [
+        kibibitsConversion[1],
         kilobitsConversion[0],
-        kibibitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Kib"] as const;
+      const expected = [fromBase(toBase(v)), "Kib"] as const;
       const conversionCandidate = [v, "kb"] as const;
 
       expect(information["Kib"](conversionCandidate)).toEqual(expected);
@@ -4346,11 +4346,11 @@ describe("information", () => {
       const megabitsConversion = linearConversion(100000);
 
       const [toBase, fromBase] = [
+        kibibitsConversion[1],
         megabitsConversion[0],
-        kibibitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Kib"] as const;
+      const expected = [fromBase(toBase(v)), "Kib"] as const;
       const conversionCandidate = [v, "Mb"] as const;
 
       expect(information["Kib"](conversionCandidate)).toEqual(expected);
@@ -4362,11 +4362,11 @@ describe("information", () => {
       const gigabitsConversion = linearConversion(1000000);
 
       const [toBase, fromBase] = [
+        kibibitsConversion[1],
         gigabitsConversion[0],
-        kibibitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Kib"] as const;
+      const expected = [fromBase(toBase(v)), "Kib"] as const;
       const conversionCandidate = [v, "Gb"] as const;
 
       expect(information["Kib"](conversionCandidate)).toEqual(expected);
@@ -4378,11 +4378,11 @@ describe("information", () => {
       const terabitsConversion = linearConversion(10000000);
 
       const [toBase, fromBase] = [
+        kibibitsConversion[1],
         terabitsConversion[0],
-        kibibitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Kib"] as const;
+      const expected = [fromBase(toBase(v)), "Kib"] as const;
       const conversionCandidate = [v, "Tb"] as const;
 
       expect(information["Kib"](conversionCandidate)).toEqual(expected);
@@ -4394,11 +4394,11 @@ describe("information", () => {
       const petabitsConversion = linearConversion(100000000);
 
       const [toBase, fromBase] = [
+        kibibitsConversion[1],
         petabitsConversion[0],
-        kibibitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Kib"] as const;
+      const expected = [fromBase(toBase(v)), "Kib"] as const;
       const conversionCandidate = [v, "Pb"] as const;
 
       expect(information["Kib"](conversionCandidate)).toEqual(expected);
@@ -4410,11 +4410,11 @@ describe("information", () => {
       const exabitsConversion = linearConversion(1000000000);
 
       const [toBase, fromBase] = [
+        kibibitsConversion[1],
         exabitsConversion[0],
-        kibibitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Kib"] as const;
+      const expected = [fromBase(toBase(v)), "Kib"] as const;
       const conversionCandidate = [v, "Eb"] as const;
 
       expect(information["Kib"](conversionCandidate)).toEqual(expected);
@@ -4426,11 +4426,11 @@ describe("information", () => {
       const zettabitsConversion = linearConversion(10000000000);
 
       const [toBase, fromBase] = [
+        kibibitsConversion[1],
         zettabitsConversion[0],
-        kibibitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Kib"] as const;
+      const expected = [fromBase(toBase(v)), "Kib"] as const;
       const conversionCandidate = [v, "Zb"] as const;
 
       expect(information["Kib"](conversionCandidate)).toEqual(expected);
@@ -4442,11 +4442,11 @@ describe("information", () => {
       const yottabitsConversion = linearConversion(100000000000);
 
       const [toBase, fromBase] = [
+        kibibitsConversion[1],
         yottabitsConversion[0],
-        kibibitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Kib"] as const;
+      const expected = [fromBase(toBase(v)), "Kib"] as const;
       const conversionCandidate = [v, "Yb"] as const;
 
       expect(information["Kib"](conversionCandidate)).toEqual(expected);
@@ -4460,11 +4460,11 @@ describe("information", () => {
       const kilobytesConversion = linearConversion(8192);
 
       const [toBase, fromBase] = [
+        kibibitsConversion[1],
         kilobytesConversion[0],
-        kibibitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Kib"] as const;
+      const expected = [fromBase(toBase(v)), "Kib"] as const;
       const conversionCandidate = [v, "KB"] as const;
 
       expect(information["Kib"](conversionCandidate)).toEqual(expected);
@@ -4476,11 +4476,11 @@ describe("information", () => {
       const mebibitsConversion = linearConversion(102400);
 
       const [toBase, fromBase] = [
+        kibibitsConversion[1],
         mebibitsConversion[0],
-        kibibitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Kib"] as const;
+      const expected = [fromBase(toBase(v)), "Kib"] as const;
       const conversionCandidate = [v, "Mib"] as const;
 
       expect(information["Kib"](conversionCandidate)).toEqual(expected);
@@ -4492,11 +4492,11 @@ describe("information", () => {
       const megabytesConversion = linearConversion(819200);
 
       const [toBase, fromBase] = [
+        kibibitsConversion[1],
         megabytesConversion[0],
-        kibibitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Kib"] as const;
+      const expected = [fromBase(toBase(v)), "Kib"] as const;
       const conversionCandidate = [v, "MB"] as const;
 
       expect(information["Kib"](conversionCandidate)).toEqual(expected);
@@ -4508,11 +4508,11 @@ describe("information", () => {
       const gibibitsConversion = linearConversion(1024000);
 
       const [toBase, fromBase] = [
+        kibibitsConversion[1],
         gibibitsConversion[0],
-        kibibitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Kib"] as const;
+      const expected = [fromBase(toBase(v)), "Kib"] as const;
       const conversionCandidate = [v, "Gib"] as const;
 
       expect(information["Kib"](conversionCandidate)).toEqual(expected);
@@ -4524,11 +4524,11 @@ describe("information", () => {
       const gigabytesConversion = linearConversion(8192000);
 
       const [toBase, fromBase] = [
+        kibibitsConversion[1],
         gigabytesConversion[0],
-        kibibitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Kib"] as const;
+      const expected = [fromBase(toBase(v)), "Kib"] as const;
       const conversionCandidate = [v, "GB"] as const;
 
       expect(information["Kib"](conversionCandidate)).toEqual(expected);
@@ -4540,11 +4540,11 @@ describe("information", () => {
       const tebibitsConversion = linearConversion(10240000);
 
       const [toBase, fromBase] = [
+        kibibitsConversion[1],
         tebibitsConversion[0],
-        kibibitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Kib"] as const;
+      const expected = [fromBase(toBase(v)), "Kib"] as const;
       const conversionCandidate = [v, "Tib"] as const;
 
       expect(information["Kib"](conversionCandidate)).toEqual(expected);
@@ -4556,11 +4556,11 @@ describe("information", () => {
       const terabytesConversion = linearConversion(81920000);
 
       const [toBase, fromBase] = [
+        kibibitsConversion[1],
         terabytesConversion[0],
-        kibibitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Kib"] as const;
+      const expected = [fromBase(toBase(v)), "Kib"] as const;
       const conversionCandidate = [v, "TB"] as const;
 
       expect(information["Kib"](conversionCandidate)).toEqual(expected);
@@ -4572,11 +4572,11 @@ describe("information", () => {
       const pebibitsConversion = linearConversion(102400000);
 
       const [toBase, fromBase] = [
+        kibibitsConversion[1],
         pebibitsConversion[0],
-        kibibitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Kib"] as const;
+      const expected = [fromBase(toBase(v)), "Kib"] as const;
       const conversionCandidate = [v, "Pib"] as const;
 
       expect(information["Kib"](conversionCandidate)).toEqual(expected);
@@ -4588,11 +4588,11 @@ describe("information", () => {
       const petabytesConversion = linearConversion(819200000);
 
       const [toBase, fromBase] = [
+        kibibitsConversion[1],
         petabytesConversion[0],
-        kibibitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Kib"] as const;
+      const expected = [fromBase(toBase(v)), "Kib"] as const;
       const conversionCandidate = [v, "PB"] as const;
 
       expect(information["Kib"](conversionCandidate)).toEqual(expected);
@@ -4604,11 +4604,11 @@ describe("information", () => {
       const exbibitsConversion = linearConversion(1024000000);
 
       const [toBase, fromBase] = [
+        kibibitsConversion[1],
         exbibitsConversion[0],
-        kibibitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Kib"] as const;
+      const expected = [fromBase(toBase(v)), "Kib"] as const;
       const conversionCandidate = [v, "Eib"] as const;
 
       expect(information["Kib"](conversionCandidate)).toEqual(expected);
@@ -4620,11 +4620,11 @@ describe("information", () => {
       const exabytesConversion = linearConversion(8192000000);
 
       const [toBase, fromBase] = [
+        kibibitsConversion[1],
         exabytesConversion[0],
-        kibibitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Kib"] as const;
+      const expected = [fromBase(toBase(v)), "Kib"] as const;
       const conversionCandidate = [v, "EB"] as const;
 
       expect(information["Kib"](conversionCandidate)).toEqual(expected);
@@ -4636,11 +4636,11 @@ describe("information", () => {
       const zebibitsConversion = linearConversion(10240000000);
 
       const [toBase, fromBase] = [
+        kibibitsConversion[1],
         zebibitsConversion[0],
-        kibibitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Kib"] as const;
+      const expected = [fromBase(toBase(v)), "Kib"] as const;
       const conversionCandidate = [v, "Zib"] as const;
 
       expect(information["Kib"](conversionCandidate)).toEqual(expected);
@@ -4652,11 +4652,11 @@ describe("information", () => {
       const zettabytesConversion = linearConversion(81920000000);
 
       const [toBase, fromBase] = [
+        kibibitsConversion[1],
         zettabytesConversion[0],
-        kibibitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Kib"] as const;
+      const expected = [fromBase(toBase(v)), "Kib"] as const;
       const conversionCandidate = [v, "ZB"] as const;
 
       expect(information["Kib"](conversionCandidate)).toEqual(expected);
@@ -4668,11 +4668,11 @@ describe("information", () => {
       const yobibitsConversion = linearConversion(102400000000);
 
       const [toBase, fromBase] = [
+        kibibitsConversion[1],
         yobibitsConversion[0],
-        kibibitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Kib"] as const;
+      const expected = [fromBase(toBase(v)), "Kib"] as const;
       const conversionCandidate = [v, "Yib"] as const;
 
       expect(information["Kib"](conversionCandidate)).toEqual(expected);
@@ -4684,11 +4684,11 @@ describe("information", () => {
       const yottabytesConversion = linearConversion(819200000000);
 
       const [toBase, fromBase] = [
+        kibibitsConversion[1],
         yottabytesConversion[0],
-        kibibitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Kib"] as const;
+      const expected = [fromBase(toBase(v)), "Kib"] as const;
       const conversionCandidate = [v, "YB"] as const;
 
       expect(information["Kib"](conversionCandidate)).toEqual(expected);
@@ -4708,11 +4708,11 @@ describe("information", () => {
       const bitsConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
+        kilobytesConversion[1],
         bitsConversion[0],
-        kilobytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "KB"] as const;
+      const expected = [fromBase(toBase(v)), "KB"] as const;
       const conversionCandidate = [v, "b"] as const;
 
       expect(information["KB"](conversionCandidate)).toEqual(expected);
@@ -4724,11 +4724,11 @@ describe("information", () => {
       const bytesConversion = linearConversion(8);
 
       const [toBase, fromBase] = [
+        kilobytesConversion[1],
         bytesConversion[0],
-        kilobytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "KB"] as const;
+      const expected = [fromBase(toBase(v)), "KB"] as const;
       const conversionCandidate = [v, "B"] as const;
 
       expect(information["KB"](conversionCandidate)).toEqual(expected);
@@ -4740,11 +4740,11 @@ describe("information", () => {
       const kilobitsConversion = linearConversion(1000);
 
       const [toBase, fromBase] = [
+        kilobytesConversion[1],
         kilobitsConversion[0],
-        kilobytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "KB"] as const;
+      const expected = [fromBase(toBase(v)), "KB"] as const;
       const conversionCandidate = [v, "kb"] as const;
 
       expect(information["KB"](conversionCandidate)).toEqual(expected);
@@ -4756,11 +4756,11 @@ describe("information", () => {
       const megabitsConversion = linearConversion(100000);
 
       const [toBase, fromBase] = [
+        kilobytesConversion[1],
         megabitsConversion[0],
-        kilobytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "KB"] as const;
+      const expected = [fromBase(toBase(v)), "KB"] as const;
       const conversionCandidate = [v, "Mb"] as const;
 
       expect(information["KB"](conversionCandidate)).toEqual(expected);
@@ -4772,11 +4772,11 @@ describe("information", () => {
       const gigabitsConversion = linearConversion(1000000);
 
       const [toBase, fromBase] = [
+        kilobytesConversion[1],
         gigabitsConversion[0],
-        kilobytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "KB"] as const;
+      const expected = [fromBase(toBase(v)), "KB"] as const;
       const conversionCandidate = [v, "Gb"] as const;
 
       expect(information["KB"](conversionCandidate)).toEqual(expected);
@@ -4788,11 +4788,11 @@ describe("information", () => {
       const terabitsConversion = linearConversion(10000000);
 
       const [toBase, fromBase] = [
+        kilobytesConversion[1],
         terabitsConversion[0],
-        kilobytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "KB"] as const;
+      const expected = [fromBase(toBase(v)), "KB"] as const;
       const conversionCandidate = [v, "Tb"] as const;
 
       expect(information["KB"](conversionCandidate)).toEqual(expected);
@@ -4804,11 +4804,11 @@ describe("information", () => {
       const petabitsConversion = linearConversion(100000000);
 
       const [toBase, fromBase] = [
+        kilobytesConversion[1],
         petabitsConversion[0],
-        kilobytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "KB"] as const;
+      const expected = [fromBase(toBase(v)), "KB"] as const;
       const conversionCandidate = [v, "Pb"] as const;
 
       expect(information["KB"](conversionCandidate)).toEqual(expected);
@@ -4820,11 +4820,11 @@ describe("information", () => {
       const exabitsConversion = linearConversion(1000000000);
 
       const [toBase, fromBase] = [
+        kilobytesConversion[1],
         exabitsConversion[0],
-        kilobytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "KB"] as const;
+      const expected = [fromBase(toBase(v)), "KB"] as const;
       const conversionCandidate = [v, "Eb"] as const;
 
       expect(information["KB"](conversionCandidate)).toEqual(expected);
@@ -4836,11 +4836,11 @@ describe("information", () => {
       const zettabitsConversion = linearConversion(10000000000);
 
       const [toBase, fromBase] = [
+        kilobytesConversion[1],
         zettabitsConversion[0],
-        kilobytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "KB"] as const;
+      const expected = [fromBase(toBase(v)), "KB"] as const;
       const conversionCandidate = [v, "Zb"] as const;
 
       expect(information["KB"](conversionCandidate)).toEqual(expected);
@@ -4852,11 +4852,11 @@ describe("information", () => {
       const yottabitsConversion = linearConversion(100000000000);
 
       const [toBase, fromBase] = [
+        kilobytesConversion[1],
         yottabitsConversion[0],
-        kilobytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "KB"] as const;
+      const expected = [fromBase(toBase(v)), "KB"] as const;
       const conversionCandidate = [v, "Yb"] as const;
 
       expect(information["KB"](conversionCandidate)).toEqual(expected);
@@ -4868,11 +4868,11 @@ describe("information", () => {
       const kibibitsConversion = linearConversion(1024);
 
       const [toBase, fromBase] = [
+        kilobytesConversion[1],
         kibibitsConversion[0],
-        kilobytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "KB"] as const;
+      const expected = [fromBase(toBase(v)), "KB"] as const;
       const conversionCandidate = [v, "Kib"] as const;
 
       expect(information["KB"](conversionCandidate)).toEqual(expected);
@@ -4886,11 +4886,11 @@ describe("information", () => {
       const mebibitsConversion = linearConversion(102400);
 
       const [toBase, fromBase] = [
+        kilobytesConversion[1],
         mebibitsConversion[0],
-        kilobytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "KB"] as const;
+      const expected = [fromBase(toBase(v)), "KB"] as const;
       const conversionCandidate = [v, "Mib"] as const;
 
       expect(information["KB"](conversionCandidate)).toEqual(expected);
@@ -4902,11 +4902,11 @@ describe("information", () => {
       const megabytesConversion = linearConversion(819200);
 
       const [toBase, fromBase] = [
+        kilobytesConversion[1],
         megabytesConversion[0],
-        kilobytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "KB"] as const;
+      const expected = [fromBase(toBase(v)), "KB"] as const;
       const conversionCandidate = [v, "MB"] as const;
 
       expect(information["KB"](conversionCandidate)).toEqual(expected);
@@ -4918,11 +4918,11 @@ describe("information", () => {
       const gibibitsConversion = linearConversion(1024000);
 
       const [toBase, fromBase] = [
+        kilobytesConversion[1],
         gibibitsConversion[0],
-        kilobytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "KB"] as const;
+      const expected = [fromBase(toBase(v)), "KB"] as const;
       const conversionCandidate = [v, "Gib"] as const;
 
       expect(information["KB"](conversionCandidate)).toEqual(expected);
@@ -4934,11 +4934,11 @@ describe("information", () => {
       const gigabytesConversion = linearConversion(8192000);
 
       const [toBase, fromBase] = [
+        kilobytesConversion[1],
         gigabytesConversion[0],
-        kilobytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "KB"] as const;
+      const expected = [fromBase(toBase(v)), "KB"] as const;
       const conversionCandidate = [v, "GB"] as const;
 
       expect(information["KB"](conversionCandidate)).toEqual(expected);
@@ -4950,11 +4950,11 @@ describe("information", () => {
       const tebibitsConversion = linearConversion(10240000);
 
       const [toBase, fromBase] = [
+        kilobytesConversion[1],
         tebibitsConversion[0],
-        kilobytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "KB"] as const;
+      const expected = [fromBase(toBase(v)), "KB"] as const;
       const conversionCandidate = [v, "Tib"] as const;
 
       expect(information["KB"](conversionCandidate)).toEqual(expected);
@@ -4966,11 +4966,11 @@ describe("information", () => {
       const terabytesConversion = linearConversion(81920000);
 
       const [toBase, fromBase] = [
+        kilobytesConversion[1],
         terabytesConversion[0],
-        kilobytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "KB"] as const;
+      const expected = [fromBase(toBase(v)), "KB"] as const;
       const conversionCandidate = [v, "TB"] as const;
 
       expect(information["KB"](conversionCandidate)).toEqual(expected);
@@ -4982,11 +4982,11 @@ describe("information", () => {
       const pebibitsConversion = linearConversion(102400000);
 
       const [toBase, fromBase] = [
+        kilobytesConversion[1],
         pebibitsConversion[0],
-        kilobytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "KB"] as const;
+      const expected = [fromBase(toBase(v)), "KB"] as const;
       const conversionCandidate = [v, "Pib"] as const;
 
       expect(information["KB"](conversionCandidate)).toEqual(expected);
@@ -4998,11 +4998,11 @@ describe("information", () => {
       const petabytesConversion = linearConversion(819200000);
 
       const [toBase, fromBase] = [
+        kilobytesConversion[1],
         petabytesConversion[0],
-        kilobytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "KB"] as const;
+      const expected = [fromBase(toBase(v)), "KB"] as const;
       const conversionCandidate = [v, "PB"] as const;
 
       expect(information["KB"](conversionCandidate)).toEqual(expected);
@@ -5014,11 +5014,11 @@ describe("information", () => {
       const exbibitsConversion = linearConversion(1024000000);
 
       const [toBase, fromBase] = [
+        kilobytesConversion[1],
         exbibitsConversion[0],
-        kilobytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "KB"] as const;
+      const expected = [fromBase(toBase(v)), "KB"] as const;
       const conversionCandidate = [v, "Eib"] as const;
 
       expect(information["KB"](conversionCandidate)).toEqual(expected);
@@ -5030,11 +5030,11 @@ describe("information", () => {
       const exabytesConversion = linearConversion(8192000000);
 
       const [toBase, fromBase] = [
+        kilobytesConversion[1],
         exabytesConversion[0],
-        kilobytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "KB"] as const;
+      const expected = [fromBase(toBase(v)), "KB"] as const;
       const conversionCandidate = [v, "EB"] as const;
 
       expect(information["KB"](conversionCandidate)).toEqual(expected);
@@ -5046,11 +5046,11 @@ describe("information", () => {
       const zebibitsConversion = linearConversion(10240000000);
 
       const [toBase, fromBase] = [
+        kilobytesConversion[1],
         zebibitsConversion[0],
-        kilobytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "KB"] as const;
+      const expected = [fromBase(toBase(v)), "KB"] as const;
       const conversionCandidate = [v, "Zib"] as const;
 
       expect(information["KB"](conversionCandidate)).toEqual(expected);
@@ -5062,11 +5062,11 @@ describe("information", () => {
       const zettabytesConversion = linearConversion(81920000000);
 
       const [toBase, fromBase] = [
+        kilobytesConversion[1],
         zettabytesConversion[0],
-        kilobytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "KB"] as const;
+      const expected = [fromBase(toBase(v)), "KB"] as const;
       const conversionCandidate = [v, "ZB"] as const;
 
       expect(information["KB"](conversionCandidate)).toEqual(expected);
@@ -5078,11 +5078,11 @@ describe("information", () => {
       const yobibitsConversion = linearConversion(102400000000);
 
       const [toBase, fromBase] = [
+        kilobytesConversion[1],
         yobibitsConversion[0],
-        kilobytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "KB"] as const;
+      const expected = [fromBase(toBase(v)), "KB"] as const;
       const conversionCandidate = [v, "Yib"] as const;
 
       expect(information["KB"](conversionCandidate)).toEqual(expected);
@@ -5094,11 +5094,11 @@ describe("information", () => {
       const yottabytesConversion = linearConversion(819200000000);
 
       const [toBase, fromBase] = [
+        kilobytesConversion[1],
         yottabytesConversion[0],
-        kilobytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "KB"] as const;
+      const expected = [fromBase(toBase(v)), "KB"] as const;
       const conversionCandidate = [v, "YB"] as const;
 
       expect(information["KB"](conversionCandidate)).toEqual(expected);
@@ -5118,11 +5118,11 @@ describe("information", () => {
       const bitsConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
+        mebibitsConversion[1],
         bitsConversion[0],
-        mebibitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Mib"] as const;
+      const expected = [fromBase(toBase(v)), "Mib"] as const;
       const conversionCandidate = [v, "b"] as const;
 
       expect(information["Mib"](conversionCandidate)).toEqual(expected);
@@ -5134,11 +5134,11 @@ describe("information", () => {
       const bytesConversion = linearConversion(8);
 
       const [toBase, fromBase] = [
+        mebibitsConversion[1],
         bytesConversion[0],
-        mebibitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Mib"] as const;
+      const expected = [fromBase(toBase(v)), "Mib"] as const;
       const conversionCandidate = [v, "B"] as const;
 
       expect(information["Mib"](conversionCandidate)).toEqual(expected);
@@ -5150,11 +5150,11 @@ describe("information", () => {
       const kilobitsConversion = linearConversion(1000);
 
       const [toBase, fromBase] = [
+        mebibitsConversion[1],
         kilobitsConversion[0],
-        mebibitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Mib"] as const;
+      const expected = [fromBase(toBase(v)), "Mib"] as const;
       const conversionCandidate = [v, "kb"] as const;
 
       expect(information["Mib"](conversionCandidate)).toEqual(expected);
@@ -5166,11 +5166,11 @@ describe("information", () => {
       const megabitsConversion = linearConversion(100000);
 
       const [toBase, fromBase] = [
+        mebibitsConversion[1],
         megabitsConversion[0],
-        mebibitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Mib"] as const;
+      const expected = [fromBase(toBase(v)), "Mib"] as const;
       const conversionCandidate = [v, "Mb"] as const;
 
       expect(information["Mib"](conversionCandidate)).toEqual(expected);
@@ -5182,11 +5182,11 @@ describe("information", () => {
       const gigabitsConversion = linearConversion(1000000);
 
       const [toBase, fromBase] = [
+        mebibitsConversion[1],
         gigabitsConversion[0],
-        mebibitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Mib"] as const;
+      const expected = [fromBase(toBase(v)), "Mib"] as const;
       const conversionCandidate = [v, "Gb"] as const;
 
       expect(information["Mib"](conversionCandidate)).toEqual(expected);
@@ -5198,11 +5198,11 @@ describe("information", () => {
       const terabitsConversion = linearConversion(10000000);
 
       const [toBase, fromBase] = [
+        mebibitsConversion[1],
         terabitsConversion[0],
-        mebibitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Mib"] as const;
+      const expected = [fromBase(toBase(v)), "Mib"] as const;
       const conversionCandidate = [v, "Tb"] as const;
 
       expect(information["Mib"](conversionCandidate)).toEqual(expected);
@@ -5214,11 +5214,11 @@ describe("information", () => {
       const petabitsConversion = linearConversion(100000000);
 
       const [toBase, fromBase] = [
+        mebibitsConversion[1],
         petabitsConversion[0],
-        mebibitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Mib"] as const;
+      const expected = [fromBase(toBase(v)), "Mib"] as const;
       const conversionCandidate = [v, "Pb"] as const;
 
       expect(information["Mib"](conversionCandidate)).toEqual(expected);
@@ -5230,11 +5230,11 @@ describe("information", () => {
       const exabitsConversion = linearConversion(1000000000);
 
       const [toBase, fromBase] = [
+        mebibitsConversion[1],
         exabitsConversion[0],
-        mebibitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Mib"] as const;
+      const expected = [fromBase(toBase(v)), "Mib"] as const;
       const conversionCandidate = [v, "Eb"] as const;
 
       expect(information["Mib"](conversionCandidate)).toEqual(expected);
@@ -5246,11 +5246,11 @@ describe("information", () => {
       const zettabitsConversion = linearConversion(10000000000);
 
       const [toBase, fromBase] = [
+        mebibitsConversion[1],
         zettabitsConversion[0],
-        mebibitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Mib"] as const;
+      const expected = [fromBase(toBase(v)), "Mib"] as const;
       const conversionCandidate = [v, "Zb"] as const;
 
       expect(information["Mib"](conversionCandidate)).toEqual(expected);
@@ -5262,11 +5262,11 @@ describe("information", () => {
       const yottabitsConversion = linearConversion(100000000000);
 
       const [toBase, fromBase] = [
+        mebibitsConversion[1],
         yottabitsConversion[0],
-        mebibitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Mib"] as const;
+      const expected = [fromBase(toBase(v)), "Mib"] as const;
       const conversionCandidate = [v, "Yb"] as const;
 
       expect(information["Mib"](conversionCandidate)).toEqual(expected);
@@ -5278,11 +5278,11 @@ describe("information", () => {
       const kibibitsConversion = linearConversion(1024);
 
       const [toBase, fromBase] = [
+        mebibitsConversion[1],
         kibibitsConversion[0],
-        mebibitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Mib"] as const;
+      const expected = [fromBase(toBase(v)), "Mib"] as const;
       const conversionCandidate = [v, "Kib"] as const;
 
       expect(information["Mib"](conversionCandidate)).toEqual(expected);
@@ -5294,11 +5294,11 @@ describe("information", () => {
       const kilobytesConversion = linearConversion(8192);
 
       const [toBase, fromBase] = [
+        mebibitsConversion[1],
         kilobytesConversion[0],
-        mebibitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Mib"] as const;
+      const expected = [fromBase(toBase(v)), "Mib"] as const;
       const conversionCandidate = [v, "KB"] as const;
 
       expect(information["Mib"](conversionCandidate)).toEqual(expected);
@@ -5312,11 +5312,11 @@ describe("information", () => {
       const megabytesConversion = linearConversion(819200);
 
       const [toBase, fromBase] = [
+        mebibitsConversion[1],
         megabytesConversion[0],
-        mebibitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Mib"] as const;
+      const expected = [fromBase(toBase(v)), "Mib"] as const;
       const conversionCandidate = [v, "MB"] as const;
 
       expect(information["Mib"](conversionCandidate)).toEqual(expected);
@@ -5328,11 +5328,11 @@ describe("information", () => {
       const gibibitsConversion = linearConversion(1024000);
 
       const [toBase, fromBase] = [
+        mebibitsConversion[1],
         gibibitsConversion[0],
-        mebibitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Mib"] as const;
+      const expected = [fromBase(toBase(v)), "Mib"] as const;
       const conversionCandidate = [v, "Gib"] as const;
 
       expect(information["Mib"](conversionCandidate)).toEqual(expected);
@@ -5344,11 +5344,11 @@ describe("information", () => {
       const gigabytesConversion = linearConversion(8192000);
 
       const [toBase, fromBase] = [
+        mebibitsConversion[1],
         gigabytesConversion[0],
-        mebibitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Mib"] as const;
+      const expected = [fromBase(toBase(v)), "Mib"] as const;
       const conversionCandidate = [v, "GB"] as const;
 
       expect(information["Mib"](conversionCandidate)).toEqual(expected);
@@ -5360,11 +5360,11 @@ describe("information", () => {
       const tebibitsConversion = linearConversion(10240000);
 
       const [toBase, fromBase] = [
+        mebibitsConversion[1],
         tebibitsConversion[0],
-        mebibitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Mib"] as const;
+      const expected = [fromBase(toBase(v)), "Mib"] as const;
       const conversionCandidate = [v, "Tib"] as const;
 
       expect(information["Mib"](conversionCandidate)).toEqual(expected);
@@ -5376,11 +5376,11 @@ describe("information", () => {
       const terabytesConversion = linearConversion(81920000);
 
       const [toBase, fromBase] = [
+        mebibitsConversion[1],
         terabytesConversion[0],
-        mebibitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Mib"] as const;
+      const expected = [fromBase(toBase(v)), "Mib"] as const;
       const conversionCandidate = [v, "TB"] as const;
 
       expect(information["Mib"](conversionCandidate)).toEqual(expected);
@@ -5392,11 +5392,11 @@ describe("information", () => {
       const pebibitsConversion = linearConversion(102400000);
 
       const [toBase, fromBase] = [
+        mebibitsConversion[1],
         pebibitsConversion[0],
-        mebibitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Mib"] as const;
+      const expected = [fromBase(toBase(v)), "Mib"] as const;
       const conversionCandidate = [v, "Pib"] as const;
 
       expect(information["Mib"](conversionCandidate)).toEqual(expected);
@@ -5408,11 +5408,11 @@ describe("information", () => {
       const petabytesConversion = linearConversion(819200000);
 
       const [toBase, fromBase] = [
+        mebibitsConversion[1],
         petabytesConversion[0],
-        mebibitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Mib"] as const;
+      const expected = [fromBase(toBase(v)), "Mib"] as const;
       const conversionCandidate = [v, "PB"] as const;
 
       expect(information["Mib"](conversionCandidate)).toEqual(expected);
@@ -5424,11 +5424,11 @@ describe("information", () => {
       const exbibitsConversion = linearConversion(1024000000);
 
       const [toBase, fromBase] = [
+        mebibitsConversion[1],
         exbibitsConversion[0],
-        mebibitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Mib"] as const;
+      const expected = [fromBase(toBase(v)), "Mib"] as const;
       const conversionCandidate = [v, "Eib"] as const;
 
       expect(information["Mib"](conversionCandidate)).toEqual(expected);
@@ -5440,11 +5440,11 @@ describe("information", () => {
       const exabytesConversion = linearConversion(8192000000);
 
       const [toBase, fromBase] = [
+        mebibitsConversion[1],
         exabytesConversion[0],
-        mebibitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Mib"] as const;
+      const expected = [fromBase(toBase(v)), "Mib"] as const;
       const conversionCandidate = [v, "EB"] as const;
 
       expect(information["Mib"](conversionCandidate)).toEqual(expected);
@@ -5456,11 +5456,11 @@ describe("information", () => {
       const zebibitsConversion = linearConversion(10240000000);
 
       const [toBase, fromBase] = [
+        mebibitsConversion[1],
         zebibitsConversion[0],
-        mebibitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Mib"] as const;
+      const expected = [fromBase(toBase(v)), "Mib"] as const;
       const conversionCandidate = [v, "Zib"] as const;
 
       expect(information["Mib"](conversionCandidate)).toEqual(expected);
@@ -5472,11 +5472,11 @@ describe("information", () => {
       const zettabytesConversion = linearConversion(81920000000);
 
       const [toBase, fromBase] = [
+        mebibitsConversion[1],
         zettabytesConversion[0],
-        mebibitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Mib"] as const;
+      const expected = [fromBase(toBase(v)), "Mib"] as const;
       const conversionCandidate = [v, "ZB"] as const;
 
       expect(information["Mib"](conversionCandidate)).toEqual(expected);
@@ -5488,11 +5488,11 @@ describe("information", () => {
       const yobibitsConversion = linearConversion(102400000000);
 
       const [toBase, fromBase] = [
+        mebibitsConversion[1],
         yobibitsConversion[0],
-        mebibitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Mib"] as const;
+      const expected = [fromBase(toBase(v)), "Mib"] as const;
       const conversionCandidate = [v, "Yib"] as const;
 
       expect(information["Mib"](conversionCandidate)).toEqual(expected);
@@ -5504,11 +5504,11 @@ describe("information", () => {
       const yottabytesConversion = linearConversion(819200000000);
 
       const [toBase, fromBase] = [
+        mebibitsConversion[1],
         yottabytesConversion[0],
-        mebibitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Mib"] as const;
+      const expected = [fromBase(toBase(v)), "Mib"] as const;
       const conversionCandidate = [v, "YB"] as const;
 
       expect(information["Mib"](conversionCandidate)).toEqual(expected);
@@ -5528,11 +5528,11 @@ describe("information", () => {
       const bitsConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
+        megabytesConversion[1],
         bitsConversion[0],
-        megabytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "MB"] as const;
+      const expected = [fromBase(toBase(v)), "MB"] as const;
       const conversionCandidate = [v, "b"] as const;
 
       expect(information["MB"](conversionCandidate)).toEqual(expected);
@@ -5544,11 +5544,11 @@ describe("information", () => {
       const bytesConversion = linearConversion(8);
 
       const [toBase, fromBase] = [
+        megabytesConversion[1],
         bytesConversion[0],
-        megabytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "MB"] as const;
+      const expected = [fromBase(toBase(v)), "MB"] as const;
       const conversionCandidate = [v, "B"] as const;
 
       expect(information["MB"](conversionCandidate)).toEqual(expected);
@@ -5560,11 +5560,11 @@ describe("information", () => {
       const kilobitsConversion = linearConversion(1000);
 
       const [toBase, fromBase] = [
+        megabytesConversion[1],
         kilobitsConversion[0],
-        megabytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "MB"] as const;
+      const expected = [fromBase(toBase(v)), "MB"] as const;
       const conversionCandidate = [v, "kb"] as const;
 
       expect(information["MB"](conversionCandidate)).toEqual(expected);
@@ -5576,11 +5576,11 @@ describe("information", () => {
       const megabitsConversion = linearConversion(100000);
 
       const [toBase, fromBase] = [
+        megabytesConversion[1],
         megabitsConversion[0],
-        megabytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "MB"] as const;
+      const expected = [fromBase(toBase(v)), "MB"] as const;
       const conversionCandidate = [v, "Mb"] as const;
 
       expect(information["MB"](conversionCandidate)).toEqual(expected);
@@ -5592,11 +5592,11 @@ describe("information", () => {
       const gigabitsConversion = linearConversion(1000000);
 
       const [toBase, fromBase] = [
+        megabytesConversion[1],
         gigabitsConversion[0],
-        megabytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "MB"] as const;
+      const expected = [fromBase(toBase(v)), "MB"] as const;
       const conversionCandidate = [v, "Gb"] as const;
 
       expect(information["MB"](conversionCandidate)).toEqual(expected);
@@ -5608,11 +5608,11 @@ describe("information", () => {
       const terabitsConversion = linearConversion(10000000);
 
       const [toBase, fromBase] = [
+        megabytesConversion[1],
         terabitsConversion[0],
-        megabytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "MB"] as const;
+      const expected = [fromBase(toBase(v)), "MB"] as const;
       const conversionCandidate = [v, "Tb"] as const;
 
       expect(information["MB"](conversionCandidate)).toEqual(expected);
@@ -5624,11 +5624,11 @@ describe("information", () => {
       const petabitsConversion = linearConversion(100000000);
 
       const [toBase, fromBase] = [
+        megabytesConversion[1],
         petabitsConversion[0],
-        megabytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "MB"] as const;
+      const expected = [fromBase(toBase(v)), "MB"] as const;
       const conversionCandidate = [v, "Pb"] as const;
 
       expect(information["MB"](conversionCandidate)).toEqual(expected);
@@ -5640,11 +5640,11 @@ describe("information", () => {
       const exabitsConversion = linearConversion(1000000000);
 
       const [toBase, fromBase] = [
+        megabytesConversion[1],
         exabitsConversion[0],
-        megabytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "MB"] as const;
+      const expected = [fromBase(toBase(v)), "MB"] as const;
       const conversionCandidate = [v, "Eb"] as const;
 
       expect(information["MB"](conversionCandidate)).toEqual(expected);
@@ -5656,11 +5656,11 @@ describe("information", () => {
       const zettabitsConversion = linearConversion(10000000000);
 
       const [toBase, fromBase] = [
+        megabytesConversion[1],
         zettabitsConversion[0],
-        megabytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "MB"] as const;
+      const expected = [fromBase(toBase(v)), "MB"] as const;
       const conversionCandidate = [v, "Zb"] as const;
 
       expect(information["MB"](conversionCandidate)).toEqual(expected);
@@ -5672,11 +5672,11 @@ describe("information", () => {
       const yottabitsConversion = linearConversion(100000000000);
 
       const [toBase, fromBase] = [
+        megabytesConversion[1],
         yottabitsConversion[0],
-        megabytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "MB"] as const;
+      const expected = [fromBase(toBase(v)), "MB"] as const;
       const conversionCandidate = [v, "Yb"] as const;
 
       expect(information["MB"](conversionCandidate)).toEqual(expected);
@@ -5688,11 +5688,11 @@ describe("information", () => {
       const kibibitsConversion = linearConversion(1024);
 
       const [toBase, fromBase] = [
+        megabytesConversion[1],
         kibibitsConversion[0],
-        megabytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "MB"] as const;
+      const expected = [fromBase(toBase(v)), "MB"] as const;
       const conversionCandidate = [v, "Kib"] as const;
 
       expect(information["MB"](conversionCandidate)).toEqual(expected);
@@ -5704,11 +5704,11 @@ describe("information", () => {
       const kilobytesConversion = linearConversion(8192);
 
       const [toBase, fromBase] = [
+        megabytesConversion[1],
         kilobytesConversion[0],
-        megabytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "MB"] as const;
+      const expected = [fromBase(toBase(v)), "MB"] as const;
       const conversionCandidate = [v, "KB"] as const;
 
       expect(information["MB"](conversionCandidate)).toEqual(expected);
@@ -5720,11 +5720,11 @@ describe("information", () => {
       const mebibitsConversion = linearConversion(102400);
 
       const [toBase, fromBase] = [
+        megabytesConversion[1],
         mebibitsConversion[0],
-        megabytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "MB"] as const;
+      const expected = [fromBase(toBase(v)), "MB"] as const;
       const conversionCandidate = [v, "Mib"] as const;
 
       expect(information["MB"](conversionCandidate)).toEqual(expected);
@@ -5738,11 +5738,11 @@ describe("information", () => {
       const gibibitsConversion = linearConversion(1024000);
 
       const [toBase, fromBase] = [
+        megabytesConversion[1],
         gibibitsConversion[0],
-        megabytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "MB"] as const;
+      const expected = [fromBase(toBase(v)), "MB"] as const;
       const conversionCandidate = [v, "Gib"] as const;
 
       expect(information["MB"](conversionCandidate)).toEqual(expected);
@@ -5754,11 +5754,11 @@ describe("information", () => {
       const gigabytesConversion = linearConversion(8192000);
 
       const [toBase, fromBase] = [
+        megabytesConversion[1],
         gigabytesConversion[0],
-        megabytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "MB"] as const;
+      const expected = [fromBase(toBase(v)), "MB"] as const;
       const conversionCandidate = [v, "GB"] as const;
 
       expect(information["MB"](conversionCandidate)).toEqual(expected);
@@ -5770,11 +5770,11 @@ describe("information", () => {
       const tebibitsConversion = linearConversion(10240000);
 
       const [toBase, fromBase] = [
+        megabytesConversion[1],
         tebibitsConversion[0],
-        megabytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "MB"] as const;
+      const expected = [fromBase(toBase(v)), "MB"] as const;
       const conversionCandidate = [v, "Tib"] as const;
 
       expect(information["MB"](conversionCandidate)).toEqual(expected);
@@ -5786,11 +5786,11 @@ describe("information", () => {
       const terabytesConversion = linearConversion(81920000);
 
       const [toBase, fromBase] = [
+        megabytesConversion[1],
         terabytesConversion[0],
-        megabytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "MB"] as const;
+      const expected = [fromBase(toBase(v)), "MB"] as const;
       const conversionCandidate = [v, "TB"] as const;
 
       expect(information["MB"](conversionCandidate)).toEqual(expected);
@@ -5802,11 +5802,11 @@ describe("information", () => {
       const pebibitsConversion = linearConversion(102400000);
 
       const [toBase, fromBase] = [
+        megabytesConversion[1],
         pebibitsConversion[0],
-        megabytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "MB"] as const;
+      const expected = [fromBase(toBase(v)), "MB"] as const;
       const conversionCandidate = [v, "Pib"] as const;
 
       expect(information["MB"](conversionCandidate)).toEqual(expected);
@@ -5818,11 +5818,11 @@ describe("information", () => {
       const petabytesConversion = linearConversion(819200000);
 
       const [toBase, fromBase] = [
+        megabytesConversion[1],
         petabytesConversion[0],
-        megabytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "MB"] as const;
+      const expected = [fromBase(toBase(v)), "MB"] as const;
       const conversionCandidate = [v, "PB"] as const;
 
       expect(information["MB"](conversionCandidate)).toEqual(expected);
@@ -5834,11 +5834,11 @@ describe("information", () => {
       const exbibitsConversion = linearConversion(1024000000);
 
       const [toBase, fromBase] = [
+        megabytesConversion[1],
         exbibitsConversion[0],
-        megabytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "MB"] as const;
+      const expected = [fromBase(toBase(v)), "MB"] as const;
       const conversionCandidate = [v, "Eib"] as const;
 
       expect(information["MB"](conversionCandidate)).toEqual(expected);
@@ -5850,11 +5850,11 @@ describe("information", () => {
       const exabytesConversion = linearConversion(8192000000);
 
       const [toBase, fromBase] = [
+        megabytesConversion[1],
         exabytesConversion[0],
-        megabytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "MB"] as const;
+      const expected = [fromBase(toBase(v)), "MB"] as const;
       const conversionCandidate = [v, "EB"] as const;
 
       expect(information["MB"](conversionCandidate)).toEqual(expected);
@@ -5866,11 +5866,11 @@ describe("information", () => {
       const zebibitsConversion = linearConversion(10240000000);
 
       const [toBase, fromBase] = [
+        megabytesConversion[1],
         zebibitsConversion[0],
-        megabytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "MB"] as const;
+      const expected = [fromBase(toBase(v)), "MB"] as const;
       const conversionCandidate = [v, "Zib"] as const;
 
       expect(information["MB"](conversionCandidate)).toEqual(expected);
@@ -5882,11 +5882,11 @@ describe("information", () => {
       const zettabytesConversion = linearConversion(81920000000);
 
       const [toBase, fromBase] = [
+        megabytesConversion[1],
         zettabytesConversion[0],
-        megabytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "MB"] as const;
+      const expected = [fromBase(toBase(v)), "MB"] as const;
       const conversionCandidate = [v, "ZB"] as const;
 
       expect(information["MB"](conversionCandidate)).toEqual(expected);
@@ -5898,11 +5898,11 @@ describe("information", () => {
       const yobibitsConversion = linearConversion(102400000000);
 
       const [toBase, fromBase] = [
+        megabytesConversion[1],
         yobibitsConversion[0],
-        megabytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "MB"] as const;
+      const expected = [fromBase(toBase(v)), "MB"] as const;
       const conversionCandidate = [v, "Yib"] as const;
 
       expect(information["MB"](conversionCandidate)).toEqual(expected);
@@ -5914,11 +5914,11 @@ describe("information", () => {
       const yottabytesConversion = linearConversion(819200000000);
 
       const [toBase, fromBase] = [
+        megabytesConversion[1],
         yottabytesConversion[0],
-        megabytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "MB"] as const;
+      const expected = [fromBase(toBase(v)), "MB"] as const;
       const conversionCandidate = [v, "YB"] as const;
 
       expect(information["MB"](conversionCandidate)).toEqual(expected);
@@ -5938,11 +5938,11 @@ describe("information", () => {
       const bitsConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
+        gibibitsConversion[1],
         bitsConversion[0],
-        gibibitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Gib"] as const;
+      const expected = [fromBase(toBase(v)), "Gib"] as const;
       const conversionCandidate = [v, "b"] as const;
 
       expect(information["Gib"](conversionCandidate)).toEqual(expected);
@@ -5954,11 +5954,11 @@ describe("information", () => {
       const bytesConversion = linearConversion(8);
 
       const [toBase, fromBase] = [
+        gibibitsConversion[1],
         bytesConversion[0],
-        gibibitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Gib"] as const;
+      const expected = [fromBase(toBase(v)), "Gib"] as const;
       const conversionCandidate = [v, "B"] as const;
 
       expect(information["Gib"](conversionCandidate)).toEqual(expected);
@@ -5970,11 +5970,11 @@ describe("information", () => {
       const kilobitsConversion = linearConversion(1000);
 
       const [toBase, fromBase] = [
+        gibibitsConversion[1],
         kilobitsConversion[0],
-        gibibitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Gib"] as const;
+      const expected = [fromBase(toBase(v)), "Gib"] as const;
       const conversionCandidate = [v, "kb"] as const;
 
       expect(information["Gib"](conversionCandidate)).toEqual(expected);
@@ -5986,11 +5986,11 @@ describe("information", () => {
       const megabitsConversion = linearConversion(100000);
 
       const [toBase, fromBase] = [
+        gibibitsConversion[1],
         megabitsConversion[0],
-        gibibitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Gib"] as const;
+      const expected = [fromBase(toBase(v)), "Gib"] as const;
       const conversionCandidate = [v, "Mb"] as const;
 
       expect(information["Gib"](conversionCandidate)).toEqual(expected);
@@ -6002,11 +6002,11 @@ describe("information", () => {
       const gigabitsConversion = linearConversion(1000000);
 
       const [toBase, fromBase] = [
+        gibibitsConversion[1],
         gigabitsConversion[0],
-        gibibitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Gib"] as const;
+      const expected = [fromBase(toBase(v)), "Gib"] as const;
       const conversionCandidate = [v, "Gb"] as const;
 
       expect(information["Gib"](conversionCandidate)).toEqual(expected);
@@ -6018,11 +6018,11 @@ describe("information", () => {
       const terabitsConversion = linearConversion(10000000);
 
       const [toBase, fromBase] = [
+        gibibitsConversion[1],
         terabitsConversion[0],
-        gibibitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Gib"] as const;
+      const expected = [fromBase(toBase(v)), "Gib"] as const;
       const conversionCandidate = [v, "Tb"] as const;
 
       expect(information["Gib"](conversionCandidate)).toEqual(expected);
@@ -6034,11 +6034,11 @@ describe("information", () => {
       const petabitsConversion = linearConversion(100000000);
 
       const [toBase, fromBase] = [
+        gibibitsConversion[1],
         petabitsConversion[0],
-        gibibitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Gib"] as const;
+      const expected = [fromBase(toBase(v)), "Gib"] as const;
       const conversionCandidate = [v, "Pb"] as const;
 
       expect(information["Gib"](conversionCandidate)).toEqual(expected);
@@ -6050,11 +6050,11 @@ describe("information", () => {
       const exabitsConversion = linearConversion(1000000000);
 
       const [toBase, fromBase] = [
+        gibibitsConversion[1],
         exabitsConversion[0],
-        gibibitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Gib"] as const;
+      const expected = [fromBase(toBase(v)), "Gib"] as const;
       const conversionCandidate = [v, "Eb"] as const;
 
       expect(information["Gib"](conversionCandidate)).toEqual(expected);
@@ -6066,11 +6066,11 @@ describe("information", () => {
       const zettabitsConversion = linearConversion(10000000000);
 
       const [toBase, fromBase] = [
+        gibibitsConversion[1],
         zettabitsConversion[0],
-        gibibitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Gib"] as const;
+      const expected = [fromBase(toBase(v)), "Gib"] as const;
       const conversionCandidate = [v, "Zb"] as const;
 
       expect(information["Gib"](conversionCandidate)).toEqual(expected);
@@ -6082,11 +6082,11 @@ describe("information", () => {
       const yottabitsConversion = linearConversion(100000000000);
 
       const [toBase, fromBase] = [
+        gibibitsConversion[1],
         yottabitsConversion[0],
-        gibibitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Gib"] as const;
+      const expected = [fromBase(toBase(v)), "Gib"] as const;
       const conversionCandidate = [v, "Yb"] as const;
 
       expect(information["Gib"](conversionCandidate)).toEqual(expected);
@@ -6098,11 +6098,11 @@ describe("information", () => {
       const kibibitsConversion = linearConversion(1024);
 
       const [toBase, fromBase] = [
+        gibibitsConversion[1],
         kibibitsConversion[0],
-        gibibitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Gib"] as const;
+      const expected = [fromBase(toBase(v)), "Gib"] as const;
       const conversionCandidate = [v, "Kib"] as const;
 
       expect(information["Gib"](conversionCandidate)).toEqual(expected);
@@ -6114,11 +6114,11 @@ describe("information", () => {
       const kilobytesConversion = linearConversion(8192);
 
       const [toBase, fromBase] = [
+        gibibitsConversion[1],
         kilobytesConversion[0],
-        gibibitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Gib"] as const;
+      const expected = [fromBase(toBase(v)), "Gib"] as const;
       const conversionCandidate = [v, "KB"] as const;
 
       expect(information["Gib"](conversionCandidate)).toEqual(expected);
@@ -6130,11 +6130,11 @@ describe("information", () => {
       const mebibitsConversion = linearConversion(102400);
 
       const [toBase, fromBase] = [
+        gibibitsConversion[1],
         mebibitsConversion[0],
-        gibibitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Gib"] as const;
+      const expected = [fromBase(toBase(v)), "Gib"] as const;
       const conversionCandidate = [v, "Mib"] as const;
 
       expect(information["Gib"](conversionCandidate)).toEqual(expected);
@@ -6146,11 +6146,11 @@ describe("information", () => {
       const megabytesConversion = linearConversion(819200);
 
       const [toBase, fromBase] = [
+        gibibitsConversion[1],
         megabytesConversion[0],
-        gibibitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Gib"] as const;
+      const expected = [fromBase(toBase(v)), "Gib"] as const;
       const conversionCandidate = [v, "MB"] as const;
 
       expect(information["Gib"](conversionCandidate)).toEqual(expected);
@@ -6164,11 +6164,11 @@ describe("information", () => {
       const gigabytesConversion = linearConversion(8192000);
 
       const [toBase, fromBase] = [
+        gibibitsConversion[1],
         gigabytesConversion[0],
-        gibibitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Gib"] as const;
+      const expected = [fromBase(toBase(v)), "Gib"] as const;
       const conversionCandidate = [v, "GB"] as const;
 
       expect(information["Gib"](conversionCandidate)).toEqual(expected);
@@ -6180,11 +6180,11 @@ describe("information", () => {
       const tebibitsConversion = linearConversion(10240000);
 
       const [toBase, fromBase] = [
+        gibibitsConversion[1],
         tebibitsConversion[0],
-        gibibitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Gib"] as const;
+      const expected = [fromBase(toBase(v)), "Gib"] as const;
       const conversionCandidate = [v, "Tib"] as const;
 
       expect(information["Gib"](conversionCandidate)).toEqual(expected);
@@ -6196,11 +6196,11 @@ describe("information", () => {
       const terabytesConversion = linearConversion(81920000);
 
       const [toBase, fromBase] = [
+        gibibitsConversion[1],
         terabytesConversion[0],
-        gibibitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Gib"] as const;
+      const expected = [fromBase(toBase(v)), "Gib"] as const;
       const conversionCandidate = [v, "TB"] as const;
 
       expect(information["Gib"](conversionCandidate)).toEqual(expected);
@@ -6212,11 +6212,11 @@ describe("information", () => {
       const pebibitsConversion = linearConversion(102400000);
 
       const [toBase, fromBase] = [
+        gibibitsConversion[1],
         pebibitsConversion[0],
-        gibibitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Gib"] as const;
+      const expected = [fromBase(toBase(v)), "Gib"] as const;
       const conversionCandidate = [v, "Pib"] as const;
 
       expect(information["Gib"](conversionCandidate)).toEqual(expected);
@@ -6228,11 +6228,11 @@ describe("information", () => {
       const petabytesConversion = linearConversion(819200000);
 
       const [toBase, fromBase] = [
+        gibibitsConversion[1],
         petabytesConversion[0],
-        gibibitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Gib"] as const;
+      const expected = [fromBase(toBase(v)), "Gib"] as const;
       const conversionCandidate = [v, "PB"] as const;
 
       expect(information["Gib"](conversionCandidate)).toEqual(expected);
@@ -6244,11 +6244,11 @@ describe("information", () => {
       const exbibitsConversion = linearConversion(1024000000);
 
       const [toBase, fromBase] = [
+        gibibitsConversion[1],
         exbibitsConversion[0],
-        gibibitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Gib"] as const;
+      const expected = [fromBase(toBase(v)), "Gib"] as const;
       const conversionCandidate = [v, "Eib"] as const;
 
       expect(information["Gib"](conversionCandidate)).toEqual(expected);
@@ -6260,11 +6260,11 @@ describe("information", () => {
       const exabytesConversion = linearConversion(8192000000);
 
       const [toBase, fromBase] = [
+        gibibitsConversion[1],
         exabytesConversion[0],
-        gibibitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Gib"] as const;
+      const expected = [fromBase(toBase(v)), "Gib"] as const;
       const conversionCandidate = [v, "EB"] as const;
 
       expect(information["Gib"](conversionCandidate)).toEqual(expected);
@@ -6276,11 +6276,11 @@ describe("information", () => {
       const zebibitsConversion = linearConversion(10240000000);
 
       const [toBase, fromBase] = [
+        gibibitsConversion[1],
         zebibitsConversion[0],
-        gibibitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Gib"] as const;
+      const expected = [fromBase(toBase(v)), "Gib"] as const;
       const conversionCandidate = [v, "Zib"] as const;
 
       expect(information["Gib"](conversionCandidate)).toEqual(expected);
@@ -6292,11 +6292,11 @@ describe("information", () => {
       const zettabytesConversion = linearConversion(81920000000);
 
       const [toBase, fromBase] = [
+        gibibitsConversion[1],
         zettabytesConversion[0],
-        gibibitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Gib"] as const;
+      const expected = [fromBase(toBase(v)), "Gib"] as const;
       const conversionCandidate = [v, "ZB"] as const;
 
       expect(information["Gib"](conversionCandidate)).toEqual(expected);
@@ -6308,11 +6308,11 @@ describe("information", () => {
       const yobibitsConversion = linearConversion(102400000000);
 
       const [toBase, fromBase] = [
+        gibibitsConversion[1],
         yobibitsConversion[0],
-        gibibitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Gib"] as const;
+      const expected = [fromBase(toBase(v)), "Gib"] as const;
       const conversionCandidate = [v, "Yib"] as const;
 
       expect(information["Gib"](conversionCandidate)).toEqual(expected);
@@ -6324,11 +6324,11 @@ describe("information", () => {
       const yottabytesConversion = linearConversion(819200000000);
 
       const [toBase, fromBase] = [
+        gibibitsConversion[1],
         yottabytesConversion[0],
-        gibibitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Gib"] as const;
+      const expected = [fromBase(toBase(v)), "Gib"] as const;
       const conversionCandidate = [v, "YB"] as const;
 
       expect(information["Gib"](conversionCandidate)).toEqual(expected);
@@ -6348,11 +6348,11 @@ describe("information", () => {
       const bitsConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
+        gigabytesConversion[1],
         bitsConversion[0],
-        gigabytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "GB"] as const;
+      const expected = [fromBase(toBase(v)), "GB"] as const;
       const conversionCandidate = [v, "b"] as const;
 
       expect(information["GB"](conversionCandidate)).toEqual(expected);
@@ -6364,11 +6364,11 @@ describe("information", () => {
       const bytesConversion = linearConversion(8);
 
       const [toBase, fromBase] = [
+        gigabytesConversion[1],
         bytesConversion[0],
-        gigabytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "GB"] as const;
+      const expected = [fromBase(toBase(v)), "GB"] as const;
       const conversionCandidate = [v, "B"] as const;
 
       expect(information["GB"](conversionCandidate)).toEqual(expected);
@@ -6380,11 +6380,11 @@ describe("information", () => {
       const kilobitsConversion = linearConversion(1000);
 
       const [toBase, fromBase] = [
+        gigabytesConversion[1],
         kilobitsConversion[0],
-        gigabytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "GB"] as const;
+      const expected = [fromBase(toBase(v)), "GB"] as const;
       const conversionCandidate = [v, "kb"] as const;
 
       expect(information["GB"](conversionCandidate)).toEqual(expected);
@@ -6396,11 +6396,11 @@ describe("information", () => {
       const megabitsConversion = linearConversion(100000);
 
       const [toBase, fromBase] = [
+        gigabytesConversion[1],
         megabitsConversion[0],
-        gigabytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "GB"] as const;
+      const expected = [fromBase(toBase(v)), "GB"] as const;
       const conversionCandidate = [v, "Mb"] as const;
 
       expect(information["GB"](conversionCandidate)).toEqual(expected);
@@ -6412,11 +6412,11 @@ describe("information", () => {
       const gigabitsConversion = linearConversion(1000000);
 
       const [toBase, fromBase] = [
+        gigabytesConversion[1],
         gigabitsConversion[0],
-        gigabytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "GB"] as const;
+      const expected = [fromBase(toBase(v)), "GB"] as const;
       const conversionCandidate = [v, "Gb"] as const;
 
       expect(information["GB"](conversionCandidate)).toEqual(expected);
@@ -6428,11 +6428,11 @@ describe("information", () => {
       const terabitsConversion = linearConversion(10000000);
 
       const [toBase, fromBase] = [
+        gigabytesConversion[1],
         terabitsConversion[0],
-        gigabytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "GB"] as const;
+      const expected = [fromBase(toBase(v)), "GB"] as const;
       const conversionCandidate = [v, "Tb"] as const;
 
       expect(information["GB"](conversionCandidate)).toEqual(expected);
@@ -6444,11 +6444,11 @@ describe("information", () => {
       const petabitsConversion = linearConversion(100000000);
 
       const [toBase, fromBase] = [
+        gigabytesConversion[1],
         petabitsConversion[0],
-        gigabytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "GB"] as const;
+      const expected = [fromBase(toBase(v)), "GB"] as const;
       const conversionCandidate = [v, "Pb"] as const;
 
       expect(information["GB"](conversionCandidate)).toEqual(expected);
@@ -6460,11 +6460,11 @@ describe("information", () => {
       const exabitsConversion = linearConversion(1000000000);
 
       const [toBase, fromBase] = [
+        gigabytesConversion[1],
         exabitsConversion[0],
-        gigabytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "GB"] as const;
+      const expected = [fromBase(toBase(v)), "GB"] as const;
       const conversionCandidate = [v, "Eb"] as const;
 
       expect(information["GB"](conversionCandidate)).toEqual(expected);
@@ -6476,11 +6476,11 @@ describe("information", () => {
       const zettabitsConversion = linearConversion(10000000000);
 
       const [toBase, fromBase] = [
+        gigabytesConversion[1],
         zettabitsConversion[0],
-        gigabytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "GB"] as const;
+      const expected = [fromBase(toBase(v)), "GB"] as const;
       const conversionCandidate = [v, "Zb"] as const;
 
       expect(information["GB"](conversionCandidate)).toEqual(expected);
@@ -6492,11 +6492,11 @@ describe("information", () => {
       const yottabitsConversion = linearConversion(100000000000);
 
       const [toBase, fromBase] = [
+        gigabytesConversion[1],
         yottabitsConversion[0],
-        gigabytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "GB"] as const;
+      const expected = [fromBase(toBase(v)), "GB"] as const;
       const conversionCandidate = [v, "Yb"] as const;
 
       expect(information["GB"](conversionCandidate)).toEqual(expected);
@@ -6508,11 +6508,11 @@ describe("information", () => {
       const kibibitsConversion = linearConversion(1024);
 
       const [toBase, fromBase] = [
+        gigabytesConversion[1],
         kibibitsConversion[0],
-        gigabytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "GB"] as const;
+      const expected = [fromBase(toBase(v)), "GB"] as const;
       const conversionCandidate = [v, "Kib"] as const;
 
       expect(information["GB"](conversionCandidate)).toEqual(expected);
@@ -6524,11 +6524,11 @@ describe("information", () => {
       const kilobytesConversion = linearConversion(8192);
 
       const [toBase, fromBase] = [
+        gigabytesConversion[1],
         kilobytesConversion[0],
-        gigabytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "GB"] as const;
+      const expected = [fromBase(toBase(v)), "GB"] as const;
       const conversionCandidate = [v, "KB"] as const;
 
       expect(information["GB"](conversionCandidate)).toEqual(expected);
@@ -6540,11 +6540,11 @@ describe("information", () => {
       const mebibitsConversion = linearConversion(102400);
 
       const [toBase, fromBase] = [
+        gigabytesConversion[1],
         mebibitsConversion[0],
-        gigabytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "GB"] as const;
+      const expected = [fromBase(toBase(v)), "GB"] as const;
       const conversionCandidate = [v, "Mib"] as const;
 
       expect(information["GB"](conversionCandidate)).toEqual(expected);
@@ -6556,11 +6556,11 @@ describe("information", () => {
       const megabytesConversion = linearConversion(819200);
 
       const [toBase, fromBase] = [
+        gigabytesConversion[1],
         megabytesConversion[0],
-        gigabytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "GB"] as const;
+      const expected = [fromBase(toBase(v)), "GB"] as const;
       const conversionCandidate = [v, "MB"] as const;
 
       expect(information["GB"](conversionCandidate)).toEqual(expected);
@@ -6572,11 +6572,11 @@ describe("information", () => {
       const gibibitsConversion = linearConversion(1024000);
 
       const [toBase, fromBase] = [
+        gigabytesConversion[1],
         gibibitsConversion[0],
-        gigabytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "GB"] as const;
+      const expected = [fromBase(toBase(v)), "GB"] as const;
       const conversionCandidate = [v, "Gib"] as const;
 
       expect(information["GB"](conversionCandidate)).toEqual(expected);
@@ -6590,11 +6590,11 @@ describe("information", () => {
       const tebibitsConversion = linearConversion(10240000);
 
       const [toBase, fromBase] = [
+        gigabytesConversion[1],
         tebibitsConversion[0],
-        gigabytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "GB"] as const;
+      const expected = [fromBase(toBase(v)), "GB"] as const;
       const conversionCandidate = [v, "Tib"] as const;
 
       expect(information["GB"](conversionCandidate)).toEqual(expected);
@@ -6606,11 +6606,11 @@ describe("information", () => {
       const terabytesConversion = linearConversion(81920000);
 
       const [toBase, fromBase] = [
+        gigabytesConversion[1],
         terabytesConversion[0],
-        gigabytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "GB"] as const;
+      const expected = [fromBase(toBase(v)), "GB"] as const;
       const conversionCandidate = [v, "TB"] as const;
 
       expect(information["GB"](conversionCandidate)).toEqual(expected);
@@ -6622,11 +6622,11 @@ describe("information", () => {
       const pebibitsConversion = linearConversion(102400000);
 
       const [toBase, fromBase] = [
+        gigabytesConversion[1],
         pebibitsConversion[0],
-        gigabytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "GB"] as const;
+      const expected = [fromBase(toBase(v)), "GB"] as const;
       const conversionCandidate = [v, "Pib"] as const;
 
       expect(information["GB"](conversionCandidate)).toEqual(expected);
@@ -6638,11 +6638,11 @@ describe("information", () => {
       const petabytesConversion = linearConversion(819200000);
 
       const [toBase, fromBase] = [
+        gigabytesConversion[1],
         petabytesConversion[0],
-        gigabytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "GB"] as const;
+      const expected = [fromBase(toBase(v)), "GB"] as const;
       const conversionCandidate = [v, "PB"] as const;
 
       expect(information["GB"](conversionCandidate)).toEqual(expected);
@@ -6654,11 +6654,11 @@ describe("information", () => {
       const exbibitsConversion = linearConversion(1024000000);
 
       const [toBase, fromBase] = [
+        gigabytesConversion[1],
         exbibitsConversion[0],
-        gigabytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "GB"] as const;
+      const expected = [fromBase(toBase(v)), "GB"] as const;
       const conversionCandidate = [v, "Eib"] as const;
 
       expect(information["GB"](conversionCandidate)).toEqual(expected);
@@ -6670,11 +6670,11 @@ describe("information", () => {
       const exabytesConversion = linearConversion(8192000000);
 
       const [toBase, fromBase] = [
+        gigabytesConversion[1],
         exabytesConversion[0],
-        gigabytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "GB"] as const;
+      const expected = [fromBase(toBase(v)), "GB"] as const;
       const conversionCandidate = [v, "EB"] as const;
 
       expect(information["GB"](conversionCandidate)).toEqual(expected);
@@ -6686,11 +6686,11 @@ describe("information", () => {
       const zebibitsConversion = linearConversion(10240000000);
 
       const [toBase, fromBase] = [
+        gigabytesConversion[1],
         zebibitsConversion[0],
-        gigabytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "GB"] as const;
+      const expected = [fromBase(toBase(v)), "GB"] as const;
       const conversionCandidate = [v, "Zib"] as const;
 
       expect(information["GB"](conversionCandidate)).toEqual(expected);
@@ -6702,11 +6702,11 @@ describe("information", () => {
       const zettabytesConversion = linearConversion(81920000000);
 
       const [toBase, fromBase] = [
+        gigabytesConversion[1],
         zettabytesConversion[0],
-        gigabytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "GB"] as const;
+      const expected = [fromBase(toBase(v)), "GB"] as const;
       const conversionCandidate = [v, "ZB"] as const;
 
       expect(information["GB"](conversionCandidate)).toEqual(expected);
@@ -6718,11 +6718,11 @@ describe("information", () => {
       const yobibitsConversion = linearConversion(102400000000);
 
       const [toBase, fromBase] = [
+        gigabytesConversion[1],
         yobibitsConversion[0],
-        gigabytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "GB"] as const;
+      const expected = [fromBase(toBase(v)), "GB"] as const;
       const conversionCandidate = [v, "Yib"] as const;
 
       expect(information["GB"](conversionCandidate)).toEqual(expected);
@@ -6734,11 +6734,11 @@ describe("information", () => {
       const yottabytesConversion = linearConversion(819200000000);
 
       const [toBase, fromBase] = [
+        gigabytesConversion[1],
         yottabytesConversion[0],
-        gigabytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "GB"] as const;
+      const expected = [fromBase(toBase(v)), "GB"] as const;
       const conversionCandidate = [v, "YB"] as const;
 
       expect(information["GB"](conversionCandidate)).toEqual(expected);
@@ -6758,11 +6758,11 @@ describe("information", () => {
       const bitsConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
+        tebibitsConversion[1],
         bitsConversion[0],
-        tebibitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Tib"] as const;
+      const expected = [fromBase(toBase(v)), "Tib"] as const;
       const conversionCandidate = [v, "b"] as const;
 
       expect(information["Tib"](conversionCandidate)).toEqual(expected);
@@ -6774,11 +6774,11 @@ describe("information", () => {
       const bytesConversion = linearConversion(8);
 
       const [toBase, fromBase] = [
+        tebibitsConversion[1],
         bytesConversion[0],
-        tebibitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Tib"] as const;
+      const expected = [fromBase(toBase(v)), "Tib"] as const;
       const conversionCandidate = [v, "B"] as const;
 
       expect(information["Tib"](conversionCandidate)).toEqual(expected);
@@ -6790,11 +6790,11 @@ describe("information", () => {
       const kilobitsConversion = linearConversion(1000);
 
       const [toBase, fromBase] = [
+        tebibitsConversion[1],
         kilobitsConversion[0],
-        tebibitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Tib"] as const;
+      const expected = [fromBase(toBase(v)), "Tib"] as const;
       const conversionCandidate = [v, "kb"] as const;
 
       expect(information["Tib"](conversionCandidate)).toEqual(expected);
@@ -6806,11 +6806,11 @@ describe("information", () => {
       const megabitsConversion = linearConversion(100000);
 
       const [toBase, fromBase] = [
+        tebibitsConversion[1],
         megabitsConversion[0],
-        tebibitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Tib"] as const;
+      const expected = [fromBase(toBase(v)), "Tib"] as const;
       const conversionCandidate = [v, "Mb"] as const;
 
       expect(information["Tib"](conversionCandidate)).toEqual(expected);
@@ -6822,11 +6822,11 @@ describe("information", () => {
       const gigabitsConversion = linearConversion(1000000);
 
       const [toBase, fromBase] = [
+        tebibitsConversion[1],
         gigabitsConversion[0],
-        tebibitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Tib"] as const;
+      const expected = [fromBase(toBase(v)), "Tib"] as const;
       const conversionCandidate = [v, "Gb"] as const;
 
       expect(information["Tib"](conversionCandidate)).toEqual(expected);
@@ -6838,11 +6838,11 @@ describe("information", () => {
       const terabitsConversion = linearConversion(10000000);
 
       const [toBase, fromBase] = [
+        tebibitsConversion[1],
         terabitsConversion[0],
-        tebibitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Tib"] as const;
+      const expected = [fromBase(toBase(v)), "Tib"] as const;
       const conversionCandidate = [v, "Tb"] as const;
 
       expect(information["Tib"](conversionCandidate)).toEqual(expected);
@@ -6854,11 +6854,11 @@ describe("information", () => {
       const petabitsConversion = linearConversion(100000000);
 
       const [toBase, fromBase] = [
+        tebibitsConversion[1],
         petabitsConversion[0],
-        tebibitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Tib"] as const;
+      const expected = [fromBase(toBase(v)), "Tib"] as const;
       const conversionCandidate = [v, "Pb"] as const;
 
       expect(information["Tib"](conversionCandidate)).toEqual(expected);
@@ -6870,11 +6870,11 @@ describe("information", () => {
       const exabitsConversion = linearConversion(1000000000);
 
       const [toBase, fromBase] = [
+        tebibitsConversion[1],
         exabitsConversion[0],
-        tebibitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Tib"] as const;
+      const expected = [fromBase(toBase(v)), "Tib"] as const;
       const conversionCandidate = [v, "Eb"] as const;
 
       expect(information["Tib"](conversionCandidate)).toEqual(expected);
@@ -6886,11 +6886,11 @@ describe("information", () => {
       const zettabitsConversion = linearConversion(10000000000);
 
       const [toBase, fromBase] = [
+        tebibitsConversion[1],
         zettabitsConversion[0],
-        tebibitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Tib"] as const;
+      const expected = [fromBase(toBase(v)), "Tib"] as const;
       const conversionCandidate = [v, "Zb"] as const;
 
       expect(information["Tib"](conversionCandidate)).toEqual(expected);
@@ -6902,11 +6902,11 @@ describe("information", () => {
       const yottabitsConversion = linearConversion(100000000000);
 
       const [toBase, fromBase] = [
+        tebibitsConversion[1],
         yottabitsConversion[0],
-        tebibitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Tib"] as const;
+      const expected = [fromBase(toBase(v)), "Tib"] as const;
       const conversionCandidate = [v, "Yb"] as const;
 
       expect(information["Tib"](conversionCandidate)).toEqual(expected);
@@ -6918,11 +6918,11 @@ describe("information", () => {
       const kibibitsConversion = linearConversion(1024);
 
       const [toBase, fromBase] = [
+        tebibitsConversion[1],
         kibibitsConversion[0],
-        tebibitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Tib"] as const;
+      const expected = [fromBase(toBase(v)), "Tib"] as const;
       const conversionCandidate = [v, "Kib"] as const;
 
       expect(information["Tib"](conversionCandidate)).toEqual(expected);
@@ -6934,11 +6934,11 @@ describe("information", () => {
       const kilobytesConversion = linearConversion(8192);
 
       const [toBase, fromBase] = [
+        tebibitsConversion[1],
         kilobytesConversion[0],
-        tebibitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Tib"] as const;
+      const expected = [fromBase(toBase(v)), "Tib"] as const;
       const conversionCandidate = [v, "KB"] as const;
 
       expect(information["Tib"](conversionCandidate)).toEqual(expected);
@@ -6950,11 +6950,11 @@ describe("information", () => {
       const mebibitsConversion = linearConversion(102400);
 
       const [toBase, fromBase] = [
+        tebibitsConversion[1],
         mebibitsConversion[0],
-        tebibitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Tib"] as const;
+      const expected = [fromBase(toBase(v)), "Tib"] as const;
       const conversionCandidate = [v, "Mib"] as const;
 
       expect(information["Tib"](conversionCandidate)).toEqual(expected);
@@ -6966,11 +6966,11 @@ describe("information", () => {
       const megabytesConversion = linearConversion(819200);
 
       const [toBase, fromBase] = [
+        tebibitsConversion[1],
         megabytesConversion[0],
-        tebibitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Tib"] as const;
+      const expected = [fromBase(toBase(v)), "Tib"] as const;
       const conversionCandidate = [v, "MB"] as const;
 
       expect(information["Tib"](conversionCandidate)).toEqual(expected);
@@ -6982,11 +6982,11 @@ describe("information", () => {
       const gibibitsConversion = linearConversion(1024000);
 
       const [toBase, fromBase] = [
+        tebibitsConversion[1],
         gibibitsConversion[0],
-        tebibitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Tib"] as const;
+      const expected = [fromBase(toBase(v)), "Tib"] as const;
       const conversionCandidate = [v, "Gib"] as const;
 
       expect(information["Tib"](conversionCandidate)).toEqual(expected);
@@ -6998,11 +6998,11 @@ describe("information", () => {
       const gigabytesConversion = linearConversion(8192000);
 
       const [toBase, fromBase] = [
+        tebibitsConversion[1],
         gigabytesConversion[0],
-        tebibitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Tib"] as const;
+      const expected = [fromBase(toBase(v)), "Tib"] as const;
       const conversionCandidate = [v, "GB"] as const;
 
       expect(information["Tib"](conversionCandidate)).toEqual(expected);
@@ -7016,11 +7016,11 @@ describe("information", () => {
       const terabytesConversion = linearConversion(81920000);
 
       const [toBase, fromBase] = [
+        tebibitsConversion[1],
         terabytesConversion[0],
-        tebibitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Tib"] as const;
+      const expected = [fromBase(toBase(v)), "Tib"] as const;
       const conversionCandidate = [v, "TB"] as const;
 
       expect(information["Tib"](conversionCandidate)).toEqual(expected);
@@ -7032,11 +7032,11 @@ describe("information", () => {
       const pebibitsConversion = linearConversion(102400000);
 
       const [toBase, fromBase] = [
+        tebibitsConversion[1],
         pebibitsConversion[0],
-        tebibitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Tib"] as const;
+      const expected = [fromBase(toBase(v)), "Tib"] as const;
       const conversionCandidate = [v, "Pib"] as const;
 
       expect(information["Tib"](conversionCandidate)).toEqual(expected);
@@ -7048,11 +7048,11 @@ describe("information", () => {
       const petabytesConversion = linearConversion(819200000);
 
       const [toBase, fromBase] = [
+        tebibitsConversion[1],
         petabytesConversion[0],
-        tebibitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Tib"] as const;
+      const expected = [fromBase(toBase(v)), "Tib"] as const;
       const conversionCandidate = [v, "PB"] as const;
 
       expect(information["Tib"](conversionCandidate)).toEqual(expected);
@@ -7064,11 +7064,11 @@ describe("information", () => {
       const exbibitsConversion = linearConversion(1024000000);
 
       const [toBase, fromBase] = [
+        tebibitsConversion[1],
         exbibitsConversion[0],
-        tebibitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Tib"] as const;
+      const expected = [fromBase(toBase(v)), "Tib"] as const;
       const conversionCandidate = [v, "Eib"] as const;
 
       expect(information["Tib"](conversionCandidate)).toEqual(expected);
@@ -7080,11 +7080,11 @@ describe("information", () => {
       const exabytesConversion = linearConversion(8192000000);
 
       const [toBase, fromBase] = [
+        tebibitsConversion[1],
         exabytesConversion[0],
-        tebibitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Tib"] as const;
+      const expected = [fromBase(toBase(v)), "Tib"] as const;
       const conversionCandidate = [v, "EB"] as const;
 
       expect(information["Tib"](conversionCandidate)).toEqual(expected);
@@ -7096,11 +7096,11 @@ describe("information", () => {
       const zebibitsConversion = linearConversion(10240000000);
 
       const [toBase, fromBase] = [
+        tebibitsConversion[1],
         zebibitsConversion[0],
-        tebibitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Tib"] as const;
+      const expected = [fromBase(toBase(v)), "Tib"] as const;
       const conversionCandidate = [v, "Zib"] as const;
 
       expect(information["Tib"](conversionCandidate)).toEqual(expected);
@@ -7112,11 +7112,11 @@ describe("information", () => {
       const zettabytesConversion = linearConversion(81920000000);
 
       const [toBase, fromBase] = [
+        tebibitsConversion[1],
         zettabytesConversion[0],
-        tebibitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Tib"] as const;
+      const expected = [fromBase(toBase(v)), "Tib"] as const;
       const conversionCandidate = [v, "ZB"] as const;
 
       expect(information["Tib"](conversionCandidate)).toEqual(expected);
@@ -7128,11 +7128,11 @@ describe("information", () => {
       const yobibitsConversion = linearConversion(102400000000);
 
       const [toBase, fromBase] = [
+        tebibitsConversion[1],
         yobibitsConversion[0],
-        tebibitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Tib"] as const;
+      const expected = [fromBase(toBase(v)), "Tib"] as const;
       const conversionCandidate = [v, "Yib"] as const;
 
       expect(information["Tib"](conversionCandidate)).toEqual(expected);
@@ -7144,11 +7144,11 @@ describe("information", () => {
       const yottabytesConversion = linearConversion(819200000000);
 
       const [toBase, fromBase] = [
+        tebibitsConversion[1],
         yottabytesConversion[0],
-        tebibitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Tib"] as const;
+      const expected = [fromBase(toBase(v)), "Tib"] as const;
       const conversionCandidate = [v, "YB"] as const;
 
       expect(information["Tib"](conversionCandidate)).toEqual(expected);
@@ -7168,11 +7168,11 @@ describe("information", () => {
       const bitsConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
+        terabytesConversion[1],
         bitsConversion[0],
-        terabytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "TB"] as const;
+      const expected = [fromBase(toBase(v)), "TB"] as const;
       const conversionCandidate = [v, "b"] as const;
 
       expect(information["TB"](conversionCandidate)).toEqual(expected);
@@ -7184,11 +7184,11 @@ describe("information", () => {
       const bytesConversion = linearConversion(8);
 
       const [toBase, fromBase] = [
+        terabytesConversion[1],
         bytesConversion[0],
-        terabytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "TB"] as const;
+      const expected = [fromBase(toBase(v)), "TB"] as const;
       const conversionCandidate = [v, "B"] as const;
 
       expect(information["TB"](conversionCandidate)).toEqual(expected);
@@ -7200,11 +7200,11 @@ describe("information", () => {
       const kilobitsConversion = linearConversion(1000);
 
       const [toBase, fromBase] = [
+        terabytesConversion[1],
         kilobitsConversion[0],
-        terabytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "TB"] as const;
+      const expected = [fromBase(toBase(v)), "TB"] as const;
       const conversionCandidate = [v, "kb"] as const;
 
       expect(information["TB"](conversionCandidate)).toEqual(expected);
@@ -7216,11 +7216,11 @@ describe("information", () => {
       const megabitsConversion = linearConversion(100000);
 
       const [toBase, fromBase] = [
+        terabytesConversion[1],
         megabitsConversion[0],
-        terabytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "TB"] as const;
+      const expected = [fromBase(toBase(v)), "TB"] as const;
       const conversionCandidate = [v, "Mb"] as const;
 
       expect(information["TB"](conversionCandidate)).toEqual(expected);
@@ -7232,11 +7232,11 @@ describe("information", () => {
       const gigabitsConversion = linearConversion(1000000);
 
       const [toBase, fromBase] = [
+        terabytesConversion[1],
         gigabitsConversion[0],
-        terabytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "TB"] as const;
+      const expected = [fromBase(toBase(v)), "TB"] as const;
       const conversionCandidate = [v, "Gb"] as const;
 
       expect(information["TB"](conversionCandidate)).toEqual(expected);
@@ -7248,11 +7248,11 @@ describe("information", () => {
       const terabitsConversion = linearConversion(10000000);
 
       const [toBase, fromBase] = [
+        terabytesConversion[1],
         terabitsConversion[0],
-        terabytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "TB"] as const;
+      const expected = [fromBase(toBase(v)), "TB"] as const;
       const conversionCandidate = [v, "Tb"] as const;
 
       expect(information["TB"](conversionCandidate)).toEqual(expected);
@@ -7264,11 +7264,11 @@ describe("information", () => {
       const petabitsConversion = linearConversion(100000000);
 
       const [toBase, fromBase] = [
+        terabytesConversion[1],
         petabitsConversion[0],
-        terabytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "TB"] as const;
+      const expected = [fromBase(toBase(v)), "TB"] as const;
       const conversionCandidate = [v, "Pb"] as const;
 
       expect(information["TB"](conversionCandidate)).toEqual(expected);
@@ -7280,11 +7280,11 @@ describe("information", () => {
       const exabitsConversion = linearConversion(1000000000);
 
       const [toBase, fromBase] = [
+        terabytesConversion[1],
         exabitsConversion[0],
-        terabytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "TB"] as const;
+      const expected = [fromBase(toBase(v)), "TB"] as const;
       const conversionCandidate = [v, "Eb"] as const;
 
       expect(information["TB"](conversionCandidate)).toEqual(expected);
@@ -7296,11 +7296,11 @@ describe("information", () => {
       const zettabitsConversion = linearConversion(10000000000);
 
       const [toBase, fromBase] = [
+        terabytesConversion[1],
         zettabitsConversion[0],
-        terabytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "TB"] as const;
+      const expected = [fromBase(toBase(v)), "TB"] as const;
       const conversionCandidate = [v, "Zb"] as const;
 
       expect(information["TB"](conversionCandidate)).toEqual(expected);
@@ -7312,11 +7312,11 @@ describe("information", () => {
       const yottabitsConversion = linearConversion(100000000000);
 
       const [toBase, fromBase] = [
+        terabytesConversion[1],
         yottabitsConversion[0],
-        terabytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "TB"] as const;
+      const expected = [fromBase(toBase(v)), "TB"] as const;
       const conversionCandidate = [v, "Yb"] as const;
 
       expect(information["TB"](conversionCandidate)).toEqual(expected);
@@ -7328,11 +7328,11 @@ describe("information", () => {
       const kibibitsConversion = linearConversion(1024);
 
       const [toBase, fromBase] = [
+        terabytesConversion[1],
         kibibitsConversion[0],
-        terabytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "TB"] as const;
+      const expected = [fromBase(toBase(v)), "TB"] as const;
       const conversionCandidate = [v, "Kib"] as const;
 
       expect(information["TB"](conversionCandidate)).toEqual(expected);
@@ -7344,11 +7344,11 @@ describe("information", () => {
       const kilobytesConversion = linearConversion(8192);
 
       const [toBase, fromBase] = [
+        terabytesConversion[1],
         kilobytesConversion[0],
-        terabytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "TB"] as const;
+      const expected = [fromBase(toBase(v)), "TB"] as const;
       const conversionCandidate = [v, "KB"] as const;
 
       expect(information["TB"](conversionCandidate)).toEqual(expected);
@@ -7360,11 +7360,11 @@ describe("information", () => {
       const mebibitsConversion = linearConversion(102400);
 
       const [toBase, fromBase] = [
+        terabytesConversion[1],
         mebibitsConversion[0],
-        terabytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "TB"] as const;
+      const expected = [fromBase(toBase(v)), "TB"] as const;
       const conversionCandidate = [v, "Mib"] as const;
 
       expect(information["TB"](conversionCandidate)).toEqual(expected);
@@ -7376,11 +7376,11 @@ describe("information", () => {
       const megabytesConversion = linearConversion(819200);
 
       const [toBase, fromBase] = [
+        terabytesConversion[1],
         megabytesConversion[0],
-        terabytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "TB"] as const;
+      const expected = [fromBase(toBase(v)), "TB"] as const;
       const conversionCandidate = [v, "MB"] as const;
 
       expect(information["TB"](conversionCandidate)).toEqual(expected);
@@ -7392,11 +7392,11 @@ describe("information", () => {
       const gibibitsConversion = linearConversion(1024000);
 
       const [toBase, fromBase] = [
+        terabytesConversion[1],
         gibibitsConversion[0],
-        terabytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "TB"] as const;
+      const expected = [fromBase(toBase(v)), "TB"] as const;
       const conversionCandidate = [v, "Gib"] as const;
 
       expect(information["TB"](conversionCandidate)).toEqual(expected);
@@ -7408,11 +7408,11 @@ describe("information", () => {
       const gigabytesConversion = linearConversion(8192000);
 
       const [toBase, fromBase] = [
+        terabytesConversion[1],
         gigabytesConversion[0],
-        terabytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "TB"] as const;
+      const expected = [fromBase(toBase(v)), "TB"] as const;
       const conversionCandidate = [v, "GB"] as const;
 
       expect(information["TB"](conversionCandidate)).toEqual(expected);
@@ -7424,11 +7424,11 @@ describe("information", () => {
       const tebibitsConversion = linearConversion(10240000);
 
       const [toBase, fromBase] = [
+        terabytesConversion[1],
         tebibitsConversion[0],
-        terabytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "TB"] as const;
+      const expected = [fromBase(toBase(v)), "TB"] as const;
       const conversionCandidate = [v, "Tib"] as const;
 
       expect(information["TB"](conversionCandidate)).toEqual(expected);
@@ -7442,11 +7442,11 @@ describe("information", () => {
       const pebibitsConversion = linearConversion(102400000);
 
       const [toBase, fromBase] = [
+        terabytesConversion[1],
         pebibitsConversion[0],
-        terabytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "TB"] as const;
+      const expected = [fromBase(toBase(v)), "TB"] as const;
       const conversionCandidate = [v, "Pib"] as const;
 
       expect(information["TB"](conversionCandidate)).toEqual(expected);
@@ -7458,11 +7458,11 @@ describe("information", () => {
       const petabytesConversion = linearConversion(819200000);
 
       const [toBase, fromBase] = [
+        terabytesConversion[1],
         petabytesConversion[0],
-        terabytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "TB"] as const;
+      const expected = [fromBase(toBase(v)), "TB"] as const;
       const conversionCandidate = [v, "PB"] as const;
 
       expect(information["TB"](conversionCandidate)).toEqual(expected);
@@ -7474,11 +7474,11 @@ describe("information", () => {
       const exbibitsConversion = linearConversion(1024000000);
 
       const [toBase, fromBase] = [
+        terabytesConversion[1],
         exbibitsConversion[0],
-        terabytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "TB"] as const;
+      const expected = [fromBase(toBase(v)), "TB"] as const;
       const conversionCandidate = [v, "Eib"] as const;
 
       expect(information["TB"](conversionCandidate)).toEqual(expected);
@@ -7490,11 +7490,11 @@ describe("information", () => {
       const exabytesConversion = linearConversion(8192000000);
 
       const [toBase, fromBase] = [
+        terabytesConversion[1],
         exabytesConversion[0],
-        terabytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "TB"] as const;
+      const expected = [fromBase(toBase(v)), "TB"] as const;
       const conversionCandidate = [v, "EB"] as const;
 
       expect(information["TB"](conversionCandidate)).toEqual(expected);
@@ -7506,11 +7506,11 @@ describe("information", () => {
       const zebibitsConversion = linearConversion(10240000000);
 
       const [toBase, fromBase] = [
+        terabytesConversion[1],
         zebibitsConversion[0],
-        terabytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "TB"] as const;
+      const expected = [fromBase(toBase(v)), "TB"] as const;
       const conversionCandidate = [v, "Zib"] as const;
 
       expect(information["TB"](conversionCandidate)).toEqual(expected);
@@ -7522,11 +7522,11 @@ describe("information", () => {
       const zettabytesConversion = linearConversion(81920000000);
 
       const [toBase, fromBase] = [
+        terabytesConversion[1],
         zettabytesConversion[0],
-        terabytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "TB"] as const;
+      const expected = [fromBase(toBase(v)), "TB"] as const;
       const conversionCandidate = [v, "ZB"] as const;
 
       expect(information["TB"](conversionCandidate)).toEqual(expected);
@@ -7538,11 +7538,11 @@ describe("information", () => {
       const yobibitsConversion = linearConversion(102400000000);
 
       const [toBase, fromBase] = [
+        terabytesConversion[1],
         yobibitsConversion[0],
-        terabytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "TB"] as const;
+      const expected = [fromBase(toBase(v)), "TB"] as const;
       const conversionCandidate = [v, "Yib"] as const;
 
       expect(information["TB"](conversionCandidate)).toEqual(expected);
@@ -7554,11 +7554,11 @@ describe("information", () => {
       const yottabytesConversion = linearConversion(819200000000);
 
       const [toBase, fromBase] = [
+        terabytesConversion[1],
         yottabytesConversion[0],
-        terabytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "TB"] as const;
+      const expected = [fromBase(toBase(v)), "TB"] as const;
       const conversionCandidate = [v, "YB"] as const;
 
       expect(information["TB"](conversionCandidate)).toEqual(expected);
@@ -7578,11 +7578,11 @@ describe("information", () => {
       const bitsConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
+        pebibitsConversion[1],
         bitsConversion[0],
-        pebibitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Pib"] as const;
+      const expected = [fromBase(toBase(v)), "Pib"] as const;
       const conversionCandidate = [v, "b"] as const;
 
       expect(information["Pib"](conversionCandidate)).toEqual(expected);
@@ -7594,11 +7594,11 @@ describe("information", () => {
       const bytesConversion = linearConversion(8);
 
       const [toBase, fromBase] = [
+        pebibitsConversion[1],
         bytesConversion[0],
-        pebibitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Pib"] as const;
+      const expected = [fromBase(toBase(v)), "Pib"] as const;
       const conversionCandidate = [v, "B"] as const;
 
       expect(information["Pib"](conversionCandidate)).toEqual(expected);
@@ -7610,11 +7610,11 @@ describe("information", () => {
       const kilobitsConversion = linearConversion(1000);
 
       const [toBase, fromBase] = [
+        pebibitsConversion[1],
         kilobitsConversion[0],
-        pebibitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Pib"] as const;
+      const expected = [fromBase(toBase(v)), "Pib"] as const;
       const conversionCandidate = [v, "kb"] as const;
 
       expect(information["Pib"](conversionCandidate)).toEqual(expected);
@@ -7626,11 +7626,11 @@ describe("information", () => {
       const megabitsConversion = linearConversion(100000);
 
       const [toBase, fromBase] = [
+        pebibitsConversion[1],
         megabitsConversion[0],
-        pebibitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Pib"] as const;
+      const expected = [fromBase(toBase(v)), "Pib"] as const;
       const conversionCandidate = [v, "Mb"] as const;
 
       expect(information["Pib"](conversionCandidate)).toEqual(expected);
@@ -7642,11 +7642,11 @@ describe("information", () => {
       const gigabitsConversion = linearConversion(1000000);
 
       const [toBase, fromBase] = [
+        pebibitsConversion[1],
         gigabitsConversion[0],
-        pebibitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Pib"] as const;
+      const expected = [fromBase(toBase(v)), "Pib"] as const;
       const conversionCandidate = [v, "Gb"] as const;
 
       expect(information["Pib"](conversionCandidate)).toEqual(expected);
@@ -7658,11 +7658,11 @@ describe("information", () => {
       const terabitsConversion = linearConversion(10000000);
 
       const [toBase, fromBase] = [
+        pebibitsConversion[1],
         terabitsConversion[0],
-        pebibitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Pib"] as const;
+      const expected = [fromBase(toBase(v)), "Pib"] as const;
       const conversionCandidate = [v, "Tb"] as const;
 
       expect(information["Pib"](conversionCandidate)).toEqual(expected);
@@ -7674,11 +7674,11 @@ describe("information", () => {
       const petabitsConversion = linearConversion(100000000);
 
       const [toBase, fromBase] = [
+        pebibitsConversion[1],
         petabitsConversion[0],
-        pebibitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Pib"] as const;
+      const expected = [fromBase(toBase(v)), "Pib"] as const;
       const conversionCandidate = [v, "Pb"] as const;
 
       expect(information["Pib"](conversionCandidate)).toEqual(expected);
@@ -7690,11 +7690,11 @@ describe("information", () => {
       const exabitsConversion = linearConversion(1000000000);
 
       const [toBase, fromBase] = [
+        pebibitsConversion[1],
         exabitsConversion[0],
-        pebibitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Pib"] as const;
+      const expected = [fromBase(toBase(v)), "Pib"] as const;
       const conversionCandidate = [v, "Eb"] as const;
 
       expect(information["Pib"](conversionCandidate)).toEqual(expected);
@@ -7706,11 +7706,11 @@ describe("information", () => {
       const zettabitsConversion = linearConversion(10000000000);
 
       const [toBase, fromBase] = [
+        pebibitsConversion[1],
         zettabitsConversion[0],
-        pebibitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Pib"] as const;
+      const expected = [fromBase(toBase(v)), "Pib"] as const;
       const conversionCandidate = [v, "Zb"] as const;
 
       expect(information["Pib"](conversionCandidate)).toEqual(expected);
@@ -7722,11 +7722,11 @@ describe("information", () => {
       const yottabitsConversion = linearConversion(100000000000);
 
       const [toBase, fromBase] = [
+        pebibitsConversion[1],
         yottabitsConversion[0],
-        pebibitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Pib"] as const;
+      const expected = [fromBase(toBase(v)), "Pib"] as const;
       const conversionCandidate = [v, "Yb"] as const;
 
       expect(information["Pib"](conversionCandidate)).toEqual(expected);
@@ -7738,11 +7738,11 @@ describe("information", () => {
       const kibibitsConversion = linearConversion(1024);
 
       const [toBase, fromBase] = [
+        pebibitsConversion[1],
         kibibitsConversion[0],
-        pebibitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Pib"] as const;
+      const expected = [fromBase(toBase(v)), "Pib"] as const;
       const conversionCandidate = [v, "Kib"] as const;
 
       expect(information["Pib"](conversionCandidate)).toEqual(expected);
@@ -7754,11 +7754,11 @@ describe("information", () => {
       const kilobytesConversion = linearConversion(8192);
 
       const [toBase, fromBase] = [
+        pebibitsConversion[1],
         kilobytesConversion[0],
-        pebibitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Pib"] as const;
+      const expected = [fromBase(toBase(v)), "Pib"] as const;
       const conversionCandidate = [v, "KB"] as const;
 
       expect(information["Pib"](conversionCandidate)).toEqual(expected);
@@ -7770,11 +7770,11 @@ describe("information", () => {
       const mebibitsConversion = linearConversion(102400);
 
       const [toBase, fromBase] = [
+        pebibitsConversion[1],
         mebibitsConversion[0],
-        pebibitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Pib"] as const;
+      const expected = [fromBase(toBase(v)), "Pib"] as const;
       const conversionCandidate = [v, "Mib"] as const;
 
       expect(information["Pib"](conversionCandidate)).toEqual(expected);
@@ -7786,11 +7786,11 @@ describe("information", () => {
       const megabytesConversion = linearConversion(819200);
 
       const [toBase, fromBase] = [
+        pebibitsConversion[1],
         megabytesConversion[0],
-        pebibitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Pib"] as const;
+      const expected = [fromBase(toBase(v)), "Pib"] as const;
       const conversionCandidate = [v, "MB"] as const;
 
       expect(information["Pib"](conversionCandidate)).toEqual(expected);
@@ -7802,11 +7802,11 @@ describe("information", () => {
       const gibibitsConversion = linearConversion(1024000);
 
       const [toBase, fromBase] = [
+        pebibitsConversion[1],
         gibibitsConversion[0],
-        pebibitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Pib"] as const;
+      const expected = [fromBase(toBase(v)), "Pib"] as const;
       const conversionCandidate = [v, "Gib"] as const;
 
       expect(information["Pib"](conversionCandidate)).toEqual(expected);
@@ -7818,11 +7818,11 @@ describe("information", () => {
       const gigabytesConversion = linearConversion(8192000);
 
       const [toBase, fromBase] = [
+        pebibitsConversion[1],
         gigabytesConversion[0],
-        pebibitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Pib"] as const;
+      const expected = [fromBase(toBase(v)), "Pib"] as const;
       const conversionCandidate = [v, "GB"] as const;
 
       expect(information["Pib"](conversionCandidate)).toEqual(expected);
@@ -7834,11 +7834,11 @@ describe("information", () => {
       const tebibitsConversion = linearConversion(10240000);
 
       const [toBase, fromBase] = [
+        pebibitsConversion[1],
         tebibitsConversion[0],
-        pebibitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Pib"] as const;
+      const expected = [fromBase(toBase(v)), "Pib"] as const;
       const conversionCandidate = [v, "Tib"] as const;
 
       expect(information["Pib"](conversionCandidate)).toEqual(expected);
@@ -7850,11 +7850,11 @@ describe("information", () => {
       const terabytesConversion = linearConversion(81920000);
 
       const [toBase, fromBase] = [
+        pebibitsConversion[1],
         terabytesConversion[0],
-        pebibitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Pib"] as const;
+      const expected = [fromBase(toBase(v)), "Pib"] as const;
       const conversionCandidate = [v, "TB"] as const;
 
       expect(information["Pib"](conversionCandidate)).toEqual(expected);
@@ -7868,11 +7868,11 @@ describe("information", () => {
       const petabytesConversion = linearConversion(819200000);
 
       const [toBase, fromBase] = [
+        pebibitsConversion[1],
         petabytesConversion[0],
-        pebibitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Pib"] as const;
+      const expected = [fromBase(toBase(v)), "Pib"] as const;
       const conversionCandidate = [v, "PB"] as const;
 
       expect(information["Pib"](conversionCandidate)).toEqual(expected);
@@ -7884,11 +7884,11 @@ describe("information", () => {
       const exbibitsConversion = linearConversion(1024000000);
 
       const [toBase, fromBase] = [
+        pebibitsConversion[1],
         exbibitsConversion[0],
-        pebibitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Pib"] as const;
+      const expected = [fromBase(toBase(v)), "Pib"] as const;
       const conversionCandidate = [v, "Eib"] as const;
 
       expect(information["Pib"](conversionCandidate)).toEqual(expected);
@@ -7900,11 +7900,11 @@ describe("information", () => {
       const exabytesConversion = linearConversion(8192000000);
 
       const [toBase, fromBase] = [
+        pebibitsConversion[1],
         exabytesConversion[0],
-        pebibitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Pib"] as const;
+      const expected = [fromBase(toBase(v)), "Pib"] as const;
       const conversionCandidate = [v, "EB"] as const;
 
       expect(information["Pib"](conversionCandidate)).toEqual(expected);
@@ -7916,11 +7916,11 @@ describe("information", () => {
       const zebibitsConversion = linearConversion(10240000000);
 
       const [toBase, fromBase] = [
+        pebibitsConversion[1],
         zebibitsConversion[0],
-        pebibitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Pib"] as const;
+      const expected = [fromBase(toBase(v)), "Pib"] as const;
       const conversionCandidate = [v, "Zib"] as const;
 
       expect(information["Pib"](conversionCandidate)).toEqual(expected);
@@ -7932,11 +7932,11 @@ describe("information", () => {
       const zettabytesConversion = linearConversion(81920000000);
 
       const [toBase, fromBase] = [
+        pebibitsConversion[1],
         zettabytesConversion[0],
-        pebibitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Pib"] as const;
+      const expected = [fromBase(toBase(v)), "Pib"] as const;
       const conversionCandidate = [v, "ZB"] as const;
 
       expect(information["Pib"](conversionCandidate)).toEqual(expected);
@@ -7948,11 +7948,11 @@ describe("information", () => {
       const yobibitsConversion = linearConversion(102400000000);
 
       const [toBase, fromBase] = [
+        pebibitsConversion[1],
         yobibitsConversion[0],
-        pebibitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Pib"] as const;
+      const expected = [fromBase(toBase(v)), "Pib"] as const;
       const conversionCandidate = [v, "Yib"] as const;
 
       expect(information["Pib"](conversionCandidate)).toEqual(expected);
@@ -7964,11 +7964,11 @@ describe("information", () => {
       const yottabytesConversion = linearConversion(819200000000);
 
       const [toBase, fromBase] = [
+        pebibitsConversion[1],
         yottabytesConversion[0],
-        pebibitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Pib"] as const;
+      const expected = [fromBase(toBase(v)), "Pib"] as const;
       const conversionCandidate = [v, "YB"] as const;
 
       expect(information["Pib"](conversionCandidate)).toEqual(expected);
@@ -7988,11 +7988,11 @@ describe("information", () => {
       const bitsConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
+        petabytesConversion[1],
         bitsConversion[0],
-        petabytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "PB"] as const;
+      const expected = [fromBase(toBase(v)), "PB"] as const;
       const conversionCandidate = [v, "b"] as const;
 
       expect(information["PB"](conversionCandidate)).toEqual(expected);
@@ -8004,11 +8004,11 @@ describe("information", () => {
       const bytesConversion = linearConversion(8);
 
       const [toBase, fromBase] = [
+        petabytesConversion[1],
         bytesConversion[0],
-        petabytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "PB"] as const;
+      const expected = [fromBase(toBase(v)), "PB"] as const;
       const conversionCandidate = [v, "B"] as const;
 
       expect(information["PB"](conversionCandidate)).toEqual(expected);
@@ -8020,11 +8020,11 @@ describe("information", () => {
       const kilobitsConversion = linearConversion(1000);
 
       const [toBase, fromBase] = [
+        petabytesConversion[1],
         kilobitsConversion[0],
-        petabytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "PB"] as const;
+      const expected = [fromBase(toBase(v)), "PB"] as const;
       const conversionCandidate = [v, "kb"] as const;
 
       expect(information["PB"](conversionCandidate)).toEqual(expected);
@@ -8036,11 +8036,11 @@ describe("information", () => {
       const megabitsConversion = linearConversion(100000);
 
       const [toBase, fromBase] = [
+        petabytesConversion[1],
         megabitsConversion[0],
-        petabytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "PB"] as const;
+      const expected = [fromBase(toBase(v)), "PB"] as const;
       const conversionCandidate = [v, "Mb"] as const;
 
       expect(information["PB"](conversionCandidate)).toEqual(expected);
@@ -8052,11 +8052,11 @@ describe("information", () => {
       const gigabitsConversion = linearConversion(1000000);
 
       const [toBase, fromBase] = [
+        petabytesConversion[1],
         gigabitsConversion[0],
-        petabytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "PB"] as const;
+      const expected = [fromBase(toBase(v)), "PB"] as const;
       const conversionCandidate = [v, "Gb"] as const;
 
       expect(information["PB"](conversionCandidate)).toEqual(expected);
@@ -8068,11 +8068,11 @@ describe("information", () => {
       const terabitsConversion = linearConversion(10000000);
 
       const [toBase, fromBase] = [
+        petabytesConversion[1],
         terabitsConversion[0],
-        petabytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "PB"] as const;
+      const expected = [fromBase(toBase(v)), "PB"] as const;
       const conversionCandidate = [v, "Tb"] as const;
 
       expect(information["PB"](conversionCandidate)).toEqual(expected);
@@ -8084,11 +8084,11 @@ describe("information", () => {
       const petabitsConversion = linearConversion(100000000);
 
       const [toBase, fromBase] = [
+        petabytesConversion[1],
         petabitsConversion[0],
-        petabytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "PB"] as const;
+      const expected = [fromBase(toBase(v)), "PB"] as const;
       const conversionCandidate = [v, "Pb"] as const;
 
       expect(information["PB"](conversionCandidate)).toEqual(expected);
@@ -8100,11 +8100,11 @@ describe("information", () => {
       const exabitsConversion = linearConversion(1000000000);
 
       const [toBase, fromBase] = [
+        petabytesConversion[1],
         exabitsConversion[0],
-        petabytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "PB"] as const;
+      const expected = [fromBase(toBase(v)), "PB"] as const;
       const conversionCandidate = [v, "Eb"] as const;
 
       expect(information["PB"](conversionCandidate)).toEqual(expected);
@@ -8116,11 +8116,11 @@ describe("information", () => {
       const zettabitsConversion = linearConversion(10000000000);
 
       const [toBase, fromBase] = [
+        petabytesConversion[1],
         zettabitsConversion[0],
-        petabytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "PB"] as const;
+      const expected = [fromBase(toBase(v)), "PB"] as const;
       const conversionCandidate = [v, "Zb"] as const;
 
       expect(information["PB"](conversionCandidate)).toEqual(expected);
@@ -8132,11 +8132,11 @@ describe("information", () => {
       const yottabitsConversion = linearConversion(100000000000);
 
       const [toBase, fromBase] = [
+        petabytesConversion[1],
         yottabitsConversion[0],
-        petabytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "PB"] as const;
+      const expected = [fromBase(toBase(v)), "PB"] as const;
       const conversionCandidate = [v, "Yb"] as const;
 
       expect(information["PB"](conversionCandidate)).toEqual(expected);
@@ -8148,11 +8148,11 @@ describe("information", () => {
       const kibibitsConversion = linearConversion(1024);
 
       const [toBase, fromBase] = [
+        petabytesConversion[1],
         kibibitsConversion[0],
-        petabytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "PB"] as const;
+      const expected = [fromBase(toBase(v)), "PB"] as const;
       const conversionCandidate = [v, "Kib"] as const;
 
       expect(information["PB"](conversionCandidate)).toEqual(expected);
@@ -8164,11 +8164,11 @@ describe("information", () => {
       const kilobytesConversion = linearConversion(8192);
 
       const [toBase, fromBase] = [
+        petabytesConversion[1],
         kilobytesConversion[0],
-        petabytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "PB"] as const;
+      const expected = [fromBase(toBase(v)), "PB"] as const;
       const conversionCandidate = [v, "KB"] as const;
 
       expect(information["PB"](conversionCandidate)).toEqual(expected);
@@ -8180,11 +8180,11 @@ describe("information", () => {
       const mebibitsConversion = linearConversion(102400);
 
       const [toBase, fromBase] = [
+        petabytesConversion[1],
         mebibitsConversion[0],
-        petabytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "PB"] as const;
+      const expected = [fromBase(toBase(v)), "PB"] as const;
       const conversionCandidate = [v, "Mib"] as const;
 
       expect(information["PB"](conversionCandidate)).toEqual(expected);
@@ -8196,11 +8196,11 @@ describe("information", () => {
       const megabytesConversion = linearConversion(819200);
 
       const [toBase, fromBase] = [
+        petabytesConversion[1],
         megabytesConversion[0],
-        petabytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "PB"] as const;
+      const expected = [fromBase(toBase(v)), "PB"] as const;
       const conversionCandidate = [v, "MB"] as const;
 
       expect(information["PB"](conversionCandidate)).toEqual(expected);
@@ -8212,11 +8212,11 @@ describe("information", () => {
       const gibibitsConversion = linearConversion(1024000);
 
       const [toBase, fromBase] = [
+        petabytesConversion[1],
         gibibitsConversion[0],
-        petabytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "PB"] as const;
+      const expected = [fromBase(toBase(v)), "PB"] as const;
       const conversionCandidate = [v, "Gib"] as const;
 
       expect(information["PB"](conversionCandidate)).toEqual(expected);
@@ -8228,11 +8228,11 @@ describe("information", () => {
       const gigabytesConversion = linearConversion(8192000);
 
       const [toBase, fromBase] = [
+        petabytesConversion[1],
         gigabytesConversion[0],
-        petabytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "PB"] as const;
+      const expected = [fromBase(toBase(v)), "PB"] as const;
       const conversionCandidate = [v, "GB"] as const;
 
       expect(information["PB"](conversionCandidate)).toEqual(expected);
@@ -8244,11 +8244,11 @@ describe("information", () => {
       const tebibitsConversion = linearConversion(10240000);
 
       const [toBase, fromBase] = [
+        petabytesConversion[1],
         tebibitsConversion[0],
-        petabytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "PB"] as const;
+      const expected = [fromBase(toBase(v)), "PB"] as const;
       const conversionCandidate = [v, "Tib"] as const;
 
       expect(information["PB"](conversionCandidate)).toEqual(expected);
@@ -8260,11 +8260,11 @@ describe("information", () => {
       const terabytesConversion = linearConversion(81920000);
 
       const [toBase, fromBase] = [
+        petabytesConversion[1],
         terabytesConversion[0],
-        petabytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "PB"] as const;
+      const expected = [fromBase(toBase(v)), "PB"] as const;
       const conversionCandidate = [v, "TB"] as const;
 
       expect(information["PB"](conversionCandidate)).toEqual(expected);
@@ -8276,11 +8276,11 @@ describe("information", () => {
       const pebibitsConversion = linearConversion(102400000);
 
       const [toBase, fromBase] = [
+        petabytesConversion[1],
         pebibitsConversion[0],
-        petabytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "PB"] as const;
+      const expected = [fromBase(toBase(v)), "PB"] as const;
       const conversionCandidate = [v, "Pib"] as const;
 
       expect(information["PB"](conversionCandidate)).toEqual(expected);
@@ -8294,11 +8294,11 @@ describe("information", () => {
       const exbibitsConversion = linearConversion(1024000000);
 
       const [toBase, fromBase] = [
+        petabytesConversion[1],
         exbibitsConversion[0],
-        petabytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "PB"] as const;
+      const expected = [fromBase(toBase(v)), "PB"] as const;
       const conversionCandidate = [v, "Eib"] as const;
 
       expect(information["PB"](conversionCandidate)).toEqual(expected);
@@ -8310,11 +8310,11 @@ describe("information", () => {
       const exabytesConversion = linearConversion(8192000000);
 
       const [toBase, fromBase] = [
+        petabytesConversion[1],
         exabytesConversion[0],
-        petabytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "PB"] as const;
+      const expected = [fromBase(toBase(v)), "PB"] as const;
       const conversionCandidate = [v, "EB"] as const;
 
       expect(information["PB"](conversionCandidate)).toEqual(expected);
@@ -8326,11 +8326,11 @@ describe("information", () => {
       const zebibitsConversion = linearConversion(10240000000);
 
       const [toBase, fromBase] = [
+        petabytesConversion[1],
         zebibitsConversion[0],
-        petabytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "PB"] as const;
+      const expected = [fromBase(toBase(v)), "PB"] as const;
       const conversionCandidate = [v, "Zib"] as const;
 
       expect(information["PB"](conversionCandidate)).toEqual(expected);
@@ -8342,11 +8342,11 @@ describe("information", () => {
       const zettabytesConversion = linearConversion(81920000000);
 
       const [toBase, fromBase] = [
+        petabytesConversion[1],
         zettabytesConversion[0],
-        petabytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "PB"] as const;
+      const expected = [fromBase(toBase(v)), "PB"] as const;
       const conversionCandidate = [v, "ZB"] as const;
 
       expect(information["PB"](conversionCandidate)).toEqual(expected);
@@ -8358,11 +8358,11 @@ describe("information", () => {
       const yobibitsConversion = linearConversion(102400000000);
 
       const [toBase, fromBase] = [
+        petabytesConversion[1],
         yobibitsConversion[0],
-        petabytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "PB"] as const;
+      const expected = [fromBase(toBase(v)), "PB"] as const;
       const conversionCandidate = [v, "Yib"] as const;
 
       expect(information["PB"](conversionCandidate)).toEqual(expected);
@@ -8374,11 +8374,11 @@ describe("information", () => {
       const yottabytesConversion = linearConversion(819200000000);
 
       const [toBase, fromBase] = [
+        petabytesConversion[1],
         yottabytesConversion[0],
-        petabytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "PB"] as const;
+      const expected = [fromBase(toBase(v)), "PB"] as const;
       const conversionCandidate = [v, "YB"] as const;
 
       expect(information["PB"](conversionCandidate)).toEqual(expected);
@@ -8398,11 +8398,11 @@ describe("information", () => {
       const bitsConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
+        exbibitsConversion[1],
         bitsConversion[0],
-        exbibitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Eib"] as const;
+      const expected = [fromBase(toBase(v)), "Eib"] as const;
       const conversionCandidate = [v, "b"] as const;
 
       expect(information["Eib"](conversionCandidate)).toEqual(expected);
@@ -8414,11 +8414,11 @@ describe("information", () => {
       const bytesConversion = linearConversion(8);
 
       const [toBase, fromBase] = [
+        exbibitsConversion[1],
         bytesConversion[0],
-        exbibitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Eib"] as const;
+      const expected = [fromBase(toBase(v)), "Eib"] as const;
       const conversionCandidate = [v, "B"] as const;
 
       expect(information["Eib"](conversionCandidate)).toEqual(expected);
@@ -8430,11 +8430,11 @@ describe("information", () => {
       const kilobitsConversion = linearConversion(1000);
 
       const [toBase, fromBase] = [
+        exbibitsConversion[1],
         kilobitsConversion[0],
-        exbibitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Eib"] as const;
+      const expected = [fromBase(toBase(v)), "Eib"] as const;
       const conversionCandidate = [v, "kb"] as const;
 
       expect(information["Eib"](conversionCandidate)).toEqual(expected);
@@ -8446,11 +8446,11 @@ describe("information", () => {
       const megabitsConversion = linearConversion(100000);
 
       const [toBase, fromBase] = [
+        exbibitsConversion[1],
         megabitsConversion[0],
-        exbibitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Eib"] as const;
+      const expected = [fromBase(toBase(v)), "Eib"] as const;
       const conversionCandidate = [v, "Mb"] as const;
 
       expect(information["Eib"](conversionCandidate)).toEqual(expected);
@@ -8462,11 +8462,11 @@ describe("information", () => {
       const gigabitsConversion = linearConversion(1000000);
 
       const [toBase, fromBase] = [
+        exbibitsConversion[1],
         gigabitsConversion[0],
-        exbibitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Eib"] as const;
+      const expected = [fromBase(toBase(v)), "Eib"] as const;
       const conversionCandidate = [v, "Gb"] as const;
 
       expect(information["Eib"](conversionCandidate)).toEqual(expected);
@@ -8478,11 +8478,11 @@ describe("information", () => {
       const terabitsConversion = linearConversion(10000000);
 
       const [toBase, fromBase] = [
+        exbibitsConversion[1],
         terabitsConversion[0],
-        exbibitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Eib"] as const;
+      const expected = [fromBase(toBase(v)), "Eib"] as const;
       const conversionCandidate = [v, "Tb"] as const;
 
       expect(information["Eib"](conversionCandidate)).toEqual(expected);
@@ -8494,11 +8494,11 @@ describe("information", () => {
       const petabitsConversion = linearConversion(100000000);
 
       const [toBase, fromBase] = [
+        exbibitsConversion[1],
         petabitsConversion[0],
-        exbibitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Eib"] as const;
+      const expected = [fromBase(toBase(v)), "Eib"] as const;
       const conversionCandidate = [v, "Pb"] as const;
 
       expect(information["Eib"](conversionCandidate)).toEqual(expected);
@@ -8510,11 +8510,11 @@ describe("information", () => {
       const exabitsConversion = linearConversion(1000000000);
 
       const [toBase, fromBase] = [
+        exbibitsConversion[1],
         exabitsConversion[0],
-        exbibitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Eib"] as const;
+      const expected = [fromBase(toBase(v)), "Eib"] as const;
       const conversionCandidate = [v, "Eb"] as const;
 
       expect(information["Eib"](conversionCandidate)).toEqual(expected);
@@ -8526,11 +8526,11 @@ describe("information", () => {
       const zettabitsConversion = linearConversion(10000000000);
 
       const [toBase, fromBase] = [
+        exbibitsConversion[1],
         zettabitsConversion[0],
-        exbibitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Eib"] as const;
+      const expected = [fromBase(toBase(v)), "Eib"] as const;
       const conversionCandidate = [v, "Zb"] as const;
 
       expect(information["Eib"](conversionCandidate)).toEqual(expected);
@@ -8542,11 +8542,11 @@ describe("information", () => {
       const yottabitsConversion = linearConversion(100000000000);
 
       const [toBase, fromBase] = [
+        exbibitsConversion[1],
         yottabitsConversion[0],
-        exbibitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Eib"] as const;
+      const expected = [fromBase(toBase(v)), "Eib"] as const;
       const conversionCandidate = [v, "Yb"] as const;
 
       expect(information["Eib"](conversionCandidate)).toEqual(expected);
@@ -8558,11 +8558,11 @@ describe("information", () => {
       const kibibitsConversion = linearConversion(1024);
 
       const [toBase, fromBase] = [
+        exbibitsConversion[1],
         kibibitsConversion[0],
-        exbibitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Eib"] as const;
+      const expected = [fromBase(toBase(v)), "Eib"] as const;
       const conversionCandidate = [v, "Kib"] as const;
 
       expect(information["Eib"](conversionCandidate)).toEqual(expected);
@@ -8574,11 +8574,11 @@ describe("information", () => {
       const kilobytesConversion = linearConversion(8192);
 
       const [toBase, fromBase] = [
+        exbibitsConversion[1],
         kilobytesConversion[0],
-        exbibitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Eib"] as const;
+      const expected = [fromBase(toBase(v)), "Eib"] as const;
       const conversionCandidate = [v, "KB"] as const;
 
       expect(information["Eib"](conversionCandidate)).toEqual(expected);
@@ -8590,11 +8590,11 @@ describe("information", () => {
       const mebibitsConversion = linearConversion(102400);
 
       const [toBase, fromBase] = [
+        exbibitsConversion[1],
         mebibitsConversion[0],
-        exbibitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Eib"] as const;
+      const expected = [fromBase(toBase(v)), "Eib"] as const;
       const conversionCandidate = [v, "Mib"] as const;
 
       expect(information["Eib"](conversionCandidate)).toEqual(expected);
@@ -8606,11 +8606,11 @@ describe("information", () => {
       const megabytesConversion = linearConversion(819200);
 
       const [toBase, fromBase] = [
+        exbibitsConversion[1],
         megabytesConversion[0],
-        exbibitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Eib"] as const;
+      const expected = [fromBase(toBase(v)), "Eib"] as const;
       const conversionCandidate = [v, "MB"] as const;
 
       expect(information["Eib"](conversionCandidate)).toEqual(expected);
@@ -8622,11 +8622,11 @@ describe("information", () => {
       const gibibitsConversion = linearConversion(1024000);
 
       const [toBase, fromBase] = [
+        exbibitsConversion[1],
         gibibitsConversion[0],
-        exbibitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Eib"] as const;
+      const expected = [fromBase(toBase(v)), "Eib"] as const;
       const conversionCandidate = [v, "Gib"] as const;
 
       expect(information["Eib"](conversionCandidate)).toEqual(expected);
@@ -8638,11 +8638,11 @@ describe("information", () => {
       const gigabytesConversion = linearConversion(8192000);
 
       const [toBase, fromBase] = [
+        exbibitsConversion[1],
         gigabytesConversion[0],
-        exbibitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Eib"] as const;
+      const expected = [fromBase(toBase(v)), "Eib"] as const;
       const conversionCandidate = [v, "GB"] as const;
 
       expect(information["Eib"](conversionCandidate)).toEqual(expected);
@@ -8654,11 +8654,11 @@ describe("information", () => {
       const tebibitsConversion = linearConversion(10240000);
 
       const [toBase, fromBase] = [
+        exbibitsConversion[1],
         tebibitsConversion[0],
-        exbibitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Eib"] as const;
+      const expected = [fromBase(toBase(v)), "Eib"] as const;
       const conversionCandidate = [v, "Tib"] as const;
 
       expect(information["Eib"](conversionCandidate)).toEqual(expected);
@@ -8670,11 +8670,11 @@ describe("information", () => {
       const terabytesConversion = linearConversion(81920000);
 
       const [toBase, fromBase] = [
+        exbibitsConversion[1],
         terabytesConversion[0],
-        exbibitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Eib"] as const;
+      const expected = [fromBase(toBase(v)), "Eib"] as const;
       const conversionCandidate = [v, "TB"] as const;
 
       expect(information["Eib"](conversionCandidate)).toEqual(expected);
@@ -8686,11 +8686,11 @@ describe("information", () => {
       const pebibitsConversion = linearConversion(102400000);
 
       const [toBase, fromBase] = [
+        exbibitsConversion[1],
         pebibitsConversion[0],
-        exbibitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Eib"] as const;
+      const expected = [fromBase(toBase(v)), "Eib"] as const;
       const conversionCandidate = [v, "Pib"] as const;
 
       expect(information["Eib"](conversionCandidate)).toEqual(expected);
@@ -8702,11 +8702,11 @@ describe("information", () => {
       const petabytesConversion = linearConversion(819200000);
 
       const [toBase, fromBase] = [
+        exbibitsConversion[1],
         petabytesConversion[0],
-        exbibitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Eib"] as const;
+      const expected = [fromBase(toBase(v)), "Eib"] as const;
       const conversionCandidate = [v, "PB"] as const;
 
       expect(information["Eib"](conversionCandidate)).toEqual(expected);
@@ -8720,11 +8720,11 @@ describe("information", () => {
       const exabytesConversion = linearConversion(8192000000);
 
       const [toBase, fromBase] = [
+        exbibitsConversion[1],
         exabytesConversion[0],
-        exbibitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Eib"] as const;
+      const expected = [fromBase(toBase(v)), "Eib"] as const;
       const conversionCandidate = [v, "EB"] as const;
 
       expect(information["Eib"](conversionCandidate)).toEqual(expected);
@@ -8736,11 +8736,11 @@ describe("information", () => {
       const zebibitsConversion = linearConversion(10240000000);
 
       const [toBase, fromBase] = [
+        exbibitsConversion[1],
         zebibitsConversion[0],
-        exbibitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Eib"] as const;
+      const expected = [fromBase(toBase(v)), "Eib"] as const;
       const conversionCandidate = [v, "Zib"] as const;
 
       expect(information["Eib"](conversionCandidate)).toEqual(expected);
@@ -8752,11 +8752,11 @@ describe("information", () => {
       const zettabytesConversion = linearConversion(81920000000);
 
       const [toBase, fromBase] = [
+        exbibitsConversion[1],
         zettabytesConversion[0],
-        exbibitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Eib"] as const;
+      const expected = [fromBase(toBase(v)), "Eib"] as const;
       const conversionCandidate = [v, "ZB"] as const;
 
       expect(information["Eib"](conversionCandidate)).toEqual(expected);
@@ -8768,11 +8768,11 @@ describe("information", () => {
       const yobibitsConversion = linearConversion(102400000000);
 
       const [toBase, fromBase] = [
+        exbibitsConversion[1],
         yobibitsConversion[0],
-        exbibitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Eib"] as const;
+      const expected = [fromBase(toBase(v)), "Eib"] as const;
       const conversionCandidate = [v, "Yib"] as const;
 
       expect(information["Eib"](conversionCandidate)).toEqual(expected);
@@ -8784,11 +8784,11 @@ describe("information", () => {
       const yottabytesConversion = linearConversion(819200000000);
 
       const [toBase, fromBase] = [
+        exbibitsConversion[1],
         yottabytesConversion[0],
-        exbibitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Eib"] as const;
+      const expected = [fromBase(toBase(v)), "Eib"] as const;
       const conversionCandidate = [v, "YB"] as const;
 
       expect(information["Eib"](conversionCandidate)).toEqual(expected);
@@ -8808,11 +8808,11 @@ describe("information", () => {
       const bitsConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
+        exabytesConversion[1],
         bitsConversion[0],
-        exabytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "EB"] as const;
+      const expected = [fromBase(toBase(v)), "EB"] as const;
       const conversionCandidate = [v, "b"] as const;
 
       expect(information["EB"](conversionCandidate)).toEqual(expected);
@@ -8824,11 +8824,11 @@ describe("information", () => {
       const bytesConversion = linearConversion(8);
 
       const [toBase, fromBase] = [
+        exabytesConversion[1],
         bytesConversion[0],
-        exabytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "EB"] as const;
+      const expected = [fromBase(toBase(v)), "EB"] as const;
       const conversionCandidate = [v, "B"] as const;
 
       expect(information["EB"](conversionCandidate)).toEqual(expected);
@@ -8840,11 +8840,11 @@ describe("information", () => {
       const kilobitsConversion = linearConversion(1000);
 
       const [toBase, fromBase] = [
+        exabytesConversion[1],
         kilobitsConversion[0],
-        exabytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "EB"] as const;
+      const expected = [fromBase(toBase(v)), "EB"] as const;
       const conversionCandidate = [v, "kb"] as const;
 
       expect(information["EB"](conversionCandidate)).toEqual(expected);
@@ -8856,11 +8856,11 @@ describe("information", () => {
       const megabitsConversion = linearConversion(100000);
 
       const [toBase, fromBase] = [
+        exabytesConversion[1],
         megabitsConversion[0],
-        exabytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "EB"] as const;
+      const expected = [fromBase(toBase(v)), "EB"] as const;
       const conversionCandidate = [v, "Mb"] as const;
 
       expect(information["EB"](conversionCandidate)).toEqual(expected);
@@ -8872,11 +8872,11 @@ describe("information", () => {
       const gigabitsConversion = linearConversion(1000000);
 
       const [toBase, fromBase] = [
+        exabytesConversion[1],
         gigabitsConversion[0],
-        exabytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "EB"] as const;
+      const expected = [fromBase(toBase(v)), "EB"] as const;
       const conversionCandidate = [v, "Gb"] as const;
 
       expect(information["EB"](conversionCandidate)).toEqual(expected);
@@ -8888,11 +8888,11 @@ describe("information", () => {
       const terabitsConversion = linearConversion(10000000);
 
       const [toBase, fromBase] = [
+        exabytesConversion[1],
         terabitsConversion[0],
-        exabytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "EB"] as const;
+      const expected = [fromBase(toBase(v)), "EB"] as const;
       const conversionCandidate = [v, "Tb"] as const;
 
       expect(information["EB"](conversionCandidate)).toEqual(expected);
@@ -8904,11 +8904,11 @@ describe("information", () => {
       const petabitsConversion = linearConversion(100000000);
 
       const [toBase, fromBase] = [
+        exabytesConversion[1],
         petabitsConversion[0],
-        exabytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "EB"] as const;
+      const expected = [fromBase(toBase(v)), "EB"] as const;
       const conversionCandidate = [v, "Pb"] as const;
 
       expect(information["EB"](conversionCandidate)).toEqual(expected);
@@ -8920,11 +8920,11 @@ describe("information", () => {
       const exabitsConversion = linearConversion(1000000000);
 
       const [toBase, fromBase] = [
+        exabytesConversion[1],
         exabitsConversion[0],
-        exabytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "EB"] as const;
+      const expected = [fromBase(toBase(v)), "EB"] as const;
       const conversionCandidate = [v, "Eb"] as const;
 
       expect(information["EB"](conversionCandidate)).toEqual(expected);
@@ -8936,11 +8936,11 @@ describe("information", () => {
       const zettabitsConversion = linearConversion(10000000000);
 
       const [toBase, fromBase] = [
+        exabytesConversion[1],
         zettabitsConversion[0],
-        exabytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "EB"] as const;
+      const expected = [fromBase(toBase(v)), "EB"] as const;
       const conversionCandidate = [v, "Zb"] as const;
 
       expect(information["EB"](conversionCandidate)).toEqual(expected);
@@ -8952,11 +8952,11 @@ describe("information", () => {
       const yottabitsConversion = linearConversion(100000000000);
 
       const [toBase, fromBase] = [
+        exabytesConversion[1],
         yottabitsConversion[0],
-        exabytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "EB"] as const;
+      const expected = [fromBase(toBase(v)), "EB"] as const;
       const conversionCandidate = [v, "Yb"] as const;
 
       expect(information["EB"](conversionCandidate)).toEqual(expected);
@@ -8968,11 +8968,11 @@ describe("information", () => {
       const kibibitsConversion = linearConversion(1024);
 
       const [toBase, fromBase] = [
+        exabytesConversion[1],
         kibibitsConversion[0],
-        exabytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "EB"] as const;
+      const expected = [fromBase(toBase(v)), "EB"] as const;
       const conversionCandidate = [v, "Kib"] as const;
 
       expect(information["EB"](conversionCandidate)).toEqual(expected);
@@ -8984,11 +8984,11 @@ describe("information", () => {
       const kilobytesConversion = linearConversion(8192);
 
       const [toBase, fromBase] = [
+        exabytesConversion[1],
         kilobytesConversion[0],
-        exabytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "EB"] as const;
+      const expected = [fromBase(toBase(v)), "EB"] as const;
       const conversionCandidate = [v, "KB"] as const;
 
       expect(information["EB"](conversionCandidate)).toEqual(expected);
@@ -9000,11 +9000,11 @@ describe("information", () => {
       const mebibitsConversion = linearConversion(102400);
 
       const [toBase, fromBase] = [
+        exabytesConversion[1],
         mebibitsConversion[0],
-        exabytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "EB"] as const;
+      const expected = [fromBase(toBase(v)), "EB"] as const;
       const conversionCandidate = [v, "Mib"] as const;
 
       expect(information["EB"](conversionCandidate)).toEqual(expected);
@@ -9016,11 +9016,11 @@ describe("information", () => {
       const megabytesConversion = linearConversion(819200);
 
       const [toBase, fromBase] = [
+        exabytesConversion[1],
         megabytesConversion[0],
-        exabytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "EB"] as const;
+      const expected = [fromBase(toBase(v)), "EB"] as const;
       const conversionCandidate = [v, "MB"] as const;
 
       expect(information["EB"](conversionCandidate)).toEqual(expected);
@@ -9032,11 +9032,11 @@ describe("information", () => {
       const gibibitsConversion = linearConversion(1024000);
 
       const [toBase, fromBase] = [
+        exabytesConversion[1],
         gibibitsConversion[0],
-        exabytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "EB"] as const;
+      const expected = [fromBase(toBase(v)), "EB"] as const;
       const conversionCandidate = [v, "Gib"] as const;
 
       expect(information["EB"](conversionCandidate)).toEqual(expected);
@@ -9048,11 +9048,11 @@ describe("information", () => {
       const gigabytesConversion = linearConversion(8192000);
 
       const [toBase, fromBase] = [
+        exabytesConversion[1],
         gigabytesConversion[0],
-        exabytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "EB"] as const;
+      const expected = [fromBase(toBase(v)), "EB"] as const;
       const conversionCandidate = [v, "GB"] as const;
 
       expect(information["EB"](conversionCandidate)).toEqual(expected);
@@ -9064,11 +9064,11 @@ describe("information", () => {
       const tebibitsConversion = linearConversion(10240000);
 
       const [toBase, fromBase] = [
+        exabytesConversion[1],
         tebibitsConversion[0],
-        exabytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "EB"] as const;
+      const expected = [fromBase(toBase(v)), "EB"] as const;
       const conversionCandidate = [v, "Tib"] as const;
 
       expect(information["EB"](conversionCandidate)).toEqual(expected);
@@ -9080,11 +9080,11 @@ describe("information", () => {
       const terabytesConversion = linearConversion(81920000);
 
       const [toBase, fromBase] = [
+        exabytesConversion[1],
         terabytesConversion[0],
-        exabytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "EB"] as const;
+      const expected = [fromBase(toBase(v)), "EB"] as const;
       const conversionCandidate = [v, "TB"] as const;
 
       expect(information["EB"](conversionCandidate)).toEqual(expected);
@@ -9096,11 +9096,11 @@ describe("information", () => {
       const pebibitsConversion = linearConversion(102400000);
 
       const [toBase, fromBase] = [
+        exabytesConversion[1],
         pebibitsConversion[0],
-        exabytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "EB"] as const;
+      const expected = [fromBase(toBase(v)), "EB"] as const;
       const conversionCandidate = [v, "Pib"] as const;
 
       expect(information["EB"](conversionCandidate)).toEqual(expected);
@@ -9112,11 +9112,11 @@ describe("information", () => {
       const petabytesConversion = linearConversion(819200000);
 
       const [toBase, fromBase] = [
+        exabytesConversion[1],
         petabytesConversion[0],
-        exabytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "EB"] as const;
+      const expected = [fromBase(toBase(v)), "EB"] as const;
       const conversionCandidate = [v, "PB"] as const;
 
       expect(information["EB"](conversionCandidate)).toEqual(expected);
@@ -9128,11 +9128,11 @@ describe("information", () => {
       const exbibitsConversion = linearConversion(1024000000);
 
       const [toBase, fromBase] = [
+        exabytesConversion[1],
         exbibitsConversion[0],
-        exabytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "EB"] as const;
+      const expected = [fromBase(toBase(v)), "EB"] as const;
       const conversionCandidate = [v, "Eib"] as const;
 
       expect(information["EB"](conversionCandidate)).toEqual(expected);
@@ -9146,11 +9146,11 @@ describe("information", () => {
       const zebibitsConversion = linearConversion(10240000000);
 
       const [toBase, fromBase] = [
+        exabytesConversion[1],
         zebibitsConversion[0],
-        exabytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "EB"] as const;
+      const expected = [fromBase(toBase(v)), "EB"] as const;
       const conversionCandidate = [v, "Zib"] as const;
 
       expect(information["EB"](conversionCandidate)).toEqual(expected);
@@ -9162,11 +9162,11 @@ describe("information", () => {
       const zettabytesConversion = linearConversion(81920000000);
 
       const [toBase, fromBase] = [
+        exabytesConversion[1],
         zettabytesConversion[0],
-        exabytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "EB"] as const;
+      const expected = [fromBase(toBase(v)), "EB"] as const;
       const conversionCandidate = [v, "ZB"] as const;
 
       expect(information["EB"](conversionCandidate)).toEqual(expected);
@@ -9178,11 +9178,11 @@ describe("information", () => {
       const yobibitsConversion = linearConversion(102400000000);
 
       const [toBase, fromBase] = [
+        exabytesConversion[1],
         yobibitsConversion[0],
-        exabytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "EB"] as const;
+      const expected = [fromBase(toBase(v)), "EB"] as const;
       const conversionCandidate = [v, "Yib"] as const;
 
       expect(information["EB"](conversionCandidate)).toEqual(expected);
@@ -9194,11 +9194,11 @@ describe("information", () => {
       const yottabytesConversion = linearConversion(819200000000);
 
       const [toBase, fromBase] = [
+        exabytesConversion[1],
         yottabytesConversion[0],
-        exabytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "EB"] as const;
+      const expected = [fromBase(toBase(v)), "EB"] as const;
       const conversionCandidate = [v, "YB"] as const;
 
       expect(information["EB"](conversionCandidate)).toEqual(expected);
@@ -9218,11 +9218,11 @@ describe("information", () => {
       const bitsConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
+        zebibitsConversion[1],
         bitsConversion[0],
-        zebibitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Zib"] as const;
+      const expected = [fromBase(toBase(v)), "Zib"] as const;
       const conversionCandidate = [v, "b"] as const;
 
       expect(information["Zib"](conversionCandidate)).toEqual(expected);
@@ -9234,11 +9234,11 @@ describe("information", () => {
       const bytesConversion = linearConversion(8);
 
       const [toBase, fromBase] = [
+        zebibitsConversion[1],
         bytesConversion[0],
-        zebibitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Zib"] as const;
+      const expected = [fromBase(toBase(v)), "Zib"] as const;
       const conversionCandidate = [v, "B"] as const;
 
       expect(information["Zib"](conversionCandidate)).toEqual(expected);
@@ -9250,11 +9250,11 @@ describe("information", () => {
       const kilobitsConversion = linearConversion(1000);
 
       const [toBase, fromBase] = [
+        zebibitsConversion[1],
         kilobitsConversion[0],
-        zebibitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Zib"] as const;
+      const expected = [fromBase(toBase(v)), "Zib"] as const;
       const conversionCandidate = [v, "kb"] as const;
 
       expect(information["Zib"](conversionCandidate)).toEqual(expected);
@@ -9266,11 +9266,11 @@ describe("information", () => {
       const megabitsConversion = linearConversion(100000);
 
       const [toBase, fromBase] = [
+        zebibitsConversion[1],
         megabitsConversion[0],
-        zebibitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Zib"] as const;
+      const expected = [fromBase(toBase(v)), "Zib"] as const;
       const conversionCandidate = [v, "Mb"] as const;
 
       expect(information["Zib"](conversionCandidate)).toEqual(expected);
@@ -9282,11 +9282,11 @@ describe("information", () => {
       const gigabitsConversion = linearConversion(1000000);
 
       const [toBase, fromBase] = [
+        zebibitsConversion[1],
         gigabitsConversion[0],
-        zebibitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Zib"] as const;
+      const expected = [fromBase(toBase(v)), "Zib"] as const;
       const conversionCandidate = [v, "Gb"] as const;
 
       expect(information["Zib"](conversionCandidate)).toEqual(expected);
@@ -9298,11 +9298,11 @@ describe("information", () => {
       const terabitsConversion = linearConversion(10000000);
 
       const [toBase, fromBase] = [
+        zebibitsConversion[1],
         terabitsConversion[0],
-        zebibitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Zib"] as const;
+      const expected = [fromBase(toBase(v)), "Zib"] as const;
       const conversionCandidate = [v, "Tb"] as const;
 
       expect(information["Zib"](conversionCandidate)).toEqual(expected);
@@ -9314,11 +9314,11 @@ describe("information", () => {
       const petabitsConversion = linearConversion(100000000);
 
       const [toBase, fromBase] = [
+        zebibitsConversion[1],
         petabitsConversion[0],
-        zebibitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Zib"] as const;
+      const expected = [fromBase(toBase(v)), "Zib"] as const;
       const conversionCandidate = [v, "Pb"] as const;
 
       expect(information["Zib"](conversionCandidate)).toEqual(expected);
@@ -9330,11 +9330,11 @@ describe("information", () => {
       const exabitsConversion = linearConversion(1000000000);
 
       const [toBase, fromBase] = [
+        zebibitsConversion[1],
         exabitsConversion[0],
-        zebibitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Zib"] as const;
+      const expected = [fromBase(toBase(v)), "Zib"] as const;
       const conversionCandidate = [v, "Eb"] as const;
 
       expect(information["Zib"](conversionCandidate)).toEqual(expected);
@@ -9346,11 +9346,11 @@ describe("information", () => {
       const zettabitsConversion = linearConversion(10000000000);
 
       const [toBase, fromBase] = [
+        zebibitsConversion[1],
         zettabitsConversion[0],
-        zebibitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Zib"] as const;
+      const expected = [fromBase(toBase(v)), "Zib"] as const;
       const conversionCandidate = [v, "Zb"] as const;
 
       expect(information["Zib"](conversionCandidate)).toEqual(expected);
@@ -9362,11 +9362,11 @@ describe("information", () => {
       const yottabitsConversion = linearConversion(100000000000);
 
       const [toBase, fromBase] = [
+        zebibitsConversion[1],
         yottabitsConversion[0],
-        zebibitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Zib"] as const;
+      const expected = [fromBase(toBase(v)), "Zib"] as const;
       const conversionCandidate = [v, "Yb"] as const;
 
       expect(information["Zib"](conversionCandidate)).toEqual(expected);
@@ -9378,11 +9378,11 @@ describe("information", () => {
       const kibibitsConversion = linearConversion(1024);
 
       const [toBase, fromBase] = [
+        zebibitsConversion[1],
         kibibitsConversion[0],
-        zebibitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Zib"] as const;
+      const expected = [fromBase(toBase(v)), "Zib"] as const;
       const conversionCandidate = [v, "Kib"] as const;
 
       expect(information["Zib"](conversionCandidate)).toEqual(expected);
@@ -9394,11 +9394,11 @@ describe("information", () => {
       const kilobytesConversion = linearConversion(8192);
 
       const [toBase, fromBase] = [
+        zebibitsConversion[1],
         kilobytesConversion[0],
-        zebibitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Zib"] as const;
+      const expected = [fromBase(toBase(v)), "Zib"] as const;
       const conversionCandidate = [v, "KB"] as const;
 
       expect(information["Zib"](conversionCandidate)).toEqual(expected);
@@ -9410,11 +9410,11 @@ describe("information", () => {
       const mebibitsConversion = linearConversion(102400);
 
       const [toBase, fromBase] = [
+        zebibitsConversion[1],
         mebibitsConversion[0],
-        zebibitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Zib"] as const;
+      const expected = [fromBase(toBase(v)), "Zib"] as const;
       const conversionCandidate = [v, "Mib"] as const;
 
       expect(information["Zib"](conversionCandidate)).toEqual(expected);
@@ -9426,11 +9426,11 @@ describe("information", () => {
       const megabytesConversion = linearConversion(819200);
 
       const [toBase, fromBase] = [
+        zebibitsConversion[1],
         megabytesConversion[0],
-        zebibitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Zib"] as const;
+      const expected = [fromBase(toBase(v)), "Zib"] as const;
       const conversionCandidate = [v, "MB"] as const;
 
       expect(information["Zib"](conversionCandidate)).toEqual(expected);
@@ -9442,11 +9442,11 @@ describe("information", () => {
       const gibibitsConversion = linearConversion(1024000);
 
       const [toBase, fromBase] = [
+        zebibitsConversion[1],
         gibibitsConversion[0],
-        zebibitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Zib"] as const;
+      const expected = [fromBase(toBase(v)), "Zib"] as const;
       const conversionCandidate = [v, "Gib"] as const;
 
       expect(information["Zib"](conversionCandidate)).toEqual(expected);
@@ -9458,11 +9458,11 @@ describe("information", () => {
       const gigabytesConversion = linearConversion(8192000);
 
       const [toBase, fromBase] = [
+        zebibitsConversion[1],
         gigabytesConversion[0],
-        zebibitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Zib"] as const;
+      const expected = [fromBase(toBase(v)), "Zib"] as const;
       const conversionCandidate = [v, "GB"] as const;
 
       expect(information["Zib"](conversionCandidate)).toEqual(expected);
@@ -9474,11 +9474,11 @@ describe("information", () => {
       const tebibitsConversion = linearConversion(10240000);
 
       const [toBase, fromBase] = [
+        zebibitsConversion[1],
         tebibitsConversion[0],
-        zebibitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Zib"] as const;
+      const expected = [fromBase(toBase(v)), "Zib"] as const;
       const conversionCandidate = [v, "Tib"] as const;
 
       expect(information["Zib"](conversionCandidate)).toEqual(expected);
@@ -9490,11 +9490,11 @@ describe("information", () => {
       const terabytesConversion = linearConversion(81920000);
 
       const [toBase, fromBase] = [
+        zebibitsConversion[1],
         terabytesConversion[0],
-        zebibitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Zib"] as const;
+      const expected = [fromBase(toBase(v)), "Zib"] as const;
       const conversionCandidate = [v, "TB"] as const;
 
       expect(information["Zib"](conversionCandidate)).toEqual(expected);
@@ -9506,11 +9506,11 @@ describe("information", () => {
       const pebibitsConversion = linearConversion(102400000);
 
       const [toBase, fromBase] = [
+        zebibitsConversion[1],
         pebibitsConversion[0],
-        zebibitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Zib"] as const;
+      const expected = [fromBase(toBase(v)), "Zib"] as const;
       const conversionCandidate = [v, "Pib"] as const;
 
       expect(information["Zib"](conversionCandidate)).toEqual(expected);
@@ -9522,11 +9522,11 @@ describe("information", () => {
       const petabytesConversion = linearConversion(819200000);
 
       const [toBase, fromBase] = [
+        zebibitsConversion[1],
         petabytesConversion[0],
-        zebibitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Zib"] as const;
+      const expected = [fromBase(toBase(v)), "Zib"] as const;
       const conversionCandidate = [v, "PB"] as const;
 
       expect(information["Zib"](conversionCandidate)).toEqual(expected);
@@ -9538,11 +9538,11 @@ describe("information", () => {
       const exbibitsConversion = linearConversion(1024000000);
 
       const [toBase, fromBase] = [
+        zebibitsConversion[1],
         exbibitsConversion[0],
-        zebibitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Zib"] as const;
+      const expected = [fromBase(toBase(v)), "Zib"] as const;
       const conversionCandidate = [v, "Eib"] as const;
 
       expect(information["Zib"](conversionCandidate)).toEqual(expected);
@@ -9554,11 +9554,11 @@ describe("information", () => {
       const exabytesConversion = linearConversion(8192000000);
 
       const [toBase, fromBase] = [
+        zebibitsConversion[1],
         exabytesConversion[0],
-        zebibitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Zib"] as const;
+      const expected = [fromBase(toBase(v)), "Zib"] as const;
       const conversionCandidate = [v, "EB"] as const;
 
       expect(information["Zib"](conversionCandidate)).toEqual(expected);
@@ -9572,11 +9572,11 @@ describe("information", () => {
       const zettabytesConversion = linearConversion(81920000000);
 
       const [toBase, fromBase] = [
+        zebibitsConversion[1],
         zettabytesConversion[0],
-        zebibitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Zib"] as const;
+      const expected = [fromBase(toBase(v)), "Zib"] as const;
       const conversionCandidate = [v, "ZB"] as const;
 
       expect(information["Zib"](conversionCandidate)).toEqual(expected);
@@ -9588,11 +9588,11 @@ describe("information", () => {
       const yobibitsConversion = linearConversion(102400000000);
 
       const [toBase, fromBase] = [
+        zebibitsConversion[1],
         yobibitsConversion[0],
-        zebibitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Zib"] as const;
+      const expected = [fromBase(toBase(v)), "Zib"] as const;
       const conversionCandidate = [v, "Yib"] as const;
 
       expect(information["Zib"](conversionCandidate)).toEqual(expected);
@@ -9604,11 +9604,11 @@ describe("information", () => {
       const yottabytesConversion = linearConversion(819200000000);
 
       const [toBase, fromBase] = [
+        zebibitsConversion[1],
         yottabytesConversion[0],
-        zebibitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Zib"] as const;
+      const expected = [fromBase(toBase(v)), "Zib"] as const;
       const conversionCandidate = [v, "YB"] as const;
 
       expect(information["Zib"](conversionCandidate)).toEqual(expected);
@@ -9628,11 +9628,11 @@ describe("information", () => {
       const bitsConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
+        zettabytesConversion[1],
         bitsConversion[0],
-        zettabytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ZB"] as const;
+      const expected = [fromBase(toBase(v)), "ZB"] as const;
       const conversionCandidate = [v, "b"] as const;
 
       expect(information["ZB"](conversionCandidate)).toEqual(expected);
@@ -9644,11 +9644,11 @@ describe("information", () => {
       const bytesConversion = linearConversion(8);
 
       const [toBase, fromBase] = [
+        zettabytesConversion[1],
         bytesConversion[0],
-        zettabytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ZB"] as const;
+      const expected = [fromBase(toBase(v)), "ZB"] as const;
       const conversionCandidate = [v, "B"] as const;
 
       expect(information["ZB"](conversionCandidate)).toEqual(expected);
@@ -9660,11 +9660,11 @@ describe("information", () => {
       const kilobitsConversion = linearConversion(1000);
 
       const [toBase, fromBase] = [
+        zettabytesConversion[1],
         kilobitsConversion[0],
-        zettabytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ZB"] as const;
+      const expected = [fromBase(toBase(v)), "ZB"] as const;
       const conversionCandidate = [v, "kb"] as const;
 
       expect(information["ZB"](conversionCandidate)).toEqual(expected);
@@ -9676,11 +9676,11 @@ describe("information", () => {
       const megabitsConversion = linearConversion(100000);
 
       const [toBase, fromBase] = [
+        zettabytesConversion[1],
         megabitsConversion[0],
-        zettabytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ZB"] as const;
+      const expected = [fromBase(toBase(v)), "ZB"] as const;
       const conversionCandidate = [v, "Mb"] as const;
 
       expect(information["ZB"](conversionCandidate)).toEqual(expected);
@@ -9692,11 +9692,11 @@ describe("information", () => {
       const gigabitsConversion = linearConversion(1000000);
 
       const [toBase, fromBase] = [
+        zettabytesConversion[1],
         gigabitsConversion[0],
-        zettabytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ZB"] as const;
+      const expected = [fromBase(toBase(v)), "ZB"] as const;
       const conversionCandidate = [v, "Gb"] as const;
 
       expect(information["ZB"](conversionCandidate)).toEqual(expected);
@@ -9708,11 +9708,11 @@ describe("information", () => {
       const terabitsConversion = linearConversion(10000000);
 
       const [toBase, fromBase] = [
+        zettabytesConversion[1],
         terabitsConversion[0],
-        zettabytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ZB"] as const;
+      const expected = [fromBase(toBase(v)), "ZB"] as const;
       const conversionCandidate = [v, "Tb"] as const;
 
       expect(information["ZB"](conversionCandidate)).toEqual(expected);
@@ -9724,11 +9724,11 @@ describe("information", () => {
       const petabitsConversion = linearConversion(100000000);
 
       const [toBase, fromBase] = [
+        zettabytesConversion[1],
         petabitsConversion[0],
-        zettabytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ZB"] as const;
+      const expected = [fromBase(toBase(v)), "ZB"] as const;
       const conversionCandidate = [v, "Pb"] as const;
 
       expect(information["ZB"](conversionCandidate)).toEqual(expected);
@@ -9740,11 +9740,11 @@ describe("information", () => {
       const exabitsConversion = linearConversion(1000000000);
 
       const [toBase, fromBase] = [
+        zettabytesConversion[1],
         exabitsConversion[0],
-        zettabytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ZB"] as const;
+      const expected = [fromBase(toBase(v)), "ZB"] as const;
       const conversionCandidate = [v, "Eb"] as const;
 
       expect(information["ZB"](conversionCandidate)).toEqual(expected);
@@ -9756,11 +9756,11 @@ describe("information", () => {
       const zettabitsConversion = linearConversion(10000000000);
 
       const [toBase, fromBase] = [
+        zettabytesConversion[1],
         zettabitsConversion[0],
-        zettabytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ZB"] as const;
+      const expected = [fromBase(toBase(v)), "ZB"] as const;
       const conversionCandidate = [v, "Zb"] as const;
 
       expect(information["ZB"](conversionCandidate)).toEqual(expected);
@@ -9772,11 +9772,11 @@ describe("information", () => {
       const yottabitsConversion = linearConversion(100000000000);
 
       const [toBase, fromBase] = [
+        zettabytesConversion[1],
         yottabitsConversion[0],
-        zettabytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ZB"] as const;
+      const expected = [fromBase(toBase(v)), "ZB"] as const;
       const conversionCandidate = [v, "Yb"] as const;
 
       expect(information["ZB"](conversionCandidate)).toEqual(expected);
@@ -9788,11 +9788,11 @@ describe("information", () => {
       const kibibitsConversion = linearConversion(1024);
 
       const [toBase, fromBase] = [
+        zettabytesConversion[1],
         kibibitsConversion[0],
-        zettabytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ZB"] as const;
+      const expected = [fromBase(toBase(v)), "ZB"] as const;
       const conversionCandidate = [v, "Kib"] as const;
 
       expect(information["ZB"](conversionCandidate)).toEqual(expected);
@@ -9804,11 +9804,11 @@ describe("information", () => {
       const kilobytesConversion = linearConversion(8192);
 
       const [toBase, fromBase] = [
+        zettabytesConversion[1],
         kilobytesConversion[0],
-        zettabytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ZB"] as const;
+      const expected = [fromBase(toBase(v)), "ZB"] as const;
       const conversionCandidate = [v, "KB"] as const;
 
       expect(information["ZB"](conversionCandidate)).toEqual(expected);
@@ -9820,11 +9820,11 @@ describe("information", () => {
       const mebibitsConversion = linearConversion(102400);
 
       const [toBase, fromBase] = [
+        zettabytesConversion[1],
         mebibitsConversion[0],
-        zettabytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ZB"] as const;
+      const expected = [fromBase(toBase(v)), "ZB"] as const;
       const conversionCandidate = [v, "Mib"] as const;
 
       expect(information["ZB"](conversionCandidate)).toEqual(expected);
@@ -9836,11 +9836,11 @@ describe("information", () => {
       const megabytesConversion = linearConversion(819200);
 
       const [toBase, fromBase] = [
+        zettabytesConversion[1],
         megabytesConversion[0],
-        zettabytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ZB"] as const;
+      const expected = [fromBase(toBase(v)), "ZB"] as const;
       const conversionCandidate = [v, "MB"] as const;
 
       expect(information["ZB"](conversionCandidate)).toEqual(expected);
@@ -9852,11 +9852,11 @@ describe("information", () => {
       const gibibitsConversion = linearConversion(1024000);
 
       const [toBase, fromBase] = [
+        zettabytesConversion[1],
         gibibitsConversion[0],
-        zettabytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ZB"] as const;
+      const expected = [fromBase(toBase(v)), "ZB"] as const;
       const conversionCandidate = [v, "Gib"] as const;
 
       expect(information["ZB"](conversionCandidate)).toEqual(expected);
@@ -9868,11 +9868,11 @@ describe("information", () => {
       const gigabytesConversion = linearConversion(8192000);
 
       const [toBase, fromBase] = [
+        zettabytesConversion[1],
         gigabytesConversion[0],
-        zettabytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ZB"] as const;
+      const expected = [fromBase(toBase(v)), "ZB"] as const;
       const conversionCandidate = [v, "GB"] as const;
 
       expect(information["ZB"](conversionCandidate)).toEqual(expected);
@@ -9884,11 +9884,11 @@ describe("information", () => {
       const tebibitsConversion = linearConversion(10240000);
 
       const [toBase, fromBase] = [
+        zettabytesConversion[1],
         tebibitsConversion[0],
-        zettabytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ZB"] as const;
+      const expected = [fromBase(toBase(v)), "ZB"] as const;
       const conversionCandidate = [v, "Tib"] as const;
 
       expect(information["ZB"](conversionCandidate)).toEqual(expected);
@@ -9900,11 +9900,11 @@ describe("information", () => {
       const terabytesConversion = linearConversion(81920000);
 
       const [toBase, fromBase] = [
+        zettabytesConversion[1],
         terabytesConversion[0],
-        zettabytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ZB"] as const;
+      const expected = [fromBase(toBase(v)), "ZB"] as const;
       const conversionCandidate = [v, "TB"] as const;
 
       expect(information["ZB"](conversionCandidate)).toEqual(expected);
@@ -9916,11 +9916,11 @@ describe("information", () => {
       const pebibitsConversion = linearConversion(102400000);
 
       const [toBase, fromBase] = [
+        zettabytesConversion[1],
         pebibitsConversion[0],
-        zettabytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ZB"] as const;
+      const expected = [fromBase(toBase(v)), "ZB"] as const;
       const conversionCandidate = [v, "Pib"] as const;
 
       expect(information["ZB"](conversionCandidate)).toEqual(expected);
@@ -9932,11 +9932,11 @@ describe("information", () => {
       const petabytesConversion = linearConversion(819200000);
 
       const [toBase, fromBase] = [
+        zettabytesConversion[1],
         petabytesConversion[0],
-        zettabytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ZB"] as const;
+      const expected = [fromBase(toBase(v)), "ZB"] as const;
       const conversionCandidate = [v, "PB"] as const;
 
       expect(information["ZB"](conversionCandidate)).toEqual(expected);
@@ -9948,11 +9948,11 @@ describe("information", () => {
       const exbibitsConversion = linearConversion(1024000000);
 
       const [toBase, fromBase] = [
+        zettabytesConversion[1],
         exbibitsConversion[0],
-        zettabytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ZB"] as const;
+      const expected = [fromBase(toBase(v)), "ZB"] as const;
       const conversionCandidate = [v, "Eib"] as const;
 
       expect(information["ZB"](conversionCandidate)).toEqual(expected);
@@ -9964,11 +9964,11 @@ describe("information", () => {
       const exabytesConversion = linearConversion(8192000000);
 
       const [toBase, fromBase] = [
+        zettabytesConversion[1],
         exabytesConversion[0],
-        zettabytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ZB"] as const;
+      const expected = [fromBase(toBase(v)), "ZB"] as const;
       const conversionCandidate = [v, "EB"] as const;
 
       expect(information["ZB"](conversionCandidate)).toEqual(expected);
@@ -9980,11 +9980,11 @@ describe("information", () => {
       const zebibitsConversion = linearConversion(10240000000);
 
       const [toBase, fromBase] = [
+        zettabytesConversion[1],
         zebibitsConversion[0],
-        zettabytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ZB"] as const;
+      const expected = [fromBase(toBase(v)), "ZB"] as const;
       const conversionCandidate = [v, "Zib"] as const;
 
       expect(information["ZB"](conversionCandidate)).toEqual(expected);
@@ -9998,11 +9998,11 @@ describe("information", () => {
       const yobibitsConversion = linearConversion(102400000000);
 
       const [toBase, fromBase] = [
+        zettabytesConversion[1],
         yobibitsConversion[0],
-        zettabytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ZB"] as const;
+      const expected = [fromBase(toBase(v)), "ZB"] as const;
       const conversionCandidate = [v, "Yib"] as const;
 
       expect(information["ZB"](conversionCandidate)).toEqual(expected);
@@ -10014,11 +10014,11 @@ describe("information", () => {
       const yottabytesConversion = linearConversion(819200000000);
 
       const [toBase, fromBase] = [
+        zettabytesConversion[1],
         yottabytesConversion[0],
-        zettabytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "ZB"] as const;
+      const expected = [fromBase(toBase(v)), "ZB"] as const;
       const conversionCandidate = [v, "YB"] as const;
 
       expect(information["ZB"](conversionCandidate)).toEqual(expected);
@@ -10038,11 +10038,11 @@ describe("information", () => {
       const bitsConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
+        yobibitsConversion[1],
         bitsConversion[0],
-        yobibitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Yib"] as const;
+      const expected = [fromBase(toBase(v)), "Yib"] as const;
       const conversionCandidate = [v, "b"] as const;
 
       expect(information["Yib"](conversionCandidate)).toEqual(expected);
@@ -10054,11 +10054,11 @@ describe("information", () => {
       const bytesConversion = linearConversion(8);
 
       const [toBase, fromBase] = [
+        yobibitsConversion[1],
         bytesConversion[0],
-        yobibitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Yib"] as const;
+      const expected = [fromBase(toBase(v)), "Yib"] as const;
       const conversionCandidate = [v, "B"] as const;
 
       expect(information["Yib"](conversionCandidate)).toEqual(expected);
@@ -10070,11 +10070,11 @@ describe("information", () => {
       const kilobitsConversion = linearConversion(1000);
 
       const [toBase, fromBase] = [
+        yobibitsConversion[1],
         kilobitsConversion[0],
-        yobibitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Yib"] as const;
+      const expected = [fromBase(toBase(v)), "Yib"] as const;
       const conversionCandidate = [v, "kb"] as const;
 
       expect(information["Yib"](conversionCandidate)).toEqual(expected);
@@ -10086,11 +10086,11 @@ describe("information", () => {
       const megabitsConversion = linearConversion(100000);
 
       const [toBase, fromBase] = [
+        yobibitsConversion[1],
         megabitsConversion[0],
-        yobibitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Yib"] as const;
+      const expected = [fromBase(toBase(v)), "Yib"] as const;
       const conversionCandidate = [v, "Mb"] as const;
 
       expect(information["Yib"](conversionCandidate)).toEqual(expected);
@@ -10102,11 +10102,11 @@ describe("information", () => {
       const gigabitsConversion = linearConversion(1000000);
 
       const [toBase, fromBase] = [
+        yobibitsConversion[1],
         gigabitsConversion[0],
-        yobibitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Yib"] as const;
+      const expected = [fromBase(toBase(v)), "Yib"] as const;
       const conversionCandidate = [v, "Gb"] as const;
 
       expect(information["Yib"](conversionCandidate)).toEqual(expected);
@@ -10118,11 +10118,11 @@ describe("information", () => {
       const terabitsConversion = linearConversion(10000000);
 
       const [toBase, fromBase] = [
+        yobibitsConversion[1],
         terabitsConversion[0],
-        yobibitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Yib"] as const;
+      const expected = [fromBase(toBase(v)), "Yib"] as const;
       const conversionCandidate = [v, "Tb"] as const;
 
       expect(information["Yib"](conversionCandidate)).toEqual(expected);
@@ -10134,11 +10134,11 @@ describe("information", () => {
       const petabitsConversion = linearConversion(100000000);
 
       const [toBase, fromBase] = [
+        yobibitsConversion[1],
         petabitsConversion[0],
-        yobibitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Yib"] as const;
+      const expected = [fromBase(toBase(v)), "Yib"] as const;
       const conversionCandidate = [v, "Pb"] as const;
 
       expect(information["Yib"](conversionCandidate)).toEqual(expected);
@@ -10150,11 +10150,11 @@ describe("information", () => {
       const exabitsConversion = linearConversion(1000000000);
 
       const [toBase, fromBase] = [
+        yobibitsConversion[1],
         exabitsConversion[0],
-        yobibitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Yib"] as const;
+      const expected = [fromBase(toBase(v)), "Yib"] as const;
       const conversionCandidate = [v, "Eb"] as const;
 
       expect(information["Yib"](conversionCandidate)).toEqual(expected);
@@ -10166,11 +10166,11 @@ describe("information", () => {
       const zettabitsConversion = linearConversion(10000000000);
 
       const [toBase, fromBase] = [
+        yobibitsConversion[1],
         zettabitsConversion[0],
-        yobibitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Yib"] as const;
+      const expected = [fromBase(toBase(v)), "Yib"] as const;
       const conversionCandidate = [v, "Zb"] as const;
 
       expect(information["Yib"](conversionCandidate)).toEqual(expected);
@@ -10182,11 +10182,11 @@ describe("information", () => {
       const yottabitsConversion = linearConversion(100000000000);
 
       const [toBase, fromBase] = [
+        yobibitsConversion[1],
         yottabitsConversion[0],
-        yobibitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Yib"] as const;
+      const expected = [fromBase(toBase(v)), "Yib"] as const;
       const conversionCandidate = [v, "Yb"] as const;
 
       expect(information["Yib"](conversionCandidate)).toEqual(expected);
@@ -10198,11 +10198,11 @@ describe("information", () => {
       const kibibitsConversion = linearConversion(1024);
 
       const [toBase, fromBase] = [
+        yobibitsConversion[1],
         kibibitsConversion[0],
-        yobibitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Yib"] as const;
+      const expected = [fromBase(toBase(v)), "Yib"] as const;
       const conversionCandidate = [v, "Kib"] as const;
 
       expect(information["Yib"](conversionCandidate)).toEqual(expected);
@@ -10214,11 +10214,11 @@ describe("information", () => {
       const kilobytesConversion = linearConversion(8192);
 
       const [toBase, fromBase] = [
+        yobibitsConversion[1],
         kilobytesConversion[0],
-        yobibitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Yib"] as const;
+      const expected = [fromBase(toBase(v)), "Yib"] as const;
       const conversionCandidate = [v, "KB"] as const;
 
       expect(information["Yib"](conversionCandidate)).toEqual(expected);
@@ -10230,11 +10230,11 @@ describe("information", () => {
       const mebibitsConversion = linearConversion(102400);
 
       const [toBase, fromBase] = [
+        yobibitsConversion[1],
         mebibitsConversion[0],
-        yobibitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Yib"] as const;
+      const expected = [fromBase(toBase(v)), "Yib"] as const;
       const conversionCandidate = [v, "Mib"] as const;
 
       expect(information["Yib"](conversionCandidate)).toEqual(expected);
@@ -10246,11 +10246,11 @@ describe("information", () => {
       const megabytesConversion = linearConversion(819200);
 
       const [toBase, fromBase] = [
+        yobibitsConversion[1],
         megabytesConversion[0],
-        yobibitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Yib"] as const;
+      const expected = [fromBase(toBase(v)), "Yib"] as const;
       const conversionCandidate = [v, "MB"] as const;
 
       expect(information["Yib"](conversionCandidate)).toEqual(expected);
@@ -10262,11 +10262,11 @@ describe("information", () => {
       const gibibitsConversion = linearConversion(1024000);
 
       const [toBase, fromBase] = [
+        yobibitsConversion[1],
         gibibitsConversion[0],
-        yobibitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Yib"] as const;
+      const expected = [fromBase(toBase(v)), "Yib"] as const;
       const conversionCandidate = [v, "Gib"] as const;
 
       expect(information["Yib"](conversionCandidate)).toEqual(expected);
@@ -10278,11 +10278,11 @@ describe("information", () => {
       const gigabytesConversion = linearConversion(8192000);
 
       const [toBase, fromBase] = [
+        yobibitsConversion[1],
         gigabytesConversion[0],
-        yobibitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Yib"] as const;
+      const expected = [fromBase(toBase(v)), "Yib"] as const;
       const conversionCandidate = [v, "GB"] as const;
 
       expect(information["Yib"](conversionCandidate)).toEqual(expected);
@@ -10294,11 +10294,11 @@ describe("information", () => {
       const tebibitsConversion = linearConversion(10240000);
 
       const [toBase, fromBase] = [
+        yobibitsConversion[1],
         tebibitsConversion[0],
-        yobibitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Yib"] as const;
+      const expected = [fromBase(toBase(v)), "Yib"] as const;
       const conversionCandidate = [v, "Tib"] as const;
 
       expect(information["Yib"](conversionCandidate)).toEqual(expected);
@@ -10310,11 +10310,11 @@ describe("information", () => {
       const terabytesConversion = linearConversion(81920000);
 
       const [toBase, fromBase] = [
+        yobibitsConversion[1],
         terabytesConversion[0],
-        yobibitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Yib"] as const;
+      const expected = [fromBase(toBase(v)), "Yib"] as const;
       const conversionCandidate = [v, "TB"] as const;
 
       expect(information["Yib"](conversionCandidate)).toEqual(expected);
@@ -10326,11 +10326,11 @@ describe("information", () => {
       const pebibitsConversion = linearConversion(102400000);
 
       const [toBase, fromBase] = [
+        yobibitsConversion[1],
         pebibitsConversion[0],
-        yobibitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Yib"] as const;
+      const expected = [fromBase(toBase(v)), "Yib"] as const;
       const conversionCandidate = [v, "Pib"] as const;
 
       expect(information["Yib"](conversionCandidate)).toEqual(expected);
@@ -10342,11 +10342,11 @@ describe("information", () => {
       const petabytesConversion = linearConversion(819200000);
 
       const [toBase, fromBase] = [
+        yobibitsConversion[1],
         petabytesConversion[0],
-        yobibitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Yib"] as const;
+      const expected = [fromBase(toBase(v)), "Yib"] as const;
       const conversionCandidate = [v, "PB"] as const;
 
       expect(information["Yib"](conversionCandidate)).toEqual(expected);
@@ -10358,11 +10358,11 @@ describe("information", () => {
       const exbibitsConversion = linearConversion(1024000000);
 
       const [toBase, fromBase] = [
+        yobibitsConversion[1],
         exbibitsConversion[0],
-        yobibitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Yib"] as const;
+      const expected = [fromBase(toBase(v)), "Yib"] as const;
       const conversionCandidate = [v, "Eib"] as const;
 
       expect(information["Yib"](conversionCandidate)).toEqual(expected);
@@ -10374,11 +10374,11 @@ describe("information", () => {
       const exabytesConversion = linearConversion(8192000000);
 
       const [toBase, fromBase] = [
+        yobibitsConversion[1],
         exabytesConversion[0],
-        yobibitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Yib"] as const;
+      const expected = [fromBase(toBase(v)), "Yib"] as const;
       const conversionCandidate = [v, "EB"] as const;
 
       expect(information["Yib"](conversionCandidate)).toEqual(expected);
@@ -10390,11 +10390,11 @@ describe("information", () => {
       const zebibitsConversion = linearConversion(10240000000);
 
       const [toBase, fromBase] = [
+        yobibitsConversion[1],
         zebibitsConversion[0],
-        yobibitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Yib"] as const;
+      const expected = [fromBase(toBase(v)), "Yib"] as const;
       const conversionCandidate = [v, "Zib"] as const;
 
       expect(information["Yib"](conversionCandidate)).toEqual(expected);
@@ -10406,11 +10406,11 @@ describe("information", () => {
       const zettabytesConversion = linearConversion(81920000000);
 
       const [toBase, fromBase] = [
+        yobibitsConversion[1],
         zettabytesConversion[0],
-        yobibitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Yib"] as const;
+      const expected = [fromBase(toBase(v)), "Yib"] as const;
       const conversionCandidate = [v, "ZB"] as const;
 
       expect(information["Yib"](conversionCandidate)).toEqual(expected);
@@ -10424,11 +10424,11 @@ describe("information", () => {
       const yottabytesConversion = linearConversion(819200000000);
 
       const [toBase, fromBase] = [
+        yobibitsConversion[1],
         yottabytesConversion[0],
-        yobibitsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "Yib"] as const;
+      const expected = [fromBase(toBase(v)), "Yib"] as const;
       const conversionCandidate = [v, "YB"] as const;
 
       expect(information["Yib"](conversionCandidate)).toEqual(expected);
@@ -10448,11 +10448,11 @@ describe("information", () => {
       const bitsConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
+        yottabytesConversion[1],
         bitsConversion[0],
-        yottabytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "YB"] as const;
+      const expected = [fromBase(toBase(v)), "YB"] as const;
       const conversionCandidate = [v, "b"] as const;
 
       expect(information["YB"](conversionCandidate)).toEqual(expected);
@@ -10464,11 +10464,11 @@ describe("information", () => {
       const bytesConversion = linearConversion(8);
 
       const [toBase, fromBase] = [
+        yottabytesConversion[1],
         bytesConversion[0],
-        yottabytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "YB"] as const;
+      const expected = [fromBase(toBase(v)), "YB"] as const;
       const conversionCandidate = [v, "B"] as const;
 
       expect(information["YB"](conversionCandidate)).toEqual(expected);
@@ -10480,11 +10480,11 @@ describe("information", () => {
       const kilobitsConversion = linearConversion(1000);
 
       const [toBase, fromBase] = [
+        yottabytesConversion[1],
         kilobitsConversion[0],
-        yottabytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "YB"] as const;
+      const expected = [fromBase(toBase(v)), "YB"] as const;
       const conversionCandidate = [v, "kb"] as const;
 
       expect(information["YB"](conversionCandidate)).toEqual(expected);
@@ -10496,11 +10496,11 @@ describe("information", () => {
       const megabitsConversion = linearConversion(100000);
 
       const [toBase, fromBase] = [
+        yottabytesConversion[1],
         megabitsConversion[0],
-        yottabytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "YB"] as const;
+      const expected = [fromBase(toBase(v)), "YB"] as const;
       const conversionCandidate = [v, "Mb"] as const;
 
       expect(information["YB"](conversionCandidate)).toEqual(expected);
@@ -10512,11 +10512,11 @@ describe("information", () => {
       const gigabitsConversion = linearConversion(1000000);
 
       const [toBase, fromBase] = [
+        yottabytesConversion[1],
         gigabitsConversion[0],
-        yottabytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "YB"] as const;
+      const expected = [fromBase(toBase(v)), "YB"] as const;
       const conversionCandidate = [v, "Gb"] as const;
 
       expect(information["YB"](conversionCandidate)).toEqual(expected);
@@ -10528,11 +10528,11 @@ describe("information", () => {
       const terabitsConversion = linearConversion(10000000);
 
       const [toBase, fromBase] = [
+        yottabytesConversion[1],
         terabitsConversion[0],
-        yottabytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "YB"] as const;
+      const expected = [fromBase(toBase(v)), "YB"] as const;
       const conversionCandidate = [v, "Tb"] as const;
 
       expect(information["YB"](conversionCandidate)).toEqual(expected);
@@ -10544,11 +10544,11 @@ describe("information", () => {
       const petabitsConversion = linearConversion(100000000);
 
       const [toBase, fromBase] = [
+        yottabytesConversion[1],
         petabitsConversion[0],
-        yottabytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "YB"] as const;
+      const expected = [fromBase(toBase(v)), "YB"] as const;
       const conversionCandidate = [v, "Pb"] as const;
 
       expect(information["YB"](conversionCandidate)).toEqual(expected);
@@ -10560,11 +10560,11 @@ describe("information", () => {
       const exabitsConversion = linearConversion(1000000000);
 
       const [toBase, fromBase] = [
+        yottabytesConversion[1],
         exabitsConversion[0],
-        yottabytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "YB"] as const;
+      const expected = [fromBase(toBase(v)), "YB"] as const;
       const conversionCandidate = [v, "Eb"] as const;
 
       expect(information["YB"](conversionCandidate)).toEqual(expected);
@@ -10576,11 +10576,11 @@ describe("information", () => {
       const zettabitsConversion = linearConversion(10000000000);
 
       const [toBase, fromBase] = [
+        yottabytesConversion[1],
         zettabitsConversion[0],
-        yottabytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "YB"] as const;
+      const expected = [fromBase(toBase(v)), "YB"] as const;
       const conversionCandidate = [v, "Zb"] as const;
 
       expect(information["YB"](conversionCandidate)).toEqual(expected);
@@ -10592,11 +10592,11 @@ describe("information", () => {
       const yottabitsConversion = linearConversion(100000000000);
 
       const [toBase, fromBase] = [
+        yottabytesConversion[1],
         yottabitsConversion[0],
-        yottabytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "YB"] as const;
+      const expected = [fromBase(toBase(v)), "YB"] as const;
       const conversionCandidate = [v, "Yb"] as const;
 
       expect(information["YB"](conversionCandidate)).toEqual(expected);
@@ -10608,11 +10608,11 @@ describe("information", () => {
       const kibibitsConversion = linearConversion(1024);
 
       const [toBase, fromBase] = [
+        yottabytesConversion[1],
         kibibitsConversion[0],
-        yottabytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "YB"] as const;
+      const expected = [fromBase(toBase(v)), "YB"] as const;
       const conversionCandidate = [v, "Kib"] as const;
 
       expect(information["YB"](conversionCandidate)).toEqual(expected);
@@ -10624,11 +10624,11 @@ describe("information", () => {
       const kilobytesConversion = linearConversion(8192);
 
       const [toBase, fromBase] = [
+        yottabytesConversion[1],
         kilobytesConversion[0],
-        yottabytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "YB"] as const;
+      const expected = [fromBase(toBase(v)), "YB"] as const;
       const conversionCandidate = [v, "KB"] as const;
 
       expect(information["YB"](conversionCandidate)).toEqual(expected);
@@ -10640,11 +10640,11 @@ describe("information", () => {
       const mebibitsConversion = linearConversion(102400);
 
       const [toBase, fromBase] = [
+        yottabytesConversion[1],
         mebibitsConversion[0],
-        yottabytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "YB"] as const;
+      const expected = [fromBase(toBase(v)), "YB"] as const;
       const conversionCandidate = [v, "Mib"] as const;
 
       expect(information["YB"](conversionCandidate)).toEqual(expected);
@@ -10656,11 +10656,11 @@ describe("information", () => {
       const megabytesConversion = linearConversion(819200);
 
       const [toBase, fromBase] = [
+        yottabytesConversion[1],
         megabytesConversion[0],
-        yottabytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "YB"] as const;
+      const expected = [fromBase(toBase(v)), "YB"] as const;
       const conversionCandidate = [v, "MB"] as const;
 
       expect(information["YB"](conversionCandidate)).toEqual(expected);
@@ -10672,11 +10672,11 @@ describe("information", () => {
       const gibibitsConversion = linearConversion(1024000);
 
       const [toBase, fromBase] = [
+        yottabytesConversion[1],
         gibibitsConversion[0],
-        yottabytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "YB"] as const;
+      const expected = [fromBase(toBase(v)), "YB"] as const;
       const conversionCandidate = [v, "Gib"] as const;
 
       expect(information["YB"](conversionCandidate)).toEqual(expected);
@@ -10688,11 +10688,11 @@ describe("information", () => {
       const gigabytesConversion = linearConversion(8192000);
 
       const [toBase, fromBase] = [
+        yottabytesConversion[1],
         gigabytesConversion[0],
-        yottabytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "YB"] as const;
+      const expected = [fromBase(toBase(v)), "YB"] as const;
       const conversionCandidate = [v, "GB"] as const;
 
       expect(information["YB"](conversionCandidate)).toEqual(expected);
@@ -10704,11 +10704,11 @@ describe("information", () => {
       const tebibitsConversion = linearConversion(10240000);
 
       const [toBase, fromBase] = [
+        yottabytesConversion[1],
         tebibitsConversion[0],
-        yottabytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "YB"] as const;
+      const expected = [fromBase(toBase(v)), "YB"] as const;
       const conversionCandidate = [v, "Tib"] as const;
 
       expect(information["YB"](conversionCandidate)).toEqual(expected);
@@ -10720,11 +10720,11 @@ describe("information", () => {
       const terabytesConversion = linearConversion(81920000);
 
       const [toBase, fromBase] = [
+        yottabytesConversion[1],
         terabytesConversion[0],
-        yottabytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "YB"] as const;
+      const expected = [fromBase(toBase(v)), "YB"] as const;
       const conversionCandidate = [v, "TB"] as const;
 
       expect(information["YB"](conversionCandidate)).toEqual(expected);
@@ -10736,11 +10736,11 @@ describe("information", () => {
       const pebibitsConversion = linearConversion(102400000);
 
       const [toBase, fromBase] = [
+        yottabytesConversion[1],
         pebibitsConversion[0],
-        yottabytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "YB"] as const;
+      const expected = [fromBase(toBase(v)), "YB"] as const;
       const conversionCandidate = [v, "Pib"] as const;
 
       expect(information["YB"](conversionCandidate)).toEqual(expected);
@@ -10752,11 +10752,11 @@ describe("information", () => {
       const petabytesConversion = linearConversion(819200000);
 
       const [toBase, fromBase] = [
+        yottabytesConversion[1],
         petabytesConversion[0],
-        yottabytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "YB"] as const;
+      const expected = [fromBase(toBase(v)), "YB"] as const;
       const conversionCandidate = [v, "PB"] as const;
 
       expect(information["YB"](conversionCandidate)).toEqual(expected);
@@ -10768,11 +10768,11 @@ describe("information", () => {
       const exbibitsConversion = linearConversion(1024000000);
 
       const [toBase, fromBase] = [
+        yottabytesConversion[1],
         exbibitsConversion[0],
-        yottabytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "YB"] as const;
+      const expected = [fromBase(toBase(v)), "YB"] as const;
       const conversionCandidate = [v, "Eib"] as const;
 
       expect(information["YB"](conversionCandidate)).toEqual(expected);
@@ -10784,11 +10784,11 @@ describe("information", () => {
       const exabytesConversion = linearConversion(8192000000);
 
       const [toBase, fromBase] = [
+        yottabytesConversion[1],
         exabytesConversion[0],
-        yottabytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "YB"] as const;
+      const expected = [fromBase(toBase(v)), "YB"] as const;
       const conversionCandidate = [v, "EB"] as const;
 
       expect(information["YB"](conversionCandidate)).toEqual(expected);
@@ -10800,11 +10800,11 @@ describe("information", () => {
       const zebibitsConversion = linearConversion(10240000000);
 
       const [toBase, fromBase] = [
+        yottabytesConversion[1],
         zebibitsConversion[0],
-        yottabytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "YB"] as const;
+      const expected = [fromBase(toBase(v)), "YB"] as const;
       const conversionCandidate = [v, "Zib"] as const;
 
       expect(information["YB"](conversionCandidate)).toEqual(expected);
@@ -10816,11 +10816,11 @@ describe("information", () => {
       const zettabytesConversion = linearConversion(81920000000);
 
       const [toBase, fromBase] = [
+        yottabytesConversion[1],
         zettabytesConversion[0],
-        yottabytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "YB"] as const;
+      const expected = [fromBase(toBase(v)), "YB"] as const;
       const conversionCandidate = [v, "ZB"] as const;
 
       expect(information["YB"](conversionCandidate)).toEqual(expected);
@@ -10832,11 +10832,11 @@ describe("information", () => {
       const yobibitsConversion = linearConversion(102400000000);
 
       const [toBase, fromBase] = [
+        yottabytesConversion[1],
         yobibitsConversion[0],
-        yottabytesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "YB"] as const;
+      const expected = [fromBase(toBase(v)), "YB"] as const;
       const conversionCandidate = [v, "Yib"] as const;
 
       expect(information["YB"](conversionCandidate)).toEqual(expected);

@@ -32,11 +32,11 @@ describe("acceleration", () => {
       const gravityConversion = linearConversion(9.81);
 
       const [toBase, fromBase] = [
+        metersPerSecondSquaredConversion[1],
         gravityConversion[0],
-        metersPerSecondSquaredConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "m/s²"] as const;
+      const expected = [fromBase(toBase(v)), "m/s²"] as const;
       const conversionCandidate = [v, "g"] as const;
 
       expect(acceleration["m/s²"](conversionCandidate)).toEqual(expected);
@@ -56,11 +56,11 @@ describe("acceleration", () => {
       const metersPerSecondSquaredConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
+        gravityConversion[1],
         metersPerSecondSquaredConversion[0],
-        gravityConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "g"] as const;
+      const expected = [fromBase(toBase(v)), "g"] as const;
       const conversionCandidate = [v, "m/s²"] as const;
 
       expect(acceleration["g"](conversionCandidate)).toEqual(expected);

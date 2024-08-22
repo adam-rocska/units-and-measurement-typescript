@@ -39,11 +39,11 @@ describe("duration", () => {
       const minutesConversion = linearConversion(60);
 
       const [toBase, fromBase] = [
+        secondsConversion[1],
         minutesConversion[0],
-        secondsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "sec"] as const;
+      const expected = [fromBase(toBase(v)), "sec"] as const;
       const conversionCandidate = [v, "min"] as const;
 
       expect(duration["sec"](conversionCandidate)).toEqual(expected);
@@ -55,11 +55,11 @@ describe("duration", () => {
       const hoursConversion = linearConversion(3600);
 
       const [toBase, fromBase] = [
+        secondsConversion[1],
         hoursConversion[0],
-        secondsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "sec"] as const;
+      const expected = [fromBase(toBase(v)), "sec"] as const;
       const conversionCandidate = [v, "hr"] as const;
 
       expect(duration["sec"](conversionCandidate)).toEqual(expected);
@@ -79,11 +79,11 @@ describe("duration", () => {
       const secondsConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
+        minutesConversion[1],
         secondsConversion[0],
-        minutesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "min"] as const;
+      const expected = [fromBase(toBase(v)), "min"] as const;
       const conversionCandidate = [v, "sec"] as const;
 
       expect(duration["min"](conversionCandidate)).toEqual(expected);
@@ -97,11 +97,11 @@ describe("duration", () => {
       const hoursConversion = linearConversion(3600);
 
       const [toBase, fromBase] = [
+        minutesConversion[1],
         hoursConversion[0],
-        minutesConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "min"] as const;
+      const expected = [fromBase(toBase(v)), "min"] as const;
       const conversionCandidate = [v, "hr"] as const;
 
       expect(duration["min"](conversionCandidate)).toEqual(expected);
@@ -121,11 +121,11 @@ describe("duration", () => {
       const secondsConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
+        hoursConversion[1],
         secondsConversion[0],
-        hoursConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "hr"] as const;
+      const expected = [fromBase(toBase(v)), "hr"] as const;
       const conversionCandidate = [v, "sec"] as const;
 
       expect(duration["hr"](conversionCandidate)).toEqual(expected);
@@ -137,11 +137,11 @@ describe("duration", () => {
       const minutesConversion = linearConversion(60);
 
       const [toBase, fromBase] = [
+        hoursConversion[1],
         minutesConversion[0],
-        hoursConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "hr"] as const;
+      const expected = [fromBase(toBase(v)), "hr"] as const;
       const conversionCandidate = [v, "min"] as const;
 
       expect(duration["hr"](conversionCandidate)).toEqual(expected);

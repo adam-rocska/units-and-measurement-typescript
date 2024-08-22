@@ -53,11 +53,11 @@ describe("electricPotentialDifference", () => {
       const kilovoltsConversion = linearConversion(1000);
 
       const [toBase, fromBase] = [
+        megavoltsConversion[1],
         kilovoltsConversion[0],
-        megavoltsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "MV"] as const;
+      const expected = [fromBase(toBase(v)), "MV"] as const;
       const conversionCandidate = [v, "kV"] as const;
 
       expect(electricPotentialDifference["MV"](conversionCandidate)).toEqual(expected);
@@ -69,11 +69,11 @@ describe("electricPotentialDifference", () => {
       const voltsConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
+        megavoltsConversion[1],
         voltsConversion[0],
-        megavoltsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "MV"] as const;
+      const expected = [fromBase(toBase(v)), "MV"] as const;
       const conversionCandidate = [v, "V"] as const;
 
       expect(electricPotentialDifference["MV"](conversionCandidate)).toEqual(expected);
@@ -85,11 +85,11 @@ describe("electricPotentialDifference", () => {
       const millivoltsConversion = linearConversion(0.001);
 
       const [toBase, fromBase] = [
+        megavoltsConversion[1],
         millivoltsConversion[0],
-        megavoltsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "MV"] as const;
+      const expected = [fromBase(toBase(v)), "MV"] as const;
       const conversionCandidate = [v, "mV"] as const;
 
       expect(electricPotentialDifference["MV"](conversionCandidate)).toEqual(expected);
@@ -101,11 +101,11 @@ describe("electricPotentialDifference", () => {
       const microvoltsConversion = linearConversion(0.000001);
 
       const [toBase, fromBase] = [
+        megavoltsConversion[1],
         microvoltsConversion[0],
-        megavoltsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "MV"] as const;
+      const expected = [fromBase(toBase(v)), "MV"] as const;
       const conversionCandidate = [v, "µV"] as const;
 
       expect(electricPotentialDifference["MV"](conversionCandidate)).toEqual(expected);
@@ -125,11 +125,11 @@ describe("electricPotentialDifference", () => {
       const megavoltsConversion = linearConversion(1000000);
 
       const [toBase, fromBase] = [
+        kilovoltsConversion[1],
         megavoltsConversion[0],
-        kilovoltsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "kV"] as const;
+      const expected = [fromBase(toBase(v)), "kV"] as const;
       const conversionCandidate = [v, "MV"] as const;
 
       expect(electricPotentialDifference["kV"](conversionCandidate)).toEqual(expected);
@@ -143,11 +143,11 @@ describe("electricPotentialDifference", () => {
       const voltsConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
+        kilovoltsConversion[1],
         voltsConversion[0],
-        kilovoltsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "kV"] as const;
+      const expected = [fromBase(toBase(v)), "kV"] as const;
       const conversionCandidate = [v, "V"] as const;
 
       expect(electricPotentialDifference["kV"](conversionCandidate)).toEqual(expected);
@@ -159,11 +159,11 @@ describe("electricPotentialDifference", () => {
       const millivoltsConversion = linearConversion(0.001);
 
       const [toBase, fromBase] = [
+        kilovoltsConversion[1],
         millivoltsConversion[0],
-        kilovoltsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "kV"] as const;
+      const expected = [fromBase(toBase(v)), "kV"] as const;
       const conversionCandidate = [v, "mV"] as const;
 
       expect(electricPotentialDifference["kV"](conversionCandidate)).toEqual(expected);
@@ -175,11 +175,11 @@ describe("electricPotentialDifference", () => {
       const microvoltsConversion = linearConversion(0.000001);
 
       const [toBase, fromBase] = [
+        kilovoltsConversion[1],
         microvoltsConversion[0],
-        kilovoltsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "kV"] as const;
+      const expected = [fromBase(toBase(v)), "kV"] as const;
       const conversionCandidate = [v, "µV"] as const;
 
       expect(electricPotentialDifference["kV"](conversionCandidate)).toEqual(expected);
@@ -199,11 +199,11 @@ describe("electricPotentialDifference", () => {
       const megavoltsConversion = linearConversion(1000000);
 
       const [toBase, fromBase] = [
+        voltsConversion[1],
         megavoltsConversion[0],
-        voltsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "V"] as const;
+      const expected = [fromBase(toBase(v)), "V"] as const;
       const conversionCandidate = [v, "MV"] as const;
 
       expect(electricPotentialDifference["V"](conversionCandidate)).toEqual(expected);
@@ -215,11 +215,11 @@ describe("electricPotentialDifference", () => {
       const kilovoltsConversion = linearConversion(1000);
 
       const [toBase, fromBase] = [
+        voltsConversion[1],
         kilovoltsConversion[0],
-        voltsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "V"] as const;
+      const expected = [fromBase(toBase(v)), "V"] as const;
       const conversionCandidate = [v, "kV"] as const;
 
       expect(electricPotentialDifference["V"](conversionCandidate)).toEqual(expected);
@@ -233,11 +233,11 @@ describe("electricPotentialDifference", () => {
       const millivoltsConversion = linearConversion(0.001);
 
       const [toBase, fromBase] = [
+        voltsConversion[1],
         millivoltsConversion[0],
-        voltsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "V"] as const;
+      const expected = [fromBase(toBase(v)), "V"] as const;
       const conversionCandidate = [v, "mV"] as const;
 
       expect(electricPotentialDifference["V"](conversionCandidate)).toEqual(expected);
@@ -249,11 +249,11 @@ describe("electricPotentialDifference", () => {
       const microvoltsConversion = linearConversion(0.000001);
 
       const [toBase, fromBase] = [
+        voltsConversion[1],
         microvoltsConversion[0],
-        voltsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "V"] as const;
+      const expected = [fromBase(toBase(v)), "V"] as const;
       const conversionCandidate = [v, "µV"] as const;
 
       expect(electricPotentialDifference["V"](conversionCandidate)).toEqual(expected);
@@ -273,11 +273,11 @@ describe("electricPotentialDifference", () => {
       const megavoltsConversion = linearConversion(1000000);
 
       const [toBase, fromBase] = [
+        millivoltsConversion[1],
         megavoltsConversion[0],
-        millivoltsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "mV"] as const;
+      const expected = [fromBase(toBase(v)), "mV"] as const;
       const conversionCandidate = [v, "MV"] as const;
 
       expect(electricPotentialDifference["mV"](conversionCandidate)).toEqual(expected);
@@ -289,11 +289,11 @@ describe("electricPotentialDifference", () => {
       const kilovoltsConversion = linearConversion(1000);
 
       const [toBase, fromBase] = [
+        millivoltsConversion[1],
         kilovoltsConversion[0],
-        millivoltsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "mV"] as const;
+      const expected = [fromBase(toBase(v)), "mV"] as const;
       const conversionCandidate = [v, "kV"] as const;
 
       expect(electricPotentialDifference["mV"](conversionCandidate)).toEqual(expected);
@@ -305,11 +305,11 @@ describe("electricPotentialDifference", () => {
       const voltsConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
+        millivoltsConversion[1],
         voltsConversion[0],
-        millivoltsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "mV"] as const;
+      const expected = [fromBase(toBase(v)), "mV"] as const;
       const conversionCandidate = [v, "V"] as const;
 
       expect(electricPotentialDifference["mV"](conversionCandidate)).toEqual(expected);
@@ -323,11 +323,11 @@ describe("electricPotentialDifference", () => {
       const microvoltsConversion = linearConversion(0.000001);
 
       const [toBase, fromBase] = [
+        millivoltsConversion[1],
         microvoltsConversion[0],
-        millivoltsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "mV"] as const;
+      const expected = [fromBase(toBase(v)), "mV"] as const;
       const conversionCandidate = [v, "µV"] as const;
 
       expect(electricPotentialDifference["mV"](conversionCandidate)).toEqual(expected);
@@ -347,11 +347,11 @@ describe("electricPotentialDifference", () => {
       const megavoltsConversion = linearConversion(1000000);
 
       const [toBase, fromBase] = [
+        microvoltsConversion[1],
         megavoltsConversion[0],
-        microvoltsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "µV"] as const;
+      const expected = [fromBase(toBase(v)), "µV"] as const;
       const conversionCandidate = [v, "MV"] as const;
 
       expect(electricPotentialDifference["µV"](conversionCandidate)).toEqual(expected);
@@ -363,11 +363,11 @@ describe("electricPotentialDifference", () => {
       const kilovoltsConversion = linearConversion(1000);
 
       const [toBase, fromBase] = [
+        microvoltsConversion[1],
         kilovoltsConversion[0],
-        microvoltsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "µV"] as const;
+      const expected = [fromBase(toBase(v)), "µV"] as const;
       const conversionCandidate = [v, "kV"] as const;
 
       expect(electricPotentialDifference["µV"](conversionCandidate)).toEqual(expected);
@@ -379,11 +379,11 @@ describe("electricPotentialDifference", () => {
       const voltsConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
+        microvoltsConversion[1],
         voltsConversion[0],
-        microvoltsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "µV"] as const;
+      const expected = [fromBase(toBase(v)), "µV"] as const;
       const conversionCandidate = [v, "V"] as const;
 
       expect(electricPotentialDifference["µV"](conversionCandidate)).toEqual(expected);
@@ -395,11 +395,11 @@ describe("electricPotentialDifference", () => {
       const millivoltsConversion = linearConversion(0.001);
 
       const [toBase, fromBase] = [
+        microvoltsConversion[1],
         millivoltsConversion[0],
-        microvoltsConversion[1]
       ];
 
-      const expected = [toBase(fromBase(v)), "µV"] as const;
+      const expected = [fromBase(toBase(v)), "µV"] as const;
       const conversionCandidate = [v, "mV"] as const;
 
       expect(electricPotentialDifference["µV"](conversionCandidate)).toEqual(expected);
