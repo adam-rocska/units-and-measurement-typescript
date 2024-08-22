@@ -12,4 +12,13 @@ describe("!src/illuminance/factories aliasing", () => {
 });
 
 describe("illuminance", () => {
+  describe('lx', () => {
+    it.each([1, 10, 100])('should yield a lx measurement when given a number.', v => {
+      expect(illuminance["lx"](v)).toEqual([v, "lx"]);
+      expect(lux(v)).toEqual([v, "lx"]);
+    });
+
+
+  });
+
 });

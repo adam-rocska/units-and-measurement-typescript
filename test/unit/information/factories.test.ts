@@ -187,4 +187,10663 @@ describe("!src/information/factories aliasing", () => {
 });
 
 describe("information", () => {
+  describe('b', () => {
+    it.each([1, 10, 100])('should yield a b measurement when given a number.', v => {
+      expect(information["b"](v)).toEqual([v, "b"]);
+      expect(bits(v)).toEqual([v, "b"]);
+    });
+
+
+
+    it.each([1, 10, 100])('should convert B to b.', v => {
+      const bitsConversion = linearConversion(1);
+      const bytesConversion = linearConversion(8);
+
+      const [toBase, fromBase] = [
+        bytesConversion[0],
+        bitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "b"] as const;
+      const conversionCandidate = [v, "B"] as const;
+
+      expect(information["b"](conversionCandidate)).toEqual(expected);
+      expect(bits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert kb to b.', v => {
+      const bitsConversion = linearConversion(1);
+      const kilobitsConversion = linearConversion(1000);
+
+      const [toBase, fromBase] = [
+        kilobitsConversion[0],
+        bitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "b"] as const;
+      const conversionCandidate = [v, "kb"] as const;
+
+      expect(information["b"](conversionCandidate)).toEqual(expected);
+      expect(bits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Mb to b.', v => {
+      const bitsConversion = linearConversion(1);
+      const megabitsConversion = linearConversion(100000);
+
+      const [toBase, fromBase] = [
+        megabitsConversion[0],
+        bitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "b"] as const;
+      const conversionCandidate = [v, "Mb"] as const;
+
+      expect(information["b"](conversionCandidate)).toEqual(expected);
+      expect(bits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Gb to b.', v => {
+      const bitsConversion = linearConversion(1);
+      const gigabitsConversion = linearConversion(1000000);
+
+      const [toBase, fromBase] = [
+        gigabitsConversion[0],
+        bitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "b"] as const;
+      const conversionCandidate = [v, "Gb"] as const;
+
+      expect(information["b"](conversionCandidate)).toEqual(expected);
+      expect(bits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Tb to b.', v => {
+      const bitsConversion = linearConversion(1);
+      const terabitsConversion = linearConversion(10000000);
+
+      const [toBase, fromBase] = [
+        terabitsConversion[0],
+        bitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "b"] as const;
+      const conversionCandidate = [v, "Tb"] as const;
+
+      expect(information["b"](conversionCandidate)).toEqual(expected);
+      expect(bits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Pb to b.', v => {
+      const bitsConversion = linearConversion(1);
+      const petabitsConversion = linearConversion(100000000);
+
+      const [toBase, fromBase] = [
+        petabitsConversion[0],
+        bitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "b"] as const;
+      const conversionCandidate = [v, "Pb"] as const;
+
+      expect(information["b"](conversionCandidate)).toEqual(expected);
+      expect(bits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Eb to b.', v => {
+      const bitsConversion = linearConversion(1);
+      const exabitsConversion = linearConversion(1000000000);
+
+      const [toBase, fromBase] = [
+        exabitsConversion[0],
+        bitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "b"] as const;
+      const conversionCandidate = [v, "Eb"] as const;
+
+      expect(information["b"](conversionCandidate)).toEqual(expected);
+      expect(bits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Zb to b.', v => {
+      const bitsConversion = linearConversion(1);
+      const zettabitsConversion = linearConversion(10000000000);
+
+      const [toBase, fromBase] = [
+        zettabitsConversion[0],
+        bitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "b"] as const;
+      const conversionCandidate = [v, "Zb"] as const;
+
+      expect(information["b"](conversionCandidate)).toEqual(expected);
+      expect(bits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Yb to b.', v => {
+      const bitsConversion = linearConversion(1);
+      const yottabitsConversion = linearConversion(100000000000);
+
+      const [toBase, fromBase] = [
+        yottabitsConversion[0],
+        bitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "b"] as const;
+      const conversionCandidate = [v, "Yb"] as const;
+
+      expect(information["b"](conversionCandidate)).toEqual(expected);
+      expect(bits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Kib to b.', v => {
+      const bitsConversion = linearConversion(1);
+      const kibibitsConversion = linearConversion(1024);
+
+      const [toBase, fromBase] = [
+        kibibitsConversion[0],
+        bitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "b"] as const;
+      const conversionCandidate = [v, "Kib"] as const;
+
+      expect(information["b"](conversionCandidate)).toEqual(expected);
+      expect(bits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert KB to b.', v => {
+      const bitsConversion = linearConversion(1);
+      const kilobytesConversion = linearConversion(8192);
+
+      const [toBase, fromBase] = [
+        kilobytesConversion[0],
+        bitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "b"] as const;
+      const conversionCandidate = [v, "KB"] as const;
+
+      expect(information["b"](conversionCandidate)).toEqual(expected);
+      expect(bits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Mib to b.', v => {
+      const bitsConversion = linearConversion(1);
+      const mebibitsConversion = linearConversion(102400);
+
+      const [toBase, fromBase] = [
+        mebibitsConversion[0],
+        bitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "b"] as const;
+      const conversionCandidate = [v, "Mib"] as const;
+
+      expect(information["b"](conversionCandidate)).toEqual(expected);
+      expect(bits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert MB to b.', v => {
+      const bitsConversion = linearConversion(1);
+      const megabytesConversion = linearConversion(819200);
+
+      const [toBase, fromBase] = [
+        megabytesConversion[0],
+        bitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "b"] as const;
+      const conversionCandidate = [v, "MB"] as const;
+
+      expect(information["b"](conversionCandidate)).toEqual(expected);
+      expect(bits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Gib to b.', v => {
+      const bitsConversion = linearConversion(1);
+      const gibibitsConversion = linearConversion(1024000);
+
+      const [toBase, fromBase] = [
+        gibibitsConversion[0],
+        bitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "b"] as const;
+      const conversionCandidate = [v, "Gib"] as const;
+
+      expect(information["b"](conversionCandidate)).toEqual(expected);
+      expect(bits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert GB to b.', v => {
+      const bitsConversion = linearConversion(1);
+      const gigabytesConversion = linearConversion(8192000);
+
+      const [toBase, fromBase] = [
+        gigabytesConversion[0],
+        bitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "b"] as const;
+      const conversionCandidate = [v, "GB"] as const;
+
+      expect(information["b"](conversionCandidate)).toEqual(expected);
+      expect(bits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Tib to b.', v => {
+      const bitsConversion = linearConversion(1);
+      const tebibitsConversion = linearConversion(10240000);
+
+      const [toBase, fromBase] = [
+        tebibitsConversion[0],
+        bitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "b"] as const;
+      const conversionCandidate = [v, "Tib"] as const;
+
+      expect(information["b"](conversionCandidate)).toEqual(expected);
+      expect(bits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert TB to b.', v => {
+      const bitsConversion = linearConversion(1);
+      const terabytesConversion = linearConversion(81920000);
+
+      const [toBase, fromBase] = [
+        terabytesConversion[0],
+        bitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "b"] as const;
+      const conversionCandidate = [v, "TB"] as const;
+
+      expect(information["b"](conversionCandidate)).toEqual(expected);
+      expect(bits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Pib to b.', v => {
+      const bitsConversion = linearConversion(1);
+      const pebibitsConversion = linearConversion(102400000);
+
+      const [toBase, fromBase] = [
+        pebibitsConversion[0],
+        bitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "b"] as const;
+      const conversionCandidate = [v, "Pib"] as const;
+
+      expect(information["b"](conversionCandidate)).toEqual(expected);
+      expect(bits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert PB to b.', v => {
+      const bitsConversion = linearConversion(1);
+      const petabytesConversion = linearConversion(819200000);
+
+      const [toBase, fromBase] = [
+        petabytesConversion[0],
+        bitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "b"] as const;
+      const conversionCandidate = [v, "PB"] as const;
+
+      expect(information["b"](conversionCandidate)).toEqual(expected);
+      expect(bits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Eib to b.', v => {
+      const bitsConversion = linearConversion(1);
+      const exbibitsConversion = linearConversion(1024000000);
+
+      const [toBase, fromBase] = [
+        exbibitsConversion[0],
+        bitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "b"] as const;
+      const conversionCandidate = [v, "Eib"] as const;
+
+      expect(information["b"](conversionCandidate)).toEqual(expected);
+      expect(bits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert EB to b.', v => {
+      const bitsConversion = linearConversion(1);
+      const exabytesConversion = linearConversion(8192000000);
+
+      const [toBase, fromBase] = [
+        exabytesConversion[0],
+        bitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "b"] as const;
+      const conversionCandidate = [v, "EB"] as const;
+
+      expect(information["b"](conversionCandidate)).toEqual(expected);
+      expect(bits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Zib to b.', v => {
+      const bitsConversion = linearConversion(1);
+      const zebibitsConversion = linearConversion(10240000000);
+
+      const [toBase, fromBase] = [
+        zebibitsConversion[0],
+        bitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "b"] as const;
+      const conversionCandidate = [v, "Zib"] as const;
+
+      expect(information["b"](conversionCandidate)).toEqual(expected);
+      expect(bits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert ZB to b.', v => {
+      const bitsConversion = linearConversion(1);
+      const zettabytesConversion = linearConversion(81920000000);
+
+      const [toBase, fromBase] = [
+        zettabytesConversion[0],
+        bitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "b"] as const;
+      const conversionCandidate = [v, "ZB"] as const;
+
+      expect(information["b"](conversionCandidate)).toEqual(expected);
+      expect(bits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Yib to b.', v => {
+      const bitsConversion = linearConversion(1);
+      const yobibitsConversion = linearConversion(102400000000);
+
+      const [toBase, fromBase] = [
+        yobibitsConversion[0],
+        bitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "b"] as const;
+      const conversionCandidate = [v, "Yib"] as const;
+
+      expect(information["b"](conversionCandidate)).toEqual(expected);
+      expect(bits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert YB to b.', v => {
+      const bitsConversion = linearConversion(1);
+      const yottabytesConversion = linearConversion(819200000000);
+
+      const [toBase, fromBase] = [
+        yottabytesConversion[0],
+        bitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "b"] as const;
+      const conversionCandidate = [v, "YB"] as const;
+
+      expect(information["b"](conversionCandidate)).toEqual(expected);
+      expect(bits(conversionCandidate)).toEqual(expected);
+    });
+  });
+
+
+  describe('B', () => {
+    it.each([1, 10, 100])('should yield a B measurement when given a number.', v => {
+      expect(information["B"](v)).toEqual([v, "B"]);
+      expect(bytes(v)).toEqual([v, "B"]);
+    });
+
+    it.each([1, 10, 100])('should convert b to B.', v => {
+      const bytesConversion = linearConversion(8);
+      const bitsConversion = linearConversion(1);
+
+      const [toBase, fromBase] = [
+        bitsConversion[0],
+        bytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "B"] as const;
+      const conversionCandidate = [v, "b"] as const;
+
+      expect(information["B"](conversionCandidate)).toEqual(expected);
+      expect(bytes(conversionCandidate)).toEqual(expected);
+    });
+
+
+
+    it.each([1, 10, 100])('should convert kb to B.', v => {
+      const bytesConversion = linearConversion(8);
+      const kilobitsConversion = linearConversion(1000);
+
+      const [toBase, fromBase] = [
+        kilobitsConversion[0],
+        bytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "B"] as const;
+      const conversionCandidate = [v, "kb"] as const;
+
+      expect(information["B"](conversionCandidate)).toEqual(expected);
+      expect(bytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Mb to B.', v => {
+      const bytesConversion = linearConversion(8);
+      const megabitsConversion = linearConversion(100000);
+
+      const [toBase, fromBase] = [
+        megabitsConversion[0],
+        bytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "B"] as const;
+      const conversionCandidate = [v, "Mb"] as const;
+
+      expect(information["B"](conversionCandidate)).toEqual(expected);
+      expect(bytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Gb to B.', v => {
+      const bytesConversion = linearConversion(8);
+      const gigabitsConversion = linearConversion(1000000);
+
+      const [toBase, fromBase] = [
+        gigabitsConversion[0],
+        bytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "B"] as const;
+      const conversionCandidate = [v, "Gb"] as const;
+
+      expect(information["B"](conversionCandidate)).toEqual(expected);
+      expect(bytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Tb to B.', v => {
+      const bytesConversion = linearConversion(8);
+      const terabitsConversion = linearConversion(10000000);
+
+      const [toBase, fromBase] = [
+        terabitsConversion[0],
+        bytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "B"] as const;
+      const conversionCandidate = [v, "Tb"] as const;
+
+      expect(information["B"](conversionCandidate)).toEqual(expected);
+      expect(bytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Pb to B.', v => {
+      const bytesConversion = linearConversion(8);
+      const petabitsConversion = linearConversion(100000000);
+
+      const [toBase, fromBase] = [
+        petabitsConversion[0],
+        bytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "B"] as const;
+      const conversionCandidate = [v, "Pb"] as const;
+
+      expect(information["B"](conversionCandidate)).toEqual(expected);
+      expect(bytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Eb to B.', v => {
+      const bytesConversion = linearConversion(8);
+      const exabitsConversion = linearConversion(1000000000);
+
+      const [toBase, fromBase] = [
+        exabitsConversion[0],
+        bytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "B"] as const;
+      const conversionCandidate = [v, "Eb"] as const;
+
+      expect(information["B"](conversionCandidate)).toEqual(expected);
+      expect(bytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Zb to B.', v => {
+      const bytesConversion = linearConversion(8);
+      const zettabitsConversion = linearConversion(10000000000);
+
+      const [toBase, fromBase] = [
+        zettabitsConversion[0],
+        bytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "B"] as const;
+      const conversionCandidate = [v, "Zb"] as const;
+
+      expect(information["B"](conversionCandidate)).toEqual(expected);
+      expect(bytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Yb to B.', v => {
+      const bytesConversion = linearConversion(8);
+      const yottabitsConversion = linearConversion(100000000000);
+
+      const [toBase, fromBase] = [
+        yottabitsConversion[0],
+        bytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "B"] as const;
+      const conversionCandidate = [v, "Yb"] as const;
+
+      expect(information["B"](conversionCandidate)).toEqual(expected);
+      expect(bytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Kib to B.', v => {
+      const bytesConversion = linearConversion(8);
+      const kibibitsConversion = linearConversion(1024);
+
+      const [toBase, fromBase] = [
+        kibibitsConversion[0],
+        bytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "B"] as const;
+      const conversionCandidate = [v, "Kib"] as const;
+
+      expect(information["B"](conversionCandidate)).toEqual(expected);
+      expect(bytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert KB to B.', v => {
+      const bytesConversion = linearConversion(8);
+      const kilobytesConversion = linearConversion(8192);
+
+      const [toBase, fromBase] = [
+        kilobytesConversion[0],
+        bytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "B"] as const;
+      const conversionCandidate = [v, "KB"] as const;
+
+      expect(information["B"](conversionCandidate)).toEqual(expected);
+      expect(bytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Mib to B.', v => {
+      const bytesConversion = linearConversion(8);
+      const mebibitsConversion = linearConversion(102400);
+
+      const [toBase, fromBase] = [
+        mebibitsConversion[0],
+        bytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "B"] as const;
+      const conversionCandidate = [v, "Mib"] as const;
+
+      expect(information["B"](conversionCandidate)).toEqual(expected);
+      expect(bytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert MB to B.', v => {
+      const bytesConversion = linearConversion(8);
+      const megabytesConversion = linearConversion(819200);
+
+      const [toBase, fromBase] = [
+        megabytesConversion[0],
+        bytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "B"] as const;
+      const conversionCandidate = [v, "MB"] as const;
+
+      expect(information["B"](conversionCandidate)).toEqual(expected);
+      expect(bytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Gib to B.', v => {
+      const bytesConversion = linearConversion(8);
+      const gibibitsConversion = linearConversion(1024000);
+
+      const [toBase, fromBase] = [
+        gibibitsConversion[0],
+        bytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "B"] as const;
+      const conversionCandidate = [v, "Gib"] as const;
+
+      expect(information["B"](conversionCandidate)).toEqual(expected);
+      expect(bytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert GB to B.', v => {
+      const bytesConversion = linearConversion(8);
+      const gigabytesConversion = linearConversion(8192000);
+
+      const [toBase, fromBase] = [
+        gigabytesConversion[0],
+        bytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "B"] as const;
+      const conversionCandidate = [v, "GB"] as const;
+
+      expect(information["B"](conversionCandidate)).toEqual(expected);
+      expect(bytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Tib to B.', v => {
+      const bytesConversion = linearConversion(8);
+      const tebibitsConversion = linearConversion(10240000);
+
+      const [toBase, fromBase] = [
+        tebibitsConversion[0],
+        bytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "B"] as const;
+      const conversionCandidate = [v, "Tib"] as const;
+
+      expect(information["B"](conversionCandidate)).toEqual(expected);
+      expect(bytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert TB to B.', v => {
+      const bytesConversion = linearConversion(8);
+      const terabytesConversion = linearConversion(81920000);
+
+      const [toBase, fromBase] = [
+        terabytesConversion[0],
+        bytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "B"] as const;
+      const conversionCandidate = [v, "TB"] as const;
+
+      expect(information["B"](conversionCandidate)).toEqual(expected);
+      expect(bytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Pib to B.', v => {
+      const bytesConversion = linearConversion(8);
+      const pebibitsConversion = linearConversion(102400000);
+
+      const [toBase, fromBase] = [
+        pebibitsConversion[0],
+        bytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "B"] as const;
+      const conversionCandidate = [v, "Pib"] as const;
+
+      expect(information["B"](conversionCandidate)).toEqual(expected);
+      expect(bytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert PB to B.', v => {
+      const bytesConversion = linearConversion(8);
+      const petabytesConversion = linearConversion(819200000);
+
+      const [toBase, fromBase] = [
+        petabytesConversion[0],
+        bytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "B"] as const;
+      const conversionCandidate = [v, "PB"] as const;
+
+      expect(information["B"](conversionCandidate)).toEqual(expected);
+      expect(bytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Eib to B.', v => {
+      const bytesConversion = linearConversion(8);
+      const exbibitsConversion = linearConversion(1024000000);
+
+      const [toBase, fromBase] = [
+        exbibitsConversion[0],
+        bytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "B"] as const;
+      const conversionCandidate = [v, "Eib"] as const;
+
+      expect(information["B"](conversionCandidate)).toEqual(expected);
+      expect(bytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert EB to B.', v => {
+      const bytesConversion = linearConversion(8);
+      const exabytesConversion = linearConversion(8192000000);
+
+      const [toBase, fromBase] = [
+        exabytesConversion[0],
+        bytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "B"] as const;
+      const conversionCandidate = [v, "EB"] as const;
+
+      expect(information["B"](conversionCandidate)).toEqual(expected);
+      expect(bytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Zib to B.', v => {
+      const bytesConversion = linearConversion(8);
+      const zebibitsConversion = linearConversion(10240000000);
+
+      const [toBase, fromBase] = [
+        zebibitsConversion[0],
+        bytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "B"] as const;
+      const conversionCandidate = [v, "Zib"] as const;
+
+      expect(information["B"](conversionCandidate)).toEqual(expected);
+      expect(bytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert ZB to B.', v => {
+      const bytesConversion = linearConversion(8);
+      const zettabytesConversion = linearConversion(81920000000);
+
+      const [toBase, fromBase] = [
+        zettabytesConversion[0],
+        bytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "B"] as const;
+      const conversionCandidate = [v, "ZB"] as const;
+
+      expect(information["B"](conversionCandidate)).toEqual(expected);
+      expect(bytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Yib to B.', v => {
+      const bytesConversion = linearConversion(8);
+      const yobibitsConversion = linearConversion(102400000000);
+
+      const [toBase, fromBase] = [
+        yobibitsConversion[0],
+        bytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "B"] as const;
+      const conversionCandidate = [v, "Yib"] as const;
+
+      expect(information["B"](conversionCandidate)).toEqual(expected);
+      expect(bytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert YB to B.', v => {
+      const bytesConversion = linearConversion(8);
+      const yottabytesConversion = linearConversion(819200000000);
+
+      const [toBase, fromBase] = [
+        yottabytesConversion[0],
+        bytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "B"] as const;
+      const conversionCandidate = [v, "YB"] as const;
+
+      expect(information["B"](conversionCandidate)).toEqual(expected);
+      expect(bytes(conversionCandidate)).toEqual(expected);
+    });
+  });
+
+
+  describe('kb', () => {
+    it.each([1, 10, 100])('should yield a kb measurement when given a number.', v => {
+      expect(information["kb"](v)).toEqual([v, "kb"]);
+      expect(kilobits(v)).toEqual([v, "kb"]);
+    });
+
+    it.each([1, 10, 100])('should convert b to kb.', v => {
+      const kilobitsConversion = linearConversion(1000);
+      const bitsConversion = linearConversion(1);
+
+      const [toBase, fromBase] = [
+        bitsConversion[0],
+        kilobitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "kb"] as const;
+      const conversionCandidate = [v, "b"] as const;
+
+      expect(information["kb"](conversionCandidate)).toEqual(expected);
+      expect(kilobits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert B to kb.', v => {
+      const kilobitsConversion = linearConversion(1000);
+      const bytesConversion = linearConversion(8);
+
+      const [toBase, fromBase] = [
+        bytesConversion[0],
+        kilobitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "kb"] as const;
+      const conversionCandidate = [v, "B"] as const;
+
+      expect(information["kb"](conversionCandidate)).toEqual(expected);
+      expect(kilobits(conversionCandidate)).toEqual(expected);
+    });
+
+
+
+    it.each([1, 10, 100])('should convert Mb to kb.', v => {
+      const kilobitsConversion = linearConversion(1000);
+      const megabitsConversion = linearConversion(100000);
+
+      const [toBase, fromBase] = [
+        megabitsConversion[0],
+        kilobitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "kb"] as const;
+      const conversionCandidate = [v, "Mb"] as const;
+
+      expect(information["kb"](conversionCandidate)).toEqual(expected);
+      expect(kilobits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Gb to kb.', v => {
+      const kilobitsConversion = linearConversion(1000);
+      const gigabitsConversion = linearConversion(1000000);
+
+      const [toBase, fromBase] = [
+        gigabitsConversion[0],
+        kilobitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "kb"] as const;
+      const conversionCandidate = [v, "Gb"] as const;
+
+      expect(information["kb"](conversionCandidate)).toEqual(expected);
+      expect(kilobits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Tb to kb.', v => {
+      const kilobitsConversion = linearConversion(1000);
+      const terabitsConversion = linearConversion(10000000);
+
+      const [toBase, fromBase] = [
+        terabitsConversion[0],
+        kilobitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "kb"] as const;
+      const conversionCandidate = [v, "Tb"] as const;
+
+      expect(information["kb"](conversionCandidate)).toEqual(expected);
+      expect(kilobits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Pb to kb.', v => {
+      const kilobitsConversion = linearConversion(1000);
+      const petabitsConversion = linearConversion(100000000);
+
+      const [toBase, fromBase] = [
+        petabitsConversion[0],
+        kilobitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "kb"] as const;
+      const conversionCandidate = [v, "Pb"] as const;
+
+      expect(information["kb"](conversionCandidate)).toEqual(expected);
+      expect(kilobits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Eb to kb.', v => {
+      const kilobitsConversion = linearConversion(1000);
+      const exabitsConversion = linearConversion(1000000000);
+
+      const [toBase, fromBase] = [
+        exabitsConversion[0],
+        kilobitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "kb"] as const;
+      const conversionCandidate = [v, "Eb"] as const;
+
+      expect(information["kb"](conversionCandidate)).toEqual(expected);
+      expect(kilobits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Zb to kb.', v => {
+      const kilobitsConversion = linearConversion(1000);
+      const zettabitsConversion = linearConversion(10000000000);
+
+      const [toBase, fromBase] = [
+        zettabitsConversion[0],
+        kilobitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "kb"] as const;
+      const conversionCandidate = [v, "Zb"] as const;
+
+      expect(information["kb"](conversionCandidate)).toEqual(expected);
+      expect(kilobits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Yb to kb.', v => {
+      const kilobitsConversion = linearConversion(1000);
+      const yottabitsConversion = linearConversion(100000000000);
+
+      const [toBase, fromBase] = [
+        yottabitsConversion[0],
+        kilobitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "kb"] as const;
+      const conversionCandidate = [v, "Yb"] as const;
+
+      expect(information["kb"](conversionCandidate)).toEqual(expected);
+      expect(kilobits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Kib to kb.', v => {
+      const kilobitsConversion = linearConversion(1000);
+      const kibibitsConversion = linearConversion(1024);
+
+      const [toBase, fromBase] = [
+        kibibitsConversion[0],
+        kilobitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "kb"] as const;
+      const conversionCandidate = [v, "Kib"] as const;
+
+      expect(information["kb"](conversionCandidate)).toEqual(expected);
+      expect(kilobits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert KB to kb.', v => {
+      const kilobitsConversion = linearConversion(1000);
+      const kilobytesConversion = linearConversion(8192);
+
+      const [toBase, fromBase] = [
+        kilobytesConversion[0],
+        kilobitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "kb"] as const;
+      const conversionCandidate = [v, "KB"] as const;
+
+      expect(information["kb"](conversionCandidate)).toEqual(expected);
+      expect(kilobits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Mib to kb.', v => {
+      const kilobitsConversion = linearConversion(1000);
+      const mebibitsConversion = linearConversion(102400);
+
+      const [toBase, fromBase] = [
+        mebibitsConversion[0],
+        kilobitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "kb"] as const;
+      const conversionCandidate = [v, "Mib"] as const;
+
+      expect(information["kb"](conversionCandidate)).toEqual(expected);
+      expect(kilobits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert MB to kb.', v => {
+      const kilobitsConversion = linearConversion(1000);
+      const megabytesConversion = linearConversion(819200);
+
+      const [toBase, fromBase] = [
+        megabytesConversion[0],
+        kilobitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "kb"] as const;
+      const conversionCandidate = [v, "MB"] as const;
+
+      expect(information["kb"](conversionCandidate)).toEqual(expected);
+      expect(kilobits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Gib to kb.', v => {
+      const kilobitsConversion = linearConversion(1000);
+      const gibibitsConversion = linearConversion(1024000);
+
+      const [toBase, fromBase] = [
+        gibibitsConversion[0],
+        kilobitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "kb"] as const;
+      const conversionCandidate = [v, "Gib"] as const;
+
+      expect(information["kb"](conversionCandidate)).toEqual(expected);
+      expect(kilobits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert GB to kb.', v => {
+      const kilobitsConversion = linearConversion(1000);
+      const gigabytesConversion = linearConversion(8192000);
+
+      const [toBase, fromBase] = [
+        gigabytesConversion[0],
+        kilobitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "kb"] as const;
+      const conversionCandidate = [v, "GB"] as const;
+
+      expect(information["kb"](conversionCandidate)).toEqual(expected);
+      expect(kilobits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Tib to kb.', v => {
+      const kilobitsConversion = linearConversion(1000);
+      const tebibitsConversion = linearConversion(10240000);
+
+      const [toBase, fromBase] = [
+        tebibitsConversion[0],
+        kilobitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "kb"] as const;
+      const conversionCandidate = [v, "Tib"] as const;
+
+      expect(information["kb"](conversionCandidate)).toEqual(expected);
+      expect(kilobits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert TB to kb.', v => {
+      const kilobitsConversion = linearConversion(1000);
+      const terabytesConversion = linearConversion(81920000);
+
+      const [toBase, fromBase] = [
+        terabytesConversion[0],
+        kilobitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "kb"] as const;
+      const conversionCandidate = [v, "TB"] as const;
+
+      expect(information["kb"](conversionCandidate)).toEqual(expected);
+      expect(kilobits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Pib to kb.', v => {
+      const kilobitsConversion = linearConversion(1000);
+      const pebibitsConversion = linearConversion(102400000);
+
+      const [toBase, fromBase] = [
+        pebibitsConversion[0],
+        kilobitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "kb"] as const;
+      const conversionCandidate = [v, "Pib"] as const;
+
+      expect(information["kb"](conversionCandidate)).toEqual(expected);
+      expect(kilobits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert PB to kb.', v => {
+      const kilobitsConversion = linearConversion(1000);
+      const petabytesConversion = linearConversion(819200000);
+
+      const [toBase, fromBase] = [
+        petabytesConversion[0],
+        kilobitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "kb"] as const;
+      const conversionCandidate = [v, "PB"] as const;
+
+      expect(information["kb"](conversionCandidate)).toEqual(expected);
+      expect(kilobits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Eib to kb.', v => {
+      const kilobitsConversion = linearConversion(1000);
+      const exbibitsConversion = linearConversion(1024000000);
+
+      const [toBase, fromBase] = [
+        exbibitsConversion[0],
+        kilobitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "kb"] as const;
+      const conversionCandidate = [v, "Eib"] as const;
+
+      expect(information["kb"](conversionCandidate)).toEqual(expected);
+      expect(kilobits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert EB to kb.', v => {
+      const kilobitsConversion = linearConversion(1000);
+      const exabytesConversion = linearConversion(8192000000);
+
+      const [toBase, fromBase] = [
+        exabytesConversion[0],
+        kilobitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "kb"] as const;
+      const conversionCandidate = [v, "EB"] as const;
+
+      expect(information["kb"](conversionCandidate)).toEqual(expected);
+      expect(kilobits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Zib to kb.', v => {
+      const kilobitsConversion = linearConversion(1000);
+      const zebibitsConversion = linearConversion(10240000000);
+
+      const [toBase, fromBase] = [
+        zebibitsConversion[0],
+        kilobitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "kb"] as const;
+      const conversionCandidate = [v, "Zib"] as const;
+
+      expect(information["kb"](conversionCandidate)).toEqual(expected);
+      expect(kilobits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert ZB to kb.', v => {
+      const kilobitsConversion = linearConversion(1000);
+      const zettabytesConversion = linearConversion(81920000000);
+
+      const [toBase, fromBase] = [
+        zettabytesConversion[0],
+        kilobitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "kb"] as const;
+      const conversionCandidate = [v, "ZB"] as const;
+
+      expect(information["kb"](conversionCandidate)).toEqual(expected);
+      expect(kilobits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Yib to kb.', v => {
+      const kilobitsConversion = linearConversion(1000);
+      const yobibitsConversion = linearConversion(102400000000);
+
+      const [toBase, fromBase] = [
+        yobibitsConversion[0],
+        kilobitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "kb"] as const;
+      const conversionCandidate = [v, "Yib"] as const;
+
+      expect(information["kb"](conversionCandidate)).toEqual(expected);
+      expect(kilobits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert YB to kb.', v => {
+      const kilobitsConversion = linearConversion(1000);
+      const yottabytesConversion = linearConversion(819200000000);
+
+      const [toBase, fromBase] = [
+        yottabytesConversion[0],
+        kilobitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "kb"] as const;
+      const conversionCandidate = [v, "YB"] as const;
+
+      expect(information["kb"](conversionCandidate)).toEqual(expected);
+      expect(kilobits(conversionCandidate)).toEqual(expected);
+    });
+  });
+
+
+  describe('Mb', () => {
+    it.each([1, 10, 100])('should yield a Mb measurement when given a number.', v => {
+      expect(information["Mb"](v)).toEqual([v, "Mb"]);
+      expect(megabits(v)).toEqual([v, "Mb"]);
+    });
+
+    it.each([1, 10, 100])('should convert b to Mb.', v => {
+      const megabitsConversion = linearConversion(100000);
+      const bitsConversion = linearConversion(1);
+
+      const [toBase, fromBase] = [
+        bitsConversion[0],
+        megabitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Mb"] as const;
+      const conversionCandidate = [v, "b"] as const;
+
+      expect(information["Mb"](conversionCandidate)).toEqual(expected);
+      expect(megabits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert B to Mb.', v => {
+      const megabitsConversion = linearConversion(100000);
+      const bytesConversion = linearConversion(8);
+
+      const [toBase, fromBase] = [
+        bytesConversion[0],
+        megabitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Mb"] as const;
+      const conversionCandidate = [v, "B"] as const;
+
+      expect(information["Mb"](conversionCandidate)).toEqual(expected);
+      expect(megabits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert kb to Mb.', v => {
+      const megabitsConversion = linearConversion(100000);
+      const kilobitsConversion = linearConversion(1000);
+
+      const [toBase, fromBase] = [
+        kilobitsConversion[0],
+        megabitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Mb"] as const;
+      const conversionCandidate = [v, "kb"] as const;
+
+      expect(information["Mb"](conversionCandidate)).toEqual(expected);
+      expect(megabits(conversionCandidate)).toEqual(expected);
+    });
+
+
+
+    it.each([1, 10, 100])('should convert Gb to Mb.', v => {
+      const megabitsConversion = linearConversion(100000);
+      const gigabitsConversion = linearConversion(1000000);
+
+      const [toBase, fromBase] = [
+        gigabitsConversion[0],
+        megabitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Mb"] as const;
+      const conversionCandidate = [v, "Gb"] as const;
+
+      expect(information["Mb"](conversionCandidate)).toEqual(expected);
+      expect(megabits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Tb to Mb.', v => {
+      const megabitsConversion = linearConversion(100000);
+      const terabitsConversion = linearConversion(10000000);
+
+      const [toBase, fromBase] = [
+        terabitsConversion[0],
+        megabitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Mb"] as const;
+      const conversionCandidate = [v, "Tb"] as const;
+
+      expect(information["Mb"](conversionCandidate)).toEqual(expected);
+      expect(megabits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Pb to Mb.', v => {
+      const megabitsConversion = linearConversion(100000);
+      const petabitsConversion = linearConversion(100000000);
+
+      const [toBase, fromBase] = [
+        petabitsConversion[0],
+        megabitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Mb"] as const;
+      const conversionCandidate = [v, "Pb"] as const;
+
+      expect(information["Mb"](conversionCandidate)).toEqual(expected);
+      expect(megabits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Eb to Mb.', v => {
+      const megabitsConversion = linearConversion(100000);
+      const exabitsConversion = linearConversion(1000000000);
+
+      const [toBase, fromBase] = [
+        exabitsConversion[0],
+        megabitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Mb"] as const;
+      const conversionCandidate = [v, "Eb"] as const;
+
+      expect(information["Mb"](conversionCandidate)).toEqual(expected);
+      expect(megabits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Zb to Mb.', v => {
+      const megabitsConversion = linearConversion(100000);
+      const zettabitsConversion = linearConversion(10000000000);
+
+      const [toBase, fromBase] = [
+        zettabitsConversion[0],
+        megabitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Mb"] as const;
+      const conversionCandidate = [v, "Zb"] as const;
+
+      expect(information["Mb"](conversionCandidate)).toEqual(expected);
+      expect(megabits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Yb to Mb.', v => {
+      const megabitsConversion = linearConversion(100000);
+      const yottabitsConversion = linearConversion(100000000000);
+
+      const [toBase, fromBase] = [
+        yottabitsConversion[0],
+        megabitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Mb"] as const;
+      const conversionCandidate = [v, "Yb"] as const;
+
+      expect(information["Mb"](conversionCandidate)).toEqual(expected);
+      expect(megabits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Kib to Mb.', v => {
+      const megabitsConversion = linearConversion(100000);
+      const kibibitsConversion = linearConversion(1024);
+
+      const [toBase, fromBase] = [
+        kibibitsConversion[0],
+        megabitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Mb"] as const;
+      const conversionCandidate = [v, "Kib"] as const;
+
+      expect(information["Mb"](conversionCandidate)).toEqual(expected);
+      expect(megabits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert KB to Mb.', v => {
+      const megabitsConversion = linearConversion(100000);
+      const kilobytesConversion = linearConversion(8192);
+
+      const [toBase, fromBase] = [
+        kilobytesConversion[0],
+        megabitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Mb"] as const;
+      const conversionCandidate = [v, "KB"] as const;
+
+      expect(information["Mb"](conversionCandidate)).toEqual(expected);
+      expect(megabits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Mib to Mb.', v => {
+      const megabitsConversion = linearConversion(100000);
+      const mebibitsConversion = linearConversion(102400);
+
+      const [toBase, fromBase] = [
+        mebibitsConversion[0],
+        megabitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Mb"] as const;
+      const conversionCandidate = [v, "Mib"] as const;
+
+      expect(information["Mb"](conversionCandidate)).toEqual(expected);
+      expect(megabits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert MB to Mb.', v => {
+      const megabitsConversion = linearConversion(100000);
+      const megabytesConversion = linearConversion(819200);
+
+      const [toBase, fromBase] = [
+        megabytesConversion[0],
+        megabitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Mb"] as const;
+      const conversionCandidate = [v, "MB"] as const;
+
+      expect(information["Mb"](conversionCandidate)).toEqual(expected);
+      expect(megabits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Gib to Mb.', v => {
+      const megabitsConversion = linearConversion(100000);
+      const gibibitsConversion = linearConversion(1024000);
+
+      const [toBase, fromBase] = [
+        gibibitsConversion[0],
+        megabitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Mb"] as const;
+      const conversionCandidate = [v, "Gib"] as const;
+
+      expect(information["Mb"](conversionCandidate)).toEqual(expected);
+      expect(megabits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert GB to Mb.', v => {
+      const megabitsConversion = linearConversion(100000);
+      const gigabytesConversion = linearConversion(8192000);
+
+      const [toBase, fromBase] = [
+        gigabytesConversion[0],
+        megabitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Mb"] as const;
+      const conversionCandidate = [v, "GB"] as const;
+
+      expect(information["Mb"](conversionCandidate)).toEqual(expected);
+      expect(megabits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Tib to Mb.', v => {
+      const megabitsConversion = linearConversion(100000);
+      const tebibitsConversion = linearConversion(10240000);
+
+      const [toBase, fromBase] = [
+        tebibitsConversion[0],
+        megabitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Mb"] as const;
+      const conversionCandidate = [v, "Tib"] as const;
+
+      expect(information["Mb"](conversionCandidate)).toEqual(expected);
+      expect(megabits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert TB to Mb.', v => {
+      const megabitsConversion = linearConversion(100000);
+      const terabytesConversion = linearConversion(81920000);
+
+      const [toBase, fromBase] = [
+        terabytesConversion[0],
+        megabitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Mb"] as const;
+      const conversionCandidate = [v, "TB"] as const;
+
+      expect(information["Mb"](conversionCandidate)).toEqual(expected);
+      expect(megabits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Pib to Mb.', v => {
+      const megabitsConversion = linearConversion(100000);
+      const pebibitsConversion = linearConversion(102400000);
+
+      const [toBase, fromBase] = [
+        pebibitsConversion[0],
+        megabitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Mb"] as const;
+      const conversionCandidate = [v, "Pib"] as const;
+
+      expect(information["Mb"](conversionCandidate)).toEqual(expected);
+      expect(megabits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert PB to Mb.', v => {
+      const megabitsConversion = linearConversion(100000);
+      const petabytesConversion = linearConversion(819200000);
+
+      const [toBase, fromBase] = [
+        petabytesConversion[0],
+        megabitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Mb"] as const;
+      const conversionCandidate = [v, "PB"] as const;
+
+      expect(information["Mb"](conversionCandidate)).toEqual(expected);
+      expect(megabits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Eib to Mb.', v => {
+      const megabitsConversion = linearConversion(100000);
+      const exbibitsConversion = linearConversion(1024000000);
+
+      const [toBase, fromBase] = [
+        exbibitsConversion[0],
+        megabitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Mb"] as const;
+      const conversionCandidate = [v, "Eib"] as const;
+
+      expect(information["Mb"](conversionCandidate)).toEqual(expected);
+      expect(megabits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert EB to Mb.', v => {
+      const megabitsConversion = linearConversion(100000);
+      const exabytesConversion = linearConversion(8192000000);
+
+      const [toBase, fromBase] = [
+        exabytesConversion[0],
+        megabitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Mb"] as const;
+      const conversionCandidate = [v, "EB"] as const;
+
+      expect(information["Mb"](conversionCandidate)).toEqual(expected);
+      expect(megabits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Zib to Mb.', v => {
+      const megabitsConversion = linearConversion(100000);
+      const zebibitsConversion = linearConversion(10240000000);
+
+      const [toBase, fromBase] = [
+        zebibitsConversion[0],
+        megabitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Mb"] as const;
+      const conversionCandidate = [v, "Zib"] as const;
+
+      expect(information["Mb"](conversionCandidate)).toEqual(expected);
+      expect(megabits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert ZB to Mb.', v => {
+      const megabitsConversion = linearConversion(100000);
+      const zettabytesConversion = linearConversion(81920000000);
+
+      const [toBase, fromBase] = [
+        zettabytesConversion[0],
+        megabitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Mb"] as const;
+      const conversionCandidate = [v, "ZB"] as const;
+
+      expect(information["Mb"](conversionCandidate)).toEqual(expected);
+      expect(megabits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Yib to Mb.', v => {
+      const megabitsConversion = linearConversion(100000);
+      const yobibitsConversion = linearConversion(102400000000);
+
+      const [toBase, fromBase] = [
+        yobibitsConversion[0],
+        megabitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Mb"] as const;
+      const conversionCandidate = [v, "Yib"] as const;
+
+      expect(information["Mb"](conversionCandidate)).toEqual(expected);
+      expect(megabits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert YB to Mb.', v => {
+      const megabitsConversion = linearConversion(100000);
+      const yottabytesConversion = linearConversion(819200000000);
+
+      const [toBase, fromBase] = [
+        yottabytesConversion[0],
+        megabitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Mb"] as const;
+      const conversionCandidate = [v, "YB"] as const;
+
+      expect(information["Mb"](conversionCandidate)).toEqual(expected);
+      expect(megabits(conversionCandidate)).toEqual(expected);
+    });
+  });
+
+
+  describe('Gb', () => {
+    it.each([1, 10, 100])('should yield a Gb measurement when given a number.', v => {
+      expect(information["Gb"](v)).toEqual([v, "Gb"]);
+      expect(gigabits(v)).toEqual([v, "Gb"]);
+    });
+
+    it.each([1, 10, 100])('should convert b to Gb.', v => {
+      const gigabitsConversion = linearConversion(1000000);
+      const bitsConversion = linearConversion(1);
+
+      const [toBase, fromBase] = [
+        bitsConversion[0],
+        gigabitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Gb"] as const;
+      const conversionCandidate = [v, "b"] as const;
+
+      expect(information["Gb"](conversionCandidate)).toEqual(expected);
+      expect(gigabits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert B to Gb.', v => {
+      const gigabitsConversion = linearConversion(1000000);
+      const bytesConversion = linearConversion(8);
+
+      const [toBase, fromBase] = [
+        bytesConversion[0],
+        gigabitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Gb"] as const;
+      const conversionCandidate = [v, "B"] as const;
+
+      expect(information["Gb"](conversionCandidate)).toEqual(expected);
+      expect(gigabits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert kb to Gb.', v => {
+      const gigabitsConversion = linearConversion(1000000);
+      const kilobitsConversion = linearConversion(1000);
+
+      const [toBase, fromBase] = [
+        kilobitsConversion[0],
+        gigabitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Gb"] as const;
+      const conversionCandidate = [v, "kb"] as const;
+
+      expect(information["Gb"](conversionCandidate)).toEqual(expected);
+      expect(gigabits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Mb to Gb.', v => {
+      const gigabitsConversion = linearConversion(1000000);
+      const megabitsConversion = linearConversion(100000);
+
+      const [toBase, fromBase] = [
+        megabitsConversion[0],
+        gigabitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Gb"] as const;
+      const conversionCandidate = [v, "Mb"] as const;
+
+      expect(information["Gb"](conversionCandidate)).toEqual(expected);
+      expect(gigabits(conversionCandidate)).toEqual(expected);
+    });
+
+
+
+    it.each([1, 10, 100])('should convert Tb to Gb.', v => {
+      const gigabitsConversion = linearConversion(1000000);
+      const terabitsConversion = linearConversion(10000000);
+
+      const [toBase, fromBase] = [
+        terabitsConversion[0],
+        gigabitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Gb"] as const;
+      const conversionCandidate = [v, "Tb"] as const;
+
+      expect(information["Gb"](conversionCandidate)).toEqual(expected);
+      expect(gigabits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Pb to Gb.', v => {
+      const gigabitsConversion = linearConversion(1000000);
+      const petabitsConversion = linearConversion(100000000);
+
+      const [toBase, fromBase] = [
+        petabitsConversion[0],
+        gigabitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Gb"] as const;
+      const conversionCandidate = [v, "Pb"] as const;
+
+      expect(information["Gb"](conversionCandidate)).toEqual(expected);
+      expect(gigabits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Eb to Gb.', v => {
+      const gigabitsConversion = linearConversion(1000000);
+      const exabitsConversion = linearConversion(1000000000);
+
+      const [toBase, fromBase] = [
+        exabitsConversion[0],
+        gigabitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Gb"] as const;
+      const conversionCandidate = [v, "Eb"] as const;
+
+      expect(information["Gb"](conversionCandidate)).toEqual(expected);
+      expect(gigabits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Zb to Gb.', v => {
+      const gigabitsConversion = linearConversion(1000000);
+      const zettabitsConversion = linearConversion(10000000000);
+
+      const [toBase, fromBase] = [
+        zettabitsConversion[0],
+        gigabitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Gb"] as const;
+      const conversionCandidate = [v, "Zb"] as const;
+
+      expect(information["Gb"](conversionCandidate)).toEqual(expected);
+      expect(gigabits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Yb to Gb.', v => {
+      const gigabitsConversion = linearConversion(1000000);
+      const yottabitsConversion = linearConversion(100000000000);
+
+      const [toBase, fromBase] = [
+        yottabitsConversion[0],
+        gigabitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Gb"] as const;
+      const conversionCandidate = [v, "Yb"] as const;
+
+      expect(information["Gb"](conversionCandidate)).toEqual(expected);
+      expect(gigabits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Kib to Gb.', v => {
+      const gigabitsConversion = linearConversion(1000000);
+      const kibibitsConversion = linearConversion(1024);
+
+      const [toBase, fromBase] = [
+        kibibitsConversion[0],
+        gigabitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Gb"] as const;
+      const conversionCandidate = [v, "Kib"] as const;
+
+      expect(information["Gb"](conversionCandidate)).toEqual(expected);
+      expect(gigabits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert KB to Gb.', v => {
+      const gigabitsConversion = linearConversion(1000000);
+      const kilobytesConversion = linearConversion(8192);
+
+      const [toBase, fromBase] = [
+        kilobytesConversion[0],
+        gigabitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Gb"] as const;
+      const conversionCandidate = [v, "KB"] as const;
+
+      expect(information["Gb"](conversionCandidate)).toEqual(expected);
+      expect(gigabits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Mib to Gb.', v => {
+      const gigabitsConversion = linearConversion(1000000);
+      const mebibitsConversion = linearConversion(102400);
+
+      const [toBase, fromBase] = [
+        mebibitsConversion[0],
+        gigabitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Gb"] as const;
+      const conversionCandidate = [v, "Mib"] as const;
+
+      expect(information["Gb"](conversionCandidate)).toEqual(expected);
+      expect(gigabits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert MB to Gb.', v => {
+      const gigabitsConversion = linearConversion(1000000);
+      const megabytesConversion = linearConversion(819200);
+
+      const [toBase, fromBase] = [
+        megabytesConversion[0],
+        gigabitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Gb"] as const;
+      const conversionCandidate = [v, "MB"] as const;
+
+      expect(information["Gb"](conversionCandidate)).toEqual(expected);
+      expect(gigabits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Gib to Gb.', v => {
+      const gigabitsConversion = linearConversion(1000000);
+      const gibibitsConversion = linearConversion(1024000);
+
+      const [toBase, fromBase] = [
+        gibibitsConversion[0],
+        gigabitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Gb"] as const;
+      const conversionCandidate = [v, "Gib"] as const;
+
+      expect(information["Gb"](conversionCandidate)).toEqual(expected);
+      expect(gigabits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert GB to Gb.', v => {
+      const gigabitsConversion = linearConversion(1000000);
+      const gigabytesConversion = linearConversion(8192000);
+
+      const [toBase, fromBase] = [
+        gigabytesConversion[0],
+        gigabitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Gb"] as const;
+      const conversionCandidate = [v, "GB"] as const;
+
+      expect(information["Gb"](conversionCandidate)).toEqual(expected);
+      expect(gigabits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Tib to Gb.', v => {
+      const gigabitsConversion = linearConversion(1000000);
+      const tebibitsConversion = linearConversion(10240000);
+
+      const [toBase, fromBase] = [
+        tebibitsConversion[0],
+        gigabitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Gb"] as const;
+      const conversionCandidate = [v, "Tib"] as const;
+
+      expect(information["Gb"](conversionCandidate)).toEqual(expected);
+      expect(gigabits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert TB to Gb.', v => {
+      const gigabitsConversion = linearConversion(1000000);
+      const terabytesConversion = linearConversion(81920000);
+
+      const [toBase, fromBase] = [
+        terabytesConversion[0],
+        gigabitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Gb"] as const;
+      const conversionCandidate = [v, "TB"] as const;
+
+      expect(information["Gb"](conversionCandidate)).toEqual(expected);
+      expect(gigabits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Pib to Gb.', v => {
+      const gigabitsConversion = linearConversion(1000000);
+      const pebibitsConversion = linearConversion(102400000);
+
+      const [toBase, fromBase] = [
+        pebibitsConversion[0],
+        gigabitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Gb"] as const;
+      const conversionCandidate = [v, "Pib"] as const;
+
+      expect(information["Gb"](conversionCandidate)).toEqual(expected);
+      expect(gigabits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert PB to Gb.', v => {
+      const gigabitsConversion = linearConversion(1000000);
+      const petabytesConversion = linearConversion(819200000);
+
+      const [toBase, fromBase] = [
+        petabytesConversion[0],
+        gigabitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Gb"] as const;
+      const conversionCandidate = [v, "PB"] as const;
+
+      expect(information["Gb"](conversionCandidate)).toEqual(expected);
+      expect(gigabits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Eib to Gb.', v => {
+      const gigabitsConversion = linearConversion(1000000);
+      const exbibitsConversion = linearConversion(1024000000);
+
+      const [toBase, fromBase] = [
+        exbibitsConversion[0],
+        gigabitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Gb"] as const;
+      const conversionCandidate = [v, "Eib"] as const;
+
+      expect(information["Gb"](conversionCandidate)).toEqual(expected);
+      expect(gigabits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert EB to Gb.', v => {
+      const gigabitsConversion = linearConversion(1000000);
+      const exabytesConversion = linearConversion(8192000000);
+
+      const [toBase, fromBase] = [
+        exabytesConversion[0],
+        gigabitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Gb"] as const;
+      const conversionCandidate = [v, "EB"] as const;
+
+      expect(information["Gb"](conversionCandidate)).toEqual(expected);
+      expect(gigabits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Zib to Gb.', v => {
+      const gigabitsConversion = linearConversion(1000000);
+      const zebibitsConversion = linearConversion(10240000000);
+
+      const [toBase, fromBase] = [
+        zebibitsConversion[0],
+        gigabitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Gb"] as const;
+      const conversionCandidate = [v, "Zib"] as const;
+
+      expect(information["Gb"](conversionCandidate)).toEqual(expected);
+      expect(gigabits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert ZB to Gb.', v => {
+      const gigabitsConversion = linearConversion(1000000);
+      const zettabytesConversion = linearConversion(81920000000);
+
+      const [toBase, fromBase] = [
+        zettabytesConversion[0],
+        gigabitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Gb"] as const;
+      const conversionCandidate = [v, "ZB"] as const;
+
+      expect(information["Gb"](conversionCandidate)).toEqual(expected);
+      expect(gigabits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Yib to Gb.', v => {
+      const gigabitsConversion = linearConversion(1000000);
+      const yobibitsConversion = linearConversion(102400000000);
+
+      const [toBase, fromBase] = [
+        yobibitsConversion[0],
+        gigabitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Gb"] as const;
+      const conversionCandidate = [v, "Yib"] as const;
+
+      expect(information["Gb"](conversionCandidate)).toEqual(expected);
+      expect(gigabits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert YB to Gb.', v => {
+      const gigabitsConversion = linearConversion(1000000);
+      const yottabytesConversion = linearConversion(819200000000);
+
+      const [toBase, fromBase] = [
+        yottabytesConversion[0],
+        gigabitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Gb"] as const;
+      const conversionCandidate = [v, "YB"] as const;
+
+      expect(information["Gb"](conversionCandidate)).toEqual(expected);
+      expect(gigabits(conversionCandidate)).toEqual(expected);
+    });
+  });
+
+
+  describe('Tb', () => {
+    it.each([1, 10, 100])('should yield a Tb measurement when given a number.', v => {
+      expect(information["Tb"](v)).toEqual([v, "Tb"]);
+      expect(terabits(v)).toEqual([v, "Tb"]);
+    });
+
+    it.each([1, 10, 100])('should convert b to Tb.', v => {
+      const terabitsConversion = linearConversion(10000000);
+      const bitsConversion = linearConversion(1);
+
+      const [toBase, fromBase] = [
+        bitsConversion[0],
+        terabitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Tb"] as const;
+      const conversionCandidate = [v, "b"] as const;
+
+      expect(information["Tb"](conversionCandidate)).toEqual(expected);
+      expect(terabits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert B to Tb.', v => {
+      const terabitsConversion = linearConversion(10000000);
+      const bytesConversion = linearConversion(8);
+
+      const [toBase, fromBase] = [
+        bytesConversion[0],
+        terabitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Tb"] as const;
+      const conversionCandidate = [v, "B"] as const;
+
+      expect(information["Tb"](conversionCandidate)).toEqual(expected);
+      expect(terabits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert kb to Tb.', v => {
+      const terabitsConversion = linearConversion(10000000);
+      const kilobitsConversion = linearConversion(1000);
+
+      const [toBase, fromBase] = [
+        kilobitsConversion[0],
+        terabitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Tb"] as const;
+      const conversionCandidate = [v, "kb"] as const;
+
+      expect(information["Tb"](conversionCandidate)).toEqual(expected);
+      expect(terabits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Mb to Tb.', v => {
+      const terabitsConversion = linearConversion(10000000);
+      const megabitsConversion = linearConversion(100000);
+
+      const [toBase, fromBase] = [
+        megabitsConversion[0],
+        terabitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Tb"] as const;
+      const conversionCandidate = [v, "Mb"] as const;
+
+      expect(information["Tb"](conversionCandidate)).toEqual(expected);
+      expect(terabits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Gb to Tb.', v => {
+      const terabitsConversion = linearConversion(10000000);
+      const gigabitsConversion = linearConversion(1000000);
+
+      const [toBase, fromBase] = [
+        gigabitsConversion[0],
+        terabitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Tb"] as const;
+      const conversionCandidate = [v, "Gb"] as const;
+
+      expect(information["Tb"](conversionCandidate)).toEqual(expected);
+      expect(terabits(conversionCandidate)).toEqual(expected);
+    });
+
+
+
+    it.each([1, 10, 100])('should convert Pb to Tb.', v => {
+      const terabitsConversion = linearConversion(10000000);
+      const petabitsConversion = linearConversion(100000000);
+
+      const [toBase, fromBase] = [
+        petabitsConversion[0],
+        terabitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Tb"] as const;
+      const conversionCandidate = [v, "Pb"] as const;
+
+      expect(information["Tb"](conversionCandidate)).toEqual(expected);
+      expect(terabits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Eb to Tb.', v => {
+      const terabitsConversion = linearConversion(10000000);
+      const exabitsConversion = linearConversion(1000000000);
+
+      const [toBase, fromBase] = [
+        exabitsConversion[0],
+        terabitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Tb"] as const;
+      const conversionCandidate = [v, "Eb"] as const;
+
+      expect(information["Tb"](conversionCandidate)).toEqual(expected);
+      expect(terabits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Zb to Tb.', v => {
+      const terabitsConversion = linearConversion(10000000);
+      const zettabitsConversion = linearConversion(10000000000);
+
+      const [toBase, fromBase] = [
+        zettabitsConversion[0],
+        terabitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Tb"] as const;
+      const conversionCandidate = [v, "Zb"] as const;
+
+      expect(information["Tb"](conversionCandidate)).toEqual(expected);
+      expect(terabits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Yb to Tb.', v => {
+      const terabitsConversion = linearConversion(10000000);
+      const yottabitsConversion = linearConversion(100000000000);
+
+      const [toBase, fromBase] = [
+        yottabitsConversion[0],
+        terabitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Tb"] as const;
+      const conversionCandidate = [v, "Yb"] as const;
+
+      expect(information["Tb"](conversionCandidate)).toEqual(expected);
+      expect(terabits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Kib to Tb.', v => {
+      const terabitsConversion = linearConversion(10000000);
+      const kibibitsConversion = linearConversion(1024);
+
+      const [toBase, fromBase] = [
+        kibibitsConversion[0],
+        terabitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Tb"] as const;
+      const conversionCandidate = [v, "Kib"] as const;
+
+      expect(information["Tb"](conversionCandidate)).toEqual(expected);
+      expect(terabits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert KB to Tb.', v => {
+      const terabitsConversion = linearConversion(10000000);
+      const kilobytesConversion = linearConversion(8192);
+
+      const [toBase, fromBase] = [
+        kilobytesConversion[0],
+        terabitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Tb"] as const;
+      const conversionCandidate = [v, "KB"] as const;
+
+      expect(information["Tb"](conversionCandidate)).toEqual(expected);
+      expect(terabits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Mib to Tb.', v => {
+      const terabitsConversion = linearConversion(10000000);
+      const mebibitsConversion = linearConversion(102400);
+
+      const [toBase, fromBase] = [
+        mebibitsConversion[0],
+        terabitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Tb"] as const;
+      const conversionCandidate = [v, "Mib"] as const;
+
+      expect(information["Tb"](conversionCandidate)).toEqual(expected);
+      expect(terabits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert MB to Tb.', v => {
+      const terabitsConversion = linearConversion(10000000);
+      const megabytesConversion = linearConversion(819200);
+
+      const [toBase, fromBase] = [
+        megabytesConversion[0],
+        terabitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Tb"] as const;
+      const conversionCandidate = [v, "MB"] as const;
+
+      expect(information["Tb"](conversionCandidate)).toEqual(expected);
+      expect(terabits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Gib to Tb.', v => {
+      const terabitsConversion = linearConversion(10000000);
+      const gibibitsConversion = linearConversion(1024000);
+
+      const [toBase, fromBase] = [
+        gibibitsConversion[0],
+        terabitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Tb"] as const;
+      const conversionCandidate = [v, "Gib"] as const;
+
+      expect(information["Tb"](conversionCandidate)).toEqual(expected);
+      expect(terabits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert GB to Tb.', v => {
+      const terabitsConversion = linearConversion(10000000);
+      const gigabytesConversion = linearConversion(8192000);
+
+      const [toBase, fromBase] = [
+        gigabytesConversion[0],
+        terabitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Tb"] as const;
+      const conversionCandidate = [v, "GB"] as const;
+
+      expect(information["Tb"](conversionCandidate)).toEqual(expected);
+      expect(terabits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Tib to Tb.', v => {
+      const terabitsConversion = linearConversion(10000000);
+      const tebibitsConversion = linearConversion(10240000);
+
+      const [toBase, fromBase] = [
+        tebibitsConversion[0],
+        terabitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Tb"] as const;
+      const conversionCandidate = [v, "Tib"] as const;
+
+      expect(information["Tb"](conversionCandidate)).toEqual(expected);
+      expect(terabits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert TB to Tb.', v => {
+      const terabitsConversion = linearConversion(10000000);
+      const terabytesConversion = linearConversion(81920000);
+
+      const [toBase, fromBase] = [
+        terabytesConversion[0],
+        terabitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Tb"] as const;
+      const conversionCandidate = [v, "TB"] as const;
+
+      expect(information["Tb"](conversionCandidate)).toEqual(expected);
+      expect(terabits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Pib to Tb.', v => {
+      const terabitsConversion = linearConversion(10000000);
+      const pebibitsConversion = linearConversion(102400000);
+
+      const [toBase, fromBase] = [
+        pebibitsConversion[0],
+        terabitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Tb"] as const;
+      const conversionCandidate = [v, "Pib"] as const;
+
+      expect(information["Tb"](conversionCandidate)).toEqual(expected);
+      expect(terabits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert PB to Tb.', v => {
+      const terabitsConversion = linearConversion(10000000);
+      const petabytesConversion = linearConversion(819200000);
+
+      const [toBase, fromBase] = [
+        petabytesConversion[0],
+        terabitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Tb"] as const;
+      const conversionCandidate = [v, "PB"] as const;
+
+      expect(information["Tb"](conversionCandidate)).toEqual(expected);
+      expect(terabits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Eib to Tb.', v => {
+      const terabitsConversion = linearConversion(10000000);
+      const exbibitsConversion = linearConversion(1024000000);
+
+      const [toBase, fromBase] = [
+        exbibitsConversion[0],
+        terabitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Tb"] as const;
+      const conversionCandidate = [v, "Eib"] as const;
+
+      expect(information["Tb"](conversionCandidate)).toEqual(expected);
+      expect(terabits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert EB to Tb.', v => {
+      const terabitsConversion = linearConversion(10000000);
+      const exabytesConversion = linearConversion(8192000000);
+
+      const [toBase, fromBase] = [
+        exabytesConversion[0],
+        terabitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Tb"] as const;
+      const conversionCandidate = [v, "EB"] as const;
+
+      expect(information["Tb"](conversionCandidate)).toEqual(expected);
+      expect(terabits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Zib to Tb.', v => {
+      const terabitsConversion = linearConversion(10000000);
+      const zebibitsConversion = linearConversion(10240000000);
+
+      const [toBase, fromBase] = [
+        zebibitsConversion[0],
+        terabitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Tb"] as const;
+      const conversionCandidate = [v, "Zib"] as const;
+
+      expect(information["Tb"](conversionCandidate)).toEqual(expected);
+      expect(terabits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert ZB to Tb.', v => {
+      const terabitsConversion = linearConversion(10000000);
+      const zettabytesConversion = linearConversion(81920000000);
+
+      const [toBase, fromBase] = [
+        zettabytesConversion[0],
+        terabitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Tb"] as const;
+      const conversionCandidate = [v, "ZB"] as const;
+
+      expect(information["Tb"](conversionCandidate)).toEqual(expected);
+      expect(terabits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Yib to Tb.', v => {
+      const terabitsConversion = linearConversion(10000000);
+      const yobibitsConversion = linearConversion(102400000000);
+
+      const [toBase, fromBase] = [
+        yobibitsConversion[0],
+        terabitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Tb"] as const;
+      const conversionCandidate = [v, "Yib"] as const;
+
+      expect(information["Tb"](conversionCandidate)).toEqual(expected);
+      expect(terabits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert YB to Tb.', v => {
+      const terabitsConversion = linearConversion(10000000);
+      const yottabytesConversion = linearConversion(819200000000);
+
+      const [toBase, fromBase] = [
+        yottabytesConversion[0],
+        terabitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Tb"] as const;
+      const conversionCandidate = [v, "YB"] as const;
+
+      expect(information["Tb"](conversionCandidate)).toEqual(expected);
+      expect(terabits(conversionCandidate)).toEqual(expected);
+    });
+  });
+
+
+  describe('Pb', () => {
+    it.each([1, 10, 100])('should yield a Pb measurement when given a number.', v => {
+      expect(information["Pb"](v)).toEqual([v, "Pb"]);
+      expect(petabits(v)).toEqual([v, "Pb"]);
+    });
+
+    it.each([1, 10, 100])('should convert b to Pb.', v => {
+      const petabitsConversion = linearConversion(100000000);
+      const bitsConversion = linearConversion(1);
+
+      const [toBase, fromBase] = [
+        bitsConversion[0],
+        petabitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Pb"] as const;
+      const conversionCandidate = [v, "b"] as const;
+
+      expect(information["Pb"](conversionCandidate)).toEqual(expected);
+      expect(petabits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert B to Pb.', v => {
+      const petabitsConversion = linearConversion(100000000);
+      const bytesConversion = linearConversion(8);
+
+      const [toBase, fromBase] = [
+        bytesConversion[0],
+        petabitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Pb"] as const;
+      const conversionCandidate = [v, "B"] as const;
+
+      expect(information["Pb"](conversionCandidate)).toEqual(expected);
+      expect(petabits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert kb to Pb.', v => {
+      const petabitsConversion = linearConversion(100000000);
+      const kilobitsConversion = linearConversion(1000);
+
+      const [toBase, fromBase] = [
+        kilobitsConversion[0],
+        petabitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Pb"] as const;
+      const conversionCandidate = [v, "kb"] as const;
+
+      expect(information["Pb"](conversionCandidate)).toEqual(expected);
+      expect(petabits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Mb to Pb.', v => {
+      const petabitsConversion = linearConversion(100000000);
+      const megabitsConversion = linearConversion(100000);
+
+      const [toBase, fromBase] = [
+        megabitsConversion[0],
+        petabitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Pb"] as const;
+      const conversionCandidate = [v, "Mb"] as const;
+
+      expect(information["Pb"](conversionCandidate)).toEqual(expected);
+      expect(petabits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Gb to Pb.', v => {
+      const petabitsConversion = linearConversion(100000000);
+      const gigabitsConversion = linearConversion(1000000);
+
+      const [toBase, fromBase] = [
+        gigabitsConversion[0],
+        petabitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Pb"] as const;
+      const conversionCandidate = [v, "Gb"] as const;
+
+      expect(information["Pb"](conversionCandidate)).toEqual(expected);
+      expect(petabits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Tb to Pb.', v => {
+      const petabitsConversion = linearConversion(100000000);
+      const terabitsConversion = linearConversion(10000000);
+
+      const [toBase, fromBase] = [
+        terabitsConversion[0],
+        petabitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Pb"] as const;
+      const conversionCandidate = [v, "Tb"] as const;
+
+      expect(information["Pb"](conversionCandidate)).toEqual(expected);
+      expect(petabits(conversionCandidate)).toEqual(expected);
+    });
+
+
+
+    it.each([1, 10, 100])('should convert Eb to Pb.', v => {
+      const petabitsConversion = linearConversion(100000000);
+      const exabitsConversion = linearConversion(1000000000);
+
+      const [toBase, fromBase] = [
+        exabitsConversion[0],
+        petabitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Pb"] as const;
+      const conversionCandidate = [v, "Eb"] as const;
+
+      expect(information["Pb"](conversionCandidate)).toEqual(expected);
+      expect(petabits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Zb to Pb.', v => {
+      const petabitsConversion = linearConversion(100000000);
+      const zettabitsConversion = linearConversion(10000000000);
+
+      const [toBase, fromBase] = [
+        zettabitsConversion[0],
+        petabitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Pb"] as const;
+      const conversionCandidate = [v, "Zb"] as const;
+
+      expect(information["Pb"](conversionCandidate)).toEqual(expected);
+      expect(petabits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Yb to Pb.', v => {
+      const petabitsConversion = linearConversion(100000000);
+      const yottabitsConversion = linearConversion(100000000000);
+
+      const [toBase, fromBase] = [
+        yottabitsConversion[0],
+        petabitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Pb"] as const;
+      const conversionCandidate = [v, "Yb"] as const;
+
+      expect(information["Pb"](conversionCandidate)).toEqual(expected);
+      expect(petabits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Kib to Pb.', v => {
+      const petabitsConversion = linearConversion(100000000);
+      const kibibitsConversion = linearConversion(1024);
+
+      const [toBase, fromBase] = [
+        kibibitsConversion[0],
+        petabitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Pb"] as const;
+      const conversionCandidate = [v, "Kib"] as const;
+
+      expect(information["Pb"](conversionCandidate)).toEqual(expected);
+      expect(petabits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert KB to Pb.', v => {
+      const petabitsConversion = linearConversion(100000000);
+      const kilobytesConversion = linearConversion(8192);
+
+      const [toBase, fromBase] = [
+        kilobytesConversion[0],
+        petabitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Pb"] as const;
+      const conversionCandidate = [v, "KB"] as const;
+
+      expect(information["Pb"](conversionCandidate)).toEqual(expected);
+      expect(petabits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Mib to Pb.', v => {
+      const petabitsConversion = linearConversion(100000000);
+      const mebibitsConversion = linearConversion(102400);
+
+      const [toBase, fromBase] = [
+        mebibitsConversion[0],
+        petabitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Pb"] as const;
+      const conversionCandidate = [v, "Mib"] as const;
+
+      expect(information["Pb"](conversionCandidate)).toEqual(expected);
+      expect(petabits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert MB to Pb.', v => {
+      const petabitsConversion = linearConversion(100000000);
+      const megabytesConversion = linearConversion(819200);
+
+      const [toBase, fromBase] = [
+        megabytesConversion[0],
+        petabitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Pb"] as const;
+      const conversionCandidate = [v, "MB"] as const;
+
+      expect(information["Pb"](conversionCandidate)).toEqual(expected);
+      expect(petabits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Gib to Pb.', v => {
+      const petabitsConversion = linearConversion(100000000);
+      const gibibitsConversion = linearConversion(1024000);
+
+      const [toBase, fromBase] = [
+        gibibitsConversion[0],
+        petabitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Pb"] as const;
+      const conversionCandidate = [v, "Gib"] as const;
+
+      expect(information["Pb"](conversionCandidate)).toEqual(expected);
+      expect(petabits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert GB to Pb.', v => {
+      const petabitsConversion = linearConversion(100000000);
+      const gigabytesConversion = linearConversion(8192000);
+
+      const [toBase, fromBase] = [
+        gigabytesConversion[0],
+        petabitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Pb"] as const;
+      const conversionCandidate = [v, "GB"] as const;
+
+      expect(information["Pb"](conversionCandidate)).toEqual(expected);
+      expect(petabits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Tib to Pb.', v => {
+      const petabitsConversion = linearConversion(100000000);
+      const tebibitsConversion = linearConversion(10240000);
+
+      const [toBase, fromBase] = [
+        tebibitsConversion[0],
+        petabitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Pb"] as const;
+      const conversionCandidate = [v, "Tib"] as const;
+
+      expect(information["Pb"](conversionCandidate)).toEqual(expected);
+      expect(petabits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert TB to Pb.', v => {
+      const petabitsConversion = linearConversion(100000000);
+      const terabytesConversion = linearConversion(81920000);
+
+      const [toBase, fromBase] = [
+        terabytesConversion[0],
+        petabitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Pb"] as const;
+      const conversionCandidate = [v, "TB"] as const;
+
+      expect(information["Pb"](conversionCandidate)).toEqual(expected);
+      expect(petabits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Pib to Pb.', v => {
+      const petabitsConversion = linearConversion(100000000);
+      const pebibitsConversion = linearConversion(102400000);
+
+      const [toBase, fromBase] = [
+        pebibitsConversion[0],
+        petabitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Pb"] as const;
+      const conversionCandidate = [v, "Pib"] as const;
+
+      expect(information["Pb"](conversionCandidate)).toEqual(expected);
+      expect(petabits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert PB to Pb.', v => {
+      const petabitsConversion = linearConversion(100000000);
+      const petabytesConversion = linearConversion(819200000);
+
+      const [toBase, fromBase] = [
+        petabytesConversion[0],
+        petabitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Pb"] as const;
+      const conversionCandidate = [v, "PB"] as const;
+
+      expect(information["Pb"](conversionCandidate)).toEqual(expected);
+      expect(petabits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Eib to Pb.', v => {
+      const petabitsConversion = linearConversion(100000000);
+      const exbibitsConversion = linearConversion(1024000000);
+
+      const [toBase, fromBase] = [
+        exbibitsConversion[0],
+        petabitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Pb"] as const;
+      const conversionCandidate = [v, "Eib"] as const;
+
+      expect(information["Pb"](conversionCandidate)).toEqual(expected);
+      expect(petabits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert EB to Pb.', v => {
+      const petabitsConversion = linearConversion(100000000);
+      const exabytesConversion = linearConversion(8192000000);
+
+      const [toBase, fromBase] = [
+        exabytesConversion[0],
+        petabitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Pb"] as const;
+      const conversionCandidate = [v, "EB"] as const;
+
+      expect(information["Pb"](conversionCandidate)).toEqual(expected);
+      expect(petabits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Zib to Pb.', v => {
+      const petabitsConversion = linearConversion(100000000);
+      const zebibitsConversion = linearConversion(10240000000);
+
+      const [toBase, fromBase] = [
+        zebibitsConversion[0],
+        petabitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Pb"] as const;
+      const conversionCandidate = [v, "Zib"] as const;
+
+      expect(information["Pb"](conversionCandidate)).toEqual(expected);
+      expect(petabits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert ZB to Pb.', v => {
+      const petabitsConversion = linearConversion(100000000);
+      const zettabytesConversion = linearConversion(81920000000);
+
+      const [toBase, fromBase] = [
+        zettabytesConversion[0],
+        petabitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Pb"] as const;
+      const conversionCandidate = [v, "ZB"] as const;
+
+      expect(information["Pb"](conversionCandidate)).toEqual(expected);
+      expect(petabits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Yib to Pb.', v => {
+      const petabitsConversion = linearConversion(100000000);
+      const yobibitsConversion = linearConversion(102400000000);
+
+      const [toBase, fromBase] = [
+        yobibitsConversion[0],
+        petabitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Pb"] as const;
+      const conversionCandidate = [v, "Yib"] as const;
+
+      expect(information["Pb"](conversionCandidate)).toEqual(expected);
+      expect(petabits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert YB to Pb.', v => {
+      const petabitsConversion = linearConversion(100000000);
+      const yottabytesConversion = linearConversion(819200000000);
+
+      const [toBase, fromBase] = [
+        yottabytesConversion[0],
+        petabitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Pb"] as const;
+      const conversionCandidate = [v, "YB"] as const;
+
+      expect(information["Pb"](conversionCandidate)).toEqual(expected);
+      expect(petabits(conversionCandidate)).toEqual(expected);
+    });
+  });
+
+
+  describe('Eb', () => {
+    it.each([1, 10, 100])('should yield a Eb measurement when given a number.', v => {
+      expect(information["Eb"](v)).toEqual([v, "Eb"]);
+      expect(exabits(v)).toEqual([v, "Eb"]);
+    });
+
+    it.each([1, 10, 100])('should convert b to Eb.', v => {
+      const exabitsConversion = linearConversion(1000000000);
+      const bitsConversion = linearConversion(1);
+
+      const [toBase, fromBase] = [
+        bitsConversion[0],
+        exabitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Eb"] as const;
+      const conversionCandidate = [v, "b"] as const;
+
+      expect(information["Eb"](conversionCandidate)).toEqual(expected);
+      expect(exabits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert B to Eb.', v => {
+      const exabitsConversion = linearConversion(1000000000);
+      const bytesConversion = linearConversion(8);
+
+      const [toBase, fromBase] = [
+        bytesConversion[0],
+        exabitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Eb"] as const;
+      const conversionCandidate = [v, "B"] as const;
+
+      expect(information["Eb"](conversionCandidate)).toEqual(expected);
+      expect(exabits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert kb to Eb.', v => {
+      const exabitsConversion = linearConversion(1000000000);
+      const kilobitsConversion = linearConversion(1000);
+
+      const [toBase, fromBase] = [
+        kilobitsConversion[0],
+        exabitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Eb"] as const;
+      const conversionCandidate = [v, "kb"] as const;
+
+      expect(information["Eb"](conversionCandidate)).toEqual(expected);
+      expect(exabits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Mb to Eb.', v => {
+      const exabitsConversion = linearConversion(1000000000);
+      const megabitsConversion = linearConversion(100000);
+
+      const [toBase, fromBase] = [
+        megabitsConversion[0],
+        exabitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Eb"] as const;
+      const conversionCandidate = [v, "Mb"] as const;
+
+      expect(information["Eb"](conversionCandidate)).toEqual(expected);
+      expect(exabits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Gb to Eb.', v => {
+      const exabitsConversion = linearConversion(1000000000);
+      const gigabitsConversion = linearConversion(1000000);
+
+      const [toBase, fromBase] = [
+        gigabitsConversion[0],
+        exabitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Eb"] as const;
+      const conversionCandidate = [v, "Gb"] as const;
+
+      expect(information["Eb"](conversionCandidate)).toEqual(expected);
+      expect(exabits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Tb to Eb.', v => {
+      const exabitsConversion = linearConversion(1000000000);
+      const terabitsConversion = linearConversion(10000000);
+
+      const [toBase, fromBase] = [
+        terabitsConversion[0],
+        exabitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Eb"] as const;
+      const conversionCandidate = [v, "Tb"] as const;
+
+      expect(information["Eb"](conversionCandidate)).toEqual(expected);
+      expect(exabits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Pb to Eb.', v => {
+      const exabitsConversion = linearConversion(1000000000);
+      const petabitsConversion = linearConversion(100000000);
+
+      const [toBase, fromBase] = [
+        petabitsConversion[0],
+        exabitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Eb"] as const;
+      const conversionCandidate = [v, "Pb"] as const;
+
+      expect(information["Eb"](conversionCandidate)).toEqual(expected);
+      expect(exabits(conversionCandidate)).toEqual(expected);
+    });
+
+
+
+    it.each([1, 10, 100])('should convert Zb to Eb.', v => {
+      const exabitsConversion = linearConversion(1000000000);
+      const zettabitsConversion = linearConversion(10000000000);
+
+      const [toBase, fromBase] = [
+        zettabitsConversion[0],
+        exabitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Eb"] as const;
+      const conversionCandidate = [v, "Zb"] as const;
+
+      expect(information["Eb"](conversionCandidate)).toEqual(expected);
+      expect(exabits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Yb to Eb.', v => {
+      const exabitsConversion = linearConversion(1000000000);
+      const yottabitsConversion = linearConversion(100000000000);
+
+      const [toBase, fromBase] = [
+        yottabitsConversion[0],
+        exabitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Eb"] as const;
+      const conversionCandidate = [v, "Yb"] as const;
+
+      expect(information["Eb"](conversionCandidate)).toEqual(expected);
+      expect(exabits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Kib to Eb.', v => {
+      const exabitsConversion = linearConversion(1000000000);
+      const kibibitsConversion = linearConversion(1024);
+
+      const [toBase, fromBase] = [
+        kibibitsConversion[0],
+        exabitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Eb"] as const;
+      const conversionCandidate = [v, "Kib"] as const;
+
+      expect(information["Eb"](conversionCandidate)).toEqual(expected);
+      expect(exabits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert KB to Eb.', v => {
+      const exabitsConversion = linearConversion(1000000000);
+      const kilobytesConversion = linearConversion(8192);
+
+      const [toBase, fromBase] = [
+        kilobytesConversion[0],
+        exabitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Eb"] as const;
+      const conversionCandidate = [v, "KB"] as const;
+
+      expect(information["Eb"](conversionCandidate)).toEqual(expected);
+      expect(exabits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Mib to Eb.', v => {
+      const exabitsConversion = linearConversion(1000000000);
+      const mebibitsConversion = linearConversion(102400);
+
+      const [toBase, fromBase] = [
+        mebibitsConversion[0],
+        exabitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Eb"] as const;
+      const conversionCandidate = [v, "Mib"] as const;
+
+      expect(information["Eb"](conversionCandidate)).toEqual(expected);
+      expect(exabits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert MB to Eb.', v => {
+      const exabitsConversion = linearConversion(1000000000);
+      const megabytesConversion = linearConversion(819200);
+
+      const [toBase, fromBase] = [
+        megabytesConversion[0],
+        exabitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Eb"] as const;
+      const conversionCandidate = [v, "MB"] as const;
+
+      expect(information["Eb"](conversionCandidate)).toEqual(expected);
+      expect(exabits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Gib to Eb.', v => {
+      const exabitsConversion = linearConversion(1000000000);
+      const gibibitsConversion = linearConversion(1024000);
+
+      const [toBase, fromBase] = [
+        gibibitsConversion[0],
+        exabitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Eb"] as const;
+      const conversionCandidate = [v, "Gib"] as const;
+
+      expect(information["Eb"](conversionCandidate)).toEqual(expected);
+      expect(exabits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert GB to Eb.', v => {
+      const exabitsConversion = linearConversion(1000000000);
+      const gigabytesConversion = linearConversion(8192000);
+
+      const [toBase, fromBase] = [
+        gigabytesConversion[0],
+        exabitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Eb"] as const;
+      const conversionCandidate = [v, "GB"] as const;
+
+      expect(information["Eb"](conversionCandidate)).toEqual(expected);
+      expect(exabits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Tib to Eb.', v => {
+      const exabitsConversion = linearConversion(1000000000);
+      const tebibitsConversion = linearConversion(10240000);
+
+      const [toBase, fromBase] = [
+        tebibitsConversion[0],
+        exabitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Eb"] as const;
+      const conversionCandidate = [v, "Tib"] as const;
+
+      expect(information["Eb"](conversionCandidate)).toEqual(expected);
+      expect(exabits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert TB to Eb.', v => {
+      const exabitsConversion = linearConversion(1000000000);
+      const terabytesConversion = linearConversion(81920000);
+
+      const [toBase, fromBase] = [
+        terabytesConversion[0],
+        exabitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Eb"] as const;
+      const conversionCandidate = [v, "TB"] as const;
+
+      expect(information["Eb"](conversionCandidate)).toEqual(expected);
+      expect(exabits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Pib to Eb.', v => {
+      const exabitsConversion = linearConversion(1000000000);
+      const pebibitsConversion = linearConversion(102400000);
+
+      const [toBase, fromBase] = [
+        pebibitsConversion[0],
+        exabitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Eb"] as const;
+      const conversionCandidate = [v, "Pib"] as const;
+
+      expect(information["Eb"](conversionCandidate)).toEqual(expected);
+      expect(exabits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert PB to Eb.', v => {
+      const exabitsConversion = linearConversion(1000000000);
+      const petabytesConversion = linearConversion(819200000);
+
+      const [toBase, fromBase] = [
+        petabytesConversion[0],
+        exabitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Eb"] as const;
+      const conversionCandidate = [v, "PB"] as const;
+
+      expect(information["Eb"](conversionCandidate)).toEqual(expected);
+      expect(exabits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Eib to Eb.', v => {
+      const exabitsConversion = linearConversion(1000000000);
+      const exbibitsConversion = linearConversion(1024000000);
+
+      const [toBase, fromBase] = [
+        exbibitsConversion[0],
+        exabitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Eb"] as const;
+      const conversionCandidate = [v, "Eib"] as const;
+
+      expect(information["Eb"](conversionCandidate)).toEqual(expected);
+      expect(exabits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert EB to Eb.', v => {
+      const exabitsConversion = linearConversion(1000000000);
+      const exabytesConversion = linearConversion(8192000000);
+
+      const [toBase, fromBase] = [
+        exabytesConversion[0],
+        exabitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Eb"] as const;
+      const conversionCandidate = [v, "EB"] as const;
+
+      expect(information["Eb"](conversionCandidate)).toEqual(expected);
+      expect(exabits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Zib to Eb.', v => {
+      const exabitsConversion = linearConversion(1000000000);
+      const zebibitsConversion = linearConversion(10240000000);
+
+      const [toBase, fromBase] = [
+        zebibitsConversion[0],
+        exabitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Eb"] as const;
+      const conversionCandidate = [v, "Zib"] as const;
+
+      expect(information["Eb"](conversionCandidate)).toEqual(expected);
+      expect(exabits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert ZB to Eb.', v => {
+      const exabitsConversion = linearConversion(1000000000);
+      const zettabytesConversion = linearConversion(81920000000);
+
+      const [toBase, fromBase] = [
+        zettabytesConversion[0],
+        exabitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Eb"] as const;
+      const conversionCandidate = [v, "ZB"] as const;
+
+      expect(information["Eb"](conversionCandidate)).toEqual(expected);
+      expect(exabits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Yib to Eb.', v => {
+      const exabitsConversion = linearConversion(1000000000);
+      const yobibitsConversion = linearConversion(102400000000);
+
+      const [toBase, fromBase] = [
+        yobibitsConversion[0],
+        exabitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Eb"] as const;
+      const conversionCandidate = [v, "Yib"] as const;
+
+      expect(information["Eb"](conversionCandidate)).toEqual(expected);
+      expect(exabits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert YB to Eb.', v => {
+      const exabitsConversion = linearConversion(1000000000);
+      const yottabytesConversion = linearConversion(819200000000);
+
+      const [toBase, fromBase] = [
+        yottabytesConversion[0],
+        exabitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Eb"] as const;
+      const conversionCandidate = [v, "YB"] as const;
+
+      expect(information["Eb"](conversionCandidate)).toEqual(expected);
+      expect(exabits(conversionCandidate)).toEqual(expected);
+    });
+  });
+
+
+  describe('Zb', () => {
+    it.each([1, 10, 100])('should yield a Zb measurement when given a number.', v => {
+      expect(information["Zb"](v)).toEqual([v, "Zb"]);
+      expect(zettabits(v)).toEqual([v, "Zb"]);
+    });
+
+    it.each([1, 10, 100])('should convert b to Zb.', v => {
+      const zettabitsConversion = linearConversion(10000000000);
+      const bitsConversion = linearConversion(1);
+
+      const [toBase, fromBase] = [
+        bitsConversion[0],
+        zettabitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Zb"] as const;
+      const conversionCandidate = [v, "b"] as const;
+
+      expect(information["Zb"](conversionCandidate)).toEqual(expected);
+      expect(zettabits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert B to Zb.', v => {
+      const zettabitsConversion = linearConversion(10000000000);
+      const bytesConversion = linearConversion(8);
+
+      const [toBase, fromBase] = [
+        bytesConversion[0],
+        zettabitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Zb"] as const;
+      const conversionCandidate = [v, "B"] as const;
+
+      expect(information["Zb"](conversionCandidate)).toEqual(expected);
+      expect(zettabits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert kb to Zb.', v => {
+      const zettabitsConversion = linearConversion(10000000000);
+      const kilobitsConversion = linearConversion(1000);
+
+      const [toBase, fromBase] = [
+        kilobitsConversion[0],
+        zettabitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Zb"] as const;
+      const conversionCandidate = [v, "kb"] as const;
+
+      expect(information["Zb"](conversionCandidate)).toEqual(expected);
+      expect(zettabits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Mb to Zb.', v => {
+      const zettabitsConversion = linearConversion(10000000000);
+      const megabitsConversion = linearConversion(100000);
+
+      const [toBase, fromBase] = [
+        megabitsConversion[0],
+        zettabitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Zb"] as const;
+      const conversionCandidate = [v, "Mb"] as const;
+
+      expect(information["Zb"](conversionCandidate)).toEqual(expected);
+      expect(zettabits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Gb to Zb.', v => {
+      const zettabitsConversion = linearConversion(10000000000);
+      const gigabitsConversion = linearConversion(1000000);
+
+      const [toBase, fromBase] = [
+        gigabitsConversion[0],
+        zettabitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Zb"] as const;
+      const conversionCandidate = [v, "Gb"] as const;
+
+      expect(information["Zb"](conversionCandidate)).toEqual(expected);
+      expect(zettabits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Tb to Zb.', v => {
+      const zettabitsConversion = linearConversion(10000000000);
+      const terabitsConversion = linearConversion(10000000);
+
+      const [toBase, fromBase] = [
+        terabitsConversion[0],
+        zettabitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Zb"] as const;
+      const conversionCandidate = [v, "Tb"] as const;
+
+      expect(information["Zb"](conversionCandidate)).toEqual(expected);
+      expect(zettabits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Pb to Zb.', v => {
+      const zettabitsConversion = linearConversion(10000000000);
+      const petabitsConversion = linearConversion(100000000);
+
+      const [toBase, fromBase] = [
+        petabitsConversion[0],
+        zettabitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Zb"] as const;
+      const conversionCandidate = [v, "Pb"] as const;
+
+      expect(information["Zb"](conversionCandidate)).toEqual(expected);
+      expect(zettabits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Eb to Zb.', v => {
+      const zettabitsConversion = linearConversion(10000000000);
+      const exabitsConversion = linearConversion(1000000000);
+
+      const [toBase, fromBase] = [
+        exabitsConversion[0],
+        zettabitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Zb"] as const;
+      const conversionCandidate = [v, "Eb"] as const;
+
+      expect(information["Zb"](conversionCandidate)).toEqual(expected);
+      expect(zettabits(conversionCandidate)).toEqual(expected);
+    });
+
+
+
+    it.each([1, 10, 100])('should convert Yb to Zb.', v => {
+      const zettabitsConversion = linearConversion(10000000000);
+      const yottabitsConversion = linearConversion(100000000000);
+
+      const [toBase, fromBase] = [
+        yottabitsConversion[0],
+        zettabitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Zb"] as const;
+      const conversionCandidate = [v, "Yb"] as const;
+
+      expect(information["Zb"](conversionCandidate)).toEqual(expected);
+      expect(zettabits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Kib to Zb.', v => {
+      const zettabitsConversion = linearConversion(10000000000);
+      const kibibitsConversion = linearConversion(1024);
+
+      const [toBase, fromBase] = [
+        kibibitsConversion[0],
+        zettabitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Zb"] as const;
+      const conversionCandidate = [v, "Kib"] as const;
+
+      expect(information["Zb"](conversionCandidate)).toEqual(expected);
+      expect(zettabits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert KB to Zb.', v => {
+      const zettabitsConversion = linearConversion(10000000000);
+      const kilobytesConversion = linearConversion(8192);
+
+      const [toBase, fromBase] = [
+        kilobytesConversion[0],
+        zettabitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Zb"] as const;
+      const conversionCandidate = [v, "KB"] as const;
+
+      expect(information["Zb"](conversionCandidate)).toEqual(expected);
+      expect(zettabits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Mib to Zb.', v => {
+      const zettabitsConversion = linearConversion(10000000000);
+      const mebibitsConversion = linearConversion(102400);
+
+      const [toBase, fromBase] = [
+        mebibitsConversion[0],
+        zettabitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Zb"] as const;
+      const conversionCandidate = [v, "Mib"] as const;
+
+      expect(information["Zb"](conversionCandidate)).toEqual(expected);
+      expect(zettabits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert MB to Zb.', v => {
+      const zettabitsConversion = linearConversion(10000000000);
+      const megabytesConversion = linearConversion(819200);
+
+      const [toBase, fromBase] = [
+        megabytesConversion[0],
+        zettabitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Zb"] as const;
+      const conversionCandidate = [v, "MB"] as const;
+
+      expect(information["Zb"](conversionCandidate)).toEqual(expected);
+      expect(zettabits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Gib to Zb.', v => {
+      const zettabitsConversion = linearConversion(10000000000);
+      const gibibitsConversion = linearConversion(1024000);
+
+      const [toBase, fromBase] = [
+        gibibitsConversion[0],
+        zettabitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Zb"] as const;
+      const conversionCandidate = [v, "Gib"] as const;
+
+      expect(information["Zb"](conversionCandidate)).toEqual(expected);
+      expect(zettabits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert GB to Zb.', v => {
+      const zettabitsConversion = linearConversion(10000000000);
+      const gigabytesConversion = linearConversion(8192000);
+
+      const [toBase, fromBase] = [
+        gigabytesConversion[0],
+        zettabitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Zb"] as const;
+      const conversionCandidate = [v, "GB"] as const;
+
+      expect(information["Zb"](conversionCandidate)).toEqual(expected);
+      expect(zettabits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Tib to Zb.', v => {
+      const zettabitsConversion = linearConversion(10000000000);
+      const tebibitsConversion = linearConversion(10240000);
+
+      const [toBase, fromBase] = [
+        tebibitsConversion[0],
+        zettabitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Zb"] as const;
+      const conversionCandidate = [v, "Tib"] as const;
+
+      expect(information["Zb"](conversionCandidate)).toEqual(expected);
+      expect(zettabits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert TB to Zb.', v => {
+      const zettabitsConversion = linearConversion(10000000000);
+      const terabytesConversion = linearConversion(81920000);
+
+      const [toBase, fromBase] = [
+        terabytesConversion[0],
+        zettabitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Zb"] as const;
+      const conversionCandidate = [v, "TB"] as const;
+
+      expect(information["Zb"](conversionCandidate)).toEqual(expected);
+      expect(zettabits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Pib to Zb.', v => {
+      const zettabitsConversion = linearConversion(10000000000);
+      const pebibitsConversion = linearConversion(102400000);
+
+      const [toBase, fromBase] = [
+        pebibitsConversion[0],
+        zettabitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Zb"] as const;
+      const conversionCandidate = [v, "Pib"] as const;
+
+      expect(information["Zb"](conversionCandidate)).toEqual(expected);
+      expect(zettabits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert PB to Zb.', v => {
+      const zettabitsConversion = linearConversion(10000000000);
+      const petabytesConversion = linearConversion(819200000);
+
+      const [toBase, fromBase] = [
+        petabytesConversion[0],
+        zettabitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Zb"] as const;
+      const conversionCandidate = [v, "PB"] as const;
+
+      expect(information["Zb"](conversionCandidate)).toEqual(expected);
+      expect(zettabits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Eib to Zb.', v => {
+      const zettabitsConversion = linearConversion(10000000000);
+      const exbibitsConversion = linearConversion(1024000000);
+
+      const [toBase, fromBase] = [
+        exbibitsConversion[0],
+        zettabitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Zb"] as const;
+      const conversionCandidate = [v, "Eib"] as const;
+
+      expect(information["Zb"](conversionCandidate)).toEqual(expected);
+      expect(zettabits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert EB to Zb.', v => {
+      const zettabitsConversion = linearConversion(10000000000);
+      const exabytesConversion = linearConversion(8192000000);
+
+      const [toBase, fromBase] = [
+        exabytesConversion[0],
+        zettabitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Zb"] as const;
+      const conversionCandidate = [v, "EB"] as const;
+
+      expect(information["Zb"](conversionCandidate)).toEqual(expected);
+      expect(zettabits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Zib to Zb.', v => {
+      const zettabitsConversion = linearConversion(10000000000);
+      const zebibitsConversion = linearConversion(10240000000);
+
+      const [toBase, fromBase] = [
+        zebibitsConversion[0],
+        zettabitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Zb"] as const;
+      const conversionCandidate = [v, "Zib"] as const;
+
+      expect(information["Zb"](conversionCandidate)).toEqual(expected);
+      expect(zettabits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert ZB to Zb.', v => {
+      const zettabitsConversion = linearConversion(10000000000);
+      const zettabytesConversion = linearConversion(81920000000);
+
+      const [toBase, fromBase] = [
+        zettabytesConversion[0],
+        zettabitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Zb"] as const;
+      const conversionCandidate = [v, "ZB"] as const;
+
+      expect(information["Zb"](conversionCandidate)).toEqual(expected);
+      expect(zettabits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Yib to Zb.', v => {
+      const zettabitsConversion = linearConversion(10000000000);
+      const yobibitsConversion = linearConversion(102400000000);
+
+      const [toBase, fromBase] = [
+        yobibitsConversion[0],
+        zettabitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Zb"] as const;
+      const conversionCandidate = [v, "Yib"] as const;
+
+      expect(information["Zb"](conversionCandidate)).toEqual(expected);
+      expect(zettabits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert YB to Zb.', v => {
+      const zettabitsConversion = linearConversion(10000000000);
+      const yottabytesConversion = linearConversion(819200000000);
+
+      const [toBase, fromBase] = [
+        yottabytesConversion[0],
+        zettabitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Zb"] as const;
+      const conversionCandidate = [v, "YB"] as const;
+
+      expect(information["Zb"](conversionCandidate)).toEqual(expected);
+      expect(zettabits(conversionCandidate)).toEqual(expected);
+    });
+  });
+
+
+  describe('Yb', () => {
+    it.each([1, 10, 100])('should yield a Yb measurement when given a number.', v => {
+      expect(information["Yb"](v)).toEqual([v, "Yb"]);
+      expect(yottabits(v)).toEqual([v, "Yb"]);
+    });
+
+    it.each([1, 10, 100])('should convert b to Yb.', v => {
+      const yottabitsConversion = linearConversion(100000000000);
+      const bitsConversion = linearConversion(1);
+
+      const [toBase, fromBase] = [
+        bitsConversion[0],
+        yottabitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Yb"] as const;
+      const conversionCandidate = [v, "b"] as const;
+
+      expect(information["Yb"](conversionCandidate)).toEqual(expected);
+      expect(yottabits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert B to Yb.', v => {
+      const yottabitsConversion = linearConversion(100000000000);
+      const bytesConversion = linearConversion(8);
+
+      const [toBase, fromBase] = [
+        bytesConversion[0],
+        yottabitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Yb"] as const;
+      const conversionCandidate = [v, "B"] as const;
+
+      expect(information["Yb"](conversionCandidate)).toEqual(expected);
+      expect(yottabits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert kb to Yb.', v => {
+      const yottabitsConversion = linearConversion(100000000000);
+      const kilobitsConversion = linearConversion(1000);
+
+      const [toBase, fromBase] = [
+        kilobitsConversion[0],
+        yottabitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Yb"] as const;
+      const conversionCandidate = [v, "kb"] as const;
+
+      expect(information["Yb"](conversionCandidate)).toEqual(expected);
+      expect(yottabits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Mb to Yb.', v => {
+      const yottabitsConversion = linearConversion(100000000000);
+      const megabitsConversion = linearConversion(100000);
+
+      const [toBase, fromBase] = [
+        megabitsConversion[0],
+        yottabitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Yb"] as const;
+      const conversionCandidate = [v, "Mb"] as const;
+
+      expect(information["Yb"](conversionCandidate)).toEqual(expected);
+      expect(yottabits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Gb to Yb.', v => {
+      const yottabitsConversion = linearConversion(100000000000);
+      const gigabitsConversion = linearConversion(1000000);
+
+      const [toBase, fromBase] = [
+        gigabitsConversion[0],
+        yottabitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Yb"] as const;
+      const conversionCandidate = [v, "Gb"] as const;
+
+      expect(information["Yb"](conversionCandidate)).toEqual(expected);
+      expect(yottabits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Tb to Yb.', v => {
+      const yottabitsConversion = linearConversion(100000000000);
+      const terabitsConversion = linearConversion(10000000);
+
+      const [toBase, fromBase] = [
+        terabitsConversion[0],
+        yottabitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Yb"] as const;
+      const conversionCandidate = [v, "Tb"] as const;
+
+      expect(information["Yb"](conversionCandidate)).toEqual(expected);
+      expect(yottabits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Pb to Yb.', v => {
+      const yottabitsConversion = linearConversion(100000000000);
+      const petabitsConversion = linearConversion(100000000);
+
+      const [toBase, fromBase] = [
+        petabitsConversion[0],
+        yottabitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Yb"] as const;
+      const conversionCandidate = [v, "Pb"] as const;
+
+      expect(information["Yb"](conversionCandidate)).toEqual(expected);
+      expect(yottabits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Eb to Yb.', v => {
+      const yottabitsConversion = linearConversion(100000000000);
+      const exabitsConversion = linearConversion(1000000000);
+
+      const [toBase, fromBase] = [
+        exabitsConversion[0],
+        yottabitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Yb"] as const;
+      const conversionCandidate = [v, "Eb"] as const;
+
+      expect(information["Yb"](conversionCandidate)).toEqual(expected);
+      expect(yottabits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Zb to Yb.', v => {
+      const yottabitsConversion = linearConversion(100000000000);
+      const zettabitsConversion = linearConversion(10000000000);
+
+      const [toBase, fromBase] = [
+        zettabitsConversion[0],
+        yottabitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Yb"] as const;
+      const conversionCandidate = [v, "Zb"] as const;
+
+      expect(information["Yb"](conversionCandidate)).toEqual(expected);
+      expect(yottabits(conversionCandidate)).toEqual(expected);
+    });
+
+
+
+    it.each([1, 10, 100])('should convert Kib to Yb.', v => {
+      const yottabitsConversion = linearConversion(100000000000);
+      const kibibitsConversion = linearConversion(1024);
+
+      const [toBase, fromBase] = [
+        kibibitsConversion[0],
+        yottabitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Yb"] as const;
+      const conversionCandidate = [v, "Kib"] as const;
+
+      expect(information["Yb"](conversionCandidate)).toEqual(expected);
+      expect(yottabits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert KB to Yb.', v => {
+      const yottabitsConversion = linearConversion(100000000000);
+      const kilobytesConversion = linearConversion(8192);
+
+      const [toBase, fromBase] = [
+        kilobytesConversion[0],
+        yottabitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Yb"] as const;
+      const conversionCandidate = [v, "KB"] as const;
+
+      expect(information["Yb"](conversionCandidate)).toEqual(expected);
+      expect(yottabits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Mib to Yb.', v => {
+      const yottabitsConversion = linearConversion(100000000000);
+      const mebibitsConversion = linearConversion(102400);
+
+      const [toBase, fromBase] = [
+        mebibitsConversion[0],
+        yottabitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Yb"] as const;
+      const conversionCandidate = [v, "Mib"] as const;
+
+      expect(information["Yb"](conversionCandidate)).toEqual(expected);
+      expect(yottabits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert MB to Yb.', v => {
+      const yottabitsConversion = linearConversion(100000000000);
+      const megabytesConversion = linearConversion(819200);
+
+      const [toBase, fromBase] = [
+        megabytesConversion[0],
+        yottabitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Yb"] as const;
+      const conversionCandidate = [v, "MB"] as const;
+
+      expect(information["Yb"](conversionCandidate)).toEqual(expected);
+      expect(yottabits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Gib to Yb.', v => {
+      const yottabitsConversion = linearConversion(100000000000);
+      const gibibitsConversion = linearConversion(1024000);
+
+      const [toBase, fromBase] = [
+        gibibitsConversion[0],
+        yottabitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Yb"] as const;
+      const conversionCandidate = [v, "Gib"] as const;
+
+      expect(information["Yb"](conversionCandidate)).toEqual(expected);
+      expect(yottabits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert GB to Yb.', v => {
+      const yottabitsConversion = linearConversion(100000000000);
+      const gigabytesConversion = linearConversion(8192000);
+
+      const [toBase, fromBase] = [
+        gigabytesConversion[0],
+        yottabitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Yb"] as const;
+      const conversionCandidate = [v, "GB"] as const;
+
+      expect(information["Yb"](conversionCandidate)).toEqual(expected);
+      expect(yottabits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Tib to Yb.', v => {
+      const yottabitsConversion = linearConversion(100000000000);
+      const tebibitsConversion = linearConversion(10240000);
+
+      const [toBase, fromBase] = [
+        tebibitsConversion[0],
+        yottabitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Yb"] as const;
+      const conversionCandidate = [v, "Tib"] as const;
+
+      expect(information["Yb"](conversionCandidate)).toEqual(expected);
+      expect(yottabits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert TB to Yb.', v => {
+      const yottabitsConversion = linearConversion(100000000000);
+      const terabytesConversion = linearConversion(81920000);
+
+      const [toBase, fromBase] = [
+        terabytesConversion[0],
+        yottabitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Yb"] as const;
+      const conversionCandidate = [v, "TB"] as const;
+
+      expect(information["Yb"](conversionCandidate)).toEqual(expected);
+      expect(yottabits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Pib to Yb.', v => {
+      const yottabitsConversion = linearConversion(100000000000);
+      const pebibitsConversion = linearConversion(102400000);
+
+      const [toBase, fromBase] = [
+        pebibitsConversion[0],
+        yottabitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Yb"] as const;
+      const conversionCandidate = [v, "Pib"] as const;
+
+      expect(information["Yb"](conversionCandidate)).toEqual(expected);
+      expect(yottabits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert PB to Yb.', v => {
+      const yottabitsConversion = linearConversion(100000000000);
+      const petabytesConversion = linearConversion(819200000);
+
+      const [toBase, fromBase] = [
+        petabytesConversion[0],
+        yottabitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Yb"] as const;
+      const conversionCandidate = [v, "PB"] as const;
+
+      expect(information["Yb"](conversionCandidate)).toEqual(expected);
+      expect(yottabits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Eib to Yb.', v => {
+      const yottabitsConversion = linearConversion(100000000000);
+      const exbibitsConversion = linearConversion(1024000000);
+
+      const [toBase, fromBase] = [
+        exbibitsConversion[0],
+        yottabitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Yb"] as const;
+      const conversionCandidate = [v, "Eib"] as const;
+
+      expect(information["Yb"](conversionCandidate)).toEqual(expected);
+      expect(yottabits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert EB to Yb.', v => {
+      const yottabitsConversion = linearConversion(100000000000);
+      const exabytesConversion = linearConversion(8192000000);
+
+      const [toBase, fromBase] = [
+        exabytesConversion[0],
+        yottabitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Yb"] as const;
+      const conversionCandidate = [v, "EB"] as const;
+
+      expect(information["Yb"](conversionCandidate)).toEqual(expected);
+      expect(yottabits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Zib to Yb.', v => {
+      const yottabitsConversion = linearConversion(100000000000);
+      const zebibitsConversion = linearConversion(10240000000);
+
+      const [toBase, fromBase] = [
+        zebibitsConversion[0],
+        yottabitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Yb"] as const;
+      const conversionCandidate = [v, "Zib"] as const;
+
+      expect(information["Yb"](conversionCandidate)).toEqual(expected);
+      expect(yottabits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert ZB to Yb.', v => {
+      const yottabitsConversion = linearConversion(100000000000);
+      const zettabytesConversion = linearConversion(81920000000);
+
+      const [toBase, fromBase] = [
+        zettabytesConversion[0],
+        yottabitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Yb"] as const;
+      const conversionCandidate = [v, "ZB"] as const;
+
+      expect(information["Yb"](conversionCandidate)).toEqual(expected);
+      expect(yottabits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Yib to Yb.', v => {
+      const yottabitsConversion = linearConversion(100000000000);
+      const yobibitsConversion = linearConversion(102400000000);
+
+      const [toBase, fromBase] = [
+        yobibitsConversion[0],
+        yottabitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Yb"] as const;
+      const conversionCandidate = [v, "Yib"] as const;
+
+      expect(information["Yb"](conversionCandidate)).toEqual(expected);
+      expect(yottabits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert YB to Yb.', v => {
+      const yottabitsConversion = linearConversion(100000000000);
+      const yottabytesConversion = linearConversion(819200000000);
+
+      const [toBase, fromBase] = [
+        yottabytesConversion[0],
+        yottabitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Yb"] as const;
+      const conversionCandidate = [v, "YB"] as const;
+
+      expect(information["Yb"](conversionCandidate)).toEqual(expected);
+      expect(yottabits(conversionCandidate)).toEqual(expected);
+    });
+  });
+
+
+  describe('Kib', () => {
+    it.each([1, 10, 100])('should yield a Kib measurement when given a number.', v => {
+      expect(information["Kib"](v)).toEqual([v, "Kib"]);
+      expect(kibibits(v)).toEqual([v, "Kib"]);
+    });
+
+    it.each([1, 10, 100])('should convert b to Kib.', v => {
+      const kibibitsConversion = linearConversion(1024);
+      const bitsConversion = linearConversion(1);
+
+      const [toBase, fromBase] = [
+        bitsConversion[0],
+        kibibitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Kib"] as const;
+      const conversionCandidate = [v, "b"] as const;
+
+      expect(information["Kib"](conversionCandidate)).toEqual(expected);
+      expect(kibibits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert B to Kib.', v => {
+      const kibibitsConversion = linearConversion(1024);
+      const bytesConversion = linearConversion(8);
+
+      const [toBase, fromBase] = [
+        bytesConversion[0],
+        kibibitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Kib"] as const;
+      const conversionCandidate = [v, "B"] as const;
+
+      expect(information["Kib"](conversionCandidate)).toEqual(expected);
+      expect(kibibits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert kb to Kib.', v => {
+      const kibibitsConversion = linearConversion(1024);
+      const kilobitsConversion = linearConversion(1000);
+
+      const [toBase, fromBase] = [
+        kilobitsConversion[0],
+        kibibitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Kib"] as const;
+      const conversionCandidate = [v, "kb"] as const;
+
+      expect(information["Kib"](conversionCandidate)).toEqual(expected);
+      expect(kibibits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Mb to Kib.', v => {
+      const kibibitsConversion = linearConversion(1024);
+      const megabitsConversion = linearConversion(100000);
+
+      const [toBase, fromBase] = [
+        megabitsConversion[0],
+        kibibitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Kib"] as const;
+      const conversionCandidate = [v, "Mb"] as const;
+
+      expect(information["Kib"](conversionCandidate)).toEqual(expected);
+      expect(kibibits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Gb to Kib.', v => {
+      const kibibitsConversion = linearConversion(1024);
+      const gigabitsConversion = linearConversion(1000000);
+
+      const [toBase, fromBase] = [
+        gigabitsConversion[0],
+        kibibitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Kib"] as const;
+      const conversionCandidate = [v, "Gb"] as const;
+
+      expect(information["Kib"](conversionCandidate)).toEqual(expected);
+      expect(kibibits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Tb to Kib.', v => {
+      const kibibitsConversion = linearConversion(1024);
+      const terabitsConversion = linearConversion(10000000);
+
+      const [toBase, fromBase] = [
+        terabitsConversion[0],
+        kibibitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Kib"] as const;
+      const conversionCandidate = [v, "Tb"] as const;
+
+      expect(information["Kib"](conversionCandidate)).toEqual(expected);
+      expect(kibibits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Pb to Kib.', v => {
+      const kibibitsConversion = linearConversion(1024);
+      const petabitsConversion = linearConversion(100000000);
+
+      const [toBase, fromBase] = [
+        petabitsConversion[0],
+        kibibitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Kib"] as const;
+      const conversionCandidate = [v, "Pb"] as const;
+
+      expect(information["Kib"](conversionCandidate)).toEqual(expected);
+      expect(kibibits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Eb to Kib.', v => {
+      const kibibitsConversion = linearConversion(1024);
+      const exabitsConversion = linearConversion(1000000000);
+
+      const [toBase, fromBase] = [
+        exabitsConversion[0],
+        kibibitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Kib"] as const;
+      const conversionCandidate = [v, "Eb"] as const;
+
+      expect(information["Kib"](conversionCandidate)).toEqual(expected);
+      expect(kibibits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Zb to Kib.', v => {
+      const kibibitsConversion = linearConversion(1024);
+      const zettabitsConversion = linearConversion(10000000000);
+
+      const [toBase, fromBase] = [
+        zettabitsConversion[0],
+        kibibitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Kib"] as const;
+      const conversionCandidate = [v, "Zb"] as const;
+
+      expect(information["Kib"](conversionCandidate)).toEqual(expected);
+      expect(kibibits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Yb to Kib.', v => {
+      const kibibitsConversion = linearConversion(1024);
+      const yottabitsConversion = linearConversion(100000000000);
+
+      const [toBase, fromBase] = [
+        yottabitsConversion[0],
+        kibibitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Kib"] as const;
+      const conversionCandidate = [v, "Yb"] as const;
+
+      expect(information["Kib"](conversionCandidate)).toEqual(expected);
+      expect(kibibits(conversionCandidate)).toEqual(expected);
+    });
+
+
+
+    it.each([1, 10, 100])('should convert KB to Kib.', v => {
+      const kibibitsConversion = linearConversion(1024);
+      const kilobytesConversion = linearConversion(8192);
+
+      const [toBase, fromBase] = [
+        kilobytesConversion[0],
+        kibibitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Kib"] as const;
+      const conversionCandidate = [v, "KB"] as const;
+
+      expect(information["Kib"](conversionCandidate)).toEqual(expected);
+      expect(kibibits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Mib to Kib.', v => {
+      const kibibitsConversion = linearConversion(1024);
+      const mebibitsConversion = linearConversion(102400);
+
+      const [toBase, fromBase] = [
+        mebibitsConversion[0],
+        kibibitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Kib"] as const;
+      const conversionCandidate = [v, "Mib"] as const;
+
+      expect(information["Kib"](conversionCandidate)).toEqual(expected);
+      expect(kibibits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert MB to Kib.', v => {
+      const kibibitsConversion = linearConversion(1024);
+      const megabytesConversion = linearConversion(819200);
+
+      const [toBase, fromBase] = [
+        megabytesConversion[0],
+        kibibitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Kib"] as const;
+      const conversionCandidate = [v, "MB"] as const;
+
+      expect(information["Kib"](conversionCandidate)).toEqual(expected);
+      expect(kibibits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Gib to Kib.', v => {
+      const kibibitsConversion = linearConversion(1024);
+      const gibibitsConversion = linearConversion(1024000);
+
+      const [toBase, fromBase] = [
+        gibibitsConversion[0],
+        kibibitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Kib"] as const;
+      const conversionCandidate = [v, "Gib"] as const;
+
+      expect(information["Kib"](conversionCandidate)).toEqual(expected);
+      expect(kibibits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert GB to Kib.', v => {
+      const kibibitsConversion = linearConversion(1024);
+      const gigabytesConversion = linearConversion(8192000);
+
+      const [toBase, fromBase] = [
+        gigabytesConversion[0],
+        kibibitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Kib"] as const;
+      const conversionCandidate = [v, "GB"] as const;
+
+      expect(information["Kib"](conversionCandidate)).toEqual(expected);
+      expect(kibibits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Tib to Kib.', v => {
+      const kibibitsConversion = linearConversion(1024);
+      const tebibitsConversion = linearConversion(10240000);
+
+      const [toBase, fromBase] = [
+        tebibitsConversion[0],
+        kibibitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Kib"] as const;
+      const conversionCandidate = [v, "Tib"] as const;
+
+      expect(information["Kib"](conversionCandidate)).toEqual(expected);
+      expect(kibibits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert TB to Kib.', v => {
+      const kibibitsConversion = linearConversion(1024);
+      const terabytesConversion = linearConversion(81920000);
+
+      const [toBase, fromBase] = [
+        terabytesConversion[0],
+        kibibitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Kib"] as const;
+      const conversionCandidate = [v, "TB"] as const;
+
+      expect(information["Kib"](conversionCandidate)).toEqual(expected);
+      expect(kibibits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Pib to Kib.', v => {
+      const kibibitsConversion = linearConversion(1024);
+      const pebibitsConversion = linearConversion(102400000);
+
+      const [toBase, fromBase] = [
+        pebibitsConversion[0],
+        kibibitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Kib"] as const;
+      const conversionCandidate = [v, "Pib"] as const;
+
+      expect(information["Kib"](conversionCandidate)).toEqual(expected);
+      expect(kibibits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert PB to Kib.', v => {
+      const kibibitsConversion = linearConversion(1024);
+      const petabytesConversion = linearConversion(819200000);
+
+      const [toBase, fromBase] = [
+        petabytesConversion[0],
+        kibibitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Kib"] as const;
+      const conversionCandidate = [v, "PB"] as const;
+
+      expect(information["Kib"](conversionCandidate)).toEqual(expected);
+      expect(kibibits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Eib to Kib.', v => {
+      const kibibitsConversion = linearConversion(1024);
+      const exbibitsConversion = linearConversion(1024000000);
+
+      const [toBase, fromBase] = [
+        exbibitsConversion[0],
+        kibibitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Kib"] as const;
+      const conversionCandidate = [v, "Eib"] as const;
+
+      expect(information["Kib"](conversionCandidate)).toEqual(expected);
+      expect(kibibits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert EB to Kib.', v => {
+      const kibibitsConversion = linearConversion(1024);
+      const exabytesConversion = linearConversion(8192000000);
+
+      const [toBase, fromBase] = [
+        exabytesConversion[0],
+        kibibitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Kib"] as const;
+      const conversionCandidate = [v, "EB"] as const;
+
+      expect(information["Kib"](conversionCandidate)).toEqual(expected);
+      expect(kibibits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Zib to Kib.', v => {
+      const kibibitsConversion = linearConversion(1024);
+      const zebibitsConversion = linearConversion(10240000000);
+
+      const [toBase, fromBase] = [
+        zebibitsConversion[0],
+        kibibitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Kib"] as const;
+      const conversionCandidate = [v, "Zib"] as const;
+
+      expect(information["Kib"](conversionCandidate)).toEqual(expected);
+      expect(kibibits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert ZB to Kib.', v => {
+      const kibibitsConversion = linearConversion(1024);
+      const zettabytesConversion = linearConversion(81920000000);
+
+      const [toBase, fromBase] = [
+        zettabytesConversion[0],
+        kibibitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Kib"] as const;
+      const conversionCandidate = [v, "ZB"] as const;
+
+      expect(information["Kib"](conversionCandidate)).toEqual(expected);
+      expect(kibibits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Yib to Kib.', v => {
+      const kibibitsConversion = linearConversion(1024);
+      const yobibitsConversion = linearConversion(102400000000);
+
+      const [toBase, fromBase] = [
+        yobibitsConversion[0],
+        kibibitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Kib"] as const;
+      const conversionCandidate = [v, "Yib"] as const;
+
+      expect(information["Kib"](conversionCandidate)).toEqual(expected);
+      expect(kibibits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert YB to Kib.', v => {
+      const kibibitsConversion = linearConversion(1024);
+      const yottabytesConversion = linearConversion(819200000000);
+
+      const [toBase, fromBase] = [
+        yottabytesConversion[0],
+        kibibitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Kib"] as const;
+      const conversionCandidate = [v, "YB"] as const;
+
+      expect(information["Kib"](conversionCandidate)).toEqual(expected);
+      expect(kibibits(conversionCandidate)).toEqual(expected);
+    });
+  });
+
+
+  describe('KB', () => {
+    it.each([1, 10, 100])('should yield a KB measurement when given a number.', v => {
+      expect(information["KB"](v)).toEqual([v, "KB"]);
+      expect(kilobytes(v)).toEqual([v, "KB"]);
+    });
+
+    it.each([1, 10, 100])('should convert b to KB.', v => {
+      const kilobytesConversion = linearConversion(8192);
+      const bitsConversion = linearConversion(1);
+
+      const [toBase, fromBase] = [
+        bitsConversion[0],
+        kilobytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "KB"] as const;
+      const conversionCandidate = [v, "b"] as const;
+
+      expect(information["KB"](conversionCandidate)).toEqual(expected);
+      expect(kilobytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert B to KB.', v => {
+      const kilobytesConversion = linearConversion(8192);
+      const bytesConversion = linearConversion(8);
+
+      const [toBase, fromBase] = [
+        bytesConversion[0],
+        kilobytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "KB"] as const;
+      const conversionCandidate = [v, "B"] as const;
+
+      expect(information["KB"](conversionCandidate)).toEqual(expected);
+      expect(kilobytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert kb to KB.', v => {
+      const kilobytesConversion = linearConversion(8192);
+      const kilobitsConversion = linearConversion(1000);
+
+      const [toBase, fromBase] = [
+        kilobitsConversion[0],
+        kilobytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "KB"] as const;
+      const conversionCandidate = [v, "kb"] as const;
+
+      expect(information["KB"](conversionCandidate)).toEqual(expected);
+      expect(kilobytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Mb to KB.', v => {
+      const kilobytesConversion = linearConversion(8192);
+      const megabitsConversion = linearConversion(100000);
+
+      const [toBase, fromBase] = [
+        megabitsConversion[0],
+        kilobytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "KB"] as const;
+      const conversionCandidate = [v, "Mb"] as const;
+
+      expect(information["KB"](conversionCandidate)).toEqual(expected);
+      expect(kilobytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Gb to KB.', v => {
+      const kilobytesConversion = linearConversion(8192);
+      const gigabitsConversion = linearConversion(1000000);
+
+      const [toBase, fromBase] = [
+        gigabitsConversion[0],
+        kilobytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "KB"] as const;
+      const conversionCandidate = [v, "Gb"] as const;
+
+      expect(information["KB"](conversionCandidate)).toEqual(expected);
+      expect(kilobytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Tb to KB.', v => {
+      const kilobytesConversion = linearConversion(8192);
+      const terabitsConversion = linearConversion(10000000);
+
+      const [toBase, fromBase] = [
+        terabitsConversion[0],
+        kilobytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "KB"] as const;
+      const conversionCandidate = [v, "Tb"] as const;
+
+      expect(information["KB"](conversionCandidate)).toEqual(expected);
+      expect(kilobytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Pb to KB.', v => {
+      const kilobytesConversion = linearConversion(8192);
+      const petabitsConversion = linearConversion(100000000);
+
+      const [toBase, fromBase] = [
+        petabitsConversion[0],
+        kilobytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "KB"] as const;
+      const conversionCandidate = [v, "Pb"] as const;
+
+      expect(information["KB"](conversionCandidate)).toEqual(expected);
+      expect(kilobytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Eb to KB.', v => {
+      const kilobytesConversion = linearConversion(8192);
+      const exabitsConversion = linearConversion(1000000000);
+
+      const [toBase, fromBase] = [
+        exabitsConversion[0],
+        kilobytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "KB"] as const;
+      const conversionCandidate = [v, "Eb"] as const;
+
+      expect(information["KB"](conversionCandidate)).toEqual(expected);
+      expect(kilobytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Zb to KB.', v => {
+      const kilobytesConversion = linearConversion(8192);
+      const zettabitsConversion = linearConversion(10000000000);
+
+      const [toBase, fromBase] = [
+        zettabitsConversion[0],
+        kilobytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "KB"] as const;
+      const conversionCandidate = [v, "Zb"] as const;
+
+      expect(information["KB"](conversionCandidate)).toEqual(expected);
+      expect(kilobytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Yb to KB.', v => {
+      const kilobytesConversion = linearConversion(8192);
+      const yottabitsConversion = linearConversion(100000000000);
+
+      const [toBase, fromBase] = [
+        yottabitsConversion[0],
+        kilobytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "KB"] as const;
+      const conversionCandidate = [v, "Yb"] as const;
+
+      expect(information["KB"](conversionCandidate)).toEqual(expected);
+      expect(kilobytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Kib to KB.', v => {
+      const kilobytesConversion = linearConversion(8192);
+      const kibibitsConversion = linearConversion(1024);
+
+      const [toBase, fromBase] = [
+        kibibitsConversion[0],
+        kilobytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "KB"] as const;
+      const conversionCandidate = [v, "Kib"] as const;
+
+      expect(information["KB"](conversionCandidate)).toEqual(expected);
+      expect(kilobytes(conversionCandidate)).toEqual(expected);
+    });
+
+
+
+    it.each([1, 10, 100])('should convert Mib to KB.', v => {
+      const kilobytesConversion = linearConversion(8192);
+      const mebibitsConversion = linearConversion(102400);
+
+      const [toBase, fromBase] = [
+        mebibitsConversion[0],
+        kilobytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "KB"] as const;
+      const conversionCandidate = [v, "Mib"] as const;
+
+      expect(information["KB"](conversionCandidate)).toEqual(expected);
+      expect(kilobytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert MB to KB.', v => {
+      const kilobytesConversion = linearConversion(8192);
+      const megabytesConversion = linearConversion(819200);
+
+      const [toBase, fromBase] = [
+        megabytesConversion[0],
+        kilobytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "KB"] as const;
+      const conversionCandidate = [v, "MB"] as const;
+
+      expect(information["KB"](conversionCandidate)).toEqual(expected);
+      expect(kilobytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Gib to KB.', v => {
+      const kilobytesConversion = linearConversion(8192);
+      const gibibitsConversion = linearConversion(1024000);
+
+      const [toBase, fromBase] = [
+        gibibitsConversion[0],
+        kilobytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "KB"] as const;
+      const conversionCandidate = [v, "Gib"] as const;
+
+      expect(information["KB"](conversionCandidate)).toEqual(expected);
+      expect(kilobytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert GB to KB.', v => {
+      const kilobytesConversion = linearConversion(8192);
+      const gigabytesConversion = linearConversion(8192000);
+
+      const [toBase, fromBase] = [
+        gigabytesConversion[0],
+        kilobytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "KB"] as const;
+      const conversionCandidate = [v, "GB"] as const;
+
+      expect(information["KB"](conversionCandidate)).toEqual(expected);
+      expect(kilobytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Tib to KB.', v => {
+      const kilobytesConversion = linearConversion(8192);
+      const tebibitsConversion = linearConversion(10240000);
+
+      const [toBase, fromBase] = [
+        tebibitsConversion[0],
+        kilobytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "KB"] as const;
+      const conversionCandidate = [v, "Tib"] as const;
+
+      expect(information["KB"](conversionCandidate)).toEqual(expected);
+      expect(kilobytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert TB to KB.', v => {
+      const kilobytesConversion = linearConversion(8192);
+      const terabytesConversion = linearConversion(81920000);
+
+      const [toBase, fromBase] = [
+        terabytesConversion[0],
+        kilobytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "KB"] as const;
+      const conversionCandidate = [v, "TB"] as const;
+
+      expect(information["KB"](conversionCandidate)).toEqual(expected);
+      expect(kilobytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Pib to KB.', v => {
+      const kilobytesConversion = linearConversion(8192);
+      const pebibitsConversion = linearConversion(102400000);
+
+      const [toBase, fromBase] = [
+        pebibitsConversion[0],
+        kilobytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "KB"] as const;
+      const conversionCandidate = [v, "Pib"] as const;
+
+      expect(information["KB"](conversionCandidate)).toEqual(expected);
+      expect(kilobytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert PB to KB.', v => {
+      const kilobytesConversion = linearConversion(8192);
+      const petabytesConversion = linearConversion(819200000);
+
+      const [toBase, fromBase] = [
+        petabytesConversion[0],
+        kilobytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "KB"] as const;
+      const conversionCandidate = [v, "PB"] as const;
+
+      expect(information["KB"](conversionCandidate)).toEqual(expected);
+      expect(kilobytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Eib to KB.', v => {
+      const kilobytesConversion = linearConversion(8192);
+      const exbibitsConversion = linearConversion(1024000000);
+
+      const [toBase, fromBase] = [
+        exbibitsConversion[0],
+        kilobytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "KB"] as const;
+      const conversionCandidate = [v, "Eib"] as const;
+
+      expect(information["KB"](conversionCandidate)).toEqual(expected);
+      expect(kilobytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert EB to KB.', v => {
+      const kilobytesConversion = linearConversion(8192);
+      const exabytesConversion = linearConversion(8192000000);
+
+      const [toBase, fromBase] = [
+        exabytesConversion[0],
+        kilobytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "KB"] as const;
+      const conversionCandidate = [v, "EB"] as const;
+
+      expect(information["KB"](conversionCandidate)).toEqual(expected);
+      expect(kilobytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Zib to KB.', v => {
+      const kilobytesConversion = linearConversion(8192);
+      const zebibitsConversion = linearConversion(10240000000);
+
+      const [toBase, fromBase] = [
+        zebibitsConversion[0],
+        kilobytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "KB"] as const;
+      const conversionCandidate = [v, "Zib"] as const;
+
+      expect(information["KB"](conversionCandidate)).toEqual(expected);
+      expect(kilobytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert ZB to KB.', v => {
+      const kilobytesConversion = linearConversion(8192);
+      const zettabytesConversion = linearConversion(81920000000);
+
+      const [toBase, fromBase] = [
+        zettabytesConversion[0],
+        kilobytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "KB"] as const;
+      const conversionCandidate = [v, "ZB"] as const;
+
+      expect(information["KB"](conversionCandidate)).toEqual(expected);
+      expect(kilobytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Yib to KB.', v => {
+      const kilobytesConversion = linearConversion(8192);
+      const yobibitsConversion = linearConversion(102400000000);
+
+      const [toBase, fromBase] = [
+        yobibitsConversion[0],
+        kilobytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "KB"] as const;
+      const conversionCandidate = [v, "Yib"] as const;
+
+      expect(information["KB"](conversionCandidate)).toEqual(expected);
+      expect(kilobytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert YB to KB.', v => {
+      const kilobytesConversion = linearConversion(8192);
+      const yottabytesConversion = linearConversion(819200000000);
+
+      const [toBase, fromBase] = [
+        yottabytesConversion[0],
+        kilobytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "KB"] as const;
+      const conversionCandidate = [v, "YB"] as const;
+
+      expect(information["KB"](conversionCandidate)).toEqual(expected);
+      expect(kilobytes(conversionCandidate)).toEqual(expected);
+    });
+  });
+
+
+  describe('Mib', () => {
+    it.each([1, 10, 100])('should yield a Mib measurement when given a number.', v => {
+      expect(information["Mib"](v)).toEqual([v, "Mib"]);
+      expect(mebibits(v)).toEqual([v, "Mib"]);
+    });
+
+    it.each([1, 10, 100])('should convert b to Mib.', v => {
+      const mebibitsConversion = linearConversion(102400);
+      const bitsConversion = linearConversion(1);
+
+      const [toBase, fromBase] = [
+        bitsConversion[0],
+        mebibitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Mib"] as const;
+      const conversionCandidate = [v, "b"] as const;
+
+      expect(information["Mib"](conversionCandidate)).toEqual(expected);
+      expect(mebibits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert B to Mib.', v => {
+      const mebibitsConversion = linearConversion(102400);
+      const bytesConversion = linearConversion(8);
+
+      const [toBase, fromBase] = [
+        bytesConversion[0],
+        mebibitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Mib"] as const;
+      const conversionCandidate = [v, "B"] as const;
+
+      expect(information["Mib"](conversionCandidate)).toEqual(expected);
+      expect(mebibits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert kb to Mib.', v => {
+      const mebibitsConversion = linearConversion(102400);
+      const kilobitsConversion = linearConversion(1000);
+
+      const [toBase, fromBase] = [
+        kilobitsConversion[0],
+        mebibitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Mib"] as const;
+      const conversionCandidate = [v, "kb"] as const;
+
+      expect(information["Mib"](conversionCandidate)).toEqual(expected);
+      expect(mebibits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Mb to Mib.', v => {
+      const mebibitsConversion = linearConversion(102400);
+      const megabitsConversion = linearConversion(100000);
+
+      const [toBase, fromBase] = [
+        megabitsConversion[0],
+        mebibitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Mib"] as const;
+      const conversionCandidate = [v, "Mb"] as const;
+
+      expect(information["Mib"](conversionCandidate)).toEqual(expected);
+      expect(mebibits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Gb to Mib.', v => {
+      const mebibitsConversion = linearConversion(102400);
+      const gigabitsConversion = linearConversion(1000000);
+
+      const [toBase, fromBase] = [
+        gigabitsConversion[0],
+        mebibitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Mib"] as const;
+      const conversionCandidate = [v, "Gb"] as const;
+
+      expect(information["Mib"](conversionCandidate)).toEqual(expected);
+      expect(mebibits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Tb to Mib.', v => {
+      const mebibitsConversion = linearConversion(102400);
+      const terabitsConversion = linearConversion(10000000);
+
+      const [toBase, fromBase] = [
+        terabitsConversion[0],
+        mebibitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Mib"] as const;
+      const conversionCandidate = [v, "Tb"] as const;
+
+      expect(information["Mib"](conversionCandidate)).toEqual(expected);
+      expect(mebibits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Pb to Mib.', v => {
+      const mebibitsConversion = linearConversion(102400);
+      const petabitsConversion = linearConversion(100000000);
+
+      const [toBase, fromBase] = [
+        petabitsConversion[0],
+        mebibitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Mib"] as const;
+      const conversionCandidate = [v, "Pb"] as const;
+
+      expect(information["Mib"](conversionCandidate)).toEqual(expected);
+      expect(mebibits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Eb to Mib.', v => {
+      const mebibitsConversion = linearConversion(102400);
+      const exabitsConversion = linearConversion(1000000000);
+
+      const [toBase, fromBase] = [
+        exabitsConversion[0],
+        mebibitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Mib"] as const;
+      const conversionCandidate = [v, "Eb"] as const;
+
+      expect(information["Mib"](conversionCandidate)).toEqual(expected);
+      expect(mebibits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Zb to Mib.', v => {
+      const mebibitsConversion = linearConversion(102400);
+      const zettabitsConversion = linearConversion(10000000000);
+
+      const [toBase, fromBase] = [
+        zettabitsConversion[0],
+        mebibitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Mib"] as const;
+      const conversionCandidate = [v, "Zb"] as const;
+
+      expect(information["Mib"](conversionCandidate)).toEqual(expected);
+      expect(mebibits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Yb to Mib.', v => {
+      const mebibitsConversion = linearConversion(102400);
+      const yottabitsConversion = linearConversion(100000000000);
+
+      const [toBase, fromBase] = [
+        yottabitsConversion[0],
+        mebibitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Mib"] as const;
+      const conversionCandidate = [v, "Yb"] as const;
+
+      expect(information["Mib"](conversionCandidate)).toEqual(expected);
+      expect(mebibits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Kib to Mib.', v => {
+      const mebibitsConversion = linearConversion(102400);
+      const kibibitsConversion = linearConversion(1024);
+
+      const [toBase, fromBase] = [
+        kibibitsConversion[0],
+        mebibitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Mib"] as const;
+      const conversionCandidate = [v, "Kib"] as const;
+
+      expect(information["Mib"](conversionCandidate)).toEqual(expected);
+      expect(mebibits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert KB to Mib.', v => {
+      const mebibitsConversion = linearConversion(102400);
+      const kilobytesConversion = linearConversion(8192);
+
+      const [toBase, fromBase] = [
+        kilobytesConversion[0],
+        mebibitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Mib"] as const;
+      const conversionCandidate = [v, "KB"] as const;
+
+      expect(information["Mib"](conversionCandidate)).toEqual(expected);
+      expect(mebibits(conversionCandidate)).toEqual(expected);
+    });
+
+
+
+    it.each([1, 10, 100])('should convert MB to Mib.', v => {
+      const mebibitsConversion = linearConversion(102400);
+      const megabytesConversion = linearConversion(819200);
+
+      const [toBase, fromBase] = [
+        megabytesConversion[0],
+        mebibitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Mib"] as const;
+      const conversionCandidate = [v, "MB"] as const;
+
+      expect(information["Mib"](conversionCandidate)).toEqual(expected);
+      expect(mebibits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Gib to Mib.', v => {
+      const mebibitsConversion = linearConversion(102400);
+      const gibibitsConversion = linearConversion(1024000);
+
+      const [toBase, fromBase] = [
+        gibibitsConversion[0],
+        mebibitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Mib"] as const;
+      const conversionCandidate = [v, "Gib"] as const;
+
+      expect(information["Mib"](conversionCandidate)).toEqual(expected);
+      expect(mebibits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert GB to Mib.', v => {
+      const mebibitsConversion = linearConversion(102400);
+      const gigabytesConversion = linearConversion(8192000);
+
+      const [toBase, fromBase] = [
+        gigabytesConversion[0],
+        mebibitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Mib"] as const;
+      const conversionCandidate = [v, "GB"] as const;
+
+      expect(information["Mib"](conversionCandidate)).toEqual(expected);
+      expect(mebibits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Tib to Mib.', v => {
+      const mebibitsConversion = linearConversion(102400);
+      const tebibitsConversion = linearConversion(10240000);
+
+      const [toBase, fromBase] = [
+        tebibitsConversion[0],
+        mebibitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Mib"] as const;
+      const conversionCandidate = [v, "Tib"] as const;
+
+      expect(information["Mib"](conversionCandidate)).toEqual(expected);
+      expect(mebibits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert TB to Mib.', v => {
+      const mebibitsConversion = linearConversion(102400);
+      const terabytesConversion = linearConversion(81920000);
+
+      const [toBase, fromBase] = [
+        terabytesConversion[0],
+        mebibitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Mib"] as const;
+      const conversionCandidate = [v, "TB"] as const;
+
+      expect(information["Mib"](conversionCandidate)).toEqual(expected);
+      expect(mebibits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Pib to Mib.', v => {
+      const mebibitsConversion = linearConversion(102400);
+      const pebibitsConversion = linearConversion(102400000);
+
+      const [toBase, fromBase] = [
+        pebibitsConversion[0],
+        mebibitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Mib"] as const;
+      const conversionCandidate = [v, "Pib"] as const;
+
+      expect(information["Mib"](conversionCandidate)).toEqual(expected);
+      expect(mebibits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert PB to Mib.', v => {
+      const mebibitsConversion = linearConversion(102400);
+      const petabytesConversion = linearConversion(819200000);
+
+      const [toBase, fromBase] = [
+        petabytesConversion[0],
+        mebibitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Mib"] as const;
+      const conversionCandidate = [v, "PB"] as const;
+
+      expect(information["Mib"](conversionCandidate)).toEqual(expected);
+      expect(mebibits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Eib to Mib.', v => {
+      const mebibitsConversion = linearConversion(102400);
+      const exbibitsConversion = linearConversion(1024000000);
+
+      const [toBase, fromBase] = [
+        exbibitsConversion[0],
+        mebibitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Mib"] as const;
+      const conversionCandidate = [v, "Eib"] as const;
+
+      expect(information["Mib"](conversionCandidate)).toEqual(expected);
+      expect(mebibits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert EB to Mib.', v => {
+      const mebibitsConversion = linearConversion(102400);
+      const exabytesConversion = linearConversion(8192000000);
+
+      const [toBase, fromBase] = [
+        exabytesConversion[0],
+        mebibitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Mib"] as const;
+      const conversionCandidate = [v, "EB"] as const;
+
+      expect(information["Mib"](conversionCandidate)).toEqual(expected);
+      expect(mebibits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Zib to Mib.', v => {
+      const mebibitsConversion = linearConversion(102400);
+      const zebibitsConversion = linearConversion(10240000000);
+
+      const [toBase, fromBase] = [
+        zebibitsConversion[0],
+        mebibitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Mib"] as const;
+      const conversionCandidate = [v, "Zib"] as const;
+
+      expect(information["Mib"](conversionCandidate)).toEqual(expected);
+      expect(mebibits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert ZB to Mib.', v => {
+      const mebibitsConversion = linearConversion(102400);
+      const zettabytesConversion = linearConversion(81920000000);
+
+      const [toBase, fromBase] = [
+        zettabytesConversion[0],
+        mebibitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Mib"] as const;
+      const conversionCandidate = [v, "ZB"] as const;
+
+      expect(information["Mib"](conversionCandidate)).toEqual(expected);
+      expect(mebibits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Yib to Mib.', v => {
+      const mebibitsConversion = linearConversion(102400);
+      const yobibitsConversion = linearConversion(102400000000);
+
+      const [toBase, fromBase] = [
+        yobibitsConversion[0],
+        mebibitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Mib"] as const;
+      const conversionCandidate = [v, "Yib"] as const;
+
+      expect(information["Mib"](conversionCandidate)).toEqual(expected);
+      expect(mebibits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert YB to Mib.', v => {
+      const mebibitsConversion = linearConversion(102400);
+      const yottabytesConversion = linearConversion(819200000000);
+
+      const [toBase, fromBase] = [
+        yottabytesConversion[0],
+        mebibitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Mib"] as const;
+      const conversionCandidate = [v, "YB"] as const;
+
+      expect(information["Mib"](conversionCandidate)).toEqual(expected);
+      expect(mebibits(conversionCandidate)).toEqual(expected);
+    });
+  });
+
+
+  describe('MB', () => {
+    it.each([1, 10, 100])('should yield a MB measurement when given a number.', v => {
+      expect(information["MB"](v)).toEqual([v, "MB"]);
+      expect(megabytes(v)).toEqual([v, "MB"]);
+    });
+
+    it.each([1, 10, 100])('should convert b to MB.', v => {
+      const megabytesConversion = linearConversion(819200);
+      const bitsConversion = linearConversion(1);
+
+      const [toBase, fromBase] = [
+        bitsConversion[0],
+        megabytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "MB"] as const;
+      const conversionCandidate = [v, "b"] as const;
+
+      expect(information["MB"](conversionCandidate)).toEqual(expected);
+      expect(megabytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert B to MB.', v => {
+      const megabytesConversion = linearConversion(819200);
+      const bytesConversion = linearConversion(8);
+
+      const [toBase, fromBase] = [
+        bytesConversion[0],
+        megabytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "MB"] as const;
+      const conversionCandidate = [v, "B"] as const;
+
+      expect(information["MB"](conversionCandidate)).toEqual(expected);
+      expect(megabytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert kb to MB.', v => {
+      const megabytesConversion = linearConversion(819200);
+      const kilobitsConversion = linearConversion(1000);
+
+      const [toBase, fromBase] = [
+        kilobitsConversion[0],
+        megabytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "MB"] as const;
+      const conversionCandidate = [v, "kb"] as const;
+
+      expect(information["MB"](conversionCandidate)).toEqual(expected);
+      expect(megabytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Mb to MB.', v => {
+      const megabytesConversion = linearConversion(819200);
+      const megabitsConversion = linearConversion(100000);
+
+      const [toBase, fromBase] = [
+        megabitsConversion[0],
+        megabytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "MB"] as const;
+      const conversionCandidate = [v, "Mb"] as const;
+
+      expect(information["MB"](conversionCandidate)).toEqual(expected);
+      expect(megabytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Gb to MB.', v => {
+      const megabytesConversion = linearConversion(819200);
+      const gigabitsConversion = linearConversion(1000000);
+
+      const [toBase, fromBase] = [
+        gigabitsConversion[0],
+        megabytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "MB"] as const;
+      const conversionCandidate = [v, "Gb"] as const;
+
+      expect(information["MB"](conversionCandidate)).toEqual(expected);
+      expect(megabytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Tb to MB.', v => {
+      const megabytesConversion = linearConversion(819200);
+      const terabitsConversion = linearConversion(10000000);
+
+      const [toBase, fromBase] = [
+        terabitsConversion[0],
+        megabytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "MB"] as const;
+      const conversionCandidate = [v, "Tb"] as const;
+
+      expect(information["MB"](conversionCandidate)).toEqual(expected);
+      expect(megabytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Pb to MB.', v => {
+      const megabytesConversion = linearConversion(819200);
+      const petabitsConversion = linearConversion(100000000);
+
+      const [toBase, fromBase] = [
+        petabitsConversion[0],
+        megabytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "MB"] as const;
+      const conversionCandidate = [v, "Pb"] as const;
+
+      expect(information["MB"](conversionCandidate)).toEqual(expected);
+      expect(megabytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Eb to MB.', v => {
+      const megabytesConversion = linearConversion(819200);
+      const exabitsConversion = linearConversion(1000000000);
+
+      const [toBase, fromBase] = [
+        exabitsConversion[0],
+        megabytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "MB"] as const;
+      const conversionCandidate = [v, "Eb"] as const;
+
+      expect(information["MB"](conversionCandidate)).toEqual(expected);
+      expect(megabytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Zb to MB.', v => {
+      const megabytesConversion = linearConversion(819200);
+      const zettabitsConversion = linearConversion(10000000000);
+
+      const [toBase, fromBase] = [
+        zettabitsConversion[0],
+        megabytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "MB"] as const;
+      const conversionCandidate = [v, "Zb"] as const;
+
+      expect(information["MB"](conversionCandidate)).toEqual(expected);
+      expect(megabytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Yb to MB.', v => {
+      const megabytesConversion = linearConversion(819200);
+      const yottabitsConversion = linearConversion(100000000000);
+
+      const [toBase, fromBase] = [
+        yottabitsConversion[0],
+        megabytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "MB"] as const;
+      const conversionCandidate = [v, "Yb"] as const;
+
+      expect(information["MB"](conversionCandidate)).toEqual(expected);
+      expect(megabytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Kib to MB.', v => {
+      const megabytesConversion = linearConversion(819200);
+      const kibibitsConversion = linearConversion(1024);
+
+      const [toBase, fromBase] = [
+        kibibitsConversion[0],
+        megabytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "MB"] as const;
+      const conversionCandidate = [v, "Kib"] as const;
+
+      expect(information["MB"](conversionCandidate)).toEqual(expected);
+      expect(megabytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert KB to MB.', v => {
+      const megabytesConversion = linearConversion(819200);
+      const kilobytesConversion = linearConversion(8192);
+
+      const [toBase, fromBase] = [
+        kilobytesConversion[0],
+        megabytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "MB"] as const;
+      const conversionCandidate = [v, "KB"] as const;
+
+      expect(information["MB"](conversionCandidate)).toEqual(expected);
+      expect(megabytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Mib to MB.', v => {
+      const megabytesConversion = linearConversion(819200);
+      const mebibitsConversion = linearConversion(102400);
+
+      const [toBase, fromBase] = [
+        mebibitsConversion[0],
+        megabytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "MB"] as const;
+      const conversionCandidate = [v, "Mib"] as const;
+
+      expect(information["MB"](conversionCandidate)).toEqual(expected);
+      expect(megabytes(conversionCandidate)).toEqual(expected);
+    });
+
+
+
+    it.each([1, 10, 100])('should convert Gib to MB.', v => {
+      const megabytesConversion = linearConversion(819200);
+      const gibibitsConversion = linearConversion(1024000);
+
+      const [toBase, fromBase] = [
+        gibibitsConversion[0],
+        megabytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "MB"] as const;
+      const conversionCandidate = [v, "Gib"] as const;
+
+      expect(information["MB"](conversionCandidate)).toEqual(expected);
+      expect(megabytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert GB to MB.', v => {
+      const megabytesConversion = linearConversion(819200);
+      const gigabytesConversion = linearConversion(8192000);
+
+      const [toBase, fromBase] = [
+        gigabytesConversion[0],
+        megabytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "MB"] as const;
+      const conversionCandidate = [v, "GB"] as const;
+
+      expect(information["MB"](conversionCandidate)).toEqual(expected);
+      expect(megabytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Tib to MB.', v => {
+      const megabytesConversion = linearConversion(819200);
+      const tebibitsConversion = linearConversion(10240000);
+
+      const [toBase, fromBase] = [
+        tebibitsConversion[0],
+        megabytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "MB"] as const;
+      const conversionCandidate = [v, "Tib"] as const;
+
+      expect(information["MB"](conversionCandidate)).toEqual(expected);
+      expect(megabytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert TB to MB.', v => {
+      const megabytesConversion = linearConversion(819200);
+      const terabytesConversion = linearConversion(81920000);
+
+      const [toBase, fromBase] = [
+        terabytesConversion[0],
+        megabytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "MB"] as const;
+      const conversionCandidate = [v, "TB"] as const;
+
+      expect(information["MB"](conversionCandidate)).toEqual(expected);
+      expect(megabytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Pib to MB.', v => {
+      const megabytesConversion = linearConversion(819200);
+      const pebibitsConversion = linearConversion(102400000);
+
+      const [toBase, fromBase] = [
+        pebibitsConversion[0],
+        megabytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "MB"] as const;
+      const conversionCandidate = [v, "Pib"] as const;
+
+      expect(information["MB"](conversionCandidate)).toEqual(expected);
+      expect(megabytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert PB to MB.', v => {
+      const megabytesConversion = linearConversion(819200);
+      const petabytesConversion = linearConversion(819200000);
+
+      const [toBase, fromBase] = [
+        petabytesConversion[0],
+        megabytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "MB"] as const;
+      const conversionCandidate = [v, "PB"] as const;
+
+      expect(information["MB"](conversionCandidate)).toEqual(expected);
+      expect(megabytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Eib to MB.', v => {
+      const megabytesConversion = linearConversion(819200);
+      const exbibitsConversion = linearConversion(1024000000);
+
+      const [toBase, fromBase] = [
+        exbibitsConversion[0],
+        megabytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "MB"] as const;
+      const conversionCandidate = [v, "Eib"] as const;
+
+      expect(information["MB"](conversionCandidate)).toEqual(expected);
+      expect(megabytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert EB to MB.', v => {
+      const megabytesConversion = linearConversion(819200);
+      const exabytesConversion = linearConversion(8192000000);
+
+      const [toBase, fromBase] = [
+        exabytesConversion[0],
+        megabytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "MB"] as const;
+      const conversionCandidate = [v, "EB"] as const;
+
+      expect(information["MB"](conversionCandidate)).toEqual(expected);
+      expect(megabytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Zib to MB.', v => {
+      const megabytesConversion = linearConversion(819200);
+      const zebibitsConversion = linearConversion(10240000000);
+
+      const [toBase, fromBase] = [
+        zebibitsConversion[0],
+        megabytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "MB"] as const;
+      const conversionCandidate = [v, "Zib"] as const;
+
+      expect(information["MB"](conversionCandidate)).toEqual(expected);
+      expect(megabytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert ZB to MB.', v => {
+      const megabytesConversion = linearConversion(819200);
+      const zettabytesConversion = linearConversion(81920000000);
+
+      const [toBase, fromBase] = [
+        zettabytesConversion[0],
+        megabytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "MB"] as const;
+      const conversionCandidate = [v, "ZB"] as const;
+
+      expect(information["MB"](conversionCandidate)).toEqual(expected);
+      expect(megabytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Yib to MB.', v => {
+      const megabytesConversion = linearConversion(819200);
+      const yobibitsConversion = linearConversion(102400000000);
+
+      const [toBase, fromBase] = [
+        yobibitsConversion[0],
+        megabytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "MB"] as const;
+      const conversionCandidate = [v, "Yib"] as const;
+
+      expect(information["MB"](conversionCandidate)).toEqual(expected);
+      expect(megabytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert YB to MB.', v => {
+      const megabytesConversion = linearConversion(819200);
+      const yottabytesConversion = linearConversion(819200000000);
+
+      const [toBase, fromBase] = [
+        yottabytesConversion[0],
+        megabytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "MB"] as const;
+      const conversionCandidate = [v, "YB"] as const;
+
+      expect(information["MB"](conversionCandidate)).toEqual(expected);
+      expect(megabytes(conversionCandidate)).toEqual(expected);
+    });
+  });
+
+
+  describe('Gib', () => {
+    it.each([1, 10, 100])('should yield a Gib measurement when given a number.', v => {
+      expect(information["Gib"](v)).toEqual([v, "Gib"]);
+      expect(gibibits(v)).toEqual([v, "Gib"]);
+    });
+
+    it.each([1, 10, 100])('should convert b to Gib.', v => {
+      const gibibitsConversion = linearConversion(1024000);
+      const bitsConversion = linearConversion(1);
+
+      const [toBase, fromBase] = [
+        bitsConversion[0],
+        gibibitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Gib"] as const;
+      const conversionCandidate = [v, "b"] as const;
+
+      expect(information["Gib"](conversionCandidate)).toEqual(expected);
+      expect(gibibits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert B to Gib.', v => {
+      const gibibitsConversion = linearConversion(1024000);
+      const bytesConversion = linearConversion(8);
+
+      const [toBase, fromBase] = [
+        bytesConversion[0],
+        gibibitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Gib"] as const;
+      const conversionCandidate = [v, "B"] as const;
+
+      expect(information["Gib"](conversionCandidate)).toEqual(expected);
+      expect(gibibits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert kb to Gib.', v => {
+      const gibibitsConversion = linearConversion(1024000);
+      const kilobitsConversion = linearConversion(1000);
+
+      const [toBase, fromBase] = [
+        kilobitsConversion[0],
+        gibibitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Gib"] as const;
+      const conversionCandidate = [v, "kb"] as const;
+
+      expect(information["Gib"](conversionCandidate)).toEqual(expected);
+      expect(gibibits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Mb to Gib.', v => {
+      const gibibitsConversion = linearConversion(1024000);
+      const megabitsConversion = linearConversion(100000);
+
+      const [toBase, fromBase] = [
+        megabitsConversion[0],
+        gibibitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Gib"] as const;
+      const conversionCandidate = [v, "Mb"] as const;
+
+      expect(information["Gib"](conversionCandidate)).toEqual(expected);
+      expect(gibibits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Gb to Gib.', v => {
+      const gibibitsConversion = linearConversion(1024000);
+      const gigabitsConversion = linearConversion(1000000);
+
+      const [toBase, fromBase] = [
+        gigabitsConversion[0],
+        gibibitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Gib"] as const;
+      const conversionCandidate = [v, "Gb"] as const;
+
+      expect(information["Gib"](conversionCandidate)).toEqual(expected);
+      expect(gibibits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Tb to Gib.', v => {
+      const gibibitsConversion = linearConversion(1024000);
+      const terabitsConversion = linearConversion(10000000);
+
+      const [toBase, fromBase] = [
+        terabitsConversion[0],
+        gibibitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Gib"] as const;
+      const conversionCandidate = [v, "Tb"] as const;
+
+      expect(information["Gib"](conversionCandidate)).toEqual(expected);
+      expect(gibibits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Pb to Gib.', v => {
+      const gibibitsConversion = linearConversion(1024000);
+      const petabitsConversion = linearConversion(100000000);
+
+      const [toBase, fromBase] = [
+        petabitsConversion[0],
+        gibibitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Gib"] as const;
+      const conversionCandidate = [v, "Pb"] as const;
+
+      expect(information["Gib"](conversionCandidate)).toEqual(expected);
+      expect(gibibits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Eb to Gib.', v => {
+      const gibibitsConversion = linearConversion(1024000);
+      const exabitsConversion = linearConversion(1000000000);
+
+      const [toBase, fromBase] = [
+        exabitsConversion[0],
+        gibibitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Gib"] as const;
+      const conversionCandidate = [v, "Eb"] as const;
+
+      expect(information["Gib"](conversionCandidate)).toEqual(expected);
+      expect(gibibits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Zb to Gib.', v => {
+      const gibibitsConversion = linearConversion(1024000);
+      const zettabitsConversion = linearConversion(10000000000);
+
+      const [toBase, fromBase] = [
+        zettabitsConversion[0],
+        gibibitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Gib"] as const;
+      const conversionCandidate = [v, "Zb"] as const;
+
+      expect(information["Gib"](conversionCandidate)).toEqual(expected);
+      expect(gibibits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Yb to Gib.', v => {
+      const gibibitsConversion = linearConversion(1024000);
+      const yottabitsConversion = linearConversion(100000000000);
+
+      const [toBase, fromBase] = [
+        yottabitsConversion[0],
+        gibibitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Gib"] as const;
+      const conversionCandidate = [v, "Yb"] as const;
+
+      expect(information["Gib"](conversionCandidate)).toEqual(expected);
+      expect(gibibits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Kib to Gib.', v => {
+      const gibibitsConversion = linearConversion(1024000);
+      const kibibitsConversion = linearConversion(1024);
+
+      const [toBase, fromBase] = [
+        kibibitsConversion[0],
+        gibibitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Gib"] as const;
+      const conversionCandidate = [v, "Kib"] as const;
+
+      expect(information["Gib"](conversionCandidate)).toEqual(expected);
+      expect(gibibits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert KB to Gib.', v => {
+      const gibibitsConversion = linearConversion(1024000);
+      const kilobytesConversion = linearConversion(8192);
+
+      const [toBase, fromBase] = [
+        kilobytesConversion[0],
+        gibibitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Gib"] as const;
+      const conversionCandidate = [v, "KB"] as const;
+
+      expect(information["Gib"](conversionCandidate)).toEqual(expected);
+      expect(gibibits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Mib to Gib.', v => {
+      const gibibitsConversion = linearConversion(1024000);
+      const mebibitsConversion = linearConversion(102400);
+
+      const [toBase, fromBase] = [
+        mebibitsConversion[0],
+        gibibitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Gib"] as const;
+      const conversionCandidate = [v, "Mib"] as const;
+
+      expect(information["Gib"](conversionCandidate)).toEqual(expected);
+      expect(gibibits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert MB to Gib.', v => {
+      const gibibitsConversion = linearConversion(1024000);
+      const megabytesConversion = linearConversion(819200);
+
+      const [toBase, fromBase] = [
+        megabytesConversion[0],
+        gibibitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Gib"] as const;
+      const conversionCandidate = [v, "MB"] as const;
+
+      expect(information["Gib"](conversionCandidate)).toEqual(expected);
+      expect(gibibits(conversionCandidate)).toEqual(expected);
+    });
+
+
+
+    it.each([1, 10, 100])('should convert GB to Gib.', v => {
+      const gibibitsConversion = linearConversion(1024000);
+      const gigabytesConversion = linearConversion(8192000);
+
+      const [toBase, fromBase] = [
+        gigabytesConversion[0],
+        gibibitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Gib"] as const;
+      const conversionCandidate = [v, "GB"] as const;
+
+      expect(information["Gib"](conversionCandidate)).toEqual(expected);
+      expect(gibibits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Tib to Gib.', v => {
+      const gibibitsConversion = linearConversion(1024000);
+      const tebibitsConversion = linearConversion(10240000);
+
+      const [toBase, fromBase] = [
+        tebibitsConversion[0],
+        gibibitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Gib"] as const;
+      const conversionCandidate = [v, "Tib"] as const;
+
+      expect(information["Gib"](conversionCandidate)).toEqual(expected);
+      expect(gibibits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert TB to Gib.', v => {
+      const gibibitsConversion = linearConversion(1024000);
+      const terabytesConversion = linearConversion(81920000);
+
+      const [toBase, fromBase] = [
+        terabytesConversion[0],
+        gibibitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Gib"] as const;
+      const conversionCandidate = [v, "TB"] as const;
+
+      expect(information["Gib"](conversionCandidate)).toEqual(expected);
+      expect(gibibits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Pib to Gib.', v => {
+      const gibibitsConversion = linearConversion(1024000);
+      const pebibitsConversion = linearConversion(102400000);
+
+      const [toBase, fromBase] = [
+        pebibitsConversion[0],
+        gibibitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Gib"] as const;
+      const conversionCandidate = [v, "Pib"] as const;
+
+      expect(information["Gib"](conversionCandidate)).toEqual(expected);
+      expect(gibibits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert PB to Gib.', v => {
+      const gibibitsConversion = linearConversion(1024000);
+      const petabytesConversion = linearConversion(819200000);
+
+      const [toBase, fromBase] = [
+        petabytesConversion[0],
+        gibibitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Gib"] as const;
+      const conversionCandidate = [v, "PB"] as const;
+
+      expect(information["Gib"](conversionCandidate)).toEqual(expected);
+      expect(gibibits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Eib to Gib.', v => {
+      const gibibitsConversion = linearConversion(1024000);
+      const exbibitsConversion = linearConversion(1024000000);
+
+      const [toBase, fromBase] = [
+        exbibitsConversion[0],
+        gibibitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Gib"] as const;
+      const conversionCandidate = [v, "Eib"] as const;
+
+      expect(information["Gib"](conversionCandidate)).toEqual(expected);
+      expect(gibibits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert EB to Gib.', v => {
+      const gibibitsConversion = linearConversion(1024000);
+      const exabytesConversion = linearConversion(8192000000);
+
+      const [toBase, fromBase] = [
+        exabytesConversion[0],
+        gibibitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Gib"] as const;
+      const conversionCandidate = [v, "EB"] as const;
+
+      expect(information["Gib"](conversionCandidate)).toEqual(expected);
+      expect(gibibits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Zib to Gib.', v => {
+      const gibibitsConversion = linearConversion(1024000);
+      const zebibitsConversion = linearConversion(10240000000);
+
+      const [toBase, fromBase] = [
+        zebibitsConversion[0],
+        gibibitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Gib"] as const;
+      const conversionCandidate = [v, "Zib"] as const;
+
+      expect(information["Gib"](conversionCandidate)).toEqual(expected);
+      expect(gibibits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert ZB to Gib.', v => {
+      const gibibitsConversion = linearConversion(1024000);
+      const zettabytesConversion = linearConversion(81920000000);
+
+      const [toBase, fromBase] = [
+        zettabytesConversion[0],
+        gibibitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Gib"] as const;
+      const conversionCandidate = [v, "ZB"] as const;
+
+      expect(information["Gib"](conversionCandidate)).toEqual(expected);
+      expect(gibibits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Yib to Gib.', v => {
+      const gibibitsConversion = linearConversion(1024000);
+      const yobibitsConversion = linearConversion(102400000000);
+
+      const [toBase, fromBase] = [
+        yobibitsConversion[0],
+        gibibitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Gib"] as const;
+      const conversionCandidate = [v, "Yib"] as const;
+
+      expect(information["Gib"](conversionCandidate)).toEqual(expected);
+      expect(gibibits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert YB to Gib.', v => {
+      const gibibitsConversion = linearConversion(1024000);
+      const yottabytesConversion = linearConversion(819200000000);
+
+      const [toBase, fromBase] = [
+        yottabytesConversion[0],
+        gibibitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Gib"] as const;
+      const conversionCandidate = [v, "YB"] as const;
+
+      expect(information["Gib"](conversionCandidate)).toEqual(expected);
+      expect(gibibits(conversionCandidate)).toEqual(expected);
+    });
+  });
+
+
+  describe('GB', () => {
+    it.each([1, 10, 100])('should yield a GB measurement when given a number.', v => {
+      expect(information["GB"](v)).toEqual([v, "GB"]);
+      expect(gigabytes(v)).toEqual([v, "GB"]);
+    });
+
+    it.each([1, 10, 100])('should convert b to GB.', v => {
+      const gigabytesConversion = linearConversion(8192000);
+      const bitsConversion = linearConversion(1);
+
+      const [toBase, fromBase] = [
+        bitsConversion[0],
+        gigabytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "GB"] as const;
+      const conversionCandidate = [v, "b"] as const;
+
+      expect(information["GB"](conversionCandidate)).toEqual(expected);
+      expect(gigabytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert B to GB.', v => {
+      const gigabytesConversion = linearConversion(8192000);
+      const bytesConversion = linearConversion(8);
+
+      const [toBase, fromBase] = [
+        bytesConversion[0],
+        gigabytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "GB"] as const;
+      const conversionCandidate = [v, "B"] as const;
+
+      expect(information["GB"](conversionCandidate)).toEqual(expected);
+      expect(gigabytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert kb to GB.', v => {
+      const gigabytesConversion = linearConversion(8192000);
+      const kilobitsConversion = linearConversion(1000);
+
+      const [toBase, fromBase] = [
+        kilobitsConversion[0],
+        gigabytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "GB"] as const;
+      const conversionCandidate = [v, "kb"] as const;
+
+      expect(information["GB"](conversionCandidate)).toEqual(expected);
+      expect(gigabytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Mb to GB.', v => {
+      const gigabytesConversion = linearConversion(8192000);
+      const megabitsConversion = linearConversion(100000);
+
+      const [toBase, fromBase] = [
+        megabitsConversion[0],
+        gigabytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "GB"] as const;
+      const conversionCandidate = [v, "Mb"] as const;
+
+      expect(information["GB"](conversionCandidate)).toEqual(expected);
+      expect(gigabytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Gb to GB.', v => {
+      const gigabytesConversion = linearConversion(8192000);
+      const gigabitsConversion = linearConversion(1000000);
+
+      const [toBase, fromBase] = [
+        gigabitsConversion[0],
+        gigabytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "GB"] as const;
+      const conversionCandidate = [v, "Gb"] as const;
+
+      expect(information["GB"](conversionCandidate)).toEqual(expected);
+      expect(gigabytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Tb to GB.', v => {
+      const gigabytesConversion = linearConversion(8192000);
+      const terabitsConversion = linearConversion(10000000);
+
+      const [toBase, fromBase] = [
+        terabitsConversion[0],
+        gigabytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "GB"] as const;
+      const conversionCandidate = [v, "Tb"] as const;
+
+      expect(information["GB"](conversionCandidate)).toEqual(expected);
+      expect(gigabytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Pb to GB.', v => {
+      const gigabytesConversion = linearConversion(8192000);
+      const petabitsConversion = linearConversion(100000000);
+
+      const [toBase, fromBase] = [
+        petabitsConversion[0],
+        gigabytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "GB"] as const;
+      const conversionCandidate = [v, "Pb"] as const;
+
+      expect(information["GB"](conversionCandidate)).toEqual(expected);
+      expect(gigabytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Eb to GB.', v => {
+      const gigabytesConversion = linearConversion(8192000);
+      const exabitsConversion = linearConversion(1000000000);
+
+      const [toBase, fromBase] = [
+        exabitsConversion[0],
+        gigabytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "GB"] as const;
+      const conversionCandidate = [v, "Eb"] as const;
+
+      expect(information["GB"](conversionCandidate)).toEqual(expected);
+      expect(gigabytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Zb to GB.', v => {
+      const gigabytesConversion = linearConversion(8192000);
+      const zettabitsConversion = linearConversion(10000000000);
+
+      const [toBase, fromBase] = [
+        zettabitsConversion[0],
+        gigabytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "GB"] as const;
+      const conversionCandidate = [v, "Zb"] as const;
+
+      expect(information["GB"](conversionCandidate)).toEqual(expected);
+      expect(gigabytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Yb to GB.', v => {
+      const gigabytesConversion = linearConversion(8192000);
+      const yottabitsConversion = linearConversion(100000000000);
+
+      const [toBase, fromBase] = [
+        yottabitsConversion[0],
+        gigabytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "GB"] as const;
+      const conversionCandidate = [v, "Yb"] as const;
+
+      expect(information["GB"](conversionCandidate)).toEqual(expected);
+      expect(gigabytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Kib to GB.', v => {
+      const gigabytesConversion = linearConversion(8192000);
+      const kibibitsConversion = linearConversion(1024);
+
+      const [toBase, fromBase] = [
+        kibibitsConversion[0],
+        gigabytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "GB"] as const;
+      const conversionCandidate = [v, "Kib"] as const;
+
+      expect(information["GB"](conversionCandidate)).toEqual(expected);
+      expect(gigabytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert KB to GB.', v => {
+      const gigabytesConversion = linearConversion(8192000);
+      const kilobytesConversion = linearConversion(8192);
+
+      const [toBase, fromBase] = [
+        kilobytesConversion[0],
+        gigabytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "GB"] as const;
+      const conversionCandidate = [v, "KB"] as const;
+
+      expect(information["GB"](conversionCandidate)).toEqual(expected);
+      expect(gigabytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Mib to GB.', v => {
+      const gigabytesConversion = linearConversion(8192000);
+      const mebibitsConversion = linearConversion(102400);
+
+      const [toBase, fromBase] = [
+        mebibitsConversion[0],
+        gigabytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "GB"] as const;
+      const conversionCandidate = [v, "Mib"] as const;
+
+      expect(information["GB"](conversionCandidate)).toEqual(expected);
+      expect(gigabytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert MB to GB.', v => {
+      const gigabytesConversion = linearConversion(8192000);
+      const megabytesConversion = linearConversion(819200);
+
+      const [toBase, fromBase] = [
+        megabytesConversion[0],
+        gigabytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "GB"] as const;
+      const conversionCandidate = [v, "MB"] as const;
+
+      expect(information["GB"](conversionCandidate)).toEqual(expected);
+      expect(gigabytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Gib to GB.', v => {
+      const gigabytesConversion = linearConversion(8192000);
+      const gibibitsConversion = linearConversion(1024000);
+
+      const [toBase, fromBase] = [
+        gibibitsConversion[0],
+        gigabytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "GB"] as const;
+      const conversionCandidate = [v, "Gib"] as const;
+
+      expect(information["GB"](conversionCandidate)).toEqual(expected);
+      expect(gigabytes(conversionCandidate)).toEqual(expected);
+    });
+
+
+
+    it.each([1, 10, 100])('should convert Tib to GB.', v => {
+      const gigabytesConversion = linearConversion(8192000);
+      const tebibitsConversion = linearConversion(10240000);
+
+      const [toBase, fromBase] = [
+        tebibitsConversion[0],
+        gigabytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "GB"] as const;
+      const conversionCandidate = [v, "Tib"] as const;
+
+      expect(information["GB"](conversionCandidate)).toEqual(expected);
+      expect(gigabytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert TB to GB.', v => {
+      const gigabytesConversion = linearConversion(8192000);
+      const terabytesConversion = linearConversion(81920000);
+
+      const [toBase, fromBase] = [
+        terabytesConversion[0],
+        gigabytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "GB"] as const;
+      const conversionCandidate = [v, "TB"] as const;
+
+      expect(information["GB"](conversionCandidate)).toEqual(expected);
+      expect(gigabytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Pib to GB.', v => {
+      const gigabytesConversion = linearConversion(8192000);
+      const pebibitsConversion = linearConversion(102400000);
+
+      const [toBase, fromBase] = [
+        pebibitsConversion[0],
+        gigabytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "GB"] as const;
+      const conversionCandidate = [v, "Pib"] as const;
+
+      expect(information["GB"](conversionCandidate)).toEqual(expected);
+      expect(gigabytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert PB to GB.', v => {
+      const gigabytesConversion = linearConversion(8192000);
+      const petabytesConversion = linearConversion(819200000);
+
+      const [toBase, fromBase] = [
+        petabytesConversion[0],
+        gigabytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "GB"] as const;
+      const conversionCandidate = [v, "PB"] as const;
+
+      expect(information["GB"](conversionCandidate)).toEqual(expected);
+      expect(gigabytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Eib to GB.', v => {
+      const gigabytesConversion = linearConversion(8192000);
+      const exbibitsConversion = linearConversion(1024000000);
+
+      const [toBase, fromBase] = [
+        exbibitsConversion[0],
+        gigabytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "GB"] as const;
+      const conversionCandidate = [v, "Eib"] as const;
+
+      expect(information["GB"](conversionCandidate)).toEqual(expected);
+      expect(gigabytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert EB to GB.', v => {
+      const gigabytesConversion = linearConversion(8192000);
+      const exabytesConversion = linearConversion(8192000000);
+
+      const [toBase, fromBase] = [
+        exabytesConversion[0],
+        gigabytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "GB"] as const;
+      const conversionCandidate = [v, "EB"] as const;
+
+      expect(information["GB"](conversionCandidate)).toEqual(expected);
+      expect(gigabytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Zib to GB.', v => {
+      const gigabytesConversion = linearConversion(8192000);
+      const zebibitsConversion = linearConversion(10240000000);
+
+      const [toBase, fromBase] = [
+        zebibitsConversion[0],
+        gigabytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "GB"] as const;
+      const conversionCandidate = [v, "Zib"] as const;
+
+      expect(information["GB"](conversionCandidate)).toEqual(expected);
+      expect(gigabytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert ZB to GB.', v => {
+      const gigabytesConversion = linearConversion(8192000);
+      const zettabytesConversion = linearConversion(81920000000);
+
+      const [toBase, fromBase] = [
+        zettabytesConversion[0],
+        gigabytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "GB"] as const;
+      const conversionCandidate = [v, "ZB"] as const;
+
+      expect(information["GB"](conversionCandidate)).toEqual(expected);
+      expect(gigabytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Yib to GB.', v => {
+      const gigabytesConversion = linearConversion(8192000);
+      const yobibitsConversion = linearConversion(102400000000);
+
+      const [toBase, fromBase] = [
+        yobibitsConversion[0],
+        gigabytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "GB"] as const;
+      const conversionCandidate = [v, "Yib"] as const;
+
+      expect(information["GB"](conversionCandidate)).toEqual(expected);
+      expect(gigabytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert YB to GB.', v => {
+      const gigabytesConversion = linearConversion(8192000);
+      const yottabytesConversion = linearConversion(819200000000);
+
+      const [toBase, fromBase] = [
+        yottabytesConversion[0],
+        gigabytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "GB"] as const;
+      const conversionCandidate = [v, "YB"] as const;
+
+      expect(information["GB"](conversionCandidate)).toEqual(expected);
+      expect(gigabytes(conversionCandidate)).toEqual(expected);
+    });
+  });
+
+
+  describe('Tib', () => {
+    it.each([1, 10, 100])('should yield a Tib measurement when given a number.', v => {
+      expect(information["Tib"](v)).toEqual([v, "Tib"]);
+      expect(tebibits(v)).toEqual([v, "Tib"]);
+    });
+
+    it.each([1, 10, 100])('should convert b to Tib.', v => {
+      const tebibitsConversion = linearConversion(10240000);
+      const bitsConversion = linearConversion(1);
+
+      const [toBase, fromBase] = [
+        bitsConversion[0],
+        tebibitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Tib"] as const;
+      const conversionCandidate = [v, "b"] as const;
+
+      expect(information["Tib"](conversionCandidate)).toEqual(expected);
+      expect(tebibits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert B to Tib.', v => {
+      const tebibitsConversion = linearConversion(10240000);
+      const bytesConversion = linearConversion(8);
+
+      const [toBase, fromBase] = [
+        bytesConversion[0],
+        tebibitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Tib"] as const;
+      const conversionCandidate = [v, "B"] as const;
+
+      expect(information["Tib"](conversionCandidate)).toEqual(expected);
+      expect(tebibits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert kb to Tib.', v => {
+      const tebibitsConversion = linearConversion(10240000);
+      const kilobitsConversion = linearConversion(1000);
+
+      const [toBase, fromBase] = [
+        kilobitsConversion[0],
+        tebibitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Tib"] as const;
+      const conversionCandidate = [v, "kb"] as const;
+
+      expect(information["Tib"](conversionCandidate)).toEqual(expected);
+      expect(tebibits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Mb to Tib.', v => {
+      const tebibitsConversion = linearConversion(10240000);
+      const megabitsConversion = linearConversion(100000);
+
+      const [toBase, fromBase] = [
+        megabitsConversion[0],
+        tebibitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Tib"] as const;
+      const conversionCandidate = [v, "Mb"] as const;
+
+      expect(information["Tib"](conversionCandidate)).toEqual(expected);
+      expect(tebibits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Gb to Tib.', v => {
+      const tebibitsConversion = linearConversion(10240000);
+      const gigabitsConversion = linearConversion(1000000);
+
+      const [toBase, fromBase] = [
+        gigabitsConversion[0],
+        tebibitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Tib"] as const;
+      const conversionCandidate = [v, "Gb"] as const;
+
+      expect(information["Tib"](conversionCandidate)).toEqual(expected);
+      expect(tebibits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Tb to Tib.', v => {
+      const tebibitsConversion = linearConversion(10240000);
+      const terabitsConversion = linearConversion(10000000);
+
+      const [toBase, fromBase] = [
+        terabitsConversion[0],
+        tebibitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Tib"] as const;
+      const conversionCandidate = [v, "Tb"] as const;
+
+      expect(information["Tib"](conversionCandidate)).toEqual(expected);
+      expect(tebibits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Pb to Tib.', v => {
+      const tebibitsConversion = linearConversion(10240000);
+      const petabitsConversion = linearConversion(100000000);
+
+      const [toBase, fromBase] = [
+        petabitsConversion[0],
+        tebibitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Tib"] as const;
+      const conversionCandidate = [v, "Pb"] as const;
+
+      expect(information["Tib"](conversionCandidate)).toEqual(expected);
+      expect(tebibits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Eb to Tib.', v => {
+      const tebibitsConversion = linearConversion(10240000);
+      const exabitsConversion = linearConversion(1000000000);
+
+      const [toBase, fromBase] = [
+        exabitsConversion[0],
+        tebibitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Tib"] as const;
+      const conversionCandidate = [v, "Eb"] as const;
+
+      expect(information["Tib"](conversionCandidate)).toEqual(expected);
+      expect(tebibits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Zb to Tib.', v => {
+      const tebibitsConversion = linearConversion(10240000);
+      const zettabitsConversion = linearConversion(10000000000);
+
+      const [toBase, fromBase] = [
+        zettabitsConversion[0],
+        tebibitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Tib"] as const;
+      const conversionCandidate = [v, "Zb"] as const;
+
+      expect(information["Tib"](conversionCandidate)).toEqual(expected);
+      expect(tebibits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Yb to Tib.', v => {
+      const tebibitsConversion = linearConversion(10240000);
+      const yottabitsConversion = linearConversion(100000000000);
+
+      const [toBase, fromBase] = [
+        yottabitsConversion[0],
+        tebibitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Tib"] as const;
+      const conversionCandidate = [v, "Yb"] as const;
+
+      expect(information["Tib"](conversionCandidate)).toEqual(expected);
+      expect(tebibits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Kib to Tib.', v => {
+      const tebibitsConversion = linearConversion(10240000);
+      const kibibitsConversion = linearConversion(1024);
+
+      const [toBase, fromBase] = [
+        kibibitsConversion[0],
+        tebibitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Tib"] as const;
+      const conversionCandidate = [v, "Kib"] as const;
+
+      expect(information["Tib"](conversionCandidate)).toEqual(expected);
+      expect(tebibits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert KB to Tib.', v => {
+      const tebibitsConversion = linearConversion(10240000);
+      const kilobytesConversion = linearConversion(8192);
+
+      const [toBase, fromBase] = [
+        kilobytesConversion[0],
+        tebibitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Tib"] as const;
+      const conversionCandidate = [v, "KB"] as const;
+
+      expect(information["Tib"](conversionCandidate)).toEqual(expected);
+      expect(tebibits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Mib to Tib.', v => {
+      const tebibitsConversion = linearConversion(10240000);
+      const mebibitsConversion = linearConversion(102400);
+
+      const [toBase, fromBase] = [
+        mebibitsConversion[0],
+        tebibitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Tib"] as const;
+      const conversionCandidate = [v, "Mib"] as const;
+
+      expect(information["Tib"](conversionCandidate)).toEqual(expected);
+      expect(tebibits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert MB to Tib.', v => {
+      const tebibitsConversion = linearConversion(10240000);
+      const megabytesConversion = linearConversion(819200);
+
+      const [toBase, fromBase] = [
+        megabytesConversion[0],
+        tebibitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Tib"] as const;
+      const conversionCandidate = [v, "MB"] as const;
+
+      expect(information["Tib"](conversionCandidate)).toEqual(expected);
+      expect(tebibits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Gib to Tib.', v => {
+      const tebibitsConversion = linearConversion(10240000);
+      const gibibitsConversion = linearConversion(1024000);
+
+      const [toBase, fromBase] = [
+        gibibitsConversion[0],
+        tebibitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Tib"] as const;
+      const conversionCandidate = [v, "Gib"] as const;
+
+      expect(information["Tib"](conversionCandidate)).toEqual(expected);
+      expect(tebibits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert GB to Tib.', v => {
+      const tebibitsConversion = linearConversion(10240000);
+      const gigabytesConversion = linearConversion(8192000);
+
+      const [toBase, fromBase] = [
+        gigabytesConversion[0],
+        tebibitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Tib"] as const;
+      const conversionCandidate = [v, "GB"] as const;
+
+      expect(information["Tib"](conversionCandidate)).toEqual(expected);
+      expect(tebibits(conversionCandidate)).toEqual(expected);
+    });
+
+
+
+    it.each([1, 10, 100])('should convert TB to Tib.', v => {
+      const tebibitsConversion = linearConversion(10240000);
+      const terabytesConversion = linearConversion(81920000);
+
+      const [toBase, fromBase] = [
+        terabytesConversion[0],
+        tebibitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Tib"] as const;
+      const conversionCandidate = [v, "TB"] as const;
+
+      expect(information["Tib"](conversionCandidate)).toEqual(expected);
+      expect(tebibits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Pib to Tib.', v => {
+      const tebibitsConversion = linearConversion(10240000);
+      const pebibitsConversion = linearConversion(102400000);
+
+      const [toBase, fromBase] = [
+        pebibitsConversion[0],
+        tebibitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Tib"] as const;
+      const conversionCandidate = [v, "Pib"] as const;
+
+      expect(information["Tib"](conversionCandidate)).toEqual(expected);
+      expect(tebibits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert PB to Tib.', v => {
+      const tebibitsConversion = linearConversion(10240000);
+      const petabytesConversion = linearConversion(819200000);
+
+      const [toBase, fromBase] = [
+        petabytesConversion[0],
+        tebibitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Tib"] as const;
+      const conversionCandidate = [v, "PB"] as const;
+
+      expect(information["Tib"](conversionCandidate)).toEqual(expected);
+      expect(tebibits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Eib to Tib.', v => {
+      const tebibitsConversion = linearConversion(10240000);
+      const exbibitsConversion = linearConversion(1024000000);
+
+      const [toBase, fromBase] = [
+        exbibitsConversion[0],
+        tebibitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Tib"] as const;
+      const conversionCandidate = [v, "Eib"] as const;
+
+      expect(information["Tib"](conversionCandidate)).toEqual(expected);
+      expect(tebibits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert EB to Tib.', v => {
+      const tebibitsConversion = linearConversion(10240000);
+      const exabytesConversion = linearConversion(8192000000);
+
+      const [toBase, fromBase] = [
+        exabytesConversion[0],
+        tebibitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Tib"] as const;
+      const conversionCandidate = [v, "EB"] as const;
+
+      expect(information["Tib"](conversionCandidate)).toEqual(expected);
+      expect(tebibits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Zib to Tib.', v => {
+      const tebibitsConversion = linearConversion(10240000);
+      const zebibitsConversion = linearConversion(10240000000);
+
+      const [toBase, fromBase] = [
+        zebibitsConversion[0],
+        tebibitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Tib"] as const;
+      const conversionCandidate = [v, "Zib"] as const;
+
+      expect(information["Tib"](conversionCandidate)).toEqual(expected);
+      expect(tebibits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert ZB to Tib.', v => {
+      const tebibitsConversion = linearConversion(10240000);
+      const zettabytesConversion = linearConversion(81920000000);
+
+      const [toBase, fromBase] = [
+        zettabytesConversion[0],
+        tebibitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Tib"] as const;
+      const conversionCandidate = [v, "ZB"] as const;
+
+      expect(information["Tib"](conversionCandidate)).toEqual(expected);
+      expect(tebibits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Yib to Tib.', v => {
+      const tebibitsConversion = linearConversion(10240000);
+      const yobibitsConversion = linearConversion(102400000000);
+
+      const [toBase, fromBase] = [
+        yobibitsConversion[0],
+        tebibitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Tib"] as const;
+      const conversionCandidate = [v, "Yib"] as const;
+
+      expect(information["Tib"](conversionCandidate)).toEqual(expected);
+      expect(tebibits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert YB to Tib.', v => {
+      const tebibitsConversion = linearConversion(10240000);
+      const yottabytesConversion = linearConversion(819200000000);
+
+      const [toBase, fromBase] = [
+        yottabytesConversion[0],
+        tebibitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Tib"] as const;
+      const conversionCandidate = [v, "YB"] as const;
+
+      expect(information["Tib"](conversionCandidate)).toEqual(expected);
+      expect(tebibits(conversionCandidate)).toEqual(expected);
+    });
+  });
+
+
+  describe('TB', () => {
+    it.each([1, 10, 100])('should yield a TB measurement when given a number.', v => {
+      expect(information["TB"](v)).toEqual([v, "TB"]);
+      expect(terabytes(v)).toEqual([v, "TB"]);
+    });
+
+    it.each([1, 10, 100])('should convert b to TB.', v => {
+      const terabytesConversion = linearConversion(81920000);
+      const bitsConversion = linearConversion(1);
+
+      const [toBase, fromBase] = [
+        bitsConversion[0],
+        terabytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "TB"] as const;
+      const conversionCandidate = [v, "b"] as const;
+
+      expect(information["TB"](conversionCandidate)).toEqual(expected);
+      expect(terabytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert B to TB.', v => {
+      const terabytesConversion = linearConversion(81920000);
+      const bytesConversion = linearConversion(8);
+
+      const [toBase, fromBase] = [
+        bytesConversion[0],
+        terabytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "TB"] as const;
+      const conversionCandidate = [v, "B"] as const;
+
+      expect(information["TB"](conversionCandidate)).toEqual(expected);
+      expect(terabytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert kb to TB.', v => {
+      const terabytesConversion = linearConversion(81920000);
+      const kilobitsConversion = linearConversion(1000);
+
+      const [toBase, fromBase] = [
+        kilobitsConversion[0],
+        terabytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "TB"] as const;
+      const conversionCandidate = [v, "kb"] as const;
+
+      expect(information["TB"](conversionCandidate)).toEqual(expected);
+      expect(terabytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Mb to TB.', v => {
+      const terabytesConversion = linearConversion(81920000);
+      const megabitsConversion = linearConversion(100000);
+
+      const [toBase, fromBase] = [
+        megabitsConversion[0],
+        terabytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "TB"] as const;
+      const conversionCandidate = [v, "Mb"] as const;
+
+      expect(information["TB"](conversionCandidate)).toEqual(expected);
+      expect(terabytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Gb to TB.', v => {
+      const terabytesConversion = linearConversion(81920000);
+      const gigabitsConversion = linearConversion(1000000);
+
+      const [toBase, fromBase] = [
+        gigabitsConversion[0],
+        terabytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "TB"] as const;
+      const conversionCandidate = [v, "Gb"] as const;
+
+      expect(information["TB"](conversionCandidate)).toEqual(expected);
+      expect(terabytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Tb to TB.', v => {
+      const terabytesConversion = linearConversion(81920000);
+      const terabitsConversion = linearConversion(10000000);
+
+      const [toBase, fromBase] = [
+        terabitsConversion[0],
+        terabytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "TB"] as const;
+      const conversionCandidate = [v, "Tb"] as const;
+
+      expect(information["TB"](conversionCandidate)).toEqual(expected);
+      expect(terabytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Pb to TB.', v => {
+      const terabytesConversion = linearConversion(81920000);
+      const petabitsConversion = linearConversion(100000000);
+
+      const [toBase, fromBase] = [
+        petabitsConversion[0],
+        terabytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "TB"] as const;
+      const conversionCandidate = [v, "Pb"] as const;
+
+      expect(information["TB"](conversionCandidate)).toEqual(expected);
+      expect(terabytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Eb to TB.', v => {
+      const terabytesConversion = linearConversion(81920000);
+      const exabitsConversion = linearConversion(1000000000);
+
+      const [toBase, fromBase] = [
+        exabitsConversion[0],
+        terabytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "TB"] as const;
+      const conversionCandidate = [v, "Eb"] as const;
+
+      expect(information["TB"](conversionCandidate)).toEqual(expected);
+      expect(terabytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Zb to TB.', v => {
+      const terabytesConversion = linearConversion(81920000);
+      const zettabitsConversion = linearConversion(10000000000);
+
+      const [toBase, fromBase] = [
+        zettabitsConversion[0],
+        terabytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "TB"] as const;
+      const conversionCandidate = [v, "Zb"] as const;
+
+      expect(information["TB"](conversionCandidate)).toEqual(expected);
+      expect(terabytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Yb to TB.', v => {
+      const terabytesConversion = linearConversion(81920000);
+      const yottabitsConversion = linearConversion(100000000000);
+
+      const [toBase, fromBase] = [
+        yottabitsConversion[0],
+        terabytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "TB"] as const;
+      const conversionCandidate = [v, "Yb"] as const;
+
+      expect(information["TB"](conversionCandidate)).toEqual(expected);
+      expect(terabytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Kib to TB.', v => {
+      const terabytesConversion = linearConversion(81920000);
+      const kibibitsConversion = linearConversion(1024);
+
+      const [toBase, fromBase] = [
+        kibibitsConversion[0],
+        terabytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "TB"] as const;
+      const conversionCandidate = [v, "Kib"] as const;
+
+      expect(information["TB"](conversionCandidate)).toEqual(expected);
+      expect(terabytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert KB to TB.', v => {
+      const terabytesConversion = linearConversion(81920000);
+      const kilobytesConversion = linearConversion(8192);
+
+      const [toBase, fromBase] = [
+        kilobytesConversion[0],
+        terabytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "TB"] as const;
+      const conversionCandidate = [v, "KB"] as const;
+
+      expect(information["TB"](conversionCandidate)).toEqual(expected);
+      expect(terabytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Mib to TB.', v => {
+      const terabytesConversion = linearConversion(81920000);
+      const mebibitsConversion = linearConversion(102400);
+
+      const [toBase, fromBase] = [
+        mebibitsConversion[0],
+        terabytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "TB"] as const;
+      const conversionCandidate = [v, "Mib"] as const;
+
+      expect(information["TB"](conversionCandidate)).toEqual(expected);
+      expect(terabytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert MB to TB.', v => {
+      const terabytesConversion = linearConversion(81920000);
+      const megabytesConversion = linearConversion(819200);
+
+      const [toBase, fromBase] = [
+        megabytesConversion[0],
+        terabytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "TB"] as const;
+      const conversionCandidate = [v, "MB"] as const;
+
+      expect(information["TB"](conversionCandidate)).toEqual(expected);
+      expect(terabytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Gib to TB.', v => {
+      const terabytesConversion = linearConversion(81920000);
+      const gibibitsConversion = linearConversion(1024000);
+
+      const [toBase, fromBase] = [
+        gibibitsConversion[0],
+        terabytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "TB"] as const;
+      const conversionCandidate = [v, "Gib"] as const;
+
+      expect(information["TB"](conversionCandidate)).toEqual(expected);
+      expect(terabytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert GB to TB.', v => {
+      const terabytesConversion = linearConversion(81920000);
+      const gigabytesConversion = linearConversion(8192000);
+
+      const [toBase, fromBase] = [
+        gigabytesConversion[0],
+        terabytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "TB"] as const;
+      const conversionCandidate = [v, "GB"] as const;
+
+      expect(information["TB"](conversionCandidate)).toEqual(expected);
+      expect(terabytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Tib to TB.', v => {
+      const terabytesConversion = linearConversion(81920000);
+      const tebibitsConversion = linearConversion(10240000);
+
+      const [toBase, fromBase] = [
+        tebibitsConversion[0],
+        terabytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "TB"] as const;
+      const conversionCandidate = [v, "Tib"] as const;
+
+      expect(information["TB"](conversionCandidate)).toEqual(expected);
+      expect(terabytes(conversionCandidate)).toEqual(expected);
+    });
+
+
+
+    it.each([1, 10, 100])('should convert Pib to TB.', v => {
+      const terabytesConversion = linearConversion(81920000);
+      const pebibitsConversion = linearConversion(102400000);
+
+      const [toBase, fromBase] = [
+        pebibitsConversion[0],
+        terabytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "TB"] as const;
+      const conversionCandidate = [v, "Pib"] as const;
+
+      expect(information["TB"](conversionCandidate)).toEqual(expected);
+      expect(terabytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert PB to TB.', v => {
+      const terabytesConversion = linearConversion(81920000);
+      const petabytesConversion = linearConversion(819200000);
+
+      const [toBase, fromBase] = [
+        petabytesConversion[0],
+        terabytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "TB"] as const;
+      const conversionCandidate = [v, "PB"] as const;
+
+      expect(information["TB"](conversionCandidate)).toEqual(expected);
+      expect(terabytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Eib to TB.', v => {
+      const terabytesConversion = linearConversion(81920000);
+      const exbibitsConversion = linearConversion(1024000000);
+
+      const [toBase, fromBase] = [
+        exbibitsConversion[0],
+        terabytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "TB"] as const;
+      const conversionCandidate = [v, "Eib"] as const;
+
+      expect(information["TB"](conversionCandidate)).toEqual(expected);
+      expect(terabytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert EB to TB.', v => {
+      const terabytesConversion = linearConversion(81920000);
+      const exabytesConversion = linearConversion(8192000000);
+
+      const [toBase, fromBase] = [
+        exabytesConversion[0],
+        terabytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "TB"] as const;
+      const conversionCandidate = [v, "EB"] as const;
+
+      expect(information["TB"](conversionCandidate)).toEqual(expected);
+      expect(terabytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Zib to TB.', v => {
+      const terabytesConversion = linearConversion(81920000);
+      const zebibitsConversion = linearConversion(10240000000);
+
+      const [toBase, fromBase] = [
+        zebibitsConversion[0],
+        terabytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "TB"] as const;
+      const conversionCandidate = [v, "Zib"] as const;
+
+      expect(information["TB"](conversionCandidate)).toEqual(expected);
+      expect(terabytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert ZB to TB.', v => {
+      const terabytesConversion = linearConversion(81920000);
+      const zettabytesConversion = linearConversion(81920000000);
+
+      const [toBase, fromBase] = [
+        zettabytesConversion[0],
+        terabytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "TB"] as const;
+      const conversionCandidate = [v, "ZB"] as const;
+
+      expect(information["TB"](conversionCandidate)).toEqual(expected);
+      expect(terabytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Yib to TB.', v => {
+      const terabytesConversion = linearConversion(81920000);
+      const yobibitsConversion = linearConversion(102400000000);
+
+      const [toBase, fromBase] = [
+        yobibitsConversion[0],
+        terabytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "TB"] as const;
+      const conversionCandidate = [v, "Yib"] as const;
+
+      expect(information["TB"](conversionCandidate)).toEqual(expected);
+      expect(terabytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert YB to TB.', v => {
+      const terabytesConversion = linearConversion(81920000);
+      const yottabytesConversion = linearConversion(819200000000);
+
+      const [toBase, fromBase] = [
+        yottabytesConversion[0],
+        terabytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "TB"] as const;
+      const conversionCandidate = [v, "YB"] as const;
+
+      expect(information["TB"](conversionCandidate)).toEqual(expected);
+      expect(terabytes(conversionCandidate)).toEqual(expected);
+    });
+  });
+
+
+  describe('Pib', () => {
+    it.each([1, 10, 100])('should yield a Pib measurement when given a number.', v => {
+      expect(information["Pib"](v)).toEqual([v, "Pib"]);
+      expect(pebibits(v)).toEqual([v, "Pib"]);
+    });
+
+    it.each([1, 10, 100])('should convert b to Pib.', v => {
+      const pebibitsConversion = linearConversion(102400000);
+      const bitsConversion = linearConversion(1);
+
+      const [toBase, fromBase] = [
+        bitsConversion[0],
+        pebibitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Pib"] as const;
+      const conversionCandidate = [v, "b"] as const;
+
+      expect(information["Pib"](conversionCandidate)).toEqual(expected);
+      expect(pebibits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert B to Pib.', v => {
+      const pebibitsConversion = linearConversion(102400000);
+      const bytesConversion = linearConversion(8);
+
+      const [toBase, fromBase] = [
+        bytesConversion[0],
+        pebibitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Pib"] as const;
+      const conversionCandidate = [v, "B"] as const;
+
+      expect(information["Pib"](conversionCandidate)).toEqual(expected);
+      expect(pebibits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert kb to Pib.', v => {
+      const pebibitsConversion = linearConversion(102400000);
+      const kilobitsConversion = linearConversion(1000);
+
+      const [toBase, fromBase] = [
+        kilobitsConversion[0],
+        pebibitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Pib"] as const;
+      const conversionCandidate = [v, "kb"] as const;
+
+      expect(information["Pib"](conversionCandidate)).toEqual(expected);
+      expect(pebibits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Mb to Pib.', v => {
+      const pebibitsConversion = linearConversion(102400000);
+      const megabitsConversion = linearConversion(100000);
+
+      const [toBase, fromBase] = [
+        megabitsConversion[0],
+        pebibitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Pib"] as const;
+      const conversionCandidate = [v, "Mb"] as const;
+
+      expect(information["Pib"](conversionCandidate)).toEqual(expected);
+      expect(pebibits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Gb to Pib.', v => {
+      const pebibitsConversion = linearConversion(102400000);
+      const gigabitsConversion = linearConversion(1000000);
+
+      const [toBase, fromBase] = [
+        gigabitsConversion[0],
+        pebibitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Pib"] as const;
+      const conversionCandidate = [v, "Gb"] as const;
+
+      expect(information["Pib"](conversionCandidate)).toEqual(expected);
+      expect(pebibits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Tb to Pib.', v => {
+      const pebibitsConversion = linearConversion(102400000);
+      const terabitsConversion = linearConversion(10000000);
+
+      const [toBase, fromBase] = [
+        terabitsConversion[0],
+        pebibitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Pib"] as const;
+      const conversionCandidate = [v, "Tb"] as const;
+
+      expect(information["Pib"](conversionCandidate)).toEqual(expected);
+      expect(pebibits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Pb to Pib.', v => {
+      const pebibitsConversion = linearConversion(102400000);
+      const petabitsConversion = linearConversion(100000000);
+
+      const [toBase, fromBase] = [
+        petabitsConversion[0],
+        pebibitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Pib"] as const;
+      const conversionCandidate = [v, "Pb"] as const;
+
+      expect(information["Pib"](conversionCandidate)).toEqual(expected);
+      expect(pebibits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Eb to Pib.', v => {
+      const pebibitsConversion = linearConversion(102400000);
+      const exabitsConversion = linearConversion(1000000000);
+
+      const [toBase, fromBase] = [
+        exabitsConversion[0],
+        pebibitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Pib"] as const;
+      const conversionCandidate = [v, "Eb"] as const;
+
+      expect(information["Pib"](conversionCandidate)).toEqual(expected);
+      expect(pebibits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Zb to Pib.', v => {
+      const pebibitsConversion = linearConversion(102400000);
+      const zettabitsConversion = linearConversion(10000000000);
+
+      const [toBase, fromBase] = [
+        zettabitsConversion[0],
+        pebibitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Pib"] as const;
+      const conversionCandidate = [v, "Zb"] as const;
+
+      expect(information["Pib"](conversionCandidate)).toEqual(expected);
+      expect(pebibits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Yb to Pib.', v => {
+      const pebibitsConversion = linearConversion(102400000);
+      const yottabitsConversion = linearConversion(100000000000);
+
+      const [toBase, fromBase] = [
+        yottabitsConversion[0],
+        pebibitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Pib"] as const;
+      const conversionCandidate = [v, "Yb"] as const;
+
+      expect(information["Pib"](conversionCandidate)).toEqual(expected);
+      expect(pebibits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Kib to Pib.', v => {
+      const pebibitsConversion = linearConversion(102400000);
+      const kibibitsConversion = linearConversion(1024);
+
+      const [toBase, fromBase] = [
+        kibibitsConversion[0],
+        pebibitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Pib"] as const;
+      const conversionCandidate = [v, "Kib"] as const;
+
+      expect(information["Pib"](conversionCandidate)).toEqual(expected);
+      expect(pebibits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert KB to Pib.', v => {
+      const pebibitsConversion = linearConversion(102400000);
+      const kilobytesConversion = linearConversion(8192);
+
+      const [toBase, fromBase] = [
+        kilobytesConversion[0],
+        pebibitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Pib"] as const;
+      const conversionCandidate = [v, "KB"] as const;
+
+      expect(information["Pib"](conversionCandidate)).toEqual(expected);
+      expect(pebibits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Mib to Pib.', v => {
+      const pebibitsConversion = linearConversion(102400000);
+      const mebibitsConversion = linearConversion(102400);
+
+      const [toBase, fromBase] = [
+        mebibitsConversion[0],
+        pebibitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Pib"] as const;
+      const conversionCandidate = [v, "Mib"] as const;
+
+      expect(information["Pib"](conversionCandidate)).toEqual(expected);
+      expect(pebibits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert MB to Pib.', v => {
+      const pebibitsConversion = linearConversion(102400000);
+      const megabytesConversion = linearConversion(819200);
+
+      const [toBase, fromBase] = [
+        megabytesConversion[0],
+        pebibitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Pib"] as const;
+      const conversionCandidate = [v, "MB"] as const;
+
+      expect(information["Pib"](conversionCandidate)).toEqual(expected);
+      expect(pebibits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Gib to Pib.', v => {
+      const pebibitsConversion = linearConversion(102400000);
+      const gibibitsConversion = linearConversion(1024000);
+
+      const [toBase, fromBase] = [
+        gibibitsConversion[0],
+        pebibitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Pib"] as const;
+      const conversionCandidate = [v, "Gib"] as const;
+
+      expect(information["Pib"](conversionCandidate)).toEqual(expected);
+      expect(pebibits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert GB to Pib.', v => {
+      const pebibitsConversion = linearConversion(102400000);
+      const gigabytesConversion = linearConversion(8192000);
+
+      const [toBase, fromBase] = [
+        gigabytesConversion[0],
+        pebibitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Pib"] as const;
+      const conversionCandidate = [v, "GB"] as const;
+
+      expect(information["Pib"](conversionCandidate)).toEqual(expected);
+      expect(pebibits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Tib to Pib.', v => {
+      const pebibitsConversion = linearConversion(102400000);
+      const tebibitsConversion = linearConversion(10240000);
+
+      const [toBase, fromBase] = [
+        tebibitsConversion[0],
+        pebibitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Pib"] as const;
+      const conversionCandidate = [v, "Tib"] as const;
+
+      expect(information["Pib"](conversionCandidate)).toEqual(expected);
+      expect(pebibits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert TB to Pib.', v => {
+      const pebibitsConversion = linearConversion(102400000);
+      const terabytesConversion = linearConversion(81920000);
+
+      const [toBase, fromBase] = [
+        terabytesConversion[0],
+        pebibitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Pib"] as const;
+      const conversionCandidate = [v, "TB"] as const;
+
+      expect(information["Pib"](conversionCandidate)).toEqual(expected);
+      expect(pebibits(conversionCandidate)).toEqual(expected);
+    });
+
+
+
+    it.each([1, 10, 100])('should convert PB to Pib.', v => {
+      const pebibitsConversion = linearConversion(102400000);
+      const petabytesConversion = linearConversion(819200000);
+
+      const [toBase, fromBase] = [
+        petabytesConversion[0],
+        pebibitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Pib"] as const;
+      const conversionCandidate = [v, "PB"] as const;
+
+      expect(information["Pib"](conversionCandidate)).toEqual(expected);
+      expect(pebibits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Eib to Pib.', v => {
+      const pebibitsConversion = linearConversion(102400000);
+      const exbibitsConversion = linearConversion(1024000000);
+
+      const [toBase, fromBase] = [
+        exbibitsConversion[0],
+        pebibitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Pib"] as const;
+      const conversionCandidate = [v, "Eib"] as const;
+
+      expect(information["Pib"](conversionCandidate)).toEqual(expected);
+      expect(pebibits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert EB to Pib.', v => {
+      const pebibitsConversion = linearConversion(102400000);
+      const exabytesConversion = linearConversion(8192000000);
+
+      const [toBase, fromBase] = [
+        exabytesConversion[0],
+        pebibitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Pib"] as const;
+      const conversionCandidate = [v, "EB"] as const;
+
+      expect(information["Pib"](conversionCandidate)).toEqual(expected);
+      expect(pebibits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Zib to Pib.', v => {
+      const pebibitsConversion = linearConversion(102400000);
+      const zebibitsConversion = linearConversion(10240000000);
+
+      const [toBase, fromBase] = [
+        zebibitsConversion[0],
+        pebibitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Pib"] as const;
+      const conversionCandidate = [v, "Zib"] as const;
+
+      expect(information["Pib"](conversionCandidate)).toEqual(expected);
+      expect(pebibits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert ZB to Pib.', v => {
+      const pebibitsConversion = linearConversion(102400000);
+      const zettabytesConversion = linearConversion(81920000000);
+
+      const [toBase, fromBase] = [
+        zettabytesConversion[0],
+        pebibitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Pib"] as const;
+      const conversionCandidate = [v, "ZB"] as const;
+
+      expect(information["Pib"](conversionCandidate)).toEqual(expected);
+      expect(pebibits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Yib to Pib.', v => {
+      const pebibitsConversion = linearConversion(102400000);
+      const yobibitsConversion = linearConversion(102400000000);
+
+      const [toBase, fromBase] = [
+        yobibitsConversion[0],
+        pebibitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Pib"] as const;
+      const conversionCandidate = [v, "Yib"] as const;
+
+      expect(information["Pib"](conversionCandidate)).toEqual(expected);
+      expect(pebibits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert YB to Pib.', v => {
+      const pebibitsConversion = linearConversion(102400000);
+      const yottabytesConversion = linearConversion(819200000000);
+
+      const [toBase, fromBase] = [
+        yottabytesConversion[0],
+        pebibitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Pib"] as const;
+      const conversionCandidate = [v, "YB"] as const;
+
+      expect(information["Pib"](conversionCandidate)).toEqual(expected);
+      expect(pebibits(conversionCandidate)).toEqual(expected);
+    });
+  });
+
+
+  describe('PB', () => {
+    it.each([1, 10, 100])('should yield a PB measurement when given a number.', v => {
+      expect(information["PB"](v)).toEqual([v, "PB"]);
+      expect(petabytes(v)).toEqual([v, "PB"]);
+    });
+
+    it.each([1, 10, 100])('should convert b to PB.', v => {
+      const petabytesConversion = linearConversion(819200000);
+      const bitsConversion = linearConversion(1);
+
+      const [toBase, fromBase] = [
+        bitsConversion[0],
+        petabytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "PB"] as const;
+      const conversionCandidate = [v, "b"] as const;
+
+      expect(information["PB"](conversionCandidate)).toEqual(expected);
+      expect(petabytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert B to PB.', v => {
+      const petabytesConversion = linearConversion(819200000);
+      const bytesConversion = linearConversion(8);
+
+      const [toBase, fromBase] = [
+        bytesConversion[0],
+        petabytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "PB"] as const;
+      const conversionCandidate = [v, "B"] as const;
+
+      expect(information["PB"](conversionCandidate)).toEqual(expected);
+      expect(petabytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert kb to PB.', v => {
+      const petabytesConversion = linearConversion(819200000);
+      const kilobitsConversion = linearConversion(1000);
+
+      const [toBase, fromBase] = [
+        kilobitsConversion[0],
+        petabytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "PB"] as const;
+      const conversionCandidate = [v, "kb"] as const;
+
+      expect(information["PB"](conversionCandidate)).toEqual(expected);
+      expect(petabytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Mb to PB.', v => {
+      const petabytesConversion = linearConversion(819200000);
+      const megabitsConversion = linearConversion(100000);
+
+      const [toBase, fromBase] = [
+        megabitsConversion[0],
+        petabytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "PB"] as const;
+      const conversionCandidate = [v, "Mb"] as const;
+
+      expect(information["PB"](conversionCandidate)).toEqual(expected);
+      expect(petabytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Gb to PB.', v => {
+      const petabytesConversion = linearConversion(819200000);
+      const gigabitsConversion = linearConversion(1000000);
+
+      const [toBase, fromBase] = [
+        gigabitsConversion[0],
+        petabytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "PB"] as const;
+      const conversionCandidate = [v, "Gb"] as const;
+
+      expect(information["PB"](conversionCandidate)).toEqual(expected);
+      expect(petabytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Tb to PB.', v => {
+      const petabytesConversion = linearConversion(819200000);
+      const terabitsConversion = linearConversion(10000000);
+
+      const [toBase, fromBase] = [
+        terabitsConversion[0],
+        petabytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "PB"] as const;
+      const conversionCandidate = [v, "Tb"] as const;
+
+      expect(information["PB"](conversionCandidate)).toEqual(expected);
+      expect(petabytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Pb to PB.', v => {
+      const petabytesConversion = linearConversion(819200000);
+      const petabitsConversion = linearConversion(100000000);
+
+      const [toBase, fromBase] = [
+        petabitsConversion[0],
+        petabytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "PB"] as const;
+      const conversionCandidate = [v, "Pb"] as const;
+
+      expect(information["PB"](conversionCandidate)).toEqual(expected);
+      expect(petabytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Eb to PB.', v => {
+      const petabytesConversion = linearConversion(819200000);
+      const exabitsConversion = linearConversion(1000000000);
+
+      const [toBase, fromBase] = [
+        exabitsConversion[0],
+        petabytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "PB"] as const;
+      const conversionCandidate = [v, "Eb"] as const;
+
+      expect(information["PB"](conversionCandidate)).toEqual(expected);
+      expect(petabytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Zb to PB.', v => {
+      const petabytesConversion = linearConversion(819200000);
+      const zettabitsConversion = linearConversion(10000000000);
+
+      const [toBase, fromBase] = [
+        zettabitsConversion[0],
+        petabytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "PB"] as const;
+      const conversionCandidate = [v, "Zb"] as const;
+
+      expect(information["PB"](conversionCandidate)).toEqual(expected);
+      expect(petabytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Yb to PB.', v => {
+      const petabytesConversion = linearConversion(819200000);
+      const yottabitsConversion = linearConversion(100000000000);
+
+      const [toBase, fromBase] = [
+        yottabitsConversion[0],
+        petabytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "PB"] as const;
+      const conversionCandidate = [v, "Yb"] as const;
+
+      expect(information["PB"](conversionCandidate)).toEqual(expected);
+      expect(petabytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Kib to PB.', v => {
+      const petabytesConversion = linearConversion(819200000);
+      const kibibitsConversion = linearConversion(1024);
+
+      const [toBase, fromBase] = [
+        kibibitsConversion[0],
+        petabytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "PB"] as const;
+      const conversionCandidate = [v, "Kib"] as const;
+
+      expect(information["PB"](conversionCandidate)).toEqual(expected);
+      expect(petabytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert KB to PB.', v => {
+      const petabytesConversion = linearConversion(819200000);
+      const kilobytesConversion = linearConversion(8192);
+
+      const [toBase, fromBase] = [
+        kilobytesConversion[0],
+        petabytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "PB"] as const;
+      const conversionCandidate = [v, "KB"] as const;
+
+      expect(information["PB"](conversionCandidate)).toEqual(expected);
+      expect(petabytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Mib to PB.', v => {
+      const petabytesConversion = linearConversion(819200000);
+      const mebibitsConversion = linearConversion(102400);
+
+      const [toBase, fromBase] = [
+        mebibitsConversion[0],
+        petabytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "PB"] as const;
+      const conversionCandidate = [v, "Mib"] as const;
+
+      expect(information["PB"](conversionCandidate)).toEqual(expected);
+      expect(petabytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert MB to PB.', v => {
+      const petabytesConversion = linearConversion(819200000);
+      const megabytesConversion = linearConversion(819200);
+
+      const [toBase, fromBase] = [
+        megabytesConversion[0],
+        petabytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "PB"] as const;
+      const conversionCandidate = [v, "MB"] as const;
+
+      expect(information["PB"](conversionCandidate)).toEqual(expected);
+      expect(petabytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Gib to PB.', v => {
+      const petabytesConversion = linearConversion(819200000);
+      const gibibitsConversion = linearConversion(1024000);
+
+      const [toBase, fromBase] = [
+        gibibitsConversion[0],
+        petabytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "PB"] as const;
+      const conversionCandidate = [v, "Gib"] as const;
+
+      expect(information["PB"](conversionCandidate)).toEqual(expected);
+      expect(petabytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert GB to PB.', v => {
+      const petabytesConversion = linearConversion(819200000);
+      const gigabytesConversion = linearConversion(8192000);
+
+      const [toBase, fromBase] = [
+        gigabytesConversion[0],
+        petabytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "PB"] as const;
+      const conversionCandidate = [v, "GB"] as const;
+
+      expect(information["PB"](conversionCandidate)).toEqual(expected);
+      expect(petabytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Tib to PB.', v => {
+      const petabytesConversion = linearConversion(819200000);
+      const tebibitsConversion = linearConversion(10240000);
+
+      const [toBase, fromBase] = [
+        tebibitsConversion[0],
+        petabytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "PB"] as const;
+      const conversionCandidate = [v, "Tib"] as const;
+
+      expect(information["PB"](conversionCandidate)).toEqual(expected);
+      expect(petabytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert TB to PB.', v => {
+      const petabytesConversion = linearConversion(819200000);
+      const terabytesConversion = linearConversion(81920000);
+
+      const [toBase, fromBase] = [
+        terabytesConversion[0],
+        petabytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "PB"] as const;
+      const conversionCandidate = [v, "TB"] as const;
+
+      expect(information["PB"](conversionCandidate)).toEqual(expected);
+      expect(petabytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Pib to PB.', v => {
+      const petabytesConversion = linearConversion(819200000);
+      const pebibitsConversion = linearConversion(102400000);
+
+      const [toBase, fromBase] = [
+        pebibitsConversion[0],
+        petabytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "PB"] as const;
+      const conversionCandidate = [v, "Pib"] as const;
+
+      expect(information["PB"](conversionCandidate)).toEqual(expected);
+      expect(petabytes(conversionCandidate)).toEqual(expected);
+    });
+
+
+
+    it.each([1, 10, 100])('should convert Eib to PB.', v => {
+      const petabytesConversion = linearConversion(819200000);
+      const exbibitsConversion = linearConversion(1024000000);
+
+      const [toBase, fromBase] = [
+        exbibitsConversion[0],
+        petabytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "PB"] as const;
+      const conversionCandidate = [v, "Eib"] as const;
+
+      expect(information["PB"](conversionCandidate)).toEqual(expected);
+      expect(petabytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert EB to PB.', v => {
+      const petabytesConversion = linearConversion(819200000);
+      const exabytesConversion = linearConversion(8192000000);
+
+      const [toBase, fromBase] = [
+        exabytesConversion[0],
+        petabytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "PB"] as const;
+      const conversionCandidate = [v, "EB"] as const;
+
+      expect(information["PB"](conversionCandidate)).toEqual(expected);
+      expect(petabytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Zib to PB.', v => {
+      const petabytesConversion = linearConversion(819200000);
+      const zebibitsConversion = linearConversion(10240000000);
+
+      const [toBase, fromBase] = [
+        zebibitsConversion[0],
+        petabytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "PB"] as const;
+      const conversionCandidate = [v, "Zib"] as const;
+
+      expect(information["PB"](conversionCandidate)).toEqual(expected);
+      expect(petabytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert ZB to PB.', v => {
+      const petabytesConversion = linearConversion(819200000);
+      const zettabytesConversion = linearConversion(81920000000);
+
+      const [toBase, fromBase] = [
+        zettabytesConversion[0],
+        petabytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "PB"] as const;
+      const conversionCandidate = [v, "ZB"] as const;
+
+      expect(information["PB"](conversionCandidate)).toEqual(expected);
+      expect(petabytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Yib to PB.', v => {
+      const petabytesConversion = linearConversion(819200000);
+      const yobibitsConversion = linearConversion(102400000000);
+
+      const [toBase, fromBase] = [
+        yobibitsConversion[0],
+        petabytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "PB"] as const;
+      const conversionCandidate = [v, "Yib"] as const;
+
+      expect(information["PB"](conversionCandidate)).toEqual(expected);
+      expect(petabytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert YB to PB.', v => {
+      const petabytesConversion = linearConversion(819200000);
+      const yottabytesConversion = linearConversion(819200000000);
+
+      const [toBase, fromBase] = [
+        yottabytesConversion[0],
+        petabytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "PB"] as const;
+      const conversionCandidate = [v, "YB"] as const;
+
+      expect(information["PB"](conversionCandidate)).toEqual(expected);
+      expect(petabytes(conversionCandidate)).toEqual(expected);
+    });
+  });
+
+
+  describe('Eib', () => {
+    it.each([1, 10, 100])('should yield a Eib measurement when given a number.', v => {
+      expect(information["Eib"](v)).toEqual([v, "Eib"]);
+      expect(exbibits(v)).toEqual([v, "Eib"]);
+    });
+
+    it.each([1, 10, 100])('should convert b to Eib.', v => {
+      const exbibitsConversion = linearConversion(1024000000);
+      const bitsConversion = linearConversion(1);
+
+      const [toBase, fromBase] = [
+        bitsConversion[0],
+        exbibitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Eib"] as const;
+      const conversionCandidate = [v, "b"] as const;
+
+      expect(information["Eib"](conversionCandidate)).toEqual(expected);
+      expect(exbibits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert B to Eib.', v => {
+      const exbibitsConversion = linearConversion(1024000000);
+      const bytesConversion = linearConversion(8);
+
+      const [toBase, fromBase] = [
+        bytesConversion[0],
+        exbibitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Eib"] as const;
+      const conversionCandidate = [v, "B"] as const;
+
+      expect(information["Eib"](conversionCandidate)).toEqual(expected);
+      expect(exbibits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert kb to Eib.', v => {
+      const exbibitsConversion = linearConversion(1024000000);
+      const kilobitsConversion = linearConversion(1000);
+
+      const [toBase, fromBase] = [
+        kilobitsConversion[0],
+        exbibitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Eib"] as const;
+      const conversionCandidate = [v, "kb"] as const;
+
+      expect(information["Eib"](conversionCandidate)).toEqual(expected);
+      expect(exbibits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Mb to Eib.', v => {
+      const exbibitsConversion = linearConversion(1024000000);
+      const megabitsConversion = linearConversion(100000);
+
+      const [toBase, fromBase] = [
+        megabitsConversion[0],
+        exbibitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Eib"] as const;
+      const conversionCandidate = [v, "Mb"] as const;
+
+      expect(information["Eib"](conversionCandidate)).toEqual(expected);
+      expect(exbibits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Gb to Eib.', v => {
+      const exbibitsConversion = linearConversion(1024000000);
+      const gigabitsConversion = linearConversion(1000000);
+
+      const [toBase, fromBase] = [
+        gigabitsConversion[0],
+        exbibitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Eib"] as const;
+      const conversionCandidate = [v, "Gb"] as const;
+
+      expect(information["Eib"](conversionCandidate)).toEqual(expected);
+      expect(exbibits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Tb to Eib.', v => {
+      const exbibitsConversion = linearConversion(1024000000);
+      const terabitsConversion = linearConversion(10000000);
+
+      const [toBase, fromBase] = [
+        terabitsConversion[0],
+        exbibitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Eib"] as const;
+      const conversionCandidate = [v, "Tb"] as const;
+
+      expect(information["Eib"](conversionCandidate)).toEqual(expected);
+      expect(exbibits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Pb to Eib.', v => {
+      const exbibitsConversion = linearConversion(1024000000);
+      const petabitsConversion = linearConversion(100000000);
+
+      const [toBase, fromBase] = [
+        petabitsConversion[0],
+        exbibitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Eib"] as const;
+      const conversionCandidate = [v, "Pb"] as const;
+
+      expect(information["Eib"](conversionCandidate)).toEqual(expected);
+      expect(exbibits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Eb to Eib.', v => {
+      const exbibitsConversion = linearConversion(1024000000);
+      const exabitsConversion = linearConversion(1000000000);
+
+      const [toBase, fromBase] = [
+        exabitsConversion[0],
+        exbibitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Eib"] as const;
+      const conversionCandidate = [v, "Eb"] as const;
+
+      expect(information["Eib"](conversionCandidate)).toEqual(expected);
+      expect(exbibits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Zb to Eib.', v => {
+      const exbibitsConversion = linearConversion(1024000000);
+      const zettabitsConversion = linearConversion(10000000000);
+
+      const [toBase, fromBase] = [
+        zettabitsConversion[0],
+        exbibitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Eib"] as const;
+      const conversionCandidate = [v, "Zb"] as const;
+
+      expect(information["Eib"](conversionCandidate)).toEqual(expected);
+      expect(exbibits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Yb to Eib.', v => {
+      const exbibitsConversion = linearConversion(1024000000);
+      const yottabitsConversion = linearConversion(100000000000);
+
+      const [toBase, fromBase] = [
+        yottabitsConversion[0],
+        exbibitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Eib"] as const;
+      const conversionCandidate = [v, "Yb"] as const;
+
+      expect(information["Eib"](conversionCandidate)).toEqual(expected);
+      expect(exbibits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Kib to Eib.', v => {
+      const exbibitsConversion = linearConversion(1024000000);
+      const kibibitsConversion = linearConversion(1024);
+
+      const [toBase, fromBase] = [
+        kibibitsConversion[0],
+        exbibitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Eib"] as const;
+      const conversionCandidate = [v, "Kib"] as const;
+
+      expect(information["Eib"](conversionCandidate)).toEqual(expected);
+      expect(exbibits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert KB to Eib.', v => {
+      const exbibitsConversion = linearConversion(1024000000);
+      const kilobytesConversion = linearConversion(8192);
+
+      const [toBase, fromBase] = [
+        kilobytesConversion[0],
+        exbibitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Eib"] as const;
+      const conversionCandidate = [v, "KB"] as const;
+
+      expect(information["Eib"](conversionCandidate)).toEqual(expected);
+      expect(exbibits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Mib to Eib.', v => {
+      const exbibitsConversion = linearConversion(1024000000);
+      const mebibitsConversion = linearConversion(102400);
+
+      const [toBase, fromBase] = [
+        mebibitsConversion[0],
+        exbibitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Eib"] as const;
+      const conversionCandidate = [v, "Mib"] as const;
+
+      expect(information["Eib"](conversionCandidate)).toEqual(expected);
+      expect(exbibits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert MB to Eib.', v => {
+      const exbibitsConversion = linearConversion(1024000000);
+      const megabytesConversion = linearConversion(819200);
+
+      const [toBase, fromBase] = [
+        megabytesConversion[0],
+        exbibitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Eib"] as const;
+      const conversionCandidate = [v, "MB"] as const;
+
+      expect(information["Eib"](conversionCandidate)).toEqual(expected);
+      expect(exbibits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Gib to Eib.', v => {
+      const exbibitsConversion = linearConversion(1024000000);
+      const gibibitsConversion = linearConversion(1024000);
+
+      const [toBase, fromBase] = [
+        gibibitsConversion[0],
+        exbibitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Eib"] as const;
+      const conversionCandidate = [v, "Gib"] as const;
+
+      expect(information["Eib"](conversionCandidate)).toEqual(expected);
+      expect(exbibits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert GB to Eib.', v => {
+      const exbibitsConversion = linearConversion(1024000000);
+      const gigabytesConversion = linearConversion(8192000);
+
+      const [toBase, fromBase] = [
+        gigabytesConversion[0],
+        exbibitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Eib"] as const;
+      const conversionCandidate = [v, "GB"] as const;
+
+      expect(information["Eib"](conversionCandidate)).toEqual(expected);
+      expect(exbibits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Tib to Eib.', v => {
+      const exbibitsConversion = linearConversion(1024000000);
+      const tebibitsConversion = linearConversion(10240000);
+
+      const [toBase, fromBase] = [
+        tebibitsConversion[0],
+        exbibitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Eib"] as const;
+      const conversionCandidate = [v, "Tib"] as const;
+
+      expect(information["Eib"](conversionCandidate)).toEqual(expected);
+      expect(exbibits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert TB to Eib.', v => {
+      const exbibitsConversion = linearConversion(1024000000);
+      const terabytesConversion = linearConversion(81920000);
+
+      const [toBase, fromBase] = [
+        terabytesConversion[0],
+        exbibitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Eib"] as const;
+      const conversionCandidate = [v, "TB"] as const;
+
+      expect(information["Eib"](conversionCandidate)).toEqual(expected);
+      expect(exbibits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Pib to Eib.', v => {
+      const exbibitsConversion = linearConversion(1024000000);
+      const pebibitsConversion = linearConversion(102400000);
+
+      const [toBase, fromBase] = [
+        pebibitsConversion[0],
+        exbibitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Eib"] as const;
+      const conversionCandidate = [v, "Pib"] as const;
+
+      expect(information["Eib"](conversionCandidate)).toEqual(expected);
+      expect(exbibits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert PB to Eib.', v => {
+      const exbibitsConversion = linearConversion(1024000000);
+      const petabytesConversion = linearConversion(819200000);
+
+      const [toBase, fromBase] = [
+        petabytesConversion[0],
+        exbibitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Eib"] as const;
+      const conversionCandidate = [v, "PB"] as const;
+
+      expect(information["Eib"](conversionCandidate)).toEqual(expected);
+      expect(exbibits(conversionCandidate)).toEqual(expected);
+    });
+
+
+
+    it.each([1, 10, 100])('should convert EB to Eib.', v => {
+      const exbibitsConversion = linearConversion(1024000000);
+      const exabytesConversion = linearConversion(8192000000);
+
+      const [toBase, fromBase] = [
+        exabytesConversion[0],
+        exbibitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Eib"] as const;
+      const conversionCandidate = [v, "EB"] as const;
+
+      expect(information["Eib"](conversionCandidate)).toEqual(expected);
+      expect(exbibits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Zib to Eib.', v => {
+      const exbibitsConversion = linearConversion(1024000000);
+      const zebibitsConversion = linearConversion(10240000000);
+
+      const [toBase, fromBase] = [
+        zebibitsConversion[0],
+        exbibitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Eib"] as const;
+      const conversionCandidate = [v, "Zib"] as const;
+
+      expect(information["Eib"](conversionCandidate)).toEqual(expected);
+      expect(exbibits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert ZB to Eib.', v => {
+      const exbibitsConversion = linearConversion(1024000000);
+      const zettabytesConversion = linearConversion(81920000000);
+
+      const [toBase, fromBase] = [
+        zettabytesConversion[0],
+        exbibitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Eib"] as const;
+      const conversionCandidate = [v, "ZB"] as const;
+
+      expect(information["Eib"](conversionCandidate)).toEqual(expected);
+      expect(exbibits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Yib to Eib.', v => {
+      const exbibitsConversion = linearConversion(1024000000);
+      const yobibitsConversion = linearConversion(102400000000);
+
+      const [toBase, fromBase] = [
+        yobibitsConversion[0],
+        exbibitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Eib"] as const;
+      const conversionCandidate = [v, "Yib"] as const;
+
+      expect(information["Eib"](conversionCandidate)).toEqual(expected);
+      expect(exbibits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert YB to Eib.', v => {
+      const exbibitsConversion = linearConversion(1024000000);
+      const yottabytesConversion = linearConversion(819200000000);
+
+      const [toBase, fromBase] = [
+        yottabytesConversion[0],
+        exbibitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Eib"] as const;
+      const conversionCandidate = [v, "YB"] as const;
+
+      expect(information["Eib"](conversionCandidate)).toEqual(expected);
+      expect(exbibits(conversionCandidate)).toEqual(expected);
+    });
+  });
+
+
+  describe('EB', () => {
+    it.each([1, 10, 100])('should yield a EB measurement when given a number.', v => {
+      expect(information["EB"](v)).toEqual([v, "EB"]);
+      expect(exabytes(v)).toEqual([v, "EB"]);
+    });
+
+    it.each([1, 10, 100])('should convert b to EB.', v => {
+      const exabytesConversion = linearConversion(8192000000);
+      const bitsConversion = linearConversion(1);
+
+      const [toBase, fromBase] = [
+        bitsConversion[0],
+        exabytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "EB"] as const;
+      const conversionCandidate = [v, "b"] as const;
+
+      expect(information["EB"](conversionCandidate)).toEqual(expected);
+      expect(exabytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert B to EB.', v => {
+      const exabytesConversion = linearConversion(8192000000);
+      const bytesConversion = linearConversion(8);
+
+      const [toBase, fromBase] = [
+        bytesConversion[0],
+        exabytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "EB"] as const;
+      const conversionCandidate = [v, "B"] as const;
+
+      expect(information["EB"](conversionCandidate)).toEqual(expected);
+      expect(exabytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert kb to EB.', v => {
+      const exabytesConversion = linearConversion(8192000000);
+      const kilobitsConversion = linearConversion(1000);
+
+      const [toBase, fromBase] = [
+        kilobitsConversion[0],
+        exabytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "EB"] as const;
+      const conversionCandidate = [v, "kb"] as const;
+
+      expect(information["EB"](conversionCandidate)).toEqual(expected);
+      expect(exabytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Mb to EB.', v => {
+      const exabytesConversion = linearConversion(8192000000);
+      const megabitsConversion = linearConversion(100000);
+
+      const [toBase, fromBase] = [
+        megabitsConversion[0],
+        exabytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "EB"] as const;
+      const conversionCandidate = [v, "Mb"] as const;
+
+      expect(information["EB"](conversionCandidate)).toEqual(expected);
+      expect(exabytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Gb to EB.', v => {
+      const exabytesConversion = linearConversion(8192000000);
+      const gigabitsConversion = linearConversion(1000000);
+
+      const [toBase, fromBase] = [
+        gigabitsConversion[0],
+        exabytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "EB"] as const;
+      const conversionCandidate = [v, "Gb"] as const;
+
+      expect(information["EB"](conversionCandidate)).toEqual(expected);
+      expect(exabytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Tb to EB.', v => {
+      const exabytesConversion = linearConversion(8192000000);
+      const terabitsConversion = linearConversion(10000000);
+
+      const [toBase, fromBase] = [
+        terabitsConversion[0],
+        exabytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "EB"] as const;
+      const conversionCandidate = [v, "Tb"] as const;
+
+      expect(information["EB"](conversionCandidate)).toEqual(expected);
+      expect(exabytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Pb to EB.', v => {
+      const exabytesConversion = linearConversion(8192000000);
+      const petabitsConversion = linearConversion(100000000);
+
+      const [toBase, fromBase] = [
+        petabitsConversion[0],
+        exabytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "EB"] as const;
+      const conversionCandidate = [v, "Pb"] as const;
+
+      expect(information["EB"](conversionCandidate)).toEqual(expected);
+      expect(exabytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Eb to EB.', v => {
+      const exabytesConversion = linearConversion(8192000000);
+      const exabitsConversion = linearConversion(1000000000);
+
+      const [toBase, fromBase] = [
+        exabitsConversion[0],
+        exabytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "EB"] as const;
+      const conversionCandidate = [v, "Eb"] as const;
+
+      expect(information["EB"](conversionCandidate)).toEqual(expected);
+      expect(exabytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Zb to EB.', v => {
+      const exabytesConversion = linearConversion(8192000000);
+      const zettabitsConversion = linearConversion(10000000000);
+
+      const [toBase, fromBase] = [
+        zettabitsConversion[0],
+        exabytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "EB"] as const;
+      const conversionCandidate = [v, "Zb"] as const;
+
+      expect(information["EB"](conversionCandidate)).toEqual(expected);
+      expect(exabytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Yb to EB.', v => {
+      const exabytesConversion = linearConversion(8192000000);
+      const yottabitsConversion = linearConversion(100000000000);
+
+      const [toBase, fromBase] = [
+        yottabitsConversion[0],
+        exabytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "EB"] as const;
+      const conversionCandidate = [v, "Yb"] as const;
+
+      expect(information["EB"](conversionCandidate)).toEqual(expected);
+      expect(exabytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Kib to EB.', v => {
+      const exabytesConversion = linearConversion(8192000000);
+      const kibibitsConversion = linearConversion(1024);
+
+      const [toBase, fromBase] = [
+        kibibitsConversion[0],
+        exabytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "EB"] as const;
+      const conversionCandidate = [v, "Kib"] as const;
+
+      expect(information["EB"](conversionCandidate)).toEqual(expected);
+      expect(exabytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert KB to EB.', v => {
+      const exabytesConversion = linearConversion(8192000000);
+      const kilobytesConversion = linearConversion(8192);
+
+      const [toBase, fromBase] = [
+        kilobytesConversion[0],
+        exabytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "EB"] as const;
+      const conversionCandidate = [v, "KB"] as const;
+
+      expect(information["EB"](conversionCandidate)).toEqual(expected);
+      expect(exabytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Mib to EB.', v => {
+      const exabytesConversion = linearConversion(8192000000);
+      const mebibitsConversion = linearConversion(102400);
+
+      const [toBase, fromBase] = [
+        mebibitsConversion[0],
+        exabytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "EB"] as const;
+      const conversionCandidate = [v, "Mib"] as const;
+
+      expect(information["EB"](conversionCandidate)).toEqual(expected);
+      expect(exabytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert MB to EB.', v => {
+      const exabytesConversion = linearConversion(8192000000);
+      const megabytesConversion = linearConversion(819200);
+
+      const [toBase, fromBase] = [
+        megabytesConversion[0],
+        exabytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "EB"] as const;
+      const conversionCandidate = [v, "MB"] as const;
+
+      expect(information["EB"](conversionCandidate)).toEqual(expected);
+      expect(exabytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Gib to EB.', v => {
+      const exabytesConversion = linearConversion(8192000000);
+      const gibibitsConversion = linearConversion(1024000);
+
+      const [toBase, fromBase] = [
+        gibibitsConversion[0],
+        exabytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "EB"] as const;
+      const conversionCandidate = [v, "Gib"] as const;
+
+      expect(information["EB"](conversionCandidate)).toEqual(expected);
+      expect(exabytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert GB to EB.', v => {
+      const exabytesConversion = linearConversion(8192000000);
+      const gigabytesConversion = linearConversion(8192000);
+
+      const [toBase, fromBase] = [
+        gigabytesConversion[0],
+        exabytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "EB"] as const;
+      const conversionCandidate = [v, "GB"] as const;
+
+      expect(information["EB"](conversionCandidate)).toEqual(expected);
+      expect(exabytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Tib to EB.', v => {
+      const exabytesConversion = linearConversion(8192000000);
+      const tebibitsConversion = linearConversion(10240000);
+
+      const [toBase, fromBase] = [
+        tebibitsConversion[0],
+        exabytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "EB"] as const;
+      const conversionCandidate = [v, "Tib"] as const;
+
+      expect(information["EB"](conversionCandidate)).toEqual(expected);
+      expect(exabytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert TB to EB.', v => {
+      const exabytesConversion = linearConversion(8192000000);
+      const terabytesConversion = linearConversion(81920000);
+
+      const [toBase, fromBase] = [
+        terabytesConversion[0],
+        exabytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "EB"] as const;
+      const conversionCandidate = [v, "TB"] as const;
+
+      expect(information["EB"](conversionCandidate)).toEqual(expected);
+      expect(exabytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Pib to EB.', v => {
+      const exabytesConversion = linearConversion(8192000000);
+      const pebibitsConversion = linearConversion(102400000);
+
+      const [toBase, fromBase] = [
+        pebibitsConversion[0],
+        exabytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "EB"] as const;
+      const conversionCandidate = [v, "Pib"] as const;
+
+      expect(information["EB"](conversionCandidate)).toEqual(expected);
+      expect(exabytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert PB to EB.', v => {
+      const exabytesConversion = linearConversion(8192000000);
+      const petabytesConversion = linearConversion(819200000);
+
+      const [toBase, fromBase] = [
+        petabytesConversion[0],
+        exabytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "EB"] as const;
+      const conversionCandidate = [v, "PB"] as const;
+
+      expect(information["EB"](conversionCandidate)).toEqual(expected);
+      expect(exabytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Eib to EB.', v => {
+      const exabytesConversion = linearConversion(8192000000);
+      const exbibitsConversion = linearConversion(1024000000);
+
+      const [toBase, fromBase] = [
+        exbibitsConversion[0],
+        exabytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "EB"] as const;
+      const conversionCandidate = [v, "Eib"] as const;
+
+      expect(information["EB"](conversionCandidate)).toEqual(expected);
+      expect(exabytes(conversionCandidate)).toEqual(expected);
+    });
+
+
+
+    it.each([1, 10, 100])('should convert Zib to EB.', v => {
+      const exabytesConversion = linearConversion(8192000000);
+      const zebibitsConversion = linearConversion(10240000000);
+
+      const [toBase, fromBase] = [
+        zebibitsConversion[0],
+        exabytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "EB"] as const;
+      const conversionCandidate = [v, "Zib"] as const;
+
+      expect(information["EB"](conversionCandidate)).toEqual(expected);
+      expect(exabytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert ZB to EB.', v => {
+      const exabytesConversion = linearConversion(8192000000);
+      const zettabytesConversion = linearConversion(81920000000);
+
+      const [toBase, fromBase] = [
+        zettabytesConversion[0],
+        exabytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "EB"] as const;
+      const conversionCandidate = [v, "ZB"] as const;
+
+      expect(information["EB"](conversionCandidate)).toEqual(expected);
+      expect(exabytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Yib to EB.', v => {
+      const exabytesConversion = linearConversion(8192000000);
+      const yobibitsConversion = linearConversion(102400000000);
+
+      const [toBase, fromBase] = [
+        yobibitsConversion[0],
+        exabytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "EB"] as const;
+      const conversionCandidate = [v, "Yib"] as const;
+
+      expect(information["EB"](conversionCandidate)).toEqual(expected);
+      expect(exabytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert YB to EB.', v => {
+      const exabytesConversion = linearConversion(8192000000);
+      const yottabytesConversion = linearConversion(819200000000);
+
+      const [toBase, fromBase] = [
+        yottabytesConversion[0],
+        exabytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "EB"] as const;
+      const conversionCandidate = [v, "YB"] as const;
+
+      expect(information["EB"](conversionCandidate)).toEqual(expected);
+      expect(exabytes(conversionCandidate)).toEqual(expected);
+    });
+  });
+
+
+  describe('Zib', () => {
+    it.each([1, 10, 100])('should yield a Zib measurement when given a number.', v => {
+      expect(information["Zib"](v)).toEqual([v, "Zib"]);
+      expect(zebibits(v)).toEqual([v, "Zib"]);
+    });
+
+    it.each([1, 10, 100])('should convert b to Zib.', v => {
+      const zebibitsConversion = linearConversion(10240000000);
+      const bitsConversion = linearConversion(1);
+
+      const [toBase, fromBase] = [
+        bitsConversion[0],
+        zebibitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Zib"] as const;
+      const conversionCandidate = [v, "b"] as const;
+
+      expect(information["Zib"](conversionCandidate)).toEqual(expected);
+      expect(zebibits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert B to Zib.', v => {
+      const zebibitsConversion = linearConversion(10240000000);
+      const bytesConversion = linearConversion(8);
+
+      const [toBase, fromBase] = [
+        bytesConversion[0],
+        zebibitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Zib"] as const;
+      const conversionCandidate = [v, "B"] as const;
+
+      expect(information["Zib"](conversionCandidate)).toEqual(expected);
+      expect(zebibits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert kb to Zib.', v => {
+      const zebibitsConversion = linearConversion(10240000000);
+      const kilobitsConversion = linearConversion(1000);
+
+      const [toBase, fromBase] = [
+        kilobitsConversion[0],
+        zebibitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Zib"] as const;
+      const conversionCandidate = [v, "kb"] as const;
+
+      expect(information["Zib"](conversionCandidate)).toEqual(expected);
+      expect(zebibits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Mb to Zib.', v => {
+      const zebibitsConversion = linearConversion(10240000000);
+      const megabitsConversion = linearConversion(100000);
+
+      const [toBase, fromBase] = [
+        megabitsConversion[0],
+        zebibitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Zib"] as const;
+      const conversionCandidate = [v, "Mb"] as const;
+
+      expect(information["Zib"](conversionCandidate)).toEqual(expected);
+      expect(zebibits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Gb to Zib.', v => {
+      const zebibitsConversion = linearConversion(10240000000);
+      const gigabitsConversion = linearConversion(1000000);
+
+      const [toBase, fromBase] = [
+        gigabitsConversion[0],
+        zebibitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Zib"] as const;
+      const conversionCandidate = [v, "Gb"] as const;
+
+      expect(information["Zib"](conversionCandidate)).toEqual(expected);
+      expect(zebibits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Tb to Zib.', v => {
+      const zebibitsConversion = linearConversion(10240000000);
+      const terabitsConversion = linearConversion(10000000);
+
+      const [toBase, fromBase] = [
+        terabitsConversion[0],
+        zebibitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Zib"] as const;
+      const conversionCandidate = [v, "Tb"] as const;
+
+      expect(information["Zib"](conversionCandidate)).toEqual(expected);
+      expect(zebibits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Pb to Zib.', v => {
+      const zebibitsConversion = linearConversion(10240000000);
+      const petabitsConversion = linearConversion(100000000);
+
+      const [toBase, fromBase] = [
+        petabitsConversion[0],
+        zebibitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Zib"] as const;
+      const conversionCandidate = [v, "Pb"] as const;
+
+      expect(information["Zib"](conversionCandidate)).toEqual(expected);
+      expect(zebibits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Eb to Zib.', v => {
+      const zebibitsConversion = linearConversion(10240000000);
+      const exabitsConversion = linearConversion(1000000000);
+
+      const [toBase, fromBase] = [
+        exabitsConversion[0],
+        zebibitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Zib"] as const;
+      const conversionCandidate = [v, "Eb"] as const;
+
+      expect(information["Zib"](conversionCandidate)).toEqual(expected);
+      expect(zebibits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Zb to Zib.', v => {
+      const zebibitsConversion = linearConversion(10240000000);
+      const zettabitsConversion = linearConversion(10000000000);
+
+      const [toBase, fromBase] = [
+        zettabitsConversion[0],
+        zebibitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Zib"] as const;
+      const conversionCandidate = [v, "Zb"] as const;
+
+      expect(information["Zib"](conversionCandidate)).toEqual(expected);
+      expect(zebibits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Yb to Zib.', v => {
+      const zebibitsConversion = linearConversion(10240000000);
+      const yottabitsConversion = linearConversion(100000000000);
+
+      const [toBase, fromBase] = [
+        yottabitsConversion[0],
+        zebibitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Zib"] as const;
+      const conversionCandidate = [v, "Yb"] as const;
+
+      expect(information["Zib"](conversionCandidate)).toEqual(expected);
+      expect(zebibits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Kib to Zib.', v => {
+      const zebibitsConversion = linearConversion(10240000000);
+      const kibibitsConversion = linearConversion(1024);
+
+      const [toBase, fromBase] = [
+        kibibitsConversion[0],
+        zebibitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Zib"] as const;
+      const conversionCandidate = [v, "Kib"] as const;
+
+      expect(information["Zib"](conversionCandidate)).toEqual(expected);
+      expect(zebibits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert KB to Zib.', v => {
+      const zebibitsConversion = linearConversion(10240000000);
+      const kilobytesConversion = linearConversion(8192);
+
+      const [toBase, fromBase] = [
+        kilobytesConversion[0],
+        zebibitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Zib"] as const;
+      const conversionCandidate = [v, "KB"] as const;
+
+      expect(information["Zib"](conversionCandidate)).toEqual(expected);
+      expect(zebibits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Mib to Zib.', v => {
+      const zebibitsConversion = linearConversion(10240000000);
+      const mebibitsConversion = linearConversion(102400);
+
+      const [toBase, fromBase] = [
+        mebibitsConversion[0],
+        zebibitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Zib"] as const;
+      const conversionCandidate = [v, "Mib"] as const;
+
+      expect(information["Zib"](conversionCandidate)).toEqual(expected);
+      expect(zebibits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert MB to Zib.', v => {
+      const zebibitsConversion = linearConversion(10240000000);
+      const megabytesConversion = linearConversion(819200);
+
+      const [toBase, fromBase] = [
+        megabytesConversion[0],
+        zebibitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Zib"] as const;
+      const conversionCandidate = [v, "MB"] as const;
+
+      expect(information["Zib"](conversionCandidate)).toEqual(expected);
+      expect(zebibits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Gib to Zib.', v => {
+      const zebibitsConversion = linearConversion(10240000000);
+      const gibibitsConversion = linearConversion(1024000);
+
+      const [toBase, fromBase] = [
+        gibibitsConversion[0],
+        zebibitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Zib"] as const;
+      const conversionCandidate = [v, "Gib"] as const;
+
+      expect(information["Zib"](conversionCandidate)).toEqual(expected);
+      expect(zebibits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert GB to Zib.', v => {
+      const zebibitsConversion = linearConversion(10240000000);
+      const gigabytesConversion = linearConversion(8192000);
+
+      const [toBase, fromBase] = [
+        gigabytesConversion[0],
+        zebibitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Zib"] as const;
+      const conversionCandidate = [v, "GB"] as const;
+
+      expect(information["Zib"](conversionCandidate)).toEqual(expected);
+      expect(zebibits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Tib to Zib.', v => {
+      const zebibitsConversion = linearConversion(10240000000);
+      const tebibitsConversion = linearConversion(10240000);
+
+      const [toBase, fromBase] = [
+        tebibitsConversion[0],
+        zebibitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Zib"] as const;
+      const conversionCandidate = [v, "Tib"] as const;
+
+      expect(information["Zib"](conversionCandidate)).toEqual(expected);
+      expect(zebibits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert TB to Zib.', v => {
+      const zebibitsConversion = linearConversion(10240000000);
+      const terabytesConversion = linearConversion(81920000);
+
+      const [toBase, fromBase] = [
+        terabytesConversion[0],
+        zebibitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Zib"] as const;
+      const conversionCandidate = [v, "TB"] as const;
+
+      expect(information["Zib"](conversionCandidate)).toEqual(expected);
+      expect(zebibits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Pib to Zib.', v => {
+      const zebibitsConversion = linearConversion(10240000000);
+      const pebibitsConversion = linearConversion(102400000);
+
+      const [toBase, fromBase] = [
+        pebibitsConversion[0],
+        zebibitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Zib"] as const;
+      const conversionCandidate = [v, "Pib"] as const;
+
+      expect(information["Zib"](conversionCandidate)).toEqual(expected);
+      expect(zebibits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert PB to Zib.', v => {
+      const zebibitsConversion = linearConversion(10240000000);
+      const petabytesConversion = linearConversion(819200000);
+
+      const [toBase, fromBase] = [
+        petabytesConversion[0],
+        zebibitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Zib"] as const;
+      const conversionCandidate = [v, "PB"] as const;
+
+      expect(information["Zib"](conversionCandidate)).toEqual(expected);
+      expect(zebibits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Eib to Zib.', v => {
+      const zebibitsConversion = linearConversion(10240000000);
+      const exbibitsConversion = linearConversion(1024000000);
+
+      const [toBase, fromBase] = [
+        exbibitsConversion[0],
+        zebibitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Zib"] as const;
+      const conversionCandidate = [v, "Eib"] as const;
+
+      expect(information["Zib"](conversionCandidate)).toEqual(expected);
+      expect(zebibits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert EB to Zib.', v => {
+      const zebibitsConversion = linearConversion(10240000000);
+      const exabytesConversion = linearConversion(8192000000);
+
+      const [toBase, fromBase] = [
+        exabytesConversion[0],
+        zebibitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Zib"] as const;
+      const conversionCandidate = [v, "EB"] as const;
+
+      expect(information["Zib"](conversionCandidate)).toEqual(expected);
+      expect(zebibits(conversionCandidate)).toEqual(expected);
+    });
+
+
+
+    it.each([1, 10, 100])('should convert ZB to Zib.', v => {
+      const zebibitsConversion = linearConversion(10240000000);
+      const zettabytesConversion = linearConversion(81920000000);
+
+      const [toBase, fromBase] = [
+        zettabytesConversion[0],
+        zebibitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Zib"] as const;
+      const conversionCandidate = [v, "ZB"] as const;
+
+      expect(information["Zib"](conversionCandidate)).toEqual(expected);
+      expect(zebibits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Yib to Zib.', v => {
+      const zebibitsConversion = linearConversion(10240000000);
+      const yobibitsConversion = linearConversion(102400000000);
+
+      const [toBase, fromBase] = [
+        yobibitsConversion[0],
+        zebibitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Zib"] as const;
+      const conversionCandidate = [v, "Yib"] as const;
+
+      expect(information["Zib"](conversionCandidate)).toEqual(expected);
+      expect(zebibits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert YB to Zib.', v => {
+      const zebibitsConversion = linearConversion(10240000000);
+      const yottabytesConversion = linearConversion(819200000000);
+
+      const [toBase, fromBase] = [
+        yottabytesConversion[0],
+        zebibitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Zib"] as const;
+      const conversionCandidate = [v, "YB"] as const;
+
+      expect(information["Zib"](conversionCandidate)).toEqual(expected);
+      expect(zebibits(conversionCandidate)).toEqual(expected);
+    });
+  });
+
+
+  describe('ZB', () => {
+    it.each([1, 10, 100])('should yield a ZB measurement when given a number.', v => {
+      expect(information["ZB"](v)).toEqual([v, "ZB"]);
+      expect(zettabytes(v)).toEqual([v, "ZB"]);
+    });
+
+    it.each([1, 10, 100])('should convert b to ZB.', v => {
+      const zettabytesConversion = linearConversion(81920000000);
+      const bitsConversion = linearConversion(1);
+
+      const [toBase, fromBase] = [
+        bitsConversion[0],
+        zettabytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "ZB"] as const;
+      const conversionCandidate = [v, "b"] as const;
+
+      expect(information["ZB"](conversionCandidate)).toEqual(expected);
+      expect(zettabytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert B to ZB.', v => {
+      const zettabytesConversion = linearConversion(81920000000);
+      const bytesConversion = linearConversion(8);
+
+      const [toBase, fromBase] = [
+        bytesConversion[0],
+        zettabytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "ZB"] as const;
+      const conversionCandidate = [v, "B"] as const;
+
+      expect(information["ZB"](conversionCandidate)).toEqual(expected);
+      expect(zettabytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert kb to ZB.', v => {
+      const zettabytesConversion = linearConversion(81920000000);
+      const kilobitsConversion = linearConversion(1000);
+
+      const [toBase, fromBase] = [
+        kilobitsConversion[0],
+        zettabytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "ZB"] as const;
+      const conversionCandidate = [v, "kb"] as const;
+
+      expect(information["ZB"](conversionCandidate)).toEqual(expected);
+      expect(zettabytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Mb to ZB.', v => {
+      const zettabytesConversion = linearConversion(81920000000);
+      const megabitsConversion = linearConversion(100000);
+
+      const [toBase, fromBase] = [
+        megabitsConversion[0],
+        zettabytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "ZB"] as const;
+      const conversionCandidate = [v, "Mb"] as const;
+
+      expect(information["ZB"](conversionCandidate)).toEqual(expected);
+      expect(zettabytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Gb to ZB.', v => {
+      const zettabytesConversion = linearConversion(81920000000);
+      const gigabitsConversion = linearConversion(1000000);
+
+      const [toBase, fromBase] = [
+        gigabitsConversion[0],
+        zettabytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "ZB"] as const;
+      const conversionCandidate = [v, "Gb"] as const;
+
+      expect(information["ZB"](conversionCandidate)).toEqual(expected);
+      expect(zettabytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Tb to ZB.', v => {
+      const zettabytesConversion = linearConversion(81920000000);
+      const terabitsConversion = linearConversion(10000000);
+
+      const [toBase, fromBase] = [
+        terabitsConversion[0],
+        zettabytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "ZB"] as const;
+      const conversionCandidate = [v, "Tb"] as const;
+
+      expect(information["ZB"](conversionCandidate)).toEqual(expected);
+      expect(zettabytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Pb to ZB.', v => {
+      const zettabytesConversion = linearConversion(81920000000);
+      const petabitsConversion = linearConversion(100000000);
+
+      const [toBase, fromBase] = [
+        petabitsConversion[0],
+        zettabytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "ZB"] as const;
+      const conversionCandidate = [v, "Pb"] as const;
+
+      expect(information["ZB"](conversionCandidate)).toEqual(expected);
+      expect(zettabytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Eb to ZB.', v => {
+      const zettabytesConversion = linearConversion(81920000000);
+      const exabitsConversion = linearConversion(1000000000);
+
+      const [toBase, fromBase] = [
+        exabitsConversion[0],
+        zettabytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "ZB"] as const;
+      const conversionCandidate = [v, "Eb"] as const;
+
+      expect(information["ZB"](conversionCandidate)).toEqual(expected);
+      expect(zettabytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Zb to ZB.', v => {
+      const zettabytesConversion = linearConversion(81920000000);
+      const zettabitsConversion = linearConversion(10000000000);
+
+      const [toBase, fromBase] = [
+        zettabitsConversion[0],
+        zettabytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "ZB"] as const;
+      const conversionCandidate = [v, "Zb"] as const;
+
+      expect(information["ZB"](conversionCandidate)).toEqual(expected);
+      expect(zettabytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Yb to ZB.', v => {
+      const zettabytesConversion = linearConversion(81920000000);
+      const yottabitsConversion = linearConversion(100000000000);
+
+      const [toBase, fromBase] = [
+        yottabitsConversion[0],
+        zettabytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "ZB"] as const;
+      const conversionCandidate = [v, "Yb"] as const;
+
+      expect(information["ZB"](conversionCandidate)).toEqual(expected);
+      expect(zettabytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Kib to ZB.', v => {
+      const zettabytesConversion = linearConversion(81920000000);
+      const kibibitsConversion = linearConversion(1024);
+
+      const [toBase, fromBase] = [
+        kibibitsConversion[0],
+        zettabytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "ZB"] as const;
+      const conversionCandidate = [v, "Kib"] as const;
+
+      expect(information["ZB"](conversionCandidate)).toEqual(expected);
+      expect(zettabytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert KB to ZB.', v => {
+      const zettabytesConversion = linearConversion(81920000000);
+      const kilobytesConversion = linearConversion(8192);
+
+      const [toBase, fromBase] = [
+        kilobytesConversion[0],
+        zettabytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "ZB"] as const;
+      const conversionCandidate = [v, "KB"] as const;
+
+      expect(information["ZB"](conversionCandidate)).toEqual(expected);
+      expect(zettabytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Mib to ZB.', v => {
+      const zettabytesConversion = linearConversion(81920000000);
+      const mebibitsConversion = linearConversion(102400);
+
+      const [toBase, fromBase] = [
+        mebibitsConversion[0],
+        zettabytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "ZB"] as const;
+      const conversionCandidate = [v, "Mib"] as const;
+
+      expect(information["ZB"](conversionCandidate)).toEqual(expected);
+      expect(zettabytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert MB to ZB.', v => {
+      const zettabytesConversion = linearConversion(81920000000);
+      const megabytesConversion = linearConversion(819200);
+
+      const [toBase, fromBase] = [
+        megabytesConversion[0],
+        zettabytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "ZB"] as const;
+      const conversionCandidate = [v, "MB"] as const;
+
+      expect(information["ZB"](conversionCandidate)).toEqual(expected);
+      expect(zettabytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Gib to ZB.', v => {
+      const zettabytesConversion = linearConversion(81920000000);
+      const gibibitsConversion = linearConversion(1024000);
+
+      const [toBase, fromBase] = [
+        gibibitsConversion[0],
+        zettabytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "ZB"] as const;
+      const conversionCandidate = [v, "Gib"] as const;
+
+      expect(information["ZB"](conversionCandidate)).toEqual(expected);
+      expect(zettabytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert GB to ZB.', v => {
+      const zettabytesConversion = linearConversion(81920000000);
+      const gigabytesConversion = linearConversion(8192000);
+
+      const [toBase, fromBase] = [
+        gigabytesConversion[0],
+        zettabytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "ZB"] as const;
+      const conversionCandidate = [v, "GB"] as const;
+
+      expect(information["ZB"](conversionCandidate)).toEqual(expected);
+      expect(zettabytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Tib to ZB.', v => {
+      const zettabytesConversion = linearConversion(81920000000);
+      const tebibitsConversion = linearConversion(10240000);
+
+      const [toBase, fromBase] = [
+        tebibitsConversion[0],
+        zettabytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "ZB"] as const;
+      const conversionCandidate = [v, "Tib"] as const;
+
+      expect(information["ZB"](conversionCandidate)).toEqual(expected);
+      expect(zettabytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert TB to ZB.', v => {
+      const zettabytesConversion = linearConversion(81920000000);
+      const terabytesConversion = linearConversion(81920000);
+
+      const [toBase, fromBase] = [
+        terabytesConversion[0],
+        zettabytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "ZB"] as const;
+      const conversionCandidate = [v, "TB"] as const;
+
+      expect(information["ZB"](conversionCandidate)).toEqual(expected);
+      expect(zettabytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Pib to ZB.', v => {
+      const zettabytesConversion = linearConversion(81920000000);
+      const pebibitsConversion = linearConversion(102400000);
+
+      const [toBase, fromBase] = [
+        pebibitsConversion[0],
+        zettabytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "ZB"] as const;
+      const conversionCandidate = [v, "Pib"] as const;
+
+      expect(information["ZB"](conversionCandidate)).toEqual(expected);
+      expect(zettabytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert PB to ZB.', v => {
+      const zettabytesConversion = linearConversion(81920000000);
+      const petabytesConversion = linearConversion(819200000);
+
+      const [toBase, fromBase] = [
+        petabytesConversion[0],
+        zettabytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "ZB"] as const;
+      const conversionCandidate = [v, "PB"] as const;
+
+      expect(information["ZB"](conversionCandidate)).toEqual(expected);
+      expect(zettabytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Eib to ZB.', v => {
+      const zettabytesConversion = linearConversion(81920000000);
+      const exbibitsConversion = linearConversion(1024000000);
+
+      const [toBase, fromBase] = [
+        exbibitsConversion[0],
+        zettabytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "ZB"] as const;
+      const conversionCandidate = [v, "Eib"] as const;
+
+      expect(information["ZB"](conversionCandidate)).toEqual(expected);
+      expect(zettabytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert EB to ZB.', v => {
+      const zettabytesConversion = linearConversion(81920000000);
+      const exabytesConversion = linearConversion(8192000000);
+
+      const [toBase, fromBase] = [
+        exabytesConversion[0],
+        zettabytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "ZB"] as const;
+      const conversionCandidate = [v, "EB"] as const;
+
+      expect(information["ZB"](conversionCandidate)).toEqual(expected);
+      expect(zettabytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Zib to ZB.', v => {
+      const zettabytesConversion = linearConversion(81920000000);
+      const zebibitsConversion = linearConversion(10240000000);
+
+      const [toBase, fromBase] = [
+        zebibitsConversion[0],
+        zettabytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "ZB"] as const;
+      const conversionCandidate = [v, "Zib"] as const;
+
+      expect(information["ZB"](conversionCandidate)).toEqual(expected);
+      expect(zettabytes(conversionCandidate)).toEqual(expected);
+    });
+
+
+
+    it.each([1, 10, 100])('should convert Yib to ZB.', v => {
+      const zettabytesConversion = linearConversion(81920000000);
+      const yobibitsConversion = linearConversion(102400000000);
+
+      const [toBase, fromBase] = [
+        yobibitsConversion[0],
+        zettabytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "ZB"] as const;
+      const conversionCandidate = [v, "Yib"] as const;
+
+      expect(information["ZB"](conversionCandidate)).toEqual(expected);
+      expect(zettabytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert YB to ZB.', v => {
+      const zettabytesConversion = linearConversion(81920000000);
+      const yottabytesConversion = linearConversion(819200000000);
+
+      const [toBase, fromBase] = [
+        yottabytesConversion[0],
+        zettabytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "ZB"] as const;
+      const conversionCandidate = [v, "YB"] as const;
+
+      expect(information["ZB"](conversionCandidate)).toEqual(expected);
+      expect(zettabytes(conversionCandidate)).toEqual(expected);
+    });
+  });
+
+
+  describe('Yib', () => {
+    it.each([1, 10, 100])('should yield a Yib measurement when given a number.', v => {
+      expect(information["Yib"](v)).toEqual([v, "Yib"]);
+      expect(yobibits(v)).toEqual([v, "Yib"]);
+    });
+
+    it.each([1, 10, 100])('should convert b to Yib.', v => {
+      const yobibitsConversion = linearConversion(102400000000);
+      const bitsConversion = linearConversion(1);
+
+      const [toBase, fromBase] = [
+        bitsConversion[0],
+        yobibitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Yib"] as const;
+      const conversionCandidate = [v, "b"] as const;
+
+      expect(information["Yib"](conversionCandidate)).toEqual(expected);
+      expect(yobibits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert B to Yib.', v => {
+      const yobibitsConversion = linearConversion(102400000000);
+      const bytesConversion = linearConversion(8);
+
+      const [toBase, fromBase] = [
+        bytesConversion[0],
+        yobibitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Yib"] as const;
+      const conversionCandidate = [v, "B"] as const;
+
+      expect(information["Yib"](conversionCandidate)).toEqual(expected);
+      expect(yobibits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert kb to Yib.', v => {
+      const yobibitsConversion = linearConversion(102400000000);
+      const kilobitsConversion = linearConversion(1000);
+
+      const [toBase, fromBase] = [
+        kilobitsConversion[0],
+        yobibitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Yib"] as const;
+      const conversionCandidate = [v, "kb"] as const;
+
+      expect(information["Yib"](conversionCandidate)).toEqual(expected);
+      expect(yobibits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Mb to Yib.', v => {
+      const yobibitsConversion = linearConversion(102400000000);
+      const megabitsConversion = linearConversion(100000);
+
+      const [toBase, fromBase] = [
+        megabitsConversion[0],
+        yobibitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Yib"] as const;
+      const conversionCandidate = [v, "Mb"] as const;
+
+      expect(information["Yib"](conversionCandidate)).toEqual(expected);
+      expect(yobibits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Gb to Yib.', v => {
+      const yobibitsConversion = linearConversion(102400000000);
+      const gigabitsConversion = linearConversion(1000000);
+
+      const [toBase, fromBase] = [
+        gigabitsConversion[0],
+        yobibitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Yib"] as const;
+      const conversionCandidate = [v, "Gb"] as const;
+
+      expect(information["Yib"](conversionCandidate)).toEqual(expected);
+      expect(yobibits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Tb to Yib.', v => {
+      const yobibitsConversion = linearConversion(102400000000);
+      const terabitsConversion = linearConversion(10000000);
+
+      const [toBase, fromBase] = [
+        terabitsConversion[0],
+        yobibitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Yib"] as const;
+      const conversionCandidate = [v, "Tb"] as const;
+
+      expect(information["Yib"](conversionCandidate)).toEqual(expected);
+      expect(yobibits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Pb to Yib.', v => {
+      const yobibitsConversion = linearConversion(102400000000);
+      const petabitsConversion = linearConversion(100000000);
+
+      const [toBase, fromBase] = [
+        petabitsConversion[0],
+        yobibitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Yib"] as const;
+      const conversionCandidate = [v, "Pb"] as const;
+
+      expect(information["Yib"](conversionCandidate)).toEqual(expected);
+      expect(yobibits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Eb to Yib.', v => {
+      const yobibitsConversion = linearConversion(102400000000);
+      const exabitsConversion = linearConversion(1000000000);
+
+      const [toBase, fromBase] = [
+        exabitsConversion[0],
+        yobibitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Yib"] as const;
+      const conversionCandidate = [v, "Eb"] as const;
+
+      expect(information["Yib"](conversionCandidate)).toEqual(expected);
+      expect(yobibits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Zb to Yib.', v => {
+      const yobibitsConversion = linearConversion(102400000000);
+      const zettabitsConversion = linearConversion(10000000000);
+
+      const [toBase, fromBase] = [
+        zettabitsConversion[0],
+        yobibitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Yib"] as const;
+      const conversionCandidate = [v, "Zb"] as const;
+
+      expect(information["Yib"](conversionCandidate)).toEqual(expected);
+      expect(yobibits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Yb to Yib.', v => {
+      const yobibitsConversion = linearConversion(102400000000);
+      const yottabitsConversion = linearConversion(100000000000);
+
+      const [toBase, fromBase] = [
+        yottabitsConversion[0],
+        yobibitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Yib"] as const;
+      const conversionCandidate = [v, "Yb"] as const;
+
+      expect(information["Yib"](conversionCandidate)).toEqual(expected);
+      expect(yobibits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Kib to Yib.', v => {
+      const yobibitsConversion = linearConversion(102400000000);
+      const kibibitsConversion = linearConversion(1024);
+
+      const [toBase, fromBase] = [
+        kibibitsConversion[0],
+        yobibitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Yib"] as const;
+      const conversionCandidate = [v, "Kib"] as const;
+
+      expect(information["Yib"](conversionCandidate)).toEqual(expected);
+      expect(yobibits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert KB to Yib.', v => {
+      const yobibitsConversion = linearConversion(102400000000);
+      const kilobytesConversion = linearConversion(8192);
+
+      const [toBase, fromBase] = [
+        kilobytesConversion[0],
+        yobibitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Yib"] as const;
+      const conversionCandidate = [v, "KB"] as const;
+
+      expect(information["Yib"](conversionCandidate)).toEqual(expected);
+      expect(yobibits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Mib to Yib.', v => {
+      const yobibitsConversion = linearConversion(102400000000);
+      const mebibitsConversion = linearConversion(102400);
+
+      const [toBase, fromBase] = [
+        mebibitsConversion[0],
+        yobibitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Yib"] as const;
+      const conversionCandidate = [v, "Mib"] as const;
+
+      expect(information["Yib"](conversionCandidate)).toEqual(expected);
+      expect(yobibits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert MB to Yib.', v => {
+      const yobibitsConversion = linearConversion(102400000000);
+      const megabytesConversion = linearConversion(819200);
+
+      const [toBase, fromBase] = [
+        megabytesConversion[0],
+        yobibitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Yib"] as const;
+      const conversionCandidate = [v, "MB"] as const;
+
+      expect(information["Yib"](conversionCandidate)).toEqual(expected);
+      expect(yobibits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Gib to Yib.', v => {
+      const yobibitsConversion = linearConversion(102400000000);
+      const gibibitsConversion = linearConversion(1024000);
+
+      const [toBase, fromBase] = [
+        gibibitsConversion[0],
+        yobibitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Yib"] as const;
+      const conversionCandidate = [v, "Gib"] as const;
+
+      expect(information["Yib"](conversionCandidate)).toEqual(expected);
+      expect(yobibits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert GB to Yib.', v => {
+      const yobibitsConversion = linearConversion(102400000000);
+      const gigabytesConversion = linearConversion(8192000);
+
+      const [toBase, fromBase] = [
+        gigabytesConversion[0],
+        yobibitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Yib"] as const;
+      const conversionCandidate = [v, "GB"] as const;
+
+      expect(information["Yib"](conversionCandidate)).toEqual(expected);
+      expect(yobibits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Tib to Yib.', v => {
+      const yobibitsConversion = linearConversion(102400000000);
+      const tebibitsConversion = linearConversion(10240000);
+
+      const [toBase, fromBase] = [
+        tebibitsConversion[0],
+        yobibitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Yib"] as const;
+      const conversionCandidate = [v, "Tib"] as const;
+
+      expect(information["Yib"](conversionCandidate)).toEqual(expected);
+      expect(yobibits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert TB to Yib.', v => {
+      const yobibitsConversion = linearConversion(102400000000);
+      const terabytesConversion = linearConversion(81920000);
+
+      const [toBase, fromBase] = [
+        terabytesConversion[0],
+        yobibitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Yib"] as const;
+      const conversionCandidate = [v, "TB"] as const;
+
+      expect(information["Yib"](conversionCandidate)).toEqual(expected);
+      expect(yobibits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Pib to Yib.', v => {
+      const yobibitsConversion = linearConversion(102400000000);
+      const pebibitsConversion = linearConversion(102400000);
+
+      const [toBase, fromBase] = [
+        pebibitsConversion[0],
+        yobibitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Yib"] as const;
+      const conversionCandidate = [v, "Pib"] as const;
+
+      expect(information["Yib"](conversionCandidate)).toEqual(expected);
+      expect(yobibits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert PB to Yib.', v => {
+      const yobibitsConversion = linearConversion(102400000000);
+      const petabytesConversion = linearConversion(819200000);
+
+      const [toBase, fromBase] = [
+        petabytesConversion[0],
+        yobibitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Yib"] as const;
+      const conversionCandidate = [v, "PB"] as const;
+
+      expect(information["Yib"](conversionCandidate)).toEqual(expected);
+      expect(yobibits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Eib to Yib.', v => {
+      const yobibitsConversion = linearConversion(102400000000);
+      const exbibitsConversion = linearConversion(1024000000);
+
+      const [toBase, fromBase] = [
+        exbibitsConversion[0],
+        yobibitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Yib"] as const;
+      const conversionCandidate = [v, "Eib"] as const;
+
+      expect(information["Yib"](conversionCandidate)).toEqual(expected);
+      expect(yobibits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert EB to Yib.', v => {
+      const yobibitsConversion = linearConversion(102400000000);
+      const exabytesConversion = linearConversion(8192000000);
+
+      const [toBase, fromBase] = [
+        exabytesConversion[0],
+        yobibitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Yib"] as const;
+      const conversionCandidate = [v, "EB"] as const;
+
+      expect(information["Yib"](conversionCandidate)).toEqual(expected);
+      expect(yobibits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Zib to Yib.', v => {
+      const yobibitsConversion = linearConversion(102400000000);
+      const zebibitsConversion = linearConversion(10240000000);
+
+      const [toBase, fromBase] = [
+        zebibitsConversion[0],
+        yobibitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Yib"] as const;
+      const conversionCandidate = [v, "Zib"] as const;
+
+      expect(information["Yib"](conversionCandidate)).toEqual(expected);
+      expect(yobibits(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert ZB to Yib.', v => {
+      const yobibitsConversion = linearConversion(102400000000);
+      const zettabytesConversion = linearConversion(81920000000);
+
+      const [toBase, fromBase] = [
+        zettabytesConversion[0],
+        yobibitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Yib"] as const;
+      const conversionCandidate = [v, "ZB"] as const;
+
+      expect(information["Yib"](conversionCandidate)).toEqual(expected);
+      expect(yobibits(conversionCandidate)).toEqual(expected);
+    });
+
+
+
+    it.each([1, 10, 100])('should convert YB to Yib.', v => {
+      const yobibitsConversion = linearConversion(102400000000);
+      const yottabytesConversion = linearConversion(819200000000);
+
+      const [toBase, fromBase] = [
+        yottabytesConversion[0],
+        yobibitsConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "Yib"] as const;
+      const conversionCandidate = [v, "YB"] as const;
+
+      expect(information["Yib"](conversionCandidate)).toEqual(expected);
+      expect(yobibits(conversionCandidate)).toEqual(expected);
+    });
+  });
+
+
+  describe('YB', () => {
+    it.each([1, 10, 100])('should yield a YB measurement when given a number.', v => {
+      expect(information["YB"](v)).toEqual([v, "YB"]);
+      expect(yottabytes(v)).toEqual([v, "YB"]);
+    });
+
+    it.each([1, 10, 100])('should convert b to YB.', v => {
+      const yottabytesConversion = linearConversion(819200000000);
+      const bitsConversion = linearConversion(1);
+
+      const [toBase, fromBase] = [
+        bitsConversion[0],
+        yottabytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "YB"] as const;
+      const conversionCandidate = [v, "b"] as const;
+
+      expect(information["YB"](conversionCandidate)).toEqual(expected);
+      expect(yottabytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert B to YB.', v => {
+      const yottabytesConversion = linearConversion(819200000000);
+      const bytesConversion = linearConversion(8);
+
+      const [toBase, fromBase] = [
+        bytesConversion[0],
+        yottabytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "YB"] as const;
+      const conversionCandidate = [v, "B"] as const;
+
+      expect(information["YB"](conversionCandidate)).toEqual(expected);
+      expect(yottabytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert kb to YB.', v => {
+      const yottabytesConversion = linearConversion(819200000000);
+      const kilobitsConversion = linearConversion(1000);
+
+      const [toBase, fromBase] = [
+        kilobitsConversion[0],
+        yottabytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "YB"] as const;
+      const conversionCandidate = [v, "kb"] as const;
+
+      expect(information["YB"](conversionCandidate)).toEqual(expected);
+      expect(yottabytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Mb to YB.', v => {
+      const yottabytesConversion = linearConversion(819200000000);
+      const megabitsConversion = linearConversion(100000);
+
+      const [toBase, fromBase] = [
+        megabitsConversion[0],
+        yottabytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "YB"] as const;
+      const conversionCandidate = [v, "Mb"] as const;
+
+      expect(information["YB"](conversionCandidate)).toEqual(expected);
+      expect(yottabytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Gb to YB.', v => {
+      const yottabytesConversion = linearConversion(819200000000);
+      const gigabitsConversion = linearConversion(1000000);
+
+      const [toBase, fromBase] = [
+        gigabitsConversion[0],
+        yottabytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "YB"] as const;
+      const conversionCandidate = [v, "Gb"] as const;
+
+      expect(information["YB"](conversionCandidate)).toEqual(expected);
+      expect(yottabytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Tb to YB.', v => {
+      const yottabytesConversion = linearConversion(819200000000);
+      const terabitsConversion = linearConversion(10000000);
+
+      const [toBase, fromBase] = [
+        terabitsConversion[0],
+        yottabytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "YB"] as const;
+      const conversionCandidate = [v, "Tb"] as const;
+
+      expect(information["YB"](conversionCandidate)).toEqual(expected);
+      expect(yottabytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Pb to YB.', v => {
+      const yottabytesConversion = linearConversion(819200000000);
+      const petabitsConversion = linearConversion(100000000);
+
+      const [toBase, fromBase] = [
+        petabitsConversion[0],
+        yottabytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "YB"] as const;
+      const conversionCandidate = [v, "Pb"] as const;
+
+      expect(information["YB"](conversionCandidate)).toEqual(expected);
+      expect(yottabytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Eb to YB.', v => {
+      const yottabytesConversion = linearConversion(819200000000);
+      const exabitsConversion = linearConversion(1000000000);
+
+      const [toBase, fromBase] = [
+        exabitsConversion[0],
+        yottabytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "YB"] as const;
+      const conversionCandidate = [v, "Eb"] as const;
+
+      expect(information["YB"](conversionCandidate)).toEqual(expected);
+      expect(yottabytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Zb to YB.', v => {
+      const yottabytesConversion = linearConversion(819200000000);
+      const zettabitsConversion = linearConversion(10000000000);
+
+      const [toBase, fromBase] = [
+        zettabitsConversion[0],
+        yottabytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "YB"] as const;
+      const conversionCandidate = [v, "Zb"] as const;
+
+      expect(information["YB"](conversionCandidate)).toEqual(expected);
+      expect(yottabytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Yb to YB.', v => {
+      const yottabytesConversion = linearConversion(819200000000);
+      const yottabitsConversion = linearConversion(100000000000);
+
+      const [toBase, fromBase] = [
+        yottabitsConversion[0],
+        yottabytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "YB"] as const;
+      const conversionCandidate = [v, "Yb"] as const;
+
+      expect(information["YB"](conversionCandidate)).toEqual(expected);
+      expect(yottabytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Kib to YB.', v => {
+      const yottabytesConversion = linearConversion(819200000000);
+      const kibibitsConversion = linearConversion(1024);
+
+      const [toBase, fromBase] = [
+        kibibitsConversion[0],
+        yottabytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "YB"] as const;
+      const conversionCandidate = [v, "Kib"] as const;
+
+      expect(information["YB"](conversionCandidate)).toEqual(expected);
+      expect(yottabytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert KB to YB.', v => {
+      const yottabytesConversion = linearConversion(819200000000);
+      const kilobytesConversion = linearConversion(8192);
+
+      const [toBase, fromBase] = [
+        kilobytesConversion[0],
+        yottabytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "YB"] as const;
+      const conversionCandidate = [v, "KB"] as const;
+
+      expect(information["YB"](conversionCandidate)).toEqual(expected);
+      expect(yottabytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Mib to YB.', v => {
+      const yottabytesConversion = linearConversion(819200000000);
+      const mebibitsConversion = linearConversion(102400);
+
+      const [toBase, fromBase] = [
+        mebibitsConversion[0],
+        yottabytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "YB"] as const;
+      const conversionCandidate = [v, "Mib"] as const;
+
+      expect(information["YB"](conversionCandidate)).toEqual(expected);
+      expect(yottabytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert MB to YB.', v => {
+      const yottabytesConversion = linearConversion(819200000000);
+      const megabytesConversion = linearConversion(819200);
+
+      const [toBase, fromBase] = [
+        megabytesConversion[0],
+        yottabytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "YB"] as const;
+      const conversionCandidate = [v, "MB"] as const;
+
+      expect(information["YB"](conversionCandidate)).toEqual(expected);
+      expect(yottabytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Gib to YB.', v => {
+      const yottabytesConversion = linearConversion(819200000000);
+      const gibibitsConversion = linearConversion(1024000);
+
+      const [toBase, fromBase] = [
+        gibibitsConversion[0],
+        yottabytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "YB"] as const;
+      const conversionCandidate = [v, "Gib"] as const;
+
+      expect(information["YB"](conversionCandidate)).toEqual(expected);
+      expect(yottabytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert GB to YB.', v => {
+      const yottabytesConversion = linearConversion(819200000000);
+      const gigabytesConversion = linearConversion(8192000);
+
+      const [toBase, fromBase] = [
+        gigabytesConversion[0],
+        yottabytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "YB"] as const;
+      const conversionCandidate = [v, "GB"] as const;
+
+      expect(information["YB"](conversionCandidate)).toEqual(expected);
+      expect(yottabytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Tib to YB.', v => {
+      const yottabytesConversion = linearConversion(819200000000);
+      const tebibitsConversion = linearConversion(10240000);
+
+      const [toBase, fromBase] = [
+        tebibitsConversion[0],
+        yottabytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "YB"] as const;
+      const conversionCandidate = [v, "Tib"] as const;
+
+      expect(information["YB"](conversionCandidate)).toEqual(expected);
+      expect(yottabytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert TB to YB.', v => {
+      const yottabytesConversion = linearConversion(819200000000);
+      const terabytesConversion = linearConversion(81920000);
+
+      const [toBase, fromBase] = [
+        terabytesConversion[0],
+        yottabytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "YB"] as const;
+      const conversionCandidate = [v, "TB"] as const;
+
+      expect(information["YB"](conversionCandidate)).toEqual(expected);
+      expect(yottabytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Pib to YB.', v => {
+      const yottabytesConversion = linearConversion(819200000000);
+      const pebibitsConversion = linearConversion(102400000);
+
+      const [toBase, fromBase] = [
+        pebibitsConversion[0],
+        yottabytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "YB"] as const;
+      const conversionCandidate = [v, "Pib"] as const;
+
+      expect(information["YB"](conversionCandidate)).toEqual(expected);
+      expect(yottabytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert PB to YB.', v => {
+      const yottabytesConversion = linearConversion(819200000000);
+      const petabytesConversion = linearConversion(819200000);
+
+      const [toBase, fromBase] = [
+        petabytesConversion[0],
+        yottabytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "YB"] as const;
+      const conversionCandidate = [v, "PB"] as const;
+
+      expect(information["YB"](conversionCandidate)).toEqual(expected);
+      expect(yottabytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Eib to YB.', v => {
+      const yottabytesConversion = linearConversion(819200000000);
+      const exbibitsConversion = linearConversion(1024000000);
+
+      const [toBase, fromBase] = [
+        exbibitsConversion[0],
+        yottabytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "YB"] as const;
+      const conversionCandidate = [v, "Eib"] as const;
+
+      expect(information["YB"](conversionCandidate)).toEqual(expected);
+      expect(yottabytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert EB to YB.', v => {
+      const yottabytesConversion = linearConversion(819200000000);
+      const exabytesConversion = linearConversion(8192000000);
+
+      const [toBase, fromBase] = [
+        exabytesConversion[0],
+        yottabytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "YB"] as const;
+      const conversionCandidate = [v, "EB"] as const;
+
+      expect(information["YB"](conversionCandidate)).toEqual(expected);
+      expect(yottabytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Zib to YB.', v => {
+      const yottabytesConversion = linearConversion(819200000000);
+      const zebibitsConversion = linearConversion(10240000000);
+
+      const [toBase, fromBase] = [
+        zebibitsConversion[0],
+        yottabytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "YB"] as const;
+      const conversionCandidate = [v, "Zib"] as const;
+
+      expect(information["YB"](conversionCandidate)).toEqual(expected);
+      expect(yottabytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert ZB to YB.', v => {
+      const yottabytesConversion = linearConversion(819200000000);
+      const zettabytesConversion = linearConversion(81920000000);
+
+      const [toBase, fromBase] = [
+        zettabytesConversion[0],
+        yottabytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "YB"] as const;
+      const conversionCandidate = [v, "ZB"] as const;
+
+      expect(information["YB"](conversionCandidate)).toEqual(expected);
+      expect(yottabytes(conversionCandidate)).toEqual(expected);
+    });
+
+    it.each([1, 10, 100])('should convert Yib to YB.', v => {
+      const yottabytesConversion = linearConversion(819200000000);
+      const yobibitsConversion = linearConversion(102400000000);
+
+      const [toBase, fromBase] = [
+        yobibitsConversion[0],
+        yottabytesConversion[1]
+      ];
+
+      const expected = [toBase(fromBase(v)), "YB"] as const;
+      const conversionCandidate = [v, "Yib"] as const;
+
+      expect(information["YB"](conversionCandidate)).toEqual(expected);
+      expect(yottabytes(conversionCandidate)).toEqual(expected);
+    });
+
+
+  });
+
 });
