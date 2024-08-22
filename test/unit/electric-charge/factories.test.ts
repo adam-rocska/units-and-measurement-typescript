@@ -55,13 +55,13 @@ describe("electricCharge", () => {
 
 
 
-    it.each([1, 10, 100])('should convert MAh to C.', v => {
+    it.each([1, 10, 100])('should convert %dMAh to C.', v => {
       const coulombsConversion = linearConversion(1);
       const megaampereHoursConversion = linearConversion(3600000000);
 
       const [toBase, fromBase] = [
-        coulombsConversion[1],
         megaampereHoursConversion[0],
+        coulombsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "C"] as const;
@@ -71,13 +71,13 @@ describe("electricCharge", () => {
       expect(coulombs(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert kAh to C.', v => {
+    it.each([1, 10, 100])('should convert %dkAh to C.', v => {
       const coulombsConversion = linearConversion(1);
       const kiloampereHoursConversion = linearConversion(3600000);
 
       const [toBase, fromBase] = [
-        coulombsConversion[1],
         kiloampereHoursConversion[0],
+        coulombsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "C"] as const;
@@ -87,13 +87,13 @@ describe("electricCharge", () => {
       expect(coulombs(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert Ah to C.', v => {
+    it.each([1, 10, 100])('should convert %dAh to C.', v => {
       const coulombsConversion = linearConversion(1);
       const ampereHoursConversion = linearConversion(3600);
 
       const [toBase, fromBase] = [
-        coulombsConversion[1],
         ampereHoursConversion[0],
+        coulombsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "C"] as const;
@@ -103,13 +103,13 @@ describe("electricCharge", () => {
       expect(coulombs(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert mAh to C.', v => {
+    it.each([1, 10, 100])('should convert %dmAh to C.', v => {
       const coulombsConversion = linearConversion(1);
       const milliampereHoursConversion = linearConversion(3.6);
 
       const [toBase, fromBase] = [
-        coulombsConversion[1],
         milliampereHoursConversion[0],
+        coulombsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "C"] as const;
@@ -119,13 +119,13 @@ describe("electricCharge", () => {
       expect(coulombs(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert µAh to C.', v => {
+    it.each([1, 10, 100])('should convert %dµAh to C.', v => {
       const coulombsConversion = linearConversion(1);
       const microampereHoursConversion = linearConversion(0.0036);
 
       const [toBase, fromBase] = [
-        coulombsConversion[1],
         microampereHoursConversion[0],
+        coulombsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "C"] as const;
@@ -143,13 +143,13 @@ describe("electricCharge", () => {
       expect(megaampereHours(v)).toEqual([v, "MAh"]);
     });
 
-    it.each([1, 10, 100])('should convert C to MAh.', v => {
+    it.each([1, 10, 100])('should convert %dC to MAh.', v => {
       const megaampereHoursConversion = linearConversion(3600000000);
       const coulombsConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
-        megaampereHoursConversion[1],
         coulombsConversion[0],
+        megaampereHoursConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "MAh"] as const;
@@ -161,13 +161,13 @@ describe("electricCharge", () => {
 
 
 
-    it.each([1, 10, 100])('should convert kAh to MAh.', v => {
+    it.each([1, 10, 100])('should convert %dkAh to MAh.', v => {
       const megaampereHoursConversion = linearConversion(3600000000);
       const kiloampereHoursConversion = linearConversion(3600000);
 
       const [toBase, fromBase] = [
-        megaampereHoursConversion[1],
         kiloampereHoursConversion[0],
+        megaampereHoursConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "MAh"] as const;
@@ -177,13 +177,13 @@ describe("electricCharge", () => {
       expect(megaampereHours(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert Ah to MAh.', v => {
+    it.each([1, 10, 100])('should convert %dAh to MAh.', v => {
       const megaampereHoursConversion = linearConversion(3600000000);
       const ampereHoursConversion = linearConversion(3600);
 
       const [toBase, fromBase] = [
-        megaampereHoursConversion[1],
         ampereHoursConversion[0],
+        megaampereHoursConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "MAh"] as const;
@@ -193,13 +193,13 @@ describe("electricCharge", () => {
       expect(megaampereHours(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert mAh to MAh.', v => {
+    it.each([1, 10, 100])('should convert %dmAh to MAh.', v => {
       const megaampereHoursConversion = linearConversion(3600000000);
       const milliampereHoursConversion = linearConversion(3.6);
 
       const [toBase, fromBase] = [
-        megaampereHoursConversion[1],
         milliampereHoursConversion[0],
+        megaampereHoursConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "MAh"] as const;
@@ -209,13 +209,13 @@ describe("electricCharge", () => {
       expect(megaampereHours(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert µAh to MAh.', v => {
+    it.each([1, 10, 100])('should convert %dµAh to MAh.', v => {
       const megaampereHoursConversion = linearConversion(3600000000);
       const microampereHoursConversion = linearConversion(0.0036);
 
       const [toBase, fromBase] = [
-        megaampereHoursConversion[1],
         microampereHoursConversion[0],
+        megaampereHoursConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "MAh"] as const;
@@ -233,13 +233,13 @@ describe("electricCharge", () => {
       expect(kiloampereHours(v)).toEqual([v, "kAh"]);
     });
 
-    it.each([1, 10, 100])('should convert C to kAh.', v => {
+    it.each([1, 10, 100])('should convert %dC to kAh.', v => {
       const kiloampereHoursConversion = linearConversion(3600000);
       const coulombsConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
-        kiloampereHoursConversion[1],
         coulombsConversion[0],
+        kiloampereHoursConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "kAh"] as const;
@@ -249,13 +249,13 @@ describe("electricCharge", () => {
       expect(kiloampereHours(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert MAh to kAh.', v => {
+    it.each([1, 10, 100])('should convert %dMAh to kAh.', v => {
       const kiloampereHoursConversion = linearConversion(3600000);
       const megaampereHoursConversion = linearConversion(3600000000);
 
       const [toBase, fromBase] = [
-        kiloampereHoursConversion[1],
         megaampereHoursConversion[0],
+        kiloampereHoursConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "kAh"] as const;
@@ -267,13 +267,13 @@ describe("electricCharge", () => {
 
 
 
-    it.each([1, 10, 100])('should convert Ah to kAh.', v => {
+    it.each([1, 10, 100])('should convert %dAh to kAh.', v => {
       const kiloampereHoursConversion = linearConversion(3600000);
       const ampereHoursConversion = linearConversion(3600);
 
       const [toBase, fromBase] = [
-        kiloampereHoursConversion[1],
         ampereHoursConversion[0],
+        kiloampereHoursConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "kAh"] as const;
@@ -283,13 +283,13 @@ describe("electricCharge", () => {
       expect(kiloampereHours(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert mAh to kAh.', v => {
+    it.each([1, 10, 100])('should convert %dmAh to kAh.', v => {
       const kiloampereHoursConversion = linearConversion(3600000);
       const milliampereHoursConversion = linearConversion(3.6);
 
       const [toBase, fromBase] = [
-        kiloampereHoursConversion[1],
         milliampereHoursConversion[0],
+        kiloampereHoursConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "kAh"] as const;
@@ -299,13 +299,13 @@ describe("electricCharge", () => {
       expect(kiloampereHours(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert µAh to kAh.', v => {
+    it.each([1, 10, 100])('should convert %dµAh to kAh.', v => {
       const kiloampereHoursConversion = linearConversion(3600000);
       const microampereHoursConversion = linearConversion(0.0036);
 
       const [toBase, fromBase] = [
-        kiloampereHoursConversion[1],
         microampereHoursConversion[0],
+        kiloampereHoursConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "kAh"] as const;
@@ -323,13 +323,13 @@ describe("electricCharge", () => {
       expect(ampereHours(v)).toEqual([v, "Ah"]);
     });
 
-    it.each([1, 10, 100])('should convert C to Ah.', v => {
+    it.each([1, 10, 100])('should convert %dC to Ah.', v => {
       const ampereHoursConversion = linearConversion(3600);
       const coulombsConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
-        ampereHoursConversion[1],
         coulombsConversion[0],
+        ampereHoursConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "Ah"] as const;
@@ -339,13 +339,13 @@ describe("electricCharge", () => {
       expect(ampereHours(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert MAh to Ah.', v => {
+    it.each([1, 10, 100])('should convert %dMAh to Ah.', v => {
       const ampereHoursConversion = linearConversion(3600);
       const megaampereHoursConversion = linearConversion(3600000000);
 
       const [toBase, fromBase] = [
-        ampereHoursConversion[1],
         megaampereHoursConversion[0],
+        ampereHoursConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "Ah"] as const;
@@ -355,13 +355,13 @@ describe("electricCharge", () => {
       expect(ampereHours(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert kAh to Ah.', v => {
+    it.each([1, 10, 100])('should convert %dkAh to Ah.', v => {
       const ampereHoursConversion = linearConversion(3600);
       const kiloampereHoursConversion = linearConversion(3600000);
 
       const [toBase, fromBase] = [
-        ampereHoursConversion[1],
         kiloampereHoursConversion[0],
+        ampereHoursConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "Ah"] as const;
@@ -373,13 +373,13 @@ describe("electricCharge", () => {
 
 
 
-    it.each([1, 10, 100])('should convert mAh to Ah.', v => {
+    it.each([1, 10, 100])('should convert %dmAh to Ah.', v => {
       const ampereHoursConversion = linearConversion(3600);
       const milliampereHoursConversion = linearConversion(3.6);
 
       const [toBase, fromBase] = [
-        ampereHoursConversion[1],
         milliampereHoursConversion[0],
+        ampereHoursConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "Ah"] as const;
@@ -389,13 +389,13 @@ describe("electricCharge", () => {
       expect(ampereHours(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert µAh to Ah.', v => {
+    it.each([1, 10, 100])('should convert %dµAh to Ah.', v => {
       const ampereHoursConversion = linearConversion(3600);
       const microampereHoursConversion = linearConversion(0.0036);
 
       const [toBase, fromBase] = [
-        ampereHoursConversion[1],
         microampereHoursConversion[0],
+        ampereHoursConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "Ah"] as const;
@@ -413,13 +413,13 @@ describe("electricCharge", () => {
       expect(milliampereHours(v)).toEqual([v, "mAh"]);
     });
 
-    it.each([1, 10, 100])('should convert C to mAh.', v => {
+    it.each([1, 10, 100])('should convert %dC to mAh.', v => {
       const milliampereHoursConversion = linearConversion(3.6);
       const coulombsConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
-        milliampereHoursConversion[1],
         coulombsConversion[0],
+        milliampereHoursConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "mAh"] as const;
@@ -429,13 +429,13 @@ describe("electricCharge", () => {
       expect(milliampereHours(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert MAh to mAh.', v => {
+    it.each([1, 10, 100])('should convert %dMAh to mAh.', v => {
       const milliampereHoursConversion = linearConversion(3.6);
       const megaampereHoursConversion = linearConversion(3600000000);
 
       const [toBase, fromBase] = [
-        milliampereHoursConversion[1],
         megaampereHoursConversion[0],
+        milliampereHoursConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "mAh"] as const;
@@ -445,13 +445,13 @@ describe("electricCharge", () => {
       expect(milliampereHours(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert kAh to mAh.', v => {
+    it.each([1, 10, 100])('should convert %dkAh to mAh.', v => {
       const milliampereHoursConversion = linearConversion(3.6);
       const kiloampereHoursConversion = linearConversion(3600000);
 
       const [toBase, fromBase] = [
-        milliampereHoursConversion[1],
         kiloampereHoursConversion[0],
+        milliampereHoursConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "mAh"] as const;
@@ -461,13 +461,13 @@ describe("electricCharge", () => {
       expect(milliampereHours(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert Ah to mAh.', v => {
+    it.each([1, 10, 100])('should convert %dAh to mAh.', v => {
       const milliampereHoursConversion = linearConversion(3.6);
       const ampereHoursConversion = linearConversion(3600);
 
       const [toBase, fromBase] = [
-        milliampereHoursConversion[1],
         ampereHoursConversion[0],
+        milliampereHoursConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "mAh"] as const;
@@ -479,13 +479,13 @@ describe("electricCharge", () => {
 
 
 
-    it.each([1, 10, 100])('should convert µAh to mAh.', v => {
+    it.each([1, 10, 100])('should convert %dµAh to mAh.', v => {
       const milliampereHoursConversion = linearConversion(3.6);
       const microampereHoursConversion = linearConversion(0.0036);
 
       const [toBase, fromBase] = [
-        milliampereHoursConversion[1],
         microampereHoursConversion[0],
+        milliampereHoursConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "mAh"] as const;
@@ -503,13 +503,13 @@ describe("electricCharge", () => {
       expect(microampereHours(v)).toEqual([v, "µAh"]);
     });
 
-    it.each([1, 10, 100])('should convert C to µAh.', v => {
+    it.each([1, 10, 100])('should convert %dC to µAh.', v => {
       const microampereHoursConversion = linearConversion(0.0036);
       const coulombsConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
-        microampereHoursConversion[1],
         coulombsConversion[0],
+        microampereHoursConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "µAh"] as const;
@@ -519,13 +519,13 @@ describe("electricCharge", () => {
       expect(microampereHours(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert MAh to µAh.', v => {
+    it.each([1, 10, 100])('should convert %dMAh to µAh.', v => {
       const microampereHoursConversion = linearConversion(0.0036);
       const megaampereHoursConversion = linearConversion(3600000000);
 
       const [toBase, fromBase] = [
-        microampereHoursConversion[1],
         megaampereHoursConversion[0],
+        microampereHoursConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "µAh"] as const;
@@ -535,13 +535,13 @@ describe("electricCharge", () => {
       expect(microampereHours(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert kAh to µAh.', v => {
+    it.each([1, 10, 100])('should convert %dkAh to µAh.', v => {
       const microampereHoursConversion = linearConversion(0.0036);
       const kiloampereHoursConversion = linearConversion(3600000);
 
       const [toBase, fromBase] = [
-        microampereHoursConversion[1],
         kiloampereHoursConversion[0],
+        microampereHoursConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "µAh"] as const;
@@ -551,13 +551,13 @@ describe("electricCharge", () => {
       expect(microampereHours(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert Ah to µAh.', v => {
+    it.each([1, 10, 100])('should convert %dAh to µAh.', v => {
       const microampereHoursConversion = linearConversion(0.0036);
       const ampereHoursConversion = linearConversion(3600);
 
       const [toBase, fromBase] = [
-        microampereHoursConversion[1],
         ampereHoursConversion[0],
+        microampereHoursConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "µAh"] as const;
@@ -567,13 +567,13 @@ describe("electricCharge", () => {
       expect(microampereHours(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert mAh to µAh.', v => {
+    it.each([1, 10, 100])('should convert %dmAh to µAh.', v => {
       const microampereHoursConversion = linearConversion(0.0036);
       const milliampereHoursConversion = linearConversion(3.6);
 
       const [toBase, fromBase] = [
-        microampereHoursConversion[1],
         milliampereHoursConversion[0],
+        microampereHoursConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "µAh"] as const;

@@ -48,13 +48,13 @@ describe("electricResistance", () => {
 
 
 
-    it.each([1, 10, 100])('should convert kΩ to MΩ.', v => {
+    it.each([1, 10, 100])('should convert %dkΩ to MΩ.', v => {
       const megaohmsConversion = linearConversion(1000000);
       const kiloohmsConversion = linearConversion(1000);
 
       const [toBase, fromBase] = [
-        megaohmsConversion[1],
         kiloohmsConversion[0],
+        megaohmsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "MΩ"] as const;
@@ -64,13 +64,13 @@ describe("electricResistance", () => {
       expect(megaohms(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert Ω to MΩ.', v => {
+    it.each([1, 10, 100])('should convert %dΩ to MΩ.', v => {
       const megaohmsConversion = linearConversion(1000000);
       const ohmsConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
-        megaohmsConversion[1],
         ohmsConversion[0],
+        megaohmsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "MΩ"] as const;
@@ -80,13 +80,13 @@ describe("electricResistance", () => {
       expect(megaohms(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert mΩ to MΩ.', v => {
+    it.each([1, 10, 100])('should convert %dmΩ to MΩ.', v => {
       const megaohmsConversion = linearConversion(1000000);
       const milliohmsConversion = linearConversion(0.001);
 
       const [toBase, fromBase] = [
-        megaohmsConversion[1],
         milliohmsConversion[0],
+        megaohmsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "MΩ"] as const;
@@ -96,13 +96,13 @@ describe("electricResistance", () => {
       expect(megaohms(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert µΩ to MΩ.', v => {
+    it.each([1, 10, 100])('should convert %dµΩ to MΩ.', v => {
       const megaohmsConversion = linearConversion(1000000);
       const microohmsConversion = linearConversion(0.000001);
 
       const [toBase, fromBase] = [
-        megaohmsConversion[1],
         microohmsConversion[0],
+        megaohmsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "MΩ"] as const;
@@ -120,13 +120,13 @@ describe("electricResistance", () => {
       expect(kiloohms(v)).toEqual([v, "kΩ"]);
     });
 
-    it.each([1, 10, 100])('should convert MΩ to kΩ.', v => {
+    it.each([1, 10, 100])('should convert %dMΩ to kΩ.', v => {
       const kiloohmsConversion = linearConversion(1000);
       const megaohmsConversion = linearConversion(1000000);
 
       const [toBase, fromBase] = [
-        kiloohmsConversion[1],
         megaohmsConversion[0],
+        kiloohmsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "kΩ"] as const;
@@ -138,13 +138,13 @@ describe("electricResistance", () => {
 
 
 
-    it.each([1, 10, 100])('should convert Ω to kΩ.', v => {
+    it.each([1, 10, 100])('should convert %dΩ to kΩ.', v => {
       const kiloohmsConversion = linearConversion(1000);
       const ohmsConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
-        kiloohmsConversion[1],
         ohmsConversion[0],
+        kiloohmsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "kΩ"] as const;
@@ -154,13 +154,13 @@ describe("electricResistance", () => {
       expect(kiloohms(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert mΩ to kΩ.', v => {
+    it.each([1, 10, 100])('should convert %dmΩ to kΩ.', v => {
       const kiloohmsConversion = linearConversion(1000);
       const milliohmsConversion = linearConversion(0.001);
 
       const [toBase, fromBase] = [
-        kiloohmsConversion[1],
         milliohmsConversion[0],
+        kiloohmsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "kΩ"] as const;
@@ -170,13 +170,13 @@ describe("electricResistance", () => {
       expect(kiloohms(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert µΩ to kΩ.', v => {
+    it.each([1, 10, 100])('should convert %dµΩ to kΩ.', v => {
       const kiloohmsConversion = linearConversion(1000);
       const microohmsConversion = linearConversion(0.000001);
 
       const [toBase, fromBase] = [
-        kiloohmsConversion[1],
         microohmsConversion[0],
+        kiloohmsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "kΩ"] as const;
@@ -194,13 +194,13 @@ describe("electricResistance", () => {
       expect(ohms(v)).toEqual([v, "Ω"]);
     });
 
-    it.each([1, 10, 100])('should convert MΩ to Ω.', v => {
+    it.each([1, 10, 100])('should convert %dMΩ to Ω.', v => {
       const ohmsConversion = linearConversion(1);
       const megaohmsConversion = linearConversion(1000000);
 
       const [toBase, fromBase] = [
-        ohmsConversion[1],
         megaohmsConversion[0],
+        ohmsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "Ω"] as const;
@@ -210,13 +210,13 @@ describe("electricResistance", () => {
       expect(ohms(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert kΩ to Ω.', v => {
+    it.each([1, 10, 100])('should convert %dkΩ to Ω.', v => {
       const ohmsConversion = linearConversion(1);
       const kiloohmsConversion = linearConversion(1000);
 
       const [toBase, fromBase] = [
-        ohmsConversion[1],
         kiloohmsConversion[0],
+        ohmsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "Ω"] as const;
@@ -228,13 +228,13 @@ describe("electricResistance", () => {
 
 
 
-    it.each([1, 10, 100])('should convert mΩ to Ω.', v => {
+    it.each([1, 10, 100])('should convert %dmΩ to Ω.', v => {
       const ohmsConversion = linearConversion(1);
       const milliohmsConversion = linearConversion(0.001);
 
       const [toBase, fromBase] = [
-        ohmsConversion[1],
         milliohmsConversion[0],
+        ohmsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "Ω"] as const;
@@ -244,13 +244,13 @@ describe("electricResistance", () => {
       expect(ohms(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert µΩ to Ω.', v => {
+    it.each([1, 10, 100])('should convert %dµΩ to Ω.', v => {
       const ohmsConversion = linearConversion(1);
       const microohmsConversion = linearConversion(0.000001);
 
       const [toBase, fromBase] = [
-        ohmsConversion[1],
         microohmsConversion[0],
+        ohmsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "Ω"] as const;
@@ -268,13 +268,13 @@ describe("electricResistance", () => {
       expect(milliohms(v)).toEqual([v, "mΩ"]);
     });
 
-    it.each([1, 10, 100])('should convert MΩ to mΩ.', v => {
+    it.each([1, 10, 100])('should convert %dMΩ to mΩ.', v => {
       const milliohmsConversion = linearConversion(0.001);
       const megaohmsConversion = linearConversion(1000000);
 
       const [toBase, fromBase] = [
-        milliohmsConversion[1],
         megaohmsConversion[0],
+        milliohmsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "mΩ"] as const;
@@ -284,13 +284,13 @@ describe("electricResistance", () => {
       expect(milliohms(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert kΩ to mΩ.', v => {
+    it.each([1, 10, 100])('should convert %dkΩ to mΩ.', v => {
       const milliohmsConversion = linearConversion(0.001);
       const kiloohmsConversion = linearConversion(1000);
 
       const [toBase, fromBase] = [
-        milliohmsConversion[1],
         kiloohmsConversion[0],
+        milliohmsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "mΩ"] as const;
@@ -300,13 +300,13 @@ describe("electricResistance", () => {
       expect(milliohms(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert Ω to mΩ.', v => {
+    it.each([1, 10, 100])('should convert %dΩ to mΩ.', v => {
       const milliohmsConversion = linearConversion(0.001);
       const ohmsConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
-        milliohmsConversion[1],
         ohmsConversion[0],
+        milliohmsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "mΩ"] as const;
@@ -318,13 +318,13 @@ describe("electricResistance", () => {
 
 
 
-    it.each([1, 10, 100])('should convert µΩ to mΩ.', v => {
+    it.each([1, 10, 100])('should convert %dµΩ to mΩ.', v => {
       const milliohmsConversion = linearConversion(0.001);
       const microohmsConversion = linearConversion(0.000001);
 
       const [toBase, fromBase] = [
-        milliohmsConversion[1],
         microohmsConversion[0],
+        milliohmsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "mΩ"] as const;
@@ -342,13 +342,13 @@ describe("electricResistance", () => {
       expect(microohms(v)).toEqual([v, "µΩ"]);
     });
 
-    it.each([1, 10, 100])('should convert MΩ to µΩ.', v => {
+    it.each([1, 10, 100])('should convert %dMΩ to µΩ.', v => {
       const microohmsConversion = linearConversion(0.000001);
       const megaohmsConversion = linearConversion(1000000);
 
       const [toBase, fromBase] = [
-        microohmsConversion[1],
         megaohmsConversion[0],
+        microohmsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "µΩ"] as const;
@@ -358,13 +358,13 @@ describe("electricResistance", () => {
       expect(microohms(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert kΩ to µΩ.', v => {
+    it.each([1, 10, 100])('should convert %dkΩ to µΩ.', v => {
       const microohmsConversion = linearConversion(0.000001);
       const kiloohmsConversion = linearConversion(1000);
 
       const [toBase, fromBase] = [
-        microohmsConversion[1],
         kiloohmsConversion[0],
+        microohmsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "µΩ"] as const;
@@ -374,13 +374,13 @@ describe("electricResistance", () => {
       expect(microohms(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert Ω to µΩ.', v => {
+    it.each([1, 10, 100])('should convert %dΩ to µΩ.', v => {
       const microohmsConversion = linearConversion(0.000001);
       const ohmsConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
-        microohmsConversion[1],
         ohmsConversion[0],
+        microohmsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "µΩ"] as const;
@@ -390,13 +390,13 @@ describe("electricResistance", () => {
       expect(microohms(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert mΩ to µΩ.', v => {
+    it.each([1, 10, 100])('should convert %dmΩ to µΩ.', v => {
       const microohmsConversion = linearConversion(0.000001);
       const milliohmsConversion = linearConversion(0.001);
 
       const [toBase, fromBase] = [
-        microohmsConversion[1],
         milliohmsConversion[0],
+        microohmsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "µΩ"] as const;

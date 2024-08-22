@@ -41,13 +41,13 @@ describe("speed", () => {
 
 
 
-    it.each([1, 10, 100])('should convert km/h to m/s.', v => {
+    it.each([1, 10, 100])('should convert %dkm/h to m/s.', v => {
       const metersPerSecondConversion = linearConversion(1);
       const kilometersPerHourConversion = linearConversion(0.277778);
 
       const [toBase, fromBase] = [
-        metersPerSecondConversion[1],
         kilometersPerHourConversion[0],
+        metersPerSecondConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "m/s"] as const;
@@ -57,13 +57,13 @@ describe("speed", () => {
       expect(metersPerSecond(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert mph to m/s.', v => {
+    it.each([1, 10, 100])('should convert %dmph to m/s.', v => {
       const metersPerSecondConversion = linearConversion(1);
       const milesPerHourConversion = linearConversion(0.44704);
 
       const [toBase, fromBase] = [
-        metersPerSecondConversion[1],
         milesPerHourConversion[0],
+        metersPerSecondConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "m/s"] as const;
@@ -73,13 +73,13 @@ describe("speed", () => {
       expect(metersPerSecond(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert kn to m/s.', v => {
+    it.each([1, 10, 100])('should convert %dkn to m/s.', v => {
       const metersPerSecondConversion = linearConversion(1);
       const knotsConversion = linearConversion(0.514444);
 
       const [toBase, fromBase] = [
-        metersPerSecondConversion[1],
         knotsConversion[0],
+        metersPerSecondConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "m/s"] as const;
@@ -97,13 +97,13 @@ describe("speed", () => {
       expect(kilometersPerHour(v)).toEqual([v, "km/h"]);
     });
 
-    it.each([1, 10, 100])('should convert m/s to km/h.', v => {
+    it.each([1, 10, 100])('should convert %dm/s to km/h.', v => {
       const kilometersPerHourConversion = linearConversion(0.277778);
       const metersPerSecondConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
-        kilometersPerHourConversion[1],
         metersPerSecondConversion[0],
+        kilometersPerHourConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "km/h"] as const;
@@ -115,13 +115,13 @@ describe("speed", () => {
 
 
 
-    it.each([1, 10, 100])('should convert mph to km/h.', v => {
+    it.each([1, 10, 100])('should convert %dmph to km/h.', v => {
       const kilometersPerHourConversion = linearConversion(0.277778);
       const milesPerHourConversion = linearConversion(0.44704);
 
       const [toBase, fromBase] = [
-        kilometersPerHourConversion[1],
         milesPerHourConversion[0],
+        kilometersPerHourConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "km/h"] as const;
@@ -131,13 +131,13 @@ describe("speed", () => {
       expect(kilometersPerHour(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert kn to km/h.', v => {
+    it.each([1, 10, 100])('should convert %dkn to km/h.', v => {
       const kilometersPerHourConversion = linearConversion(0.277778);
       const knotsConversion = linearConversion(0.514444);
 
       const [toBase, fromBase] = [
-        kilometersPerHourConversion[1],
         knotsConversion[0],
+        kilometersPerHourConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "km/h"] as const;
@@ -155,13 +155,13 @@ describe("speed", () => {
       expect(milesPerHour(v)).toEqual([v, "mph"]);
     });
 
-    it.each([1, 10, 100])('should convert m/s to mph.', v => {
+    it.each([1, 10, 100])('should convert %dm/s to mph.', v => {
       const milesPerHourConversion = linearConversion(0.44704);
       const metersPerSecondConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
-        milesPerHourConversion[1],
         metersPerSecondConversion[0],
+        milesPerHourConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "mph"] as const;
@@ -171,13 +171,13 @@ describe("speed", () => {
       expect(milesPerHour(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert km/h to mph.', v => {
+    it.each([1, 10, 100])('should convert %dkm/h to mph.', v => {
       const milesPerHourConversion = linearConversion(0.44704);
       const kilometersPerHourConversion = linearConversion(0.277778);
 
       const [toBase, fromBase] = [
-        milesPerHourConversion[1],
         kilometersPerHourConversion[0],
+        milesPerHourConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "mph"] as const;
@@ -189,13 +189,13 @@ describe("speed", () => {
 
 
 
-    it.each([1, 10, 100])('should convert kn to mph.', v => {
+    it.each([1, 10, 100])('should convert %dkn to mph.', v => {
       const milesPerHourConversion = linearConversion(0.44704);
       const knotsConversion = linearConversion(0.514444);
 
       const [toBase, fromBase] = [
-        milesPerHourConversion[1],
         knotsConversion[0],
+        milesPerHourConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "mph"] as const;
@@ -213,13 +213,13 @@ describe("speed", () => {
       expect(knots(v)).toEqual([v, "kn"]);
     });
 
-    it.each([1, 10, 100])('should convert m/s to kn.', v => {
+    it.each([1, 10, 100])('should convert %dm/s to kn.', v => {
       const knotsConversion = linearConversion(0.514444);
       const metersPerSecondConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
-        knotsConversion[1],
         metersPerSecondConversion[0],
+        knotsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "kn"] as const;
@@ -229,13 +229,13 @@ describe("speed", () => {
       expect(knots(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert km/h to kn.', v => {
+    it.each([1, 10, 100])('should convert %dkm/h to kn.', v => {
       const knotsConversion = linearConversion(0.514444);
       const kilometersPerHourConversion = linearConversion(0.277778);
 
       const [toBase, fromBase] = [
-        knotsConversion[1],
         kilometersPerHourConversion[0],
+        knotsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "kn"] as const;
@@ -245,13 +245,13 @@ describe("speed", () => {
       expect(knots(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert mph to kn.', v => {
+    it.each([1, 10, 100])('should convert %dmph to kn.', v => {
       const knotsConversion = linearConversion(0.514444);
       const milesPerHourConversion = linearConversion(0.44704);
 
       const [toBase, fromBase] = [
-        knotsConversion[1],
         milesPerHourConversion[0],
+        knotsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "kn"] as const;

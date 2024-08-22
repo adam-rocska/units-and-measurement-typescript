@@ -34,13 +34,13 @@ describe("duration", () => {
 
 
 
-    it.each([1, 10, 100])('should convert min to sec.', v => {
+    it.each([1, 10, 100])('should convert %dmin to sec.', v => {
       const secondsConversion = linearConversion(1);
       const minutesConversion = linearConversion(60);
 
       const [toBase, fromBase] = [
-        secondsConversion[1],
         minutesConversion[0],
+        secondsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "sec"] as const;
@@ -50,13 +50,13 @@ describe("duration", () => {
       expect(seconds(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert hr to sec.', v => {
+    it.each([1, 10, 100])('should convert %dhr to sec.', v => {
       const secondsConversion = linearConversion(1);
       const hoursConversion = linearConversion(3600);
 
       const [toBase, fromBase] = [
-        secondsConversion[1],
         hoursConversion[0],
+        secondsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "sec"] as const;
@@ -74,13 +74,13 @@ describe("duration", () => {
       expect(minutes(v)).toEqual([v, "min"]);
     });
 
-    it.each([1, 10, 100])('should convert sec to min.', v => {
+    it.each([1, 10, 100])('should convert %dsec to min.', v => {
       const minutesConversion = linearConversion(60);
       const secondsConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
-        minutesConversion[1],
         secondsConversion[0],
+        minutesConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "min"] as const;
@@ -92,13 +92,13 @@ describe("duration", () => {
 
 
 
-    it.each([1, 10, 100])('should convert hr to min.', v => {
+    it.each([1, 10, 100])('should convert %dhr to min.', v => {
       const minutesConversion = linearConversion(60);
       const hoursConversion = linearConversion(3600);
 
       const [toBase, fromBase] = [
-        minutesConversion[1],
         hoursConversion[0],
+        minutesConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "min"] as const;
@@ -116,13 +116,13 @@ describe("duration", () => {
       expect(hours(v)).toEqual([v, "hr"]);
     });
 
-    it.each([1, 10, 100])('should convert sec to hr.', v => {
+    it.each([1, 10, 100])('should convert %dsec to hr.', v => {
       const hoursConversion = linearConversion(3600);
       const secondsConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
-        hoursConversion[1],
         secondsConversion[0],
+        hoursConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "hr"] as const;
@@ -132,13 +132,13 @@ describe("duration", () => {
       expect(hours(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert min to hr.', v => {
+    it.each([1, 10, 100])('should convert %dmin to hr.', v => {
       const hoursConversion = linearConversion(3600);
       const minutesConversion = linearConversion(60);
 
       const [toBase, fromBase] = [
-        hoursConversion[1],
         minutesConversion[0],
+        hoursConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "hr"] as const;

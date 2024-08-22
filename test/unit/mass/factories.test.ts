@@ -125,13 +125,13 @@ describe("mass", () => {
 
 
 
-    it.each([1, 10, 100])('should convert g to kg.', v => {
+    it.each([1, 10, 100])('should convert %dg to kg.', v => {
       const kilogramsConversion = linearConversion(1);
       const gramsConversion = linearConversion(0.001);
 
       const [toBase, fromBase] = [
-        kilogramsConversion[1],
         gramsConversion[0],
+        kilogramsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "kg"] as const;
@@ -141,13 +141,13 @@ describe("mass", () => {
       expect(kilograms(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert dg to kg.', v => {
+    it.each([1, 10, 100])('should convert %ddg to kg.', v => {
       const kilogramsConversion = linearConversion(1);
       const decigramsConversion = linearConversion(0.0001);
 
       const [toBase, fromBase] = [
-        kilogramsConversion[1],
         decigramsConversion[0],
+        kilogramsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "kg"] as const;
@@ -157,13 +157,13 @@ describe("mass", () => {
       expect(kilograms(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert cg to kg.', v => {
+    it.each([1, 10, 100])('should convert %dcg to kg.', v => {
       const kilogramsConversion = linearConversion(1);
       const centigramsConversion = linearConversion(0.00001);
 
       const [toBase, fromBase] = [
-        kilogramsConversion[1],
         centigramsConversion[0],
+        kilogramsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "kg"] as const;
@@ -173,13 +173,13 @@ describe("mass", () => {
       expect(kilograms(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert mg to kg.', v => {
+    it.each([1, 10, 100])('should convert %dmg to kg.', v => {
       const kilogramsConversion = linearConversion(1);
       const milligramsConversion = linearConversion(0.000001);
 
       const [toBase, fromBase] = [
-        kilogramsConversion[1],
         milligramsConversion[0],
+        kilogramsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "kg"] as const;
@@ -189,13 +189,13 @@ describe("mass", () => {
       expect(kilograms(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert µg to kg.', v => {
+    it.each([1, 10, 100])('should convert %dµg to kg.', v => {
       const kilogramsConversion = linearConversion(1);
       const microgramsConversion = linearConversion(1e-9);
 
       const [toBase, fromBase] = [
-        kilogramsConversion[1],
         microgramsConversion[0],
+        kilogramsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "kg"] as const;
@@ -205,13 +205,13 @@ describe("mass", () => {
       expect(kilograms(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert ng to kg.', v => {
+    it.each([1, 10, 100])('should convert %dng to kg.', v => {
       const kilogramsConversion = linearConversion(1);
       const nanogramsConversion = linearConversion(1e-12);
 
       const [toBase, fromBase] = [
-        kilogramsConversion[1],
         nanogramsConversion[0],
+        kilogramsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "kg"] as const;
@@ -221,13 +221,13 @@ describe("mass", () => {
       expect(kilograms(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert pg to kg.', v => {
+    it.each([1, 10, 100])('should convert %dpg to kg.', v => {
       const kilogramsConversion = linearConversion(1);
       const picogramsConversion = linearConversion(1e-15);
 
       const [toBase, fromBase] = [
-        kilogramsConversion[1],
         picogramsConversion[0],
+        kilogramsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "kg"] as const;
@@ -237,13 +237,13 @@ describe("mass", () => {
       expect(kilograms(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert oz to kg.', v => {
+    it.each([1, 10, 100])('should convert %doz to kg.', v => {
       const kilogramsConversion = linearConversion(1);
       const ouncesConversion = linearConversion(0.0283495);
 
       const [toBase, fromBase] = [
-        kilogramsConversion[1],
         ouncesConversion[0],
+        kilogramsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "kg"] as const;
@@ -253,13 +253,13 @@ describe("mass", () => {
       expect(kilograms(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert lb to kg.', v => {
+    it.each([1, 10, 100])('should convert %dlb to kg.', v => {
       const kilogramsConversion = linearConversion(1);
       const poundsConversion = linearConversion(0.453592);
 
       const [toBase, fromBase] = [
-        kilogramsConversion[1],
         poundsConversion[0],
+        kilogramsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "kg"] as const;
@@ -269,13 +269,13 @@ describe("mass", () => {
       expect(kilograms(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert st to kg.', v => {
+    it.each([1, 10, 100])('should convert %dst to kg.', v => {
       const kilogramsConversion = linearConversion(1);
       const stonesConversion = linearConversion(0.157473);
 
       const [toBase, fromBase] = [
-        kilogramsConversion[1],
         stonesConversion[0],
+        kilogramsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "kg"] as const;
@@ -285,13 +285,13 @@ describe("mass", () => {
       expect(kilograms(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert t to kg.', v => {
+    it.each([1, 10, 100])('should convert %dt to kg.', v => {
       const kilogramsConversion = linearConversion(1);
       const metricTonsConversion = linearConversion(1000);
 
       const [toBase, fromBase] = [
-        kilogramsConversion[1],
         metricTonsConversion[0],
+        kilogramsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "kg"] as const;
@@ -301,13 +301,13 @@ describe("mass", () => {
       expect(kilograms(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert ton to kg.', v => {
+    it.each([1, 10, 100])('should convert %dton to kg.', v => {
       const kilogramsConversion = linearConversion(1);
       const shortTonsConversion = linearConversion(907.185);
 
       const [toBase, fromBase] = [
-        kilogramsConversion[1],
         shortTonsConversion[0],
+        kilogramsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "kg"] as const;
@@ -317,13 +317,13 @@ describe("mass", () => {
       expect(kilograms(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert ct to kg.', v => {
+    it.each([1, 10, 100])('should convert %dct to kg.', v => {
       const kilogramsConversion = linearConversion(1);
       const caratsConversion = linearConversion(0.0002);
 
       const [toBase, fromBase] = [
-        kilogramsConversion[1],
         caratsConversion[0],
+        kilogramsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "kg"] as const;
@@ -333,13 +333,13 @@ describe("mass", () => {
       expect(kilograms(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert oz t to kg.', v => {
+    it.each([1, 10, 100])('should convert %doz t to kg.', v => {
       const kilogramsConversion = linearConversion(1);
       const ouncesTroyConversion = linearConversion(0.03110348);
 
       const [toBase, fromBase] = [
-        kilogramsConversion[1],
         ouncesTroyConversion[0],
+        kilogramsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "kg"] as const;
@@ -349,13 +349,13 @@ describe("mass", () => {
       expect(kilograms(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert slug to kg.', v => {
+    it.each([1, 10, 100])('should convert %dslug to kg.', v => {
       const kilogramsConversion = linearConversion(1);
       const slugsConversion = linearConversion(14.5939);
 
       const [toBase, fromBase] = [
-        kilogramsConversion[1],
         slugsConversion[0],
+        kilogramsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "kg"] as const;
@@ -373,13 +373,13 @@ describe("mass", () => {
       expect(grams(v)).toEqual([v, "g"]);
     });
 
-    it.each([1, 10, 100])('should convert kg to g.', v => {
+    it.each([1, 10, 100])('should convert %dkg to g.', v => {
       const gramsConversion = linearConversion(0.001);
       const kilogramsConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
-        gramsConversion[1],
         kilogramsConversion[0],
+        gramsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "g"] as const;
@@ -391,13 +391,13 @@ describe("mass", () => {
 
 
 
-    it.each([1, 10, 100])('should convert dg to g.', v => {
+    it.each([1, 10, 100])('should convert %ddg to g.', v => {
       const gramsConversion = linearConversion(0.001);
       const decigramsConversion = linearConversion(0.0001);
 
       const [toBase, fromBase] = [
-        gramsConversion[1],
         decigramsConversion[0],
+        gramsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "g"] as const;
@@ -407,13 +407,13 @@ describe("mass", () => {
       expect(grams(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert cg to g.', v => {
+    it.each([1, 10, 100])('should convert %dcg to g.', v => {
       const gramsConversion = linearConversion(0.001);
       const centigramsConversion = linearConversion(0.00001);
 
       const [toBase, fromBase] = [
-        gramsConversion[1],
         centigramsConversion[0],
+        gramsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "g"] as const;
@@ -423,13 +423,13 @@ describe("mass", () => {
       expect(grams(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert mg to g.', v => {
+    it.each([1, 10, 100])('should convert %dmg to g.', v => {
       const gramsConversion = linearConversion(0.001);
       const milligramsConversion = linearConversion(0.000001);
 
       const [toBase, fromBase] = [
-        gramsConversion[1],
         milligramsConversion[0],
+        gramsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "g"] as const;
@@ -439,13 +439,13 @@ describe("mass", () => {
       expect(grams(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert µg to g.', v => {
+    it.each([1, 10, 100])('should convert %dµg to g.', v => {
       const gramsConversion = linearConversion(0.001);
       const microgramsConversion = linearConversion(1e-9);
 
       const [toBase, fromBase] = [
-        gramsConversion[1],
         microgramsConversion[0],
+        gramsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "g"] as const;
@@ -455,13 +455,13 @@ describe("mass", () => {
       expect(grams(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert ng to g.', v => {
+    it.each([1, 10, 100])('should convert %dng to g.', v => {
       const gramsConversion = linearConversion(0.001);
       const nanogramsConversion = linearConversion(1e-12);
 
       const [toBase, fromBase] = [
-        gramsConversion[1],
         nanogramsConversion[0],
+        gramsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "g"] as const;
@@ -471,13 +471,13 @@ describe("mass", () => {
       expect(grams(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert pg to g.', v => {
+    it.each([1, 10, 100])('should convert %dpg to g.', v => {
       const gramsConversion = linearConversion(0.001);
       const picogramsConversion = linearConversion(1e-15);
 
       const [toBase, fromBase] = [
-        gramsConversion[1],
         picogramsConversion[0],
+        gramsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "g"] as const;
@@ -487,13 +487,13 @@ describe("mass", () => {
       expect(grams(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert oz to g.', v => {
+    it.each([1, 10, 100])('should convert %doz to g.', v => {
       const gramsConversion = linearConversion(0.001);
       const ouncesConversion = linearConversion(0.0283495);
 
       const [toBase, fromBase] = [
-        gramsConversion[1],
         ouncesConversion[0],
+        gramsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "g"] as const;
@@ -503,13 +503,13 @@ describe("mass", () => {
       expect(grams(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert lb to g.', v => {
+    it.each([1, 10, 100])('should convert %dlb to g.', v => {
       const gramsConversion = linearConversion(0.001);
       const poundsConversion = linearConversion(0.453592);
 
       const [toBase, fromBase] = [
-        gramsConversion[1],
         poundsConversion[0],
+        gramsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "g"] as const;
@@ -519,13 +519,13 @@ describe("mass", () => {
       expect(grams(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert st to g.', v => {
+    it.each([1, 10, 100])('should convert %dst to g.', v => {
       const gramsConversion = linearConversion(0.001);
       const stonesConversion = linearConversion(0.157473);
 
       const [toBase, fromBase] = [
-        gramsConversion[1],
         stonesConversion[0],
+        gramsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "g"] as const;
@@ -535,13 +535,13 @@ describe("mass", () => {
       expect(grams(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert t to g.', v => {
+    it.each([1, 10, 100])('should convert %dt to g.', v => {
       const gramsConversion = linearConversion(0.001);
       const metricTonsConversion = linearConversion(1000);
 
       const [toBase, fromBase] = [
-        gramsConversion[1],
         metricTonsConversion[0],
+        gramsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "g"] as const;
@@ -551,13 +551,13 @@ describe("mass", () => {
       expect(grams(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert ton to g.', v => {
+    it.each([1, 10, 100])('should convert %dton to g.', v => {
       const gramsConversion = linearConversion(0.001);
       const shortTonsConversion = linearConversion(907.185);
 
       const [toBase, fromBase] = [
-        gramsConversion[1],
         shortTonsConversion[0],
+        gramsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "g"] as const;
@@ -567,13 +567,13 @@ describe("mass", () => {
       expect(grams(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert ct to g.', v => {
+    it.each([1, 10, 100])('should convert %dct to g.', v => {
       const gramsConversion = linearConversion(0.001);
       const caratsConversion = linearConversion(0.0002);
 
       const [toBase, fromBase] = [
-        gramsConversion[1],
         caratsConversion[0],
+        gramsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "g"] as const;
@@ -583,13 +583,13 @@ describe("mass", () => {
       expect(grams(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert oz t to g.', v => {
+    it.each([1, 10, 100])('should convert %doz t to g.', v => {
       const gramsConversion = linearConversion(0.001);
       const ouncesTroyConversion = linearConversion(0.03110348);
 
       const [toBase, fromBase] = [
-        gramsConversion[1],
         ouncesTroyConversion[0],
+        gramsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "g"] as const;
@@ -599,13 +599,13 @@ describe("mass", () => {
       expect(grams(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert slug to g.', v => {
+    it.each([1, 10, 100])('should convert %dslug to g.', v => {
       const gramsConversion = linearConversion(0.001);
       const slugsConversion = linearConversion(14.5939);
 
       const [toBase, fromBase] = [
-        gramsConversion[1],
         slugsConversion[0],
+        gramsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "g"] as const;
@@ -623,13 +623,13 @@ describe("mass", () => {
       expect(decigrams(v)).toEqual([v, "dg"]);
     });
 
-    it.each([1, 10, 100])('should convert kg to dg.', v => {
+    it.each([1, 10, 100])('should convert %dkg to dg.', v => {
       const decigramsConversion = linearConversion(0.0001);
       const kilogramsConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
-        decigramsConversion[1],
         kilogramsConversion[0],
+        decigramsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "dg"] as const;
@@ -639,13 +639,13 @@ describe("mass", () => {
       expect(decigrams(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert g to dg.', v => {
+    it.each([1, 10, 100])('should convert %dg to dg.', v => {
       const decigramsConversion = linearConversion(0.0001);
       const gramsConversion = linearConversion(0.001);
 
       const [toBase, fromBase] = [
-        decigramsConversion[1],
         gramsConversion[0],
+        decigramsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "dg"] as const;
@@ -657,13 +657,13 @@ describe("mass", () => {
 
 
 
-    it.each([1, 10, 100])('should convert cg to dg.', v => {
+    it.each([1, 10, 100])('should convert %dcg to dg.', v => {
       const decigramsConversion = linearConversion(0.0001);
       const centigramsConversion = linearConversion(0.00001);
 
       const [toBase, fromBase] = [
-        decigramsConversion[1],
         centigramsConversion[0],
+        decigramsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "dg"] as const;
@@ -673,13 +673,13 @@ describe("mass", () => {
       expect(decigrams(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert mg to dg.', v => {
+    it.each([1, 10, 100])('should convert %dmg to dg.', v => {
       const decigramsConversion = linearConversion(0.0001);
       const milligramsConversion = linearConversion(0.000001);
 
       const [toBase, fromBase] = [
-        decigramsConversion[1],
         milligramsConversion[0],
+        decigramsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "dg"] as const;
@@ -689,13 +689,13 @@ describe("mass", () => {
       expect(decigrams(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert µg to dg.', v => {
+    it.each([1, 10, 100])('should convert %dµg to dg.', v => {
       const decigramsConversion = linearConversion(0.0001);
       const microgramsConversion = linearConversion(1e-9);
 
       const [toBase, fromBase] = [
-        decigramsConversion[1],
         microgramsConversion[0],
+        decigramsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "dg"] as const;
@@ -705,13 +705,13 @@ describe("mass", () => {
       expect(decigrams(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert ng to dg.', v => {
+    it.each([1, 10, 100])('should convert %dng to dg.', v => {
       const decigramsConversion = linearConversion(0.0001);
       const nanogramsConversion = linearConversion(1e-12);
 
       const [toBase, fromBase] = [
-        decigramsConversion[1],
         nanogramsConversion[0],
+        decigramsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "dg"] as const;
@@ -721,13 +721,13 @@ describe("mass", () => {
       expect(decigrams(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert pg to dg.', v => {
+    it.each([1, 10, 100])('should convert %dpg to dg.', v => {
       const decigramsConversion = linearConversion(0.0001);
       const picogramsConversion = linearConversion(1e-15);
 
       const [toBase, fromBase] = [
-        decigramsConversion[1],
         picogramsConversion[0],
+        decigramsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "dg"] as const;
@@ -737,13 +737,13 @@ describe("mass", () => {
       expect(decigrams(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert oz to dg.', v => {
+    it.each([1, 10, 100])('should convert %doz to dg.', v => {
       const decigramsConversion = linearConversion(0.0001);
       const ouncesConversion = linearConversion(0.0283495);
 
       const [toBase, fromBase] = [
-        decigramsConversion[1],
         ouncesConversion[0],
+        decigramsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "dg"] as const;
@@ -753,13 +753,13 @@ describe("mass", () => {
       expect(decigrams(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert lb to dg.', v => {
+    it.each([1, 10, 100])('should convert %dlb to dg.', v => {
       const decigramsConversion = linearConversion(0.0001);
       const poundsConversion = linearConversion(0.453592);
 
       const [toBase, fromBase] = [
-        decigramsConversion[1],
         poundsConversion[0],
+        decigramsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "dg"] as const;
@@ -769,13 +769,13 @@ describe("mass", () => {
       expect(decigrams(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert st to dg.', v => {
+    it.each([1, 10, 100])('should convert %dst to dg.', v => {
       const decigramsConversion = linearConversion(0.0001);
       const stonesConversion = linearConversion(0.157473);
 
       const [toBase, fromBase] = [
-        decigramsConversion[1],
         stonesConversion[0],
+        decigramsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "dg"] as const;
@@ -785,13 +785,13 @@ describe("mass", () => {
       expect(decigrams(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert t to dg.', v => {
+    it.each([1, 10, 100])('should convert %dt to dg.', v => {
       const decigramsConversion = linearConversion(0.0001);
       const metricTonsConversion = linearConversion(1000);
 
       const [toBase, fromBase] = [
-        decigramsConversion[1],
         metricTonsConversion[0],
+        decigramsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "dg"] as const;
@@ -801,13 +801,13 @@ describe("mass", () => {
       expect(decigrams(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert ton to dg.', v => {
+    it.each([1, 10, 100])('should convert %dton to dg.', v => {
       const decigramsConversion = linearConversion(0.0001);
       const shortTonsConversion = linearConversion(907.185);
 
       const [toBase, fromBase] = [
-        decigramsConversion[1],
         shortTonsConversion[0],
+        decigramsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "dg"] as const;
@@ -817,13 +817,13 @@ describe("mass", () => {
       expect(decigrams(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert ct to dg.', v => {
+    it.each([1, 10, 100])('should convert %dct to dg.', v => {
       const decigramsConversion = linearConversion(0.0001);
       const caratsConversion = linearConversion(0.0002);
 
       const [toBase, fromBase] = [
-        decigramsConversion[1],
         caratsConversion[0],
+        decigramsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "dg"] as const;
@@ -833,13 +833,13 @@ describe("mass", () => {
       expect(decigrams(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert oz t to dg.', v => {
+    it.each([1, 10, 100])('should convert %doz t to dg.', v => {
       const decigramsConversion = linearConversion(0.0001);
       const ouncesTroyConversion = linearConversion(0.03110348);
 
       const [toBase, fromBase] = [
-        decigramsConversion[1],
         ouncesTroyConversion[0],
+        decigramsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "dg"] as const;
@@ -849,13 +849,13 @@ describe("mass", () => {
       expect(decigrams(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert slug to dg.', v => {
+    it.each([1, 10, 100])('should convert %dslug to dg.', v => {
       const decigramsConversion = linearConversion(0.0001);
       const slugsConversion = linearConversion(14.5939);
 
       const [toBase, fromBase] = [
-        decigramsConversion[1],
         slugsConversion[0],
+        decigramsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "dg"] as const;
@@ -873,13 +873,13 @@ describe("mass", () => {
       expect(centigrams(v)).toEqual([v, "cg"]);
     });
 
-    it.each([1, 10, 100])('should convert kg to cg.', v => {
+    it.each([1, 10, 100])('should convert %dkg to cg.', v => {
       const centigramsConversion = linearConversion(0.00001);
       const kilogramsConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
-        centigramsConversion[1],
         kilogramsConversion[0],
+        centigramsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "cg"] as const;
@@ -889,13 +889,13 @@ describe("mass", () => {
       expect(centigrams(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert g to cg.', v => {
+    it.each([1, 10, 100])('should convert %dg to cg.', v => {
       const centigramsConversion = linearConversion(0.00001);
       const gramsConversion = linearConversion(0.001);
 
       const [toBase, fromBase] = [
-        centigramsConversion[1],
         gramsConversion[0],
+        centigramsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "cg"] as const;
@@ -905,13 +905,13 @@ describe("mass", () => {
       expect(centigrams(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert dg to cg.', v => {
+    it.each([1, 10, 100])('should convert %ddg to cg.', v => {
       const centigramsConversion = linearConversion(0.00001);
       const decigramsConversion = linearConversion(0.0001);
 
       const [toBase, fromBase] = [
-        centigramsConversion[1],
         decigramsConversion[0],
+        centigramsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "cg"] as const;
@@ -923,13 +923,13 @@ describe("mass", () => {
 
 
 
-    it.each([1, 10, 100])('should convert mg to cg.', v => {
+    it.each([1, 10, 100])('should convert %dmg to cg.', v => {
       const centigramsConversion = linearConversion(0.00001);
       const milligramsConversion = linearConversion(0.000001);
 
       const [toBase, fromBase] = [
-        centigramsConversion[1],
         milligramsConversion[0],
+        centigramsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "cg"] as const;
@@ -939,13 +939,13 @@ describe("mass", () => {
       expect(centigrams(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert µg to cg.', v => {
+    it.each([1, 10, 100])('should convert %dµg to cg.', v => {
       const centigramsConversion = linearConversion(0.00001);
       const microgramsConversion = linearConversion(1e-9);
 
       const [toBase, fromBase] = [
-        centigramsConversion[1],
         microgramsConversion[0],
+        centigramsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "cg"] as const;
@@ -955,13 +955,13 @@ describe("mass", () => {
       expect(centigrams(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert ng to cg.', v => {
+    it.each([1, 10, 100])('should convert %dng to cg.', v => {
       const centigramsConversion = linearConversion(0.00001);
       const nanogramsConversion = linearConversion(1e-12);
 
       const [toBase, fromBase] = [
-        centigramsConversion[1],
         nanogramsConversion[0],
+        centigramsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "cg"] as const;
@@ -971,13 +971,13 @@ describe("mass", () => {
       expect(centigrams(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert pg to cg.', v => {
+    it.each([1, 10, 100])('should convert %dpg to cg.', v => {
       const centigramsConversion = linearConversion(0.00001);
       const picogramsConversion = linearConversion(1e-15);
 
       const [toBase, fromBase] = [
-        centigramsConversion[1],
         picogramsConversion[0],
+        centigramsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "cg"] as const;
@@ -987,13 +987,13 @@ describe("mass", () => {
       expect(centigrams(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert oz to cg.', v => {
+    it.each([1, 10, 100])('should convert %doz to cg.', v => {
       const centigramsConversion = linearConversion(0.00001);
       const ouncesConversion = linearConversion(0.0283495);
 
       const [toBase, fromBase] = [
-        centigramsConversion[1],
         ouncesConversion[0],
+        centigramsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "cg"] as const;
@@ -1003,13 +1003,13 @@ describe("mass", () => {
       expect(centigrams(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert lb to cg.', v => {
+    it.each([1, 10, 100])('should convert %dlb to cg.', v => {
       const centigramsConversion = linearConversion(0.00001);
       const poundsConversion = linearConversion(0.453592);
 
       const [toBase, fromBase] = [
-        centigramsConversion[1],
         poundsConversion[0],
+        centigramsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "cg"] as const;
@@ -1019,13 +1019,13 @@ describe("mass", () => {
       expect(centigrams(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert st to cg.', v => {
+    it.each([1, 10, 100])('should convert %dst to cg.', v => {
       const centigramsConversion = linearConversion(0.00001);
       const stonesConversion = linearConversion(0.157473);
 
       const [toBase, fromBase] = [
-        centigramsConversion[1],
         stonesConversion[0],
+        centigramsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "cg"] as const;
@@ -1035,13 +1035,13 @@ describe("mass", () => {
       expect(centigrams(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert t to cg.', v => {
+    it.each([1, 10, 100])('should convert %dt to cg.', v => {
       const centigramsConversion = linearConversion(0.00001);
       const metricTonsConversion = linearConversion(1000);
 
       const [toBase, fromBase] = [
-        centigramsConversion[1],
         metricTonsConversion[0],
+        centigramsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "cg"] as const;
@@ -1051,13 +1051,13 @@ describe("mass", () => {
       expect(centigrams(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert ton to cg.', v => {
+    it.each([1, 10, 100])('should convert %dton to cg.', v => {
       const centigramsConversion = linearConversion(0.00001);
       const shortTonsConversion = linearConversion(907.185);
 
       const [toBase, fromBase] = [
-        centigramsConversion[1],
         shortTonsConversion[0],
+        centigramsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "cg"] as const;
@@ -1067,13 +1067,13 @@ describe("mass", () => {
       expect(centigrams(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert ct to cg.', v => {
+    it.each([1, 10, 100])('should convert %dct to cg.', v => {
       const centigramsConversion = linearConversion(0.00001);
       const caratsConversion = linearConversion(0.0002);
 
       const [toBase, fromBase] = [
-        centigramsConversion[1],
         caratsConversion[0],
+        centigramsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "cg"] as const;
@@ -1083,13 +1083,13 @@ describe("mass", () => {
       expect(centigrams(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert oz t to cg.', v => {
+    it.each([1, 10, 100])('should convert %doz t to cg.', v => {
       const centigramsConversion = linearConversion(0.00001);
       const ouncesTroyConversion = linearConversion(0.03110348);
 
       const [toBase, fromBase] = [
-        centigramsConversion[1],
         ouncesTroyConversion[0],
+        centigramsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "cg"] as const;
@@ -1099,13 +1099,13 @@ describe("mass", () => {
       expect(centigrams(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert slug to cg.', v => {
+    it.each([1, 10, 100])('should convert %dslug to cg.', v => {
       const centigramsConversion = linearConversion(0.00001);
       const slugsConversion = linearConversion(14.5939);
 
       const [toBase, fromBase] = [
-        centigramsConversion[1],
         slugsConversion[0],
+        centigramsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "cg"] as const;
@@ -1123,13 +1123,13 @@ describe("mass", () => {
       expect(milligrams(v)).toEqual([v, "mg"]);
     });
 
-    it.each([1, 10, 100])('should convert kg to mg.', v => {
+    it.each([1, 10, 100])('should convert %dkg to mg.', v => {
       const milligramsConversion = linearConversion(0.000001);
       const kilogramsConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
-        milligramsConversion[1],
         kilogramsConversion[0],
+        milligramsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "mg"] as const;
@@ -1139,13 +1139,13 @@ describe("mass", () => {
       expect(milligrams(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert g to mg.', v => {
+    it.each([1, 10, 100])('should convert %dg to mg.', v => {
       const milligramsConversion = linearConversion(0.000001);
       const gramsConversion = linearConversion(0.001);
 
       const [toBase, fromBase] = [
-        milligramsConversion[1],
         gramsConversion[0],
+        milligramsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "mg"] as const;
@@ -1155,13 +1155,13 @@ describe("mass", () => {
       expect(milligrams(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert dg to mg.', v => {
+    it.each([1, 10, 100])('should convert %ddg to mg.', v => {
       const milligramsConversion = linearConversion(0.000001);
       const decigramsConversion = linearConversion(0.0001);
 
       const [toBase, fromBase] = [
-        milligramsConversion[1],
         decigramsConversion[0],
+        milligramsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "mg"] as const;
@@ -1171,13 +1171,13 @@ describe("mass", () => {
       expect(milligrams(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert cg to mg.', v => {
+    it.each([1, 10, 100])('should convert %dcg to mg.', v => {
       const milligramsConversion = linearConversion(0.000001);
       const centigramsConversion = linearConversion(0.00001);
 
       const [toBase, fromBase] = [
-        milligramsConversion[1],
         centigramsConversion[0],
+        milligramsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "mg"] as const;
@@ -1189,13 +1189,13 @@ describe("mass", () => {
 
 
 
-    it.each([1, 10, 100])('should convert µg to mg.', v => {
+    it.each([1, 10, 100])('should convert %dµg to mg.', v => {
       const milligramsConversion = linearConversion(0.000001);
       const microgramsConversion = linearConversion(1e-9);
 
       const [toBase, fromBase] = [
-        milligramsConversion[1],
         microgramsConversion[0],
+        milligramsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "mg"] as const;
@@ -1205,13 +1205,13 @@ describe("mass", () => {
       expect(milligrams(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert ng to mg.', v => {
+    it.each([1, 10, 100])('should convert %dng to mg.', v => {
       const milligramsConversion = linearConversion(0.000001);
       const nanogramsConversion = linearConversion(1e-12);
 
       const [toBase, fromBase] = [
-        milligramsConversion[1],
         nanogramsConversion[0],
+        milligramsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "mg"] as const;
@@ -1221,13 +1221,13 @@ describe("mass", () => {
       expect(milligrams(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert pg to mg.', v => {
+    it.each([1, 10, 100])('should convert %dpg to mg.', v => {
       const milligramsConversion = linearConversion(0.000001);
       const picogramsConversion = linearConversion(1e-15);
 
       const [toBase, fromBase] = [
-        milligramsConversion[1],
         picogramsConversion[0],
+        milligramsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "mg"] as const;
@@ -1237,13 +1237,13 @@ describe("mass", () => {
       expect(milligrams(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert oz to mg.', v => {
+    it.each([1, 10, 100])('should convert %doz to mg.', v => {
       const milligramsConversion = linearConversion(0.000001);
       const ouncesConversion = linearConversion(0.0283495);
 
       const [toBase, fromBase] = [
-        milligramsConversion[1],
         ouncesConversion[0],
+        milligramsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "mg"] as const;
@@ -1253,13 +1253,13 @@ describe("mass", () => {
       expect(milligrams(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert lb to mg.', v => {
+    it.each([1, 10, 100])('should convert %dlb to mg.', v => {
       const milligramsConversion = linearConversion(0.000001);
       const poundsConversion = linearConversion(0.453592);
 
       const [toBase, fromBase] = [
-        milligramsConversion[1],
         poundsConversion[0],
+        milligramsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "mg"] as const;
@@ -1269,13 +1269,13 @@ describe("mass", () => {
       expect(milligrams(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert st to mg.', v => {
+    it.each([1, 10, 100])('should convert %dst to mg.', v => {
       const milligramsConversion = linearConversion(0.000001);
       const stonesConversion = linearConversion(0.157473);
 
       const [toBase, fromBase] = [
-        milligramsConversion[1],
         stonesConversion[0],
+        milligramsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "mg"] as const;
@@ -1285,13 +1285,13 @@ describe("mass", () => {
       expect(milligrams(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert t to mg.', v => {
+    it.each([1, 10, 100])('should convert %dt to mg.', v => {
       const milligramsConversion = linearConversion(0.000001);
       const metricTonsConversion = linearConversion(1000);
 
       const [toBase, fromBase] = [
-        milligramsConversion[1],
         metricTonsConversion[0],
+        milligramsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "mg"] as const;
@@ -1301,13 +1301,13 @@ describe("mass", () => {
       expect(milligrams(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert ton to mg.', v => {
+    it.each([1, 10, 100])('should convert %dton to mg.', v => {
       const milligramsConversion = linearConversion(0.000001);
       const shortTonsConversion = linearConversion(907.185);
 
       const [toBase, fromBase] = [
-        milligramsConversion[1],
         shortTonsConversion[0],
+        milligramsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "mg"] as const;
@@ -1317,13 +1317,13 @@ describe("mass", () => {
       expect(milligrams(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert ct to mg.', v => {
+    it.each([1, 10, 100])('should convert %dct to mg.', v => {
       const milligramsConversion = linearConversion(0.000001);
       const caratsConversion = linearConversion(0.0002);
 
       const [toBase, fromBase] = [
-        milligramsConversion[1],
         caratsConversion[0],
+        milligramsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "mg"] as const;
@@ -1333,13 +1333,13 @@ describe("mass", () => {
       expect(milligrams(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert oz t to mg.', v => {
+    it.each([1, 10, 100])('should convert %doz t to mg.', v => {
       const milligramsConversion = linearConversion(0.000001);
       const ouncesTroyConversion = linearConversion(0.03110348);
 
       const [toBase, fromBase] = [
-        milligramsConversion[1],
         ouncesTroyConversion[0],
+        milligramsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "mg"] as const;
@@ -1349,13 +1349,13 @@ describe("mass", () => {
       expect(milligrams(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert slug to mg.', v => {
+    it.each([1, 10, 100])('should convert %dslug to mg.', v => {
       const milligramsConversion = linearConversion(0.000001);
       const slugsConversion = linearConversion(14.5939);
 
       const [toBase, fromBase] = [
-        milligramsConversion[1],
         slugsConversion[0],
+        milligramsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "mg"] as const;
@@ -1373,13 +1373,13 @@ describe("mass", () => {
       expect(micrograms(v)).toEqual([v, "µg"]);
     });
 
-    it.each([1, 10, 100])('should convert kg to µg.', v => {
+    it.each([1, 10, 100])('should convert %dkg to µg.', v => {
       const microgramsConversion = linearConversion(1e-9);
       const kilogramsConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
-        microgramsConversion[1],
         kilogramsConversion[0],
+        microgramsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "µg"] as const;
@@ -1389,13 +1389,13 @@ describe("mass", () => {
       expect(micrograms(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert g to µg.', v => {
+    it.each([1, 10, 100])('should convert %dg to µg.', v => {
       const microgramsConversion = linearConversion(1e-9);
       const gramsConversion = linearConversion(0.001);
 
       const [toBase, fromBase] = [
-        microgramsConversion[1],
         gramsConversion[0],
+        microgramsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "µg"] as const;
@@ -1405,13 +1405,13 @@ describe("mass", () => {
       expect(micrograms(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert dg to µg.', v => {
+    it.each([1, 10, 100])('should convert %ddg to µg.', v => {
       const microgramsConversion = linearConversion(1e-9);
       const decigramsConversion = linearConversion(0.0001);
 
       const [toBase, fromBase] = [
-        microgramsConversion[1],
         decigramsConversion[0],
+        microgramsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "µg"] as const;
@@ -1421,13 +1421,13 @@ describe("mass", () => {
       expect(micrograms(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert cg to µg.', v => {
+    it.each([1, 10, 100])('should convert %dcg to µg.', v => {
       const microgramsConversion = linearConversion(1e-9);
       const centigramsConversion = linearConversion(0.00001);
 
       const [toBase, fromBase] = [
-        microgramsConversion[1],
         centigramsConversion[0],
+        microgramsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "µg"] as const;
@@ -1437,13 +1437,13 @@ describe("mass", () => {
       expect(micrograms(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert mg to µg.', v => {
+    it.each([1, 10, 100])('should convert %dmg to µg.', v => {
       const microgramsConversion = linearConversion(1e-9);
       const milligramsConversion = linearConversion(0.000001);
 
       const [toBase, fromBase] = [
-        microgramsConversion[1],
         milligramsConversion[0],
+        microgramsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "µg"] as const;
@@ -1455,13 +1455,13 @@ describe("mass", () => {
 
 
 
-    it.each([1, 10, 100])('should convert ng to µg.', v => {
+    it.each([1, 10, 100])('should convert %dng to µg.', v => {
       const microgramsConversion = linearConversion(1e-9);
       const nanogramsConversion = linearConversion(1e-12);
 
       const [toBase, fromBase] = [
-        microgramsConversion[1],
         nanogramsConversion[0],
+        microgramsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "µg"] as const;
@@ -1471,13 +1471,13 @@ describe("mass", () => {
       expect(micrograms(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert pg to µg.', v => {
+    it.each([1, 10, 100])('should convert %dpg to µg.', v => {
       const microgramsConversion = linearConversion(1e-9);
       const picogramsConversion = linearConversion(1e-15);
 
       const [toBase, fromBase] = [
-        microgramsConversion[1],
         picogramsConversion[0],
+        microgramsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "µg"] as const;
@@ -1487,13 +1487,13 @@ describe("mass", () => {
       expect(micrograms(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert oz to µg.', v => {
+    it.each([1, 10, 100])('should convert %doz to µg.', v => {
       const microgramsConversion = linearConversion(1e-9);
       const ouncesConversion = linearConversion(0.0283495);
 
       const [toBase, fromBase] = [
-        microgramsConversion[1],
         ouncesConversion[0],
+        microgramsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "µg"] as const;
@@ -1503,13 +1503,13 @@ describe("mass", () => {
       expect(micrograms(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert lb to µg.', v => {
+    it.each([1, 10, 100])('should convert %dlb to µg.', v => {
       const microgramsConversion = linearConversion(1e-9);
       const poundsConversion = linearConversion(0.453592);
 
       const [toBase, fromBase] = [
-        microgramsConversion[1],
         poundsConversion[0],
+        microgramsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "µg"] as const;
@@ -1519,13 +1519,13 @@ describe("mass", () => {
       expect(micrograms(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert st to µg.', v => {
+    it.each([1, 10, 100])('should convert %dst to µg.', v => {
       const microgramsConversion = linearConversion(1e-9);
       const stonesConversion = linearConversion(0.157473);
 
       const [toBase, fromBase] = [
-        microgramsConversion[1],
         stonesConversion[0],
+        microgramsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "µg"] as const;
@@ -1535,13 +1535,13 @@ describe("mass", () => {
       expect(micrograms(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert t to µg.', v => {
+    it.each([1, 10, 100])('should convert %dt to µg.', v => {
       const microgramsConversion = linearConversion(1e-9);
       const metricTonsConversion = linearConversion(1000);
 
       const [toBase, fromBase] = [
-        microgramsConversion[1],
         metricTonsConversion[0],
+        microgramsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "µg"] as const;
@@ -1551,13 +1551,13 @@ describe("mass", () => {
       expect(micrograms(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert ton to µg.', v => {
+    it.each([1, 10, 100])('should convert %dton to µg.', v => {
       const microgramsConversion = linearConversion(1e-9);
       const shortTonsConversion = linearConversion(907.185);
 
       const [toBase, fromBase] = [
-        microgramsConversion[1],
         shortTonsConversion[0],
+        microgramsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "µg"] as const;
@@ -1567,13 +1567,13 @@ describe("mass", () => {
       expect(micrograms(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert ct to µg.', v => {
+    it.each([1, 10, 100])('should convert %dct to µg.', v => {
       const microgramsConversion = linearConversion(1e-9);
       const caratsConversion = linearConversion(0.0002);
 
       const [toBase, fromBase] = [
-        microgramsConversion[1],
         caratsConversion[0],
+        microgramsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "µg"] as const;
@@ -1583,13 +1583,13 @@ describe("mass", () => {
       expect(micrograms(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert oz t to µg.', v => {
+    it.each([1, 10, 100])('should convert %doz t to µg.', v => {
       const microgramsConversion = linearConversion(1e-9);
       const ouncesTroyConversion = linearConversion(0.03110348);
 
       const [toBase, fromBase] = [
-        microgramsConversion[1],
         ouncesTroyConversion[0],
+        microgramsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "µg"] as const;
@@ -1599,13 +1599,13 @@ describe("mass", () => {
       expect(micrograms(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert slug to µg.', v => {
+    it.each([1, 10, 100])('should convert %dslug to µg.', v => {
       const microgramsConversion = linearConversion(1e-9);
       const slugsConversion = linearConversion(14.5939);
 
       const [toBase, fromBase] = [
-        microgramsConversion[1],
         slugsConversion[0],
+        microgramsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "µg"] as const;
@@ -1623,13 +1623,13 @@ describe("mass", () => {
       expect(nanograms(v)).toEqual([v, "ng"]);
     });
 
-    it.each([1, 10, 100])('should convert kg to ng.', v => {
+    it.each([1, 10, 100])('should convert %dkg to ng.', v => {
       const nanogramsConversion = linearConversion(1e-12);
       const kilogramsConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
-        nanogramsConversion[1],
         kilogramsConversion[0],
+        nanogramsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "ng"] as const;
@@ -1639,13 +1639,13 @@ describe("mass", () => {
       expect(nanograms(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert g to ng.', v => {
+    it.each([1, 10, 100])('should convert %dg to ng.', v => {
       const nanogramsConversion = linearConversion(1e-12);
       const gramsConversion = linearConversion(0.001);
 
       const [toBase, fromBase] = [
-        nanogramsConversion[1],
         gramsConversion[0],
+        nanogramsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "ng"] as const;
@@ -1655,13 +1655,13 @@ describe("mass", () => {
       expect(nanograms(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert dg to ng.', v => {
+    it.each([1, 10, 100])('should convert %ddg to ng.', v => {
       const nanogramsConversion = linearConversion(1e-12);
       const decigramsConversion = linearConversion(0.0001);
 
       const [toBase, fromBase] = [
-        nanogramsConversion[1],
         decigramsConversion[0],
+        nanogramsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "ng"] as const;
@@ -1671,13 +1671,13 @@ describe("mass", () => {
       expect(nanograms(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert cg to ng.', v => {
+    it.each([1, 10, 100])('should convert %dcg to ng.', v => {
       const nanogramsConversion = linearConversion(1e-12);
       const centigramsConversion = linearConversion(0.00001);
 
       const [toBase, fromBase] = [
-        nanogramsConversion[1],
         centigramsConversion[0],
+        nanogramsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "ng"] as const;
@@ -1687,13 +1687,13 @@ describe("mass", () => {
       expect(nanograms(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert mg to ng.', v => {
+    it.each([1, 10, 100])('should convert %dmg to ng.', v => {
       const nanogramsConversion = linearConversion(1e-12);
       const milligramsConversion = linearConversion(0.000001);
 
       const [toBase, fromBase] = [
-        nanogramsConversion[1],
         milligramsConversion[0],
+        nanogramsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "ng"] as const;
@@ -1703,13 +1703,13 @@ describe("mass", () => {
       expect(nanograms(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert µg to ng.', v => {
+    it.each([1, 10, 100])('should convert %dµg to ng.', v => {
       const nanogramsConversion = linearConversion(1e-12);
       const microgramsConversion = linearConversion(1e-9);
 
       const [toBase, fromBase] = [
-        nanogramsConversion[1],
         microgramsConversion[0],
+        nanogramsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "ng"] as const;
@@ -1721,13 +1721,13 @@ describe("mass", () => {
 
 
 
-    it.each([1, 10, 100])('should convert pg to ng.', v => {
+    it.each([1, 10, 100])('should convert %dpg to ng.', v => {
       const nanogramsConversion = linearConversion(1e-12);
       const picogramsConversion = linearConversion(1e-15);
 
       const [toBase, fromBase] = [
-        nanogramsConversion[1],
         picogramsConversion[0],
+        nanogramsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "ng"] as const;
@@ -1737,13 +1737,13 @@ describe("mass", () => {
       expect(nanograms(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert oz to ng.', v => {
+    it.each([1, 10, 100])('should convert %doz to ng.', v => {
       const nanogramsConversion = linearConversion(1e-12);
       const ouncesConversion = linearConversion(0.0283495);
 
       const [toBase, fromBase] = [
-        nanogramsConversion[1],
         ouncesConversion[0],
+        nanogramsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "ng"] as const;
@@ -1753,13 +1753,13 @@ describe("mass", () => {
       expect(nanograms(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert lb to ng.', v => {
+    it.each([1, 10, 100])('should convert %dlb to ng.', v => {
       const nanogramsConversion = linearConversion(1e-12);
       const poundsConversion = linearConversion(0.453592);
 
       const [toBase, fromBase] = [
-        nanogramsConversion[1],
         poundsConversion[0],
+        nanogramsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "ng"] as const;
@@ -1769,13 +1769,13 @@ describe("mass", () => {
       expect(nanograms(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert st to ng.', v => {
+    it.each([1, 10, 100])('should convert %dst to ng.', v => {
       const nanogramsConversion = linearConversion(1e-12);
       const stonesConversion = linearConversion(0.157473);
 
       const [toBase, fromBase] = [
-        nanogramsConversion[1],
         stonesConversion[0],
+        nanogramsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "ng"] as const;
@@ -1785,13 +1785,13 @@ describe("mass", () => {
       expect(nanograms(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert t to ng.', v => {
+    it.each([1, 10, 100])('should convert %dt to ng.', v => {
       const nanogramsConversion = linearConversion(1e-12);
       const metricTonsConversion = linearConversion(1000);
 
       const [toBase, fromBase] = [
-        nanogramsConversion[1],
         metricTonsConversion[0],
+        nanogramsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "ng"] as const;
@@ -1801,13 +1801,13 @@ describe("mass", () => {
       expect(nanograms(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert ton to ng.', v => {
+    it.each([1, 10, 100])('should convert %dton to ng.', v => {
       const nanogramsConversion = linearConversion(1e-12);
       const shortTonsConversion = linearConversion(907.185);
 
       const [toBase, fromBase] = [
-        nanogramsConversion[1],
         shortTonsConversion[0],
+        nanogramsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "ng"] as const;
@@ -1817,13 +1817,13 @@ describe("mass", () => {
       expect(nanograms(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert ct to ng.', v => {
+    it.each([1, 10, 100])('should convert %dct to ng.', v => {
       const nanogramsConversion = linearConversion(1e-12);
       const caratsConversion = linearConversion(0.0002);
 
       const [toBase, fromBase] = [
-        nanogramsConversion[1],
         caratsConversion[0],
+        nanogramsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "ng"] as const;
@@ -1833,13 +1833,13 @@ describe("mass", () => {
       expect(nanograms(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert oz t to ng.', v => {
+    it.each([1, 10, 100])('should convert %doz t to ng.', v => {
       const nanogramsConversion = linearConversion(1e-12);
       const ouncesTroyConversion = linearConversion(0.03110348);
 
       const [toBase, fromBase] = [
-        nanogramsConversion[1],
         ouncesTroyConversion[0],
+        nanogramsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "ng"] as const;
@@ -1849,13 +1849,13 @@ describe("mass", () => {
       expect(nanograms(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert slug to ng.', v => {
+    it.each([1, 10, 100])('should convert %dslug to ng.', v => {
       const nanogramsConversion = linearConversion(1e-12);
       const slugsConversion = linearConversion(14.5939);
 
       const [toBase, fromBase] = [
-        nanogramsConversion[1],
         slugsConversion[0],
+        nanogramsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "ng"] as const;
@@ -1873,13 +1873,13 @@ describe("mass", () => {
       expect(picograms(v)).toEqual([v, "pg"]);
     });
 
-    it.each([1, 10, 100])('should convert kg to pg.', v => {
+    it.each([1, 10, 100])('should convert %dkg to pg.', v => {
       const picogramsConversion = linearConversion(1e-15);
       const kilogramsConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
-        picogramsConversion[1],
         kilogramsConversion[0],
+        picogramsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "pg"] as const;
@@ -1889,13 +1889,13 @@ describe("mass", () => {
       expect(picograms(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert g to pg.', v => {
+    it.each([1, 10, 100])('should convert %dg to pg.', v => {
       const picogramsConversion = linearConversion(1e-15);
       const gramsConversion = linearConversion(0.001);
 
       const [toBase, fromBase] = [
-        picogramsConversion[1],
         gramsConversion[0],
+        picogramsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "pg"] as const;
@@ -1905,13 +1905,13 @@ describe("mass", () => {
       expect(picograms(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert dg to pg.', v => {
+    it.each([1, 10, 100])('should convert %ddg to pg.', v => {
       const picogramsConversion = linearConversion(1e-15);
       const decigramsConversion = linearConversion(0.0001);
 
       const [toBase, fromBase] = [
-        picogramsConversion[1],
         decigramsConversion[0],
+        picogramsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "pg"] as const;
@@ -1921,13 +1921,13 @@ describe("mass", () => {
       expect(picograms(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert cg to pg.', v => {
+    it.each([1, 10, 100])('should convert %dcg to pg.', v => {
       const picogramsConversion = linearConversion(1e-15);
       const centigramsConversion = linearConversion(0.00001);
 
       const [toBase, fromBase] = [
-        picogramsConversion[1],
         centigramsConversion[0],
+        picogramsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "pg"] as const;
@@ -1937,13 +1937,13 @@ describe("mass", () => {
       expect(picograms(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert mg to pg.', v => {
+    it.each([1, 10, 100])('should convert %dmg to pg.', v => {
       const picogramsConversion = linearConversion(1e-15);
       const milligramsConversion = linearConversion(0.000001);
 
       const [toBase, fromBase] = [
-        picogramsConversion[1],
         milligramsConversion[0],
+        picogramsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "pg"] as const;
@@ -1953,13 +1953,13 @@ describe("mass", () => {
       expect(picograms(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert µg to pg.', v => {
+    it.each([1, 10, 100])('should convert %dµg to pg.', v => {
       const picogramsConversion = linearConversion(1e-15);
       const microgramsConversion = linearConversion(1e-9);
 
       const [toBase, fromBase] = [
-        picogramsConversion[1],
         microgramsConversion[0],
+        picogramsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "pg"] as const;
@@ -1969,13 +1969,13 @@ describe("mass", () => {
       expect(picograms(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert ng to pg.', v => {
+    it.each([1, 10, 100])('should convert %dng to pg.', v => {
       const picogramsConversion = linearConversion(1e-15);
       const nanogramsConversion = linearConversion(1e-12);
 
       const [toBase, fromBase] = [
-        picogramsConversion[1],
         nanogramsConversion[0],
+        picogramsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "pg"] as const;
@@ -1987,13 +1987,13 @@ describe("mass", () => {
 
 
 
-    it.each([1, 10, 100])('should convert oz to pg.', v => {
+    it.each([1, 10, 100])('should convert %doz to pg.', v => {
       const picogramsConversion = linearConversion(1e-15);
       const ouncesConversion = linearConversion(0.0283495);
 
       const [toBase, fromBase] = [
-        picogramsConversion[1],
         ouncesConversion[0],
+        picogramsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "pg"] as const;
@@ -2003,13 +2003,13 @@ describe("mass", () => {
       expect(picograms(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert lb to pg.', v => {
+    it.each([1, 10, 100])('should convert %dlb to pg.', v => {
       const picogramsConversion = linearConversion(1e-15);
       const poundsConversion = linearConversion(0.453592);
 
       const [toBase, fromBase] = [
-        picogramsConversion[1],
         poundsConversion[0],
+        picogramsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "pg"] as const;
@@ -2019,13 +2019,13 @@ describe("mass", () => {
       expect(picograms(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert st to pg.', v => {
+    it.each([1, 10, 100])('should convert %dst to pg.', v => {
       const picogramsConversion = linearConversion(1e-15);
       const stonesConversion = linearConversion(0.157473);
 
       const [toBase, fromBase] = [
-        picogramsConversion[1],
         stonesConversion[0],
+        picogramsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "pg"] as const;
@@ -2035,13 +2035,13 @@ describe("mass", () => {
       expect(picograms(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert t to pg.', v => {
+    it.each([1, 10, 100])('should convert %dt to pg.', v => {
       const picogramsConversion = linearConversion(1e-15);
       const metricTonsConversion = linearConversion(1000);
 
       const [toBase, fromBase] = [
-        picogramsConversion[1],
         metricTonsConversion[0],
+        picogramsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "pg"] as const;
@@ -2051,13 +2051,13 @@ describe("mass", () => {
       expect(picograms(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert ton to pg.', v => {
+    it.each([1, 10, 100])('should convert %dton to pg.', v => {
       const picogramsConversion = linearConversion(1e-15);
       const shortTonsConversion = linearConversion(907.185);
 
       const [toBase, fromBase] = [
-        picogramsConversion[1],
         shortTonsConversion[0],
+        picogramsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "pg"] as const;
@@ -2067,13 +2067,13 @@ describe("mass", () => {
       expect(picograms(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert ct to pg.', v => {
+    it.each([1, 10, 100])('should convert %dct to pg.', v => {
       const picogramsConversion = linearConversion(1e-15);
       const caratsConversion = linearConversion(0.0002);
 
       const [toBase, fromBase] = [
-        picogramsConversion[1],
         caratsConversion[0],
+        picogramsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "pg"] as const;
@@ -2083,13 +2083,13 @@ describe("mass", () => {
       expect(picograms(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert oz t to pg.', v => {
+    it.each([1, 10, 100])('should convert %doz t to pg.', v => {
       const picogramsConversion = linearConversion(1e-15);
       const ouncesTroyConversion = linearConversion(0.03110348);
 
       const [toBase, fromBase] = [
-        picogramsConversion[1],
         ouncesTroyConversion[0],
+        picogramsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "pg"] as const;
@@ -2099,13 +2099,13 @@ describe("mass", () => {
       expect(picograms(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert slug to pg.', v => {
+    it.each([1, 10, 100])('should convert %dslug to pg.', v => {
       const picogramsConversion = linearConversion(1e-15);
       const slugsConversion = linearConversion(14.5939);
 
       const [toBase, fromBase] = [
-        picogramsConversion[1],
         slugsConversion[0],
+        picogramsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "pg"] as const;
@@ -2123,13 +2123,13 @@ describe("mass", () => {
       expect(ounces(v)).toEqual([v, "oz"]);
     });
 
-    it.each([1, 10, 100])('should convert kg to oz.', v => {
+    it.each([1, 10, 100])('should convert %dkg to oz.', v => {
       const ouncesConversion = linearConversion(0.0283495);
       const kilogramsConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
-        ouncesConversion[1],
         kilogramsConversion[0],
+        ouncesConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "oz"] as const;
@@ -2139,13 +2139,13 @@ describe("mass", () => {
       expect(ounces(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert g to oz.', v => {
+    it.each([1, 10, 100])('should convert %dg to oz.', v => {
       const ouncesConversion = linearConversion(0.0283495);
       const gramsConversion = linearConversion(0.001);
 
       const [toBase, fromBase] = [
-        ouncesConversion[1],
         gramsConversion[0],
+        ouncesConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "oz"] as const;
@@ -2155,13 +2155,13 @@ describe("mass", () => {
       expect(ounces(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert dg to oz.', v => {
+    it.each([1, 10, 100])('should convert %ddg to oz.', v => {
       const ouncesConversion = linearConversion(0.0283495);
       const decigramsConversion = linearConversion(0.0001);
 
       const [toBase, fromBase] = [
-        ouncesConversion[1],
         decigramsConversion[0],
+        ouncesConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "oz"] as const;
@@ -2171,13 +2171,13 @@ describe("mass", () => {
       expect(ounces(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert cg to oz.', v => {
+    it.each([1, 10, 100])('should convert %dcg to oz.', v => {
       const ouncesConversion = linearConversion(0.0283495);
       const centigramsConversion = linearConversion(0.00001);
 
       const [toBase, fromBase] = [
-        ouncesConversion[1],
         centigramsConversion[0],
+        ouncesConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "oz"] as const;
@@ -2187,13 +2187,13 @@ describe("mass", () => {
       expect(ounces(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert mg to oz.', v => {
+    it.each([1, 10, 100])('should convert %dmg to oz.', v => {
       const ouncesConversion = linearConversion(0.0283495);
       const milligramsConversion = linearConversion(0.000001);
 
       const [toBase, fromBase] = [
-        ouncesConversion[1],
         milligramsConversion[0],
+        ouncesConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "oz"] as const;
@@ -2203,13 +2203,13 @@ describe("mass", () => {
       expect(ounces(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert µg to oz.', v => {
+    it.each([1, 10, 100])('should convert %dµg to oz.', v => {
       const ouncesConversion = linearConversion(0.0283495);
       const microgramsConversion = linearConversion(1e-9);
 
       const [toBase, fromBase] = [
-        ouncesConversion[1],
         microgramsConversion[0],
+        ouncesConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "oz"] as const;
@@ -2219,13 +2219,13 @@ describe("mass", () => {
       expect(ounces(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert ng to oz.', v => {
+    it.each([1, 10, 100])('should convert %dng to oz.', v => {
       const ouncesConversion = linearConversion(0.0283495);
       const nanogramsConversion = linearConversion(1e-12);
 
       const [toBase, fromBase] = [
-        ouncesConversion[1],
         nanogramsConversion[0],
+        ouncesConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "oz"] as const;
@@ -2235,13 +2235,13 @@ describe("mass", () => {
       expect(ounces(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert pg to oz.', v => {
+    it.each([1, 10, 100])('should convert %dpg to oz.', v => {
       const ouncesConversion = linearConversion(0.0283495);
       const picogramsConversion = linearConversion(1e-15);
 
       const [toBase, fromBase] = [
-        ouncesConversion[1],
         picogramsConversion[0],
+        ouncesConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "oz"] as const;
@@ -2253,13 +2253,13 @@ describe("mass", () => {
 
 
 
-    it.each([1, 10, 100])('should convert lb to oz.', v => {
+    it.each([1, 10, 100])('should convert %dlb to oz.', v => {
       const ouncesConversion = linearConversion(0.0283495);
       const poundsConversion = linearConversion(0.453592);
 
       const [toBase, fromBase] = [
-        ouncesConversion[1],
         poundsConversion[0],
+        ouncesConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "oz"] as const;
@@ -2269,13 +2269,13 @@ describe("mass", () => {
       expect(ounces(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert st to oz.', v => {
+    it.each([1, 10, 100])('should convert %dst to oz.', v => {
       const ouncesConversion = linearConversion(0.0283495);
       const stonesConversion = linearConversion(0.157473);
 
       const [toBase, fromBase] = [
-        ouncesConversion[1],
         stonesConversion[0],
+        ouncesConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "oz"] as const;
@@ -2285,13 +2285,13 @@ describe("mass", () => {
       expect(ounces(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert t to oz.', v => {
+    it.each([1, 10, 100])('should convert %dt to oz.', v => {
       const ouncesConversion = linearConversion(0.0283495);
       const metricTonsConversion = linearConversion(1000);
 
       const [toBase, fromBase] = [
-        ouncesConversion[1],
         metricTonsConversion[0],
+        ouncesConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "oz"] as const;
@@ -2301,13 +2301,13 @@ describe("mass", () => {
       expect(ounces(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert ton to oz.', v => {
+    it.each([1, 10, 100])('should convert %dton to oz.', v => {
       const ouncesConversion = linearConversion(0.0283495);
       const shortTonsConversion = linearConversion(907.185);
 
       const [toBase, fromBase] = [
-        ouncesConversion[1],
         shortTonsConversion[0],
+        ouncesConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "oz"] as const;
@@ -2317,13 +2317,13 @@ describe("mass", () => {
       expect(ounces(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert ct to oz.', v => {
+    it.each([1, 10, 100])('should convert %dct to oz.', v => {
       const ouncesConversion = linearConversion(0.0283495);
       const caratsConversion = linearConversion(0.0002);
 
       const [toBase, fromBase] = [
-        ouncesConversion[1],
         caratsConversion[0],
+        ouncesConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "oz"] as const;
@@ -2333,13 +2333,13 @@ describe("mass", () => {
       expect(ounces(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert oz t to oz.', v => {
+    it.each([1, 10, 100])('should convert %doz t to oz.', v => {
       const ouncesConversion = linearConversion(0.0283495);
       const ouncesTroyConversion = linearConversion(0.03110348);
 
       const [toBase, fromBase] = [
-        ouncesConversion[1],
         ouncesTroyConversion[0],
+        ouncesConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "oz"] as const;
@@ -2349,13 +2349,13 @@ describe("mass", () => {
       expect(ounces(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert slug to oz.', v => {
+    it.each([1, 10, 100])('should convert %dslug to oz.', v => {
       const ouncesConversion = linearConversion(0.0283495);
       const slugsConversion = linearConversion(14.5939);
 
       const [toBase, fromBase] = [
-        ouncesConversion[1],
         slugsConversion[0],
+        ouncesConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "oz"] as const;
@@ -2373,13 +2373,13 @@ describe("mass", () => {
       expect(pounds(v)).toEqual([v, "lb"]);
     });
 
-    it.each([1, 10, 100])('should convert kg to lb.', v => {
+    it.each([1, 10, 100])('should convert %dkg to lb.', v => {
       const poundsConversion = linearConversion(0.453592);
       const kilogramsConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
-        poundsConversion[1],
         kilogramsConversion[0],
+        poundsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "lb"] as const;
@@ -2389,13 +2389,13 @@ describe("mass", () => {
       expect(pounds(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert g to lb.', v => {
+    it.each([1, 10, 100])('should convert %dg to lb.', v => {
       const poundsConversion = linearConversion(0.453592);
       const gramsConversion = linearConversion(0.001);
 
       const [toBase, fromBase] = [
-        poundsConversion[1],
         gramsConversion[0],
+        poundsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "lb"] as const;
@@ -2405,13 +2405,13 @@ describe("mass", () => {
       expect(pounds(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert dg to lb.', v => {
+    it.each([1, 10, 100])('should convert %ddg to lb.', v => {
       const poundsConversion = linearConversion(0.453592);
       const decigramsConversion = linearConversion(0.0001);
 
       const [toBase, fromBase] = [
-        poundsConversion[1],
         decigramsConversion[0],
+        poundsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "lb"] as const;
@@ -2421,13 +2421,13 @@ describe("mass", () => {
       expect(pounds(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert cg to lb.', v => {
+    it.each([1, 10, 100])('should convert %dcg to lb.', v => {
       const poundsConversion = linearConversion(0.453592);
       const centigramsConversion = linearConversion(0.00001);
 
       const [toBase, fromBase] = [
-        poundsConversion[1],
         centigramsConversion[0],
+        poundsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "lb"] as const;
@@ -2437,13 +2437,13 @@ describe("mass", () => {
       expect(pounds(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert mg to lb.', v => {
+    it.each([1, 10, 100])('should convert %dmg to lb.', v => {
       const poundsConversion = linearConversion(0.453592);
       const milligramsConversion = linearConversion(0.000001);
 
       const [toBase, fromBase] = [
-        poundsConversion[1],
         milligramsConversion[0],
+        poundsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "lb"] as const;
@@ -2453,13 +2453,13 @@ describe("mass", () => {
       expect(pounds(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert µg to lb.', v => {
+    it.each([1, 10, 100])('should convert %dµg to lb.', v => {
       const poundsConversion = linearConversion(0.453592);
       const microgramsConversion = linearConversion(1e-9);
 
       const [toBase, fromBase] = [
-        poundsConversion[1],
         microgramsConversion[0],
+        poundsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "lb"] as const;
@@ -2469,13 +2469,13 @@ describe("mass", () => {
       expect(pounds(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert ng to lb.', v => {
+    it.each([1, 10, 100])('should convert %dng to lb.', v => {
       const poundsConversion = linearConversion(0.453592);
       const nanogramsConversion = linearConversion(1e-12);
 
       const [toBase, fromBase] = [
-        poundsConversion[1],
         nanogramsConversion[0],
+        poundsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "lb"] as const;
@@ -2485,13 +2485,13 @@ describe("mass", () => {
       expect(pounds(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert pg to lb.', v => {
+    it.each([1, 10, 100])('should convert %dpg to lb.', v => {
       const poundsConversion = linearConversion(0.453592);
       const picogramsConversion = linearConversion(1e-15);
 
       const [toBase, fromBase] = [
-        poundsConversion[1],
         picogramsConversion[0],
+        poundsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "lb"] as const;
@@ -2501,13 +2501,13 @@ describe("mass", () => {
       expect(pounds(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert oz to lb.', v => {
+    it.each([1, 10, 100])('should convert %doz to lb.', v => {
       const poundsConversion = linearConversion(0.453592);
       const ouncesConversion = linearConversion(0.0283495);
 
       const [toBase, fromBase] = [
-        poundsConversion[1],
         ouncesConversion[0],
+        poundsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "lb"] as const;
@@ -2519,13 +2519,13 @@ describe("mass", () => {
 
 
 
-    it.each([1, 10, 100])('should convert st to lb.', v => {
+    it.each([1, 10, 100])('should convert %dst to lb.', v => {
       const poundsConversion = linearConversion(0.453592);
       const stonesConversion = linearConversion(0.157473);
 
       const [toBase, fromBase] = [
-        poundsConversion[1],
         stonesConversion[0],
+        poundsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "lb"] as const;
@@ -2535,13 +2535,13 @@ describe("mass", () => {
       expect(pounds(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert t to lb.', v => {
+    it.each([1, 10, 100])('should convert %dt to lb.', v => {
       const poundsConversion = linearConversion(0.453592);
       const metricTonsConversion = linearConversion(1000);
 
       const [toBase, fromBase] = [
-        poundsConversion[1],
         metricTonsConversion[0],
+        poundsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "lb"] as const;
@@ -2551,13 +2551,13 @@ describe("mass", () => {
       expect(pounds(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert ton to lb.', v => {
+    it.each([1, 10, 100])('should convert %dton to lb.', v => {
       const poundsConversion = linearConversion(0.453592);
       const shortTonsConversion = linearConversion(907.185);
 
       const [toBase, fromBase] = [
-        poundsConversion[1],
         shortTonsConversion[0],
+        poundsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "lb"] as const;
@@ -2567,13 +2567,13 @@ describe("mass", () => {
       expect(pounds(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert ct to lb.', v => {
+    it.each([1, 10, 100])('should convert %dct to lb.', v => {
       const poundsConversion = linearConversion(0.453592);
       const caratsConversion = linearConversion(0.0002);
 
       const [toBase, fromBase] = [
-        poundsConversion[1],
         caratsConversion[0],
+        poundsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "lb"] as const;
@@ -2583,13 +2583,13 @@ describe("mass", () => {
       expect(pounds(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert oz t to lb.', v => {
+    it.each([1, 10, 100])('should convert %doz t to lb.', v => {
       const poundsConversion = linearConversion(0.453592);
       const ouncesTroyConversion = linearConversion(0.03110348);
 
       const [toBase, fromBase] = [
-        poundsConversion[1],
         ouncesTroyConversion[0],
+        poundsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "lb"] as const;
@@ -2599,13 +2599,13 @@ describe("mass", () => {
       expect(pounds(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert slug to lb.', v => {
+    it.each([1, 10, 100])('should convert %dslug to lb.', v => {
       const poundsConversion = linearConversion(0.453592);
       const slugsConversion = linearConversion(14.5939);
 
       const [toBase, fromBase] = [
-        poundsConversion[1],
         slugsConversion[0],
+        poundsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "lb"] as const;
@@ -2623,13 +2623,13 @@ describe("mass", () => {
       expect(stones(v)).toEqual([v, "st"]);
     });
 
-    it.each([1, 10, 100])('should convert kg to st.', v => {
+    it.each([1, 10, 100])('should convert %dkg to st.', v => {
       const stonesConversion = linearConversion(0.157473);
       const kilogramsConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
-        stonesConversion[1],
         kilogramsConversion[0],
+        stonesConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "st"] as const;
@@ -2639,13 +2639,13 @@ describe("mass", () => {
       expect(stones(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert g to st.', v => {
+    it.each([1, 10, 100])('should convert %dg to st.', v => {
       const stonesConversion = linearConversion(0.157473);
       const gramsConversion = linearConversion(0.001);
 
       const [toBase, fromBase] = [
-        stonesConversion[1],
         gramsConversion[0],
+        stonesConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "st"] as const;
@@ -2655,13 +2655,13 @@ describe("mass", () => {
       expect(stones(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert dg to st.', v => {
+    it.each([1, 10, 100])('should convert %ddg to st.', v => {
       const stonesConversion = linearConversion(0.157473);
       const decigramsConversion = linearConversion(0.0001);
 
       const [toBase, fromBase] = [
-        stonesConversion[1],
         decigramsConversion[0],
+        stonesConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "st"] as const;
@@ -2671,13 +2671,13 @@ describe("mass", () => {
       expect(stones(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert cg to st.', v => {
+    it.each([1, 10, 100])('should convert %dcg to st.', v => {
       const stonesConversion = linearConversion(0.157473);
       const centigramsConversion = linearConversion(0.00001);
 
       const [toBase, fromBase] = [
-        stonesConversion[1],
         centigramsConversion[0],
+        stonesConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "st"] as const;
@@ -2687,13 +2687,13 @@ describe("mass", () => {
       expect(stones(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert mg to st.', v => {
+    it.each([1, 10, 100])('should convert %dmg to st.', v => {
       const stonesConversion = linearConversion(0.157473);
       const milligramsConversion = linearConversion(0.000001);
 
       const [toBase, fromBase] = [
-        stonesConversion[1],
         milligramsConversion[0],
+        stonesConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "st"] as const;
@@ -2703,13 +2703,13 @@ describe("mass", () => {
       expect(stones(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert µg to st.', v => {
+    it.each([1, 10, 100])('should convert %dµg to st.', v => {
       const stonesConversion = linearConversion(0.157473);
       const microgramsConversion = linearConversion(1e-9);
 
       const [toBase, fromBase] = [
-        stonesConversion[1],
         microgramsConversion[0],
+        stonesConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "st"] as const;
@@ -2719,13 +2719,13 @@ describe("mass", () => {
       expect(stones(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert ng to st.', v => {
+    it.each([1, 10, 100])('should convert %dng to st.', v => {
       const stonesConversion = linearConversion(0.157473);
       const nanogramsConversion = linearConversion(1e-12);
 
       const [toBase, fromBase] = [
-        stonesConversion[1],
         nanogramsConversion[0],
+        stonesConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "st"] as const;
@@ -2735,13 +2735,13 @@ describe("mass", () => {
       expect(stones(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert pg to st.', v => {
+    it.each([1, 10, 100])('should convert %dpg to st.', v => {
       const stonesConversion = linearConversion(0.157473);
       const picogramsConversion = linearConversion(1e-15);
 
       const [toBase, fromBase] = [
-        stonesConversion[1],
         picogramsConversion[0],
+        stonesConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "st"] as const;
@@ -2751,13 +2751,13 @@ describe("mass", () => {
       expect(stones(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert oz to st.', v => {
+    it.each([1, 10, 100])('should convert %doz to st.', v => {
       const stonesConversion = linearConversion(0.157473);
       const ouncesConversion = linearConversion(0.0283495);
 
       const [toBase, fromBase] = [
-        stonesConversion[1],
         ouncesConversion[0],
+        stonesConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "st"] as const;
@@ -2767,13 +2767,13 @@ describe("mass", () => {
       expect(stones(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert lb to st.', v => {
+    it.each([1, 10, 100])('should convert %dlb to st.', v => {
       const stonesConversion = linearConversion(0.157473);
       const poundsConversion = linearConversion(0.453592);
 
       const [toBase, fromBase] = [
-        stonesConversion[1],
         poundsConversion[0],
+        stonesConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "st"] as const;
@@ -2785,13 +2785,13 @@ describe("mass", () => {
 
 
 
-    it.each([1, 10, 100])('should convert t to st.', v => {
+    it.each([1, 10, 100])('should convert %dt to st.', v => {
       const stonesConversion = linearConversion(0.157473);
       const metricTonsConversion = linearConversion(1000);
 
       const [toBase, fromBase] = [
-        stonesConversion[1],
         metricTonsConversion[0],
+        stonesConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "st"] as const;
@@ -2801,13 +2801,13 @@ describe("mass", () => {
       expect(stones(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert ton to st.', v => {
+    it.each([1, 10, 100])('should convert %dton to st.', v => {
       const stonesConversion = linearConversion(0.157473);
       const shortTonsConversion = linearConversion(907.185);
 
       const [toBase, fromBase] = [
-        stonesConversion[1],
         shortTonsConversion[0],
+        stonesConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "st"] as const;
@@ -2817,13 +2817,13 @@ describe("mass", () => {
       expect(stones(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert ct to st.', v => {
+    it.each([1, 10, 100])('should convert %dct to st.', v => {
       const stonesConversion = linearConversion(0.157473);
       const caratsConversion = linearConversion(0.0002);
 
       const [toBase, fromBase] = [
-        stonesConversion[1],
         caratsConversion[0],
+        stonesConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "st"] as const;
@@ -2833,13 +2833,13 @@ describe("mass", () => {
       expect(stones(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert oz t to st.', v => {
+    it.each([1, 10, 100])('should convert %doz t to st.', v => {
       const stonesConversion = linearConversion(0.157473);
       const ouncesTroyConversion = linearConversion(0.03110348);
 
       const [toBase, fromBase] = [
-        stonesConversion[1],
         ouncesTroyConversion[0],
+        stonesConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "st"] as const;
@@ -2849,13 +2849,13 @@ describe("mass", () => {
       expect(stones(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert slug to st.', v => {
+    it.each([1, 10, 100])('should convert %dslug to st.', v => {
       const stonesConversion = linearConversion(0.157473);
       const slugsConversion = linearConversion(14.5939);
 
       const [toBase, fromBase] = [
-        stonesConversion[1],
         slugsConversion[0],
+        stonesConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "st"] as const;
@@ -2873,13 +2873,13 @@ describe("mass", () => {
       expect(metricTons(v)).toEqual([v, "t"]);
     });
 
-    it.each([1, 10, 100])('should convert kg to t.', v => {
+    it.each([1, 10, 100])('should convert %dkg to t.', v => {
       const metricTonsConversion = linearConversion(1000);
       const kilogramsConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
-        metricTonsConversion[1],
         kilogramsConversion[0],
+        metricTonsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "t"] as const;
@@ -2889,13 +2889,13 @@ describe("mass", () => {
       expect(metricTons(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert g to t.', v => {
+    it.each([1, 10, 100])('should convert %dg to t.', v => {
       const metricTonsConversion = linearConversion(1000);
       const gramsConversion = linearConversion(0.001);
 
       const [toBase, fromBase] = [
-        metricTonsConversion[1],
         gramsConversion[0],
+        metricTonsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "t"] as const;
@@ -2905,13 +2905,13 @@ describe("mass", () => {
       expect(metricTons(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert dg to t.', v => {
+    it.each([1, 10, 100])('should convert %ddg to t.', v => {
       const metricTonsConversion = linearConversion(1000);
       const decigramsConversion = linearConversion(0.0001);
 
       const [toBase, fromBase] = [
-        metricTonsConversion[1],
         decigramsConversion[0],
+        metricTonsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "t"] as const;
@@ -2921,13 +2921,13 @@ describe("mass", () => {
       expect(metricTons(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert cg to t.', v => {
+    it.each([1, 10, 100])('should convert %dcg to t.', v => {
       const metricTonsConversion = linearConversion(1000);
       const centigramsConversion = linearConversion(0.00001);
 
       const [toBase, fromBase] = [
-        metricTonsConversion[1],
         centigramsConversion[0],
+        metricTonsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "t"] as const;
@@ -2937,13 +2937,13 @@ describe("mass", () => {
       expect(metricTons(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert mg to t.', v => {
+    it.each([1, 10, 100])('should convert %dmg to t.', v => {
       const metricTonsConversion = linearConversion(1000);
       const milligramsConversion = linearConversion(0.000001);
 
       const [toBase, fromBase] = [
-        metricTonsConversion[1],
         milligramsConversion[0],
+        metricTonsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "t"] as const;
@@ -2953,13 +2953,13 @@ describe("mass", () => {
       expect(metricTons(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert µg to t.', v => {
+    it.each([1, 10, 100])('should convert %dµg to t.', v => {
       const metricTonsConversion = linearConversion(1000);
       const microgramsConversion = linearConversion(1e-9);
 
       const [toBase, fromBase] = [
-        metricTonsConversion[1],
         microgramsConversion[0],
+        metricTonsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "t"] as const;
@@ -2969,13 +2969,13 @@ describe("mass", () => {
       expect(metricTons(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert ng to t.', v => {
+    it.each([1, 10, 100])('should convert %dng to t.', v => {
       const metricTonsConversion = linearConversion(1000);
       const nanogramsConversion = linearConversion(1e-12);
 
       const [toBase, fromBase] = [
-        metricTonsConversion[1],
         nanogramsConversion[0],
+        metricTonsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "t"] as const;
@@ -2985,13 +2985,13 @@ describe("mass", () => {
       expect(metricTons(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert pg to t.', v => {
+    it.each([1, 10, 100])('should convert %dpg to t.', v => {
       const metricTonsConversion = linearConversion(1000);
       const picogramsConversion = linearConversion(1e-15);
 
       const [toBase, fromBase] = [
-        metricTonsConversion[1],
         picogramsConversion[0],
+        metricTonsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "t"] as const;
@@ -3001,13 +3001,13 @@ describe("mass", () => {
       expect(metricTons(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert oz to t.', v => {
+    it.each([1, 10, 100])('should convert %doz to t.', v => {
       const metricTonsConversion = linearConversion(1000);
       const ouncesConversion = linearConversion(0.0283495);
 
       const [toBase, fromBase] = [
-        metricTonsConversion[1],
         ouncesConversion[0],
+        metricTonsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "t"] as const;
@@ -3017,13 +3017,13 @@ describe("mass", () => {
       expect(metricTons(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert lb to t.', v => {
+    it.each([1, 10, 100])('should convert %dlb to t.', v => {
       const metricTonsConversion = linearConversion(1000);
       const poundsConversion = linearConversion(0.453592);
 
       const [toBase, fromBase] = [
-        metricTonsConversion[1],
         poundsConversion[0],
+        metricTonsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "t"] as const;
@@ -3033,13 +3033,13 @@ describe("mass", () => {
       expect(metricTons(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert st to t.', v => {
+    it.each([1, 10, 100])('should convert %dst to t.', v => {
       const metricTonsConversion = linearConversion(1000);
       const stonesConversion = linearConversion(0.157473);
 
       const [toBase, fromBase] = [
-        metricTonsConversion[1],
         stonesConversion[0],
+        metricTonsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "t"] as const;
@@ -3051,13 +3051,13 @@ describe("mass", () => {
 
 
 
-    it.each([1, 10, 100])('should convert ton to t.', v => {
+    it.each([1, 10, 100])('should convert %dton to t.', v => {
       const metricTonsConversion = linearConversion(1000);
       const shortTonsConversion = linearConversion(907.185);
 
       const [toBase, fromBase] = [
-        metricTonsConversion[1],
         shortTonsConversion[0],
+        metricTonsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "t"] as const;
@@ -3067,13 +3067,13 @@ describe("mass", () => {
       expect(metricTons(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert ct to t.', v => {
+    it.each([1, 10, 100])('should convert %dct to t.', v => {
       const metricTonsConversion = linearConversion(1000);
       const caratsConversion = linearConversion(0.0002);
 
       const [toBase, fromBase] = [
-        metricTonsConversion[1],
         caratsConversion[0],
+        metricTonsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "t"] as const;
@@ -3083,13 +3083,13 @@ describe("mass", () => {
       expect(metricTons(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert oz t to t.', v => {
+    it.each([1, 10, 100])('should convert %doz t to t.', v => {
       const metricTonsConversion = linearConversion(1000);
       const ouncesTroyConversion = linearConversion(0.03110348);
 
       const [toBase, fromBase] = [
-        metricTonsConversion[1],
         ouncesTroyConversion[0],
+        metricTonsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "t"] as const;
@@ -3099,13 +3099,13 @@ describe("mass", () => {
       expect(metricTons(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert slug to t.', v => {
+    it.each([1, 10, 100])('should convert %dslug to t.', v => {
       const metricTonsConversion = linearConversion(1000);
       const slugsConversion = linearConversion(14.5939);
 
       const [toBase, fromBase] = [
-        metricTonsConversion[1],
         slugsConversion[0],
+        metricTonsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "t"] as const;
@@ -3123,13 +3123,13 @@ describe("mass", () => {
       expect(shortTons(v)).toEqual([v, "ton"]);
     });
 
-    it.each([1, 10, 100])('should convert kg to ton.', v => {
+    it.each([1, 10, 100])('should convert %dkg to ton.', v => {
       const shortTonsConversion = linearConversion(907.185);
       const kilogramsConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
-        shortTonsConversion[1],
         kilogramsConversion[0],
+        shortTonsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "ton"] as const;
@@ -3139,13 +3139,13 @@ describe("mass", () => {
       expect(shortTons(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert g to ton.', v => {
+    it.each([1, 10, 100])('should convert %dg to ton.', v => {
       const shortTonsConversion = linearConversion(907.185);
       const gramsConversion = linearConversion(0.001);
 
       const [toBase, fromBase] = [
-        shortTonsConversion[1],
         gramsConversion[0],
+        shortTonsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "ton"] as const;
@@ -3155,13 +3155,13 @@ describe("mass", () => {
       expect(shortTons(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert dg to ton.', v => {
+    it.each([1, 10, 100])('should convert %ddg to ton.', v => {
       const shortTonsConversion = linearConversion(907.185);
       const decigramsConversion = linearConversion(0.0001);
 
       const [toBase, fromBase] = [
-        shortTonsConversion[1],
         decigramsConversion[0],
+        shortTonsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "ton"] as const;
@@ -3171,13 +3171,13 @@ describe("mass", () => {
       expect(shortTons(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert cg to ton.', v => {
+    it.each([1, 10, 100])('should convert %dcg to ton.', v => {
       const shortTonsConversion = linearConversion(907.185);
       const centigramsConversion = linearConversion(0.00001);
 
       const [toBase, fromBase] = [
-        shortTonsConversion[1],
         centigramsConversion[0],
+        shortTonsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "ton"] as const;
@@ -3187,13 +3187,13 @@ describe("mass", () => {
       expect(shortTons(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert mg to ton.', v => {
+    it.each([1, 10, 100])('should convert %dmg to ton.', v => {
       const shortTonsConversion = linearConversion(907.185);
       const milligramsConversion = linearConversion(0.000001);
 
       const [toBase, fromBase] = [
-        shortTonsConversion[1],
         milligramsConversion[0],
+        shortTonsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "ton"] as const;
@@ -3203,13 +3203,13 @@ describe("mass", () => {
       expect(shortTons(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert µg to ton.', v => {
+    it.each([1, 10, 100])('should convert %dµg to ton.', v => {
       const shortTonsConversion = linearConversion(907.185);
       const microgramsConversion = linearConversion(1e-9);
 
       const [toBase, fromBase] = [
-        shortTonsConversion[1],
         microgramsConversion[0],
+        shortTonsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "ton"] as const;
@@ -3219,13 +3219,13 @@ describe("mass", () => {
       expect(shortTons(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert ng to ton.', v => {
+    it.each([1, 10, 100])('should convert %dng to ton.', v => {
       const shortTonsConversion = linearConversion(907.185);
       const nanogramsConversion = linearConversion(1e-12);
 
       const [toBase, fromBase] = [
-        shortTonsConversion[1],
         nanogramsConversion[0],
+        shortTonsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "ton"] as const;
@@ -3235,13 +3235,13 @@ describe("mass", () => {
       expect(shortTons(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert pg to ton.', v => {
+    it.each([1, 10, 100])('should convert %dpg to ton.', v => {
       const shortTonsConversion = linearConversion(907.185);
       const picogramsConversion = linearConversion(1e-15);
 
       const [toBase, fromBase] = [
-        shortTonsConversion[1],
         picogramsConversion[0],
+        shortTonsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "ton"] as const;
@@ -3251,13 +3251,13 @@ describe("mass", () => {
       expect(shortTons(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert oz to ton.', v => {
+    it.each([1, 10, 100])('should convert %doz to ton.', v => {
       const shortTonsConversion = linearConversion(907.185);
       const ouncesConversion = linearConversion(0.0283495);
 
       const [toBase, fromBase] = [
-        shortTonsConversion[1],
         ouncesConversion[0],
+        shortTonsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "ton"] as const;
@@ -3267,13 +3267,13 @@ describe("mass", () => {
       expect(shortTons(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert lb to ton.', v => {
+    it.each([1, 10, 100])('should convert %dlb to ton.', v => {
       const shortTonsConversion = linearConversion(907.185);
       const poundsConversion = linearConversion(0.453592);
 
       const [toBase, fromBase] = [
-        shortTonsConversion[1],
         poundsConversion[0],
+        shortTonsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "ton"] as const;
@@ -3283,13 +3283,13 @@ describe("mass", () => {
       expect(shortTons(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert st to ton.', v => {
+    it.each([1, 10, 100])('should convert %dst to ton.', v => {
       const shortTonsConversion = linearConversion(907.185);
       const stonesConversion = linearConversion(0.157473);
 
       const [toBase, fromBase] = [
-        shortTonsConversion[1],
         stonesConversion[0],
+        shortTonsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "ton"] as const;
@@ -3299,13 +3299,13 @@ describe("mass", () => {
       expect(shortTons(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert t to ton.', v => {
+    it.each([1, 10, 100])('should convert %dt to ton.', v => {
       const shortTonsConversion = linearConversion(907.185);
       const metricTonsConversion = linearConversion(1000);
 
       const [toBase, fromBase] = [
-        shortTonsConversion[1],
         metricTonsConversion[0],
+        shortTonsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "ton"] as const;
@@ -3317,13 +3317,13 @@ describe("mass", () => {
 
 
 
-    it.each([1, 10, 100])('should convert ct to ton.', v => {
+    it.each([1, 10, 100])('should convert %dct to ton.', v => {
       const shortTonsConversion = linearConversion(907.185);
       const caratsConversion = linearConversion(0.0002);
 
       const [toBase, fromBase] = [
-        shortTonsConversion[1],
         caratsConversion[0],
+        shortTonsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "ton"] as const;
@@ -3333,13 +3333,13 @@ describe("mass", () => {
       expect(shortTons(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert oz t to ton.', v => {
+    it.each([1, 10, 100])('should convert %doz t to ton.', v => {
       const shortTonsConversion = linearConversion(907.185);
       const ouncesTroyConversion = linearConversion(0.03110348);
 
       const [toBase, fromBase] = [
-        shortTonsConversion[1],
         ouncesTroyConversion[0],
+        shortTonsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "ton"] as const;
@@ -3349,13 +3349,13 @@ describe("mass", () => {
       expect(shortTons(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert slug to ton.', v => {
+    it.each([1, 10, 100])('should convert %dslug to ton.', v => {
       const shortTonsConversion = linearConversion(907.185);
       const slugsConversion = linearConversion(14.5939);
 
       const [toBase, fromBase] = [
-        shortTonsConversion[1],
         slugsConversion[0],
+        shortTonsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "ton"] as const;
@@ -3373,13 +3373,13 @@ describe("mass", () => {
       expect(carats(v)).toEqual([v, "ct"]);
     });
 
-    it.each([1, 10, 100])('should convert kg to ct.', v => {
+    it.each([1, 10, 100])('should convert %dkg to ct.', v => {
       const caratsConversion = linearConversion(0.0002);
       const kilogramsConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
-        caratsConversion[1],
         kilogramsConversion[0],
+        caratsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "ct"] as const;
@@ -3389,13 +3389,13 @@ describe("mass", () => {
       expect(carats(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert g to ct.', v => {
+    it.each([1, 10, 100])('should convert %dg to ct.', v => {
       const caratsConversion = linearConversion(0.0002);
       const gramsConversion = linearConversion(0.001);
 
       const [toBase, fromBase] = [
-        caratsConversion[1],
         gramsConversion[0],
+        caratsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "ct"] as const;
@@ -3405,13 +3405,13 @@ describe("mass", () => {
       expect(carats(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert dg to ct.', v => {
+    it.each([1, 10, 100])('should convert %ddg to ct.', v => {
       const caratsConversion = linearConversion(0.0002);
       const decigramsConversion = linearConversion(0.0001);
 
       const [toBase, fromBase] = [
-        caratsConversion[1],
         decigramsConversion[0],
+        caratsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "ct"] as const;
@@ -3421,13 +3421,13 @@ describe("mass", () => {
       expect(carats(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert cg to ct.', v => {
+    it.each([1, 10, 100])('should convert %dcg to ct.', v => {
       const caratsConversion = linearConversion(0.0002);
       const centigramsConversion = linearConversion(0.00001);
 
       const [toBase, fromBase] = [
-        caratsConversion[1],
         centigramsConversion[0],
+        caratsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "ct"] as const;
@@ -3437,13 +3437,13 @@ describe("mass", () => {
       expect(carats(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert mg to ct.', v => {
+    it.each([1, 10, 100])('should convert %dmg to ct.', v => {
       const caratsConversion = linearConversion(0.0002);
       const milligramsConversion = linearConversion(0.000001);
 
       const [toBase, fromBase] = [
-        caratsConversion[1],
         milligramsConversion[0],
+        caratsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "ct"] as const;
@@ -3453,13 +3453,13 @@ describe("mass", () => {
       expect(carats(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert µg to ct.', v => {
+    it.each([1, 10, 100])('should convert %dµg to ct.', v => {
       const caratsConversion = linearConversion(0.0002);
       const microgramsConversion = linearConversion(1e-9);
 
       const [toBase, fromBase] = [
-        caratsConversion[1],
         microgramsConversion[0],
+        caratsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "ct"] as const;
@@ -3469,13 +3469,13 @@ describe("mass", () => {
       expect(carats(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert ng to ct.', v => {
+    it.each([1, 10, 100])('should convert %dng to ct.', v => {
       const caratsConversion = linearConversion(0.0002);
       const nanogramsConversion = linearConversion(1e-12);
 
       const [toBase, fromBase] = [
-        caratsConversion[1],
         nanogramsConversion[0],
+        caratsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "ct"] as const;
@@ -3485,13 +3485,13 @@ describe("mass", () => {
       expect(carats(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert pg to ct.', v => {
+    it.each([1, 10, 100])('should convert %dpg to ct.', v => {
       const caratsConversion = linearConversion(0.0002);
       const picogramsConversion = linearConversion(1e-15);
 
       const [toBase, fromBase] = [
-        caratsConversion[1],
         picogramsConversion[0],
+        caratsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "ct"] as const;
@@ -3501,13 +3501,13 @@ describe("mass", () => {
       expect(carats(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert oz to ct.', v => {
+    it.each([1, 10, 100])('should convert %doz to ct.', v => {
       const caratsConversion = linearConversion(0.0002);
       const ouncesConversion = linearConversion(0.0283495);
 
       const [toBase, fromBase] = [
-        caratsConversion[1],
         ouncesConversion[0],
+        caratsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "ct"] as const;
@@ -3517,13 +3517,13 @@ describe("mass", () => {
       expect(carats(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert lb to ct.', v => {
+    it.each([1, 10, 100])('should convert %dlb to ct.', v => {
       const caratsConversion = linearConversion(0.0002);
       const poundsConversion = linearConversion(0.453592);
 
       const [toBase, fromBase] = [
-        caratsConversion[1],
         poundsConversion[0],
+        caratsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "ct"] as const;
@@ -3533,13 +3533,13 @@ describe("mass", () => {
       expect(carats(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert st to ct.', v => {
+    it.each([1, 10, 100])('should convert %dst to ct.', v => {
       const caratsConversion = linearConversion(0.0002);
       const stonesConversion = linearConversion(0.157473);
 
       const [toBase, fromBase] = [
-        caratsConversion[1],
         stonesConversion[0],
+        caratsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "ct"] as const;
@@ -3549,13 +3549,13 @@ describe("mass", () => {
       expect(carats(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert t to ct.', v => {
+    it.each([1, 10, 100])('should convert %dt to ct.', v => {
       const caratsConversion = linearConversion(0.0002);
       const metricTonsConversion = linearConversion(1000);
 
       const [toBase, fromBase] = [
-        caratsConversion[1],
         metricTonsConversion[0],
+        caratsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "ct"] as const;
@@ -3565,13 +3565,13 @@ describe("mass", () => {
       expect(carats(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert ton to ct.', v => {
+    it.each([1, 10, 100])('should convert %dton to ct.', v => {
       const caratsConversion = linearConversion(0.0002);
       const shortTonsConversion = linearConversion(907.185);
 
       const [toBase, fromBase] = [
-        caratsConversion[1],
         shortTonsConversion[0],
+        caratsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "ct"] as const;
@@ -3583,13 +3583,13 @@ describe("mass", () => {
 
 
 
-    it.each([1, 10, 100])('should convert oz t to ct.', v => {
+    it.each([1, 10, 100])('should convert %doz t to ct.', v => {
       const caratsConversion = linearConversion(0.0002);
       const ouncesTroyConversion = linearConversion(0.03110348);
 
       const [toBase, fromBase] = [
-        caratsConversion[1],
         ouncesTroyConversion[0],
+        caratsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "ct"] as const;
@@ -3599,13 +3599,13 @@ describe("mass", () => {
       expect(carats(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert slug to ct.', v => {
+    it.each([1, 10, 100])('should convert %dslug to ct.', v => {
       const caratsConversion = linearConversion(0.0002);
       const slugsConversion = linearConversion(14.5939);
 
       const [toBase, fromBase] = [
-        caratsConversion[1],
         slugsConversion[0],
+        caratsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "ct"] as const;
@@ -3623,13 +3623,13 @@ describe("mass", () => {
       expect(ouncesTroy(v)).toEqual([v, "oz t"]);
     });
 
-    it.each([1, 10, 100])('should convert kg to oz t.', v => {
+    it.each([1, 10, 100])('should convert %dkg to oz t.', v => {
       const ouncesTroyConversion = linearConversion(0.03110348);
       const kilogramsConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
-        ouncesTroyConversion[1],
         kilogramsConversion[0],
+        ouncesTroyConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "oz t"] as const;
@@ -3639,13 +3639,13 @@ describe("mass", () => {
       expect(ouncesTroy(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert g to oz t.', v => {
+    it.each([1, 10, 100])('should convert %dg to oz t.', v => {
       const ouncesTroyConversion = linearConversion(0.03110348);
       const gramsConversion = linearConversion(0.001);
 
       const [toBase, fromBase] = [
-        ouncesTroyConversion[1],
         gramsConversion[0],
+        ouncesTroyConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "oz t"] as const;
@@ -3655,13 +3655,13 @@ describe("mass", () => {
       expect(ouncesTroy(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert dg to oz t.', v => {
+    it.each([1, 10, 100])('should convert %ddg to oz t.', v => {
       const ouncesTroyConversion = linearConversion(0.03110348);
       const decigramsConversion = linearConversion(0.0001);
 
       const [toBase, fromBase] = [
-        ouncesTroyConversion[1],
         decigramsConversion[0],
+        ouncesTroyConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "oz t"] as const;
@@ -3671,13 +3671,13 @@ describe("mass", () => {
       expect(ouncesTroy(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert cg to oz t.', v => {
+    it.each([1, 10, 100])('should convert %dcg to oz t.', v => {
       const ouncesTroyConversion = linearConversion(0.03110348);
       const centigramsConversion = linearConversion(0.00001);
 
       const [toBase, fromBase] = [
-        ouncesTroyConversion[1],
         centigramsConversion[0],
+        ouncesTroyConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "oz t"] as const;
@@ -3687,13 +3687,13 @@ describe("mass", () => {
       expect(ouncesTroy(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert mg to oz t.', v => {
+    it.each([1, 10, 100])('should convert %dmg to oz t.', v => {
       const ouncesTroyConversion = linearConversion(0.03110348);
       const milligramsConversion = linearConversion(0.000001);
 
       const [toBase, fromBase] = [
-        ouncesTroyConversion[1],
         milligramsConversion[0],
+        ouncesTroyConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "oz t"] as const;
@@ -3703,13 +3703,13 @@ describe("mass", () => {
       expect(ouncesTroy(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert µg to oz t.', v => {
+    it.each([1, 10, 100])('should convert %dµg to oz t.', v => {
       const ouncesTroyConversion = linearConversion(0.03110348);
       const microgramsConversion = linearConversion(1e-9);
 
       const [toBase, fromBase] = [
-        ouncesTroyConversion[1],
         microgramsConversion[0],
+        ouncesTroyConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "oz t"] as const;
@@ -3719,13 +3719,13 @@ describe("mass", () => {
       expect(ouncesTroy(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert ng to oz t.', v => {
+    it.each([1, 10, 100])('should convert %dng to oz t.', v => {
       const ouncesTroyConversion = linearConversion(0.03110348);
       const nanogramsConversion = linearConversion(1e-12);
 
       const [toBase, fromBase] = [
-        ouncesTroyConversion[1],
         nanogramsConversion[0],
+        ouncesTroyConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "oz t"] as const;
@@ -3735,13 +3735,13 @@ describe("mass", () => {
       expect(ouncesTroy(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert pg to oz t.', v => {
+    it.each([1, 10, 100])('should convert %dpg to oz t.', v => {
       const ouncesTroyConversion = linearConversion(0.03110348);
       const picogramsConversion = linearConversion(1e-15);
 
       const [toBase, fromBase] = [
-        ouncesTroyConversion[1],
         picogramsConversion[0],
+        ouncesTroyConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "oz t"] as const;
@@ -3751,13 +3751,13 @@ describe("mass", () => {
       expect(ouncesTroy(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert oz to oz t.', v => {
+    it.each([1, 10, 100])('should convert %doz to oz t.', v => {
       const ouncesTroyConversion = linearConversion(0.03110348);
       const ouncesConversion = linearConversion(0.0283495);
 
       const [toBase, fromBase] = [
-        ouncesTroyConversion[1],
         ouncesConversion[0],
+        ouncesTroyConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "oz t"] as const;
@@ -3767,13 +3767,13 @@ describe("mass", () => {
       expect(ouncesTroy(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert lb to oz t.', v => {
+    it.each([1, 10, 100])('should convert %dlb to oz t.', v => {
       const ouncesTroyConversion = linearConversion(0.03110348);
       const poundsConversion = linearConversion(0.453592);
 
       const [toBase, fromBase] = [
-        ouncesTroyConversion[1],
         poundsConversion[0],
+        ouncesTroyConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "oz t"] as const;
@@ -3783,13 +3783,13 @@ describe("mass", () => {
       expect(ouncesTroy(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert st to oz t.', v => {
+    it.each([1, 10, 100])('should convert %dst to oz t.', v => {
       const ouncesTroyConversion = linearConversion(0.03110348);
       const stonesConversion = linearConversion(0.157473);
 
       const [toBase, fromBase] = [
-        ouncesTroyConversion[1],
         stonesConversion[0],
+        ouncesTroyConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "oz t"] as const;
@@ -3799,13 +3799,13 @@ describe("mass", () => {
       expect(ouncesTroy(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert t to oz t.', v => {
+    it.each([1, 10, 100])('should convert %dt to oz t.', v => {
       const ouncesTroyConversion = linearConversion(0.03110348);
       const metricTonsConversion = linearConversion(1000);
 
       const [toBase, fromBase] = [
-        ouncesTroyConversion[1],
         metricTonsConversion[0],
+        ouncesTroyConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "oz t"] as const;
@@ -3815,13 +3815,13 @@ describe("mass", () => {
       expect(ouncesTroy(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert ton to oz t.', v => {
+    it.each([1, 10, 100])('should convert %dton to oz t.', v => {
       const ouncesTroyConversion = linearConversion(0.03110348);
       const shortTonsConversion = linearConversion(907.185);
 
       const [toBase, fromBase] = [
-        ouncesTroyConversion[1],
         shortTonsConversion[0],
+        ouncesTroyConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "oz t"] as const;
@@ -3831,13 +3831,13 @@ describe("mass", () => {
       expect(ouncesTroy(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert ct to oz t.', v => {
+    it.each([1, 10, 100])('should convert %dct to oz t.', v => {
       const ouncesTroyConversion = linearConversion(0.03110348);
       const caratsConversion = linearConversion(0.0002);
 
       const [toBase, fromBase] = [
-        ouncesTroyConversion[1],
         caratsConversion[0],
+        ouncesTroyConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "oz t"] as const;
@@ -3849,13 +3849,13 @@ describe("mass", () => {
 
 
 
-    it.each([1, 10, 100])('should convert slug to oz t.', v => {
+    it.each([1, 10, 100])('should convert %dslug to oz t.', v => {
       const ouncesTroyConversion = linearConversion(0.03110348);
       const slugsConversion = linearConversion(14.5939);
 
       const [toBase, fromBase] = [
-        ouncesTroyConversion[1],
         slugsConversion[0],
+        ouncesTroyConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "oz t"] as const;
@@ -3873,13 +3873,13 @@ describe("mass", () => {
       expect(slugs(v)).toEqual([v, "slug"]);
     });
 
-    it.each([1, 10, 100])('should convert kg to slug.', v => {
+    it.each([1, 10, 100])('should convert %dkg to slug.', v => {
       const slugsConversion = linearConversion(14.5939);
       const kilogramsConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
-        slugsConversion[1],
         kilogramsConversion[0],
+        slugsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "slug"] as const;
@@ -3889,13 +3889,13 @@ describe("mass", () => {
       expect(slugs(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert g to slug.', v => {
+    it.each([1, 10, 100])('should convert %dg to slug.', v => {
       const slugsConversion = linearConversion(14.5939);
       const gramsConversion = linearConversion(0.001);
 
       const [toBase, fromBase] = [
-        slugsConversion[1],
         gramsConversion[0],
+        slugsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "slug"] as const;
@@ -3905,13 +3905,13 @@ describe("mass", () => {
       expect(slugs(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert dg to slug.', v => {
+    it.each([1, 10, 100])('should convert %ddg to slug.', v => {
       const slugsConversion = linearConversion(14.5939);
       const decigramsConversion = linearConversion(0.0001);
 
       const [toBase, fromBase] = [
-        slugsConversion[1],
         decigramsConversion[0],
+        slugsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "slug"] as const;
@@ -3921,13 +3921,13 @@ describe("mass", () => {
       expect(slugs(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert cg to slug.', v => {
+    it.each([1, 10, 100])('should convert %dcg to slug.', v => {
       const slugsConversion = linearConversion(14.5939);
       const centigramsConversion = linearConversion(0.00001);
 
       const [toBase, fromBase] = [
-        slugsConversion[1],
         centigramsConversion[0],
+        slugsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "slug"] as const;
@@ -3937,13 +3937,13 @@ describe("mass", () => {
       expect(slugs(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert mg to slug.', v => {
+    it.each([1, 10, 100])('should convert %dmg to slug.', v => {
       const slugsConversion = linearConversion(14.5939);
       const milligramsConversion = linearConversion(0.000001);
 
       const [toBase, fromBase] = [
-        slugsConversion[1],
         milligramsConversion[0],
+        slugsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "slug"] as const;
@@ -3953,13 +3953,13 @@ describe("mass", () => {
       expect(slugs(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert µg to slug.', v => {
+    it.each([1, 10, 100])('should convert %dµg to slug.', v => {
       const slugsConversion = linearConversion(14.5939);
       const microgramsConversion = linearConversion(1e-9);
 
       const [toBase, fromBase] = [
-        slugsConversion[1],
         microgramsConversion[0],
+        slugsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "slug"] as const;
@@ -3969,13 +3969,13 @@ describe("mass", () => {
       expect(slugs(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert ng to slug.', v => {
+    it.each([1, 10, 100])('should convert %dng to slug.', v => {
       const slugsConversion = linearConversion(14.5939);
       const nanogramsConversion = linearConversion(1e-12);
 
       const [toBase, fromBase] = [
-        slugsConversion[1],
         nanogramsConversion[0],
+        slugsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "slug"] as const;
@@ -3985,13 +3985,13 @@ describe("mass", () => {
       expect(slugs(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert pg to slug.', v => {
+    it.each([1, 10, 100])('should convert %dpg to slug.', v => {
       const slugsConversion = linearConversion(14.5939);
       const picogramsConversion = linearConversion(1e-15);
 
       const [toBase, fromBase] = [
-        slugsConversion[1],
         picogramsConversion[0],
+        slugsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "slug"] as const;
@@ -4001,13 +4001,13 @@ describe("mass", () => {
       expect(slugs(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert oz to slug.', v => {
+    it.each([1, 10, 100])('should convert %doz to slug.', v => {
       const slugsConversion = linearConversion(14.5939);
       const ouncesConversion = linearConversion(0.0283495);
 
       const [toBase, fromBase] = [
-        slugsConversion[1],
         ouncesConversion[0],
+        slugsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "slug"] as const;
@@ -4017,13 +4017,13 @@ describe("mass", () => {
       expect(slugs(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert lb to slug.', v => {
+    it.each([1, 10, 100])('should convert %dlb to slug.', v => {
       const slugsConversion = linearConversion(14.5939);
       const poundsConversion = linearConversion(0.453592);
 
       const [toBase, fromBase] = [
-        slugsConversion[1],
         poundsConversion[0],
+        slugsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "slug"] as const;
@@ -4033,13 +4033,13 @@ describe("mass", () => {
       expect(slugs(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert st to slug.', v => {
+    it.each([1, 10, 100])('should convert %dst to slug.', v => {
       const slugsConversion = linearConversion(14.5939);
       const stonesConversion = linearConversion(0.157473);
 
       const [toBase, fromBase] = [
-        slugsConversion[1],
         stonesConversion[0],
+        slugsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "slug"] as const;
@@ -4049,13 +4049,13 @@ describe("mass", () => {
       expect(slugs(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert t to slug.', v => {
+    it.each([1, 10, 100])('should convert %dt to slug.', v => {
       const slugsConversion = linearConversion(14.5939);
       const metricTonsConversion = linearConversion(1000);
 
       const [toBase, fromBase] = [
-        slugsConversion[1],
         metricTonsConversion[0],
+        slugsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "slug"] as const;
@@ -4065,13 +4065,13 @@ describe("mass", () => {
       expect(slugs(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert ton to slug.', v => {
+    it.each([1, 10, 100])('should convert %dton to slug.', v => {
       const slugsConversion = linearConversion(14.5939);
       const shortTonsConversion = linearConversion(907.185);
 
       const [toBase, fromBase] = [
-        slugsConversion[1],
         shortTonsConversion[0],
+        slugsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "slug"] as const;
@@ -4081,13 +4081,13 @@ describe("mass", () => {
       expect(slugs(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert ct to slug.', v => {
+    it.each([1, 10, 100])('should convert %dct to slug.', v => {
       const slugsConversion = linearConversion(14.5939);
       const caratsConversion = linearConversion(0.0002);
 
       const [toBase, fromBase] = [
-        slugsConversion[1],
         caratsConversion[0],
+        slugsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "slug"] as const;
@@ -4097,13 +4097,13 @@ describe("mass", () => {
       expect(slugs(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert oz t to slug.', v => {
+    it.each([1, 10, 100])('should convert %doz t to slug.', v => {
       const slugsConversion = linearConversion(14.5939);
       const ouncesTroyConversion = linearConversion(0.03110348);
 
       const [toBase, fromBase] = [
-        slugsConversion[1],
         ouncesTroyConversion[0],
+        slugsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "slug"] as const;

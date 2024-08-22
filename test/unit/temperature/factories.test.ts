@@ -41,13 +41,13 @@ describe("temperature", () => {
 
 
 
-    it.each([1, 10, 100])('should convert °C to K.', v => {
+    it.each([1, 10, 100])('should convert %d°C to K.', v => {
       const kelvinConversion = linearConversion(1);
       const celsiusConversion = linearConversion(1, 273.15);
 
       const [toBase, fromBase] = [
-        kelvinConversion[1],
         celsiusConversion[0],
+        kelvinConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "K"] as const;
@@ -57,13 +57,13 @@ describe("temperature", () => {
       expect(kelvin(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert °F to K.', v => {
+    it.each([1, 10, 100])('should convert %d°F to K.', v => {
       const kelvinConversion = linearConversion(1);
       const fahrenheitConversion = linearConversion(0.55555555555556, 255.37222222222428);
 
       const [toBase, fromBase] = [
-        kelvinConversion[1],
         fahrenheitConversion[0],
+        kelvinConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "K"] as const;
@@ -73,13 +73,13 @@ describe("temperature", () => {
       expect(kelvin(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert °R to K.', v => {
+    it.each([1, 10, 100])('should convert %d°R to K.', v => {
       const kelvinConversion = linearConversion(1);
       const rankineConversion = linearConversion(0.55555555555556);
 
       const [toBase, fromBase] = [
-        kelvinConversion[1],
         rankineConversion[0],
+        kelvinConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "K"] as const;
@@ -97,13 +97,13 @@ describe("temperature", () => {
       expect(celsius(v)).toEqual([v, "°C"]);
     });
 
-    it.each([1, 10, 100])('should convert K to °C.', v => {
+    it.each([1, 10, 100])('should convert %dK to °C.', v => {
       const celsiusConversion = linearConversion(1, 273.15);
       const kelvinConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
-        celsiusConversion[1],
         kelvinConversion[0],
+        celsiusConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "°C"] as const;
@@ -115,13 +115,13 @@ describe("temperature", () => {
 
 
 
-    it.each([1, 10, 100])('should convert °F to °C.', v => {
+    it.each([1, 10, 100])('should convert %d°F to °C.', v => {
       const celsiusConversion = linearConversion(1, 273.15);
       const fahrenheitConversion = linearConversion(0.55555555555556, 255.37222222222428);
 
       const [toBase, fromBase] = [
-        celsiusConversion[1],
         fahrenheitConversion[0],
+        celsiusConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "°C"] as const;
@@ -131,13 +131,13 @@ describe("temperature", () => {
       expect(celsius(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert °R to °C.', v => {
+    it.each([1, 10, 100])('should convert %d°R to °C.', v => {
       const celsiusConversion = linearConversion(1, 273.15);
       const rankineConversion = linearConversion(0.55555555555556);
 
       const [toBase, fromBase] = [
-        celsiusConversion[1],
         rankineConversion[0],
+        celsiusConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "°C"] as const;
@@ -155,13 +155,13 @@ describe("temperature", () => {
       expect(fahrenheit(v)).toEqual([v, "°F"]);
     });
 
-    it.each([1, 10, 100])('should convert K to °F.', v => {
+    it.each([1, 10, 100])('should convert %dK to °F.', v => {
       const fahrenheitConversion = linearConversion(0.55555555555556, 255.37222222222428);
       const kelvinConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
-        fahrenheitConversion[1],
         kelvinConversion[0],
+        fahrenheitConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "°F"] as const;
@@ -171,13 +171,13 @@ describe("temperature", () => {
       expect(fahrenheit(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert °C to °F.', v => {
+    it.each([1, 10, 100])('should convert %d°C to °F.', v => {
       const fahrenheitConversion = linearConversion(0.55555555555556, 255.37222222222428);
       const celsiusConversion = linearConversion(1, 273.15);
 
       const [toBase, fromBase] = [
-        fahrenheitConversion[1],
         celsiusConversion[0],
+        fahrenheitConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "°F"] as const;
@@ -189,13 +189,13 @@ describe("temperature", () => {
 
 
 
-    it.each([1, 10, 100])('should convert °R to °F.', v => {
+    it.each([1, 10, 100])('should convert %d°R to °F.', v => {
       const fahrenheitConversion = linearConversion(0.55555555555556, 255.37222222222428);
       const rankineConversion = linearConversion(0.55555555555556);
 
       const [toBase, fromBase] = [
-        fahrenheitConversion[1],
         rankineConversion[0],
+        fahrenheitConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "°F"] as const;
@@ -213,13 +213,13 @@ describe("temperature", () => {
       expect(rankine(v)).toEqual([v, "°R"]);
     });
 
-    it.each([1, 10, 100])('should convert K to °R.', v => {
+    it.each([1, 10, 100])('should convert %dK to °R.', v => {
       const rankineConversion = linearConversion(0.55555555555556);
       const kelvinConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
-        rankineConversion[1],
         kelvinConversion[0],
+        rankineConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "°R"] as const;
@@ -229,13 +229,13 @@ describe("temperature", () => {
       expect(rankine(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert °C to °R.', v => {
+    it.each([1, 10, 100])('should convert %d°C to °R.', v => {
       const rankineConversion = linearConversion(0.55555555555556);
       const celsiusConversion = linearConversion(1, 273.15);
 
       const [toBase, fromBase] = [
-        rankineConversion[1],
         celsiusConversion[0],
+        rankineConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "°R"] as const;
@@ -245,13 +245,13 @@ describe("temperature", () => {
       expect(rankine(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert °F to °R.', v => {
+    it.each([1, 10, 100])('should convert %d°F to °R.', v => {
       const rankineConversion = linearConversion(0.55555555555556);
       const fahrenheitConversion = linearConversion(0.55555555555556, 255.37222222222428);
 
       const [toBase, fromBase] = [
-        rankineConversion[1],
         fahrenheitConversion[0],
+        rankineConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "°R"] as const;

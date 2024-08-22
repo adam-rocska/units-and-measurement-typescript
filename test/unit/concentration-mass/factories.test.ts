@@ -27,13 +27,13 @@ describe("concentrationMass", () => {
 
 
 
-    it.each([1, 10, 100])('should convert mg/dL to g/L.', v => {
+    it.each([1, 10, 100])('should convert %dmg/dL to g/L.', v => {
       const gramsPerLiterConversion = linearConversion(1);
       const milligramsPerDeciliterConversion = linearConversion(0.01);
 
       const [toBase, fromBase] = [
-        gramsPerLiterConversion[1],
         milligramsPerDeciliterConversion[0],
+        gramsPerLiterConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "g/L"] as const;
@@ -51,13 +51,13 @@ describe("concentrationMass", () => {
       expect(milligramsPerDeciliter(v)).toEqual([v, "mg/dL"]);
     });
 
-    it.each([1, 10, 100])('should convert g/L to mg/dL.', v => {
+    it.each([1, 10, 100])('should convert %dg/L to mg/dL.', v => {
       const milligramsPerDeciliterConversion = linearConversion(0.01);
       const gramsPerLiterConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
-        milligramsPerDeciliterConversion[1],
         gramsPerLiterConversion[0],
+        milligramsPerDeciliterConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "mg/dL"] as const;

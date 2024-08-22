@@ -90,13 +90,13 @@ describe("power", () => {
 
 
 
-    it.each([1, 10, 100])('should convert GW to TW.', v => {
+    it.each([1, 10, 100])('should convert %dGW to TW.', v => {
       const terawattsConversion = linearConversion(1000000000000);
       const gigawattsConversion = linearConversion(1000000000);
 
       const [toBase, fromBase] = [
-        terawattsConversion[1],
         gigawattsConversion[0],
+        terawattsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "TW"] as const;
@@ -106,13 +106,13 @@ describe("power", () => {
       expect(terawatts(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert MW to TW.', v => {
+    it.each([1, 10, 100])('should convert %dMW to TW.', v => {
       const terawattsConversion = linearConversion(1000000000000);
       const megawattsConversion = linearConversion(1000000);
 
       const [toBase, fromBase] = [
-        terawattsConversion[1],
         megawattsConversion[0],
+        terawattsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "TW"] as const;
@@ -122,13 +122,13 @@ describe("power", () => {
       expect(terawatts(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert kW to TW.', v => {
+    it.each([1, 10, 100])('should convert %dkW to TW.', v => {
       const terawattsConversion = linearConversion(1000000000000);
       const kilowattsConversion = linearConversion(1000);
 
       const [toBase, fromBase] = [
-        terawattsConversion[1],
         kilowattsConversion[0],
+        terawattsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "TW"] as const;
@@ -138,13 +138,13 @@ describe("power", () => {
       expect(terawatts(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert W to TW.', v => {
+    it.each([1, 10, 100])('should convert %dW to TW.', v => {
       const terawattsConversion = linearConversion(1000000000000);
       const wattsConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
-        terawattsConversion[1],
         wattsConversion[0],
+        terawattsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "TW"] as const;
@@ -154,13 +154,13 @@ describe("power", () => {
       expect(terawatts(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert mW to TW.', v => {
+    it.each([1, 10, 100])('should convert %dmW to TW.', v => {
       const terawattsConversion = linearConversion(1000000000000);
       const milliwattsConversion = linearConversion(0.001);
 
       const [toBase, fromBase] = [
-        terawattsConversion[1],
         milliwattsConversion[0],
+        terawattsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "TW"] as const;
@@ -170,13 +170,13 @@ describe("power", () => {
       expect(terawatts(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert µW to TW.', v => {
+    it.each([1, 10, 100])('should convert %dµW to TW.', v => {
       const terawattsConversion = linearConversion(1000000000000);
       const microwattsConversion = linearConversion(0.000001);
 
       const [toBase, fromBase] = [
-        terawattsConversion[1],
         microwattsConversion[0],
+        terawattsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "TW"] as const;
@@ -186,13 +186,13 @@ describe("power", () => {
       expect(terawatts(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert nW to TW.', v => {
+    it.each([1, 10, 100])('should convert %dnW to TW.', v => {
       const terawattsConversion = linearConversion(1000000000000);
       const nanowattsConversion = linearConversion(1e-9);
 
       const [toBase, fromBase] = [
-        terawattsConversion[1],
         nanowattsConversion[0],
+        terawattsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "TW"] as const;
@@ -202,13 +202,13 @@ describe("power", () => {
       expect(terawatts(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert pW to TW.', v => {
+    it.each([1, 10, 100])('should convert %dpW to TW.', v => {
       const terawattsConversion = linearConversion(1000000000000);
       const picowattsConversion = linearConversion(1e-12);
 
       const [toBase, fromBase] = [
-        terawattsConversion[1],
         picowattsConversion[0],
+        terawattsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "TW"] as const;
@@ -218,13 +218,13 @@ describe("power", () => {
       expect(terawatts(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert fW to TW.', v => {
+    it.each([1, 10, 100])('should convert %dfW to TW.', v => {
       const terawattsConversion = linearConversion(1000000000000);
       const femtowattsConversion = linearConversion(1e-15);
 
       const [toBase, fromBase] = [
-        terawattsConversion[1],
         femtowattsConversion[0],
+        terawattsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "TW"] as const;
@@ -234,13 +234,13 @@ describe("power", () => {
       expect(terawatts(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert hp to TW.', v => {
+    it.each([1, 10, 100])('should convert %dhp to TW.', v => {
       const terawattsConversion = linearConversion(1000000000000);
       const horsepowerConversion = linearConversion(745.7);
 
       const [toBase, fromBase] = [
-        terawattsConversion[1],
         horsepowerConversion[0],
+        terawattsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "TW"] as const;
@@ -258,13 +258,13 @@ describe("power", () => {
       expect(gigawatts(v)).toEqual([v, "GW"]);
     });
 
-    it.each([1, 10, 100])('should convert TW to GW.', v => {
+    it.each([1, 10, 100])('should convert %dTW to GW.', v => {
       const gigawattsConversion = linearConversion(1000000000);
       const terawattsConversion = linearConversion(1000000000000);
 
       const [toBase, fromBase] = [
-        gigawattsConversion[1],
         terawattsConversion[0],
+        gigawattsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "GW"] as const;
@@ -276,13 +276,13 @@ describe("power", () => {
 
 
 
-    it.each([1, 10, 100])('should convert MW to GW.', v => {
+    it.each([1, 10, 100])('should convert %dMW to GW.', v => {
       const gigawattsConversion = linearConversion(1000000000);
       const megawattsConversion = linearConversion(1000000);
 
       const [toBase, fromBase] = [
-        gigawattsConversion[1],
         megawattsConversion[0],
+        gigawattsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "GW"] as const;
@@ -292,13 +292,13 @@ describe("power", () => {
       expect(gigawatts(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert kW to GW.', v => {
+    it.each([1, 10, 100])('should convert %dkW to GW.', v => {
       const gigawattsConversion = linearConversion(1000000000);
       const kilowattsConversion = linearConversion(1000);
 
       const [toBase, fromBase] = [
-        gigawattsConversion[1],
         kilowattsConversion[0],
+        gigawattsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "GW"] as const;
@@ -308,13 +308,13 @@ describe("power", () => {
       expect(gigawatts(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert W to GW.', v => {
+    it.each([1, 10, 100])('should convert %dW to GW.', v => {
       const gigawattsConversion = linearConversion(1000000000);
       const wattsConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
-        gigawattsConversion[1],
         wattsConversion[0],
+        gigawattsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "GW"] as const;
@@ -324,13 +324,13 @@ describe("power", () => {
       expect(gigawatts(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert mW to GW.', v => {
+    it.each([1, 10, 100])('should convert %dmW to GW.', v => {
       const gigawattsConversion = linearConversion(1000000000);
       const milliwattsConversion = linearConversion(0.001);
 
       const [toBase, fromBase] = [
-        gigawattsConversion[1],
         milliwattsConversion[0],
+        gigawattsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "GW"] as const;
@@ -340,13 +340,13 @@ describe("power", () => {
       expect(gigawatts(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert µW to GW.', v => {
+    it.each([1, 10, 100])('should convert %dµW to GW.', v => {
       const gigawattsConversion = linearConversion(1000000000);
       const microwattsConversion = linearConversion(0.000001);
 
       const [toBase, fromBase] = [
-        gigawattsConversion[1],
         microwattsConversion[0],
+        gigawattsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "GW"] as const;
@@ -356,13 +356,13 @@ describe("power", () => {
       expect(gigawatts(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert nW to GW.', v => {
+    it.each([1, 10, 100])('should convert %dnW to GW.', v => {
       const gigawattsConversion = linearConversion(1000000000);
       const nanowattsConversion = linearConversion(1e-9);
 
       const [toBase, fromBase] = [
-        gigawattsConversion[1],
         nanowattsConversion[0],
+        gigawattsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "GW"] as const;
@@ -372,13 +372,13 @@ describe("power", () => {
       expect(gigawatts(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert pW to GW.', v => {
+    it.each([1, 10, 100])('should convert %dpW to GW.', v => {
       const gigawattsConversion = linearConversion(1000000000);
       const picowattsConversion = linearConversion(1e-12);
 
       const [toBase, fromBase] = [
-        gigawattsConversion[1],
         picowattsConversion[0],
+        gigawattsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "GW"] as const;
@@ -388,13 +388,13 @@ describe("power", () => {
       expect(gigawatts(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert fW to GW.', v => {
+    it.each([1, 10, 100])('should convert %dfW to GW.', v => {
       const gigawattsConversion = linearConversion(1000000000);
       const femtowattsConversion = linearConversion(1e-15);
 
       const [toBase, fromBase] = [
-        gigawattsConversion[1],
         femtowattsConversion[0],
+        gigawattsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "GW"] as const;
@@ -404,13 +404,13 @@ describe("power", () => {
       expect(gigawatts(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert hp to GW.', v => {
+    it.each([1, 10, 100])('should convert %dhp to GW.', v => {
       const gigawattsConversion = linearConversion(1000000000);
       const horsepowerConversion = linearConversion(745.7);
 
       const [toBase, fromBase] = [
-        gigawattsConversion[1],
         horsepowerConversion[0],
+        gigawattsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "GW"] as const;
@@ -428,13 +428,13 @@ describe("power", () => {
       expect(megawatts(v)).toEqual([v, "MW"]);
     });
 
-    it.each([1, 10, 100])('should convert TW to MW.', v => {
+    it.each([1, 10, 100])('should convert %dTW to MW.', v => {
       const megawattsConversion = linearConversion(1000000);
       const terawattsConversion = linearConversion(1000000000000);
 
       const [toBase, fromBase] = [
-        megawattsConversion[1],
         terawattsConversion[0],
+        megawattsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "MW"] as const;
@@ -444,13 +444,13 @@ describe("power", () => {
       expect(megawatts(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert GW to MW.', v => {
+    it.each([1, 10, 100])('should convert %dGW to MW.', v => {
       const megawattsConversion = linearConversion(1000000);
       const gigawattsConversion = linearConversion(1000000000);
 
       const [toBase, fromBase] = [
-        megawattsConversion[1],
         gigawattsConversion[0],
+        megawattsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "MW"] as const;
@@ -462,13 +462,13 @@ describe("power", () => {
 
 
 
-    it.each([1, 10, 100])('should convert kW to MW.', v => {
+    it.each([1, 10, 100])('should convert %dkW to MW.', v => {
       const megawattsConversion = linearConversion(1000000);
       const kilowattsConversion = linearConversion(1000);
 
       const [toBase, fromBase] = [
-        megawattsConversion[1],
         kilowattsConversion[0],
+        megawattsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "MW"] as const;
@@ -478,13 +478,13 @@ describe("power", () => {
       expect(megawatts(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert W to MW.', v => {
+    it.each([1, 10, 100])('should convert %dW to MW.', v => {
       const megawattsConversion = linearConversion(1000000);
       const wattsConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
-        megawattsConversion[1],
         wattsConversion[0],
+        megawattsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "MW"] as const;
@@ -494,13 +494,13 @@ describe("power", () => {
       expect(megawatts(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert mW to MW.', v => {
+    it.each([1, 10, 100])('should convert %dmW to MW.', v => {
       const megawattsConversion = linearConversion(1000000);
       const milliwattsConversion = linearConversion(0.001);
 
       const [toBase, fromBase] = [
-        megawattsConversion[1],
         milliwattsConversion[0],
+        megawattsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "MW"] as const;
@@ -510,13 +510,13 @@ describe("power", () => {
       expect(megawatts(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert µW to MW.', v => {
+    it.each([1, 10, 100])('should convert %dµW to MW.', v => {
       const megawattsConversion = linearConversion(1000000);
       const microwattsConversion = linearConversion(0.000001);
 
       const [toBase, fromBase] = [
-        megawattsConversion[1],
         microwattsConversion[0],
+        megawattsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "MW"] as const;
@@ -526,13 +526,13 @@ describe("power", () => {
       expect(megawatts(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert nW to MW.', v => {
+    it.each([1, 10, 100])('should convert %dnW to MW.', v => {
       const megawattsConversion = linearConversion(1000000);
       const nanowattsConversion = linearConversion(1e-9);
 
       const [toBase, fromBase] = [
-        megawattsConversion[1],
         nanowattsConversion[0],
+        megawattsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "MW"] as const;
@@ -542,13 +542,13 @@ describe("power", () => {
       expect(megawatts(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert pW to MW.', v => {
+    it.each([1, 10, 100])('should convert %dpW to MW.', v => {
       const megawattsConversion = linearConversion(1000000);
       const picowattsConversion = linearConversion(1e-12);
 
       const [toBase, fromBase] = [
-        megawattsConversion[1],
         picowattsConversion[0],
+        megawattsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "MW"] as const;
@@ -558,13 +558,13 @@ describe("power", () => {
       expect(megawatts(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert fW to MW.', v => {
+    it.each([1, 10, 100])('should convert %dfW to MW.', v => {
       const megawattsConversion = linearConversion(1000000);
       const femtowattsConversion = linearConversion(1e-15);
 
       const [toBase, fromBase] = [
-        megawattsConversion[1],
         femtowattsConversion[0],
+        megawattsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "MW"] as const;
@@ -574,13 +574,13 @@ describe("power", () => {
       expect(megawatts(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert hp to MW.', v => {
+    it.each([1, 10, 100])('should convert %dhp to MW.', v => {
       const megawattsConversion = linearConversion(1000000);
       const horsepowerConversion = linearConversion(745.7);
 
       const [toBase, fromBase] = [
-        megawattsConversion[1],
         horsepowerConversion[0],
+        megawattsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "MW"] as const;
@@ -598,13 +598,13 @@ describe("power", () => {
       expect(kilowatts(v)).toEqual([v, "kW"]);
     });
 
-    it.each([1, 10, 100])('should convert TW to kW.', v => {
+    it.each([1, 10, 100])('should convert %dTW to kW.', v => {
       const kilowattsConversion = linearConversion(1000);
       const terawattsConversion = linearConversion(1000000000000);
 
       const [toBase, fromBase] = [
-        kilowattsConversion[1],
         terawattsConversion[0],
+        kilowattsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "kW"] as const;
@@ -614,13 +614,13 @@ describe("power", () => {
       expect(kilowatts(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert GW to kW.', v => {
+    it.each([1, 10, 100])('should convert %dGW to kW.', v => {
       const kilowattsConversion = linearConversion(1000);
       const gigawattsConversion = linearConversion(1000000000);
 
       const [toBase, fromBase] = [
-        kilowattsConversion[1],
         gigawattsConversion[0],
+        kilowattsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "kW"] as const;
@@ -630,13 +630,13 @@ describe("power", () => {
       expect(kilowatts(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert MW to kW.', v => {
+    it.each([1, 10, 100])('should convert %dMW to kW.', v => {
       const kilowattsConversion = linearConversion(1000);
       const megawattsConversion = linearConversion(1000000);
 
       const [toBase, fromBase] = [
-        kilowattsConversion[1],
         megawattsConversion[0],
+        kilowattsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "kW"] as const;
@@ -648,13 +648,13 @@ describe("power", () => {
 
 
 
-    it.each([1, 10, 100])('should convert W to kW.', v => {
+    it.each([1, 10, 100])('should convert %dW to kW.', v => {
       const kilowattsConversion = linearConversion(1000);
       const wattsConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
-        kilowattsConversion[1],
         wattsConversion[0],
+        kilowattsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "kW"] as const;
@@ -664,13 +664,13 @@ describe("power", () => {
       expect(kilowatts(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert mW to kW.', v => {
+    it.each([1, 10, 100])('should convert %dmW to kW.', v => {
       const kilowattsConversion = linearConversion(1000);
       const milliwattsConversion = linearConversion(0.001);
 
       const [toBase, fromBase] = [
-        kilowattsConversion[1],
         milliwattsConversion[0],
+        kilowattsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "kW"] as const;
@@ -680,13 +680,13 @@ describe("power", () => {
       expect(kilowatts(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert µW to kW.', v => {
+    it.each([1, 10, 100])('should convert %dµW to kW.', v => {
       const kilowattsConversion = linearConversion(1000);
       const microwattsConversion = linearConversion(0.000001);
 
       const [toBase, fromBase] = [
-        kilowattsConversion[1],
         microwattsConversion[0],
+        kilowattsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "kW"] as const;
@@ -696,13 +696,13 @@ describe("power", () => {
       expect(kilowatts(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert nW to kW.', v => {
+    it.each([1, 10, 100])('should convert %dnW to kW.', v => {
       const kilowattsConversion = linearConversion(1000);
       const nanowattsConversion = linearConversion(1e-9);
 
       const [toBase, fromBase] = [
-        kilowattsConversion[1],
         nanowattsConversion[0],
+        kilowattsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "kW"] as const;
@@ -712,13 +712,13 @@ describe("power", () => {
       expect(kilowatts(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert pW to kW.', v => {
+    it.each([1, 10, 100])('should convert %dpW to kW.', v => {
       const kilowattsConversion = linearConversion(1000);
       const picowattsConversion = linearConversion(1e-12);
 
       const [toBase, fromBase] = [
-        kilowattsConversion[1],
         picowattsConversion[0],
+        kilowattsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "kW"] as const;
@@ -728,13 +728,13 @@ describe("power", () => {
       expect(kilowatts(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert fW to kW.', v => {
+    it.each([1, 10, 100])('should convert %dfW to kW.', v => {
       const kilowattsConversion = linearConversion(1000);
       const femtowattsConversion = linearConversion(1e-15);
 
       const [toBase, fromBase] = [
-        kilowattsConversion[1],
         femtowattsConversion[0],
+        kilowattsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "kW"] as const;
@@ -744,13 +744,13 @@ describe("power", () => {
       expect(kilowatts(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert hp to kW.', v => {
+    it.each([1, 10, 100])('should convert %dhp to kW.', v => {
       const kilowattsConversion = linearConversion(1000);
       const horsepowerConversion = linearConversion(745.7);
 
       const [toBase, fromBase] = [
-        kilowattsConversion[1],
         horsepowerConversion[0],
+        kilowattsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "kW"] as const;
@@ -768,13 +768,13 @@ describe("power", () => {
       expect(watts(v)).toEqual([v, "W"]);
     });
 
-    it.each([1, 10, 100])('should convert TW to W.', v => {
+    it.each([1, 10, 100])('should convert %dTW to W.', v => {
       const wattsConversion = linearConversion(1);
       const terawattsConversion = linearConversion(1000000000000);
 
       const [toBase, fromBase] = [
-        wattsConversion[1],
         terawattsConversion[0],
+        wattsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "W"] as const;
@@ -784,13 +784,13 @@ describe("power", () => {
       expect(watts(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert GW to W.', v => {
+    it.each([1, 10, 100])('should convert %dGW to W.', v => {
       const wattsConversion = linearConversion(1);
       const gigawattsConversion = linearConversion(1000000000);
 
       const [toBase, fromBase] = [
-        wattsConversion[1],
         gigawattsConversion[0],
+        wattsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "W"] as const;
@@ -800,13 +800,13 @@ describe("power", () => {
       expect(watts(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert MW to W.', v => {
+    it.each([1, 10, 100])('should convert %dMW to W.', v => {
       const wattsConversion = linearConversion(1);
       const megawattsConversion = linearConversion(1000000);
 
       const [toBase, fromBase] = [
-        wattsConversion[1],
         megawattsConversion[0],
+        wattsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "W"] as const;
@@ -816,13 +816,13 @@ describe("power", () => {
       expect(watts(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert kW to W.', v => {
+    it.each([1, 10, 100])('should convert %dkW to W.', v => {
       const wattsConversion = linearConversion(1);
       const kilowattsConversion = linearConversion(1000);
 
       const [toBase, fromBase] = [
-        wattsConversion[1],
         kilowattsConversion[0],
+        wattsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "W"] as const;
@@ -834,13 +834,13 @@ describe("power", () => {
 
 
 
-    it.each([1, 10, 100])('should convert mW to W.', v => {
+    it.each([1, 10, 100])('should convert %dmW to W.', v => {
       const wattsConversion = linearConversion(1);
       const milliwattsConversion = linearConversion(0.001);
 
       const [toBase, fromBase] = [
-        wattsConversion[1],
         milliwattsConversion[0],
+        wattsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "W"] as const;
@@ -850,13 +850,13 @@ describe("power", () => {
       expect(watts(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert µW to W.', v => {
+    it.each([1, 10, 100])('should convert %dµW to W.', v => {
       const wattsConversion = linearConversion(1);
       const microwattsConversion = linearConversion(0.000001);
 
       const [toBase, fromBase] = [
-        wattsConversion[1],
         microwattsConversion[0],
+        wattsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "W"] as const;
@@ -866,13 +866,13 @@ describe("power", () => {
       expect(watts(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert nW to W.', v => {
+    it.each([1, 10, 100])('should convert %dnW to W.', v => {
       const wattsConversion = linearConversion(1);
       const nanowattsConversion = linearConversion(1e-9);
 
       const [toBase, fromBase] = [
-        wattsConversion[1],
         nanowattsConversion[0],
+        wattsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "W"] as const;
@@ -882,13 +882,13 @@ describe("power", () => {
       expect(watts(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert pW to W.', v => {
+    it.each([1, 10, 100])('should convert %dpW to W.', v => {
       const wattsConversion = linearConversion(1);
       const picowattsConversion = linearConversion(1e-12);
 
       const [toBase, fromBase] = [
-        wattsConversion[1],
         picowattsConversion[0],
+        wattsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "W"] as const;
@@ -898,13 +898,13 @@ describe("power", () => {
       expect(watts(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert fW to W.', v => {
+    it.each([1, 10, 100])('should convert %dfW to W.', v => {
       const wattsConversion = linearConversion(1);
       const femtowattsConversion = linearConversion(1e-15);
 
       const [toBase, fromBase] = [
-        wattsConversion[1],
         femtowattsConversion[0],
+        wattsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "W"] as const;
@@ -914,13 +914,13 @@ describe("power", () => {
       expect(watts(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert hp to W.', v => {
+    it.each([1, 10, 100])('should convert %dhp to W.', v => {
       const wattsConversion = linearConversion(1);
       const horsepowerConversion = linearConversion(745.7);
 
       const [toBase, fromBase] = [
-        wattsConversion[1],
         horsepowerConversion[0],
+        wattsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "W"] as const;
@@ -938,13 +938,13 @@ describe("power", () => {
       expect(milliwatts(v)).toEqual([v, "mW"]);
     });
 
-    it.each([1, 10, 100])('should convert TW to mW.', v => {
+    it.each([1, 10, 100])('should convert %dTW to mW.', v => {
       const milliwattsConversion = linearConversion(0.001);
       const terawattsConversion = linearConversion(1000000000000);
 
       const [toBase, fromBase] = [
-        milliwattsConversion[1],
         terawattsConversion[0],
+        milliwattsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "mW"] as const;
@@ -954,13 +954,13 @@ describe("power", () => {
       expect(milliwatts(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert GW to mW.', v => {
+    it.each([1, 10, 100])('should convert %dGW to mW.', v => {
       const milliwattsConversion = linearConversion(0.001);
       const gigawattsConversion = linearConversion(1000000000);
 
       const [toBase, fromBase] = [
-        milliwattsConversion[1],
         gigawattsConversion[0],
+        milliwattsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "mW"] as const;
@@ -970,13 +970,13 @@ describe("power", () => {
       expect(milliwatts(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert MW to mW.', v => {
+    it.each([1, 10, 100])('should convert %dMW to mW.', v => {
       const milliwattsConversion = linearConversion(0.001);
       const megawattsConversion = linearConversion(1000000);
 
       const [toBase, fromBase] = [
-        milliwattsConversion[1],
         megawattsConversion[0],
+        milliwattsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "mW"] as const;
@@ -986,13 +986,13 @@ describe("power", () => {
       expect(milliwatts(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert kW to mW.', v => {
+    it.each([1, 10, 100])('should convert %dkW to mW.', v => {
       const milliwattsConversion = linearConversion(0.001);
       const kilowattsConversion = linearConversion(1000);
 
       const [toBase, fromBase] = [
-        milliwattsConversion[1],
         kilowattsConversion[0],
+        milliwattsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "mW"] as const;
@@ -1002,13 +1002,13 @@ describe("power", () => {
       expect(milliwatts(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert W to mW.', v => {
+    it.each([1, 10, 100])('should convert %dW to mW.', v => {
       const milliwattsConversion = linearConversion(0.001);
       const wattsConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
-        milliwattsConversion[1],
         wattsConversion[0],
+        milliwattsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "mW"] as const;
@@ -1020,13 +1020,13 @@ describe("power", () => {
 
 
 
-    it.each([1, 10, 100])('should convert µW to mW.', v => {
+    it.each([1, 10, 100])('should convert %dµW to mW.', v => {
       const milliwattsConversion = linearConversion(0.001);
       const microwattsConversion = linearConversion(0.000001);
 
       const [toBase, fromBase] = [
-        milliwattsConversion[1],
         microwattsConversion[0],
+        milliwattsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "mW"] as const;
@@ -1036,13 +1036,13 @@ describe("power", () => {
       expect(milliwatts(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert nW to mW.', v => {
+    it.each([1, 10, 100])('should convert %dnW to mW.', v => {
       const milliwattsConversion = linearConversion(0.001);
       const nanowattsConversion = linearConversion(1e-9);
 
       const [toBase, fromBase] = [
-        milliwattsConversion[1],
         nanowattsConversion[0],
+        milliwattsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "mW"] as const;
@@ -1052,13 +1052,13 @@ describe("power", () => {
       expect(milliwatts(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert pW to mW.', v => {
+    it.each([1, 10, 100])('should convert %dpW to mW.', v => {
       const milliwattsConversion = linearConversion(0.001);
       const picowattsConversion = linearConversion(1e-12);
 
       const [toBase, fromBase] = [
-        milliwattsConversion[1],
         picowattsConversion[0],
+        milliwattsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "mW"] as const;
@@ -1068,13 +1068,13 @@ describe("power", () => {
       expect(milliwatts(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert fW to mW.', v => {
+    it.each([1, 10, 100])('should convert %dfW to mW.', v => {
       const milliwattsConversion = linearConversion(0.001);
       const femtowattsConversion = linearConversion(1e-15);
 
       const [toBase, fromBase] = [
-        milliwattsConversion[1],
         femtowattsConversion[0],
+        milliwattsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "mW"] as const;
@@ -1084,13 +1084,13 @@ describe("power", () => {
       expect(milliwatts(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert hp to mW.', v => {
+    it.each([1, 10, 100])('should convert %dhp to mW.', v => {
       const milliwattsConversion = linearConversion(0.001);
       const horsepowerConversion = linearConversion(745.7);
 
       const [toBase, fromBase] = [
-        milliwattsConversion[1],
         horsepowerConversion[0],
+        milliwattsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "mW"] as const;
@@ -1108,13 +1108,13 @@ describe("power", () => {
       expect(microwatts(v)).toEqual([v, "µW"]);
     });
 
-    it.each([1, 10, 100])('should convert TW to µW.', v => {
+    it.each([1, 10, 100])('should convert %dTW to µW.', v => {
       const microwattsConversion = linearConversion(0.000001);
       const terawattsConversion = linearConversion(1000000000000);
 
       const [toBase, fromBase] = [
-        microwattsConversion[1],
         terawattsConversion[0],
+        microwattsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "µW"] as const;
@@ -1124,13 +1124,13 @@ describe("power", () => {
       expect(microwatts(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert GW to µW.', v => {
+    it.each([1, 10, 100])('should convert %dGW to µW.', v => {
       const microwattsConversion = linearConversion(0.000001);
       const gigawattsConversion = linearConversion(1000000000);
 
       const [toBase, fromBase] = [
-        microwattsConversion[1],
         gigawattsConversion[0],
+        microwattsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "µW"] as const;
@@ -1140,13 +1140,13 @@ describe("power", () => {
       expect(microwatts(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert MW to µW.', v => {
+    it.each([1, 10, 100])('should convert %dMW to µW.', v => {
       const microwattsConversion = linearConversion(0.000001);
       const megawattsConversion = linearConversion(1000000);
 
       const [toBase, fromBase] = [
-        microwattsConversion[1],
         megawattsConversion[0],
+        microwattsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "µW"] as const;
@@ -1156,13 +1156,13 @@ describe("power", () => {
       expect(microwatts(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert kW to µW.', v => {
+    it.each([1, 10, 100])('should convert %dkW to µW.', v => {
       const microwattsConversion = linearConversion(0.000001);
       const kilowattsConversion = linearConversion(1000);
 
       const [toBase, fromBase] = [
-        microwattsConversion[1],
         kilowattsConversion[0],
+        microwattsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "µW"] as const;
@@ -1172,13 +1172,13 @@ describe("power", () => {
       expect(microwatts(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert W to µW.', v => {
+    it.each([1, 10, 100])('should convert %dW to µW.', v => {
       const microwattsConversion = linearConversion(0.000001);
       const wattsConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
-        microwattsConversion[1],
         wattsConversion[0],
+        microwattsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "µW"] as const;
@@ -1188,13 +1188,13 @@ describe("power", () => {
       expect(microwatts(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert mW to µW.', v => {
+    it.each([1, 10, 100])('should convert %dmW to µW.', v => {
       const microwattsConversion = linearConversion(0.000001);
       const milliwattsConversion = linearConversion(0.001);
 
       const [toBase, fromBase] = [
-        microwattsConversion[1],
         milliwattsConversion[0],
+        microwattsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "µW"] as const;
@@ -1206,13 +1206,13 @@ describe("power", () => {
 
 
 
-    it.each([1, 10, 100])('should convert nW to µW.', v => {
+    it.each([1, 10, 100])('should convert %dnW to µW.', v => {
       const microwattsConversion = linearConversion(0.000001);
       const nanowattsConversion = linearConversion(1e-9);
 
       const [toBase, fromBase] = [
-        microwattsConversion[1],
         nanowattsConversion[0],
+        microwattsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "µW"] as const;
@@ -1222,13 +1222,13 @@ describe("power", () => {
       expect(microwatts(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert pW to µW.', v => {
+    it.each([1, 10, 100])('should convert %dpW to µW.', v => {
       const microwattsConversion = linearConversion(0.000001);
       const picowattsConversion = linearConversion(1e-12);
 
       const [toBase, fromBase] = [
-        microwattsConversion[1],
         picowattsConversion[0],
+        microwattsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "µW"] as const;
@@ -1238,13 +1238,13 @@ describe("power", () => {
       expect(microwatts(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert fW to µW.', v => {
+    it.each([1, 10, 100])('should convert %dfW to µW.', v => {
       const microwattsConversion = linearConversion(0.000001);
       const femtowattsConversion = linearConversion(1e-15);
 
       const [toBase, fromBase] = [
-        microwattsConversion[1],
         femtowattsConversion[0],
+        microwattsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "µW"] as const;
@@ -1254,13 +1254,13 @@ describe("power", () => {
       expect(microwatts(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert hp to µW.', v => {
+    it.each([1, 10, 100])('should convert %dhp to µW.', v => {
       const microwattsConversion = linearConversion(0.000001);
       const horsepowerConversion = linearConversion(745.7);
 
       const [toBase, fromBase] = [
-        microwattsConversion[1],
         horsepowerConversion[0],
+        microwattsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "µW"] as const;
@@ -1278,13 +1278,13 @@ describe("power", () => {
       expect(nanowatts(v)).toEqual([v, "nW"]);
     });
 
-    it.each([1, 10, 100])('should convert TW to nW.', v => {
+    it.each([1, 10, 100])('should convert %dTW to nW.', v => {
       const nanowattsConversion = linearConversion(1e-9);
       const terawattsConversion = linearConversion(1000000000000);
 
       const [toBase, fromBase] = [
-        nanowattsConversion[1],
         terawattsConversion[0],
+        nanowattsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "nW"] as const;
@@ -1294,13 +1294,13 @@ describe("power", () => {
       expect(nanowatts(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert GW to nW.', v => {
+    it.each([1, 10, 100])('should convert %dGW to nW.', v => {
       const nanowattsConversion = linearConversion(1e-9);
       const gigawattsConversion = linearConversion(1000000000);
 
       const [toBase, fromBase] = [
-        nanowattsConversion[1],
         gigawattsConversion[0],
+        nanowattsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "nW"] as const;
@@ -1310,13 +1310,13 @@ describe("power", () => {
       expect(nanowatts(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert MW to nW.', v => {
+    it.each([1, 10, 100])('should convert %dMW to nW.', v => {
       const nanowattsConversion = linearConversion(1e-9);
       const megawattsConversion = linearConversion(1000000);
 
       const [toBase, fromBase] = [
-        nanowattsConversion[1],
         megawattsConversion[0],
+        nanowattsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "nW"] as const;
@@ -1326,13 +1326,13 @@ describe("power", () => {
       expect(nanowatts(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert kW to nW.', v => {
+    it.each([1, 10, 100])('should convert %dkW to nW.', v => {
       const nanowattsConversion = linearConversion(1e-9);
       const kilowattsConversion = linearConversion(1000);
 
       const [toBase, fromBase] = [
-        nanowattsConversion[1],
         kilowattsConversion[0],
+        nanowattsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "nW"] as const;
@@ -1342,13 +1342,13 @@ describe("power", () => {
       expect(nanowatts(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert W to nW.', v => {
+    it.each([1, 10, 100])('should convert %dW to nW.', v => {
       const nanowattsConversion = linearConversion(1e-9);
       const wattsConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
-        nanowattsConversion[1],
         wattsConversion[0],
+        nanowattsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "nW"] as const;
@@ -1358,13 +1358,13 @@ describe("power", () => {
       expect(nanowatts(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert mW to nW.', v => {
+    it.each([1, 10, 100])('should convert %dmW to nW.', v => {
       const nanowattsConversion = linearConversion(1e-9);
       const milliwattsConversion = linearConversion(0.001);
 
       const [toBase, fromBase] = [
-        nanowattsConversion[1],
         milliwattsConversion[0],
+        nanowattsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "nW"] as const;
@@ -1374,13 +1374,13 @@ describe("power", () => {
       expect(nanowatts(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert µW to nW.', v => {
+    it.each([1, 10, 100])('should convert %dµW to nW.', v => {
       const nanowattsConversion = linearConversion(1e-9);
       const microwattsConversion = linearConversion(0.000001);
 
       const [toBase, fromBase] = [
-        nanowattsConversion[1],
         microwattsConversion[0],
+        nanowattsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "nW"] as const;
@@ -1392,13 +1392,13 @@ describe("power", () => {
 
 
 
-    it.each([1, 10, 100])('should convert pW to nW.', v => {
+    it.each([1, 10, 100])('should convert %dpW to nW.', v => {
       const nanowattsConversion = linearConversion(1e-9);
       const picowattsConversion = linearConversion(1e-12);
 
       const [toBase, fromBase] = [
-        nanowattsConversion[1],
         picowattsConversion[0],
+        nanowattsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "nW"] as const;
@@ -1408,13 +1408,13 @@ describe("power", () => {
       expect(nanowatts(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert fW to nW.', v => {
+    it.each([1, 10, 100])('should convert %dfW to nW.', v => {
       const nanowattsConversion = linearConversion(1e-9);
       const femtowattsConversion = linearConversion(1e-15);
 
       const [toBase, fromBase] = [
-        nanowattsConversion[1],
         femtowattsConversion[0],
+        nanowattsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "nW"] as const;
@@ -1424,13 +1424,13 @@ describe("power", () => {
       expect(nanowatts(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert hp to nW.', v => {
+    it.each([1, 10, 100])('should convert %dhp to nW.', v => {
       const nanowattsConversion = linearConversion(1e-9);
       const horsepowerConversion = linearConversion(745.7);
 
       const [toBase, fromBase] = [
-        nanowattsConversion[1],
         horsepowerConversion[0],
+        nanowattsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "nW"] as const;
@@ -1448,13 +1448,13 @@ describe("power", () => {
       expect(picowatts(v)).toEqual([v, "pW"]);
     });
 
-    it.each([1, 10, 100])('should convert TW to pW.', v => {
+    it.each([1, 10, 100])('should convert %dTW to pW.', v => {
       const picowattsConversion = linearConversion(1e-12);
       const terawattsConversion = linearConversion(1000000000000);
 
       const [toBase, fromBase] = [
-        picowattsConversion[1],
         terawattsConversion[0],
+        picowattsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "pW"] as const;
@@ -1464,13 +1464,13 @@ describe("power", () => {
       expect(picowatts(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert GW to pW.', v => {
+    it.each([1, 10, 100])('should convert %dGW to pW.', v => {
       const picowattsConversion = linearConversion(1e-12);
       const gigawattsConversion = linearConversion(1000000000);
 
       const [toBase, fromBase] = [
-        picowattsConversion[1],
         gigawattsConversion[0],
+        picowattsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "pW"] as const;
@@ -1480,13 +1480,13 @@ describe("power", () => {
       expect(picowatts(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert MW to pW.', v => {
+    it.each([1, 10, 100])('should convert %dMW to pW.', v => {
       const picowattsConversion = linearConversion(1e-12);
       const megawattsConversion = linearConversion(1000000);
 
       const [toBase, fromBase] = [
-        picowattsConversion[1],
         megawattsConversion[0],
+        picowattsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "pW"] as const;
@@ -1496,13 +1496,13 @@ describe("power", () => {
       expect(picowatts(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert kW to pW.', v => {
+    it.each([1, 10, 100])('should convert %dkW to pW.', v => {
       const picowattsConversion = linearConversion(1e-12);
       const kilowattsConversion = linearConversion(1000);
 
       const [toBase, fromBase] = [
-        picowattsConversion[1],
         kilowattsConversion[0],
+        picowattsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "pW"] as const;
@@ -1512,13 +1512,13 @@ describe("power", () => {
       expect(picowatts(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert W to pW.', v => {
+    it.each([1, 10, 100])('should convert %dW to pW.', v => {
       const picowattsConversion = linearConversion(1e-12);
       const wattsConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
-        picowattsConversion[1],
         wattsConversion[0],
+        picowattsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "pW"] as const;
@@ -1528,13 +1528,13 @@ describe("power", () => {
       expect(picowatts(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert mW to pW.', v => {
+    it.each([1, 10, 100])('should convert %dmW to pW.', v => {
       const picowattsConversion = linearConversion(1e-12);
       const milliwattsConversion = linearConversion(0.001);
 
       const [toBase, fromBase] = [
-        picowattsConversion[1],
         milliwattsConversion[0],
+        picowattsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "pW"] as const;
@@ -1544,13 +1544,13 @@ describe("power", () => {
       expect(picowatts(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert µW to pW.', v => {
+    it.each([1, 10, 100])('should convert %dµW to pW.', v => {
       const picowattsConversion = linearConversion(1e-12);
       const microwattsConversion = linearConversion(0.000001);
 
       const [toBase, fromBase] = [
-        picowattsConversion[1],
         microwattsConversion[0],
+        picowattsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "pW"] as const;
@@ -1560,13 +1560,13 @@ describe("power", () => {
       expect(picowatts(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert nW to pW.', v => {
+    it.each([1, 10, 100])('should convert %dnW to pW.', v => {
       const picowattsConversion = linearConversion(1e-12);
       const nanowattsConversion = linearConversion(1e-9);
 
       const [toBase, fromBase] = [
-        picowattsConversion[1],
         nanowattsConversion[0],
+        picowattsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "pW"] as const;
@@ -1578,13 +1578,13 @@ describe("power", () => {
 
 
 
-    it.each([1, 10, 100])('should convert fW to pW.', v => {
+    it.each([1, 10, 100])('should convert %dfW to pW.', v => {
       const picowattsConversion = linearConversion(1e-12);
       const femtowattsConversion = linearConversion(1e-15);
 
       const [toBase, fromBase] = [
-        picowattsConversion[1],
         femtowattsConversion[0],
+        picowattsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "pW"] as const;
@@ -1594,13 +1594,13 @@ describe("power", () => {
       expect(picowatts(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert hp to pW.', v => {
+    it.each([1, 10, 100])('should convert %dhp to pW.', v => {
       const picowattsConversion = linearConversion(1e-12);
       const horsepowerConversion = linearConversion(745.7);
 
       const [toBase, fromBase] = [
-        picowattsConversion[1],
         horsepowerConversion[0],
+        picowattsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "pW"] as const;
@@ -1618,13 +1618,13 @@ describe("power", () => {
       expect(femtowatts(v)).toEqual([v, "fW"]);
     });
 
-    it.each([1, 10, 100])('should convert TW to fW.', v => {
+    it.each([1, 10, 100])('should convert %dTW to fW.', v => {
       const femtowattsConversion = linearConversion(1e-15);
       const terawattsConversion = linearConversion(1000000000000);
 
       const [toBase, fromBase] = [
-        femtowattsConversion[1],
         terawattsConversion[0],
+        femtowattsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "fW"] as const;
@@ -1634,13 +1634,13 @@ describe("power", () => {
       expect(femtowatts(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert GW to fW.', v => {
+    it.each([1, 10, 100])('should convert %dGW to fW.', v => {
       const femtowattsConversion = linearConversion(1e-15);
       const gigawattsConversion = linearConversion(1000000000);
 
       const [toBase, fromBase] = [
-        femtowattsConversion[1],
         gigawattsConversion[0],
+        femtowattsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "fW"] as const;
@@ -1650,13 +1650,13 @@ describe("power", () => {
       expect(femtowatts(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert MW to fW.', v => {
+    it.each([1, 10, 100])('should convert %dMW to fW.', v => {
       const femtowattsConversion = linearConversion(1e-15);
       const megawattsConversion = linearConversion(1000000);
 
       const [toBase, fromBase] = [
-        femtowattsConversion[1],
         megawattsConversion[0],
+        femtowattsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "fW"] as const;
@@ -1666,13 +1666,13 @@ describe("power", () => {
       expect(femtowatts(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert kW to fW.', v => {
+    it.each([1, 10, 100])('should convert %dkW to fW.', v => {
       const femtowattsConversion = linearConversion(1e-15);
       const kilowattsConversion = linearConversion(1000);
 
       const [toBase, fromBase] = [
-        femtowattsConversion[1],
         kilowattsConversion[0],
+        femtowattsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "fW"] as const;
@@ -1682,13 +1682,13 @@ describe("power", () => {
       expect(femtowatts(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert W to fW.', v => {
+    it.each([1, 10, 100])('should convert %dW to fW.', v => {
       const femtowattsConversion = linearConversion(1e-15);
       const wattsConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
-        femtowattsConversion[1],
         wattsConversion[0],
+        femtowattsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "fW"] as const;
@@ -1698,13 +1698,13 @@ describe("power", () => {
       expect(femtowatts(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert mW to fW.', v => {
+    it.each([1, 10, 100])('should convert %dmW to fW.', v => {
       const femtowattsConversion = linearConversion(1e-15);
       const milliwattsConversion = linearConversion(0.001);
 
       const [toBase, fromBase] = [
-        femtowattsConversion[1],
         milliwattsConversion[0],
+        femtowattsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "fW"] as const;
@@ -1714,13 +1714,13 @@ describe("power", () => {
       expect(femtowatts(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert µW to fW.', v => {
+    it.each([1, 10, 100])('should convert %dµW to fW.', v => {
       const femtowattsConversion = linearConversion(1e-15);
       const microwattsConversion = linearConversion(0.000001);
 
       const [toBase, fromBase] = [
-        femtowattsConversion[1],
         microwattsConversion[0],
+        femtowattsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "fW"] as const;
@@ -1730,13 +1730,13 @@ describe("power", () => {
       expect(femtowatts(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert nW to fW.', v => {
+    it.each([1, 10, 100])('should convert %dnW to fW.', v => {
       const femtowattsConversion = linearConversion(1e-15);
       const nanowattsConversion = linearConversion(1e-9);
 
       const [toBase, fromBase] = [
-        femtowattsConversion[1],
         nanowattsConversion[0],
+        femtowattsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "fW"] as const;
@@ -1746,13 +1746,13 @@ describe("power", () => {
       expect(femtowatts(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert pW to fW.', v => {
+    it.each([1, 10, 100])('should convert %dpW to fW.', v => {
       const femtowattsConversion = linearConversion(1e-15);
       const picowattsConversion = linearConversion(1e-12);
 
       const [toBase, fromBase] = [
-        femtowattsConversion[1],
         picowattsConversion[0],
+        femtowattsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "fW"] as const;
@@ -1764,13 +1764,13 @@ describe("power", () => {
 
 
 
-    it.each([1, 10, 100])('should convert hp to fW.', v => {
+    it.each([1, 10, 100])('should convert %dhp to fW.', v => {
       const femtowattsConversion = linearConversion(1e-15);
       const horsepowerConversion = linearConversion(745.7);
 
       const [toBase, fromBase] = [
-        femtowattsConversion[1],
         horsepowerConversion[0],
+        femtowattsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "fW"] as const;
@@ -1788,13 +1788,13 @@ describe("power", () => {
       expect(horsepower(v)).toEqual([v, "hp"]);
     });
 
-    it.each([1, 10, 100])('should convert TW to hp.', v => {
+    it.each([1, 10, 100])('should convert %dTW to hp.', v => {
       const horsepowerConversion = linearConversion(745.7);
       const terawattsConversion = linearConversion(1000000000000);
 
       const [toBase, fromBase] = [
-        horsepowerConversion[1],
         terawattsConversion[0],
+        horsepowerConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "hp"] as const;
@@ -1804,13 +1804,13 @@ describe("power", () => {
       expect(horsepower(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert GW to hp.', v => {
+    it.each([1, 10, 100])('should convert %dGW to hp.', v => {
       const horsepowerConversion = linearConversion(745.7);
       const gigawattsConversion = linearConversion(1000000000);
 
       const [toBase, fromBase] = [
-        horsepowerConversion[1],
         gigawattsConversion[0],
+        horsepowerConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "hp"] as const;
@@ -1820,13 +1820,13 @@ describe("power", () => {
       expect(horsepower(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert MW to hp.', v => {
+    it.each([1, 10, 100])('should convert %dMW to hp.', v => {
       const horsepowerConversion = linearConversion(745.7);
       const megawattsConversion = linearConversion(1000000);
 
       const [toBase, fromBase] = [
-        horsepowerConversion[1],
         megawattsConversion[0],
+        horsepowerConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "hp"] as const;
@@ -1836,13 +1836,13 @@ describe("power", () => {
       expect(horsepower(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert kW to hp.', v => {
+    it.each([1, 10, 100])('should convert %dkW to hp.', v => {
       const horsepowerConversion = linearConversion(745.7);
       const kilowattsConversion = linearConversion(1000);
 
       const [toBase, fromBase] = [
-        horsepowerConversion[1],
         kilowattsConversion[0],
+        horsepowerConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "hp"] as const;
@@ -1852,13 +1852,13 @@ describe("power", () => {
       expect(horsepower(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert W to hp.', v => {
+    it.each([1, 10, 100])('should convert %dW to hp.', v => {
       const horsepowerConversion = linearConversion(745.7);
       const wattsConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
-        horsepowerConversion[1],
         wattsConversion[0],
+        horsepowerConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "hp"] as const;
@@ -1868,13 +1868,13 @@ describe("power", () => {
       expect(horsepower(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert mW to hp.', v => {
+    it.each([1, 10, 100])('should convert %dmW to hp.', v => {
       const horsepowerConversion = linearConversion(745.7);
       const milliwattsConversion = linearConversion(0.001);
 
       const [toBase, fromBase] = [
-        horsepowerConversion[1],
         milliwattsConversion[0],
+        horsepowerConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "hp"] as const;
@@ -1884,13 +1884,13 @@ describe("power", () => {
       expect(horsepower(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert µW to hp.', v => {
+    it.each([1, 10, 100])('should convert %dµW to hp.', v => {
       const horsepowerConversion = linearConversion(745.7);
       const microwattsConversion = linearConversion(0.000001);
 
       const [toBase, fromBase] = [
-        horsepowerConversion[1],
         microwattsConversion[0],
+        horsepowerConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "hp"] as const;
@@ -1900,13 +1900,13 @@ describe("power", () => {
       expect(horsepower(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert nW to hp.', v => {
+    it.each([1, 10, 100])('should convert %dnW to hp.', v => {
       const horsepowerConversion = linearConversion(745.7);
       const nanowattsConversion = linearConversion(1e-9);
 
       const [toBase, fromBase] = [
-        horsepowerConversion[1],
         nanowattsConversion[0],
+        horsepowerConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "hp"] as const;
@@ -1916,13 +1916,13 @@ describe("power", () => {
       expect(horsepower(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert pW to hp.', v => {
+    it.each([1, 10, 100])('should convert %dpW to hp.', v => {
       const horsepowerConversion = linearConversion(745.7);
       const picowattsConversion = linearConversion(1e-12);
 
       const [toBase, fromBase] = [
-        horsepowerConversion[1],
         picowattsConversion[0],
+        horsepowerConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "hp"] as const;
@@ -1932,13 +1932,13 @@ describe("power", () => {
       expect(horsepower(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert fW to hp.', v => {
+    it.each([1, 10, 100])('should convert %dfW to hp.', v => {
       const horsepowerConversion = linearConversion(745.7);
       const femtowattsConversion = linearConversion(1e-15);
 
       const [toBase, fromBase] = [
-        horsepowerConversion[1],
         femtowattsConversion[0],
+        horsepowerConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "hp"] as const;

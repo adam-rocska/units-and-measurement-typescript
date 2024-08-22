@@ -55,13 +55,13 @@ describe("angle", () => {
 
 
 
-    it.each([1, 10, 100])('should convert ʹ to °.', v => {
+    it.each([1, 10, 100])('should convert %dʹ to °.', v => {
       const degreesConversion = linearConversion(1);
       const arcMinutesConversion = linearConversion(0.016666666666666666);
 
       const [toBase, fromBase] = [
-        degreesConversion[1],
         arcMinutesConversion[0],
+        degreesConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "°"] as const;
@@ -71,13 +71,13 @@ describe("angle", () => {
       expect(degrees(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert ʺ to °.', v => {
+    it.each([1, 10, 100])('should convert %dʺ to °.', v => {
       const degreesConversion = linearConversion(1);
       const arcSecondsConversion = linearConversion(0.0002777777777777778);
 
       const [toBase, fromBase] = [
-        degreesConversion[1],
         arcSecondsConversion[0],
+        degreesConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "°"] as const;
@@ -87,13 +87,13 @@ describe("angle", () => {
       expect(degrees(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert rad to °.', v => {
+    it.each([1, 10, 100])('should convert %drad to °.', v => {
       const degreesConversion = linearConversion(1);
       const radiansConversion = linearConversion(57.29577951308232);
 
       const [toBase, fromBase] = [
-        degreesConversion[1],
         radiansConversion[0],
+        degreesConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "°"] as const;
@@ -103,13 +103,13 @@ describe("angle", () => {
       expect(degrees(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert grad to °.', v => {
+    it.each([1, 10, 100])('should convert %dgrad to °.', v => {
       const degreesConversion = linearConversion(1);
       const gradiansConversion = linearConversion(0.9);
 
       const [toBase, fromBase] = [
-        degreesConversion[1],
         gradiansConversion[0],
+        degreesConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "°"] as const;
@@ -119,13 +119,13 @@ describe("angle", () => {
       expect(degrees(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert rev to °.', v => {
+    it.each([1, 10, 100])('should convert %drev to °.', v => {
       const degreesConversion = linearConversion(1);
       const revolutionsConversion = linearConversion(360);
 
       const [toBase, fromBase] = [
-        degreesConversion[1],
         revolutionsConversion[0],
+        degreesConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "°"] as const;
@@ -143,13 +143,13 @@ describe("angle", () => {
       expect(arcMinutes(v)).toEqual([v, "ʹ"]);
     });
 
-    it.each([1, 10, 100])('should convert ° to ʹ.', v => {
+    it.each([1, 10, 100])('should convert %d° to ʹ.', v => {
       const arcMinutesConversion = linearConversion(0.016666666666666666);
       const degreesConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
-        arcMinutesConversion[1],
         degreesConversion[0],
+        arcMinutesConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "ʹ"] as const;
@@ -161,13 +161,13 @@ describe("angle", () => {
 
 
 
-    it.each([1, 10, 100])('should convert ʺ to ʹ.', v => {
+    it.each([1, 10, 100])('should convert %dʺ to ʹ.', v => {
       const arcMinutesConversion = linearConversion(0.016666666666666666);
       const arcSecondsConversion = linearConversion(0.0002777777777777778);
 
       const [toBase, fromBase] = [
-        arcMinutesConversion[1],
         arcSecondsConversion[0],
+        arcMinutesConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "ʹ"] as const;
@@ -177,13 +177,13 @@ describe("angle", () => {
       expect(arcMinutes(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert rad to ʹ.', v => {
+    it.each([1, 10, 100])('should convert %drad to ʹ.', v => {
       const arcMinutesConversion = linearConversion(0.016666666666666666);
       const radiansConversion = linearConversion(57.29577951308232);
 
       const [toBase, fromBase] = [
-        arcMinutesConversion[1],
         radiansConversion[0],
+        arcMinutesConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "ʹ"] as const;
@@ -193,13 +193,13 @@ describe("angle", () => {
       expect(arcMinutes(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert grad to ʹ.', v => {
+    it.each([1, 10, 100])('should convert %dgrad to ʹ.', v => {
       const arcMinutesConversion = linearConversion(0.016666666666666666);
       const gradiansConversion = linearConversion(0.9);
 
       const [toBase, fromBase] = [
-        arcMinutesConversion[1],
         gradiansConversion[0],
+        arcMinutesConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "ʹ"] as const;
@@ -209,13 +209,13 @@ describe("angle", () => {
       expect(arcMinutes(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert rev to ʹ.', v => {
+    it.each([1, 10, 100])('should convert %drev to ʹ.', v => {
       const arcMinutesConversion = linearConversion(0.016666666666666666);
       const revolutionsConversion = linearConversion(360);
 
       const [toBase, fromBase] = [
-        arcMinutesConversion[1],
         revolutionsConversion[0],
+        arcMinutesConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "ʹ"] as const;
@@ -233,13 +233,13 @@ describe("angle", () => {
       expect(arcSeconds(v)).toEqual([v, "ʺ"]);
     });
 
-    it.each([1, 10, 100])('should convert ° to ʺ.', v => {
+    it.each([1, 10, 100])('should convert %d° to ʺ.', v => {
       const arcSecondsConversion = linearConversion(0.0002777777777777778);
       const degreesConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
-        arcSecondsConversion[1],
         degreesConversion[0],
+        arcSecondsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "ʺ"] as const;
@@ -249,13 +249,13 @@ describe("angle", () => {
       expect(arcSeconds(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert ʹ to ʺ.', v => {
+    it.each([1, 10, 100])('should convert %dʹ to ʺ.', v => {
       const arcSecondsConversion = linearConversion(0.0002777777777777778);
       const arcMinutesConversion = linearConversion(0.016666666666666666);
 
       const [toBase, fromBase] = [
-        arcSecondsConversion[1],
         arcMinutesConversion[0],
+        arcSecondsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "ʺ"] as const;
@@ -267,13 +267,13 @@ describe("angle", () => {
 
 
 
-    it.each([1, 10, 100])('should convert rad to ʺ.', v => {
+    it.each([1, 10, 100])('should convert %drad to ʺ.', v => {
       const arcSecondsConversion = linearConversion(0.0002777777777777778);
       const radiansConversion = linearConversion(57.29577951308232);
 
       const [toBase, fromBase] = [
-        arcSecondsConversion[1],
         radiansConversion[0],
+        arcSecondsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "ʺ"] as const;
@@ -283,13 +283,13 @@ describe("angle", () => {
       expect(arcSeconds(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert grad to ʺ.', v => {
+    it.each([1, 10, 100])('should convert %dgrad to ʺ.', v => {
       const arcSecondsConversion = linearConversion(0.0002777777777777778);
       const gradiansConversion = linearConversion(0.9);
 
       const [toBase, fromBase] = [
-        arcSecondsConversion[1],
         gradiansConversion[0],
+        arcSecondsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "ʺ"] as const;
@@ -299,13 +299,13 @@ describe("angle", () => {
       expect(arcSeconds(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert rev to ʺ.', v => {
+    it.each([1, 10, 100])('should convert %drev to ʺ.', v => {
       const arcSecondsConversion = linearConversion(0.0002777777777777778);
       const revolutionsConversion = linearConversion(360);
 
       const [toBase, fromBase] = [
-        arcSecondsConversion[1],
         revolutionsConversion[0],
+        arcSecondsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "ʺ"] as const;
@@ -323,13 +323,13 @@ describe("angle", () => {
       expect(radians(v)).toEqual([v, "rad"]);
     });
 
-    it.each([1, 10, 100])('should convert ° to rad.', v => {
+    it.each([1, 10, 100])('should convert %d° to rad.', v => {
       const radiansConversion = linearConversion(57.29577951308232);
       const degreesConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
-        radiansConversion[1],
         degreesConversion[0],
+        radiansConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "rad"] as const;
@@ -339,13 +339,13 @@ describe("angle", () => {
       expect(radians(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert ʹ to rad.', v => {
+    it.each([1, 10, 100])('should convert %dʹ to rad.', v => {
       const radiansConversion = linearConversion(57.29577951308232);
       const arcMinutesConversion = linearConversion(0.016666666666666666);
 
       const [toBase, fromBase] = [
-        radiansConversion[1],
         arcMinutesConversion[0],
+        radiansConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "rad"] as const;
@@ -355,13 +355,13 @@ describe("angle", () => {
       expect(radians(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert ʺ to rad.', v => {
+    it.each([1, 10, 100])('should convert %dʺ to rad.', v => {
       const radiansConversion = linearConversion(57.29577951308232);
       const arcSecondsConversion = linearConversion(0.0002777777777777778);
 
       const [toBase, fromBase] = [
-        radiansConversion[1],
         arcSecondsConversion[0],
+        radiansConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "rad"] as const;
@@ -373,13 +373,13 @@ describe("angle", () => {
 
 
 
-    it.each([1, 10, 100])('should convert grad to rad.', v => {
+    it.each([1, 10, 100])('should convert %dgrad to rad.', v => {
       const radiansConversion = linearConversion(57.29577951308232);
       const gradiansConversion = linearConversion(0.9);
 
       const [toBase, fromBase] = [
-        radiansConversion[1],
         gradiansConversion[0],
+        radiansConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "rad"] as const;
@@ -389,13 +389,13 @@ describe("angle", () => {
       expect(radians(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert rev to rad.', v => {
+    it.each([1, 10, 100])('should convert %drev to rad.', v => {
       const radiansConversion = linearConversion(57.29577951308232);
       const revolutionsConversion = linearConversion(360);
 
       const [toBase, fromBase] = [
-        radiansConversion[1],
         revolutionsConversion[0],
+        radiansConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "rad"] as const;
@@ -413,13 +413,13 @@ describe("angle", () => {
       expect(gradians(v)).toEqual([v, "grad"]);
     });
 
-    it.each([1, 10, 100])('should convert ° to grad.', v => {
+    it.each([1, 10, 100])('should convert %d° to grad.', v => {
       const gradiansConversion = linearConversion(0.9);
       const degreesConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
-        gradiansConversion[1],
         degreesConversion[0],
+        gradiansConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "grad"] as const;
@@ -429,13 +429,13 @@ describe("angle", () => {
       expect(gradians(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert ʹ to grad.', v => {
+    it.each([1, 10, 100])('should convert %dʹ to grad.', v => {
       const gradiansConversion = linearConversion(0.9);
       const arcMinutesConversion = linearConversion(0.016666666666666666);
 
       const [toBase, fromBase] = [
-        gradiansConversion[1],
         arcMinutesConversion[0],
+        gradiansConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "grad"] as const;
@@ -445,13 +445,13 @@ describe("angle", () => {
       expect(gradians(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert ʺ to grad.', v => {
+    it.each([1, 10, 100])('should convert %dʺ to grad.', v => {
       const gradiansConversion = linearConversion(0.9);
       const arcSecondsConversion = linearConversion(0.0002777777777777778);
 
       const [toBase, fromBase] = [
-        gradiansConversion[1],
         arcSecondsConversion[0],
+        gradiansConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "grad"] as const;
@@ -461,13 +461,13 @@ describe("angle", () => {
       expect(gradians(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert rad to grad.', v => {
+    it.each([1, 10, 100])('should convert %drad to grad.', v => {
       const gradiansConversion = linearConversion(0.9);
       const radiansConversion = linearConversion(57.29577951308232);
 
       const [toBase, fromBase] = [
-        gradiansConversion[1],
         radiansConversion[0],
+        gradiansConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "grad"] as const;
@@ -479,13 +479,13 @@ describe("angle", () => {
 
 
 
-    it.each([1, 10, 100])('should convert rev to grad.', v => {
+    it.each([1, 10, 100])('should convert %drev to grad.', v => {
       const gradiansConversion = linearConversion(0.9);
       const revolutionsConversion = linearConversion(360);
 
       const [toBase, fromBase] = [
-        gradiansConversion[1],
         revolutionsConversion[0],
+        gradiansConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "grad"] as const;
@@ -503,13 +503,13 @@ describe("angle", () => {
       expect(revolutions(v)).toEqual([v, "rev"]);
     });
 
-    it.each([1, 10, 100])('should convert ° to rev.', v => {
+    it.each([1, 10, 100])('should convert %d° to rev.', v => {
       const revolutionsConversion = linearConversion(360);
       const degreesConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
-        revolutionsConversion[1],
         degreesConversion[0],
+        revolutionsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "rev"] as const;
@@ -519,13 +519,13 @@ describe("angle", () => {
       expect(revolutions(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert ʹ to rev.', v => {
+    it.each([1, 10, 100])('should convert %dʹ to rev.', v => {
       const revolutionsConversion = linearConversion(360);
       const arcMinutesConversion = linearConversion(0.016666666666666666);
 
       const [toBase, fromBase] = [
-        revolutionsConversion[1],
         arcMinutesConversion[0],
+        revolutionsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "rev"] as const;
@@ -535,13 +535,13 @@ describe("angle", () => {
       expect(revolutions(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert ʺ to rev.', v => {
+    it.each([1, 10, 100])('should convert %dʺ to rev.', v => {
       const revolutionsConversion = linearConversion(360);
       const arcSecondsConversion = linearConversion(0.0002777777777777778);
 
       const [toBase, fromBase] = [
-        revolutionsConversion[1],
         arcSecondsConversion[0],
+        revolutionsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "rev"] as const;
@@ -551,13 +551,13 @@ describe("angle", () => {
       expect(revolutions(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert rad to rev.', v => {
+    it.each([1, 10, 100])('should convert %drad to rev.', v => {
       const revolutionsConversion = linearConversion(360);
       const radiansConversion = linearConversion(57.29577951308232);
 
       const [toBase, fromBase] = [
-        revolutionsConversion[1],
         radiansConversion[0],
+        revolutionsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "rev"] as const;
@@ -567,13 +567,13 @@ describe("angle", () => {
       expect(revolutions(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert grad to rev.', v => {
+    it.each([1, 10, 100])('should convert %dgrad to rev.', v => {
       const revolutionsConversion = linearConversion(360);
       const gradiansConversion = linearConversion(0.9);
 
       const [toBase, fromBase] = [
-        revolutionsConversion[1],
         gradiansConversion[0],
+        revolutionsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "rev"] as const;

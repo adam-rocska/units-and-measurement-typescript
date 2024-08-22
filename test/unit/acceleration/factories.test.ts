@@ -27,13 +27,13 @@ describe("acceleration", () => {
 
 
 
-    it.each([1, 10, 100])('should convert g to m/s².', v => {
+    it.each([1, 10, 100])('should convert %dg to m/s².', v => {
       const metersPerSecondSquaredConversion = linearConversion(1);
       const gravityConversion = linearConversion(9.81);
 
       const [toBase, fromBase] = [
-        metersPerSecondSquaredConversion[1],
         gravityConversion[0],
+        metersPerSecondSquaredConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "m/s²"] as const;
@@ -51,13 +51,13 @@ describe("acceleration", () => {
       expect(gravity(v)).toEqual([v, "g"]);
     });
 
-    it.each([1, 10, 100])('should convert m/s² to g.', v => {
+    it.each([1, 10, 100])('should convert %dm/s² to g.', v => {
       const gravityConversion = linearConversion(9.81);
       const metersPerSecondSquaredConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
-        gravityConversion[1],
         metersPerSecondSquaredConversion[0],
+        gravityConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "g"] as const;

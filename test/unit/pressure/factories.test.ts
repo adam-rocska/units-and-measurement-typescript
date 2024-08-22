@@ -83,13 +83,13 @@ describe("pressure", () => {
 
 
 
-    it.each([1, 10, 100])('should convert GPa to N/m².', v => {
+    it.each([1, 10, 100])('should convert %dGPa to N/m².', v => {
       const newtonsPerMetersSquaredConversion = linearConversion(1);
       const gigapascalsConversion = linearConversion(1000000000);
 
       const [toBase, fromBase] = [
-        newtonsPerMetersSquaredConversion[1],
         gigapascalsConversion[0],
+        newtonsPerMetersSquaredConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "N/m²"] as const;
@@ -99,13 +99,13 @@ describe("pressure", () => {
       expect(newtonsPerMetersSquared(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert MPa to N/m².', v => {
+    it.each([1, 10, 100])('should convert %dMPa to N/m².', v => {
       const newtonsPerMetersSquaredConversion = linearConversion(1);
       const megapascalsConversion = linearConversion(1000000);
 
       const [toBase, fromBase] = [
-        newtonsPerMetersSquaredConversion[1],
         megapascalsConversion[0],
+        newtonsPerMetersSquaredConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "N/m²"] as const;
@@ -115,13 +115,13 @@ describe("pressure", () => {
       expect(newtonsPerMetersSquared(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert kPa to N/m².', v => {
+    it.each([1, 10, 100])('should convert %dkPa to N/m².', v => {
       const newtonsPerMetersSquaredConversion = linearConversion(1);
       const kilopascalsConversion = linearConversion(1000);
 
       const [toBase, fromBase] = [
-        newtonsPerMetersSquaredConversion[1],
         kilopascalsConversion[0],
+        newtonsPerMetersSquaredConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "N/m²"] as const;
@@ -131,13 +131,13 @@ describe("pressure", () => {
       expect(newtonsPerMetersSquared(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert hPa to N/m².', v => {
+    it.each([1, 10, 100])('should convert %dhPa to N/m².', v => {
       const newtonsPerMetersSquaredConversion = linearConversion(1);
       const hectopascalsConversion = linearConversion(100);
 
       const [toBase, fromBase] = [
-        newtonsPerMetersSquaredConversion[1],
         hectopascalsConversion[0],
+        newtonsPerMetersSquaredConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "N/m²"] as const;
@@ -147,13 +147,13 @@ describe("pressure", () => {
       expect(newtonsPerMetersSquared(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert inHg to N/m².', v => {
+    it.each([1, 10, 100])('should convert %dinHg to N/m².', v => {
       const newtonsPerMetersSquaredConversion = linearConversion(1);
       const inchesOfMercuryConversion = linearConversion(3386.39);
 
       const [toBase, fromBase] = [
-        newtonsPerMetersSquaredConversion[1],
         inchesOfMercuryConversion[0],
+        newtonsPerMetersSquaredConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "N/m²"] as const;
@@ -163,13 +163,13 @@ describe("pressure", () => {
       expect(newtonsPerMetersSquared(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert bar to N/m².', v => {
+    it.each([1, 10, 100])('should convert %dbar to N/m².', v => {
       const newtonsPerMetersSquaredConversion = linearConversion(1);
       const barsConversion = linearConversion(100000);
 
       const [toBase, fromBase] = [
-        newtonsPerMetersSquaredConversion[1],
         barsConversion[0],
+        newtonsPerMetersSquaredConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "N/m²"] as const;
@@ -179,13 +179,13 @@ describe("pressure", () => {
       expect(newtonsPerMetersSquared(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert mbar to N/m².', v => {
+    it.each([1, 10, 100])('should convert %dmbar to N/m².', v => {
       const newtonsPerMetersSquaredConversion = linearConversion(1);
       const millibarsConversion = linearConversion(100);
 
       const [toBase, fromBase] = [
-        newtonsPerMetersSquaredConversion[1],
         millibarsConversion[0],
+        newtonsPerMetersSquaredConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "N/m²"] as const;
@@ -195,13 +195,13 @@ describe("pressure", () => {
       expect(newtonsPerMetersSquared(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert mmHg to N/m².', v => {
+    it.each([1, 10, 100])('should convert %dmmHg to N/m².', v => {
       const newtonsPerMetersSquaredConversion = linearConversion(1);
       const millimetersOfMercuryConversion = linearConversion(133.322);
 
       const [toBase, fromBase] = [
-        newtonsPerMetersSquaredConversion[1],
         millimetersOfMercuryConversion[0],
+        newtonsPerMetersSquaredConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "N/m²"] as const;
@@ -211,13 +211,13 @@ describe("pressure", () => {
       expect(newtonsPerMetersSquared(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert psi to N/m².', v => {
+    it.each([1, 10, 100])('should convert %dpsi to N/m².', v => {
       const newtonsPerMetersSquaredConversion = linearConversion(1);
       const poundsForcePerSquareInchConversion = linearConversion(6894.76);
 
       const [toBase, fromBase] = [
-        newtonsPerMetersSquaredConversion[1],
         poundsForcePerSquareInchConversion[0],
+        newtonsPerMetersSquaredConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "N/m²"] as const;
@@ -235,13 +235,13 @@ describe("pressure", () => {
       expect(gigapascals(v)).toEqual([v, "GPa"]);
     });
 
-    it.each([1, 10, 100])('should convert N/m² to GPa.', v => {
+    it.each([1, 10, 100])('should convert %dN/m² to GPa.', v => {
       const gigapascalsConversion = linearConversion(1000000000);
       const newtonsPerMetersSquaredConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
-        gigapascalsConversion[1],
         newtonsPerMetersSquaredConversion[0],
+        gigapascalsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "GPa"] as const;
@@ -253,13 +253,13 @@ describe("pressure", () => {
 
 
 
-    it.each([1, 10, 100])('should convert MPa to GPa.', v => {
+    it.each([1, 10, 100])('should convert %dMPa to GPa.', v => {
       const gigapascalsConversion = linearConversion(1000000000);
       const megapascalsConversion = linearConversion(1000000);
 
       const [toBase, fromBase] = [
-        gigapascalsConversion[1],
         megapascalsConversion[0],
+        gigapascalsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "GPa"] as const;
@@ -269,13 +269,13 @@ describe("pressure", () => {
       expect(gigapascals(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert kPa to GPa.', v => {
+    it.each([1, 10, 100])('should convert %dkPa to GPa.', v => {
       const gigapascalsConversion = linearConversion(1000000000);
       const kilopascalsConversion = linearConversion(1000);
 
       const [toBase, fromBase] = [
-        gigapascalsConversion[1],
         kilopascalsConversion[0],
+        gigapascalsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "GPa"] as const;
@@ -285,13 +285,13 @@ describe("pressure", () => {
       expect(gigapascals(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert hPa to GPa.', v => {
+    it.each([1, 10, 100])('should convert %dhPa to GPa.', v => {
       const gigapascalsConversion = linearConversion(1000000000);
       const hectopascalsConversion = linearConversion(100);
 
       const [toBase, fromBase] = [
-        gigapascalsConversion[1],
         hectopascalsConversion[0],
+        gigapascalsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "GPa"] as const;
@@ -301,13 +301,13 @@ describe("pressure", () => {
       expect(gigapascals(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert inHg to GPa.', v => {
+    it.each([1, 10, 100])('should convert %dinHg to GPa.', v => {
       const gigapascalsConversion = linearConversion(1000000000);
       const inchesOfMercuryConversion = linearConversion(3386.39);
 
       const [toBase, fromBase] = [
-        gigapascalsConversion[1],
         inchesOfMercuryConversion[0],
+        gigapascalsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "GPa"] as const;
@@ -317,13 +317,13 @@ describe("pressure", () => {
       expect(gigapascals(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert bar to GPa.', v => {
+    it.each([1, 10, 100])('should convert %dbar to GPa.', v => {
       const gigapascalsConversion = linearConversion(1000000000);
       const barsConversion = linearConversion(100000);
 
       const [toBase, fromBase] = [
-        gigapascalsConversion[1],
         barsConversion[0],
+        gigapascalsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "GPa"] as const;
@@ -333,13 +333,13 @@ describe("pressure", () => {
       expect(gigapascals(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert mbar to GPa.', v => {
+    it.each([1, 10, 100])('should convert %dmbar to GPa.', v => {
       const gigapascalsConversion = linearConversion(1000000000);
       const millibarsConversion = linearConversion(100);
 
       const [toBase, fromBase] = [
-        gigapascalsConversion[1],
         millibarsConversion[0],
+        gigapascalsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "GPa"] as const;
@@ -349,13 +349,13 @@ describe("pressure", () => {
       expect(gigapascals(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert mmHg to GPa.', v => {
+    it.each([1, 10, 100])('should convert %dmmHg to GPa.', v => {
       const gigapascalsConversion = linearConversion(1000000000);
       const millimetersOfMercuryConversion = linearConversion(133.322);
 
       const [toBase, fromBase] = [
-        gigapascalsConversion[1],
         millimetersOfMercuryConversion[0],
+        gigapascalsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "GPa"] as const;
@@ -365,13 +365,13 @@ describe("pressure", () => {
       expect(gigapascals(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert psi to GPa.', v => {
+    it.each([1, 10, 100])('should convert %dpsi to GPa.', v => {
       const gigapascalsConversion = linearConversion(1000000000);
       const poundsForcePerSquareInchConversion = linearConversion(6894.76);
 
       const [toBase, fromBase] = [
-        gigapascalsConversion[1],
         poundsForcePerSquareInchConversion[0],
+        gigapascalsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "GPa"] as const;
@@ -389,13 +389,13 @@ describe("pressure", () => {
       expect(megapascals(v)).toEqual([v, "MPa"]);
     });
 
-    it.each([1, 10, 100])('should convert N/m² to MPa.', v => {
+    it.each([1, 10, 100])('should convert %dN/m² to MPa.', v => {
       const megapascalsConversion = linearConversion(1000000);
       const newtonsPerMetersSquaredConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
-        megapascalsConversion[1],
         newtonsPerMetersSquaredConversion[0],
+        megapascalsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "MPa"] as const;
@@ -405,13 +405,13 @@ describe("pressure", () => {
       expect(megapascals(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert GPa to MPa.', v => {
+    it.each([1, 10, 100])('should convert %dGPa to MPa.', v => {
       const megapascalsConversion = linearConversion(1000000);
       const gigapascalsConversion = linearConversion(1000000000);
 
       const [toBase, fromBase] = [
-        megapascalsConversion[1],
         gigapascalsConversion[0],
+        megapascalsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "MPa"] as const;
@@ -423,13 +423,13 @@ describe("pressure", () => {
 
 
 
-    it.each([1, 10, 100])('should convert kPa to MPa.', v => {
+    it.each([1, 10, 100])('should convert %dkPa to MPa.', v => {
       const megapascalsConversion = linearConversion(1000000);
       const kilopascalsConversion = linearConversion(1000);
 
       const [toBase, fromBase] = [
-        megapascalsConversion[1],
         kilopascalsConversion[0],
+        megapascalsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "MPa"] as const;
@@ -439,13 +439,13 @@ describe("pressure", () => {
       expect(megapascals(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert hPa to MPa.', v => {
+    it.each([1, 10, 100])('should convert %dhPa to MPa.', v => {
       const megapascalsConversion = linearConversion(1000000);
       const hectopascalsConversion = linearConversion(100);
 
       const [toBase, fromBase] = [
-        megapascalsConversion[1],
         hectopascalsConversion[0],
+        megapascalsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "MPa"] as const;
@@ -455,13 +455,13 @@ describe("pressure", () => {
       expect(megapascals(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert inHg to MPa.', v => {
+    it.each([1, 10, 100])('should convert %dinHg to MPa.', v => {
       const megapascalsConversion = linearConversion(1000000);
       const inchesOfMercuryConversion = linearConversion(3386.39);
 
       const [toBase, fromBase] = [
-        megapascalsConversion[1],
         inchesOfMercuryConversion[0],
+        megapascalsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "MPa"] as const;
@@ -471,13 +471,13 @@ describe("pressure", () => {
       expect(megapascals(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert bar to MPa.', v => {
+    it.each([1, 10, 100])('should convert %dbar to MPa.', v => {
       const megapascalsConversion = linearConversion(1000000);
       const barsConversion = linearConversion(100000);
 
       const [toBase, fromBase] = [
-        megapascalsConversion[1],
         barsConversion[0],
+        megapascalsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "MPa"] as const;
@@ -487,13 +487,13 @@ describe("pressure", () => {
       expect(megapascals(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert mbar to MPa.', v => {
+    it.each([1, 10, 100])('should convert %dmbar to MPa.', v => {
       const megapascalsConversion = linearConversion(1000000);
       const millibarsConversion = linearConversion(100);
 
       const [toBase, fromBase] = [
-        megapascalsConversion[1],
         millibarsConversion[0],
+        megapascalsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "MPa"] as const;
@@ -503,13 +503,13 @@ describe("pressure", () => {
       expect(megapascals(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert mmHg to MPa.', v => {
+    it.each([1, 10, 100])('should convert %dmmHg to MPa.', v => {
       const megapascalsConversion = linearConversion(1000000);
       const millimetersOfMercuryConversion = linearConversion(133.322);
 
       const [toBase, fromBase] = [
-        megapascalsConversion[1],
         millimetersOfMercuryConversion[0],
+        megapascalsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "MPa"] as const;
@@ -519,13 +519,13 @@ describe("pressure", () => {
       expect(megapascals(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert psi to MPa.', v => {
+    it.each([1, 10, 100])('should convert %dpsi to MPa.', v => {
       const megapascalsConversion = linearConversion(1000000);
       const poundsForcePerSquareInchConversion = linearConversion(6894.76);
 
       const [toBase, fromBase] = [
-        megapascalsConversion[1],
         poundsForcePerSquareInchConversion[0],
+        megapascalsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "MPa"] as const;
@@ -543,13 +543,13 @@ describe("pressure", () => {
       expect(kilopascals(v)).toEqual([v, "kPa"]);
     });
 
-    it.each([1, 10, 100])('should convert N/m² to kPa.', v => {
+    it.each([1, 10, 100])('should convert %dN/m² to kPa.', v => {
       const kilopascalsConversion = linearConversion(1000);
       const newtonsPerMetersSquaredConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
-        kilopascalsConversion[1],
         newtonsPerMetersSquaredConversion[0],
+        kilopascalsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "kPa"] as const;
@@ -559,13 +559,13 @@ describe("pressure", () => {
       expect(kilopascals(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert GPa to kPa.', v => {
+    it.each([1, 10, 100])('should convert %dGPa to kPa.', v => {
       const kilopascalsConversion = linearConversion(1000);
       const gigapascalsConversion = linearConversion(1000000000);
 
       const [toBase, fromBase] = [
-        kilopascalsConversion[1],
         gigapascalsConversion[0],
+        kilopascalsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "kPa"] as const;
@@ -575,13 +575,13 @@ describe("pressure", () => {
       expect(kilopascals(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert MPa to kPa.', v => {
+    it.each([1, 10, 100])('should convert %dMPa to kPa.', v => {
       const kilopascalsConversion = linearConversion(1000);
       const megapascalsConversion = linearConversion(1000000);
 
       const [toBase, fromBase] = [
-        kilopascalsConversion[1],
         megapascalsConversion[0],
+        kilopascalsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "kPa"] as const;
@@ -593,13 +593,13 @@ describe("pressure", () => {
 
 
 
-    it.each([1, 10, 100])('should convert hPa to kPa.', v => {
+    it.each([1, 10, 100])('should convert %dhPa to kPa.', v => {
       const kilopascalsConversion = linearConversion(1000);
       const hectopascalsConversion = linearConversion(100);
 
       const [toBase, fromBase] = [
-        kilopascalsConversion[1],
         hectopascalsConversion[0],
+        kilopascalsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "kPa"] as const;
@@ -609,13 +609,13 @@ describe("pressure", () => {
       expect(kilopascals(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert inHg to kPa.', v => {
+    it.each([1, 10, 100])('should convert %dinHg to kPa.', v => {
       const kilopascalsConversion = linearConversion(1000);
       const inchesOfMercuryConversion = linearConversion(3386.39);
 
       const [toBase, fromBase] = [
-        kilopascalsConversion[1],
         inchesOfMercuryConversion[0],
+        kilopascalsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "kPa"] as const;
@@ -625,13 +625,13 @@ describe("pressure", () => {
       expect(kilopascals(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert bar to kPa.', v => {
+    it.each([1, 10, 100])('should convert %dbar to kPa.', v => {
       const kilopascalsConversion = linearConversion(1000);
       const barsConversion = linearConversion(100000);
 
       const [toBase, fromBase] = [
-        kilopascalsConversion[1],
         barsConversion[0],
+        kilopascalsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "kPa"] as const;
@@ -641,13 +641,13 @@ describe("pressure", () => {
       expect(kilopascals(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert mbar to kPa.', v => {
+    it.each([1, 10, 100])('should convert %dmbar to kPa.', v => {
       const kilopascalsConversion = linearConversion(1000);
       const millibarsConversion = linearConversion(100);
 
       const [toBase, fromBase] = [
-        kilopascalsConversion[1],
         millibarsConversion[0],
+        kilopascalsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "kPa"] as const;
@@ -657,13 +657,13 @@ describe("pressure", () => {
       expect(kilopascals(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert mmHg to kPa.', v => {
+    it.each([1, 10, 100])('should convert %dmmHg to kPa.', v => {
       const kilopascalsConversion = linearConversion(1000);
       const millimetersOfMercuryConversion = linearConversion(133.322);
 
       const [toBase, fromBase] = [
-        kilopascalsConversion[1],
         millimetersOfMercuryConversion[0],
+        kilopascalsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "kPa"] as const;
@@ -673,13 +673,13 @@ describe("pressure", () => {
       expect(kilopascals(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert psi to kPa.', v => {
+    it.each([1, 10, 100])('should convert %dpsi to kPa.', v => {
       const kilopascalsConversion = linearConversion(1000);
       const poundsForcePerSquareInchConversion = linearConversion(6894.76);
 
       const [toBase, fromBase] = [
-        kilopascalsConversion[1],
         poundsForcePerSquareInchConversion[0],
+        kilopascalsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "kPa"] as const;
@@ -697,13 +697,13 @@ describe("pressure", () => {
       expect(hectopascals(v)).toEqual([v, "hPa"]);
     });
 
-    it.each([1, 10, 100])('should convert N/m² to hPa.', v => {
+    it.each([1, 10, 100])('should convert %dN/m² to hPa.', v => {
       const hectopascalsConversion = linearConversion(100);
       const newtonsPerMetersSquaredConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
-        hectopascalsConversion[1],
         newtonsPerMetersSquaredConversion[0],
+        hectopascalsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "hPa"] as const;
@@ -713,13 +713,13 @@ describe("pressure", () => {
       expect(hectopascals(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert GPa to hPa.', v => {
+    it.each([1, 10, 100])('should convert %dGPa to hPa.', v => {
       const hectopascalsConversion = linearConversion(100);
       const gigapascalsConversion = linearConversion(1000000000);
 
       const [toBase, fromBase] = [
-        hectopascalsConversion[1],
         gigapascalsConversion[0],
+        hectopascalsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "hPa"] as const;
@@ -729,13 +729,13 @@ describe("pressure", () => {
       expect(hectopascals(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert MPa to hPa.', v => {
+    it.each([1, 10, 100])('should convert %dMPa to hPa.', v => {
       const hectopascalsConversion = linearConversion(100);
       const megapascalsConversion = linearConversion(1000000);
 
       const [toBase, fromBase] = [
-        hectopascalsConversion[1],
         megapascalsConversion[0],
+        hectopascalsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "hPa"] as const;
@@ -745,13 +745,13 @@ describe("pressure", () => {
       expect(hectopascals(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert kPa to hPa.', v => {
+    it.each([1, 10, 100])('should convert %dkPa to hPa.', v => {
       const hectopascalsConversion = linearConversion(100);
       const kilopascalsConversion = linearConversion(1000);
 
       const [toBase, fromBase] = [
-        hectopascalsConversion[1],
         kilopascalsConversion[0],
+        hectopascalsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "hPa"] as const;
@@ -763,13 +763,13 @@ describe("pressure", () => {
 
 
 
-    it.each([1, 10, 100])('should convert inHg to hPa.', v => {
+    it.each([1, 10, 100])('should convert %dinHg to hPa.', v => {
       const hectopascalsConversion = linearConversion(100);
       const inchesOfMercuryConversion = linearConversion(3386.39);
 
       const [toBase, fromBase] = [
-        hectopascalsConversion[1],
         inchesOfMercuryConversion[0],
+        hectopascalsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "hPa"] as const;
@@ -779,13 +779,13 @@ describe("pressure", () => {
       expect(hectopascals(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert bar to hPa.', v => {
+    it.each([1, 10, 100])('should convert %dbar to hPa.', v => {
       const hectopascalsConversion = linearConversion(100);
       const barsConversion = linearConversion(100000);
 
       const [toBase, fromBase] = [
-        hectopascalsConversion[1],
         barsConversion[0],
+        hectopascalsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "hPa"] as const;
@@ -795,13 +795,13 @@ describe("pressure", () => {
       expect(hectopascals(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert mbar to hPa.', v => {
+    it.each([1, 10, 100])('should convert %dmbar to hPa.', v => {
       const hectopascalsConversion = linearConversion(100);
       const millibarsConversion = linearConversion(100);
 
       const [toBase, fromBase] = [
-        hectopascalsConversion[1],
         millibarsConversion[0],
+        hectopascalsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "hPa"] as const;
@@ -811,13 +811,13 @@ describe("pressure", () => {
       expect(hectopascals(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert mmHg to hPa.', v => {
+    it.each([1, 10, 100])('should convert %dmmHg to hPa.', v => {
       const hectopascalsConversion = linearConversion(100);
       const millimetersOfMercuryConversion = linearConversion(133.322);
 
       const [toBase, fromBase] = [
-        hectopascalsConversion[1],
         millimetersOfMercuryConversion[0],
+        hectopascalsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "hPa"] as const;
@@ -827,13 +827,13 @@ describe("pressure", () => {
       expect(hectopascals(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert psi to hPa.', v => {
+    it.each([1, 10, 100])('should convert %dpsi to hPa.', v => {
       const hectopascalsConversion = linearConversion(100);
       const poundsForcePerSquareInchConversion = linearConversion(6894.76);
 
       const [toBase, fromBase] = [
-        hectopascalsConversion[1],
         poundsForcePerSquareInchConversion[0],
+        hectopascalsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "hPa"] as const;
@@ -851,13 +851,13 @@ describe("pressure", () => {
       expect(inchesOfMercury(v)).toEqual([v, "inHg"]);
     });
 
-    it.each([1, 10, 100])('should convert N/m² to inHg.', v => {
+    it.each([1, 10, 100])('should convert %dN/m² to inHg.', v => {
       const inchesOfMercuryConversion = linearConversion(3386.39);
       const newtonsPerMetersSquaredConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
-        inchesOfMercuryConversion[1],
         newtonsPerMetersSquaredConversion[0],
+        inchesOfMercuryConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "inHg"] as const;
@@ -867,13 +867,13 @@ describe("pressure", () => {
       expect(inchesOfMercury(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert GPa to inHg.', v => {
+    it.each([1, 10, 100])('should convert %dGPa to inHg.', v => {
       const inchesOfMercuryConversion = linearConversion(3386.39);
       const gigapascalsConversion = linearConversion(1000000000);
 
       const [toBase, fromBase] = [
-        inchesOfMercuryConversion[1],
         gigapascalsConversion[0],
+        inchesOfMercuryConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "inHg"] as const;
@@ -883,13 +883,13 @@ describe("pressure", () => {
       expect(inchesOfMercury(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert MPa to inHg.', v => {
+    it.each([1, 10, 100])('should convert %dMPa to inHg.', v => {
       const inchesOfMercuryConversion = linearConversion(3386.39);
       const megapascalsConversion = linearConversion(1000000);
 
       const [toBase, fromBase] = [
-        inchesOfMercuryConversion[1],
         megapascalsConversion[0],
+        inchesOfMercuryConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "inHg"] as const;
@@ -899,13 +899,13 @@ describe("pressure", () => {
       expect(inchesOfMercury(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert kPa to inHg.', v => {
+    it.each([1, 10, 100])('should convert %dkPa to inHg.', v => {
       const inchesOfMercuryConversion = linearConversion(3386.39);
       const kilopascalsConversion = linearConversion(1000);
 
       const [toBase, fromBase] = [
-        inchesOfMercuryConversion[1],
         kilopascalsConversion[0],
+        inchesOfMercuryConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "inHg"] as const;
@@ -915,13 +915,13 @@ describe("pressure", () => {
       expect(inchesOfMercury(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert hPa to inHg.', v => {
+    it.each([1, 10, 100])('should convert %dhPa to inHg.', v => {
       const inchesOfMercuryConversion = linearConversion(3386.39);
       const hectopascalsConversion = linearConversion(100);
 
       const [toBase, fromBase] = [
-        inchesOfMercuryConversion[1],
         hectopascalsConversion[0],
+        inchesOfMercuryConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "inHg"] as const;
@@ -933,13 +933,13 @@ describe("pressure", () => {
 
 
 
-    it.each([1, 10, 100])('should convert bar to inHg.', v => {
+    it.each([1, 10, 100])('should convert %dbar to inHg.', v => {
       const inchesOfMercuryConversion = linearConversion(3386.39);
       const barsConversion = linearConversion(100000);
 
       const [toBase, fromBase] = [
-        inchesOfMercuryConversion[1],
         barsConversion[0],
+        inchesOfMercuryConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "inHg"] as const;
@@ -949,13 +949,13 @@ describe("pressure", () => {
       expect(inchesOfMercury(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert mbar to inHg.', v => {
+    it.each([1, 10, 100])('should convert %dmbar to inHg.', v => {
       const inchesOfMercuryConversion = linearConversion(3386.39);
       const millibarsConversion = linearConversion(100);
 
       const [toBase, fromBase] = [
-        inchesOfMercuryConversion[1],
         millibarsConversion[0],
+        inchesOfMercuryConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "inHg"] as const;
@@ -965,13 +965,13 @@ describe("pressure", () => {
       expect(inchesOfMercury(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert mmHg to inHg.', v => {
+    it.each([1, 10, 100])('should convert %dmmHg to inHg.', v => {
       const inchesOfMercuryConversion = linearConversion(3386.39);
       const millimetersOfMercuryConversion = linearConversion(133.322);
 
       const [toBase, fromBase] = [
-        inchesOfMercuryConversion[1],
         millimetersOfMercuryConversion[0],
+        inchesOfMercuryConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "inHg"] as const;
@@ -981,13 +981,13 @@ describe("pressure", () => {
       expect(inchesOfMercury(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert psi to inHg.', v => {
+    it.each([1, 10, 100])('should convert %dpsi to inHg.', v => {
       const inchesOfMercuryConversion = linearConversion(3386.39);
       const poundsForcePerSquareInchConversion = linearConversion(6894.76);
 
       const [toBase, fromBase] = [
-        inchesOfMercuryConversion[1],
         poundsForcePerSquareInchConversion[0],
+        inchesOfMercuryConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "inHg"] as const;
@@ -1005,13 +1005,13 @@ describe("pressure", () => {
       expect(bars(v)).toEqual([v, "bar"]);
     });
 
-    it.each([1, 10, 100])('should convert N/m² to bar.', v => {
+    it.each([1, 10, 100])('should convert %dN/m² to bar.', v => {
       const barsConversion = linearConversion(100000);
       const newtonsPerMetersSquaredConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
-        barsConversion[1],
         newtonsPerMetersSquaredConversion[0],
+        barsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "bar"] as const;
@@ -1021,13 +1021,13 @@ describe("pressure", () => {
       expect(bars(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert GPa to bar.', v => {
+    it.each([1, 10, 100])('should convert %dGPa to bar.', v => {
       const barsConversion = linearConversion(100000);
       const gigapascalsConversion = linearConversion(1000000000);
 
       const [toBase, fromBase] = [
-        barsConversion[1],
         gigapascalsConversion[0],
+        barsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "bar"] as const;
@@ -1037,13 +1037,13 @@ describe("pressure", () => {
       expect(bars(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert MPa to bar.', v => {
+    it.each([1, 10, 100])('should convert %dMPa to bar.', v => {
       const barsConversion = linearConversion(100000);
       const megapascalsConversion = linearConversion(1000000);
 
       const [toBase, fromBase] = [
-        barsConversion[1],
         megapascalsConversion[0],
+        barsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "bar"] as const;
@@ -1053,13 +1053,13 @@ describe("pressure", () => {
       expect(bars(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert kPa to bar.', v => {
+    it.each([1, 10, 100])('should convert %dkPa to bar.', v => {
       const barsConversion = linearConversion(100000);
       const kilopascalsConversion = linearConversion(1000);
 
       const [toBase, fromBase] = [
-        barsConversion[1],
         kilopascalsConversion[0],
+        barsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "bar"] as const;
@@ -1069,13 +1069,13 @@ describe("pressure", () => {
       expect(bars(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert hPa to bar.', v => {
+    it.each([1, 10, 100])('should convert %dhPa to bar.', v => {
       const barsConversion = linearConversion(100000);
       const hectopascalsConversion = linearConversion(100);
 
       const [toBase, fromBase] = [
-        barsConversion[1],
         hectopascalsConversion[0],
+        barsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "bar"] as const;
@@ -1085,13 +1085,13 @@ describe("pressure", () => {
       expect(bars(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert inHg to bar.', v => {
+    it.each([1, 10, 100])('should convert %dinHg to bar.', v => {
       const barsConversion = linearConversion(100000);
       const inchesOfMercuryConversion = linearConversion(3386.39);
 
       const [toBase, fromBase] = [
-        barsConversion[1],
         inchesOfMercuryConversion[0],
+        barsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "bar"] as const;
@@ -1103,13 +1103,13 @@ describe("pressure", () => {
 
 
 
-    it.each([1, 10, 100])('should convert mbar to bar.', v => {
+    it.each([1, 10, 100])('should convert %dmbar to bar.', v => {
       const barsConversion = linearConversion(100000);
       const millibarsConversion = linearConversion(100);
 
       const [toBase, fromBase] = [
-        barsConversion[1],
         millibarsConversion[0],
+        barsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "bar"] as const;
@@ -1119,13 +1119,13 @@ describe("pressure", () => {
       expect(bars(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert mmHg to bar.', v => {
+    it.each([1, 10, 100])('should convert %dmmHg to bar.', v => {
       const barsConversion = linearConversion(100000);
       const millimetersOfMercuryConversion = linearConversion(133.322);
 
       const [toBase, fromBase] = [
-        barsConversion[1],
         millimetersOfMercuryConversion[0],
+        barsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "bar"] as const;
@@ -1135,13 +1135,13 @@ describe("pressure", () => {
       expect(bars(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert psi to bar.', v => {
+    it.each([1, 10, 100])('should convert %dpsi to bar.', v => {
       const barsConversion = linearConversion(100000);
       const poundsForcePerSquareInchConversion = linearConversion(6894.76);
 
       const [toBase, fromBase] = [
-        barsConversion[1],
         poundsForcePerSquareInchConversion[0],
+        barsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "bar"] as const;
@@ -1159,13 +1159,13 @@ describe("pressure", () => {
       expect(millibars(v)).toEqual([v, "mbar"]);
     });
 
-    it.each([1, 10, 100])('should convert N/m² to mbar.', v => {
+    it.each([1, 10, 100])('should convert %dN/m² to mbar.', v => {
       const millibarsConversion = linearConversion(100);
       const newtonsPerMetersSquaredConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
-        millibarsConversion[1],
         newtonsPerMetersSquaredConversion[0],
+        millibarsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "mbar"] as const;
@@ -1175,13 +1175,13 @@ describe("pressure", () => {
       expect(millibars(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert GPa to mbar.', v => {
+    it.each([1, 10, 100])('should convert %dGPa to mbar.', v => {
       const millibarsConversion = linearConversion(100);
       const gigapascalsConversion = linearConversion(1000000000);
 
       const [toBase, fromBase] = [
-        millibarsConversion[1],
         gigapascalsConversion[0],
+        millibarsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "mbar"] as const;
@@ -1191,13 +1191,13 @@ describe("pressure", () => {
       expect(millibars(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert MPa to mbar.', v => {
+    it.each([1, 10, 100])('should convert %dMPa to mbar.', v => {
       const millibarsConversion = linearConversion(100);
       const megapascalsConversion = linearConversion(1000000);
 
       const [toBase, fromBase] = [
-        millibarsConversion[1],
         megapascalsConversion[0],
+        millibarsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "mbar"] as const;
@@ -1207,13 +1207,13 @@ describe("pressure", () => {
       expect(millibars(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert kPa to mbar.', v => {
+    it.each([1, 10, 100])('should convert %dkPa to mbar.', v => {
       const millibarsConversion = linearConversion(100);
       const kilopascalsConversion = linearConversion(1000);
 
       const [toBase, fromBase] = [
-        millibarsConversion[1],
         kilopascalsConversion[0],
+        millibarsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "mbar"] as const;
@@ -1223,13 +1223,13 @@ describe("pressure", () => {
       expect(millibars(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert hPa to mbar.', v => {
+    it.each([1, 10, 100])('should convert %dhPa to mbar.', v => {
       const millibarsConversion = linearConversion(100);
       const hectopascalsConversion = linearConversion(100);
 
       const [toBase, fromBase] = [
-        millibarsConversion[1],
         hectopascalsConversion[0],
+        millibarsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "mbar"] as const;
@@ -1239,13 +1239,13 @@ describe("pressure", () => {
       expect(millibars(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert inHg to mbar.', v => {
+    it.each([1, 10, 100])('should convert %dinHg to mbar.', v => {
       const millibarsConversion = linearConversion(100);
       const inchesOfMercuryConversion = linearConversion(3386.39);
 
       const [toBase, fromBase] = [
-        millibarsConversion[1],
         inchesOfMercuryConversion[0],
+        millibarsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "mbar"] as const;
@@ -1255,13 +1255,13 @@ describe("pressure", () => {
       expect(millibars(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert bar to mbar.', v => {
+    it.each([1, 10, 100])('should convert %dbar to mbar.', v => {
       const millibarsConversion = linearConversion(100);
       const barsConversion = linearConversion(100000);
 
       const [toBase, fromBase] = [
-        millibarsConversion[1],
         barsConversion[0],
+        millibarsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "mbar"] as const;
@@ -1273,13 +1273,13 @@ describe("pressure", () => {
 
 
 
-    it.each([1, 10, 100])('should convert mmHg to mbar.', v => {
+    it.each([1, 10, 100])('should convert %dmmHg to mbar.', v => {
       const millibarsConversion = linearConversion(100);
       const millimetersOfMercuryConversion = linearConversion(133.322);
 
       const [toBase, fromBase] = [
-        millibarsConversion[1],
         millimetersOfMercuryConversion[0],
+        millibarsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "mbar"] as const;
@@ -1289,13 +1289,13 @@ describe("pressure", () => {
       expect(millibars(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert psi to mbar.', v => {
+    it.each([1, 10, 100])('should convert %dpsi to mbar.', v => {
       const millibarsConversion = linearConversion(100);
       const poundsForcePerSquareInchConversion = linearConversion(6894.76);
 
       const [toBase, fromBase] = [
-        millibarsConversion[1],
         poundsForcePerSquareInchConversion[0],
+        millibarsConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "mbar"] as const;
@@ -1313,13 +1313,13 @@ describe("pressure", () => {
       expect(millimetersOfMercury(v)).toEqual([v, "mmHg"]);
     });
 
-    it.each([1, 10, 100])('should convert N/m² to mmHg.', v => {
+    it.each([1, 10, 100])('should convert %dN/m² to mmHg.', v => {
       const millimetersOfMercuryConversion = linearConversion(133.322);
       const newtonsPerMetersSquaredConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
-        millimetersOfMercuryConversion[1],
         newtonsPerMetersSquaredConversion[0],
+        millimetersOfMercuryConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "mmHg"] as const;
@@ -1329,13 +1329,13 @@ describe("pressure", () => {
       expect(millimetersOfMercury(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert GPa to mmHg.', v => {
+    it.each([1, 10, 100])('should convert %dGPa to mmHg.', v => {
       const millimetersOfMercuryConversion = linearConversion(133.322);
       const gigapascalsConversion = linearConversion(1000000000);
 
       const [toBase, fromBase] = [
-        millimetersOfMercuryConversion[1],
         gigapascalsConversion[0],
+        millimetersOfMercuryConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "mmHg"] as const;
@@ -1345,13 +1345,13 @@ describe("pressure", () => {
       expect(millimetersOfMercury(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert MPa to mmHg.', v => {
+    it.each([1, 10, 100])('should convert %dMPa to mmHg.', v => {
       const millimetersOfMercuryConversion = linearConversion(133.322);
       const megapascalsConversion = linearConversion(1000000);
 
       const [toBase, fromBase] = [
-        millimetersOfMercuryConversion[1],
         megapascalsConversion[0],
+        millimetersOfMercuryConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "mmHg"] as const;
@@ -1361,13 +1361,13 @@ describe("pressure", () => {
       expect(millimetersOfMercury(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert kPa to mmHg.', v => {
+    it.each([1, 10, 100])('should convert %dkPa to mmHg.', v => {
       const millimetersOfMercuryConversion = linearConversion(133.322);
       const kilopascalsConversion = linearConversion(1000);
 
       const [toBase, fromBase] = [
-        millimetersOfMercuryConversion[1],
         kilopascalsConversion[0],
+        millimetersOfMercuryConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "mmHg"] as const;
@@ -1377,13 +1377,13 @@ describe("pressure", () => {
       expect(millimetersOfMercury(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert hPa to mmHg.', v => {
+    it.each([1, 10, 100])('should convert %dhPa to mmHg.', v => {
       const millimetersOfMercuryConversion = linearConversion(133.322);
       const hectopascalsConversion = linearConversion(100);
 
       const [toBase, fromBase] = [
-        millimetersOfMercuryConversion[1],
         hectopascalsConversion[0],
+        millimetersOfMercuryConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "mmHg"] as const;
@@ -1393,13 +1393,13 @@ describe("pressure", () => {
       expect(millimetersOfMercury(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert inHg to mmHg.', v => {
+    it.each([1, 10, 100])('should convert %dinHg to mmHg.', v => {
       const millimetersOfMercuryConversion = linearConversion(133.322);
       const inchesOfMercuryConversion = linearConversion(3386.39);
 
       const [toBase, fromBase] = [
-        millimetersOfMercuryConversion[1],
         inchesOfMercuryConversion[0],
+        millimetersOfMercuryConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "mmHg"] as const;
@@ -1409,13 +1409,13 @@ describe("pressure", () => {
       expect(millimetersOfMercury(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert bar to mmHg.', v => {
+    it.each([1, 10, 100])('should convert %dbar to mmHg.', v => {
       const millimetersOfMercuryConversion = linearConversion(133.322);
       const barsConversion = linearConversion(100000);
 
       const [toBase, fromBase] = [
-        millimetersOfMercuryConversion[1],
         barsConversion[0],
+        millimetersOfMercuryConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "mmHg"] as const;
@@ -1425,13 +1425,13 @@ describe("pressure", () => {
       expect(millimetersOfMercury(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert mbar to mmHg.', v => {
+    it.each([1, 10, 100])('should convert %dmbar to mmHg.', v => {
       const millimetersOfMercuryConversion = linearConversion(133.322);
       const millibarsConversion = linearConversion(100);
 
       const [toBase, fromBase] = [
-        millimetersOfMercuryConversion[1],
         millibarsConversion[0],
+        millimetersOfMercuryConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "mmHg"] as const;
@@ -1443,13 +1443,13 @@ describe("pressure", () => {
 
 
 
-    it.each([1, 10, 100])('should convert psi to mmHg.', v => {
+    it.each([1, 10, 100])('should convert %dpsi to mmHg.', v => {
       const millimetersOfMercuryConversion = linearConversion(133.322);
       const poundsForcePerSquareInchConversion = linearConversion(6894.76);
 
       const [toBase, fromBase] = [
-        millimetersOfMercuryConversion[1],
         poundsForcePerSquareInchConversion[0],
+        millimetersOfMercuryConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "mmHg"] as const;
@@ -1467,13 +1467,13 @@ describe("pressure", () => {
       expect(poundsForcePerSquareInch(v)).toEqual([v, "psi"]);
     });
 
-    it.each([1, 10, 100])('should convert N/m² to psi.', v => {
+    it.each([1, 10, 100])('should convert %dN/m² to psi.', v => {
       const poundsForcePerSquareInchConversion = linearConversion(6894.76);
       const newtonsPerMetersSquaredConversion = linearConversion(1);
 
       const [toBase, fromBase] = [
-        poundsForcePerSquareInchConversion[1],
         newtonsPerMetersSquaredConversion[0],
+        poundsForcePerSquareInchConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "psi"] as const;
@@ -1483,13 +1483,13 @@ describe("pressure", () => {
       expect(poundsForcePerSquareInch(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert GPa to psi.', v => {
+    it.each([1, 10, 100])('should convert %dGPa to psi.', v => {
       const poundsForcePerSquareInchConversion = linearConversion(6894.76);
       const gigapascalsConversion = linearConversion(1000000000);
 
       const [toBase, fromBase] = [
-        poundsForcePerSquareInchConversion[1],
         gigapascalsConversion[0],
+        poundsForcePerSquareInchConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "psi"] as const;
@@ -1499,13 +1499,13 @@ describe("pressure", () => {
       expect(poundsForcePerSquareInch(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert MPa to psi.', v => {
+    it.each([1, 10, 100])('should convert %dMPa to psi.', v => {
       const poundsForcePerSquareInchConversion = linearConversion(6894.76);
       const megapascalsConversion = linearConversion(1000000);
 
       const [toBase, fromBase] = [
-        poundsForcePerSquareInchConversion[1],
         megapascalsConversion[0],
+        poundsForcePerSquareInchConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "psi"] as const;
@@ -1515,13 +1515,13 @@ describe("pressure", () => {
       expect(poundsForcePerSquareInch(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert kPa to psi.', v => {
+    it.each([1, 10, 100])('should convert %dkPa to psi.', v => {
       const poundsForcePerSquareInchConversion = linearConversion(6894.76);
       const kilopascalsConversion = linearConversion(1000);
 
       const [toBase, fromBase] = [
-        poundsForcePerSquareInchConversion[1],
         kilopascalsConversion[0],
+        poundsForcePerSquareInchConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "psi"] as const;
@@ -1531,13 +1531,13 @@ describe("pressure", () => {
       expect(poundsForcePerSquareInch(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert hPa to psi.', v => {
+    it.each([1, 10, 100])('should convert %dhPa to psi.', v => {
       const poundsForcePerSquareInchConversion = linearConversion(6894.76);
       const hectopascalsConversion = linearConversion(100);
 
       const [toBase, fromBase] = [
-        poundsForcePerSquareInchConversion[1],
         hectopascalsConversion[0],
+        poundsForcePerSquareInchConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "psi"] as const;
@@ -1547,13 +1547,13 @@ describe("pressure", () => {
       expect(poundsForcePerSquareInch(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert inHg to psi.', v => {
+    it.each([1, 10, 100])('should convert %dinHg to psi.', v => {
       const poundsForcePerSquareInchConversion = linearConversion(6894.76);
       const inchesOfMercuryConversion = linearConversion(3386.39);
 
       const [toBase, fromBase] = [
-        poundsForcePerSquareInchConversion[1],
         inchesOfMercuryConversion[0],
+        poundsForcePerSquareInchConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "psi"] as const;
@@ -1563,13 +1563,13 @@ describe("pressure", () => {
       expect(poundsForcePerSquareInch(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert bar to psi.', v => {
+    it.each([1, 10, 100])('should convert %dbar to psi.', v => {
       const poundsForcePerSquareInchConversion = linearConversion(6894.76);
       const barsConversion = linearConversion(100000);
 
       const [toBase, fromBase] = [
-        poundsForcePerSquareInchConversion[1],
         barsConversion[0],
+        poundsForcePerSquareInchConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "psi"] as const;
@@ -1579,13 +1579,13 @@ describe("pressure", () => {
       expect(poundsForcePerSquareInch(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert mbar to psi.', v => {
+    it.each([1, 10, 100])('should convert %dmbar to psi.', v => {
       const poundsForcePerSquareInchConversion = linearConversion(6894.76);
       const millibarsConversion = linearConversion(100);
 
       const [toBase, fromBase] = [
-        poundsForcePerSquareInchConversion[1],
         millibarsConversion[0],
+        poundsForcePerSquareInchConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "psi"] as const;
@@ -1595,13 +1595,13 @@ describe("pressure", () => {
       expect(poundsForcePerSquareInch(conversionCandidate)).toEqual(expected);
     });
 
-    it.each([1, 10, 100])('should convert mmHg to psi.', v => {
+    it.each([1, 10, 100])('should convert %dmmHg to psi.', v => {
       const poundsForcePerSquareInchConversion = linearConversion(6894.76);
       const millimetersOfMercuryConversion = linearConversion(133.322);
 
       const [toBase, fromBase] = [
-        poundsForcePerSquareInchConversion[1],
         millimetersOfMercuryConversion[0],
+        poundsForcePerSquareInchConversion[1],
       ];
 
       const expected = [fromBase(toBase(v)), "psi"] as const;
