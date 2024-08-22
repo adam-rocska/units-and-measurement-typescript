@@ -26,12 +26,12 @@ export const volume = DimensionMeasurement<VolumeSymbol>({
   "pt": linearConversion(0.473176),
   "qt": linearConversion(0.946353),
   "gal": linearConversion(3.78541),
-  "tsp": linearConversion(0.00591939),
-  "tbsp": linearConversion(0.0177582),
-  "fl oz": linearConversion(0.0284131),
-  "pt": linearConversion(0.568261),
-  "qt": linearConversion(1.13652),
-  "gal": linearConversion(4.54609),
+  "imperial tsp": linearConversion(0.00591939),
+  "imperial tbsp": linearConversion(0.0177582),
+  "imperial fl oz": linearConversion(0.0284131),
+  "imperial pt": linearConversion(0.568261),
+  "imperial qt": linearConversion(1.13652),
+  "imperial gal": linearConversion(4.54609),
   "metric cup": linearConversion(0.25)
 });
 
@@ -58,10 +58,10 @@ export const cups = volume["cup"];
 export const pints = volume["pt"];
 export const quarts = volume["qt"];
 export const gallons = volume["gal"];
-export const imperialTeaspoons = volume["tsp"];
-export const imperialTablespoons = volume["tbsp"];
-export const imperialFluidOunces = volume["fl oz"];
-export const imperialPints = volume["pt"];
-export const imperialQuarts = volume["qt"];
-export const imperialGallons = volume["gal"];
+export const imperialTeaspoons = volume["imperial tsp"];
+export const imperialTablespoons = volume["imperial tbsp"];
+export const imperialFluidOunces = volume["imperial fl oz"];
+export const imperialPints = volume["imperial pt"];
+export const imperialQuarts = volume["imperial qt"];
+export const imperialGallons = volume["imperial gal"];
 export const metricCups = volume["metric cup"];

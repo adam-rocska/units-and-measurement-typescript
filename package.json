@@ -59,7 +59,30 @@
   },
   "files": [
     "dist",
-    "conversions"
+    "measurement",
+    "factory",
+    "conversion",
+    "length",
+    "volume",
+    "angle",
+    "area",
+    "mass",
+    "pressure",
+    "acceleration",
+    "duration",
+    "frequency",
+    "speed",
+    "energy",
+    "power",
+    "temperature",
+    "illuminance",
+    "electric-charge",
+    "electric-current",
+    "electric-potential-difference",
+    "electric-resistance",
+    "concentration-mass",
+    "dispersion",
+    "information"
   ],
   "main": "./dist/cjs/index.js",
   "module": "./dist/es/index.mjs",
@@ -76,14 +99,244 @@
         "default": "./dist/cjs/index.js"
       }
     },
-    "./conversions": {
+    "./conversion": {
       "import": {
-        "types": "./dist/es/conversions.d.mts",
-        "default": "./dist/es/conversions.mjs"
+        "types": "./dist/es/conversion.d.mts",
+        "default": "./dist/es/conversion.mjs"
       },
       "require": {
-        "types": "./dist/cjs/conversions.d.ts",
-        "default": "./dist/cjs/conversions.js"
+        "types": "./dist/cjs/conversion.d.ts",
+        "default": "./dist/cjs/conversion.js"
+      }
+    },
+    "./factory": {
+      "import": {
+        "types": "./dist/es/factory.d.mts",
+        "default": "./dist/es/factory.mjs"
+      },
+      "require": {
+        "types": "./dist/cjs/factory.d.ts",
+        "default": "./dist/cjs/factory.js"
+      }
+    },
+    "./measurement": {
+      "import": {
+        "types": "./dist/es/measurement.d.mts",
+        "default": "./dist/es/measurement.mjs"
+      },
+      "require": {
+        "types": "./dist/cjs/measurement.d.ts",
+        "default": "./dist/cjs/measurement.js"
+      }
+    },
+    "./length": {
+      "import": {
+        "types": "./dist/es/length.d.mts",
+        "default": "./dist/es/length.mjs"
+      },
+      "require": {
+        "types": "./dist/cjs/length.d.ts",
+        "default": "./dist/cjs/length.js"
+      }
+    },
+    "./volume": {
+      "import": {
+        "types": "./dist/es/volume.d.mts",
+        "default": "./dist/es/volume.mjs"
+      },
+      "require": {
+        "types": "./dist/cjs/volume.d.ts",
+        "default": "./dist/cjs/volume.js"
+      }
+    },
+    "./angle": {
+      "import": {
+        "types": "./dist/es/angle.d.mts",
+        "default": "./dist/es/angle.mjs"
+      },
+      "require": {
+        "types": "./dist/cjs/angle.d.ts",
+        "default": "./dist/cjs/angle.js"
+      }
+    },
+    "./area": {
+      "import": {
+        "types": "./dist/es/area.d.mts",
+        "default": "./dist/es/area.mjs"
+      },
+      "require": {
+        "types": "./dist/cjs/area.d.ts",
+        "default": "./dist/cjs/area.js"
+      }
+    },
+    "./mass": {
+      "import": {
+        "types": "./dist/es/mass.d.mts",
+        "default": "./dist/es/mass.mjs"
+      },
+      "require": {
+        "types": "./dist/cjs/mass.d.ts",
+        "default": "./dist/cjs/mass.js"
+      }
+    },
+    "./pressure": {
+      "import": {
+        "types": "./dist/es/pressure.d.mts",
+        "default": "./dist/es/pressure.mjs"
+      },
+      "require": {
+        "types": "./dist/cjs/pressure.d.ts",
+        "default": "./dist/cjs/pressure.js"
+      }
+    },
+    "./acceleration": {
+      "import": {
+        "types": "./dist/es/acceleration.d.mts",
+        "default": "./dist/es/acceleration.mjs"
+      },
+      "require": {
+        "types": "./dist/cjs/acceleration.d.ts",
+        "default": "./dist/cjs/acceleration.js"
+      }
+    },
+    "./duration": {
+      "import": {
+        "types": "./dist/es/duration.d.mts",
+        "default": "./dist/es/duration.mjs"
+      },
+      "require": {
+        "types": "./dist/cjs/duration.d.ts",
+        "default": "./dist/cjs/duration.js"
+      }
+    },
+    "./frequency": {
+      "import": {
+        "types": "./dist/es/frequency.d.mts",
+        "default": "./dist/es/frequency.mjs"
+      },
+      "require": {
+        "types": "./dist/cjs/frequency.d.ts",
+        "default": "./dist/cjs/frequency.js"
+      }
+    },
+    "./speed": {
+      "import": {
+        "types": "./dist/es/speed.d.mts",
+        "default": "./dist/es/speed.mjs"
+      },
+      "require": {
+        "types": "./dist/cjs/speed.d.ts",
+        "default": "./dist/cjs/speed.js"
+      }
+    },
+    "./energy": {
+      "import": {
+        "types": "./dist/es/energy.d.mts",
+        "default": "./dist/es/energy.mjs"
+      },
+      "require": {
+        "types": "./dist/cjs/energy.d.ts",
+        "default": "./dist/cjs/energy.js"
+      }
+    },
+    "./power": {
+      "import": {
+        "types": "./dist/es/power.d.mts",
+        "default": "./dist/es/power.mjs"
+      },
+      "require": {
+        "types": "./dist/cjs/power.d.ts",
+        "default": "./dist/cjs/power.js"
+      }
+    },
+    "./temperature": {
+      "import": {
+        "types": "./dist/es/temperature.d.mts",
+        "default": "./dist/es/temperature.mjs"
+      },
+      "require": {
+        "types": "./dist/cjs/temperature.d.ts",
+        "default": "./dist/cjs/temperature.js"
+      }
+    },
+    "./illuminance": {
+      "import": {
+        "types": "./dist/es/illuminance.d.mts",
+        "default": "./dist/es/illuminance.mjs"
+      },
+      "require": {
+        "types": "./dist/cjs/illuminance.d.ts",
+        "default": "./dist/cjs/illuminance.js"
+      }
+    },
+    "./electric-charge": {
+      "import": {
+        "types": "./dist/es/electric-charge.d.mts",
+        "default": "./dist/es/electric-charge.mjs"
+      },
+      "require": {
+        "types": "./dist/cjs/electric-charge.d.ts",
+        "default": "./dist/cjs/electric-charge.js"
+      }
+    },
+    "./electric-current": {
+      "import": {
+        "types": "./dist/es/electric-current.d.mts",
+        "default": "./dist/es/electric-current.mjs"
+      },
+      "require": {
+        "types": "./dist/cjs/electric-current.d.ts",
+        "default": "./dist/cjs/electric-current.js"
+      }
+    },
+    "./electric-potential-difference": {
+      "import": {
+        "types": "./dist/es/electric-potential-difference.d.mts",
+        "default": "./dist/es/electric-potential-difference.mjs"
+      },
+      "require": {
+        "types": "./dist/cjs/electric-potential-difference.d.ts",
+        "default": "./dist/cjs/electric-potential-difference.js"
+      }
+    },
+    "./electric-resistance": {
+      "import": {
+        "types": "./dist/es/electric-resistance.d.mts",
+        "default": "./dist/es/electric-resistance.mjs"
+      },
+      "require": {
+        "types": "./dist/cjs/electric-resistance.d.ts",
+        "default": "./dist/cjs/electric-resistance.js"
+      }
+    },
+    "./concentration-mass": {
+      "import": {
+        "types": "./dist/es/concentration-mass.d.mts",
+        "default": "./dist/es/concentration-mass.mjs"
+      },
+      "require": {
+        "types": "./dist/cjs/concentration-mass.d.ts",
+        "default": "./dist/cjs/concentration-mass.js"
+      }
+    },
+    "./dispersion": {
+      "import": {
+        "types": "./dist/es/dispersion.d.mts",
+        "default": "./dist/es/dispersion.mjs"
+      },
+      "require": {
+        "types": "./dist/cjs/dispersion.d.ts",
+        "default": "./dist/cjs/dispersion.js"
+      }
+    },
+    "./information": {
+      "import": {
+        "types": "./dist/es/information.d.mts",
+        "default": "./dist/es/information.mjs"
+      },
+      "require": {
+        "types": "./dist/cjs/information.d.ts",
+        "default": "./dist/cjs/information.js"
       }
     }
   },
@@ -93,7 +346,6 @@
     ],
     "moduleNameMapper": {
       "@adam-rocska/units-and-measurement": "<rootDir>/src/index.ts",
-      "@adam-rocska/units-and-measurement/conversions": "<rootDir>/src/conversions/index.ts",
       "^!(.*)": "<rootDir>/$1"
     },
     "transform": {

@@ -35,11 +35,11 @@ export const volumeSymbols = [
   "pt",
   "qt",
   "gal",
-  "tsp",
-  "tbsp",
-  "fl oz",
-  "pt",
-  "qt",
-  "gal",
+  "imperial tsp",
+  "imperial tbsp",
+  "imperial fl oz",
+  "imperial pt",
+  "imperial qt",
+  "imperial gal",
   "metric cup"
 ] as const;
