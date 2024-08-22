@@ -1,6 +1,0 @@
-{
-  "main": "../dist/cjs/conversions.js",
-  "module": "../dist/es/conversions.mjs",
-  "types": "../dist/cjs/conversions.d.ts",
-  "private": true
-}

@@ -1,0 +1,6 @@
+{
+  "main": "../dist/cjs/duration.js",
+  "module": "../dist/es/duration.mjs",
+  "types": "../dist/cjs/duration.d.ts",
+  "private": true
+}

@@ -1,0 +1,6 @@
+{
+  "main": "../dist/cjs/temperature.js",
+  "module": "../dist/es/temperature.mjs",
+  "types": "../dist/cjs/temperature.d.ts",
+  "private": true
+}

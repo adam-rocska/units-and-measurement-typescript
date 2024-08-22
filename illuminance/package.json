@@ -1,0 +1,6 @@
+{
+  "main": "../dist/cjs/illuminance.js",
+  "module": "../dist/es/illuminance.mjs",
+  "types": "../dist/cjs/illuminance.d.ts",
+  "private": true
+}

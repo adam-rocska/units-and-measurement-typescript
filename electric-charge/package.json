@@ -1,0 +1,6 @@
+{
+  "main": "../dist/cjs/electric-charge.js",
+  "module": "../dist/es/electric-charge.mjs",
+  "types": "../dist/cjs/electric-charge.d.ts",
+  "private": true
+}

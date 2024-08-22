@@ -1,0 +1,6 @@
+{
+  "main": "../dist/cjs/acceleration.js",
+  "module": "../dist/es/acceleration.mjs",
+  "types": "../dist/cjs/acceleration.d.ts",
+  "private": true
+}

@@ -1,0 +1,6 @@
+{
+  "main": "../dist/cjs/area.js",
+  "module": "../dist/es/area.mjs",
+  "types": "../dist/cjs/area.d.ts",
+  "private": true
+}

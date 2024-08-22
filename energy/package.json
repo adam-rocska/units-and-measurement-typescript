@@ -1,0 +1,6 @@
+{
+  "main": "../dist/cjs/energy.js",
+  "module": "../dist/es/energy.mjs",
+  "types": "../dist/cjs/energy.d.ts",
+  "private": true
+}

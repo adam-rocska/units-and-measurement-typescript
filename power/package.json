@@ -1,0 +1,6 @@
+{
+  "main": "../dist/cjs/power.js",
+  "module": "../dist/es/power.mjs",
+  "types": "../dist/cjs/power.d.ts",
+  "private": true
+}

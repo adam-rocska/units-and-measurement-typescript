@@ -1,0 +1,6 @@
+{
+  "main": "../dist/cjs/angle.js",
+  "module": "../dist/es/angle.mjs",
+  "types": "../dist/cjs/angle.d.ts",
+  "private": true
+}

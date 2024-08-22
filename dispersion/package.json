@@ -1,0 +1,6 @@
+{
+  "main": "../dist/cjs/dispersion.js",
+  "module": "../dist/es/dispersion.mjs",
+  "types": "../dist/cjs/dispersion.d.ts",
+  "private": true
+}

@@ -1,0 +1,6 @@
+{
+  "main": "../dist/cjs/concentration-mass.js",
+  "module": "../dist/es/concentration-mass.mjs",
+  "types": "../dist/cjs/concentration-mass.d.ts",
+  "private": true
+}
