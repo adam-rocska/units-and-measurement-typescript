@@ -1,5 +1,7 @@
 # Angle
 
+## Units
+
 | Name        | Field         | Symbol | Coefficient | Constant |
 | ----------- | ------------- | ------ | ----------- | -------- |
 | Degrees     | `degrees`     | °      | 1           | 0        |

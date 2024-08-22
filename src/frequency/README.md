@@ -1,5 +1,7 @@
 # Frequency
 
+## Units
+
 | Name       | Field        | Symbol | Coefficient   | Constant |
 | ---------- | ------------ | ------ | ------------- | -------- |
 | Terahertz  | `terahertz`  | THz    | 1000000000000 | 0        |

@@ -1,5 +1,7 @@
 # Dispersion
 
+## Units
+
 | Name               | Field              | Symbol | Coefficient | Constant |
 | ------------------ | ------------------ | ------ | ----------- | -------- |
 | Parts Per Million  | `partsPerMillion`  | ppm    | 1           | 0        |

@@ -1,5 +1,7 @@
 # Electric Current
 
+## Units
+
 | Name         | Field          | Symbol | Coefficient | Constant |
 | ------------ | -------------- | ------ | ----------- | -------- |
 | Megaamperes  | `megaamperes`  | MA     | 1000000     | 0        |

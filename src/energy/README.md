@@ -1,5 +1,7 @@
 # Energy
 
+## Units
+
 | Name           | Field           | Symbol | Coefficient | Constant |
 | -------------- | --------------- | ------ | ----------- | -------- |
 | Kilojoules     | `kilojoules`    | kJ     | 1000        | 0        |

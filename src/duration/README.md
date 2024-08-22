@@ -1,5 +1,7 @@
 # Duration
 
+## Units
+
 | Name    | Field     | Symbol | Coefficient | Constant |
 | ------- | --------- | ------ | ----------- | -------- |
 | Seconds | `seconds` | sec    | 1           | 0        |

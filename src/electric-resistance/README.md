@@ -1,5 +1,7 @@
 # Electric Resistance
 
+## Units
+
 | Name      | Field       | Symbol | Coefficient | Constant |
 | --------- | ----------- | ------ | ----------- | -------- |
 | Megaohms  | `megaohms`  | MΩ     | 1000000     | 0        |
