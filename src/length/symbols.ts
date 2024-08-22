@@ -25,7 +25,7 @@ export const lengthSymbols = [
   "pm",
   "tw",
   "pt",
-  "pc",
+  "P",
   "in",
   "ft",
   "yd",
