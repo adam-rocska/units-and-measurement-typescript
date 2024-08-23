@@ -1,5 +1,5 @@
-import {isString, String, value as valueFromString, unit as unitFromString} from "./string";
-import {isTuple, Tuple, value as valueFromTuple, unit as unitFromTuple} from "./tuple";
+import {isString, String, value as valueFromString, unit as unitFromString, toFixed as stringToFixed, toExponential as stringToExponential, toPrecision as stringToPrecision} from "./string";
+import {isTuple, Tuple, value as valueFromTuple, unit as unitFromTuple, toFixed as tupleToFixed, toExponential as tupleToExponential, toPrecision as tupleToPrecision} from "./tuple";
 
 export type Measurement<
   Unit extends string,
@@ -59,3 +59,55 @@ export const unit = <
   if (isTuple(measurement)) return unitFromTuple(measurement);
   return unitFromString(measurement);
 };
+
+export function toFixed<Unit extends string,>(
+  measurement: Tuple<Unit, number>,
+  fractionDigits?: number
+): Tuple<Unit, number>;
+export function toFixed<Unit extends string,>(
+  measurement: String<Unit, number>,
+  fractionDigits?: number
+): String<Unit, number>;
+export function toFixed<Unit extends string,>(
+  measurement: Measurement<Unit, number>,
+  fractionDigits?: number
+): Measurement<Unit, number> {
+  if (isTuple(measurement)) return tupleToFixed(measurement, fractionDigits);
+  return stringToFixed(measurement, fractionDigits);
+}
+
+export function toExponential<Unit extends string,>(
+  measurement: Tuple<Unit, number>,
+  fractionDigits?: number
+): Tuple<Unit, number>;
+export function toExponential<Unit extends string,>(
+  measurement: String<Unit, number>,
+  fractionDigits?: number
+): String<Unit, number>;
+export function toExponential<
+  Unit extends string
+>(
+  measurement: Measurement<Unit, number>,
+  fractionDigits?: number
+): Measurement<Unit, number> {
+  if (isTuple(measurement)) return tupleToExponential(measurement, fractionDigits);
+  return stringToExponential(measurement, fractionDigits);
+}
+
+export function toPrecision<Unit extends string,>(
+  measurement: Tuple<Unit, number>,
+  precision?: number
+): Tuple<Unit, number>;
+export function toPrecision<Unit extends string,>(
+  measurement: String<Unit, number>,
+  precision?: number
+): String<Unit, number>;
+export function toPrecision<
+  Unit extends string
+>(
+  measurement: Measurement<Unit, number>,
+  precision?: number
+): Measurement<Unit, number> {
+  if (isTuple(measurement)) return tupleToPrecision(measurement, precision);
+  return stringToPrecision(measurement, precision);
+}

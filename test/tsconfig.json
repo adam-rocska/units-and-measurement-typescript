@@ -11,6 +11,9 @@
       "!*": [
         "./*"
       ],
+      "@adam-rocska/units-and-measurement/measurement": [
+        "./src/measurement/index.ts"
+      ],
       "@adam-rocska/units-and-measurement/length": [
         "./src/length/index.ts"
       ],

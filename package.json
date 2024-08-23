@@ -347,6 +347,7 @@
     "moduleNameMapper": {
       "^@adam-rocska/units-and-measurement$": "<rootDir>/src/index.ts",
       "^!(.*)$": "<rootDir>/$1",
+      "^@adam-rocska/units-and-measurement/measurement$": "<rootDir>/src/measurement/index.ts",
       "^@adam-rocska/units-and-measurement/length$": "<rootDir>/src/length/index.ts",
       "^@adam-rocska/units-and-measurement/volume$": "<rootDir>/src/volume/index.ts",
       "^@adam-rocska/units-and-measurement/angle$": "<rootDir>/src/angle/index.ts",

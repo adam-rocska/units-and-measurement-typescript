@@ -42,3 +42,39 @@ export const unit = <
 >(
   measurement: Tuple<Unit, Value>
 ): Unit => measurement[1];
+
+export function toFixed<
+  Unit extends string,
+  Value extends number
+>(
+  measurement: Tuple<Unit, Value>,
+  fractionDigits?: number
+): Tuple<Unit, number> {
+  const v = parseFloat(value(measurement).toFixed(fractionDigits));
+  const m = unit(measurement);
+  return [v, m];
+}
+
+export function toExponential<
+  Unit extends string,
+  Value extends number
+>(
+  measurement: Tuple<Unit, Value>,
+  fractionDigits?: number
+): Tuple<Unit, number> {
+  const v = parseFloat(value(measurement).toExponential(fractionDigits));
+  const m = unit(measurement);
+  return [v, m];
+}
+
+export function toPrecision<
+  Unit extends string,
+  Value extends number
+>(
+  measurement: Tuple<Unit, Value>,
+  precision?: number
+): Tuple<Unit, number> {
+  const v = parseFloat(value(measurement).toPrecision(precision));
+  const m = unit(measurement);
+  return [v, m];
+}

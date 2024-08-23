@@ -1,4 +1,4 @@
-import {Tuple, tuple, isTuple, unit, value} from "!src/measurement/tuple";
+import {Tuple, tuple, isTuple, unit, value, toFixed, toExponential, toPrecision} from "!src/measurement/tuple";
 
 describe('tuple', () => {
   it("should represent the measurement described in its parameters as a tuple.", () => {
@@ -62,5 +62,29 @@ describe('unit', () => {
   it("should return the unit of the measurement.", () => {
     const measurement: Tuple<"px", 12.5> = [12.5, "px"] as const;
     expect(unit(measurement)).toBe("px");
+  });
+});
+
+describe("toFixed", () => {
+  it("should return a tuple with the value of the measurement to a fixed number of decimal places.", () => {
+    const measurement = tuple(0.1 + 0.2, "px");
+    const expected = tuple(0.3, "px");
+    const actual = toFixed(measurement, 1);
+  });
+});
+
+describe("toExponential", () => {
+  it("should return a tuple with the value of the measurement to exponential notation.", () => {
+    const measurement = tuple(0.1 + 0.2, "px");
+    const expected = tuple(0.3, "px");
+    const actual = toExponential(measurement);
+  });
+});
+
+describe("toPrecision", () => {
+  it("should return a tuple with the value of the measurement to a specified precision.", () => {
+    const measurement = tuple(0.1 + 0.2, "px");
+    const expected = tuple(0.3, "px");
+    const actual = toPrecision(measurement, 1);
   });
 });

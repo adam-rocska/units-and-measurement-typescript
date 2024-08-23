@@ -47,3 +47,39 @@ export const unit = <
 ): Unit => {
   return measurement.slice(value(measurement).toString().length) as Unit;
 };
+
+export function toFixed<
+  Unit extends string,
+  Value extends number
+>(
+  measurement: String<Unit, Value>,
+  fractionDigits?: number
+): String<Unit, number> {
+  const v = value(measurement).toFixed(fractionDigits);
+  const m = unit(measurement);
+  return `${v}${m}` as String<Unit, number>;
+}
+
+export function toExponential<
+  Unit extends string,
+  Value extends number
+>(
+  measurement: String<Unit, Value>,
+  fractionDigits?: number
+): String<Unit, number> {
+  const v = value(measurement).toExponential(fractionDigits);
+  const m = unit(measurement);
+  return `${v}${m}` as String<Unit, number>;
+}
+
+export function toPrecision<
+  Unit extends string,
+  Value extends number
+>(
+  measurement: String<Unit, Value>,
+  precision?: number
+): String<Unit, number> {
+  const v = value(measurement).toPrecision(precision);
+  const m = unit(measurement);
+  return `${v}${m}` as String<Unit, number>;
+}

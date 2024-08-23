@@ -1,4 +1,4 @@
-import {String, string, isString, unit, value} from "!src/measurement/string";
+import {String, string, isString, unit, value, toFixed, toExponential, toPrecision} from "!src/measurement/string";
 
 describe('string', () => {
   it("should represent the measurement described in its parameters as a string.", () => {
@@ -62,5 +62,33 @@ describe('unit', () => {
   it("should return the unit of the measurement.", () => {
     const measurement: String<"px", 12.5> = "12.5px" as const;
     expect(unit(measurement)).toBe("px");
+  });
+});
+
+describe("toFixed", () => {
+  it("should return a string representation of the measurement with the specified number of decimal places.", () => {
+    const measurement: String<"px", 12.5> = "12.5px" as const;
+    expect(toFixed(measurement, 1)).toBe("12.5px");
+    expect(toFixed(measurement, 2)).toBe("12.50px");
+    expect(toFixed(measurement, 3)).toBe("12.500px");
+  });
+});
+
+describe("toExponential", () => {
+  it("should return a string representation of the measurement in exponential notation.", () => {
+    const measurement: String<"px", 12.5> = "12.5px" as const;
+    expect(toExponential(measurement)).toBe("1.25e+1px");
+    expect(toExponential(measurement, 1)).toBe("1.3e+1px");
+    expect(toExponential(measurement, 2)).toBe("1.25e+1px");
+    expect(toExponential(measurement, 3)).toBe("1.250e+1px");
+  });
+});
+
+describe("toPrecision", () => {
+  it("should return a string representation of the measurement with the specified number of significant digits.", () => {
+    const measurement: String<"px", 12.5> = "12.5px" as const;
+    expect(toPrecision(measurement, 1)).toBe("1e+1px");
+    expect(toPrecision(measurement, 2)).toBe("13px");
+    expect(toPrecision(measurement, 3)).toBe("12.5px");
   });
 });

@@ -1,5 +1,5 @@
 import {String} from "!src/measurement/string";
-import {Measurement, toTuple, toString, isMeasurement, value, unit} from "!src/measurement/measurement";
+import {Measurement, toTuple, toString, isMeasurement, value, unit, toFixed, toExponential, toPrecision} from "!src/measurement/measurement";
 
 describe("Measurement", () => {
   it("is a type", () => {
@@ -94,5 +94,53 @@ describe("unit", () => {
     const expected = "m";
     const actual = unit(input);
     expect(actual).toBe(expected);
+  });
+});
+
+describe("toFixed", () => {
+  it("returns a tuple measurement with a fixed value", () => {
+    const input: Measurement<"m", 1> = [1, "m"];
+    const expected: Measurement<"m", number> = [1.00, "m"];
+    const actual = toFixed(input, 2);
+    expect(actual).toStrictEqual(expected);
+  });
+
+  it("returns a string measurement with a fixed value", () => {
+    const input: Measurement<"m", 1> = "1m";
+    const expected: String<"m", number> = "1.00m";
+    const actual = toFixed(input, 2);
+    expect(actual).toStrictEqual(expected);
+  });
+});
+
+describe("toExponential", () => {
+  it("returns a tuple measurement with an exponential value", () => {
+    const input: Measurement<"m", 1> = [1, "m"];
+    const expected: Measurement<"m", number> = [1e+0, "m"];
+    const actual = toExponential(input);
+    expect(actual).toStrictEqual(expected);
+  });
+
+  it("returns a string measurement with an exponential value", () => {
+    const input: Measurement<"m", 1> = "1m";
+    const expected: String<"m", number> = "1e+0m";
+    const actual = toExponential(input);
+    expect(actual).toStrictEqual(expected);
+  });
+});
+
+describe("toPrecision", () => {
+  it("returns a tuple measurement with a precise value", () => {
+    const input: Measurement<"m", 1> = [1, "m"];
+    const expected: Measurement<"m", number> = [1.0, "m"];
+    const actual = toPrecision(input, 2);
+    expect(actual).toStrictEqual(expected);
+  });
+
+  it("returns a string measurement with a precise value", () => {
+    const input: Measurement<"m", 1> = "1m";
+    const expected: String<"m", number> = "1.0m";
+    const actual = toPrecision(input, 2);
+    expect(actual).toStrictEqual(expected);
   });
 });
