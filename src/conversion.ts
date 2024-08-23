@@ -12,21 +12,14 @@ export type Conversion = readonly [
 export type Conversions<Unit extends string> = {[unit in Unit]: Conversion};
 
 /**
- * A function that creates a conversion tuple.
- */
-export type ConversionFactory<
-  Parameters extends readonly any[] = readonly any[]
-> = (...parameters: Parameters) => Conversion;
-
-/**
  * Creates a linear conversion tuple, where:
  * - `base = value * coefficient + constant`
  * - `value = (base - constant) / coefficient`
  */
-export const linearConversion: ConversionFactory = (
+export const linearConversion = (
   coefficient: number,
   constant: number = 0
-) => [
+): Conversion => [
     (value: number): number => value * coefficient + constant,
     (value: number): number => (value - constant) / coefficient,
   ];
