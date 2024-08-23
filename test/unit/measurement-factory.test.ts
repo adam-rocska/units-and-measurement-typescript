@@ -1,4 +1,4 @@
-import {UnitMeasurement, DimensionMeasurement, Measurement} from "!src/factory";
+import {UnitMeasurement, DimensionMeasurement, Measurement} from "!src/dimension";
 
 describe("UnitMeasurement", () => {
   const meters: Measurement<"m"> = UnitMeasurement("m");

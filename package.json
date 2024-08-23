@@ -60,7 +60,7 @@
   "files": [
     "dist",
     "measurement",
-    "factory",
+    "dimension",
     "conversion",
     "length",
     "volume",
@@ -109,14 +109,14 @@
         "default": "./dist/cjs/conversion.js"
       }
     },
-    "./factory": {
+    "./dimension": {
       "import": {
-        "types": "./dist/es/factory.d.mts",
-        "default": "./dist/es/factory.mjs"
+        "types": "./dist/es/dimension.d.mts",
+        "default": "./dist/es/dimension.mjs"
       },
       "require": {
-        "types": "./dist/cjs/factory.d.ts",
-        "default": "./dist/cjs/factory.js"
+        "types": "./dist/cjs/dimension.d.ts",
+        "default": "./dist/cjs/dimension.js"
       }
     },
     "./measurement": {

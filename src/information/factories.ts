@@ -1,5 +1,5 @@
 import {linearConversion} from "../conversion";
-import {DimensionMeasurement} from "../factory";
+import {DimensionMeasurement} from "../dimension";
 import {InformationSymbol} from "./symbols";
 
 export const information = DimensionMeasurement<InformationSymbol>({

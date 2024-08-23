@@ -1,5 +1,5 @@
 import {linearConversion} from "../conversion";
-import {DimensionMeasurement} from "../factory";
+import {DimensionMeasurement} from "../dimension";
 import {IlluminanceSymbol} from "./symbols";
 
 export const illuminance = DimensionMeasurement<IlluminanceSymbol>({

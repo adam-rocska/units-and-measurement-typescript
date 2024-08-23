@@ -1,5 +1,5 @@
 import {linearConversion} from "../conversion";
-import {DimensionMeasurement} from "../factory";
+import {DimensionMeasurement} from "../dimension";
 import {ElectricPotentialDifferenceSymbol} from "./symbols";
 
 export const electricPotentialDifference = DimensionMeasurement<ElectricPotentialDifferenceSymbol>({

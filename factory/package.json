@@ -1,7 +1,7 @@
 {
-  "main": "../dist/cjs/factory.js",
-  "module": "../dist/es/factory.mjs",
-  "types": "../dist/cjs/factory.d.ts",
+  "main": "../dist/cjs/dimension.js",
+  "module": "../dist/es/dimension.mjs",
+  "types": "../dist/cjs/dimension.d.ts",
   "private": true
 }
 

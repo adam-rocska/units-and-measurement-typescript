@@ -1,6 +1,6 @@
 export * as conversion from "./conversion";
 export * as measurement from "./measurement";
-export * as factory from "./factory";
+export * as dimension from "./dimension";
 
 export * from "./acceleration";
 export * from "./angle";
