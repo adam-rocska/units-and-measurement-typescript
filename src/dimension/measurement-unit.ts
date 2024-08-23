@@ -1,10 +1,10 @@
-import {unit as unitOf, value as valueOf} from "../measurement";
+import {unit, value} from "../measurement";
 import {Measurement} from "./measurement-type";
 
 export const UnitMeasurement = <
   Unit extends string
 >(
-  unit: Unit
-): Measurement<Unit> => v => typeof v === "number"
-  ? [v, unit]
-  : [valueOf(v), unitOf(v)];
+  u: Unit
+): Measurement<Unit, Unit> => v => typeof v === "number"
+  ? [v, u]
+  : [value(v), unit(v)];

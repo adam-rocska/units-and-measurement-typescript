@@ -37,7 +37,7 @@ export const value = <
   Value extends number = number
 >(
   measurement: String<Unit, Value>
-): Value => parseFloat(measurement) as Value; // This type-cast should be safe to the best of my knowledge.
+): Value => parseFloat(measurement) as Value; // This type-cast should be safe, since String<Unit, Value> is supposed to prevent a non-matching type.
 
 export const unit = <
   Unit extends string,
@@ -45,7 +45,7 @@ export const unit = <
 >(
   measurement: String<Unit, Value>
 ): Unit => {
-  return measurement.slice(value(measurement).toString().length) as Unit;
+  return measurement.slice(value(measurement).toString().length) as Unit; // This type-cast should be safe, since String<Unit, Value> is supposed to prevent a non-matching type.
 };
 
 export function toFixed<

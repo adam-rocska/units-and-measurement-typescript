@@ -1,28 +1,26 @@
-import {isString, String, value as valueFromString, unit as unitFromString, toFixed as stringToFixed, toExponential as stringToExponential, toPrecision as stringToPrecision} from "./string";
-import {isTuple, Tuple, value as valueFromTuple, unit as unitFromTuple, toFixed as tupleToFixed, toExponential as tupleToExponential, toPrecision as tupleToPrecision} from "./tuple";
+import * as string from "./string";
+import * as tuple from "./tuple";
 
 export type Measurement<
   Unit extends string,
   Value extends number = number
 > =
-  | Tuple<Unit, Value>
-  | String<Unit, Value>
+  | tuple.Tuple<Unit, Value>
+  | string.String<Unit, Value>
   ;
 
 export const toTuple = <
   Unit extends string,
   Value extends number = number
->(measurement: Measurement<Unit, Value>): Tuple<Unit, Value> => {
+>(measurement: Measurement<Unit, Value>): tuple.Tuple<Unit, Value> => {
   if (measurement instanceof Array) return [...measurement];
-  const value = parseFloat(measurement) as Value;
-  const unit = measurement.slice(value.toString().length) as Unit;
-  return [value, unit];
+  return [string.value(measurement), string.unit(measurement)];
 };
 
 export const toString = <
   Unit extends string,
   Value extends number = number
->(measurement: Measurement<Unit, Value>): String<Unit, Value> => {
+>(measurement: Measurement<Unit, Value>): string.String<Unit, Value> => {
   if (measurement instanceof Array) return `${measurement[0]}${measurement[1]}`;
   return measurement;
 };
@@ -35,8 +33,8 @@ export const isMeasurement = <
   unit?: Unit,
   value?: Value
 ): candidate is Measurement<Unit, Value> => {
-  if (isTuple(candidate, unit, value)) return true;
-  if (isString(candidate, unit, value)) return true;
+  if (tuple.isTuple(candidate, unit, value)) return true;
+  if (string.isString(candidate, unit, value)) return true;
   return false;
 };
 
@@ -46,8 +44,8 @@ export const value = <
 >(
   measurement: Measurement<Unit, Value>
 ): Value => {
-  if (isTuple(measurement)) return valueFromTuple(measurement);
-  return valueFromString(measurement);
+  if (tuple.isTuple(measurement)) return tuple.value(measurement);
+  return string.value(measurement);
 };
 
 export const unit = <
@@ -56,58 +54,34 @@ export const unit = <
 >(
   measurement: Measurement<Unit, Value>
 ): Unit => {
-  if (isTuple(measurement)) return unitFromTuple(measurement);
-  return unitFromString(measurement);
+  if (tuple.isTuple(measurement)) return tuple.unit(measurement);
+  return string.unit(measurement);
 };
 
 export function toFixed<Unit extends string,>(
-  measurement: Tuple<Unit, number>,
-  fractionDigits?: number
-): Tuple<Unit, number>;
-export function toFixed<Unit extends string,>(
-  measurement: String<Unit, number>,
-  fractionDigits?: number
-): String<Unit, number>;
-export function toFixed<Unit extends string,>(
   measurement: Measurement<Unit, number>,
   fractionDigits?: number
-): Measurement<Unit, number> {
-  if (isTuple(measurement)) return tupleToFixed(measurement, fractionDigits);
-  return stringToFixed(measurement, fractionDigits);
+): typeof measurement {
+  if (tuple.isTuple(measurement)) return tuple.toFixed(measurement, fractionDigits);
+  return string.toFixed(measurement, fractionDigits);
 }
 
-export function toExponential<Unit extends string,>(
-  measurement: Tuple<Unit, number>,
-  fractionDigits?: number
-): Tuple<Unit, number>;
-export function toExponential<Unit extends string,>(
-  measurement: String<Unit, number>,
-  fractionDigits?: number
-): String<Unit, number>;
 export function toExponential<
   Unit extends string
 >(
   measurement: Measurement<Unit, number>,
   fractionDigits?: number
-): Measurement<Unit, number> {
-  if (isTuple(measurement)) return tupleToExponential(measurement, fractionDigits);
-  return stringToExponential(measurement, fractionDigits);
+): typeof measurement {
+  if (tuple.isTuple(measurement)) return tuple.toExponential(measurement, fractionDigits);
+  return string.toExponential(measurement, fractionDigits);
 }
 
-export function toPrecision<Unit extends string,>(
-  measurement: Tuple<Unit, number>,
-  precision?: number
-): Tuple<Unit, number>;
-export function toPrecision<Unit extends string,>(
-  measurement: String<Unit, number>,
-  precision?: number
-): String<Unit, number>;
 export function toPrecision<
   Unit extends string
 >(
   measurement: Measurement<Unit, number>,
   precision?: number
-): Measurement<Unit, number> {
-  if (isTuple(measurement)) return tupleToPrecision(measurement, precision);
-  return stringToPrecision(measurement, precision);
+): typeof measurement {
+  if (tuple.isTuple(measurement)) return tuple.toPrecision(measurement, precision);
+  return string.toPrecision(measurement, precision);
 }
