@@ -1,0 +1,9 @@
+{
+  "jest.runMode": {
+    "showInlineError": true,
+    "runAllTestsOnStartup": true,
+    "coverage": true,
+    "type": "on-demand",
+    "deferred": true
+  }
+}

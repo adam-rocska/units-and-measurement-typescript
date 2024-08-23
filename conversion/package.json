@@ -1,0 +1,7 @@
+{
+  "main": "../dist/cjs/conversion.js",
+  "module": "../dist/es/conversion.mjs",
+  "types": "../dist/cjs/conversion.d.ts",
+  "private": true
+}
+

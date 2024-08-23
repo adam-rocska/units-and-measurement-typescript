@@ -4,18 +4,19 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
-dependencies:
-  '@adam-rocska/invertible':
-    specifier: ^1.1.1
-    version: 1.1.1
-
 devDependencies:
+  '@adam-rocska/markdown-table':
+    specifier: ^1.0.1
+    version: 1.0.1
   '@arethetypeswrong/cli':
     specifier: ^0.15.4
     version: 0.15.4
   '@swc/jest':
     specifier: ^0.2.36
     version: 0.2.36(@swc/core@1.7.10)
+  '@tsconfig/strictest':
+    specifier: ^2.0.5
+    version: 2.0.5
   '@types/jest':
     specifier: ^29.5.12
     version: 29.5.12
@@ -46,9 +47,9 @@ devDependencies:
 
 packages:
 
-  /@adam-rocska/invertible@1.1.1:
-    resolution: {integrity: sha512-hlqwRX/xMP3eaBVC/K2PWH3DFkf+NYvpoGq/axUDFLyTcRe/7RTvi3R//Wzdz/1z0Ad+06JQNwtXWWE6m2GINw==}
-    dev: false
+  /@adam-rocska/markdown-table@1.0.1:
+    resolution: {integrity: sha512-UQb076e3HAXNF2a5e2ALEhjOIF62Xnz8oQBc9T90iE9W6ShfB3brFIB9J9Licu9Pmr6WBae7SaQCFADk/0UPCw==}
+    dev: true
 
   /@ampproject/remapping@2.3.0:
     resolution: {integrity: sha512-30iZtAPgz+LTIYoeivqYo853f02jBYSd5uGnGpkFV0M3xOt9aN73erkgYAmZU43x4VfqcnLxW9Kpg3R5LC4YYw==}
@@ -1164,6 +1165,10 @@ packages:
     resolution: {integrity: sha512-wBJA+SdtkbFhHjTMYH+dEH1y4VpfGdAc2Kw/LK09i9bXd/K6j6PkDcFCEzb6iVfZMkPRrl/q0e3toqTAJdkIVA==}
     dependencies:
       '@swc/counter': 0.1.3
+    dev: true
+
+  /@tsconfig/strictest@2.0.5:
+    resolution: {integrity: sha512-ec4tjL2Rr0pkZ5hww65c+EEPYwxOi4Ryv+0MtjeaSQRJyq322Q27eOQiFbuNgw2hpL4hB1/W/HBGk3VKS43osg==}
     dev: true
 
   /@types/babel__core@7.20.5:
