@@ -9,7 +9,7 @@ describe('Object', () => {
     });
 
     it("should accept a tuple", () => {
-      const measurement = new Object(5.5, "in");
+      const measurement = new Object([5.5, "in"]);
       expect(measurement.value).toEqual(5.5);
       expect(measurement.unit).toEqual("in");
     });
