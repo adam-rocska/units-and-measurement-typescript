@@ -21,6 +21,12 @@ describe("MeasurementObject", () => {
       expect(measurement.value).toEqual(5.5);
       expect(measurement.unit).toEqual("in");
     });
+
+    it("should accept a MeasurementObject", () => {
+      const measurement = new MeasurementObject(new MeasurementObject(5.5, "in"));
+      expect(measurement.value).toEqual(5.5);
+      expect(measurement.unit).toEqual("in");
+    });
   });
 
   /// MARK: Number Conformance Tests

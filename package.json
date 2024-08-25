@@ -374,6 +374,9 @@
         "@swc/jest"
       ]
     },
+    "collectCoverageFrom": [
+      "src/**/*.ts"
+    ],
     "testPathIgnorePatterns": [
       "/node_modules/"
     ],

@@ -1,26 +1,24 @@
-import {type String} from "./string";
 import {type Tuple} from "./tuple";
 import {type Measurement, unit, value} from "./measurement";
 
 export class MeasurementObject<Unit extends string, Value extends number> implements Number, Tuple<Unit, Value> {
-  private measurement: Tuple<Unit, Value>;
+  protected readonly measurement: Tuple<Unit, Value>;
 
-  public get value(): Value {return this.measurement[0];}
-  public set value(value: Value) {this.measurement = [value, this.unit];}
-
-  public get unit(): Unit {return this.measurement[1];}
-  public set unit(unit: Unit) {this.measurement = [this.value, unit];}
+  public get value(): Value {return value(this.measurement);}
+  public get unit(): Unit {return unit(this.measurement);}
 
   /// MARK: Constructor
 
-  constructor(measurement: String<Unit, Value>);
-  constructor(measurement: Tuple<Unit, Value>);
+  constructor(measurement: Measurement<Unit, Value>);
   constructor(value: Value, unit: Unit);
-  constructor(...args: any[]) {
-    const [v, u] = args;
-    this.measurement = u === undefined
-      ? [value(v), unit(v)]
-      : [v, u];
+  constructor(
+    ...[arg1, arg2]:
+      | [arg1: Measurement<Unit, Value>]
+      | [arg1: Value, arg2: Unit]
+  ) {
+    this.measurement = typeof arg1 === "number"
+      ? [arg1, arg2!]
+      : [value(arg1), unit(arg1)];
   }
 
   /// MARK: Number Conformance

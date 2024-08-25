@@ -160,10 +160,10 @@ describe("toFixed", () => {
     expect(actual).toStrictEqual(expected);
   });
 
-  it("returns a string measurement with a fixed value and no decimal places", () => {
-    const input: Measurement<"m", 1> = "1m";
-    const expected: String<"m", number> = "1m";
-    const actual = toFixed(input, 0);
+  it("returns an object measurement with a fixed value", () => {
+    const input = new MeasurementObject(1, "m");
+    const expected = new MeasurementObject(1.00, "m");
+    const actual = toFixed(input, 2);
     expect(actual).toStrictEqual(expected);
   });
 });
@@ -183,10 +183,10 @@ describe("toExponential", () => {
     expect(actual).toStrictEqual(expected);
   });
 
-  it("returns a string measurement with an exponential value and a precise number of decimal places", () => {
-    const input: Measurement<"m", 1> = "1m";
-    const expected: String<"m", number> = "1.0e+0m";
-    const actual = toExponential(input, 1);
+  it("returns an object measurement with an exponential value", () => {
+    const input = new MeasurementObject(1, "m");
+    const expected = new MeasurementObject(1e+0, "m");
+    const actual = toExponential(input);
     expect(actual).toStrictEqual(expected);
   });
 });
@@ -206,9 +206,9 @@ describe("toPrecision", () => {
     expect(actual).toStrictEqual(expected);
   });
 
-  it("returns a string measurement with a precise value and a precise number of decimal places", () => {
-    const input: Measurement<"m", 1> = "1m";
-    const expected: String<"m", number> = "1.0m";
+  it("returns an object measurement with a precise value", () => {
+    const input = new MeasurementObject(1, "m");
+    const expected = new MeasurementObject(1.0, "m");
     const actual = toPrecision(input, 2);
     expect(actual).toStrictEqual(expected);
   });
