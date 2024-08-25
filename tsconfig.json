@@ -1,6 +1,7 @@
 {
   "extends": "@tsconfig/strictest/tsconfig.json",
   "compilerOptions": {
+    "strictNullChecks": true,
     "module": "ESNext",
     "target": "ESNext",
     "moduleResolution": "bundler",

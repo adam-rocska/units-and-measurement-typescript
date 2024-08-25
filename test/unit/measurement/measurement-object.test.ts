@@ -1,24 +1,23 @@
-import {Object} from "!src/measurement/object";
-import * as s from "!src/measurement/string";
+import {MeasurementObject} from "!src/measurement/measurement-object";
 import * as t from "!src/measurement/tuple";
 
-describe("Object", () => {
+describe("MeasurementObject", () => {
   /// MARK: Constructor tests
   describe("constructor", () => {
     it("should accept a string", () => {
-      const measurement = new Object("5.5in");
+      const measurement = new MeasurementObject("5.5in");
       expect(measurement.value).toEqual(5.5);
       expect(measurement.unit).toEqual("in");
     });
 
     it("should accept a tuple", () => {
-      const measurement = new Object([5.5, "in"]);
+      const measurement = new MeasurementObject([5.5, "in"]);
       expect(measurement.value).toEqual(5.5);
       expect(measurement.unit).toEqual("in");
     });
 
     it("should accept direct parameters", () => {
-      const measurement = new Object(5.5, "in");
+      const measurement = new MeasurementObject(5.5, "in");
       expect(measurement.value).toEqual(5.5);
       expect(measurement.unit).toEqual("in");
     });
@@ -29,7 +28,7 @@ describe("Object", () => {
   describe("Number Conformance", () => {
     describe("toString", () => {
       it("should return the VALUE of the measurement in the expected radix.", () => {
-        const measurement = new Object("5.5in");
+        const measurement = new MeasurementObject("5.5in");
         for (let i = 2; i <= 36; i++) {
           expect(measurement.toString(i)).toEqual((5.5).toString(i));
         }
@@ -38,35 +37,35 @@ describe("Object", () => {
 
     describe("toFixed", () => {
       it("should return the VALUE of the measurement with the expected number of fraction digits.", () => {
-        const measurement = new Object("5.5in");
+        const measurement = new MeasurementObject("5.5in");
         expect(measurement.toFixed(2)).toEqual((5.5).toFixed(2));
       });
     });
 
     describe("toExponential", () => {
       it("should return the VALUE of the measurement in exponential notation with the expected number of fraction digits.", () => {
-        const measurement = new Object("5.5in");
+        const measurement = new MeasurementObject("5.5in");
         expect(measurement.toExponential(2)).toEqual((5.5).toExponential(2));
       });
     });
 
     describe("toPrecision", () => {
       it("should return the VALUE of the measurement with the expected precision.", () => {
-        const measurement = new Object("5.5in");
+        const measurement = new MeasurementObject("5.5in");
         expect(measurement.toPrecision(2)).toEqual((5.5).toPrecision(2));
       });
     });
 
     describe("valueOf", () => {
       it("should return the VALUE of the measurement.", () => {
-        const measurement = new Object("5.5in");
+        const measurement = new MeasurementObject("5.5in");
         expect(measurement.valueOf()).toEqual(5.5);
       });
     });
 
     describe("toLocaleString", () => {
       it("should return the VALUE of the measurement in the expected locale.", () => {
-        const measurement = new Object("5.5in");
+        const measurement = new MeasurementObject("5.5in");
         expect(measurement.toLocaleString()).toEqual((5.5).toLocaleString());
       });
     });
@@ -74,7 +73,7 @@ describe("Object", () => {
 
   /// MARK: Tuple Conformance Tests
   describe("Tuple Conformance", () => {
-    const unit = new Object(5.5, "in");
+    const unit = new MeasurementObject(5.5, "in");
     const tuple = Reflect.get(unit, "measurement");
 
     describe("0", () => {
@@ -275,5 +274,180 @@ describe("Object", () => {
         });
       });
     });
+  });
+
+  describe("Arithmetics", () => {
+    describe("add", () => {
+      it("should add the value of the measurement to the given value", () => {
+        const measurement = new MeasurementObject(5.5, "in");
+        expect(measurement.add(5).value).toEqual(10.5);
+      });
+
+      it("should add the value of the measurement to the value of the given measurement", () => {
+        const measurement = new MeasurementObject(5.5, "in");
+        expect(measurement.add(new MeasurementObject(5, "in")).value).toEqual(10.5);
+      });
+    });
+
+    describe("subtract", () => {
+      it("should subtract the value of the measurement from the given value", () => {
+        const measurement = new MeasurementObject(5.5, "in");
+        expect(measurement.subtract(5).value).toEqual(0.5);
+      });
+
+      it("should subtract the value of the given measurement from the value of the measurement", () => {
+        const measurement = new MeasurementObject(5.5, "in");
+        expect(measurement.subtract(new MeasurementObject(5, "in")).value).toEqual(0.5);
+      });
+    });
+
+    describe("multiply", () => {
+      it("should multiply the value of the measurement by the given value", () => {
+        const measurement = new MeasurementObject(5.5, "in");
+        expect(measurement.multiply(5).value).toEqual(27.5);
+      });
+    });
+
+    describe("divide", () => {
+      it("should divide the value of the measurement by the given value", () => {
+        const measurement = new MeasurementObject(5.5, "in");
+        expect(measurement.divide(5).value).toEqual(1.1);
+      });
+    });
+
+    describe("modulo", () => {
+      it("should modulo the value of the measurement by the given value", () => {
+        const measurement = new MeasurementObject(5.5, "in");
+        expect(measurement.modulo(5).value).toEqual(0.5);
+      });
+    });
+
+    describe("power", () => {
+      it("should raise the value of the measurement to the given value", () => {
+        const measurement = new MeasurementObject(5.5, "in");
+        expect(measurement.power(2).value).toEqual(30.25);
+      });
+    });
+
+    describe("root", () => {
+      it("should root the value of the measurement by the given value", () => {
+        const measurement = new MeasurementObject(5.5, "in");
+        expect(measurement.root(2).value).toEqual(2.345207879911715);
+      });
+    });
+
+    describe("negate", () => {
+      it("should negate the value of the measurement", () => {
+        const measurement = new MeasurementObject(5.5, "in");
+        expect(measurement.negate().value).toEqual(-5.5);
+      });
+    });
+
+    describe("abs", () => {
+      it("should return the absolute value of the measurement", () => {
+        const measurement = new MeasurementObject(-5.5, "in");
+        expect(measurement.abs().value).toEqual(5.5);
+      });
+    });
+
+    describe("ceil", () => {
+      it("should ceil the value of the measurement", () => {
+        const measurement = new MeasurementObject(5.5, "in");
+        expect(measurement.ceil().value).toEqual(6);
+      });
+    });
+
+    describe("floor", () => {
+      it("should floor the value of the measurement", () => {
+        const measurement = new MeasurementObject(5.5, "in");
+        expect(measurement.floor().value).toEqual(5);
+      });
+    });
+
+    describe("round", () => {
+      it("should round the value of the measurement", () => {
+        const measurement = new MeasurementObject(5.5, "in");
+        expect(measurement.round().value).toEqual(6);
+      });
+    });
+  });
+
+  describe("Comparison Operations", () => {
+    describe("equals", () => {
+      it("should compare the value of the measurement to the given value", () => {
+        const measurement = new MeasurementObject(5.5, "in");
+        expect(measurement.equals(5.5)).toBe(true);
+        expect(measurement.equals(5)).toBe(false);
+      });
+
+      it("should compare the value of the measurement to the value of the given measurement", () => {
+        const measurement = new MeasurementObject(5.5, "in");
+        expect(measurement.equals(new MeasurementObject(5.5, "in"))).toBe(true);
+        expect(measurement.equals(new MeasurementObject(5, "in"))).toBe(false);
+      });
+    });
+
+    describe("lessThan", () => {
+      it("should compare the value of the measurement to the given value", () => {
+        const measurement = new MeasurementObject(5.5, "in");
+        expect(measurement.lessThan(5.5)).toBe(false);
+        expect(measurement.lessThan(6)).toBe(true);
+      });
+
+      it("should compare the value of the measurement to the value of the given measurement", () => {
+        const measurement = new MeasurementObject(5.5, "in");
+        expect(measurement.lessThan(new MeasurementObject(5.5, "in"))).toBe(false);
+        expect(measurement.lessThan(new MeasurementObject(6, "in"))).toBe(true);
+      });
+    });
+
+    describe("lessThanOrEqual", () => {
+      it("should compare the value of the measurement to the given value", () => {
+        const measurement = new MeasurementObject(5.5, "in");
+        expect(measurement.lessThanOrEqual(5.5)).toBe(true);
+        expect(measurement.lessThanOrEqual(6)).toBe(true);
+      });
+
+      it("should compare the value of the measurement to the value of the given measurement", () => {
+        const measurement = new MeasurementObject(5.5, "in");
+        expect(measurement.lessThanOrEqual(new MeasurementObject(5.5, "in"))).toBe(true);
+        expect(measurement.lessThanOrEqual(new MeasurementObject(6, "in"))).toBe(true);
+      });
+    });
+
+    describe("greaterThan", () => {
+      it("should compare the value of the measurement to the given value", () => {
+        const measurement = new MeasurementObject(5.5, "in");
+        expect(measurement.greaterThan(5.5)).toBe(false);
+        expect(measurement.greaterThan(6)).toBe(false);
+      });
+
+      it("should compare the value of the measurement to the value of the given measurement", () => {
+        const measurement = new MeasurementObject(5.5, "in");
+        expect(measurement.greaterThan(new MeasurementObject(5.5, "in"))).toBe(false);
+        expect(measurement.greaterThan(new MeasurementObject(6, "in"))).toBe(false);
+      });
+
+      it("should compare the value of the measurement to the value of the given measurement", () => {
+        const measurement = new MeasurementObject(5.5, "in");
+        expect(measurement.greaterThan(new MeasurementObject(5, "in"))).toBe(true);
+        expect(measurement.greaterThan(new MeasurementObject(6, "in"))).toBe(false);
+      });
+    });
+
+    describe("greaterThanOrEqual", () => {
+      it("should compare the value of the measurement to the given value", () => {
+        const measurement = new MeasurementObject(5.5, "in");
+        expect(measurement.greaterThanOrEqual(5.5)).toBe(true);
+        expect(measurement.greaterThanOrEqual(6)).toBe(false);
+      });
+
+      it("should compare the value of the measurement to the value of the given measurement", () => {
+        const measurement = new MeasurementObject(5.5, "in");
+        expect(measurement.greaterThanOrEqual(new MeasurementObject(5.5, "in"))).toBe(true);
+        expect(measurement.greaterThanOrEqual(new MeasurementObject(6, "in"))).toBe(false);
+      });
+    });
+
   });
 });
