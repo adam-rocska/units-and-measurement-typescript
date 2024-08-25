@@ -1,3 +1,4 @@
+export {MeasurementObject} from "./measurement-object";
 export {
   type Measurement,
   isMeasurement,
