@@ -1,6 +1,6 @@
 import {electricPotentialDifference} from "!src/electric-potential-difference/factories";
 import {megavolts, kilovolts, volts, millivolts, microvolts} from "!src/electric-potential-difference/factories";
-import {linearConversion} from "!src/conversion";
+import {linearConversion} from "!src/dimension/conversion";
 
 describe("!src/electric-potential-difference/factories aliasing", () => {
   describe('electricPotentialDifference["MV"]', () => {

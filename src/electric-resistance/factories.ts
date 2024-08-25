@@ -1,5 +1,4 @@
-import {linearConversion} from "../conversion";
-import {DimensionMeasurement} from "../dimension";
+import {linearConversion, DimensionMeasurement} from "../dimension";
 import {ElectricResistanceSymbol} from "./symbols";
 
 export const electricResistance = DimensionMeasurement<ElectricResistanceSymbol>({

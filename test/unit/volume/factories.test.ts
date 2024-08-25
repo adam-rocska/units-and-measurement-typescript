@@ -1,6 +1,6 @@
 import {volume} from "!src/volume/factories";
 import {megaliters, kiloliters, liters, deciliters, centiliters, milliliters, cubicKilometers, cubicMeters, cubicDecimeters, cubicMillimeters, cubicInches, cubicFeet, cubicYards, cubicMiles, acreFeet, bushels, teaspoons, tablespoons, fluidOunces, cups, pints, quarts, gallons, imperialTeaspoons, imperialTablespoons, imperialFluidOunces, imperialPints, imperialQuarts, imperialGallons, metricCups} from "!src/volume/factories";
-import {linearConversion} from "!src/conversion";
+import {linearConversion} from "!src/dimension/conversion";
 
 describe("!src/volume/factories aliasing", () => {
   describe('volume["ML"]', () => {

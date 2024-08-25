@@ -1,4 +1,4 @@
-export * as conversion from "./conversion";
+export * as conversion from "./dimension/conversion";
 export * as measurement from "./measurement";
 export * as dimension from "./dimension";
 

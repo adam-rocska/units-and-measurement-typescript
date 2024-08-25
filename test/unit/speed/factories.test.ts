@@ -1,6 +1,6 @@
 import {speed} from "!src/speed/factories";
 import {metersPerSecond, kilometersPerHour, milesPerHour, knots} from "!src/speed/factories";
-import {linearConversion} from "!src/conversion";
+import {linearConversion} from "!src/dimension/conversion";
 
 describe("!src/speed/factories aliasing", () => {
   describe('speed["m/s"]', () => {

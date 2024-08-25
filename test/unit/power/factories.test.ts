@@ -1,6 +1,6 @@
 import {power} from "!src/power/factories";
 import {terawatts, gigawatts, megawatts, kilowatts, watts, milliwatts, microwatts, nanowatts, picowatts, femtowatts, horsepower} from "!src/power/factories";
-import {linearConversion} from "!src/conversion";
+import {linearConversion} from "!src/dimension/conversion";
 
 describe("!src/power/factories aliasing", () => {
   describe('power["TW"]', () => {

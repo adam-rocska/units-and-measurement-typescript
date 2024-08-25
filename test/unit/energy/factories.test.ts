@@ -1,6 +1,6 @@
 import {energy} from "!src/energy/factories";
 import {kilojoules, joules, kilocalories, calories, kilowattHours, wattHours, electronvolts} from "!src/energy/factories";
-import {linearConversion} from "!src/conversion";
+import {linearConversion} from "!src/dimension/conversion";
 
 describe("!src/energy/factories aliasing", () => {
   describe('energy["kJ"]', () => {

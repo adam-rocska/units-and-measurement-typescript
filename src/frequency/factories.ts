@@ -1,5 +1,4 @@
-import {linearConversion} from "../conversion";
-import {DimensionMeasurement} from "../dimension";
+import {linearConversion, DimensionMeasurement} from "../dimension";
 import {FrequencySymbol} from "./symbols";
 
 export const frequency = DimensionMeasurement<FrequencySymbol>({

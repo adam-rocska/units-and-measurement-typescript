@@ -1,5 +1,5 @@
 import {unit, value} from "../measurement";
-import {Conversions} from "../conversion";
+import {Conversions} from "./conversion";
 import {type Measurement} from "./measurement-type";
 import {Dimension} from "./dimension";
 import {DimensionMeasurementObject} from "./dimension-measurement-object";

@@ -1,6 +1,6 @@
 import {frequency} from "!src/frequency/factories";
 import {terahertz, gigahertz, megahertz, kilohertz, hertz, millihertz, microhertz, nanohertz} from "!src/frequency/factories";
-import {linearConversion} from "!src/conversion";
+import {linearConversion} from "!src/dimension/conversion";
 
 describe("!src/frequency/factories aliasing", () => {
   describe('frequency["THz"]', () => {

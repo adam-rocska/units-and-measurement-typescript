@@ -1,6 +1,6 @@
 import {duration} from "!src/duration/factories";
 import {seconds, minutes, hours} from "!src/duration/factories";
-import {linearConversion} from "!src/conversion";
+import {linearConversion} from "!src/dimension/conversion";
 
 describe("!src/duration/factories aliasing", () => {
   describe('duration["sec"]', () => {

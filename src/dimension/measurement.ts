@@ -1,4 +1,4 @@
-import {Conversions} from "../conversion";
+import {Conversions} from "./conversion";
 import {type Measurement as MeasurementType} from "./measurement-type";
 import {Dimension} from "./dimension";
 import {UnitMeasurement} from "./measurement-unit";

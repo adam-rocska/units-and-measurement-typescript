@@ -1,6 +1,6 @@
 import {pressure} from "!src/pressure/factories";
 import {newtonsPerMetersSquared, gigapascals, megapascals, kilopascals, hectopascals, inchesOfMercury, bars, millibars, millimetersOfMercury, poundsForcePerSquareInch} from "!src/pressure/factories";
-import {linearConversion} from "!src/conversion";
+import {linearConversion} from "!src/dimension/conversion";
 
 describe("!src/pressure/factories aliasing", () => {
   describe('pressure["N/m²"]', () => {

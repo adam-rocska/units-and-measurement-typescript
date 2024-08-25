@@ -1,6 +1,6 @@
 import {length} from "!src/length/factories";
 import {megameters, kilometers, hectometers, decameters, meters, decimeters, centimeters, millimeters, micrometers, nanometers, picometers, twips, points, picas, inches, feet, yards, miles, scandinavianMiles, lightyears, nauticalMiles, fathoms, furlongs, astronomicalUnits, parsecs} from "!src/length/factories";
-import {linearConversion} from "!src/conversion";
+import {linearConversion} from "!src/dimension/conversion";
 
 describe("!src/length/factories aliasing", () => {
   describe('length["Mm"]', () => {

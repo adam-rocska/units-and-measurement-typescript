@@ -1,6 +1,6 @@
 import {concentrationMass} from "!src/concentration-mass/factories";
 import {gramsPerLiter, milligramsPerDeciliter} from "!src/concentration-mass/factories";
-import {linearConversion} from "!src/conversion";
+import {linearConversion} from "!src/dimension/conversion";
 
 describe("!src/concentration-mass/factories aliasing", () => {
   describe('concentrationMass["g/L"]', () => {

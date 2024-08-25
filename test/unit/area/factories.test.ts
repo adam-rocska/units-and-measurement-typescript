@@ -1,6 +1,6 @@
 import {area} from "!src/area/factories";
 import {squareMegameters, squareKilometers, squareMeters, squareCentimeters, squareMillimeters, squareMicrometers, squareNanometers, squareInches, squareFeet, squareYards, squareMiles, acres, ares, hectares} from "!src/area/factories";
-import {linearConversion} from "!src/conversion";
+import {linearConversion} from "!src/dimension/conversion";
 
 describe("!src/area/factories aliasing", () => {
   describe('area["Mm²"]', () => {

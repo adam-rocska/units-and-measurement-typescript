@@ -1,6 +1,6 @@
 import {electricCharge} from "!src/electric-charge/factories";
 import {coulombs, megaampereHours, kiloampereHours, ampereHours, milliampereHours, microampereHours} from "!src/electric-charge/factories";
-import {linearConversion} from "!src/conversion";
+import {linearConversion} from "!src/dimension/conversion";
 
 describe("!src/electric-charge/factories aliasing", () => {
   describe('electricCharge["C"]', () => {

@@ -1,5 +1,4 @@
-import {linearConversion} from "../conversion";
-import {DimensionMeasurement} from "../dimension";
+import {linearConversion, DimensionMeasurement} from "../dimension";
 import {MassSymbol} from "./symbols";
 
 export const mass = DimensionMeasurement<MassSymbol>({

@@ -1,6 +1,6 @@
 import {information} from "!src/information/factories";
 import {bits, bytes, kilobits, megabits, gigabits, terabits, petabits, exabits, zettabits, yottabits, kibibits, kilobytes, mebibits, megabytes, gibibits, gigabytes, tebibits, terabytes, pebibits, petabytes, exbibits, exabytes, zebibits, zettabytes, yobibits, yottabytes} from "!src/information/factories";
-import {linearConversion} from "!src/conversion";
+import {linearConversion} from "!src/dimension/conversion";
 
 describe("!src/information/factories aliasing", () => {
   describe('information["b"]', () => {

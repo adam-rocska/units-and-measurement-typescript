@@ -1,6 +1,6 @@
 import {temperature} from "!src/temperature/factories";
 import {kelvin, celsius, fahrenheit, rankine} from "!src/temperature/factories";
-import {linearConversion} from "!src/conversion";
+import {linearConversion} from "!src/dimension/conversion";
 
 describe("!src/temperature/factories aliasing", () => {
   describe('temperature["K"]', () => {

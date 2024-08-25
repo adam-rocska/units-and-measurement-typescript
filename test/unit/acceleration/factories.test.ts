@@ -1,6 +1,6 @@
 import {acceleration} from "!src/acceleration/factories";
 import {metersPerSecondSquared, gravity} from "!src/acceleration/factories";
-import {linearConversion} from "!src/conversion";
+import {linearConversion} from "!src/dimension/conversion";
 
 describe("!src/acceleration/factories aliasing", () => {
   describe('acceleration["m/s²"]', () => {

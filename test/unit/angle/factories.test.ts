@@ -1,6 +1,6 @@
 import {angle} from "!src/angle/factories";
 import {degrees, arcMinutes, arcSeconds, radians, gradians, revolutions} from "!src/angle/factories";
-import {linearConversion} from "!src/conversion";
+import {linearConversion} from "!src/dimension/conversion";
 
 describe("!src/angle/factories aliasing", () => {
   describe('angle["°"]', () => {

@@ -1,6 +1,6 @@
 import {mass} from "!src/mass/factories";
 import {kilograms, grams, decigrams, centigrams, milligrams, micrograms, nanograms, picograms, ounces, pounds, stones, metricTons, shortTons, carats, ouncesTroy, slugs} from "!src/mass/factories";
-import {linearConversion} from "!src/conversion";
+import {linearConversion} from "!src/dimension/conversion";
 
 describe("!src/mass/factories aliasing", () => {
   describe('mass["kg"]', () => {

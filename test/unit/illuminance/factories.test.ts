@@ -1,6 +1,6 @@
 import {illuminance} from "!src/illuminance/factories";
 import {lux} from "!src/illuminance/factories";
-import {linearConversion} from "!src/conversion";
+import {linearConversion} from "!src/dimension/conversion";
 
 describe("!src/illuminance/factories aliasing", () => {
   describe('illuminance["lx"]', () => {

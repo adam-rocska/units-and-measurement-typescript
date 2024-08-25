@@ -1,6 +1,6 @@
 import {electricResistance} from "!src/electric-resistance/factories";
 import {megaohms, kiloohms, ohms, milliohms, microohms} from "!src/electric-resistance/factories";
-import {linearConversion} from "!src/conversion";
+import {linearConversion} from "!src/dimension/conversion";
 
 describe("!src/electric-resistance/factories aliasing", () => {
   describe('electricResistance["MΩ"]', () => {

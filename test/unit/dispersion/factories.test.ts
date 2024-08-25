@@ -1,6 +1,6 @@
 import {dispersion} from "!src/dispersion/factories";
 import {partsPerMillion, partsPerBillion, partsPerTrillion} from "!src/dispersion/factories";
-import {linearConversion} from "!src/conversion";
+import {linearConversion} from "!src/dimension/conversion";
 
 describe("!src/dispersion/factories aliasing", () => {
   describe('dispersion["ppm"]', () => {

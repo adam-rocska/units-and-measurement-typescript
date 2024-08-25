@@ -1,6 +1,6 @@
 import {electricCurrent} from "!src/electric-current/factories";
 import {megaamperes, kiloamperes, amperes, milliamperes, microamperes} from "!src/electric-current/factories";
-import {linearConversion} from "!src/conversion";
+import {linearConversion} from "!src/dimension/conversion";
 
 describe("!src/electric-current/factories aliasing", () => {
   describe('electricCurrent["MA"]', () => {
