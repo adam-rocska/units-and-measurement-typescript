@@ -9,7 +9,8 @@ export function DimensionMeasurement<
   conversions: Conversions<Unit>
 ): Dimension<Unit> {
   return Array
-    .from(Object.keys(conversions) as Unit[])
+    .from(Object.keys(conversions))
+    .filter((key: string): key is keyof Conversions<Unit> => key in conversions) // Ok, dumb, but at least I could get rid of one more type casting.
     .reduce(
       (dimension, toUnit) => ({
         ...dimension,
