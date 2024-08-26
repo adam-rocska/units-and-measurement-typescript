@@ -26,3 +26,20 @@ export const measurement = <
     }
   }
 );
+
+export const isMeasurement = <
+  Unit extends string
+>(
+  candidate: any,
+  units: Unit[]
+): candidate is Measurement<Unit> => {
+  if (typeof candidate !== "object") return false;
+  if (candidate === null) return false;
+
+  for (const unit of units) {
+    if (!(unit in candidate)) return false;
+    if (typeof candidate[unit] !== "number") return false;
+  }
+
+  return true;
+};
