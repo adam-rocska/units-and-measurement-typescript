@@ -20,7 +20,7 @@ export const dimension = <Units extends string>(
         unit: Unit
       ): MeasurementFactory<Units> => (
         value: number
-      ): Measurement<Units, Unit> => measurement(
+      ): Measurement<Units> => measurement(
         conversions,
         value,
         unit
