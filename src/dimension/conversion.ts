@@ -9,7 +9,9 @@ export type Conversion = readonly [
 /**
  * A record of conversion tuples for each unit.
  */
-export type Conversions<Unit extends string> = {[unit in Unit]: Conversion};
+export type Conversions<Unit extends string> = {
+  readonly [unit in Unit]: Conversion
+};
 
 /**
  * Creates a linear conversion tuple, where:
