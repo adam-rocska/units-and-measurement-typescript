@@ -1,7 +1,0 @@
-{
-  "main": "../dist/cjs/mass.js",
-  "module": "../dist/es/mass.mjs",
-  "types": "../dist/cjs/mass.d.ts",
-  "private": true
-}
-

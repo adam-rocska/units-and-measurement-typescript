@@ -1,7 +1,0 @@
-{
-  "main": "../dist/cjs/pressure.js",
-  "module": "../dist/es/pressure.mjs",
-  "types": "../dist/cjs/pressure.d.ts",
-  "private": true
-}
-

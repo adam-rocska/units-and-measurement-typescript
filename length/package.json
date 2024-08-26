@@ -1,7 +1,0 @@
-{
-  "main": "../dist/cjs/length.js",
-  "module": "../dist/es/length.mjs",
-  "types": "../dist/cjs/length.d.ts",
-  "private": true
-}
-

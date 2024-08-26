@@ -1,7 +1,0 @@
-{
-  "main": "../dist/cjs/electric-current.js",
-  "module": "../dist/es/electric-current.mjs",
-  "types": "../dist/cjs/electric-current.d.ts",
-  "private": true
-}
-

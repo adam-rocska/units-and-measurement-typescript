@@ -1,7 +1,0 @@
-{
-  "main": "../dist/cjs/measurement.js",
-  "module": "../dist/es/measurement.mjs",
-  "types": "../dist/cjs/measurement.d.ts",
-  "private": true
-}
-
