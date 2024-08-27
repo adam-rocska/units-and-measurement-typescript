@@ -8,6 +8,8 @@ export type Conversion = readonly [
 
 /**
  * A record of conversion tuples for each unit.
+ * The first conversion you provide is considered to be the
+ * base unit.
  */
 export type Conversions<Unit extends string> = {
   readonly [unit in Unit]: Conversion

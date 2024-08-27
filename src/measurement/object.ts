@@ -2,8 +2,8 @@ export type Measurement<
   Unit extends string,
   Value extends number = number
 > = {
-  readonly value: Value,
-  readonly unit: Unit
+  value: Value,
+  unit: Unit
 }
 
 export const measurement = <
@@ -19,6 +19,7 @@ export const isMeasurement = <
   unit?: Unit,
   value?: Value
 ): candidate is Measurement<Unit, Value> => {
+  if (typeof candidate !== "object") return false;
   if (!("unit" in candidate)) return false;
   if (!("value" in candidate)) return false;
 
