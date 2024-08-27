@@ -1,22 +1,22 @@
-import {isMeasurement, unit, value} from "!src/measurement";
-import * as string from "!src/measurement/string";
-import * as tuple from "!src/measurement/tuple";
-import * as object from "!src/measurement/object";
-import * as dimension from "!src/dimension/measurement";
+import {isMeasurement, unit, value, toFixed} from "!src/measurement";
 
 describe("isMeasurement", () => {
   it("should return true for a string measurement.", () => {
     expect(isMeasurement("1m")).toBe(true);
   });
+
   it("should return true for a tuple measurement.", () => {
     expect(isMeasurement([1, "m"])).toBe(true);
   });
+
   it("should return true for an object measurement.", () => {
     expect(isMeasurement({value: 1, unit: "m"})).toBe(true);
   });
 
   it("should return true for a dimension measurement.", () => {
-    expect(isMeasurement({m: 1})).toBe(true);
+    const value = 1;
+    const unit = "m";
+    expect(isMeasurement({value, unit, [unit]: value})).toBe(true);
   });
 
   it("should return false for a non-measurement.", () => {
@@ -36,7 +36,9 @@ describe("isMeasurement", () => {
   });
 
   it("should return true for a dimension measurement with the specified unit.", () => {
-    expect(isMeasurement({m: 1}, "m")).toBe(true);
+    const value = 1;
+    const unit = "m";
+    expect(isMeasurement({value, unit, [unit]: value}, "m")).toBe(true);
   });
 
   it("should return false for a string measurement with the wrong unit.", () => {
@@ -58,7 +60,14 @@ describe("value", () => {
   });
 
   it("should return the value of a dimension measurement.", () => {
-    expect(value({m: 1})).toBe(1);
+    const v = 1;
+    const u = "m";
+    expect(value({value: v, unit: u, [u]: v})).toBe(1);
+  });
+
+  /// NOTE: This test is only to make sure we're on the safe side. Normally it can't occur.
+  it("should return NaN for a non-measurement.", () => {
+    expect(value(1 as any)).toBe(NaN);
   });
 });
 
@@ -76,6 +85,12 @@ describe("unit", () => {
   });
 
   it("should return the unit of a dimension measurement.", () => {
-    expect(unit({m: 1})).toBe("m");
+    const v = 1;
+    const u = "m";
+    expect(unit({value: v, unit: u, [u]: v})).toBe("m");
+  });
+
+  it("should throw an error for a non-measurement.", () => {
+    expect(() => unit(1 as any)).toThrow("Failed to resolve the unit of the measurement.");
   });
 });

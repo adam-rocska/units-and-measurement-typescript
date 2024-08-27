@@ -14,7 +14,7 @@ export class DimensionProxyHandler<Units extends string>
     this.createMeasurement = createMeasurement;
   }
 
-  public get(
+  public override get(
     target: Dimension<Units>,
     propertyKey: PropertyKey
   ): any {

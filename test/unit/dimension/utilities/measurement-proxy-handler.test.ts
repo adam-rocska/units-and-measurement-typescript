@@ -11,6 +11,14 @@ describe("DimensionProxyHandler", () => {
     in: [jest.fn(), jest.fn()],
   };
 
+  beforeEach(() => {
+    jest.clearAllMocks();
+  });
+
+  afterEach(() => {
+    jest.clearAllMocks();
+  });
+
   function stubConversion(
     unit: StubUnits,
     direction: "toBase" | "fromBase"

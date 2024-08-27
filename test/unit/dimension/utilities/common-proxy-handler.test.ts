@@ -13,7 +13,7 @@ describe("CommonProxyHandler", () => {
   afterEach(() => {
     for (const [fn1, fn2] of Object.values(stubConversions)) {
       expect(fn1).not.toHaveBeenCalled();
-      expect(fn2).not.toHaveBeenCalled
+      expect(fn2).not.toHaveBeenCalled();
     }
     jest.clearAllMocks();
   });
@@ -74,6 +74,44 @@ describe("CommonProxyHandler", () => {
     it("should return null", () => {
       const handler = new CommonProxyHandler(stubConversions);
       expect(handler.getPrototypeOf()).toBe(null);
+    });
+  });
+
+  describe("#get", () => {
+    it("should return the value of the property", () => {
+      const handler = new CommonProxyHandler(stubConversions);
+      expect(handler.get({
+        foo: 123,
+        m: 1,
+        ft: 2,
+        in: 3,
+      } as any, "foo", undefined)).toBe(123);
+    });
+  });
+
+  describe("#getOwnPropertyDescriptor", () => {
+    it("should return the property descriptor if the property exists on the target", () => {
+      const handler = new CommonProxyHandler(stubConversions);
+      expect(handler.getOwnPropertyDescriptor({foo: 123}, "foo")).toEqual({
+        configurable: true,
+        enumerable: true,
+        value: 123,
+        writable: true,
+      });
+    });
+
+    it("should return the property descriptor if the property is a unit", () => {
+      const handler = new CommonProxyHandler(stubConversions);
+      expect(handler.getOwnPropertyDescriptor({}, "m")).toEqual({
+        configurable: true,
+        enumerable: true,
+        get: expect.any(Function),
+      });
+    });
+
+    it("should return undefined if the property is not a unit and doesn't exist on the target", () => {
+      const handler = new CommonProxyHandler(stubConversions);
+      expect(handler.getOwnPropertyDescriptor({}, "foo")).toBe(undefined);
     });
   });
 });

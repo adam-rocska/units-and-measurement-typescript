@@ -1,8 +1,9 @@
 import {Conversions} from "!src/dimension/conversion";
-import {dimension} from "!src/dimension/dimension";
-import {measurement, isMeasurement, toFixed, dimensionSymbol, conversionSymbol, value, unit} from "!src/dimension/dimension";
+import {measurement, isMeasurement, toFixed, dimension} from "!src/dimension/dimension";
+import * as o from "!src/measurement/object";
 
 
+/// MARK: Dimension Tests
 describe("dimension", () => {
   const units = ["m", "cm", "in"] as const;
   type Units = typeof units[number];
@@ -21,11 +22,11 @@ describe("dimension", () => {
   });
 
   it("should not allow setting properties", () => {
-    expect(() => length["m"] = 2).toThrow();
+    expect(() => (length as any)["m"] = 2).toThrow();
   });
 
   it("should not allow deleting properties", () => {
-    expect(() => delete length["m"]).toThrow();
+    expect(() => delete (length as any)["m"]).toThrow();
   });
 
   it("should not allow setting the prototype", () => {
@@ -81,16 +82,9 @@ describe("dimension", () => {
     });
   });
 
-  it("should allow retrieving the conversions", () => {
-    expect(length[conversionSymbol]).toBe(conversions);
-  });
-
-  it("should return undefined for unknown properties", () => {
-    expect(length["random"]).toBe(undefined);
-  });
-
 });
 
+/// MARK: Measurement Tests
 describe("measurement", () => {
   const conversions: Conversions<"m" | "cm" | "in"> = {
     m: [v => v, v => v],
@@ -107,7 +101,11 @@ describe("measurement", () => {
 
   it('should have the units as its keys', () => {
     const testMeasurement = measurement(conversions, 1, "m");
-    expect(Reflect.ownKeys(testMeasurement)).toEqual(["m", "cm", "in"]);
+    expect(Reflect.ownKeys(testMeasurement)).toEqual(["value", "unit", "m", "cm", "in"]);
+    expect(Object.keys(testMeasurement)).toEqual(["m", "cm", "in"]);
+    expect(Reflect.ownKeys(testMeasurement)).toContain("cm");
+    expect(Reflect.ownKeys(testMeasurement)).toContain("m");
+    expect(Reflect.ownKeys(testMeasurement)).toContain("in");
 
     expect("m" in testMeasurement).toBe(true);
     expect("cm" in testMeasurement).toBe(true);
@@ -134,17 +132,17 @@ describe("measurement", () => {
 
   it("shouldn't allow setting random properties", () => {
     const testMeasurement = measurement(conversions, 1, "m");
-    expect(() => testMeasurement["random"] = 1).toThrow();
+    expect(() => (testMeasurement as any)["random"] = 1).toThrow();
   });
 
   it("shouldn't allow setting non number values.", () => {
     const testMeasurement = measurement(conversions, 1, "m");
-    expect(() => testMeasurement["cm"] = "1").toThrow();
+    expect(() => (testMeasurement as any)["cm"] = "1").toThrow();
   });
 
   it('should not allow deleting properties', () => {
     const testMeasurement = measurement(conversions, 1, "m");
-    expect(() => delete testMeasurement["m"]).toThrow();
+    expect(() => delete (testMeasurement as any)["m"]).toThrow();
   });
 
   it('should not allow setting the prototype', () => {
@@ -157,61 +155,21 @@ describe("measurement", () => {
     expect(Reflect.getPrototypeOf(testMeasurement)).toBe(null);
   });
 
-  it("should allow retrieving the conversions", () => {
-    const testMeasurement = measurement(conversions, 1, "m");
-    expect(testMeasurement[conversionSymbol]).toBe(conversions);
-  });
-
-  it("should allow retrieving the dimension producing it", () => {
-    const testMeasurement = measurement(conversions, 1, "m");
-    expect(testMeasurement[dimensionSymbol]).toBe(dimension(conversions));
-  });
-
   it("should return undefined for unknown properties", () => {
     const testMeasurement = measurement(conversions, 1, "m");
-    expect(testMeasurement["random"]).toBe(undefined);
-    expect(testMeasurement[Symbol("random-non-existent")]).toBe(undefined);
+    expect((testMeasurement as any)["random"]).toBe(undefined);
+    expect((testMeasurement as any)[Symbol("random-non-existent")]).toBe(undefined);
   });
-});
 
-describe("value", () => {
-  const conversions: Conversions<"m" | "cm" | "in"> = {
-    m: [v => v, v => v],
-    cm: [v => v / 100, v => v * 100],
-    in: [v => v / 39.37, v => v * 39.37]
-  };
-
-  it('should return the base value of the dimension measurement.', () => {
+  it("should conform to the «object» Measurement type.", () => {
     const testMeasurement = measurement(conversions, 1, "m");
-    expect(value(testMeasurement)).toBe(1);
-
-    testMeasurement["cm"] = 200;
-    expect(value(testMeasurement)).toBe(2);
-
-    testMeasurement["in"] = 20;
-    expect(value(testMeasurement)).toBeCloseTo(0.508);
+    expect(o.isMeasurement(testMeasurement)).toBe(true);
+    expect(testMeasurement.value).toBe(1);
+    expect(testMeasurement.unit).toBe("m");
   });
 });
 
-describe("unit", () => {
-  const conversions: Conversions<"m" | "cm" | "in"> = {
-    m: [v => v, v => v],
-    cm: [v => v / 100, v => v * 100],
-    in: [v => v / 39.37, v => v * 39.37]
-  };
-
-  it('should return the base unit of the dimension measurement.', () => {
-    const testMeasurement = measurement(conversions, 1, "m");
-    expect(unit(testMeasurement)).toBe("m");
-
-    testMeasurement["cm"] = 200;
-    expect(unit(testMeasurement)).toBe("m");
-
-    testMeasurement["in"] = 20;
-    expect(unit(testMeasurement)).toBe("m");
-  });
-});
-
+/// MARK: isMeasurement Tests
 describe("isMeasurement", () => {
   it('should return false if the provided units are empty', () => {
     expect(isMeasurement({}, [])).toBe(false);
@@ -232,12 +190,18 @@ describe("isMeasurement", () => {
     expect(isMeasurement({m: "1"}, ["m"])).toBe(false);
   });
 
-  it('should return true if the candidate is a valid measurement', () => {
-    expect(isMeasurement({m: 1}, ["m"])).toBe(true);
-  });
-
   it('should return false if the candidate is a valid measurement but has an invalid unit', () => {
     expect(isMeasurement({m: 1}, ["cm"])).toBe(false);
+  });
+
+  it('should return true if the candidate is a valid measurement', () => {
+    const unit = "m";
+    const value = 1;
+    expect(isMeasurement({unit, value, [unit]: value}, ["m"])).toBe(true);
+  });
+
+  it("should return false if the candidate doesn't conform the «object» Measurement type.", () => {
+    expect(isMeasurement({value: 1, unit: "m"}, ["m"])).toBe(false);
   });
 });
 
@@ -248,19 +212,22 @@ describe("toFixed", () => {
     in: [v => v / 39.37, v => v * 39.37]
   };
 
-  it('should return a new measurement with the values fixed', () => {
-    const testMeasurement = measurement(conversions, 1, "m");
-    const fixedMeasurement = toFixed(testMeasurement, 2);
-    expect(fixedMeasurement["m"]).toBe(1);
-    expect(fixedMeasurement["cm"]).toBe(100);
-    expect(fixedMeasurement["in"]).toBeCloseTo(39.37);
+  it("should return the measurement with the fixed number of fraction digits", () => {
+    const testM = measurement(conversions, 0.1 + 0.2, "m");
+    const testCm = measurement(conversions, 0.1 + 0.2, "cm");
+    const testIn = measurement(conversions, 0.1 + 0.2, "in");
+
+    expect(toFixed(testM, 1).m).toBeCloseTo(0.3);
+    expect(toFixed(testM, 1).cm).toBeCloseTo(30);
+    expect(toFixed(testM, 1).in).toBeCloseTo(11.81);
+
+    expect(toFixed(testCm, 1).m).toBeCloseTo(0.003);
+    expect(toFixed(testCm, 1).cm).toBeCloseTo(0.3);
+    expect(toFixed(testCm, 1).in).toBeCloseTo(0.12);
+
+    expect(toFixed(testIn, 1).m).toBeCloseTo(0.0076);
+    expect(toFixed(testIn, 1).cm).toBeCloseTo(0.76);
+    expect(toFixed(testIn, 1).in).toBeCloseTo(0.3);
   });
 
-  it('should return a new measurement with the values fixed', () => {
-    const testMeasurement = measurement(conversions, 1, "m");
-    const fixedMeasurement = toFixed(testMeasurement, 0);
-    expect(fixedMeasurement["m"]).toBe(1);
-    expect(fixedMeasurement["cm"]).toBe(100);
-    expect(fixedMeasurement["in"]).toBe(39);
-  });
 });

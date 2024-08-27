@@ -86,3 +86,17 @@ export const isMeasurement = <
 
   return isMeasurementObject(candidate);
 };
+
+export const toFixed = <
+  Units extends string
+>(
+  measurement: Measurement<Units>,
+  fractionDigits?: number
+): Measurement<Units> => {
+  const value = measurement.value.toFixed(fractionDigits);
+  const unit = measurement.unit;
+  return Object.create(measurement, {
+    value: {value, writable: true},
+    unit: {value: unit, writable: true},
+  });
+};

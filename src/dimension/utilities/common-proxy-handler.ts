@@ -12,15 +12,25 @@ export class CommonProxyHandler<T extends object, Units extends string>
   }
 
   public ownKeys(target: T): (string | symbol)[] {
-    return Object.keys(target).concat(this.units);
+    return Reflect.ownKeys(target).concat(this.units);
   }
 
   public set(_: T, p: PropertyKey, v: any, r: any): boolean {return false;}
   public deleteProperty(_: T, p: PropertyKey): boolean {return false;}
   public setPrototypeOf(target: T, v: object | null): boolean {return false;}
   public getPrototypeOf(): null {return null;}
+  public get(target: T, p: string | symbol, receiver: any) {return Reflect.get(target, p, receiver);}
+  public getOwnPropertyDescriptor(target: T, p: string | symbol): PropertyDescriptor | undefined {
+    if (p in target) return Reflect.getOwnPropertyDescriptor(target, p);
+    if (this.isUnit(p)) return {
+      enumerable: true,
+      configurable: true,
+      get: this.get.bind(this, target, p, undefined)
+    };
+    return undefined;
+  }
 
-  protected get units(): Units[] {return Object.keys(this.conversions) as Units[];}
+  protected get units(): Units[] {return Reflect.ownKeys(this.conversions) as Units[];}
   protected isUnit(candidate: any): candidate is Units {
     if (typeof candidate !== "string") return false;
     return candidate in this.conversions;

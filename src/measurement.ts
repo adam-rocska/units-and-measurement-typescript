@@ -35,14 +35,14 @@ export function value<Unit extends string>(measurement: Measurement<Unit>): numb
   if (string.isMeasurement(measurement)) return string.value(measurement);
   if (tuple.isMeasurement(measurement)) return tuple.value(measurement);
   if (object.isMeasurement(measurement)) return object.value(measurement);
-  return dimension.value(measurement);
+  return NaN;
 }
 
 export function unit<Unit extends string>(measurement: Measurement<Unit>): Unit {
   if (string.isMeasurement(measurement)) return string.unit(measurement);
   if (tuple.isMeasurement(measurement)) return tuple.unit(measurement);
   if (object.isMeasurement(measurement)) return object.unit(measurement);
-  return dimension.unit(measurement);
+  throw new Error("Failed to resolve the unit of the measurement.");
 }
 
 export function toFixed<Unit extends string>(

@@ -4,10 +4,10 @@ import {CommonProxyHandler} from "./common-proxy-handler";
 export class MeasurementProxyHandler<Units extends string>
   extends CommonProxyHandler<Measurement<Units>, Units> {
 
-  public get(
+  public override get(
     measurement: Measurement<Units>,
     propertyKey: PropertyKey
-  ) {
+  ): any {
     if (propertyKey in measurement) return measurement[propertyKey as keyof Measurement<Units>];
     if (!this.isUnit(propertyKey)) return undefined;
     const unit = propertyKey;
