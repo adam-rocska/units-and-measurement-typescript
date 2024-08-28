@@ -4,14 +4,15 @@ import * as o from "!src/object";
 
 /// MARK: Measurement Tests
 
+const units = ["m", "cm", "in"] as const;
+type Units = typeof units[number];
+const conversions: Conversions<Units> = {
+  m: [v => v, v => v],
+  cm: [v => v / 100, v => v * 100],
+  in: [v => v / 39.37, v => v * 39.37]
+};
+
 describe("measurement", () => {
-  const units = ["m", "cm", "in"] as const;
-  type Units = typeof units[number];
-  const conversions: Conversions<Units> = {
-    m: [v => v, v => v],
-    cm: [v => v / 100, v => v * 100],
-    in: [v => v / 39.37, v => v * 39.37]
-  };
 
   it("should convert between units", () => {
     const testMeasurement = measurement(conversions, 1, "m");
@@ -68,6 +69,7 @@ describe("isMeasurement", () => {
   it('should return false if the candidate is not an object', () => {
     expect(isMeasurement(1, ["m"])).toBe(false);
   });
+
   it('should return false if the candidate is null', () => {
     expect(isMeasurement(null, ["m"])).toBe(false);
   });
@@ -85,9 +87,33 @@ describe("isMeasurement", () => {
   });
 
   it('should return true if the candidate is a valid measurement', () => {
-    const unit = "m";
-    const value = 1;
-    expect(isMeasurement({unit, value, [unit]: value}, ["m"])).toBe(true);
+    const actualMeasurement = measurement(conversions, 1, "m");
+    expect(isMeasurement(actualMeasurement)).toBe(true);
+    expect(isMeasurement(actualMeasurement, units)).toBe(true);
+    expect(isMeasurement(actualMeasurement, units, "m")).toBe(true);
+  });
+
+  it("should return false if the candidate is a valid measurement but has a unit mismatch", () => {
+    const actualMeasurement = measurement(conversions, 1, "m");
+    expect(isMeasurement(actualMeasurement, units, "cm")).toBe(false);
+    expect(isMeasurement(actualMeasurement, units, "in")).toBe(false);
+    expect(isMeasurement(actualMeasurement, units, "m")).toBe(true);
+  });
+
+  it("should return false if the candidate is a valid measurement, but has a unit set mismatch", () => {
+    const actualMeasurement = measurement(conversions, 1, "m");
+    expect(isMeasurement(actualMeasurement, units.slice(1), "m")).toBe(false);
+    expect(isMeasurement(actualMeasurement, units.slice(-1), "m")).toBe(false);
+  });
+
+  it("should return false if the candidate has non-measurement fields keyed by units", () => {
+    const candidate = Object.create(
+      o.measurement(123, "m"), {
+      cm: {enumerable: true, value: 123},
+      in: {enumerable: true, value: 123},
+      m: {enumerable: true, value: 123}
+    });
+    expect(isMeasurement(candidate, units)).toBe(false);
   });
 
   it("should return false if the candidate doesn't conform the «object» Measurement type.", () => {
@@ -122,9 +148,8 @@ describe("assertIsMeasurement", () => {
   });
 
   it('should not throw if the candidate is a valid measurement', () => {
-    const unit = "m";
-    const value = 1;
-    expect(() => assertIsMeasurement({unit, value, [unit]: value}, ["m"])).not.toThrow();
+    const actualMeasurement = measurement(conversions, 1, "m");
+    expect(() => assertIsMeasurement(actualMeasurement)).not.toThrow();
   });
 
   it("should throw if the candidate doesn't conform the «object» Measurement type.", () => {

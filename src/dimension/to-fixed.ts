@@ -3,11 +3,12 @@ import * as o from "../object";
 
 export const toFixed = <
   Units extends string,
-  Unit extends Units
+  Unit extends Units,
+  Value extends number
 >(
-  measurement: Measurement<Units, Unit>,
+  measurement: Measurement<Units, Unit, Value>,
   fractionDigits?: number
-): Measurement<Units, Unit> => Object.create(
+): Measurement<Units, Unit, number> => Object.create(
   o.toFixed(measurement, fractionDigits),
   Object.getOwnPropertyDescriptors(measurement)
 );

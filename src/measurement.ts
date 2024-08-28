@@ -53,7 +53,7 @@ export const toFixed = <
   measurement: Measurement<Unit, Value>,
   fractionDigits?: number
 ): Measurement<Unit, number> => {
-  if (dimension.isMeasurement(measurement, [])) return dimension.toFixed(measurement, fractionDigits);
+  if (dimension.isMeasurement(measurement)) return dimension.toFixed(measurement, fractionDigits);
   if (string.isMeasurement(measurement)) return string.toFixed(measurement, fractionDigits);
   if (tuple.isMeasurement(measurement)) return tuple.toFixed(measurement, fractionDigits);
   return object.toFixed(measurement, fractionDigits);

@@ -27,6 +27,7 @@ export const isMeasurement = <
   value?: Value
 ): candidate is Measurement<Unit, Value> => {
   if (typeof candidate !== "object") return false;
+  if (candidate === null) return false;
   if (!("unit" in candidate)) return false;
   if (!("value" in candidate)) return false;
 

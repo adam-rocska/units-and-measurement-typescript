@@ -47,25 +47,28 @@ export const measurement = <
  * Type predicate, determining if a candidate is a dimension measurement.
  * @param candidate - The candidate to check.
  * @param units - The units of the dimension.
+ * @param unit - The unit of the measurement.
  * @returns The predicate result.
  */
 export const isMeasurement = <
-  Unit extends string
+  Units extends string,
+  Unit extends Units
 >(
   candidate: any,
-  units: readonly Unit[]
+  units?: readonly Units[],
+  unit?: Unit
 ): candidate is Measurement<Unit> => {
-  if (typeof candidate !== "object") return false;
-  if (candidate === null) return false;
-  if (units.length === 0) units = Object.keys(candidate) as Unit[];
-  if (units.length === 0) return false;
+  if (!o.isMeasurement(candidate, unit)) return false;
 
-  for (const unit of units) {
-    if (!(unit in candidate)) return false;
-    if (typeof candidate[unit] !== "number") return false;
-  }
+  if (!units) units = Object.keys(candidate) as Units[];
+  const candidateKeys = Object.keys(candidate);
 
-  return o.isMeasurement(candidate);
+  if (!units.every(unit => candidateKeys.includes(unit))) return false;
+  if (!candidateKeys.every((key: any) => units.includes(key))) return false;
+
+  if (Object.entries(candidate).some(([key, value]) => !o.isMeasurement(value, key))) return false;
+
+  return true;
 };
 
 /// MARK: Assertion
@@ -74,14 +77,17 @@ export const isMeasurement = <
  * Asserts that a candidate is a dimension measurement.
  * @param candidate - The candidate to check.
  * @param units - The units of the dimension.
+ * @param unit - The unit of the measurement.
  * @throws If the candidate is not a measurement.
  */
 export const assertIsMeasurement = <
-  Unit extends string
+  Units extends string,
+  Unit extends Units
 >(
   candidate: any,
-  units: readonly Unit[]
+  units?: readonly Units[],
+  unit?: Unit
 ): asserts candidate is Measurement<Unit> => {
-  if (isMeasurement(candidate, units)) return;
+  if (isMeasurement(candidate, units, unit)) return;
   throw new Error("Candidate is not a measurement.");
-}
+};

@@ -16,6 +16,10 @@ describe('isMeasurement', () => {
     expect(isMeasurement(measurement)).toBe(false);
   });
 
+  it("should return false if the value is null.", () => {
+    expect(isMeasurement(null)).toBe(false);
+  });
+
   it("should return false if the value doesn't have a value field.", () => {
     const measurement = {unit: "px"};
     expect(isMeasurement(measurement)).toBe(false);
