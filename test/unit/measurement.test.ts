@@ -124,7 +124,7 @@ describe("toFixed", () => {
     const toFixedTestMeasurement = toFixed(testMeasurement, 2);
     if (!d.isMeasurement(toFixedTestMeasurement, stubUnits)) {
       console.error("The measurement is not a dimension measurement.", toFixedTestMeasurement);
-      fail();
+      throw new Error("The measurement is not a dimension measurement.");
     }
     expect(toFixedTestMeasurement.m).toBeCloseTo(0.3);
     expect(toFixedTestMeasurement.cm).toBeCloseTo(30);
@@ -157,7 +157,7 @@ describe("toFixed", () => {
       const toFixedTestMeasurement = toFixed(testMeasurement);
       if (!d.isMeasurement(toFixedTestMeasurement, stubUnits)) {
         console.error("The measurement is not a dimension measurement.", toFixedTestMeasurement);
-        fail();
+        throw new Error("The measurement is not a dimension measurement.");
       }
       expect(toFixedTestMeasurement.m).toEqual(0.1 + 0.2);
       expect(toFixedTestMeasurement.cm).toEqual((0.1 + 0.2) * 100);
