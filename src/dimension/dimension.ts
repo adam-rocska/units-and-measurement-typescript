@@ -30,6 +30,10 @@ export const dimension = <Units extends string>(
 
 /// MARK: Measurement
 
+export type Alternatives<
+  Units extends string
+> = {[unit in Units]: Measurement<Units, unit, number>};
+
 /**
  * Represents a dimension measurement.
  * @template Units - The units of the dimension.
@@ -40,7 +44,7 @@ export type Measurement<
   Value extends number = number
 > =
   & o.Measurement<Unit, Value>
-  & {[unit in Units]: number};
+  & Alternatives<Units>;
 
 /**
  * Creates a dimension measurement.
