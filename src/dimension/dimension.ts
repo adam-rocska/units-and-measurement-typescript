@@ -3,6 +3,8 @@ import * as o from "../measurement/object";
 import {MeasurementProxyHandler} from "./utilities/measurement-proxy-handler";
 import {DimensionProxyHandler} from "./utilities/dimension-proxy-handler";
 
+/// MARK: Dimension
+
 /**
  * A dimension is a map of units to creation functions.
  * Each function takes a number value and returns a
@@ -25,6 +27,8 @@ export const dimension = <Units extends string>(
   Object.create(null),
   new DimensionProxyHandler(conversions, measurement)
 );
+
+/// MARK: Measurement
 
 /**
  * Represents a dimension measurement.
@@ -86,6 +90,8 @@ export const isMeasurement = <
 
   return o.isMeasurement(candidate);
 };
+
+/// MARK: Utility functions
 
 export const toFixed = <
   Units extends string
