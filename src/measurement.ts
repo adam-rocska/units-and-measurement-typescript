@@ -10,14 +10,6 @@ export type Measurement<Unit extends string, Value extends number = number> =
   | dimension.Measurement<Unit, Unit, Value>
   ;
 
-export type SpecificMeasurement<M extends Measurement<any>> =
-  M extends string.Measurement<infer U, infer V> ? string.Measurement<U, V> :
-  M extends tuple.Measurement<infer U, infer V> ? tuple.Measurement<U, V> :
-  M extends dimension.Measurement<infer D, infer U, infer V> ? dimension.Measurement<D, U, V> :
-  M extends object.Measurement<infer U, infer V> ? object.Measurement<U, V> :
-  never
-  ;
-
 export function isMeasurement<
   Unit extends string
 >(
@@ -49,8 +41,7 @@ export function value<Unit extends string>(measurement: Measurement<Unit>): numb
 export function unit<Unit extends string>(measurement: Measurement<Unit>): Unit {
   if (string.isMeasurement(measurement)) return string.unit(measurement);
   if (tuple.isMeasurement(measurement)) return tuple.unit(measurement);
-  if (object.isMeasurement(measurement)) return object.unit(measurement);
-  throw new Error("Failed to resolve the unit of the measurement.");
+  return object.unit(measurement);
 }
 
 export const toFixed = <

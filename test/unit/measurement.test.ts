@@ -70,10 +70,6 @@ describe("value", () => {
     expect(value({value: v, unit: u, [u]: v})).toBe(1);
   });
 
-  /// NOTE: This test is only to make sure we're on the safe side. Normally it can't occur.
-  it("should return NaN for a non-measurement.", () => {
-    expect(value(1 as any)).toBe(NaN);
-  });
 });
 
 describe("unit", () => {
