@@ -1,5 +1,5 @@
 import {type Conversions} from "./conversion";
-import {type Measurement as MeasurementObject, isMeasurement as isMeasurementObject} from "../measurement/object";
+import * as o from "../measurement/object";
 import {MeasurementProxyHandler} from "./utilities/measurement-proxy-handler";
 import {DimensionProxyHandler} from "./utilities/dimension-proxy-handler";
 
@@ -35,7 +35,7 @@ export type Measurement<
   Unit extends Units = Units,
   Value extends number = number
 > =
-  & MeasurementObject<Unit, Value>
+  & o.Measurement<Unit, Value>
   & {[unit in Units]: number};
 
 /**
@@ -72,11 +72,11 @@ export const isMeasurement = <
   Unit extends string
 >(
   candidate: any,
-  units: Unit[]
+  units: readonly Unit[]
 ): candidate is Measurement<Unit> => {
   if (typeof candidate !== "object") return false;
   if (candidate === null) return false;
-  if (units.length === 0) units = Reflect.ownKeys(candidate) as Unit[];
+  if (units.length === 0) units = Object.keys(candidate) as Unit[];
   if (units.length === 0) return false;
 
   for (const unit of units) {
@@ -84,7 +84,7 @@ export const isMeasurement = <
     if (typeof candidate[unit] !== "number") return false;
   }
 
-  return isMeasurementObject(candidate);
+  return o.isMeasurement(candidate);
 };
 
 export const toFixed = <

@@ -4,11 +4,20 @@ import * as object from "./measurement/object";
 import * as conversions from "./dimension/conversion";
 import * as dimension from "./dimension/dimension";
 
-export type Measurement<Unit extends string> =
-  | string.Measurement<Unit>
-  | tuple.Measurement<Unit>
-  | object.Measurement<Unit>
-  | dimension.Measurement<Unit>;
+export type Measurement<Unit extends string, Value extends number = number> =
+  | string.Measurement<Unit, Value>
+  | tuple.Measurement<Unit, Value>
+  | object.Measurement<Unit, Value>
+  | dimension.Measurement<Unit, Unit, Value>
+  ;
+
+export type SpecificMeasurement<M extends Measurement<any>> =
+  M extends string.Measurement<infer U, infer V> ? string.Measurement<U, V> :
+  M extends tuple.Measurement<infer U, infer V> ? tuple.Measurement<U, V> :
+  M extends dimension.Measurement<infer D, infer U, infer V> ? dimension.Measurement<D, U, V> :
+  M extends object.Measurement<infer U, infer V> ? object.Measurement<U, V> :
+  never
+  ;
 
 export function isMeasurement<
   Unit extends string
@@ -45,12 +54,15 @@ export function unit<Unit extends string>(measurement: Measurement<Unit>): Unit 
   throw new Error("Failed to resolve the unit of the measurement.");
 }
 
-export function toFixed<Unit extends string>(
-  measurement: Measurement<Unit>,
+export const toFixed = <
+  Unit extends string,
+  Value extends number
+>(
+  measurement: Measurement<Unit, Value>,
   fractionDigits?: number
-): Measurement<Unit> {
+): Measurement<Unit, number> => {
+  if (dimension.isMeasurement(measurement, [])) return dimension.toFixed(measurement, fractionDigits);
   if (string.isMeasurement(measurement)) return string.toFixed(measurement, fractionDigits);
   if (tuple.isMeasurement(measurement)) return tuple.toFixed(measurement, fractionDigits);
-  if (object.isMeasurement(measurement)) return object.toFixed(measurement, fractionDigits);
-  return dimension.toFixed(measurement, fractionDigits);
-}
+  return object.toFixed(measurement, fractionDigits);
+};
