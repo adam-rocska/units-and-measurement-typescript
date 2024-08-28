@@ -1,4 +1,4 @@
-import {Measurement, measurement, isMeasurement, unit, value, toFixed, toExponential, toPrecision} from "!src/measurement/object";
+import {Measurement, measurement, isMeasurement, unit, value, toFixed, toExponential, toPrecision} from "!src/object";
 
 describe('measurement', () => {
   it("should represent the measurement described in its parameters as a measurement.", () => {

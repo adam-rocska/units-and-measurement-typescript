@@ -1,4 +1,4 @@
-import {Measurement, measurement, isMeasurement, unit, value, toFixed, toExponential, toPrecision} from "!src/measurement/tuple";
+import {Measurement, measurement, isMeasurement, unit, value, toFixed, toExponential, toPrecision} from "!src/tuple";
 
 describe('measurement', () => {
   it("should represent the measurement described in its parameters as a measurement.", () => {

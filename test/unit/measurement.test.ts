@@ -1,9 +1,9 @@
 import {isMeasurement, unit, value, toFixed} from "!src/measurement";
 import {Conversions} from "!src/dimension";
 import * as d from "!src/dimension";
-import * as o from "!src/measurement/object";
-import * as t from "!src/measurement/tuple";
-import * as s from "!src/measurement/string";
+import * as o from "!src/object";
+import * as t from "!src/tuple";
+import * as s from "!src/string";
 
 describe("isMeasurement", () => {
   it("should return true for a string measurement.", () => {

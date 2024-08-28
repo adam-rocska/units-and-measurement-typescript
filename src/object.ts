@@ -2,17 +2,19 @@ export type Measurement<
   Unit extends string,
   Value extends number = number
 > = {
-  value: Value,
-  unit: Unit
+  readonly value: Value,
+  readonly unit: Unit
 }
 
 export const measurement = <
   Unit extends string,
   Value extends number = number
->(value: Value, unit: Unit): Measurement<Unit, Value> => Object.create(null, {
-  value: {value, writable: true},
-  unit: {value: unit, writable: true},
-});
+>(value: Value, unit: Unit): Measurement<Unit, Value> => Object.freeze(
+  Object.create(null, {
+    value: {value},
+    unit: {value: unit},
+  })
+);
 
 export const isMeasurement = <
   Unit extends string = string,

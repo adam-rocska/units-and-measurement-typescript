@@ -2,6 +2,11 @@ type PropertyDescriptorsOf<Type> = {
   [Property in keyof Type]: TypedPropertyDescriptor<Type[Property]>
 };
 
+type PropertyDescriptorOf<
+  Type,
+  Property extends keyof Type
+> = TypedPropertyDescriptor<Type[Property]>;
+
 interface ObjectConstructor {
   defineProperties<
     OnObject,
@@ -20,4 +25,20 @@ interface ObjectConstructor {
     property: Property,
     descriptor: TypedPropertyDescriptor<MergedWith[Property]>
   ): OnObject & {[Key in Property]: MergedWith[Key]};
+
+  create<
+    Prototype extends object,
+    MergedWith extends object
+  >(
+    prototype: Prototype,
+    descriptors: PropertyDescriptorsOf<MergedWith>
+  ): Prototype & MergedWith;
+
+  getOwnPropertyDescriptors<Type>(
+    object: Type
+  ): PropertyDescriptorsOf<Type>;
+
+  freeze<Type>(
+    object: Type
+  ): import("type-fest").ReadonlyDeep<Type>;
 }

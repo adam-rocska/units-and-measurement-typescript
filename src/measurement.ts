@@ -1,8 +1,7 @@
-import * as string from "./measurement/string";
-import * as tuple from "./measurement/tuple";
-import * as object from "./measurement/object";
-import * as conversions from "./dimension/conversion";
-import * as dimension from "./dimension/dimension";
+import * as string from "./string";
+import * as tuple from "./tuple";
+import * as object from "./object";
+import * as dimension from "./dimension";
 
 export type Measurement<Unit extends string, Value extends number = number> =
   | string.Measurement<Unit, Value>
