@@ -1,7 +1,7 @@
 export type Measurement<
   Unit extends string,
   Value extends number = number
-> = {
+> = Number & {
   readonly value: Value,
   readonly unit: Unit
 }
@@ -11,9 +11,11 @@ export const measurement = <
   Value extends number = number
 >(value: Value, unit: Unit): Measurement<Unit, Value> => Object.freeze(
   Object.create(null, {
+    ...Object.getOwnPropertyDescriptors(value),
     value: {value},
     unit: {value: unit},
-  })
+  } satisfies PropertyDescriptorsOf<Measurement<Unit, Value>>
+  )
 );
 
 export const isMeasurement = <
