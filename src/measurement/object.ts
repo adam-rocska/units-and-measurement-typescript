@@ -9,7 +9,10 @@ export type Measurement<
 export const measurement = <
   Unit extends string,
   Value extends number = number
->(value: Value, unit: Unit): Measurement<Unit, Value> => ({value, unit});
+>(value: Value, unit: Unit): Measurement<Unit, Value> => Object.create(null, {
+  value: {value, writable: true},
+  unit: {value: unit, writable: true},
+});
 
 export const isMeasurement = <
   Unit extends string = string,
@@ -51,31 +54,31 @@ export const toFixed = <
   Unit extends string,
   Value extends number
 >(
-  measurement: Measurement<Unit, Value>,
+  m: Measurement<Unit, Value>,
   fractionDigits?: number
-): Measurement<Unit, number> => ({
-  value: parseFloat(value(measurement).toFixed(fractionDigits)),
-  unit: unit(measurement)
-});
+): Measurement<Unit, number> => measurement(
+  parseFloat(value(m).toFixed(fractionDigits)),
+  unit(m)
+);
 
 export const toExponential = <
   Unit extends string,
   Value extends number
 >(
-  measurement: Measurement<Unit, Value>,
+  m: Measurement<Unit, Value>,
   fractionDigits?: number
-): Measurement<Unit, number> => ({
-  value: parseFloat(value(measurement).toExponential(fractionDigits)),
-  unit: unit(measurement)
-});
+): Measurement<Unit, number> => measurement(
+  parseFloat(value(m).toExponential(fractionDigits)),
+  unit(m)
+);
 
 export const toPrecision = <
   Unit extends string,
   Value extends number
 >(
-  measurement: Measurement<Unit, Value>,
+  m: Measurement<Unit, Value>,
   precision?: number
-): Measurement<Unit, number> => ({
-  value: parseFloat(value(measurement).toPrecision(precision)),
-  unit: unit(measurement)
-});
+): Measurement<Unit, number> => measurement(
+  parseFloat(value(m).toPrecision(precision)),
+  unit(m)
+);
