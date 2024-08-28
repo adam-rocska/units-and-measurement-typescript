@@ -11,18 +11,21 @@ export type Measurement<Unit extends string, Value extends number = number> =
   ;
 
 export function isMeasurement<
-  Unit extends string
+  Units extends string,
+  Unit extends Units = Units
 >(
   candidate: any,
-  ...units: Unit[]
+  unit: Unit,
+  ...units: Units[]
 ): candidate is Measurement<Unit> {
-  if (dimension.isMeasurement<Unit>(candidate, units)) return true;
+  if (dimension.isMeasurement(candidate, units, unit)) return true;
   if (units.length === 0) {
-    if (string.isMeasurement(candidate)) return true;
-    if (tuple.isMeasurement(candidate)) return true;
-    if (object.isMeasurement(candidate)) return true;
+    if (string.isMeasurement(candidate, unit)) return true;
+    if (tuple.isMeasurement(candidate, unit)) return true;
+    if (object.isMeasurement(candidate, unit)) return true;
     return false;
   }
+  units = [unit, ...units];
   for (const unit of units) {
     if (string.isMeasurement(candidate, unit)) return true;
     if (tuple.isMeasurement(candidate, unit)) return true;
