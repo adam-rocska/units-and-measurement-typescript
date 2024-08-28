@@ -31,7 +31,10 @@ export function isMeasurement<
   return false;
 }
 
-export function value<Unit extends string>(measurement: Measurement<Unit>): number {
+export function value<
+  Unit extends string,
+  Value extends number
+>(measurement: Measurement<Unit, Value>): Value {
   if (string.isMeasurement(measurement)) return string.value(measurement);
   if (tuple.isMeasurement(measurement)) return tuple.value(measurement);
   return object.value(measurement);
