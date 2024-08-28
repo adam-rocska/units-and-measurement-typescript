@@ -34,8 +34,7 @@ export function isMeasurement<
 export function value<Unit extends string>(measurement: Measurement<Unit>): number {
   if (string.isMeasurement(measurement)) return string.value(measurement);
   if (tuple.isMeasurement(measurement)) return tuple.value(measurement);
-  if (object.isMeasurement(measurement)) return object.value(measurement);
-  return NaN;
+  return object.value(measurement);
 }
 
 export function unit<Unit extends string>(measurement: Measurement<Unit>): Unit {
