@@ -31,8 +31,5 @@ export class CommonProxyHandler<T extends object, Units extends string>
   }
 
   protected get units(): Units[] {return Reflect.ownKeys(this.conversions) as Units[];}
-  protected isUnit(candidate: any): candidate is Units {
-    if (typeof candidate !== "string") return false;
-    return candidate in this.conversions;
-  }
+  protected isUnit(candidate: any): candidate is Units {return candidate in this.conversions;}
 }
