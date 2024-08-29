@@ -1,3 +1,4 @@
+export * from "./assert-is-measurement";
 export * from "./is-measurement";
 export * from "./measurement";
 export * from "./to-fixed";
