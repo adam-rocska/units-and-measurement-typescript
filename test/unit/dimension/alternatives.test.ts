@@ -1,5 +1,7 @@
-import {alternativeGet} from "!src/dimension/alternatives/alternative-get";
+import {alternativeGet, propertyDescriptor, propertyDescriptors} from "!src/dimension/alternatives";
 import {type Conversions} from "!src/dimension/conversion";
+
+/// MARK: Getter tests
 
 describe("alternativeGet", () => {
   const units = ["m", "ft"] as const;
@@ -35,5 +37,41 @@ describe("alternativeGet", () => {
     const result = alternativeGet(conversions, "m").call({unit, value});
     expect(result).toHaveProperty("unit", "m");
     expect(result.value).toBeCloseTo(0.3048);
+  });
+});
+
+/// MARK: Descriptor Tests
+
+describe("propertyDescriptor", () => {
+  it("should return a property descriptor", () => {
+    const conversions: Conversions<"m"> = {
+      m: [x => x, x => x],
+    };
+    const unit = "m";
+    const result = propertyDescriptor(conversions, unit);
+    expect(result).toHaveProperty("enumerable", true);
+    expect(typeof result.get).toBe("function");
+  });
+});
+
+/// MARK: Descriptors Tests
+
+describe("propertyDescriptors", () => {
+  it("should return an object with property descriptors", () => {
+    const conversions: Conversions<"m" | "cm" | "ft"> = {
+      m: [x => x, x => x],
+      cm: [x => x * 100, x => x / 100],
+      ft: [x => x * 3.28084, x => x / 3.28084],
+    };
+    const result = propertyDescriptors(conversions);
+    expect(result).toHaveProperty("m");
+    expect(result).toHaveProperty("cm");
+    expect(result).toHaveProperty("ft");
+    expect(result.m).toHaveProperty("enumerable", true);
+    expect(typeof result.m.get).toBe("function");
+    expect(result.cm).toHaveProperty("enumerable", true);
+    expect(typeof result.cm.get).toBe("function");
+    expect(result.ft).toHaveProperty("enumerable", true);
+    expect(typeof result.ft.get).toBe("function");
   });
 });

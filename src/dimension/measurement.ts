@@ -1,7 +1,7 @@
-import {type Alternatives} from "./alternatives/alternatives";
+import {type Alternatives} from "./alternatives";
 import {type Conversions} from "./conversion";
 import * as o from "../object";
-import {propertyDescriptors} from "./alternatives/property-descriptors";
+import {propertyDescriptors} from "./alternatives";
 
 /// MARK: Type
 

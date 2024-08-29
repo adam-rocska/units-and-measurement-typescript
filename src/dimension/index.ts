@@ -1,4 +1,4 @@
-export {type Alternatives} from "./alternatives/alternatives";
+export {type Alternatives} from "./alternatives";
 export * from "./conversion";
 export * from "./dimension";
 export * from "./assert-is-measurement";
