@@ -1,8 +1,5 @@
-import {Conversions} from "!src/dimension/conversion";
-import {assertIsMeasurement, isMeasurement, measurement} from "!src/dimension/measurement";
+import {type Conversions, measurement} from "!src/dimension";
 import * as o from "!src/object";
-
-/// MARK: Measurement Tests
 
 const units = ["m", "cm", "in"] as const;
 type Units = typeof units[number];
@@ -55,104 +52,5 @@ describe("measurement", () => {
     expect(o.isMeasurement(testMeasurement)).toBe(true);
     expect(testMeasurement.value).toBe(1);
     expect(testMeasurement.unit).toBe("m");
-  });
-});
-
-
-/// MARK: isMeasurement Tests
-
-describe("isMeasurement", () => {
-  it('should return false if the provided units are empty', () => {
-    expect(isMeasurement({}, [])).toBe(false);
-  });
-
-  it('should return false if the candidate is not an object', () => {
-    expect(isMeasurement(1, ["m"])).toBe(false);
-  });
-
-  it('should return false if the candidate is null', () => {
-    expect(isMeasurement(null, ["m"])).toBe(false);
-  });
-
-  it('should return false if the candidate does not have a unit', () => {
-    expect(isMeasurement({}, ["m"])).toBe(false);
-  });
-
-  it('should return false if the candidate has a non-number value', () => {
-    expect(isMeasurement({m: "1"}, ["m"])).toBe(false);
-  });
-
-  it('should return false if the candidate is a valid measurement but has an invalid unit', () => {
-    expect(isMeasurement({m: 1}, ["cm"])).toBe(false);
-  });
-
-  it('should return true if the candidate is a valid measurement', () => {
-    const actualMeasurement = measurement(conversions, 1, "m");
-    expect(isMeasurement(actualMeasurement)).toBe(true);
-    expect(isMeasurement(actualMeasurement, units)).toBe(true);
-    expect(isMeasurement(actualMeasurement, units, "m")).toBe(true);
-  });
-
-  it("should return false if the candidate is a valid measurement but has a unit mismatch", () => {
-    const actualMeasurement = measurement(conversions, 1, "m");
-    expect(isMeasurement(actualMeasurement, units, "cm")).toBe(false);
-    expect(isMeasurement(actualMeasurement, units, "in")).toBe(false);
-    expect(isMeasurement(actualMeasurement, units, "m")).toBe(true);
-  });
-
-  it("should return false if the candidate is a valid measurement, but has a unit set mismatch", () => {
-    const actualMeasurement = measurement(conversions, 1, "m");
-    expect(isMeasurement(actualMeasurement, units.slice(1), "m")).toBe(false);
-    expect(isMeasurement(actualMeasurement, units.slice(-1), "m")).toBe(false);
-  });
-
-  it("should return false if the candidate has non-measurement fields keyed by units", () => {
-    const candidate = Object.create(
-      o.measurement(123, "m"), {
-      cm: {enumerable: true, value: 123},
-      in: {enumerable: true, value: 123},
-      m: {enumerable: true, value: 123}
-    });
-    expect(isMeasurement(candidate, units)).toBe(false);
-  });
-
-  it("should return false if the candidate doesn't conform the «object» Measurement type.", () => {
-    expect(isMeasurement({value: 1, unit: "m"}, ["m"])).toBe(false);
-  });
-});
-
-/// MARK: assertIsMeasurement Tests
-
-describe("assertIsMeasurement", () => {
-  it('should throw if the provided units are empty', () => {
-    expect(() => assertIsMeasurement({}, [])).toThrow();
-  });
-
-  it('should throw if the candidate is not an object', () => {
-    expect(() => assertIsMeasurement(1, ["m"])).toThrow();
-  });
-  it('should throw if the candidate is null', () => {
-    expect(() => assertIsMeasurement(null, ["m"])).toThrow();
-  });
-
-  it('should throw if the candidate does not have a unit', () => {
-    expect(() => assertIsMeasurement({}, ["m"])).toThrow();
-  });
-
-  it('should throw if the candidate has a non-number value', () => {
-    expect(() => assertIsMeasurement({m: "1"}, ["m"])).toThrow();
-  });
-
-  it('should throw if the candidate is a valid measurement but has an invalid unit', () => {
-    expect(() => assertIsMeasurement({m: 1}, ["cm"])).toThrow();
-  });
-
-  it('should not throw if the candidate is a valid measurement', () => {
-    const actualMeasurement = measurement(conversions, 1, "m");
-    expect(() => assertIsMeasurement(actualMeasurement)).not.toThrow();
-  });
-
-  it("should throw if the candidate doesn't conform the «object» Measurement type.", () => {
-    expect(() => assertIsMeasurement({value: 1, unit: "m"}, ["m"])).toThrow();
   });
 });
