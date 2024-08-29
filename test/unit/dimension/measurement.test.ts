@@ -10,47 +10,59 @@ const conversions: Conversions<Units> = {
 };
 
 describe("measurement", () => {
+  describe("based on a set of conversions", () => {
+    it("should convert between units", () => {
+      const testMeasurement = measurement(conversions, 1, "m");
+      expect(testMeasurement.m.value).toBe(1);
+      expect(testMeasurement.cm.value).toBe(100);
+      expect(testMeasurement.in.value).toBeCloseTo(39.37);
+    });
 
-  it("should convert between units", () => {
-    const testMeasurement = measurement(conversions, 1, "m");
-    expect(testMeasurement.m.value).toBe(1);
-    expect(testMeasurement.cm.value).toBe(100);
-    expect(testMeasurement.in.value).toBeCloseTo(39.37);
+    it('should have the units as its keys', () => {
+      const testMeasurement = measurement(conversions, 1, "m");
+      expect(Reflect.ownKeys(testMeasurement)).toEqual(units);
+      expect(Object.keys(testMeasurement)).toEqual(units);
+      expect(Reflect.ownKeys(testMeasurement)).toContain("cm");
+      expect(Reflect.ownKeys(testMeasurement)).toContain("m");
+      expect(Reflect.ownKeys(testMeasurement)).toContain("in");
+
+      expect("m" in testMeasurement).toBe(true);
+      expect("cm" in testMeasurement).toBe(true);
+      expect("in" in testMeasurement).toBe(true);
+    });
+
+    it('should not allow deleting properties', () => {
+      const testMeasurement = measurement(conversions, 1, "m");
+      expect(() => delete (testMeasurement as any)["m"]).toThrow();
+    });
+
+    it('should have a pure object measurement as its prototype', () => {
+      const testMeasurement = measurement(conversions, 1, "m");
+      expect(Reflect.getPrototypeOf(testMeasurement)).toEqual(o.measurement(1, "m"));
+    });
+
+    it("should return undefined for unknown properties", () => {
+      const testMeasurement = measurement(conversions, 1, "m");
+      expect((testMeasurement as any)["random"]).toBe(undefined);
+      expect((testMeasurement as any)[Symbol("random-non-existent")]).toBe(undefined);
+    });
+
+    it("should conform to the «object» Measurement type.", () => {
+      const testMeasurement = measurement(conversions, 1, "m");
+      expect(o.isMeasurement(testMeasurement)).toBe(true);
+      expect(testMeasurement.value).toBe(1);
+      expect(testMeasurement.unit).toBe("m");
+    });
   });
 
-  it('should have the units as its keys', () => {
-    const testMeasurement = measurement(conversions, 1, "m");
-    expect(Reflect.ownKeys(testMeasurement)).toEqual(units);
-    expect(Object.keys(testMeasurement)).toEqual(units);
-    expect(Reflect.ownKeys(testMeasurement)).toContain("cm");
-    expect(Reflect.ownKeys(testMeasurement)).toContain("m");
-    expect(Reflect.ownKeys(testMeasurement)).toContain("in");
-
-    expect("m" in testMeasurement).toBe(true);
-    expect("cm" in testMeasurement).toBe(true);
-    expect("in" in testMeasurement).toBe(true);
-  });
-
-  it('should not allow deleting properties', () => {
-    const testMeasurement = measurement(conversions, 1, "m");
-    expect(() => delete (testMeasurement as any)["m"]).toThrow();
-  });
-
-  it('should have a pure object measurement as its prototype', () => {
-    const testMeasurement = measurement(conversions, 1, "m");
-    expect(Reflect.getPrototypeOf(testMeasurement)).toEqual(o.measurement(1, "m"));
-  });
-
-  it("should return undefined for unknown properties", () => {
-    const testMeasurement = measurement(conversions, 1, "m");
-    expect((testMeasurement as any)["random"]).toBe(undefined);
-    expect((testMeasurement as any)[Symbol("random-non-existent")]).toBe(undefined);
-  });
-
-  it("should conform to the «object» Measurement type.", () => {
-    const testMeasurement = measurement(conversions, 1, "m");
-    expect(o.isMeasurement(testMeasurement)).toBe(true);
-    expect(testMeasurement.value).toBe(1);
-    expect(testMeasurement.unit).toBe("m");
+  describe("based on another measurement", () => {
+    it("should convert between units", () => {
+      const baseMeasurement = measurement(conversions, 1, "m");
+      const testMeasurement = measurement(baseMeasurement, 10, "cm");
+      expect(testMeasurement.value).toBe(10);
+      expect(testMeasurement.cm.value).toBe(10);
+      expect(testMeasurement.m.value).toBe(0.1);
+      expect(testMeasurement.in.value).toBeCloseTo(3.94);
+    });
   });
 });
