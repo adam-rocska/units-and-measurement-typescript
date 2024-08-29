@@ -3,6 +3,12 @@ import * as string from "./string";
 import * as tuple from "./tuple";
 import * as object from "./object";
 
+/**
+ * Retrieves the value from a measurement object.
+ *
+ * @param measurement - The measurement object to retrieve the value from.
+ * @returns The value of the measurement.
+ */
 export function value<
   Unit extends string,
   Value extends number

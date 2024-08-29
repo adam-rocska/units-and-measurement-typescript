@@ -4,6 +4,16 @@ import {isMeasurement as isTuple} from "./tuple";
 import {isMeasurement as isObject} from "./object";
 import {isMeasurement as isDimension} from "./dimension";
 
+/**
+ * Type predicate, determining if a candidate is a measurement.
+ *
+ * @template Units - The type of units.
+ * @template Unit - The specific unit type.
+ * @param candidate - The value to be checked.
+ * @param unit - The specific unit to be checked against.
+ * @param units - Additional units to be checked against.
+ * @returns A boolean indicating whether the candidate is a valid measurement.
+ */
 export function isMeasurement<
   Units extends string,
   Unit extends Units = Units

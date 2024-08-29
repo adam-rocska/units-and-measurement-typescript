@@ -4,6 +4,13 @@ import * as tuple from "./tuple";
 import * as object from "./object";
 import * as dimension from "./dimension";
 
+/**
+ * Converts a measurement value to a fixed number with a specified number of decimal places.
+ *
+ * @param measurement - The measurement value to convert.
+ * @param fractionDigits - The number of decimal places to round to. If not provided, the default behavior is used.
+ * @returns The converted measurement value with the specified number of decimal places.
+ */
 export const toFixed = <
   Unit extends string,
   Value extends number
