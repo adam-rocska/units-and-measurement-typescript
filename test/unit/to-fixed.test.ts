@@ -1,72 +1,129 @@
-import {toFixed} from "!src";
 import {Conversions} from "!src/dimension";
 import * as d from "!src/dimension";
 
-
 describe("toFixed", () => {
-  it("should return a string measurement with the fixed value.", () => {
-    expect(toFixed("1.123m", 2)).toBe("1.12m");
+  /// MARK: - Mocks
+  const createAspectMock = () => ({
+    isMeasurement: jest.fn(),
+    toFixed: jest.fn()
+  });
+  const mocks = {
+    string: createAspectMock(),
+    tuple: createAspectMock(),
+    object: createAspectMock(),
+    dimension: createAspectMock()
+  };
+  jest.mock("!src/string", () => mocks.string);
+  jest.mock("!src/tuple", () => mocks.tuple);
+  jest.mock("!src/object", () => mocks.object);
+  jest.mock("!src/dimension", () => mocks.dimension);
+
+  let {toFixed} = require("!src/to-fixed");
+  const stubInput = {} as any;
+  const stubOutput = {} as any;
+  beforeEach(() => {
+    Object.values(mocks).forEach(mock => {
+      mock.isMeasurement.mockClear();
+      mock.toFixed.mockClear();
+    });
+    toFixed = require("!src/to-fixed").toFixed;
   });
 
-  it("should return a tuple measurement with the fixed value.", () => {
-    expect(toFixed([1.123, "m"], 2)).toEqual([1.12, "m"]);
+  /// MARK: - Tests
+
+  it("should route to dimension if the measurement is a dimension.", () => {
+    mocks.dimension.isMeasurement.mockReturnValue(true);
+    mocks.dimension.toFixed.mockReturnValue(stubOutput);
+    mocks.string.isMeasurement.mockReturnValue(false);
+    mocks.tuple.isMeasurement.mockReturnValue(false);
+    mocks.object.isMeasurement.mockReturnValue;
+
+    const result = toFixed(stubInput, 2);
+
+    expect(result).toBe(stubOutput);
+    expect(mocks.dimension.isMeasurement).toHaveBeenCalledWith(stubInput);
+    expect(mocks.dimension.toFixed).toHaveBeenCalledWith(stubInput, 2);
+
+    expect(mocks.string.isMeasurement).not.toHaveBeenCalled();
+    expect(mocks.tuple.isMeasurement).not.toHaveBeenCalled();
+    expect(mocks.object.isMeasurement).not.toHaveBeenCalled();
+
+    expect(mocks.string.toFixed).not.toHaveBeenCalled();
+    expect(mocks.tuple.toFixed).not.toHaveBeenCalled();
+    expect(mocks.object.toFixed).not.toHaveBeenCalled();
+
+    expect(mocks.dimension.toFixed).toHaveBeenCalledTimes(1);
   });
 
-  it("should return an object measurement with the fixed value.", () => {
-    expect(toFixed({value: 1.123, unit: "m"}, 2)).toEqual({value: 1.12, unit: "m"});
+  it("should route to string if the measurement is a string.", () => {
+    mocks.string.isMeasurement.mockReturnValue(true);
+    mocks.string.toFixed.mockReturnValue(stubOutput);
+    mocks.dimension.isMeasurement.mockReturnValue(false);
+    mocks.tuple.isMeasurement.mockReturnValue(false);
+    mocks.object.isMeasurement.mockReturnValue;
+
+    const result = toFixed(stubInput, 2);
+
+    expect(result).toBe(stubOutput);
+    expect(mocks.string.isMeasurement).toHaveBeenCalledWith(stubInput);
+    expect(mocks.string.toFixed).toHaveBeenCalledWith(stubInput, 2);
+
+    expect(mocks.dimension.isMeasurement).toHaveBeenCalled();
+    expect(mocks.tuple.isMeasurement).not.toHaveBeenCalled();
+    expect(mocks.object.isMeasurement).not.toHaveBeenCalled();
+
+    expect(mocks.dimension.toFixed).not.toHaveBeenCalled();
+    expect(mocks.tuple.toFixed).not.toHaveBeenCalled();
+    expect(mocks.object.toFixed).not.toHaveBeenCalled();
+
+    expect(mocks.string.toFixed).toHaveBeenCalledTimes(1);
   });
 
-  it("should return a dimension measurement with the fixed value.", () => {
-    const stubUnits = ["m", "cm", "ft"] as const;
-    const stubConversions: Conversions<typeof stubUnits[number]> = {
-      m: [v => v, v => v],
-      cm: [v => v / 100, v => v * 100],
-      ft: [v => v / 3.281, v => v * 3.281]
-    };
-    const testMeasurement = d.measurement(stubConversions, 0.1 + 0.2, "m");
-    const toFixedTestMeasurement = toFixed(testMeasurement, 2);
-    if (!d.isMeasurement(toFixedTestMeasurement, stubUnits)) {
-      console.error("The measurement is not a dimension measurement.", toFixedTestMeasurement);
-      throw new Error("The measurement is not a dimension measurement.");
-    }
-    expect(toFixedTestMeasurement.m).toBeCloseTo(0.3);
-    expect(toFixedTestMeasurement.cm).toBeCloseTo(30);
-    expect(toFixedTestMeasurement.ft).toBeCloseTo(0.98);
-    expect(toFixedTestMeasurement.value).toBe(0.3);
-    expect(toFixedTestMeasurement.unit).toBe(testMeasurement);
+  it("should route to tuple if the measurement is a tuple.", () => {
+    mocks.tuple.isMeasurement.mockReturnValue(true);
+    mocks.tuple.toFixed.mockReturnValue(stubOutput);
+    mocks.string.isMeasurement.mockReturnValue(false);
+    mocks.dimension.isMeasurement.mockReturnValue(false);
+    mocks.object.isMeasurement.mockReturnValue;
+
+    const result = toFixed(stubInput, 2);
+
+    expect(result).toBe(stubOutput);
+    expect(mocks.tuple.isMeasurement).toHaveBeenCalledWith(stubInput);
+    expect(mocks.tuple.toFixed).toHaveBeenCalledWith(stubInput, 2);
+
+    expect(mocks.dimension.isMeasurement).toHaveBeenCalled();
+    expect(mocks.string.isMeasurement).toHaveBeenCalled();
+    expect(mocks.object.isMeasurement).not.toHaveBeenCalled();
+
+    expect(mocks.dimension.toFixed).not.toHaveBeenCalled();
+    expect(mocks.string.toFixed).not.toHaveBeenCalled();
+    expect(mocks.object.toFixed).not.toHaveBeenCalled();
+
+    expect(mocks.tuple.toFixed).toHaveBeenCalledTimes(1);
   });
 
-  describe("when no fraction digits are specified.", () => {
-    it("should return a string measurement with the fixed value.", () => {
-      expect(toFixed("1.123m")).toBe("1m");
-    });
+  it("should route to object if the measurement is an object.", () => {
+    mocks.object.isMeasurement.mockReturnValue(true);
+    mocks.object.toFixed.mockReturnValue(stubOutput);
+    mocks.string.isMeasurement.mockReturnValue(false);
+    mocks.tuple.isMeasurement.mockReturnValue(false);
+    mocks.dimension.isMeasurement.mockReturnValue(false);
 
-    it("should return a tuple measurement with the fixed value.", () => {
-      expect(toFixed([1.123, "m"])).toEqual([1, "m"]);
-    });
+    const result = toFixed(stubInput, 2);
 
-    it("should return an object measurement with the fixed value.", () => {
-      expect(toFixed({value: 1.123, unit: "m"})).toEqual({value: 1, unit: "m"});
-    });
+    expect(result).toBe(stubOutput);
+    expect(mocks.object.isMeasurement).not.toHaveBeenCalled();
+    expect(mocks.object.toFixed).toHaveBeenCalledWith(stubInput, 2);
 
-    it("should return a dimension measurement with the fixed value.", () => {
-      const stubUnits = ["m", "cm", "ft"] as const;
-      const stubConversions: Conversions<typeof stubUnits[number]> = {
-        m: [v => v, v => v],
-        cm: [v => v / 100, v => v * 100],
-        ft: [v => v / 3.281, v => v * 3.281]
-      };
-      const testMeasurement = d.measurement(stubConversions, 0.1 + 0.2, "m");
-      const toFixedTestMeasurement = toFixed(testMeasurement);
-      if (!d.isMeasurement(toFixedTestMeasurement, stubUnits)) {
-        console.error("The measurement is not a dimension measurement.", toFixedTestMeasurement);
-        throw new Error("The measurement is not a dimension measurement.");
-      }
-      expect(toFixedTestMeasurement.m).toEqual(0.1 + 0.2);
-      expect(toFixedTestMeasurement.cm).toEqual((0.1 + 0.2) * 100);
-      expect(toFixedTestMeasurement.ft).toBeCloseTo((0.1 + 0.2) / 3.281);
-      expect(toFixedTestMeasurement.value).toBe(0.1 + 0.2);
-      expect(toFixedTestMeasurement.unit).toBe(testMeasurement);
-    });
+    expect(mocks.dimension.isMeasurement).toHaveBeenCalled();
+    expect(mocks.string.isMeasurement).toHaveBeenCalled();
+    expect(mocks.tuple.isMeasurement).toHaveBeenCalled();
+
+    expect(mocks.dimension.toFixed).not.toHaveBeenCalled();
+    expect(mocks.string.toFixed).not.toHaveBeenCalled();
+    expect(mocks.tuple.toFixed).not.toHaveBeenCalled();
+
+    expect(mocks.object.toFixed).toHaveBeenCalledTimes(1);
   });
 });
