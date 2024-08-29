@@ -1,8 +1,9 @@
 import {type Measurement} from "../measurement";
 
 /**
- * A type that represents a set of alternatives for a given
- * dimension measurement.
+ * Represents a collection of alternative measurements for different units.
+ *
+ * @template Units - The string literal type representing the available units.
  */
 export type Alternatives<
   Units extends string
