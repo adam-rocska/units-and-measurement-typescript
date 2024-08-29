@@ -65,6 +65,7 @@ export const isMeasurement = <
 
   if (!units.every(unit => candidateKeys.includes(unit))) return false;
   if (!candidateKeys.every((key: any) => units.includes(key))) return false;
+  if (candidateKeys.length === 0) return false;
 
   if (Object.entries(candidate).some(([key, value]) => !o.isMeasurement(value, key))) return false;
 

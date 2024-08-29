@@ -14,26 +14,31 @@ import {isMeasurement as isDimension} from "./dimension";
  * @param units - Additional units to be checked against.
  * @returns A boolean indicating whether the candidate is a valid measurement.
  */
-export function isMeasurement<
+export const isMeasurement = <
   Units extends string,
   Unit extends Units = Units
 >(
   candidate: any,
   unit?: Unit,
-  ...units: Units[]
-): candidate is Measurement<Unit> {
+  units?: readonly Units[]
+): candidate is Measurement<Unit> => {
+  if (!unit) {
+    if (isDimension(candidate)) return true;
+    if (isString(candidate)) return true;
+    if (isTuple(candidate)) return true;
+    if (isObject(candidate)) return true;
+  }
+
+  units = units ?? [];
+
   if (isDimension(candidate, units, unit)) return true;
-  if (units.length === 0) {
-    if (isString(candidate, unit)) return true;
-    if (isTuple(candidate, unit)) return true;
-    if (isObject(candidate, unit)) return true;
-    return false;
+
+  for (const u of units.concat(unit as any)) {
+    if (isString(candidate, u)) return true;
+    if (isTuple(candidate, u)) return true;
+    if (isObject(candidate, u)) return true;
   }
-  units = [unit, ...units];
-  for (const unit of units) {
-    if (isString(candidate, unit)) return true;
-    if (isTuple(candidate, unit)) return true;
-    if (isObject(candidate, unit)) return true;
-  }
+
   return false;
-}
+
+};
