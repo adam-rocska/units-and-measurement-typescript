@@ -1,7 +1,0 @@
-{
-  "main": "../dist/cjs/electric-resistance.js",
-  "module": "../dist/es/electric-resistance.mjs",
-  "types": "../dist/cjs/electric-resistance.d.ts",
-  "private": true
-}
-

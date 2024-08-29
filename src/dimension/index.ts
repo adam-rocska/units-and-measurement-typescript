@@ -1,5 +1,8 @@
+export {type Alternatives} from "./alternatives";
+export * from "./conversion";
 export * from "./dimension";
+export * from "./assert-is-measurement";
+export * from "./is-measurement";
 export * from "./measurement";
-export * from "./measurement-dimension";
-export {type Measurement} from "./measurement-type";
-export * from "./measurement-unit";
+export * from "./to-fixed";
+export * from "./to-precision";

@@ -5,78 +5,8 @@
     "target": "ESNext",
     "baseUrl": "..",
     "paths": {
-      "@adam-rocska/units-and-measurement": [
-        "./src/index.ts"
-      ],
-      "!*": [
-        "./*"
-      ],
-      "@adam-rocska/units-and-measurement/measurement": [
-        "./src/measurement/index.ts"
-      ],
-      "@adam-rocska/units-and-measurement/length": [
-        "./src/length/index.ts"
-      ],
-      "@adam-rocska/units-and-measurement/volume": [
-        "./src/volume/index.ts"
-      ],
-      "@adam-rocska/units-and-measurement/angle": [
-        "./src/angle/index.ts"
-      ],
-      "@adam-rocska/units-and-measurement/area": [
-        "./src/area/index.ts"
-      ],
-      "@adam-rocska/units-and-measurement/mass": [
-        "./src/mass/index.ts"
-      ],
-      "@adam-rocska/units-and-measurement/pressure": [
-        "./src/pressure/index.ts"
-      ],
-      "@adam-rocska/units-and-measurement/acceleration": [
-        "./src/acceleration/index.ts"
-      ],
-      "@adam-rocska/units-and-measurement/duration": [
-        "./src/duration/index.ts"
-      ],
-      "@adam-rocska/units-and-measurement/frequency": [
-        "./src/frequency/index.ts"
-      ],
-      "@adam-rocska/units-and-measurement/speed": [
-        "./src/speed/index.ts"
-      ],
-      "@adam-rocska/units-and-measurement/energy": [
-        "./src/energy/index.ts"
-      ],
-      "@adam-rocska/units-and-measurement/power": [
-        "./src/power/index.ts"
-      ],
-      "@adam-rocska/units-and-measurement/temperature": [
-        "./src/temperature/index.ts"
-      ],
-      "@adam-rocska/units-and-measurement/illuminance": [
-        "./src/illuminance/index.ts"
-      ],
-      "@adam-rocska/units-and-measurement/electric-charge": [
-        "./src/electric-charge/index.ts"
-      ],
-      "@adam-rocska/units-and-measurement/electric-current": [
-        "./src/electric-current/index.ts"
-      ],
-      "@adam-rocska/units-and-measurement/electric-potential-difference": [
-        "./src/electric-potential-difference/index.ts"
-      ],
-      "@adam-rocska/units-and-measurement/electric-resistance": [
-        "./src/electric-resistance/index.ts"
-      ],
-      "@adam-rocska/units-and-measurement/concentration-mass": [
-        "./src/concentration-mass/index.ts"
-      ],
-      "@adam-rocska/units-and-measurement/dispersion": [
-        "./src/dispersion/index.ts"
-      ],
-      "@adam-rocska/units-and-measurement/information": [
-        "./src/information/index.ts"
-      ]
+      "@adam-rocska/units-and-measurement": [ "./src/index.ts" ],
+      "!*": [ "./*" ],
     }
   },
   "include": [

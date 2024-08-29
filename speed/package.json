@@ -1,7 +1,0 @@
-{
-  "main": "../dist/cjs/speed.js",
-  "module": "../dist/es/speed.mjs",
-  "types": "../dist/cjs/speed.d.ts",
-  "private": true
-}
-

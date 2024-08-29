@@ -1,7 +1,0 @@
-{
-  "main": "../dist/cjs/frequency.js",
-  "module": "../dist/es/frequency.mjs",
-  "types": "../dist/cjs/frequency.d.ts",
-  "private": true
-}
-

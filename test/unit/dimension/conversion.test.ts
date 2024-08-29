@@ -1,4 +1,4 @@
-import {linearConversion} from "!src/conversion";
+import {linearConversion} from "!src/dimension/conversion";
 
 describe("linearConversion", () => {
   it("should create a linear conversion tuple", () => {

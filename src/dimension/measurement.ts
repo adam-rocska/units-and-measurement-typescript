@@ -1,14 +1,42 @@
-import {Conversions} from "./conversion";
-import {type Measurement as MeasurementType} from "./measurement-type";
-import {Dimension} from "./dimension";
-import {UnitMeasurement} from "./measurement-unit";
-import {DimensionMeasurement} from "./measurement-dimension";
+import {type Alternatives} from "./alternatives";
+import {type Conversions} from "./conversion";
+import * as o from "../object";
+import {propertyDescriptors} from "./alternatives";
 
-export function Measurement<Unit extends string>(unit: Unit): MeasurementType<Unit, Unit>;
-export function Measurement<Unit extends string>(conversions: Conversions<Unit>): Dimension<Unit>;
-export function Measurement(description: any): any {
-  return typeof description === "string"
-    ? UnitMeasurement(description)
-    : DimensionMeasurement(description);
-}
+/// MARK: Type
 
+/**
+ * Represents a dimension measurement.
+ * @template Units - The units of the dimension.
+ */
+export type Measurement<
+  Units extends string,
+  Unit extends Units = Units,
+  Value extends number = number
+> =
+  & o.Measurement<Unit, Value>
+  & Alternatives<Units>;
+
+/// MARK: Factory
+
+/**
+ * Creates a dimension measurement.
+ * @param conversions - The conversions for the dimension.
+ * @param value - The value of the measurement.
+ * @param unit - The unit of the measurement.
+ * @returns The measurement.
+ * @template Units - The units of the dimension.
+ * @template Unit - The unit of the measurement.
+ */
+export const measurement = <
+  Units extends string,
+  Unit extends Units,
+  Value extends number
+>(
+  conversions: Conversions<Units>,
+  value: Value,
+  unit: Unit
+): Measurement<Units, Unit, Value> => Object(Object.create(
+  o.measurement(value, unit),
+  propertyDescriptors(conversions)
+));

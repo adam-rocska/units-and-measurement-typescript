@@ -1,7 +1,0 @@
-{
-  "main": "../dist/cjs/electric-potential-difference.js",
-  "module": "../dist/es/electric-potential-difference.mjs",
-  "types": "../dist/cjs/electric-potential-difference.d.ts",
-  "private": true
-}
-

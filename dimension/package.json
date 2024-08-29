@@ -1,7 +1,0 @@
-{
-  "main": "../dist/cjs/dimension.js",
-  "module": "../dist/es/dimension.mjs",
-  "types": "../dist/cjs/dimension.d.ts",
-  "private": true
-}
-
