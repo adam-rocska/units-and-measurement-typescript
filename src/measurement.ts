@@ -27,7 +27,7 @@ export type Measurement<Unit extends string, Value extends number = number> =
  * @template Unit - The unit type of the measurement.
  * @template Value - The value type of the measurement.
  *
- * @param {string.Measurement<Unit, number>} string - The base measurement string.
+ * @param {string.Measurement<Unit, number>} basedOn - The base measurement string.
  * @param {Value}                           value  - The value of the measurement.
  *
  * @returns {string.Measurement<Unit, Value>} - The created measurement string.
@@ -36,7 +36,7 @@ export function measurement<
   Unit extends string,
   Value extends number
 >(
-  string: string.Measurement<Unit, number>,
+  basedOn: string.Measurement<Unit, number>,
   value: Value
 ): string.Measurement<Unit, Value>;
 /// MARK: Dimension Measurement
@@ -48,7 +48,7 @@ export function measurement<
  * @template Unit  - The unit type of the measurement.
  * @template Value - The value type of the measurement.
  *
- * @param {dimension.Measurement<Units, Unit, Value>} dimension - The base dimension measurement.
+ * @param {dimension.Measurement<Units, Unit, Value>} basedOn - The base dimension measurement.
  * @param {Value}                                     value     - The value of the measurement.
  *
  * @returns {Measurement<Unit, Value>} - The created measurement object.
@@ -58,7 +58,7 @@ export function measurement<
   Unit extends Units,
   Value extends number
 >(
-  dimension: dimension.Measurement<Units, Unit, number>,
+  basedOn: dimension.Measurement<Units, Unit, number>,
   value: Value
 ): dimension.Measurement<Units, Unit, Value>;
 /// MARK: Tuple Measurement
@@ -69,7 +69,7 @@ export function measurement<
  * @template Unit - The unit type of the measurement.
  * @template Value - The value type of the measurement.
  *
- * @param {tuple.Measurement<Unit, number>} tuple - The base measurement tuple.
+ * @param {tuple.Measurement<Unit, number>} basedOn - The base measurement tuple.
  * @param {Value}                           value - The value of the measurement.
  *
  * @returns {tuple.Measurement<Unit, Value>} - The created measurement tuple.
@@ -78,7 +78,7 @@ export function measurement<
   Unit extends string,
   Value extends number
 >(
-  tuple: tuple.Measurement<Unit, number>,
+  basedOn: tuple.Measurement<Unit, number>,
   value: Value
 ): tuple.Measurement<Unit, Value>;
 /// MARK: Object Measurement
@@ -89,7 +89,7 @@ export function measurement<
  * @template Unit - The unit type of the measurement.
  * @template Value - The value type of the measurement.
  *
- * @param {object.Measurement<Unit, number>} object - The base measurement object.
+ * @param {object.Measurement<Unit, number>} basedOn - The base measurement object.
  * @param {Value}                            value  - The value of the measurement.
  *
  * @returns {object.Measurement<Unit, Value>} - The created measurement object.
@@ -98,7 +98,7 @@ export function measurement<
   Unit extends string,
   Value extends number
 >(
-  object: object.Measurement<Unit, number>,
+  basedOn: object.Measurement<Unit, number>,
   value: Value
 ): object.Measurement<Unit, Value>;
 /// MARK: Vague Measurement
@@ -109,7 +109,7 @@ export function measurement<
  * @template Unit  - The unit type of the measurement.
  * @template Value - The value type of the measurement.
  *
- * @param {Measurement<Unit, number>} base  - The base measurement object.
+ * @param {Measurement<Unit, number>} basedOn  - The base measurement object.
  * @param {Value}                     value - The value of the measurement.
  *
  * @returns {Measurement<Unit, Value>} - The created measurement object.
@@ -118,7 +118,7 @@ export function measurement<
   Unit extends string,
   Value extends number
 >(
-  base: Measurement<Unit, number>,
+  basedOn: Measurement<Unit, number>,
   value: Value
 ): Measurement<Unit, Value>;
 /// MARK: Measurement Factory
