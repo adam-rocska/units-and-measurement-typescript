@@ -7,7 +7,7 @@ import * as d from "../dimension";
  * Converts an array of measurements to a common unit.
  *
  * @param measurements - The array of measurements to be converted.
- * @returns The array of measurements converted to a common unit.
+ * @returns An array of measurements in a common unit, or `undefined` if the measurements can't be converted to a common unit.
  * @template Unit - The type of unit for the measurements.
  */
 export function toCommonUnit<
