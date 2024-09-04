@@ -45,15 +45,15 @@ describe("toCommonUnit", () => {
     }
   });
 
-  it("should throw an error if measurements have different dimensions", () => {
+  it("should return undefined if measurements have different dimensions", () => {
     const measurements = [
       o.measurement(1, "m"),
       o.measurement(2, "s"),
     ];
-    expect(() => toCommonUnit(...measurements)).toThrow(new TypeError(expectedErrorMessage));
+    expect(toCommonUnit(...measurements)).toBeUndefined();
   });
 
-  it("should throw an error if dimension can't be expressed as unit.", () => {
+  it("should return undefined if dimension can't be expressed as unit.", () => {
     const otherLength = d.dimension({
       km: [v => v / 100, v => v * 100],
     });
@@ -61,16 +61,14 @@ describe("toCommonUnit", () => {
       o.measurement(1, "m"),
       otherLength.km(3),
     ];
-    expect(() => toCommonUnit(...measurements)).toThrow(new TypeError(expectedErrorMessage));
+    expect(toCommonUnit(...measurements)).toBeUndefined();
   });
 
-  it("should throw an error if measurements have different units", () => {
+  it("should return undefined if measurements have different units", () => {
     const measurements = [
       o.measurement(1, "m"),
       o.measurement(2, "cm"),
     ];
-    expect(() => toCommonUnit(...measurements)).toThrow(new TypeError(expectedErrorMessage));
+    expect(toCommonUnit(...measurements)).toBeUndefined();
   });
 });
-
-const expectedErrorMessage = "All measurements must have the same unit or be of the same dimension.";

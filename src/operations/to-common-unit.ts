@@ -9,24 +9,26 @@ import * as d from "../dimension";
  * @param measurements - The array of measurements to be converted.
  * @returns The array of measurements converted to a common unit.
  * @template Unit - The type of unit for the measurements.
- * @throws If the measurements have different units or dimensions.
  */
 export function toCommonUnit<
   Unit extends string
 >(
   ...measurements: Measurement<Unit>[]
-): Measurement<Unit>[] {
+): Measurement<Unit>[] | undefined {
   if (measurements.length === 0) return [];
   if (measurements.length === 1) return measurements;
   const targetUnit = unit(measurements[0]!);
-  return measurements.map(m => {
-    if (d.isMeasurement(m)) {
-      if (!d.units(m).includes(targetUnit)) throw new TypeError(errorMessage);
-      return d.measurement(m, m.value, targetUnit);
-    }
-    if (unit(m) !== targetUnit) throw new TypeError(errorMessage);
-    return measurement(m, value(m));
-  });
-}
+  const result: Measurement<Unit>[] = [];
 
-const errorMessage = "All measurements must have the same unit or be of the same dimension.";
+  for (const m of measurements) {
+    if (d.isMeasurement(m)) {
+      if (!d.units(m).includes(targetUnit)) return undefined;
+      result.push(d.measurement(m, m.value, targetUnit));
+      continue;
+    }
+    if (unit(m) !== targetUnit) return undefined;
+    result.push((measurement(m, value(m))));
+  }
+
+  return result;
+}
