@@ -2,6 +2,15 @@ import {type Measurement, measurement} from "../measurement";
 import {value} from "../value";
 import {toCommonUnit} from "./to-common-unit";
 
+/**
+ * Performs an arithmetic operation on a list of measurements.
+ * The measurements are converted to a common unit before the operation is performed.
+ *
+ * @template Unit - The unit type of the measurements.
+ * @param operation - The arithmetic operation to perform on the measurements.
+ * @param measurements - The list of measurements to perform the operation on.
+ * @returns The result of the arithmetic operation as a new measurement, or undefined if the list of measurements is empty or invalid.
+ */
 export function arithmeticOperation<
   Unit extends string
 >(
