@@ -1,8 +1,8 @@
 import {arithmeticOperation} from "./arithmetic-operation";
 
-
 export const add = arithmeticOperation.bind(null, (a, b) => a + b);
 export const subtract = arithmeticOperation.bind(null, (a, b) => a - b);
+/// TODO: Moron. Multiplication, division, and all the others should only accept a decimal value and a measurement. Ffs, I fucked up again.
 export const multiply = arithmeticOperation.bind(null, (a, b) => a * b);
 export const divide = arithmeticOperation.bind(null, (a, b) => a / b);
 export const power = arithmeticOperation.bind(null, (a, b) => a ** b);
