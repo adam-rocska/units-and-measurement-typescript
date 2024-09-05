@@ -65,7 +65,8 @@
     "typescript": "^5.5.4"
   },
   "files": [
-    "dist"
+    "dist",
+    "operations"
   ],
   "main": "./dist/cjs/index.js",
   "module": "./dist/es/index.mjs",
@@ -80,6 +81,16 @@
       "require": {
         "types": "./dist/cjs/index.d.ts",
         "default": "./dist/cjs/index.js"
+      }
+    },
+    "./operations": {
+      "import": {
+        "types": "./dist/es/operations.d.mts",
+        "default": "./dist/es/operations.mjs"
+      },
+      "require": {
+        "types": "./dist/cjs/operations.d.ts",
+        "default": "./dist/cjs/operations.js"
       }
     }
   },

@@ -1,0 +1,6 @@
+{
+  "main": "../dist/cjs/operations.js",
+  "module": "../dist/es/operations.mjs",
+  "types": "../dist/cjs/operations.d.ts",
+  "private": true
+}
