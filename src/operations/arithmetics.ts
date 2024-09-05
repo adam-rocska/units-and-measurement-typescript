@@ -1,6 +1,5 @@
 import {arithmeticOperation} from "./arithmetic-operation";
 
-/// TODO: change of mind AGAIN; it SHOULD operate with other measurements too
 
 export const add = arithmeticOperation.bind(null, (a, b) => a + b);
 export const subtract = arithmeticOperation.bind(null, (a, b) => a - b);

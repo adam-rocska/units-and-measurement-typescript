@@ -100,6 +100,7 @@
     ],
     "moduleNameMapper": {
       "^@adam-rocska/units-and-measurement$": "<rootDir>/src/index.ts",
+      "^@adam-rocska/units-and-measurement/operations$": "<rootDir>/src/operations/index.ts",
       "^!(.*)$": "<rootDir>/$1"
     },
     "transform": {
