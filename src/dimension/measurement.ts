@@ -65,10 +65,10 @@ export function measurement<
   value: Value,
   unit: Unit
 ): Measurement<Units, Unit, Value> {
-  return Object(Object.create(
+  return Object.create(
     o.measurement(value, unit),
     isMeasurement(basis)
       ? Object.getOwnPropertyDescriptors(basis)
       : propertyDescriptors(basis)
-  ));
+  );
 }

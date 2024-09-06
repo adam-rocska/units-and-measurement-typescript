@@ -1,6 +1,9 @@
+import {toPrecision} from "!src/to-precision";
+
 describe("arithmetics", () => {
   const arithmeticOperation = jest.fn();
   jest.mock("!src/operations/arithmetic-operation", () => ({arithmeticOperation}));
+
   let {add, subtract, multiply, divide, power, root, logarithm} = require("!src/operations/arithmetics");
 
   beforeEach(() => {
@@ -53,96 +56,31 @@ describe("arithmetics", () => {
   });
 
   describe("multiply", () => {
-    it("should call arithmeticOperation with the multiplication operation.", () => {
-      const expected = {} as any;
-      arithmeticOperation.mockReturnValue(expected);
-      const actual = multiply("5px", "10px");
-      expect(arithmeticOperation).toHaveBeenCalledWith(expect.any(Function), "5px", "10px");
-      expect(actual).toBe(expected);
-    });
-
-    it("should call arithmeticOperation with the multiplication operation.", () => {
-      const expected = {} as any;
-      arithmeticOperation.mockReturnValue(expected);
-      multiply("5px");
-      arithmeticOperation.mock.calls.forEach(([reducer]) => {
-        expect(reducer(5, 10)).toBe(50);
-      });
+    it("should multiply the measurement by the multiplier.", () => {
+      expect(multiply("5px", 3)).toEqual("15px");
     });
   });
 
   describe("divide", () => {
-    it("should call arithmeticOperation with the division operation.", () => {
-      const expected = {} as any;
-      arithmeticOperation.mockReturnValue(expected);
-      const actual = divide("5px", "10px");
-      expect(arithmeticOperation).toHaveBeenCalledWith(expect.any(Function), "5px", "10px");
-      expect(actual).toBe(expected);
-    });
-
-    it("should call arithmeticOperation with the division operation.", () => {
-      const expected = {} as any;
-      arithmeticOperation.mockReturnValue(expected);
-      divide("5px");
-      arithmeticOperation.mock.calls.forEach(([reducer]) => {
-        expect(reducer(5, 10)).toBe(0.5);
-      });
+    it("should divide the measurement by the divisor.", () => {
+      expect(divide("15px", 3)).toEqual("5px");
     });
   });
 
   describe("power", () => {
-    it("should call arithmeticOperation with the power operation.", () => {
-      const expected = {} as any;
-      arithmeticOperation.mockReturnValue(expected);
-      const actual = power("5px", "10px");
-      expect(arithmeticOperation).toHaveBeenCalledWith(expect.any(Function), "5px", "10px");
-      expect(actual).toBe(expected);
-    });
-
-    it("should call arithmeticOperation with the power operation.", () => {
-      const expected = {} as any;
-      arithmeticOperation.mockReturnValue(expected);
-      power("5px");
-      arithmeticOperation.mock.calls.forEach(([reducer]) => {
-        expect(reducer(5, 10)).toBe(9765625);
-      });
+    it("should raise the measurement to the exponent.", () => {
+      expect(power("5px", 3)).toEqual("125px");
     });
   });
 
   describe("root", () => {
-    it("should call arithmeticOperation with the root operation.", () => {
-      const expected = {} as any;
-      arithmeticOperation.mockReturnValue(expected);
-      const actual = root("5px", "10px");
-      expect(arithmeticOperation).toHaveBeenCalledWith(expect.any(Function), "5px", "10px");
-      expect(actual).toBe(expected);
+    it("should take the root of the measurement.", () => {
+      expect(toPrecision(root("125px", 3), 1)).toEqual("5px");
     });
 
-    it("should call arithmeticOperation with the root operation.", () => {
-      const expected = {} as any;
-      arithmeticOperation.mockReturnValue(expected);
-      root("5px");
-      arithmeticOperation.mock.calls.forEach(([reducer]) => {
-        expect(reducer(5, 10)).toBeCloseTo(5 ** (1 / 10));
-      });
-    });
-  });
-
-  describe("logarithm", () => {
-    it("should call arithmeticOperation with the logarithm operation.", () => {
-      const expected = {} as any;
-      arithmeticOperation.mockReturnValue(expected);
-      const actual = logarithm("5px", "10px");
-      expect(arithmeticOperation).toHaveBeenCalledWith(expect.any(Function), "5px", "10px");
-      expect(actual).toBe(expected);
-    });
-
-    it("should call arithmeticOperation with the logarithm operation.", () => {
-      const expected = {} as any;
-      arithmeticOperation.mockReturnValue(expected);
-      logarithm("5px");
-      arithmeticOperation.mock.calls.forEach(([reducer]) => {
-        expect(reducer(5, 10)).toBeCloseTo(0.6989700043360189);
+    describe("logarithm", () => {
+      it("should take the logarithm of the measurement.", () => {
+        expect(toPrecision(logarithm("125px", 5), 1)).toEqual("3px");
       });
     });
   });
