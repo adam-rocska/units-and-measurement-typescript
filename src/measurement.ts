@@ -121,7 +121,6 @@ export function measurement<
   basedOn: Measurement<Unit, number>,
   value: Value
 ): Measurement<Unit, Value>;
-/// MARK: Measurement Factory
 export function measurement<
   Unit extends string,
   Value extends number
