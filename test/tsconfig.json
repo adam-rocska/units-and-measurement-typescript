@@ -7,7 +7,7 @@
     "paths": {
       "@adam-rocska/units-and-measurement": [ "./src/index.ts" ],
       "@adam-rocska/units-and-measurement/operations": [ "./src/operations/index.ts" ],
-      "!*": [ "./*" ],
+      "!*": [ "./*" ]
     }
   },
   "include": [
