@@ -17,6 +17,7 @@ jobs:
           node-version: 20
           registry-url: https://registry.npmjs.org/
       - uses: pnpm/action-setup@v4
+      - run: echo 'NODE_OPTIONS="--max-old-space-size=6144"' >> $GITHUB_ENV
       - run: pnpm install
       - run: pnpm clean
       - run: pnpm build
