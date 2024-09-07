@@ -57,17 +57,17 @@
     "check": "pnpm eslint && pnpm attw --pack"
   },
   "devDependencies": {
-    "@adam-rocska/markdown-table": "^1.0.1",
+    "@adam-rocska/markdown-table": "^1.0.2",
     "@arethetypeswrong/cli": "^0.15.4",
     "@swc/jest": "^0.2.36",
     "@tsconfig/strictest": "^2.0.5",
     "@types/jest": "^29.5.12",
-    "@types/node": "^22.5.0",
-    "bunchee": "^5.3.2",
+    "@types/node": "^22.5.4",
+    "bunchee": "^5.4.0",
     "eslint": "^8.57.0",
     "eslint-config-next": "14.2.5",
     "jest": "^29.7.0",
-    "pnpm": "^9.8.0",
+    "pnpm": "^9.9.0",
     "rimraf": "^6.0.1",
     "type-fest": "^4.26.0",
     "typescript": "^5.5.4"
