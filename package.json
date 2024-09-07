@@ -1,7 +1,7 @@
 {
   "name": "@adam-rocska/units-and-measurement",
   "version": "1.0.0",
-  "description": "TypeScript utility for handling numeric values with units, featuring unit conversion and unit-aware arithmetic operations.",
+  "description": "A TypeScript library for handling units and measurements with support for multiple formats (tuples, objects, strings, dimensions) and operations (arithmetic, comparison). Modular, tree-shakable, and designed for safe, boilerplate-free usage.",
   "keywords": [
     "units",
     "measurement",
@@ -22,7 +22,15 @@
     "scaling",
     "measurement-units",
     "unit-operations",
-    "unit-management"
+    "unit-management",
+    "arithmetic operations",
+    "comparison",
+    "tree-shaking",
+    "modular",
+    "type predicates",
+    "value extraction",
+    "boilerplate-free",
+    "measurements library"
   ],
   "author": {
     "name": "Ádám László Rocska",
