@@ -23,7 +23,7 @@
     "measurement-units",
     "unit-operations",
     "unit-management",
-    "arithmetic operations",
+    "arithmetic-operations",
     "comparison",
     "tree-shaking",
     "modular",
