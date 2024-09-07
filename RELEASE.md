@@ -3,13 +3,13 @@
 Initial release.
 Enjoy.
 
-# TypeScript Units & Measurement
+## TypeScript Units & Measurement
 
 A library for handling units and measurements in TypeScript.
 The library is broken down into several modules, each of
 which can be used independently.
 
-## `@adam-rocska/units-and-measurement`
+### `@adam-rocska/units-and-measurement`
 
 The main module providing all the units necessary or
 convenient for working with units and measurements safely
@@ -40,7 +40,7 @@ Utilities provided for measurements:
   `Number` type's `toFixed` and `toPrecision` methods on both
   specific and generic measurements.
 
-## `@adam-rocska/units-and-measurement/operations`
+### `@adam-rocska/units-and-measurement/operations`
 
 A module providing convenient utilities to perform operations
 on measurements.
@@ -52,7 +52,7 @@ It includes the following:
 - a utility for general purpose arithmetic operations
 - a utility for general purpose logical operations
 
-## `@adam-rocska/units-and-measurement/${DIMENSION}`
+### `@adam-rocska/units-and-measurement/${DIMENSION}`
 
 Every dimension submodule provides the following:
 
@@ -63,7 +63,7 @@ Every dimension submodule provides the following:
   `@adam-rocska/units-and-measurement`
 - Aliases for the dimension factories.
 
-## Example
+### Example
 
 ```typescript
 const paperWidth = inches(5.5);
