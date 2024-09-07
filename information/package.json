@@ -1,0 +1,7 @@
+{
+  "main": "../dist/cjs/information.js",
+  "module": "../dist/es/information.mjs",
+  "types": "../dist/cjs/information.d.ts",
+  "private": true
+}
+

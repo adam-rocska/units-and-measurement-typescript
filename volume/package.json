@@ -1,0 +1,7 @@
+{
+  "main": "../dist/cjs/volume.js",
+  "module": "../dist/es/volume.mjs",
+  "types": "../dist/cjs/volume.d.ts",
+  "private": true
+}
+
