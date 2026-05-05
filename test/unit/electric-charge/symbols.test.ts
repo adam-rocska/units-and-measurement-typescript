@@ -1,3 +1,4 @@
+import {describe, expect, it} from "vitest";
 import {isElectricChargeSymbol, electricChargeSymbols} from '!src/electric-charge/symbols';
 
 describe('isElectricChargeSymbol', () => {

@@ -1,3 +1,4 @@
+import {describe, expect, it} from "vitest";
 import {Measurement, isMeasurement} from "!src/object";
 
 describe('isMeasurement', () => {

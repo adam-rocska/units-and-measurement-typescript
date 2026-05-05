@@ -4,7 +4,6 @@
     "module": "ESNext",
     "target": "ESNext",
     "ignoreDeprecations": "6.0",
-    "types": [ "vitest/globals" ],
     "baseUrl": "..",
     "paths": {
       "@adam-rocska/units-and-measurement": [

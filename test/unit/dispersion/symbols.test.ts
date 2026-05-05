@@ -1,3 +1,4 @@
+import {describe, expect, it} from "vitest";
 import {isDispersionSymbol, dispersionSymbols} from '!src/dispersion/symbols';
 
 describe('isDispersionSymbol', () => {

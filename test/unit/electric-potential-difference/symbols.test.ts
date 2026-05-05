@@ -1,3 +1,4 @@
+import {describe, expect, it} from "vitest";
 import {isElectricPotentialDifferenceSymbol, electricPotentialDifferenceSymbols} from '!src/electric-potential-difference/symbols';
 
 describe('isElectricPotentialDifferenceSymbol', () => {

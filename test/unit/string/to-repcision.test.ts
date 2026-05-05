@@ -1,3 +1,4 @@
+import {describe, expect, it} from "vitest";
 import {Measurement, toPrecision} from "!src/string";
 
 describe("toPrecision", () => {

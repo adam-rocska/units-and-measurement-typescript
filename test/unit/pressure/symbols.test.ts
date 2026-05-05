@@ -1,3 +1,4 @@
+import {describe, expect, it} from "vitest";
 import {isPressureSymbol, pressureSymbols} from '!src/pressure/symbols';
 
 describe('isPressureSymbol', () => {

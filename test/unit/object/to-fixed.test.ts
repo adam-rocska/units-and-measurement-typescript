@@ -1,3 +1,4 @@
+import {describe, expect, it} from "vitest";
 import {measurement, toFixed} from "!src/object";
 
 describe("toFixed", () => {

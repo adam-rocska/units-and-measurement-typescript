@@ -1,3 +1,4 @@
+import {describe, expect, it} from "vitest";
 import {isConcentrationMassSymbol, concentrationMassSymbols} from '!src/concentration-mass/symbols';
 
 describe('isConcentrationMassSymbol', () => {

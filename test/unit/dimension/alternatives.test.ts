@@ -1,3 +1,4 @@
+import {describe, expect, it} from "vitest";
 import {alternativeGet, propertyDescriptor, propertyDescriptors} from "!src/dimension/alternatives";
 import {type Conversions} from "!src/dimension/conversion";
 

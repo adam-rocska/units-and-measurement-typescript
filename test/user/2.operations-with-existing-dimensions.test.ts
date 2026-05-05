@@ -1,3 +1,4 @@
+import {expect, test} from "vitest";
 import {centimeters, inches} from "@adam-rocska/units-and-measurement/length";
 import {toFixed} from "@adam-rocska/units-and-measurement";
 import {areEqual} from "@adam-rocska/units-and-measurement/operations";

@@ -1,3 +1,4 @@
+import {describe, expect, it} from "vitest";
 import {isPowerSymbol, powerSymbols} from '!src/power/symbols';
 
 describe('isPowerSymbol', () => {

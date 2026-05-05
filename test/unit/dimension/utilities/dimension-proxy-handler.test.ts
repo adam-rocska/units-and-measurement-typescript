@@ -1,3 +1,4 @@
+import {afterEach, describe, expect, it, vi} from "vitest";
 import {type Conversions} from "!src/dimension/conversion";
 import {DimensionProxyHandler} from "!src/dimension/utilities/dimension-proxy-handler";
 import {CommonProxyHandler} from "!src/dimension/utilities/common-proxy-handler";

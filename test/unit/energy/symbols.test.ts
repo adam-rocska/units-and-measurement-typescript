@@ -1,3 +1,4 @@
+import {describe, expect, it} from "vitest";
 import {isEnergySymbol, energySymbols} from '!src/energy/symbols';
 
 describe('isEnergySymbol', () => {

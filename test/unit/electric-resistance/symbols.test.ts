@@ -1,3 +1,4 @@
+import {describe, expect, it} from "vitest";
 import {isElectricResistanceSymbol, electricResistanceSymbols} from '!src/electric-resistance/symbols';
 
 describe('isElectricResistanceSymbol', () => {

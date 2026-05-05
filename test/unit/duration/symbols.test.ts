@@ -1,3 +1,4 @@
+import {describe, expect, it} from "vitest";
 import {isDurationSymbol, durationSymbols} from '!src/duration/symbols';
 
 describe('isDurationSymbol', () => {

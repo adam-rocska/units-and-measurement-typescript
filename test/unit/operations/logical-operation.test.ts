@@ -1,3 +1,4 @@
+import {beforeEach, describe, expect, it, vi} from "vitest";
 import {logicalOperation} from "!src/operations/logical-operation";
 
 const {toCommonUnit} = vi.hoisted(() => ({

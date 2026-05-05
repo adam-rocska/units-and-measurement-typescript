@@ -1,3 +1,4 @@
+import {describe, expect, it} from "vitest";
 import {isAreaSymbol, areaSymbols} from '!src/area/symbols';
 
 describe('isAreaSymbol', () => {

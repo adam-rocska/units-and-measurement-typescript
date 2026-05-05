@@ -1,3 +1,4 @@
+import {describe, expect, it} from "vitest";
 import {isMassSymbol, massSymbols} from '!src/mass/symbols';
 
 describe('isMassSymbol', () => {

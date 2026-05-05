@@ -1,3 +1,4 @@
+import {beforeEach, describe, expect, it, vi} from "vitest";
 import {toPrecision} from "!src/to-precision";
 
 const mocks = vi.hoisted(() => {

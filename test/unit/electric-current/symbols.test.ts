@@ -1,3 +1,4 @@
+import {describe, expect, it} from "vitest";
 import {isElectricCurrentSymbol, electricCurrentSymbols} from '!src/electric-current/symbols';
 
 describe('isElectricCurrentSymbol', () => {

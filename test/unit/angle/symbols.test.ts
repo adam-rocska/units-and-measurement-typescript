@@ -1,3 +1,4 @@
+import {describe, expect, it} from "vitest";
 import {isAngleSymbol, angleSymbols} from '!src/angle/symbols';
 
 describe('isAngleSymbol', () => {

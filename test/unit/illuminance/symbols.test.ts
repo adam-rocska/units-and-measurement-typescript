@@ -1,3 +1,4 @@
+import {describe, expect, it} from "vitest";
 import {isIlluminanceSymbol, illuminanceSymbols} from '!src/illuminance/symbols';
 
 describe('isIlluminanceSymbol', () => {

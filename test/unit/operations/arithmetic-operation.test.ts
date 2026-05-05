@@ -1,3 +1,4 @@
+import {beforeEach, describe, expect, it, vi} from "vitest";
 import {arithmeticOperation} from "!src/operations/arithmetic-operation";
 
 const mock = vi.hoisted(() => ({

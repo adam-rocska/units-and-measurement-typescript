@@ -1,3 +1,4 @@
+import {describe, expect, it} from "vitest";
 import {Conversions} from "!src/dimension/conversion";
 import {dimension} from "!src/dimension/dimension";
 

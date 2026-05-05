@@ -1,3 +1,4 @@
+import {describe, expect, it} from "vitest";
 import {isMeasurement} from "!src/is-measurement";
 import {Conversions} from "!src/dimension";
 import {measurement as string} from "!src/string";

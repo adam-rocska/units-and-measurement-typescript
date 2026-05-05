@@ -1,3 +1,4 @@
+import {describe, expect, it} from "vitest";
 import {isAccelerationSymbol, accelerationSymbols} from '!src/acceleration/symbols';
 
 describe('isAccelerationSymbol', () => {

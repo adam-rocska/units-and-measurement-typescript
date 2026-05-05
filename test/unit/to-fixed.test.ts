@@ -1,3 +1,4 @@
+import {beforeEach, describe, expect, it, vi} from "vitest";
 import {toFixed} from "!src/to-fixed";
 
 const mocks = vi.hoisted(() => {

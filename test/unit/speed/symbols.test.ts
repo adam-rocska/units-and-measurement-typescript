@@ -1,3 +1,4 @@
+import {describe, expect, it} from "vitest";
 import {isSpeedSymbol, speedSymbols} from '!src/speed/symbols';
 
 describe('isSpeedSymbol', () => {

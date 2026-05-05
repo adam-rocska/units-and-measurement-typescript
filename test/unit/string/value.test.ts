@@ -1,3 +1,4 @@
+import {describe, expect, it} from "vitest";
 import {Measurement, value} from "!src/string";
 
 describe('value', () => {

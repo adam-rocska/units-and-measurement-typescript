@@ -1,3 +1,4 @@
+import {describe, expect, it} from "vitest";
 import {isTemperatureSymbol, temperatureSymbols} from '!src/temperature/symbols';
 
 describe('isTemperatureSymbol', () => {

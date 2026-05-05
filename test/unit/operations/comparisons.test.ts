@@ -1,3 +1,4 @@
+import {beforeEach, describe, expect, it, vi} from "vitest";
 import {areEqual, greaterThan, greaterThanOrEqual, lessThan, lessThanOrEqual, notEqual} from "!src/operations/comparisons";
 
 const {logicalOperation} = vi.hoisted(() => ({

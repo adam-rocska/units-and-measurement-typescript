@@ -1,3 +1,4 @@
+import {describe, expect, it} from "vitest";
 import {isLengthSymbol, lengthSymbols} from '!src/length/symbols';
 
 describe('isLengthSymbol', () => {

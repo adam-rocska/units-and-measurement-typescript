@@ -1,3 +1,4 @@
+import {describe, expect, it} from "vitest";
 import {measurement, unit} from "!src/object";
 
 describe('unit', () => {

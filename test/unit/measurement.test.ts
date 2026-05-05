@@ -1,3 +1,4 @@
+import {describe, expect, it} from "vitest";
 import {measurement} from "!src";
 import * as string from "!src/string";
 import * as tuple from "!src/tuple";

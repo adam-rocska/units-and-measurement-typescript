@@ -1,3 +1,4 @@
+import {describe, expect, it} from "vitest";
 import {isFrequencySymbol, frequencySymbols} from '!src/frequency/symbols';
 
 describe('isFrequencySymbol', () => {

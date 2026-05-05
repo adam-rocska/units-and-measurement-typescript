@@ -1,3 +1,4 @@
+import {describe, expect, it} from "vitest";
 import {Measurement, toFixed} from "!src/string";
 
 describe("toFixed", () => {

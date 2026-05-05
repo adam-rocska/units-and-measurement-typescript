@@ -1,3 +1,4 @@
+import {describe, expect, it} from "vitest";
 import {isInformationSymbol, informationSymbols} from '!src/information/symbols';
 
 describe('isInformationSymbol', () => {
