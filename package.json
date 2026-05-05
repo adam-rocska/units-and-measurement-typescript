@@ -53,19 +53,21 @@
   "scripts": {
     "clean": "rimraf dist",
     "build": "bunchee",
+    "lint": "eslint \"src/**/*.ts\" \"test/**/*.ts\" \"eslint.config.mjs\" \"vitest.config.mts\"",
     "test": "vitest run",
     "test:watch": "vitest",
     "test:coverage": "vitest run --coverage",
-    "check": "pnpm eslint && pnpm attw --pack"
+    "typecheck": "tsc --noEmit",
+    "check": "pnpm lint && pnpm typecheck && npm_config_cache=.npm-cache pnpm attw --pack"
   },
   "devDependencies": {
     "@arethetypeswrong/cli": "^0.16.1",
     "@tsconfig/strictest": "^2.0.5",
+    "@typescript-eslint/parser": "^8.58.2",
     "@vitest/coverage-v8": "^4.1.5",
     "@types/node": "^22.5.4",
     "bunchee": "^5.4.0",
-    "eslint": "^8.57.0",
-    "eslint-config-next": "15.0.3",
+    "eslint": "^10.2.1",
     "vitest": "^4.1.5",
     "pnpm": "^9.9.0",
     "rimraf": "^6.0.1",
