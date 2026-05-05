@@ -13,6 +13,9 @@ on:
 permissions:
   contents: read
 
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
 jobs:
   verify:
     runs-on: ubuntu-latest
@@ -54,4 +57,9 @@ jobs:
       - run: pnpm install --frozen-lockfile
       - run: pnpm clean
       - run: pnpm build
-      - run: npm publish --access public
+      - run: npm whoami
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+      - run: npm publish --provenance --access public
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
