@@ -33,7 +33,7 @@ describe("toCommonUnit", () => {
     expect(toCommonUnit(...measurements)).toEqual(measurements);
   });
 
-  it("should convert measurements to a common unit", () => {
+  it("should convert dimension measurements to the first unit", () => {
     const measurements = [
       o.measurement(1, "m"),
       length.cm(2),
@@ -44,9 +44,16 @@ describe("toCommonUnit", () => {
     expect(commonUnit).toBeDefined();
 
     for (const [i, actual] of commonUnit!.entries()) {
-      expect(value(actual)).toEqual(value(measurements[i]!));
+      expect(value(actual)).toBeCloseTo([1, 0.02, 0.003][i]!);
       expect(unit(actual)).toEqual("m");
     }
+  });
+
+  it("should convert plain built-in measurements to the first unit", () => {
+    expect(toCommonUnit([1, "cm"], [2, "m"])).toEqual([
+      [1, "cm"],
+      [200, "cm"],
+    ]);
   });
 
   it("should return undefined if measurements have different dimensions", () => {
@@ -64,10 +71,10 @@ describe("toCommonUnit", () => {
     expect(toCommonUnit(o.measurement(1, "m"), otherLength.km(3) as any)).toBeUndefined();
   });
 
-  it("should return undefined if measurements have different units", () => {
+  it("should return undefined if plain measurements have unknown units", () => {
     const measurements = [
-      o.measurement(1, "m"),
-      o.measurement(2, "cm"),
+      o.measurement(1, "foo"),
+      o.measurement(2, "bar"),
     ];
     expect(toCommonUnit(...measurements)).toBeUndefined();
   });
