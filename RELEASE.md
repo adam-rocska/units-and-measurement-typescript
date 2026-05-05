@@ -1,87 +1,35 @@
-## 1.1.0
+# 1.0.1
 
-Modernized the package toolchain and validation flow.
+Modernizes the package maintenance, validation, and publishing
+tooling without changing the runtime API.
 
-- migrated the full test suite from Jest to Vitest
-- replaced the legacy ESLint setup with flat config
-- upgraded the package to TypeScript 6 and bunchee 6
-- added explicit `lint`, `typecheck`, and coverage scripts
-- refreshed CI to verify Node 20, 22, and 24
-- split release verification from npm publishing
+## Major Changes
 
-# 1.0.0
+- No major changes were made.
 
-Initial release.
-Enjoy.
+## Minor Changes
 
-## TypeScript Units & Measurement
+- No minor changes were made.
 
-A library for handling units and measurements in TypeScript.
-The library is broken down into several modules, each of
-which can be used independently.
+## Patch Changes
 
-### `@adam-rocska/units-and-measurement`
-
-The main module providing all the units necessary or
-convenient for working with units and measurements safely
-without boilerplate.
-
-Measurements may be expressed as:
-
-- **tuples:** Simplest form: `[15, "px"]`.
-- **objects:** Simplest form: `{ value: 15, unit: "px" }`.
-- **strings:** Simplest form: `"15px"`. _Yes. THAT simple._
-- **dimension:** Simplest form when using a known provided
-  dimension: `inches(11)`.
-
-where dimensions are a special monad of an object representation.
-
-Utilities provided for measurements:
-
-- **type predicates:** They help identify `any` value as a
-  general or specific type of measurement.
-- **factory utilities:** called simply `measurement`,
-  specialized by the respective specifier namespace or used
-  in its general form. Not necessary but useful in many cases
-  to reduce boilerplates.
-- **value and unit readers:** They help extract the value or
-  unit from a measurement, let it be a general or specific
-  type of measurement.
-- **toFixed and toPrecision:** Provide alternatives for the
-  `Number` type's `toFixed` and `toPrecision` methods on both
-  specific and generic measurements.
-
-### `@adam-rocska/units-and-measurement/operations`
-
-A module providing convenient utilities to perform operations
-on measurements.
-It includes the following:
-
-- arithmetic operations: addition, subtraction, multiplication,
-  division, exponentiation, root and logarithm.
-- comparison operations
-- a utility for general purpose arithmetic operations
-- a utility for general purpose logical operations
-
-### `@adam-rocska/units-and-measurement/${DIMENSION}`
-
-Every dimension submodule provides the following:
-
-- Unit symbol type predicates
-- List of known unit symbols
-- Unit symbols as types.
-- The dimension object, as anyone would provide one using
-  `@adam-rocska/units-and-measurement`
-- Aliases for the dimension factories.
-
-### Example
-
-```typescript
-const paperWidth = inches(5.5);
-const paperHeight = inches(11);
-
-// toFixed, to avoid floating point errors
-if (areEqual(toFixed(paperWidth.cm, 2), centimeters(13.97))) {
-  console.log("The paper width is 13.97 cm.");
-}
-```
+- Migrated the full test suite from Jest and SWC/Jest to Vitest `4.1.5`
+  while preserving the existing assertions and test structure.
+- Replaced the legacy ESLint configuration with ESLint `10.3.0` flat
+  config while preserving the package lint rules.
+- Upgraded the TypeScript build and validation toolchain, including
+  TypeScript `6.0.3`, bunchee `6.10.0`, pnpm `10.33.3`, and current Node
+  type definitions.
+- Added explicit Vitest imports in tests instead of relying on global test
+  APIs.
+- Added dedicated `typecheck`, `test:watch`, and `test:coverage` scripts,
+  and tightened `check` to run linting, type checking, and package export
+  validation.
+- Modernized CI with a Node `20`/`22`/`24` verification matrix and a separate
+  quality job.
+- Modernized the npm release workflow for GitHub release publishing and npm
+  trusted publishing.
+- Removed stale Jest package metadata and old package manager configuration.
+- Cleared current dependency drift and npm audit findings.
+- Refreshed package documentation and npm metadata for the modernized
+  package setup.
