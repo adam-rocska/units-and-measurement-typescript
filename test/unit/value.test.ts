@@ -10,13 +10,13 @@ describe("value", () => {
   });
 
   it("should return the value of an object measurement.", () => {
-    expect(value({value: 1, unit: "m"})).toBe(1);
+    expect(value({value: 1, unit: "m"} as any)).toBe(1);
   });
 
   it("should return the value of a dimension measurement.", () => {
     const v = 1;
     const u = "m";
-    expect(value({value: v, unit: u, [u]: v})).toBe(1);
+    expect(value({value: v, unit: u, [u]: v} as any)).toBe(1);
   });
 
 });

@@ -14,8 +14,9 @@ describe("logicalOperation", () => {
   });
 
   it("should return undefined when less than two measurements are provided.", () => {
-    expect(logicalOperation(operation)).toBeUndefined();
-    expect(logicalOperation(operation, "5px")).toBeUndefined();
+    const invoke = logicalOperation as (...args: any[]) => unknown;
+    expect(invoke(operation)).toBeUndefined();
+    expect(invoke(operation, "5px")).toBeUndefined();
   });
 
   it("should return undefined when the measurements cannot be converted to a common unit.", () => {

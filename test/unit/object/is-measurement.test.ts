@@ -36,17 +36,17 @@ describe('isMeasurement', () => {
   });
 
   it("should return true if the value is a measurement with the specified unit.", () => {
-    const measurement: Measurement<"px", 12.5> = {value: 12.5, unit: "px"};
+    const measurement = {value: 12.5, unit: "px"} as Measurement<"px", 12.5>;
     expect(isMeasurement(measurement, "px")).toBe(true);
   });
 
   it("should return true if the value is a measurement with the specified value.", () => {
-    const measurement: Measurement<"px", 12.5> = {value: 12.5, unit: "px"};
+    const measurement = {value: 12.5, unit: "px"} as Measurement<"px", 12.5>;
     expect(isMeasurement(measurement, undefined, 12.5)).toBe(true);
   });
 
   it("should return true if the value is a measurement with the specified unit and value.", () => {
-    const measurement: Measurement<"px", 12.5> = {value: 12.5, unit: "px"};
+    const measurement = {value: 12.5, unit: "px"} as Measurement<"px", 12.5>;
     expect(isMeasurement(measurement, "px", 12.5)).toBe(true);
   });
 });

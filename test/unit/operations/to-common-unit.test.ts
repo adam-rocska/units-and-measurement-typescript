@@ -39,7 +39,10 @@ describe("toCommonUnit", () => {
       length.mm(3),
     ];
 
-    for (const [i, actual] of toCommonUnit(...measurements).entries()) {
+    const commonUnit = toCommonUnit(...measurements);
+    expect(commonUnit).toBeDefined();
+
+    for (const [i, actual] of commonUnit!.entries()) {
       expect(value(actual)).toEqual(value(measurements[i]!));
       expect(unit(actual)).toEqual("m");
     }
@@ -57,11 +60,7 @@ describe("toCommonUnit", () => {
     const otherLength = d.dimension({
       km: [v => v / 100, v => v * 100],
     });
-    const measurements = [
-      o.measurement(1, "m"),
-      otherLength.km(3),
-    ];
-    expect(toCommonUnit(...measurements)).toBeUndefined();
+    expect(toCommonUnit(o.measurement(1, "m"), otherLength.km(3) as any)).toBeUndefined();
   });
 
   it("should return undefined if measurements have different units", () => {

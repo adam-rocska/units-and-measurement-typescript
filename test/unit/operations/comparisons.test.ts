@@ -22,7 +22,7 @@ describe("comparisons", () => {
     it("should call logicalOperation with the equality operation.", () => {
       const expected = {} as any;
       logicalOperation.mockReturnValue(expected);
-      areEqual("5px");
+      areEqual("5px", "10px");
       logicalOperation.mock.calls.forEach(([operation]) => {
         expect(operation("5px", "10px")).toBe(false);
       });
@@ -41,7 +41,7 @@ describe("comparisons", () => {
     it("should call logicalOperation with the greater than operation.", () => {
       const expected = {} as any;
       logicalOperation.mockReturnValue(expected);
-      greaterThan("5px");
+      greaterThan("5px", "10px");
       logicalOperation.mock.calls.forEach(([operation]) => {
         expect(operation("5px", "10px")).toBe(false);
       });
@@ -60,7 +60,7 @@ describe("comparisons", () => {
     it("should call logicalOperation with the greater than or areEqual operation.", () => {
       const expected = {} as any;
       logicalOperation.mockReturnValue(expected);
-      greaterThanOrEqual("5px");
+      greaterThanOrEqual("5px", "10px");
       logicalOperation.mock.calls.forEach(([operation]) => {
         expect(operation("5px", "10px")).toBe(false);
       });
@@ -79,7 +79,7 @@ describe("comparisons", () => {
     it("should call logicalOperation with the less than operation.", () => {
       const expected = {} as any;
       logicalOperation.mockReturnValue(expected);
-      lessThan("5px");
+      lessThan("5px", "10px");
       logicalOperation.mock.calls.forEach(([operation]) => {
         expect(operation("5px", "10px")).toBe(true);
       });
@@ -98,7 +98,7 @@ describe("comparisons", () => {
     it("should call logicalOperation with the less than or areEqual operation.", () => {
       const expected = {} as any;
       logicalOperation.mockReturnValue(expected);
-      lessThanOrEqual("5px");
+      lessThanOrEqual("5px", "10px");
       logicalOperation.mock.calls.forEach(([operation]) => {
         expect(operation("5px", "10px")).toBe(true);
       });
@@ -117,7 +117,7 @@ describe("comparisons", () => {
     it("should call logicalOperation with the inequality operation.", () => {
       const expected = {} as any;
       logicalOperation.mockReturnValue(expected);
-      notEqual("5px");
+      notEqual("5px", "10px");
       logicalOperation.mock.calls.forEach(([operation]) => {
         expect(operation("5px", "10px")).toBe(true);
       });

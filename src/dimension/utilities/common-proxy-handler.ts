@@ -15,9 +15,9 @@ export class CommonProxyHandler<T extends object, Units extends string>
     return Reflect.ownKeys(target).concat(this.units);
   }
 
-  public set(_: T, p: PropertyKey, v: any, r: any): boolean {return false;}
-  public deleteProperty(_: T, p: PropertyKey): boolean {return false;}
-  public setPrototypeOf(target: T, v: object | null): boolean {return false;}
+  public set(_: T, __: PropertyKey, ___: any, ____: any): boolean {return false;}
+  public deleteProperty(_: T, __: PropertyKey): boolean {return false;}
+  public setPrototypeOf(_: T, __: object | null): boolean {return false;}
   public getPrototypeOf(): null {return null;}
   public get(target: T, p: string | symbol, receiver: any) {return Reflect.get(target, p, receiver);}
   public getOwnPropertyDescriptor(target: T, p: string | symbol): PropertyDescriptor | undefined {

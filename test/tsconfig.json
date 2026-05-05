@@ -3,6 +3,7 @@
   "compilerOptions": {
     "module": "ESNext",
     "target": "ESNext",
+    "ignoreDeprecations": "6.0",
     "types": [ "vitest/globals" ],
     "baseUrl": "..",
     "paths": {
@@ -81,6 +82,11 @@
     }
   },
   "include": [
+    "../src/global.d.ts",
     "./**/*.test.ts"
+  ],
+  "exclude": [
+    "../dist",
+    "../node_modules"
   ]
 }

@@ -1,5 +1,6 @@
 import {type Conversions} from "../conversion";
-import {type Dimension, Measurement} from "../dimension";
+import {type Dimension} from "../dimension";
+import {type Measurement} from "../measurement";
 import {CommonProxyHandler} from "./common-proxy-handler";
 
 export class DimensionProxyHandler<Units extends string>

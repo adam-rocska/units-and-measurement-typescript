@@ -19,7 +19,7 @@ describe("alternativeGet", () => {
 
   it("should return a function that returns a Measurement", () => {
     const unit = "ft";
-    const result = alternativeGet(conversions, unit).call({unit: "m", value: 0});
+    const result = alternativeGet(conversions, unit).call({unit: "m", value: 0} as any);
     expect(result).toHaveProperty("unit", unit);
     expect(result).toHaveProperty("value", 0);
   });
@@ -27,14 +27,14 @@ describe("alternativeGet", () => {
   it("should return a function that returns a Measurement with the same value if the unit is the same", () => {
     const unit = "ft";
     const value = 1;
-    const result = alternativeGet(conversions, unit).call({unit, value});
+    const result = alternativeGet(conversions, unit).call({unit, value} as any);
     expect(result).toHaveProperty("unit", unit);
     expect(result).toHaveProperty("value", value);
   });
   it("should return a function that returns a Measurement with the converted value if the unit is different", () => {
     const unit = "ft";
     const value = 1;
-    const result = alternativeGet(conversions, "m").call({unit, value});
+    const result = alternativeGet(conversions, "m").call({unit, value} as any);
     expect(result).toHaveProperty("unit", "m");
     expect(result.value).toBeCloseTo(0.3048);
   });

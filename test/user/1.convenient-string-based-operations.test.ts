@@ -38,7 +38,7 @@ test("Use Case 1: Convenient string based operations", () => {
   // And then I could define a resolution in terms of these new types.
   const digitalPaper = {
     height: multiply(hd.height, 2),
-    get width(): px {return multiply(this.height, aspectRatios.usLetter);}
+    get width(): px {return multiply(this.height, aspectRatios.usLetter) as px;}
   } as const;
 
   expect(value(digitalPaper.width) / value(digitalPaper.height)).toBe(aspectRatios.usLetter);
