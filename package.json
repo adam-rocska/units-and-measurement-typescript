@@ -39,7 +39,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/adam-rocska/units-and-measurement-typescript.git"
+    "url": "git+https://github.com/adam-rocska/units-and-measurement-typescript.git"
   },
   "bugs": {
     "url": "https://github.com/adam-rocska/units-and-measurement-typescript/issues"
