@@ -79,3 +79,27 @@ if (areEqual(toFixed(paperWidth.cm, 2), centimeters(13.97))) {
   console.log("The paper width is 13.97 cm.");
 }
 ```
+
+## Development
+
+This package is now maintained with:
+
+- Node.js 20 and newer
+- pnpm 10
+- Vitest 4 for tests and coverage
+- ESLint flat config
+- TypeScript 6
+
+Useful commands during development:
+
+```bash
+pnpm test
+pnpm test:watch
+pnpm test:coverage
+pnpm lint
+pnpm typecheck
+pnpm check
+pnpm build
+```
+
+CI verifies the package on Node 20, 22, and 24.

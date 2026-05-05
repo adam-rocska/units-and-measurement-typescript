@@ -1,3 +1,14 @@
+## 1.1.0
+
+Modernized the package toolchain and validation flow.
+
+- migrated the full test suite from Jest to Vitest
+- replaced the legacy ESLint setup with flat config
+- upgraded the package to TypeScript 6 and bunchee 6
+- added explicit `lint`, `typecheck`, and coverage scripts
+- refreshed CI to verify Node 20, 22, and 24
+- split release verification from npm publishing
+
 # 1.0.0
 
 Initial release.
