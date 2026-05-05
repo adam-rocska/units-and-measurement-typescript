@@ -1,23 +1,26 @@
-test("[object Object] dimension", () => {
+beforeEach(() => {
+  vi.resetModules();
+});
+
+test("[object Object] dimension", async () => {
   const dimension = {
-    dimension: jest.fn(),
-    linearConversion: jest.fn()
+    dimension: vi.fn(),
+    linearConversion: vi.fn()
   };
 
   const conversions = {
-    "ppm": [jest.fn(), jest.fn()],
-    "ppb": [jest.fn(), jest.fn()],
-    "ppt": [jest.fn(), jest.fn()]
+    "ppm": [vi.fn(), vi.fn()],
+    "ppb": [vi.fn(), vi.fn()],
+    "ppt": [vi.fn(), vi.fn()]
   };
 
   const mockDispersion = {
-    "ppm": jest.fn(),
-    "ppb": jest.fn(),
-    "ppt": jest.fn()
+    "ppm": vi.fn(),
+    "ppb": vi.fn(),
+    "ppt": vi.fn()
   };
 
-  jest.clearAllMocks();
-  jest.mock("!src/dimension", () => dimension);
+  vi.doMock("!src/dimension", () => dimension);
 
   dimension
     .linearConversion
@@ -28,7 +31,7 @@ test("[object Object] dimension", () => {
 
   dimension.dimension.mockReturnValueOnce(mockDispersion);
 
-  const dispersionDimension = require('!src/dispersion/dimension');
+  const dispersionDimension = await import('!src/dispersion/dimension');
   expect(dispersionDimension.dispersion).toEqual(mockDispersion);
   expect(dispersionDimension.partsPerMillion).toBe(mockDispersion["ppm"]);
   expect(dispersionDimension.partsPerBillion).toBe(mockDispersion["ppb"]);

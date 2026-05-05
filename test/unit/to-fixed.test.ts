@@ -1,21 +1,24 @@
-describe("toFixed", () => {
-  /// MARK: - Mocks
+import {toFixed} from "!src/to-fixed";
+
+const mocks = vi.hoisted(() => {
   const createAspectMock = () => ({
-    isMeasurement: jest.fn(),
-    toFixed: jest.fn()
+    isMeasurement: vi.fn(),
+    toFixed: vi.fn()
   });
-  const mocks = {
+  return {
     string: createAspectMock(),
     tuple: createAspectMock(),
     object: createAspectMock(),
     dimension: createAspectMock()
   };
-  jest.mock("!src/string", () => mocks.string);
-  jest.mock("!src/tuple", () => mocks.tuple);
-  jest.mock("!src/object", () => mocks.object);
-  jest.mock("!src/dimension", () => mocks.dimension);
+});
+vi.mock("!src/string", () => mocks.string);
+vi.mock("!src/tuple", () => mocks.tuple);
+vi.mock("!src/object", () => mocks.object);
+vi.mock("!src/dimension", () => mocks.dimension);
 
-  let {toFixed} = require("!src/to-fixed");
+describe("toFixed", () => {
+  /// MARK: - Mocks
   const stubInput = {} as any;
   const stubOutput = {} as any;
   beforeEach(() => {
@@ -23,7 +26,6 @@ describe("toFixed", () => {
       mock.isMeasurement.mockClear();
       mock.toFixed.mockClear();
     });
-    toFixed = require("!src/to-fixed").toFixed;
   });
 
   /// MARK: - Tests

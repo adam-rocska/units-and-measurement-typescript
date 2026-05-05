@@ -1,49 +1,52 @@
-test("[object Object] dimension", () => {
+beforeEach(() => {
+  vi.resetModules();
+});
+
+test("[object Object] dimension", async () => {
   const dimension = {
-    dimension: jest.fn(),
-    linearConversion: jest.fn()
+    dimension: vi.fn(),
+    linearConversion: vi.fn()
   };
 
   const conversions = {
-    "kg": [jest.fn(), jest.fn()],
-    "g": [jest.fn(), jest.fn()],
-    "dg": [jest.fn(), jest.fn()],
-    "cg": [jest.fn(), jest.fn()],
-    "mg": [jest.fn(), jest.fn()],
-    "µg": [jest.fn(), jest.fn()],
-    "ng": [jest.fn(), jest.fn()],
-    "pg": [jest.fn(), jest.fn()],
-    "oz": [jest.fn(), jest.fn()],
-    "lb": [jest.fn(), jest.fn()],
-    "st": [jest.fn(), jest.fn()],
-    "t": [jest.fn(), jest.fn()],
-    "ton": [jest.fn(), jest.fn()],
-    "ct": [jest.fn(), jest.fn()],
-    "oz t": [jest.fn(), jest.fn()],
-    "slug": [jest.fn(), jest.fn()]
+    "kg": [vi.fn(), vi.fn()],
+    "g": [vi.fn(), vi.fn()],
+    "dg": [vi.fn(), vi.fn()],
+    "cg": [vi.fn(), vi.fn()],
+    "mg": [vi.fn(), vi.fn()],
+    "µg": [vi.fn(), vi.fn()],
+    "ng": [vi.fn(), vi.fn()],
+    "pg": [vi.fn(), vi.fn()],
+    "oz": [vi.fn(), vi.fn()],
+    "lb": [vi.fn(), vi.fn()],
+    "st": [vi.fn(), vi.fn()],
+    "t": [vi.fn(), vi.fn()],
+    "ton": [vi.fn(), vi.fn()],
+    "ct": [vi.fn(), vi.fn()],
+    "oz t": [vi.fn(), vi.fn()],
+    "slug": [vi.fn(), vi.fn()]
   };
 
   const mockMass = {
-    "kg": jest.fn(),
-    "g": jest.fn(),
-    "dg": jest.fn(),
-    "cg": jest.fn(),
-    "mg": jest.fn(),
-    "µg": jest.fn(),
-    "ng": jest.fn(),
-    "pg": jest.fn(),
-    "oz": jest.fn(),
-    "lb": jest.fn(),
-    "st": jest.fn(),
-    "t": jest.fn(),
-    "ton": jest.fn(),
-    "ct": jest.fn(),
-    "oz t": jest.fn(),
-    "slug": jest.fn()
+    "kg": vi.fn(),
+    "g": vi.fn(),
+    "dg": vi.fn(),
+    "cg": vi.fn(),
+    "mg": vi.fn(),
+    "µg": vi.fn(),
+    "ng": vi.fn(),
+    "pg": vi.fn(),
+    "oz": vi.fn(),
+    "lb": vi.fn(),
+    "st": vi.fn(),
+    "t": vi.fn(),
+    "ton": vi.fn(),
+    "ct": vi.fn(),
+    "oz t": vi.fn(),
+    "slug": vi.fn()
   };
 
-  jest.clearAllMocks();
-  jest.mock("!src/dimension", () => dimension);
+  vi.doMock("!src/dimension", () => dimension);
 
   dimension
     .linearConversion
@@ -67,7 +70,7 @@ test("[object Object] dimension", () => {
 
   dimension.dimension.mockReturnValueOnce(mockMass);
 
-  const massDimension = require('!src/mass/dimension');
+  const massDimension = await import('!src/mass/dimension');
   expect(massDimension.mass).toEqual(mockMass);
   expect(massDimension.kilograms).toBe(mockMass["kg"]);
   expect(massDimension.grams).toBe(mockMass["g"]);

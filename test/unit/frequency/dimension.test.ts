@@ -1,33 +1,36 @@
-test("[object Object] dimension", () => {
+beforeEach(() => {
+  vi.resetModules();
+});
+
+test("[object Object] dimension", async () => {
   const dimension = {
-    dimension: jest.fn(),
-    linearConversion: jest.fn()
+    dimension: vi.fn(),
+    linearConversion: vi.fn()
   };
 
   const conversions = {
-    "THz": [jest.fn(), jest.fn()],
-    "GHz": [jest.fn(), jest.fn()],
-    "MHz": [jest.fn(), jest.fn()],
-    "kHz": [jest.fn(), jest.fn()],
-    "Hz": [jest.fn(), jest.fn()],
-    "mHz": [jest.fn(), jest.fn()],
-    "µHz": [jest.fn(), jest.fn()],
-    "nHz": [jest.fn(), jest.fn()]
+    "THz": [vi.fn(), vi.fn()],
+    "GHz": [vi.fn(), vi.fn()],
+    "MHz": [vi.fn(), vi.fn()],
+    "kHz": [vi.fn(), vi.fn()],
+    "Hz": [vi.fn(), vi.fn()],
+    "mHz": [vi.fn(), vi.fn()],
+    "µHz": [vi.fn(), vi.fn()],
+    "nHz": [vi.fn(), vi.fn()]
   };
 
   const mockFrequency = {
-    "THz": jest.fn(),
-    "GHz": jest.fn(),
-    "MHz": jest.fn(),
-    "kHz": jest.fn(),
-    "Hz": jest.fn(),
-    "mHz": jest.fn(),
-    "µHz": jest.fn(),
-    "nHz": jest.fn()
+    "THz": vi.fn(),
+    "GHz": vi.fn(),
+    "MHz": vi.fn(),
+    "kHz": vi.fn(),
+    "Hz": vi.fn(),
+    "mHz": vi.fn(),
+    "µHz": vi.fn(),
+    "nHz": vi.fn()
   };
 
-  jest.clearAllMocks();
-  jest.mock("!src/dimension", () => dimension);
+  vi.doMock("!src/dimension", () => dimension);
 
   dimension
     .linearConversion
@@ -43,7 +46,7 @@ test("[object Object] dimension", () => {
 
   dimension.dimension.mockReturnValueOnce(mockFrequency);
 
-  const frequencyDimension = require('!src/frequency/dimension');
+  const frequencyDimension = await import('!src/frequency/dimension');
   expect(frequencyDimension.frequency).toEqual(mockFrequency);
   expect(frequencyDimension.terahertz).toBe(mockFrequency["THz"]);
   expect(frequencyDimension.gigahertz).toBe(mockFrequency["GHz"]);

@@ -1,20 +1,18 @@
+import {arithmeticOperation} from "!src/operations/arithmetic-operation";
+
+const mock = vi.hoisted(() => ({
+  toCommonUnit: vi.fn(),
+  measurement: vi.fn(),
+  reducer: vi.fn()
+}));
+vi.mock("!src/operations/to-common-unit", () => mock);
+vi.mock("!src/measurement", () => ({measurement: mock.measurement}));
+
 describe("arithmeticOperation", () => {
-  const mock = {
-    toCommonUnit: jest.fn(),
-    measurement: jest.fn(),
-    reducer: jest.fn()
-  };
-  jest.mock("!src/operations/to-common-unit", () => mock);
-  jest.mock("!src/measurement", () => ({measurement: mock.measurement}));
-
-  let {arithmeticOperation} = require("!src/operations/arithmetic-operation");
-
   beforeEach(() => {
-    Object.values(mock).forEach(mock => {
-      mock.mockClear();
+    Object.values(mock).forEach(m => {
+      m.mockClear();
     });
-
-    arithmeticOperation = require("!src/operations/arithmetic-operation").arithmeticOperation;
   });
 
   it("should return undefined when no measurements are provided.", () => {

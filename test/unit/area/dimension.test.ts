@@ -1,45 +1,48 @@
-test("[object Object] dimension", () => {
+beforeEach(() => {
+  vi.resetModules();
+});
+
+test("[object Object] dimension", async () => {
   const dimension = {
-    dimension: jest.fn(),
-    linearConversion: jest.fn()
+    dimension: vi.fn(),
+    linearConversion: vi.fn()
   };
 
   const conversions = {
-    "Mm²": [jest.fn(), jest.fn()],
-    "km²": [jest.fn(), jest.fn()],
-    "m²": [jest.fn(), jest.fn()],
-    "cm²": [jest.fn(), jest.fn()],
-    "mm²": [jest.fn(), jest.fn()],
-    "µm²": [jest.fn(), jest.fn()],
-    "nm²": [jest.fn(), jest.fn()],
-    "in²": [jest.fn(), jest.fn()],
-    "ft²": [jest.fn(), jest.fn()],
-    "yd²": [jest.fn(), jest.fn()],
-    "mi²": [jest.fn(), jest.fn()],
-    "ac": [jest.fn(), jest.fn()],
-    "a": [jest.fn(), jest.fn()],
-    "ha": [jest.fn(), jest.fn()]
+    "Mm²": [vi.fn(), vi.fn()],
+    "km²": [vi.fn(), vi.fn()],
+    "m²": [vi.fn(), vi.fn()],
+    "cm²": [vi.fn(), vi.fn()],
+    "mm²": [vi.fn(), vi.fn()],
+    "µm²": [vi.fn(), vi.fn()],
+    "nm²": [vi.fn(), vi.fn()],
+    "in²": [vi.fn(), vi.fn()],
+    "ft²": [vi.fn(), vi.fn()],
+    "yd²": [vi.fn(), vi.fn()],
+    "mi²": [vi.fn(), vi.fn()],
+    "ac": [vi.fn(), vi.fn()],
+    "a": [vi.fn(), vi.fn()],
+    "ha": [vi.fn(), vi.fn()]
   };
 
   const mockArea = {
-    "Mm²": jest.fn(),
-    "km²": jest.fn(),
-    "m²": jest.fn(),
-    "cm²": jest.fn(),
-    "mm²": jest.fn(),
-    "µm²": jest.fn(),
-    "nm²": jest.fn(),
-    "in²": jest.fn(),
-    "ft²": jest.fn(),
-    "yd²": jest.fn(),
-    "mi²": jest.fn(),
-    "ac": jest.fn(),
-    "a": jest.fn(),
-    "ha": jest.fn()
+    "Mm²": vi.fn(),
+    "km²": vi.fn(),
+    "m²": vi.fn(),
+    "cm²": vi.fn(),
+    "mm²": vi.fn(),
+    "µm²": vi.fn(),
+    "nm²": vi.fn(),
+    "in²": vi.fn(),
+    "ft²": vi.fn(),
+    "yd²": vi.fn(),
+    "mi²": vi.fn(),
+    "ac": vi.fn(),
+    "a": vi.fn(),
+    "ha": vi.fn()
   };
 
-  jest.clearAllMocks();
-  jest.mock("!src/dimension", () => dimension);
+  vi.doMock("!src/dimension", () => dimension);
 
   dimension
     .linearConversion
@@ -61,7 +64,7 @@ test("[object Object] dimension", () => {
 
   dimension.dimension.mockReturnValueOnce(mockArea);
 
-  const areaDimension = require('!src/area/dimension');
+  const areaDimension = await import('!src/area/dimension');
   expect(areaDimension.area).toEqual(mockArea);
   expect(areaDimension.squareMegameters).toBe(mockArea["Mm²"]);
   expect(areaDimension.squareKilometers).toBe(mockArea["km²"]);

@@ -1,23 +1,26 @@
-test("[object Object] dimension", () => {
+beforeEach(() => {
+  vi.resetModules();
+});
+
+test("[object Object] dimension", async () => {
   const dimension = {
-    dimension: jest.fn(),
-    linearConversion: jest.fn()
+    dimension: vi.fn(),
+    linearConversion: vi.fn()
   };
 
   const conversions = {
-    "sec": [jest.fn(), jest.fn()],
-    "min": [jest.fn(), jest.fn()],
-    "hr": [jest.fn(), jest.fn()]
+    "sec": [vi.fn(), vi.fn()],
+    "min": [vi.fn(), vi.fn()],
+    "hr": [vi.fn(), vi.fn()]
   };
 
   const mockDuration = {
-    "sec": jest.fn(),
-    "min": jest.fn(),
-    "hr": jest.fn()
+    "sec": vi.fn(),
+    "min": vi.fn(),
+    "hr": vi.fn()
   };
 
-  jest.clearAllMocks();
-  jest.mock("!src/dimension", () => dimension);
+  vi.doMock("!src/dimension", () => dimension);
 
   dimension
     .linearConversion
@@ -28,7 +31,7 @@ test("[object Object] dimension", () => {
 
   dimension.dimension.mockReturnValueOnce(mockDuration);
 
-  const durationDimension = require('!src/duration/dimension');
+  const durationDimension = await import('!src/duration/dimension');
   expect(durationDimension.duration).toEqual(mockDuration);
   expect(durationDimension.seconds).toBe(mockDuration["sec"]);
   expect(durationDimension.minutes).toBe(mockDuration["min"]);

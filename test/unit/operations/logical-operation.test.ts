@@ -1,15 +1,16 @@
+import {logicalOperation} from "!src/operations/logical-operation";
+
+const {toCommonUnit} = vi.hoisted(() => ({
+  toCommonUnit: vi.fn()
+}));
+vi.mock("!src/operations/to-common-unit", () => ({toCommonUnit}));
+
 describe("logicalOperation", () => {
-  const toCommonUnit = jest.fn();
-  const operation = jest.fn();
-
-  jest.mock("!src/operations/to-common-unit", () => ({toCommonUnit}));
-
-  let {logicalOperation} = require("!src/operations/logical-operation");
+  const operation = vi.fn();
 
   beforeEach(() => {
     toCommonUnit.mockClear();
     operation.mockClear();
-    logicalOperation = require("!src/operations/logical-operation").logicalOperation;
   });
 
   it("should return undefined when less than two measurements are provided.", () => {

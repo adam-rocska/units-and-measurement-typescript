@@ -1,21 +1,24 @@
-test("[object Object] dimension", () => {
+beforeEach(() => {
+  vi.resetModules();
+});
+
+test("[object Object] dimension", async () => {
   const dimension = {
-    dimension: jest.fn(),
-    linearConversion: jest.fn()
+    dimension: vi.fn(),
+    linearConversion: vi.fn()
   };
 
   const conversions = {
-    "m/s²": [jest.fn(), jest.fn()],
-    "g": [jest.fn(), jest.fn()]
+    "m/s²": [vi.fn(), vi.fn()],
+    "g": [vi.fn(), vi.fn()]
   };
 
   const mockAcceleration = {
-    "m/s²": jest.fn(),
-    "g": jest.fn()
+    "m/s²": vi.fn(),
+    "g": vi.fn()
   };
 
-  jest.clearAllMocks();
-  jest.mock("!src/dimension", () => dimension);
+  vi.doMock("!src/dimension", () => dimension);
 
   dimension
     .linearConversion
@@ -25,7 +28,7 @@ test("[object Object] dimension", () => {
 
   dimension.dimension.mockReturnValueOnce(mockAcceleration);
 
-  const accelerationDimension = require('!src/acceleration/dimension');
+  const accelerationDimension = await import('!src/acceleration/dimension');
   expect(accelerationDimension.acceleration).toEqual(mockAcceleration);
   expect(accelerationDimension.metersPerSecondSquared).toBe(mockAcceleration["m/s²"]);
   expect(accelerationDimension.gravity).toBe(mockAcceleration["g"]);

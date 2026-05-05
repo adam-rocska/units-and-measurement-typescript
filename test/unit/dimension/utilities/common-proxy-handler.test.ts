@@ -5,9 +5,9 @@ describe("CommonProxyHandler", () => {
   const stubUnits = ["m", "ft", "in"] as const;
   type StubUnits = typeof stubUnits[number];
   const stubConversions: Conversions<StubUnits> = {
-    m: [jest.fn(), jest.fn()],
-    ft: [jest.fn(), jest.fn()],
-    in: [jest.fn(), jest.fn()],
+    m: [vi.fn(), vi.fn()],
+    ft: [vi.fn(), vi.fn()],
+    in: [vi.fn(), vi.fn()],
   };
 
   afterEach(() => {
@@ -15,7 +15,7 @@ describe("CommonProxyHandler", () => {
       expect(fn1).not.toHaveBeenCalled();
       expect(fn2).not.toHaveBeenCalled();
     }
-    jest.clearAllMocks();
+    vi.clearAllMocks();
   });
 
   describe("#has", () => {

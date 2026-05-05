@@ -1,21 +1,24 @@
-describe("toPrecision", () => {
-  /// MARK: - Mocks
+import {toPrecision} from "!src/to-precision";
+
+const mocks = vi.hoisted(() => {
   const createAspectMock = () => ({
-    isMeasurement: jest.fn(),
-    toPrecision: jest.fn()
+    isMeasurement: vi.fn(),
+    toPrecision: vi.fn()
   });
-  const mocks = {
+  return {
     string: createAspectMock(),
     tuple: createAspectMock(),
     object: createAspectMock(),
     dimension: createAspectMock()
   };
-  jest.mock("!src/string", () => mocks.string);
-  jest.mock("!src/tuple", () => mocks.tuple);
-  jest.mock("!src/object", () => mocks.object);
-  jest.mock("!src/dimension", () => mocks.dimension);
+});
+vi.mock("!src/string", () => mocks.string);
+vi.mock("!src/tuple", () => mocks.tuple);
+vi.mock("!src/object", () => mocks.object);
+vi.mock("!src/dimension", () => mocks.dimension);
 
-  let {toPrecision} = require("!src/to-precision");
+describe("toPrecision", () => {
+  /// MARK: - Mocks
   const stubInput = {} as any;
   const stubOutput = {} as any;
   beforeEach(() => {
@@ -23,7 +26,6 @@ describe("toPrecision", () => {
       mock.isMeasurement.mockClear();
       mock.toPrecision.mockClear();
     });
-    toPrecision = require("!src/to-precision").toPrecision;
   });
 
   /// MARK: - Tests

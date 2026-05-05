@@ -1,19 +1,22 @@
-test("[object Object] dimension", () => {
+beforeEach(() => {
+  vi.resetModules();
+});
+
+test("[object Object] dimension", async () => {
   const dimension = {
-    dimension: jest.fn(),
-    linearConversion: jest.fn()
+    dimension: vi.fn(),
+    linearConversion: vi.fn()
   };
 
   const conversions = {
-    "lx": [jest.fn(), jest.fn()]
+    "lx": [vi.fn(), vi.fn()]
   };
 
   const mockIlluminance = {
-    "lx": jest.fn()
+    "lx": vi.fn()
   };
 
-  jest.clearAllMocks();
-  jest.mock("!src/dimension", () => dimension);
+  vi.doMock("!src/dimension", () => dimension);
 
   dimension
     .linearConversion
@@ -22,7 +25,7 @@ test("[object Object] dimension", () => {
 
   dimension.dimension.mockReturnValueOnce(mockIlluminance);
 
-  const illuminanceDimension = require('!src/illuminance/dimension');
+  const illuminanceDimension = await import('!src/illuminance/dimension');
   expect(illuminanceDimension.illuminance).toEqual(mockIlluminance);
   expect(illuminanceDimension.lux).toBe(mockIlluminance["lx"]);
 

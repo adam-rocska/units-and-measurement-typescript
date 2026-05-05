@@ -1,27 +1,30 @@
-test("[object Object] dimension", () => {
+beforeEach(() => {
+  vi.resetModules();
+});
+
+test("[object Object] dimension", async () => {
   const dimension = {
-    dimension: jest.fn(),
-    linearConversion: jest.fn()
+    dimension: vi.fn(),
+    linearConversion: vi.fn()
   };
 
   const conversions = {
-    "MV": [jest.fn(), jest.fn()],
-    "kV": [jest.fn(), jest.fn()],
-    "V": [jest.fn(), jest.fn()],
-    "mV": [jest.fn(), jest.fn()],
-    "µV": [jest.fn(), jest.fn()]
+    "MV": [vi.fn(), vi.fn()],
+    "kV": [vi.fn(), vi.fn()],
+    "V": [vi.fn(), vi.fn()],
+    "mV": [vi.fn(), vi.fn()],
+    "µV": [vi.fn(), vi.fn()]
   };
 
   const mockElectricPotentialDifference = {
-    "MV": jest.fn(),
-    "kV": jest.fn(),
-    "V": jest.fn(),
-    "mV": jest.fn(),
-    "µV": jest.fn()
+    "MV": vi.fn(),
+    "kV": vi.fn(),
+    "V": vi.fn(),
+    "mV": vi.fn(),
+    "µV": vi.fn()
   };
 
-  jest.clearAllMocks();
-  jest.mock("!src/dimension", () => dimension);
+  vi.doMock("!src/dimension", () => dimension);
 
   dimension
     .linearConversion
@@ -34,7 +37,7 @@ test("[object Object] dimension", () => {
 
   dimension.dimension.mockReturnValueOnce(mockElectricPotentialDifference);
 
-  const electricPotentialDifferenceDimension = require('!src/electric-potential-difference/dimension');
+  const electricPotentialDifferenceDimension = await import('!src/electric-potential-difference/dimension');
   expect(electricPotentialDifferenceDimension.electricPotentialDifference).toEqual(mockElectricPotentialDifference);
   expect(electricPotentialDifferenceDimension.megavolts).toBe(mockElectricPotentialDifference["MV"]);
   expect(electricPotentialDifferenceDimension.kilovolts).toBe(mockElectricPotentialDifference["kV"]);

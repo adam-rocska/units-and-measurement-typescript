@@ -6,9 +6,9 @@ describe("DimensionProxyHandler", () => {
   const stubUnits = ["m", "ft", "in"] as const;
   type StubUnits = typeof stubUnits[number];
   const stubConversions: Conversions<StubUnits> = {
-    m: [jest.fn(), jest.fn()],
-    ft: [jest.fn(), jest.fn()],
-    in: [jest.fn(), jest.fn()],
+    m: [vi.fn(), vi.fn()],
+    ft: [vi.fn(), vi.fn()],
+    in: [vi.fn(), vi.fn()],
   };
 
   afterEach(() => {
@@ -16,7 +16,7 @@ describe("DimensionProxyHandler", () => {
       expect(fn1).not.toHaveBeenCalled();
       expect(fn2).not.toHaveBeenCalled;
     }
-    jest.clearAllMocks();
+    vi.clearAllMocks();
   });
 
   /// This test is important because there is no fucking
@@ -30,7 +30,7 @@ describe("DimensionProxyHandler", () => {
   it("should extend CommonProxyHandler", () => {
     const handler = new DimensionProxyHandler(
       stubConversions,
-      jest.fn()
+      vi.fn()
     );
     expect(handler).toBeInstanceOf(CommonProxyHandler);
   });
@@ -39,7 +39,7 @@ describe("DimensionProxyHandler", () => {
     it("should return the target's value if it has one stored under the inquired key.", () => {
       const handler = new DimensionProxyHandler(
         stubConversions,
-        jest.fn()
+        vi.fn()
       );
       const stub = {};
       const target = {stub};
@@ -50,14 +50,14 @@ describe("DimensionProxyHandler", () => {
     it("should return undefined if the inquired key is not a unit and doesn't exist on the target.", () => {
       const handler = new DimensionProxyHandler(
         stubConversions,
-        jest.fn()
+        vi.fn()
       );
       const result = handler.get({} as any, "stub");
       expect(result).toBeUndefined();
     });
 
     it("should return a measurement factory function if the key is a unit.", () => {
-      const createStubMeasurement = jest.fn();
+      const createStubMeasurement = vi.fn();
       const handler = new DimensionProxyHandler(
         stubConversions,
         createStubMeasurement

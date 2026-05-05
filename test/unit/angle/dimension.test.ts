@@ -1,29 +1,32 @@
-test("[object Object] dimension", () => {
+beforeEach(() => {
+  vi.resetModules();
+});
+
+test("[object Object] dimension", async () => {
   const dimension = {
-    dimension: jest.fn(),
-    linearConversion: jest.fn()
+    dimension: vi.fn(),
+    linearConversion: vi.fn()
   };
 
   const conversions = {
-    "°": [jest.fn(), jest.fn()],
-    "ʹ": [jest.fn(), jest.fn()],
-    "ʺ": [jest.fn(), jest.fn()],
-    "rad": [jest.fn(), jest.fn()],
-    "grad": [jest.fn(), jest.fn()],
-    "rev": [jest.fn(), jest.fn()]
+    "°": [vi.fn(), vi.fn()],
+    "ʹ": [vi.fn(), vi.fn()],
+    "ʺ": [vi.fn(), vi.fn()],
+    "rad": [vi.fn(), vi.fn()],
+    "grad": [vi.fn(), vi.fn()],
+    "rev": [vi.fn(), vi.fn()]
   };
 
   const mockAngle = {
-    "°": jest.fn(),
-    "ʹ": jest.fn(),
-    "ʺ": jest.fn(),
-    "rad": jest.fn(),
-    "grad": jest.fn(),
-    "rev": jest.fn()
+    "°": vi.fn(),
+    "ʹ": vi.fn(),
+    "ʺ": vi.fn(),
+    "rad": vi.fn(),
+    "grad": vi.fn(),
+    "rev": vi.fn()
   };
 
-  jest.clearAllMocks();
-  jest.mock("!src/dimension", () => dimension);
+  vi.doMock("!src/dimension", () => dimension);
 
   dimension
     .linearConversion
@@ -37,7 +40,7 @@ test("[object Object] dimension", () => {
 
   dimension.dimension.mockReturnValueOnce(mockAngle);
 
-  const angleDimension = require('!src/angle/dimension');
+  const angleDimension = await import('!src/angle/dimension');
   expect(angleDimension.angle).toEqual(mockAngle);
   expect(angleDimension.degrees).toBe(mockAngle["°"]);
   expect(angleDimension.arcMinutes).toBe(mockAngle["ʹ"]);

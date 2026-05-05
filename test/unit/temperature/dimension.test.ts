@@ -1,25 +1,28 @@
-test("[object Object] dimension", () => {
+beforeEach(() => {
+  vi.resetModules();
+});
+
+test("[object Object] dimension", async () => {
   const dimension = {
-    dimension: jest.fn(),
-    linearConversion: jest.fn()
+    dimension: vi.fn(),
+    linearConversion: vi.fn()
   };
 
   const conversions = {
-    "K": [jest.fn(), jest.fn()],
-    "°C": [jest.fn(), jest.fn()],
-    "°F": [jest.fn(), jest.fn()],
-    "°R": [jest.fn(), jest.fn()]
+    "K": [vi.fn(), vi.fn()],
+    "°C": [vi.fn(), vi.fn()],
+    "°F": [vi.fn(), vi.fn()],
+    "°R": [vi.fn(), vi.fn()]
   };
 
   const mockTemperature = {
-    "K": jest.fn(),
-    "°C": jest.fn(),
-    "°F": jest.fn(),
-    "°R": jest.fn()
+    "K": vi.fn(),
+    "°C": vi.fn(),
+    "°F": vi.fn(),
+    "°R": vi.fn()
   };
 
-  jest.clearAllMocks();
-  jest.mock("!src/dimension", () => dimension);
+  vi.doMock("!src/dimension", () => dimension);
 
   dimension
     .linearConversion
@@ -31,7 +34,7 @@ test("[object Object] dimension", () => {
 
   dimension.dimension.mockReturnValueOnce(mockTemperature);
 
-  const temperatureDimension = require('!src/temperature/dimension');
+  const temperatureDimension = await import('!src/temperature/dimension');
   expect(temperatureDimension.temperature).toEqual(mockTemperature);
   expect(temperatureDimension.kelvin).toBe(mockTemperature["K"]);
   expect(temperatureDimension.celsius).toBe(mockTemperature["°C"]);

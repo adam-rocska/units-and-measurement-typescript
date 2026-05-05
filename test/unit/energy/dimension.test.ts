@@ -1,31 +1,34 @@
-test("[object Object] dimension", () => {
+beforeEach(() => {
+  vi.resetModules();
+});
+
+test("[object Object] dimension", async () => {
   const dimension = {
-    dimension: jest.fn(),
-    linearConversion: jest.fn()
+    dimension: vi.fn(),
+    linearConversion: vi.fn()
   };
 
   const conversions = {
-    "kJ": [jest.fn(), jest.fn()],
-    "J": [jest.fn(), jest.fn()],
-    "kCal": [jest.fn(), jest.fn()],
-    "cal": [jest.fn(), jest.fn()],
-    "kWh": [jest.fn(), jest.fn()],
-    "Wh": [jest.fn(), jest.fn()],
-    "eV": [jest.fn(), jest.fn()]
+    "kJ": [vi.fn(), vi.fn()],
+    "J": [vi.fn(), vi.fn()],
+    "kCal": [vi.fn(), vi.fn()],
+    "cal": [vi.fn(), vi.fn()],
+    "kWh": [vi.fn(), vi.fn()],
+    "Wh": [vi.fn(), vi.fn()],
+    "eV": [vi.fn(), vi.fn()]
   };
 
   const mockEnergy = {
-    "kJ": jest.fn(),
-    "J": jest.fn(),
-    "kCal": jest.fn(),
-    "cal": jest.fn(),
-    "kWh": jest.fn(),
-    "Wh": jest.fn(),
-    "eV": jest.fn()
+    "kJ": vi.fn(),
+    "J": vi.fn(),
+    "kCal": vi.fn(),
+    "cal": vi.fn(),
+    "kWh": vi.fn(),
+    "Wh": vi.fn(),
+    "eV": vi.fn()
   };
 
-  jest.clearAllMocks();
-  jest.mock("!src/dimension", () => dimension);
+  vi.doMock("!src/dimension", () => dimension);
 
   dimension
     .linearConversion
@@ -40,7 +43,7 @@ test("[object Object] dimension", () => {
 
   dimension.dimension.mockReturnValueOnce(mockEnergy);
 
-  const energyDimension = require('!src/energy/dimension');
+  const energyDimension = await import('!src/energy/dimension');
   expect(energyDimension.energy).toEqual(mockEnergy);
   expect(energyDimension.kilojoules).toBe(mockEnergy["kJ"]);
   expect(energyDimension.joules).toBe(mockEnergy["J"]);

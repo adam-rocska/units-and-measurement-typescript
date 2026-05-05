@@ -1,37 +1,40 @@
-test("[object Object] dimension", () => {
+beforeEach(() => {
+  vi.resetModules();
+});
+
+test("[object Object] dimension", async () => {
   const dimension = {
-    dimension: jest.fn(),
-    linearConversion: jest.fn()
+    dimension: vi.fn(),
+    linearConversion: vi.fn()
   };
 
   const conversions = {
-    "N/m²": [jest.fn(), jest.fn()],
-    "GPa": [jest.fn(), jest.fn()],
-    "MPa": [jest.fn(), jest.fn()],
-    "kPa": [jest.fn(), jest.fn()],
-    "hPa": [jest.fn(), jest.fn()],
-    "inHg": [jest.fn(), jest.fn()],
-    "bar": [jest.fn(), jest.fn()],
-    "mbar": [jest.fn(), jest.fn()],
-    "mmHg": [jest.fn(), jest.fn()],
-    "psi": [jest.fn(), jest.fn()]
+    "N/m²": [vi.fn(), vi.fn()],
+    "GPa": [vi.fn(), vi.fn()],
+    "MPa": [vi.fn(), vi.fn()],
+    "kPa": [vi.fn(), vi.fn()],
+    "hPa": [vi.fn(), vi.fn()],
+    "inHg": [vi.fn(), vi.fn()],
+    "bar": [vi.fn(), vi.fn()],
+    "mbar": [vi.fn(), vi.fn()],
+    "mmHg": [vi.fn(), vi.fn()],
+    "psi": [vi.fn(), vi.fn()]
   };
 
   const mockPressure = {
-    "N/m²": jest.fn(),
-    "GPa": jest.fn(),
-    "MPa": jest.fn(),
-    "kPa": jest.fn(),
-    "hPa": jest.fn(),
-    "inHg": jest.fn(),
-    "bar": jest.fn(),
-    "mbar": jest.fn(),
-    "mmHg": jest.fn(),
-    "psi": jest.fn()
+    "N/m²": vi.fn(),
+    "GPa": vi.fn(),
+    "MPa": vi.fn(),
+    "kPa": vi.fn(),
+    "hPa": vi.fn(),
+    "inHg": vi.fn(),
+    "bar": vi.fn(),
+    "mbar": vi.fn(),
+    "mmHg": vi.fn(),
+    "psi": vi.fn()
   };
 
-  jest.clearAllMocks();
-  jest.mock("!src/dimension", () => dimension);
+  vi.doMock("!src/dimension", () => dimension);
 
   dimension
     .linearConversion
@@ -49,7 +52,7 @@ test("[object Object] dimension", () => {
 
   dimension.dimension.mockReturnValueOnce(mockPressure);
 
-  const pressureDimension = require('!src/pressure/dimension');
+  const pressureDimension = await import('!src/pressure/dimension');
   expect(pressureDimension.pressure).toEqual(mockPressure);
   expect(pressureDimension.newtonsPerMetersSquared).toBe(mockPressure["N/m²"]);
   expect(pressureDimension.gigapascals).toBe(mockPressure["GPa"]);

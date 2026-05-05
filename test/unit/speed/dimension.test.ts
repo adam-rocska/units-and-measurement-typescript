@@ -1,25 +1,28 @@
-test("[object Object] dimension", () => {
+beforeEach(() => {
+  vi.resetModules();
+});
+
+test("[object Object] dimension", async () => {
   const dimension = {
-    dimension: jest.fn(),
-    linearConversion: jest.fn()
+    dimension: vi.fn(),
+    linearConversion: vi.fn()
   };
 
   const conversions = {
-    "m/s": [jest.fn(), jest.fn()],
-    "km/h": [jest.fn(), jest.fn()],
-    "mph": [jest.fn(), jest.fn()],
-    "kn": [jest.fn(), jest.fn()]
+    "m/s": [vi.fn(), vi.fn()],
+    "km/h": [vi.fn(), vi.fn()],
+    "mph": [vi.fn(), vi.fn()],
+    "kn": [vi.fn(), vi.fn()]
   };
 
   const mockSpeed = {
-    "m/s": jest.fn(),
-    "km/h": jest.fn(),
-    "mph": jest.fn(),
-    "kn": jest.fn()
+    "m/s": vi.fn(),
+    "km/h": vi.fn(),
+    "mph": vi.fn(),
+    "kn": vi.fn()
   };
 
-  jest.clearAllMocks();
-  jest.mock("!src/dimension", () => dimension);
+  vi.doMock("!src/dimension", () => dimension);
 
   dimension
     .linearConversion
@@ -31,7 +34,7 @@ test("[object Object] dimension", () => {
 
   dimension.dimension.mockReturnValueOnce(mockSpeed);
 
-  const speedDimension = require('!src/speed/dimension');
+  const speedDimension = await import('!src/speed/dimension');
   expect(speedDimension.speed).toEqual(mockSpeed);
   expect(speedDimension.metersPerSecond).toBe(mockSpeed["m/s"]);
   expect(speedDimension.kilometersPerHour).toBe(mockSpeed["km/h"]);

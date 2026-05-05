@@ -1,16 +1,13 @@
-describe("comparisons", () => {
-  const logicalOperation = jest.fn();
-  jest.mock("!src/operations/logical-operation", () => ({logicalOperation}));
-  let {areEqual, greaterThan, greaterThanOrEqual, lessThan, lessThanOrEqual, notEqual} = require("!src/operations/comparisons");
+import {areEqual, greaterThan, greaterThanOrEqual, lessThan, lessThanOrEqual, notEqual} from "!src/operations/comparisons";
 
+const {logicalOperation} = vi.hoisted(() => ({
+  logicalOperation: vi.fn()
+}));
+vi.mock("!src/operations/logical-operation", () => ({logicalOperation}));
+
+describe("comparisons", () => {
   beforeEach(() => {
     logicalOperation.mockClear();
-    areEqual = require("!src/operations/comparisons").areEqual;
-    greaterThan = require("!src/operations/comparisons").greaterThan;
-    greaterThanOrEqual = require("!src/operations/comparisons").greaterThanOrEqual;
-    lessThan = require("!src/operations/comparisons").lessThan;
-    lessThanOrEqual = require("!src/operations/comparisons").lessThanOrEqual;
-    notEqual = require("!src/operations/comparisons").notEqual;
   });
 
   describe("areEqual", () => {

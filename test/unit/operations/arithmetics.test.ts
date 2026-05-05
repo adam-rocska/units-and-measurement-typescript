@@ -1,20 +1,14 @@
 import {toPrecision} from "!src/to-precision";
+import {add, subtract, multiply, divide, power, root, logarithm} from "!src/operations/arithmetics";
+
+const {arithmeticOperation} = vi.hoisted(() => ({
+  arithmeticOperation: vi.fn()
+}));
+vi.mock("!src/operations/arithmetic-operation", () => ({arithmeticOperation}));
 
 describe("arithmetics", () => {
-  const arithmeticOperation = jest.fn();
-  jest.mock("!src/operations/arithmetic-operation", () => ({arithmeticOperation}));
-
-  let {add, subtract, multiply, divide, power, root, logarithm} = require("!src/operations/arithmetics");
-
   beforeEach(() => {
     arithmeticOperation.mockClear();
-    add = require("!src/operations/arithmetics").add;
-    subtract = require("!src/operations/arithmetics").subtract;
-    multiply = require("!src/operations/arithmetics").multiply;
-    divide = require("!src/operations/arithmetics").divide;
-    power = require("!src/operations/arithmetics").power;
-    root = require("!src/operations/arithmetics").root;
-    logarithm = require("!src/operations/arithmetics").logarithm;
   });
 
   describe("add", () => {

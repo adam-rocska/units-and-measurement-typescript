@@ -1,67 +1,70 @@
-test("[object Object] dimension", () => {
+beforeEach(() => {
+  vi.resetModules();
+});
+
+test("[object Object] dimension", async () => {
   const dimension = {
-    dimension: jest.fn(),
-    linearConversion: jest.fn()
+    dimension: vi.fn(),
+    linearConversion: vi.fn()
   };
 
   const conversions = {
-    "Mm": [jest.fn(), jest.fn()],
-    "kM": [jest.fn(), jest.fn()],
-    "hm": [jest.fn(), jest.fn()],
-    "dam": [jest.fn(), jest.fn()],
-    "m": [jest.fn(), jest.fn()],
-    "dm": [jest.fn(), jest.fn()],
-    "cm": [jest.fn(), jest.fn()],
-    "mm": [jest.fn(), jest.fn()],
-    "µm": [jest.fn(), jest.fn()],
-    "nm": [jest.fn(), jest.fn()],
-    "pm": [jest.fn(), jest.fn()],
-    "tw": [jest.fn(), jest.fn()],
-    "pt": [jest.fn(), jest.fn()],
-    "P": [jest.fn(), jest.fn()],
-    "in": [jest.fn(), jest.fn()],
-    "ft": [jest.fn(), jest.fn()],
-    "yd": [jest.fn(), jest.fn()],
-    "mi": [jest.fn(), jest.fn()],
-    "smi": [jest.fn(), jest.fn()],
-    "ly": [jest.fn(), jest.fn()],
-    "NM": [jest.fn(), jest.fn()],
-    "ftm": [jest.fn(), jest.fn()],
-    "fur": [jest.fn(), jest.fn()],
-    "ua": [jest.fn(), jest.fn()],
-    "pc": [jest.fn(), jest.fn()]
+    "Mm": [vi.fn(), vi.fn()],
+    "kM": [vi.fn(), vi.fn()],
+    "hm": [vi.fn(), vi.fn()],
+    "dam": [vi.fn(), vi.fn()],
+    "m": [vi.fn(), vi.fn()],
+    "dm": [vi.fn(), vi.fn()],
+    "cm": [vi.fn(), vi.fn()],
+    "mm": [vi.fn(), vi.fn()],
+    "µm": [vi.fn(), vi.fn()],
+    "nm": [vi.fn(), vi.fn()],
+    "pm": [vi.fn(), vi.fn()],
+    "tw": [vi.fn(), vi.fn()],
+    "pt": [vi.fn(), vi.fn()],
+    "P": [vi.fn(), vi.fn()],
+    "in": [vi.fn(), vi.fn()],
+    "ft": [vi.fn(), vi.fn()],
+    "yd": [vi.fn(), vi.fn()],
+    "mi": [vi.fn(), vi.fn()],
+    "smi": [vi.fn(), vi.fn()],
+    "ly": [vi.fn(), vi.fn()],
+    "NM": [vi.fn(), vi.fn()],
+    "ftm": [vi.fn(), vi.fn()],
+    "fur": [vi.fn(), vi.fn()],
+    "ua": [vi.fn(), vi.fn()],
+    "pc": [vi.fn(), vi.fn()]
   };
 
   const mockLength = {
-    "Mm": jest.fn(),
-    "kM": jest.fn(),
-    "hm": jest.fn(),
-    "dam": jest.fn(),
-    "m": jest.fn(),
-    "dm": jest.fn(),
-    "cm": jest.fn(),
-    "mm": jest.fn(),
-    "µm": jest.fn(),
-    "nm": jest.fn(),
-    "pm": jest.fn(),
-    "tw": jest.fn(),
-    "pt": jest.fn(),
-    "P": jest.fn(),
-    "in": jest.fn(),
-    "ft": jest.fn(),
-    "yd": jest.fn(),
-    "mi": jest.fn(),
-    "smi": jest.fn(),
-    "ly": jest.fn(),
-    "NM": jest.fn(),
-    "ftm": jest.fn(),
-    "fur": jest.fn(),
-    "ua": jest.fn(),
-    "pc": jest.fn()
+    "Mm": vi.fn(),
+    "kM": vi.fn(),
+    "hm": vi.fn(),
+    "dam": vi.fn(),
+    "m": vi.fn(),
+    "dm": vi.fn(),
+    "cm": vi.fn(),
+    "mm": vi.fn(),
+    "µm": vi.fn(),
+    "nm": vi.fn(),
+    "pm": vi.fn(),
+    "tw": vi.fn(),
+    "pt": vi.fn(),
+    "P": vi.fn(),
+    "in": vi.fn(),
+    "ft": vi.fn(),
+    "yd": vi.fn(),
+    "mi": vi.fn(),
+    "smi": vi.fn(),
+    "ly": vi.fn(),
+    "NM": vi.fn(),
+    "ftm": vi.fn(),
+    "fur": vi.fn(),
+    "ua": vi.fn(),
+    "pc": vi.fn()
   };
 
-  jest.clearAllMocks();
-  jest.mock("!src/dimension", () => dimension);
+  vi.doMock("!src/dimension", () => dimension);
 
   dimension
     .linearConversion
@@ -94,7 +97,7 @@ test("[object Object] dimension", () => {
 
   dimension.dimension.mockReturnValueOnce(mockLength);
 
-  const lengthDimension = require('!src/length/dimension');
+  const lengthDimension = await import('!src/length/dimension');
   expect(lengthDimension.length).toEqual(mockLength);
   expect(lengthDimension.megameters).toBe(mockLength["Mm"]);
   expect(lengthDimension.kilometers).toBe(mockLength["kM"]);

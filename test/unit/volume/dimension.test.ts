@@ -1,77 +1,80 @@
-test("[object Object] dimension", () => {
+beforeEach(() => {
+  vi.resetModules();
+});
+
+test("[object Object] dimension", async () => {
   const dimension = {
-    dimension: jest.fn(),
-    linearConversion: jest.fn()
+    dimension: vi.fn(),
+    linearConversion: vi.fn()
   };
 
   const conversions = {
-    "ML": [jest.fn(), jest.fn()],
-    "kL": [jest.fn(), jest.fn()],
-    "L": [jest.fn(), jest.fn()],
-    "dL": [jest.fn(), jest.fn()],
-    "cL": [jest.fn(), jest.fn()],
-    "mL": [jest.fn(), jest.fn()],
-    "km³": [jest.fn(), jest.fn()],
-    "m³": [jest.fn(), jest.fn()],
-    "dm³": [jest.fn(), jest.fn()],
-    "mm³": [jest.fn(), jest.fn()],
-    "in³": [jest.fn(), jest.fn()],
-    "ft³": [jest.fn(), jest.fn()],
-    "yd³": [jest.fn(), jest.fn()],
-    "mi³": [jest.fn(), jest.fn()],
-    "af": [jest.fn(), jest.fn()],
-    "bsh": [jest.fn(), jest.fn()],
-    "tsp": [jest.fn(), jest.fn()],
-    "tbsp": [jest.fn(), jest.fn()],
-    "fl oz": [jest.fn(), jest.fn()],
-    "cup": [jest.fn(), jest.fn()],
-    "pt": [jest.fn(), jest.fn()],
-    "qt": [jest.fn(), jest.fn()],
-    "gal": [jest.fn(), jest.fn()],
-    "imperial tsp": [jest.fn(), jest.fn()],
-    "imperial tbsp": [jest.fn(), jest.fn()],
-    "imperial fl oz": [jest.fn(), jest.fn()],
-    "imperial pt": [jest.fn(), jest.fn()],
-    "imperial qt": [jest.fn(), jest.fn()],
-    "imperial gal": [jest.fn(), jest.fn()],
-    "metric cup": [jest.fn(), jest.fn()]
+    "ML": [vi.fn(), vi.fn()],
+    "kL": [vi.fn(), vi.fn()],
+    "L": [vi.fn(), vi.fn()],
+    "dL": [vi.fn(), vi.fn()],
+    "cL": [vi.fn(), vi.fn()],
+    "mL": [vi.fn(), vi.fn()],
+    "km³": [vi.fn(), vi.fn()],
+    "m³": [vi.fn(), vi.fn()],
+    "dm³": [vi.fn(), vi.fn()],
+    "mm³": [vi.fn(), vi.fn()],
+    "in³": [vi.fn(), vi.fn()],
+    "ft³": [vi.fn(), vi.fn()],
+    "yd³": [vi.fn(), vi.fn()],
+    "mi³": [vi.fn(), vi.fn()],
+    "af": [vi.fn(), vi.fn()],
+    "bsh": [vi.fn(), vi.fn()],
+    "tsp": [vi.fn(), vi.fn()],
+    "tbsp": [vi.fn(), vi.fn()],
+    "fl oz": [vi.fn(), vi.fn()],
+    "cup": [vi.fn(), vi.fn()],
+    "pt": [vi.fn(), vi.fn()],
+    "qt": [vi.fn(), vi.fn()],
+    "gal": [vi.fn(), vi.fn()],
+    "imperial tsp": [vi.fn(), vi.fn()],
+    "imperial tbsp": [vi.fn(), vi.fn()],
+    "imperial fl oz": [vi.fn(), vi.fn()],
+    "imperial pt": [vi.fn(), vi.fn()],
+    "imperial qt": [vi.fn(), vi.fn()],
+    "imperial gal": [vi.fn(), vi.fn()],
+    "metric cup": [vi.fn(), vi.fn()]
   };
 
   const mockVolume = {
-    "ML": jest.fn(),
-    "kL": jest.fn(),
-    "L": jest.fn(),
-    "dL": jest.fn(),
-    "cL": jest.fn(),
-    "mL": jest.fn(),
-    "km³": jest.fn(),
-    "m³": jest.fn(),
-    "dm³": jest.fn(),
-    "mm³": jest.fn(),
-    "in³": jest.fn(),
-    "ft³": jest.fn(),
-    "yd³": jest.fn(),
-    "mi³": jest.fn(),
-    "af": jest.fn(),
-    "bsh": jest.fn(),
-    "tsp": jest.fn(),
-    "tbsp": jest.fn(),
-    "fl oz": jest.fn(),
-    "cup": jest.fn(),
-    "pt": jest.fn(),
-    "qt": jest.fn(),
-    "gal": jest.fn(),
-    "imperial tsp": jest.fn(),
-    "imperial tbsp": jest.fn(),
-    "imperial fl oz": jest.fn(),
-    "imperial pt": jest.fn(),
-    "imperial qt": jest.fn(),
-    "imperial gal": jest.fn(),
-    "metric cup": jest.fn()
+    "ML": vi.fn(),
+    "kL": vi.fn(),
+    "L": vi.fn(),
+    "dL": vi.fn(),
+    "cL": vi.fn(),
+    "mL": vi.fn(),
+    "km³": vi.fn(),
+    "m³": vi.fn(),
+    "dm³": vi.fn(),
+    "mm³": vi.fn(),
+    "in³": vi.fn(),
+    "ft³": vi.fn(),
+    "yd³": vi.fn(),
+    "mi³": vi.fn(),
+    "af": vi.fn(),
+    "bsh": vi.fn(),
+    "tsp": vi.fn(),
+    "tbsp": vi.fn(),
+    "fl oz": vi.fn(),
+    "cup": vi.fn(),
+    "pt": vi.fn(),
+    "qt": vi.fn(),
+    "gal": vi.fn(),
+    "imperial tsp": vi.fn(),
+    "imperial tbsp": vi.fn(),
+    "imperial fl oz": vi.fn(),
+    "imperial pt": vi.fn(),
+    "imperial qt": vi.fn(),
+    "imperial gal": vi.fn(),
+    "metric cup": vi.fn()
   };
 
-  jest.clearAllMocks();
-  jest.mock("!src/dimension", () => dimension);
+  vi.doMock("!src/dimension", () => dimension);
 
   dimension
     .linearConversion
@@ -109,7 +112,7 @@ test("[object Object] dimension", () => {
 
   dimension.dimension.mockReturnValueOnce(mockVolume);
 
-  const volumeDimension = require('!src/volume/dimension');
+  const volumeDimension = await import('!src/volume/dimension');
   expect(volumeDimension.volume).toEqual(mockVolume);
   expect(volumeDimension.megaliters).toBe(mockVolume["ML"]);
   expect(volumeDimension.kiloliters).toBe(mockVolume["kL"]);

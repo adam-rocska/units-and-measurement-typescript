@@ -1,69 +1,72 @@
-test("[object Object] dimension", () => {
+beforeEach(() => {
+  vi.resetModules();
+});
+
+test("[object Object] dimension", async () => {
   const dimension = {
-    dimension: jest.fn(),
-    linearConversion: jest.fn()
+    dimension: vi.fn(),
+    linearConversion: vi.fn()
   };
 
   const conversions = {
-    "b": [jest.fn(), jest.fn()],
-    "B": [jest.fn(), jest.fn()],
-    "kb": [jest.fn(), jest.fn()],
-    "Mb": [jest.fn(), jest.fn()],
-    "Gb": [jest.fn(), jest.fn()],
-    "Tb": [jest.fn(), jest.fn()],
-    "Pb": [jest.fn(), jest.fn()],
-    "Eb": [jest.fn(), jest.fn()],
-    "Zb": [jest.fn(), jest.fn()],
-    "Yb": [jest.fn(), jest.fn()],
-    "Kib": [jest.fn(), jest.fn()],
-    "KB": [jest.fn(), jest.fn()],
-    "Mib": [jest.fn(), jest.fn()],
-    "MB": [jest.fn(), jest.fn()],
-    "Gib": [jest.fn(), jest.fn()],
-    "GB": [jest.fn(), jest.fn()],
-    "Tib": [jest.fn(), jest.fn()],
-    "TB": [jest.fn(), jest.fn()],
-    "Pib": [jest.fn(), jest.fn()],
-    "PB": [jest.fn(), jest.fn()],
-    "Eib": [jest.fn(), jest.fn()],
-    "EB": [jest.fn(), jest.fn()],
-    "Zib": [jest.fn(), jest.fn()],
-    "ZB": [jest.fn(), jest.fn()],
-    "Yib": [jest.fn(), jest.fn()],
-    "YB": [jest.fn(), jest.fn()]
+    "b": [vi.fn(), vi.fn()],
+    "B": [vi.fn(), vi.fn()],
+    "kb": [vi.fn(), vi.fn()],
+    "Mb": [vi.fn(), vi.fn()],
+    "Gb": [vi.fn(), vi.fn()],
+    "Tb": [vi.fn(), vi.fn()],
+    "Pb": [vi.fn(), vi.fn()],
+    "Eb": [vi.fn(), vi.fn()],
+    "Zb": [vi.fn(), vi.fn()],
+    "Yb": [vi.fn(), vi.fn()],
+    "Kib": [vi.fn(), vi.fn()],
+    "KB": [vi.fn(), vi.fn()],
+    "Mib": [vi.fn(), vi.fn()],
+    "MB": [vi.fn(), vi.fn()],
+    "Gib": [vi.fn(), vi.fn()],
+    "GB": [vi.fn(), vi.fn()],
+    "Tib": [vi.fn(), vi.fn()],
+    "TB": [vi.fn(), vi.fn()],
+    "Pib": [vi.fn(), vi.fn()],
+    "PB": [vi.fn(), vi.fn()],
+    "Eib": [vi.fn(), vi.fn()],
+    "EB": [vi.fn(), vi.fn()],
+    "Zib": [vi.fn(), vi.fn()],
+    "ZB": [vi.fn(), vi.fn()],
+    "Yib": [vi.fn(), vi.fn()],
+    "YB": [vi.fn(), vi.fn()]
   };
 
   const mockInformation = {
-    "b": jest.fn(),
-    "B": jest.fn(),
-    "kb": jest.fn(),
-    "Mb": jest.fn(),
-    "Gb": jest.fn(),
-    "Tb": jest.fn(),
-    "Pb": jest.fn(),
-    "Eb": jest.fn(),
-    "Zb": jest.fn(),
-    "Yb": jest.fn(),
-    "Kib": jest.fn(),
-    "KB": jest.fn(),
-    "Mib": jest.fn(),
-    "MB": jest.fn(),
-    "Gib": jest.fn(),
-    "GB": jest.fn(),
-    "Tib": jest.fn(),
-    "TB": jest.fn(),
-    "Pib": jest.fn(),
-    "PB": jest.fn(),
-    "Eib": jest.fn(),
-    "EB": jest.fn(),
-    "Zib": jest.fn(),
-    "ZB": jest.fn(),
-    "Yib": jest.fn(),
-    "YB": jest.fn()
+    "b": vi.fn(),
+    "B": vi.fn(),
+    "kb": vi.fn(),
+    "Mb": vi.fn(),
+    "Gb": vi.fn(),
+    "Tb": vi.fn(),
+    "Pb": vi.fn(),
+    "Eb": vi.fn(),
+    "Zb": vi.fn(),
+    "Yb": vi.fn(),
+    "Kib": vi.fn(),
+    "KB": vi.fn(),
+    "Mib": vi.fn(),
+    "MB": vi.fn(),
+    "Gib": vi.fn(),
+    "GB": vi.fn(),
+    "Tib": vi.fn(),
+    "TB": vi.fn(),
+    "Pib": vi.fn(),
+    "PB": vi.fn(),
+    "Eib": vi.fn(),
+    "EB": vi.fn(),
+    "Zib": vi.fn(),
+    "ZB": vi.fn(),
+    "Yib": vi.fn(),
+    "YB": vi.fn()
   };
 
-  jest.clearAllMocks();
-  jest.mock("!src/dimension", () => dimension);
+  vi.doMock("!src/dimension", () => dimension);
 
   dimension
     .linearConversion
@@ -97,7 +100,7 @@ test("[object Object] dimension", () => {
 
   dimension.dimension.mockReturnValueOnce(mockInformation);
 
-  const informationDimension = require('!src/information/dimension');
+  const informationDimension = await import('!src/information/dimension');
   expect(informationDimension.information).toEqual(mockInformation);
   expect(informationDimension.bits).toBe(mockInformation["b"]);
   expect(informationDimension.bytes).toBe(mockInformation["B"]);

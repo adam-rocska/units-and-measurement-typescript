@@ -1,29 +1,32 @@
-test("[object Object] dimension", () => {
+beforeEach(() => {
+  vi.resetModules();
+});
+
+test("[object Object] dimension", async () => {
   const dimension = {
-    dimension: jest.fn(),
-    linearConversion: jest.fn()
+    dimension: vi.fn(),
+    linearConversion: vi.fn()
   };
 
   const conversions = {
-    "C": [jest.fn(), jest.fn()],
-    "MAh": [jest.fn(), jest.fn()],
-    "kAh": [jest.fn(), jest.fn()],
-    "Ah": [jest.fn(), jest.fn()],
-    "mAh": [jest.fn(), jest.fn()],
-    "µAh": [jest.fn(), jest.fn()]
+    "C": [vi.fn(), vi.fn()],
+    "MAh": [vi.fn(), vi.fn()],
+    "kAh": [vi.fn(), vi.fn()],
+    "Ah": [vi.fn(), vi.fn()],
+    "mAh": [vi.fn(), vi.fn()],
+    "µAh": [vi.fn(), vi.fn()]
   };
 
   const mockElectricCharge = {
-    "C": jest.fn(),
-    "MAh": jest.fn(),
-    "kAh": jest.fn(),
-    "Ah": jest.fn(),
-    "mAh": jest.fn(),
-    "µAh": jest.fn()
+    "C": vi.fn(),
+    "MAh": vi.fn(),
+    "kAh": vi.fn(),
+    "Ah": vi.fn(),
+    "mAh": vi.fn(),
+    "µAh": vi.fn()
   };
 
-  jest.clearAllMocks();
-  jest.mock("!src/dimension", () => dimension);
+  vi.doMock("!src/dimension", () => dimension);
 
   dimension
     .linearConversion
@@ -37,7 +40,7 @@ test("[object Object] dimension", () => {
 
   dimension.dimension.mockReturnValueOnce(mockElectricCharge);
 
-  const electricChargeDimension = require('!src/electric-charge/dimension');
+  const electricChargeDimension = await import('!src/electric-charge/dimension');
   expect(electricChargeDimension.electricCharge).toEqual(mockElectricCharge);
   expect(electricChargeDimension.coulombs).toBe(mockElectricCharge["C"]);
   expect(electricChargeDimension.megaampereHours).toBe(mockElectricCharge["MAh"]);

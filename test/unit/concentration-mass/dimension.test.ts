@@ -1,21 +1,24 @@
-test("[object Object] dimension", () => {
+beforeEach(() => {
+  vi.resetModules();
+});
+
+test("[object Object] dimension", async () => {
   const dimension = {
-    dimension: jest.fn(),
-    linearConversion: jest.fn()
+    dimension: vi.fn(),
+    linearConversion: vi.fn()
   };
 
   const conversions = {
-    "g/L": [jest.fn(), jest.fn()],
-    "mg/dL": [jest.fn(), jest.fn()]
+    "g/L": [vi.fn(), vi.fn()],
+    "mg/dL": [vi.fn(), vi.fn()]
   };
 
   const mockConcentrationMass = {
-    "g/L": jest.fn(),
-    "mg/dL": jest.fn()
+    "g/L": vi.fn(),
+    "mg/dL": vi.fn()
   };
 
-  jest.clearAllMocks();
-  jest.mock("!src/dimension", () => dimension);
+  vi.doMock("!src/dimension", () => dimension);
 
   dimension
     .linearConversion
@@ -25,7 +28,7 @@ test("[object Object] dimension", () => {
 
   dimension.dimension.mockReturnValueOnce(mockConcentrationMass);
 
-  const concentrationMassDimension = require('!src/concentration-mass/dimension');
+  const concentrationMassDimension = await import('!src/concentration-mass/dimension');
   expect(concentrationMassDimension.concentrationMass).toEqual(mockConcentrationMass);
   expect(concentrationMassDimension.gramsPerLiter).toBe(mockConcentrationMass["g/L"]);
   expect(concentrationMassDimension.milligramsPerDeciliter).toBe(mockConcentrationMass["mg/dL"]);

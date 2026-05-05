@@ -1,39 +1,42 @@
-test("[object Object] dimension", () => {
+beforeEach(() => {
+  vi.resetModules();
+});
+
+test("[object Object] dimension", async () => {
   const dimension = {
-    dimension: jest.fn(),
-    linearConversion: jest.fn()
+    dimension: vi.fn(),
+    linearConversion: vi.fn()
   };
 
   const conversions = {
-    "TW": [jest.fn(), jest.fn()],
-    "GW": [jest.fn(), jest.fn()],
-    "MW": [jest.fn(), jest.fn()],
-    "kW": [jest.fn(), jest.fn()],
-    "W": [jest.fn(), jest.fn()],
-    "mW": [jest.fn(), jest.fn()],
-    "µW": [jest.fn(), jest.fn()],
-    "nW": [jest.fn(), jest.fn()],
-    "pW": [jest.fn(), jest.fn()],
-    "fW": [jest.fn(), jest.fn()],
-    "hp": [jest.fn(), jest.fn()]
+    "TW": [vi.fn(), vi.fn()],
+    "GW": [vi.fn(), vi.fn()],
+    "MW": [vi.fn(), vi.fn()],
+    "kW": [vi.fn(), vi.fn()],
+    "W": [vi.fn(), vi.fn()],
+    "mW": [vi.fn(), vi.fn()],
+    "µW": [vi.fn(), vi.fn()],
+    "nW": [vi.fn(), vi.fn()],
+    "pW": [vi.fn(), vi.fn()],
+    "fW": [vi.fn(), vi.fn()],
+    "hp": [vi.fn(), vi.fn()]
   };
 
   const mockPower = {
-    "TW": jest.fn(),
-    "GW": jest.fn(),
-    "MW": jest.fn(),
-    "kW": jest.fn(),
-    "W": jest.fn(),
-    "mW": jest.fn(),
-    "µW": jest.fn(),
-    "nW": jest.fn(),
-    "pW": jest.fn(),
-    "fW": jest.fn(),
-    "hp": jest.fn()
+    "TW": vi.fn(),
+    "GW": vi.fn(),
+    "MW": vi.fn(),
+    "kW": vi.fn(),
+    "W": vi.fn(),
+    "mW": vi.fn(),
+    "µW": vi.fn(),
+    "nW": vi.fn(),
+    "pW": vi.fn(),
+    "fW": vi.fn(),
+    "hp": vi.fn()
   };
 
-  jest.clearAllMocks();
-  jest.mock("!src/dimension", () => dimension);
+  vi.doMock("!src/dimension", () => dimension);
 
   dimension
     .linearConversion
@@ -52,7 +55,7 @@ test("[object Object] dimension", () => {
 
   dimension.dimension.mockReturnValueOnce(mockPower);
 
-  const powerDimension = require('!src/power/dimension');
+  const powerDimension = await import('!src/power/dimension');
   expect(powerDimension.power).toEqual(mockPower);
   expect(powerDimension.terawatts).toBe(mockPower["TW"]);
   expect(powerDimension.gigawatts).toBe(mockPower["GW"]);
