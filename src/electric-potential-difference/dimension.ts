@@ -1,6 +1,7 @@
-import {linearConversion, dimension} from "../dimension";
+import {linearConversion, dimension, type Measurement} from "../dimension";
 import {ElectricPotentialDifferenceSymbol} from "./symbols";
 
+export type ElectricPotentialDifference = Measurement<ElectricPotentialDifferenceSymbol>;
 export const electricPotentialDifference = dimension<ElectricPotentialDifferenceSymbol>({
   "MV": linearConversion(1000000.0),
   "kV": linearConversion(1000.0),

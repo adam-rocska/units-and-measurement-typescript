@@ -1,6 +1,7 @@
-import {linearConversion, dimension} from "../dimension";
+import {linearConversion, dimension, type Measurement} from "../dimension";
 import {VolumeSymbol} from "./symbols";
 
+export type Volume = Measurement<VolumeSymbol>;
 export const volume = dimension<VolumeSymbol>({
   "ML": linearConversion(1000000.0),
   "kL": linearConversion(1000.0),

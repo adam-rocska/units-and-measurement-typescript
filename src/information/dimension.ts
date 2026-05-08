@@ -1,6 +1,7 @@
-import {linearConversion, dimension} from "../dimension";
+import {linearConversion, dimension, type Measurement} from "../dimension";
 import {InformationSymbol} from "./symbols";
 
+export type Information = Measurement<InformationSymbol>;
 export const information = dimension<InformationSymbol>({
   "b": linearConversion(1),
   "B": linearConversion(8),

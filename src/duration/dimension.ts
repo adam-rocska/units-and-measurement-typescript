@@ -1,6 +1,7 @@
-import {linearConversion, dimension} from "../dimension";
+import {linearConversion, dimension, type Measurement} from "../dimension";
 import {DurationSymbol} from "./symbols";
 
+export type Duration = Measurement<DurationSymbol>;
 export const duration = dimension<DurationSymbol>({
   "sec": linearConversion(1),
   "min": linearConversion(60),

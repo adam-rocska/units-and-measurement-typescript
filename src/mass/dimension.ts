@@ -1,6 +1,7 @@
-import {linearConversion, dimension} from "../dimension";
+import {linearConversion, dimension, type Measurement} from "../dimension";
 import {MassSymbol} from "./symbols";
 
+export type Mass = Measurement<MassSymbol>;
 export const mass = dimension<MassSymbol>({
   "kg": linearConversion(1.0),
   "g": linearConversion(0.001),

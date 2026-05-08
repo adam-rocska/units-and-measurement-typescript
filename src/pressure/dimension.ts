@@ -1,6 +1,7 @@
-import {linearConversion, dimension} from "../dimension";
+import {linearConversion, dimension, type Measurement} from "../dimension";
 import {PressureSymbol} from "./symbols";
 
+export type Pressure = Measurement<PressureSymbol>;
 export const pressure = dimension<PressureSymbol>({
   "N/m²": linearConversion(1.0),
   "GPa": linearConversion(1e9),

@@ -1,6 +1,7 @@
-import {linearConversion, dimension} from "../dimension";
+import {linearConversion, dimension, type Measurement} from "../dimension";
 import {AngleSymbol} from "./symbols";
 
+export type Angle = Measurement<AngleSymbol>;
 export const angle = dimension<AngleSymbol>({
   "°": linearConversion(1),
   "ʹ": linearConversion(1 / 60),
