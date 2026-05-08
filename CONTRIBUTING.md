@@ -1,31 +1,68 @@
-# Contribution Guidelines
+# Contributing
 
-Well, the idea is simple.
+Thanks for helping keep this package small, typed, and predictable. Changes
+should preserve the existing public API unless the change is intentionally
+breaking and documented as such.
 
-1. Make sure your code is well tested.
-2. Don't overstress formatting. If it's readable, it's cool.
-3. Regarding commit messages, I always prefix with an emoji
-   which gives a hint about the commit. You can follow the
-   same pattern if you want, but it's not mandatory.
+## Local Setup
 
-## Bugfixes
+```bash
+pnpm install
+pnpm test
+pnpm typecheck
+pnpm lint
+pnpm check
+```
 
-Make sure you provide at least one bug test / regression
-test which fails when reproducing your bug, and passes when
-your fix is applied.
+The project targets Node.js 20 and newer, pnpm 10, TypeScript 6, ESLint 10,
+and Vitest 4.
 
-**Target directory**: `<rootDir>/test/bug/*`
+## Pull Request Expectations
 
-## Features
+- Keep changes focused. Separate feature work, documentation work, dependency
+  updates, and test-only work when practical.
+- Add tests for behavior changes. A bug fix should include a regression test
+  that fails before the fix and passes after it.
+- Add user tests for public API changes. User tests live under `test/user` and
+  should double as realistic usage examples.
+- Keep unit tests close to the module they cover under `test/unit`.
+- Update README or docs when public behavior, entry points, examples, or
+  supported dimensions change.
+- Run `pnpm check` before publishing a branch when dependencies are available.
 
-Make sure you provide at least one user test which represents
-the way(s) you envision your feature to be used.
+## Test Layout
 
-**Target directory**: `<rootDir>/test/user/*`
+| Change type | Expected test location |
+| ----------- | ---------------------- |
+| Bug fix | `test/bug/*` |
+| Public API feature | `test/user/*` |
+| Internal helper behavior | `test/unit/*` |
+| Dimension unit or symbol change | `test/unit/<dimension>/*` and often `test/user/*` |
 
-+ The more unit tests, the better.
+## Commit Style
 
-## Documentation
+Project history uses short emoji-prefixed commit subjects. A good subject is
+specific, under 60 characters, and understandable without opening the diff.
 
-lol, none for now. `typedoc` sucks, and I don't have the
-capacity for a fancy doc' site now.
+Examples:
+
+```text
+✨ Add length measurement type alias
+📝 Expand dimension usage docs
+🧪 Cover common length operations
+```
+
+Use additional Markdown paragraphs in the commit body only when the details
+will help reviewers understand the change.
+
+## Documentation Style
+
+Documentation should be accurate before it is clever.
+
+- Prefer runnable examples over abstract explanations.
+- Name the exact import path a user should use.
+- Mention `undefined` return paths for operations that can fail to find a
+  common unit.
+- Keep generated or mechanical unit tables aligned with the implementation.
+- Avoid promising runtime validation or parsing behavior that the code does
+  not provide.
