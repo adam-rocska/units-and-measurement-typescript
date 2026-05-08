@@ -1,6 +1,7 @@
-import {linearConversion, dimension} from "../dimension";
+import {linearConversion, dimension, type Measurement} from "../dimension";
 import {AreaSymbol} from "./symbols";
 
+export type Area = Measurement<AreaSymbol>;
 export const area = dimension<AreaSymbol>({
   "Mm²": linearConversion(1e12),
   "km²": linearConversion(1000000.0),

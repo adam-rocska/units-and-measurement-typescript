@@ -1,6 +1,7 @@
-import {linearConversion, dimension} from "../dimension";
+import {linearConversion, dimension, type Measurement} from "../dimension";
 import {EnergySymbol} from "./symbols";
 
+export type Energy = Measurement<EnergySymbol>;
 export const energy = dimension<EnergySymbol>({
   "kJ": linearConversion(1000.0),
   "J": linearConversion(1.0),

@@ -1,6 +1,7 @@
-import {linearConversion, dimension} from "../dimension";
+import {linearConversion, dimension, type Measurement} from "../dimension";
 import {ElectricChargeSymbol} from "./symbols";
 
+export type ElectricCharge = Measurement<ElectricChargeSymbol>;
 export const electricCharge = dimension<ElectricChargeSymbol>({
   "C": linearConversion(1.0),
   "MAh": linearConversion(3.6e9),

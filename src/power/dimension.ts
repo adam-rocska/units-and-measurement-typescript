@@ -1,6 +1,7 @@
-import {linearConversion, dimension} from "../dimension";
+import {linearConversion, dimension, type Measurement} from "../dimension";
 import {PowerSymbol} from "./symbols";
 
+export type Power = Measurement<PowerSymbol>;
 export const power = dimension<PowerSymbol>({
   "TW": linearConversion(1e12),
   "GW": linearConversion(1e9),

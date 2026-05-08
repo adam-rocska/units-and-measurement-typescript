@@ -1,6 +1,7 @@
-import {linearConversion, dimension} from "../dimension";
+import {linearConversion, dimension, type Measurement} from "../dimension";
 import {FrequencySymbol} from "./symbols";
 
+export type Frequency = Measurement<FrequencySymbol>;
 export const frequency = dimension<FrequencySymbol>({
   "THz": linearConversion(1e12),
   "GHz": linearConversion(1e9),

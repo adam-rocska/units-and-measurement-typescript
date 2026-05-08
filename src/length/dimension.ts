@@ -1,6 +1,7 @@
-import {linearConversion, dimension} from "../dimension";
+import {linearConversion, dimension, type Measurement} from "../dimension";
 import {LengthSymbol} from "./symbols";
 
+export type Length = Measurement<LengthSymbol>;
 export const length = dimension<LengthSymbol>({
   "Mm": linearConversion(1E6),
   "kM": linearConversion(1E3),
