@@ -23,21 +23,24 @@ jobs:
     steps:
       - uses: actions/checkout@v5
       - uses: pnpm/action-setup@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v6
         with:
-          node-version: ${{ matrix.node-version }}
+          node-version: 24
           cache: pnpm
       - run: pnpm install --frozen-lockfile
-      - run: pnpm clean
-      - run: pnpm build
-      - run: pnpm test
+      - uses: actions/setup-node@v6
+        with:
+          node-version: ${{ matrix.node-version }}
+      - run: npm run clean
+      - run: npm run build
+      - run: npm run test
 
   quality:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v5
       - uses: pnpm/action-setup@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v6
         with:
           node-version: 24
           cache: pnpm
