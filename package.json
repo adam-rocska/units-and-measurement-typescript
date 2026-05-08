@@ -1,6 +1,6 @@
 {
   "name": "@adam-rocska/units-and-measurement",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "A TypeScript library for handling units and measurements with support for multiple formats (tuples, objects, strings, dimensions) and operations (arithmetic, comparison). Modular, tree-shakable, and designed for safe, boilerplate-free usage.",
   "keywords": [
     "units",
