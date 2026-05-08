@@ -90,6 +90,27 @@ console.log(value(doubled), value(halved));
 `divide`, `power`, `root`, and `logarithm` operate on one measurement and one
 number.
 
+## Proportions
+
+`proportion` returns the numeric ratio between two measurements. Measurements
+with the same unit are compared directly. Measurements with different units are
+converted only when at least one input is a dimension measurement.
+
+```typescript
+import {string} from "@adam-rocska/units-and-measurement";
+import {proportion} from "@adam-rocska/units-and-measurement/operations";
+import {centimeters, meters} from "@adam-rocska/units-and-measurement/length";
+
+console.log(proportion(string.measurement(640, "px"), string.measurement(320, "px")));
+console.log(proportion(meters(2), centimeters(50)));
+console.log(proportion(meters(2), string.measurement(50, "cm")));
+console.log(proportion(string.measurement(1, "m"), string.measurement(100, "cm")));
+```
+
+The final example returns `undefined`: plain measurements with different units
+are not converted for `proportion` unless a dimension measurement provides the
+conversion context.
+
 ## Comparisons
 
 Comparison helpers also convert compatible measurements first. They return
