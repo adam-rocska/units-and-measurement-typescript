@@ -77,18 +77,20 @@ const asObject = object.measurement(12, "px");
 console.log(value(asString), unit(asTuple), asObject.value);
 ```
 
-Use the operations submodule for arithmetic, comparison, and common-unit
-conversion:
+Use the operations submodule for arithmetic, comparison, proportionality, and
+common-unit conversion:
 
 ```typescript
-import {add, greaterThan, toCommonUnit} from "@adam-rocska/units-and-measurement/operations";
+import {add, greaterThan, proportion, toCommonUnit} from "@adam-rocska/units-and-measurement/operations";
 import {centimeters, meters} from "@adam-rocska/units-and-measurement/length";
 
 const total = add(meters(2), centimeters(50));
 const normalized = toCommonUnit(meters(2), centimeters(50));
+const ratio = proportion(meters(2), centimeters(50));
 
 console.log(total);
 console.log(normalized);
+console.log(ratio);
 console.log(greaterThan(meters(2), centimeters(50)));
 ```
 
