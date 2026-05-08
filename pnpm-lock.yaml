@@ -33,8 +33,8 @@ importers:
         specifier: ^10.3.0
         version: 10.3.0
       pnpm:
-        specifier: ^10.33.3
-        version: 10.33.4
+        specifier: ^11.0.8
+        version: 11.0.8
       rimraf:
         specifier: ^6.1.3
         version: 6.1.3
@@ -1224,9 +1224,9 @@ packages:
     resolution: {integrity: sha512-QP88BAKvMam/3NxH6vj2o21R6MjxZUAd6nlwAS/pnGvN9IVLocLHxGYIzFhg6fUQ+5th6P4dv4eW9jX3DSIj7A==}
     engines: {node: '>=12'}
 
-  pnpm@10.33.4:
-    resolution: {integrity: sha512-HGezs1my1AgRm6HtKJ80uPw8aHNBK+xv0mT73IJInlEPy+y5zp0i2ufzt2Jp2EQQRgFL3KU7mXnNelYa1jG4AA==}
-    engines: {node: '>=18.12'}
+  pnpm@11.0.8:
+    resolution: {integrity: sha512-TECX4d0tQjcsTn+lp5H/KPx1pITHrBkuZLHfD97xdZS6mC+bT+2a37PHV4RvVlt5mydj+zcz0d4by4LPRmhJEg==}
+    engines: {node: '>=22.13'}
     hasBin: true
 
   postcss@8.5.14:
@@ -2568,7 +2568,7 @@ snapshots:
 
   picomatch@4.0.4: {}
 
-  pnpm@10.33.4: {}
+  pnpm@11.0.8: {}
 
   postcss@8.5.14:
     dependencies:
